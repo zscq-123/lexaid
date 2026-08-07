@@ -1,0 +1,61 @@
+package com.lexaid.exam;
+
+import com.lexaid.common.PageResult;
+import com.lexaid.common.Result;
+import com.lexaid.exam.dto.ExamQuestionVO;
+import com.lexaid.exam.dto.ExamResultVO;
+import com.lexaid.exam.dto.ExamSessionVO;
+import com.lexaid.exam.dto.ExamSetupRequest;
+import com.lexaid.exam.dto.SubmitRequest;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * 答题接口
+ */
+@RestController
+@RequestMapping("/api/exam")
+@RequiredArgsConstructor
+public class ExamController {
+
+    private final ExamService examService;
+
+    @PostMapping("/sessions")
+    public Result<Map<String, Long>> create(@Valid @RequestBody ExamSetupRequest req) {
+        Long sessionId = examService.createSession(req);
+        return Result.ok(Map.of("sessionId", sessionId));
+    }
+
+    @GetMapping("/sessions/{id}")
+    public Result<List<ExamQuestionVO>> getSession(@PathVariable Long id) {
+        return Result.ok(examService.questionsOf(id));
+    }
+
+    @PostMapping("/sessions/{id}/submit")
+    public Result<ExamResultVO> submit(@PathVariable Long id, @Valid @RequestBody SubmitRequest req) {
+        return Result.ok(examService.submit(id, req));
+    }
+
+    @GetMapping("/sessions/{id}/result")
+    public Result<ExamResultVO> result(@PathVariable Long id) {
+        return Result.ok(examService.resultOf(id));
+    }
+
+    @GetMapping("/sessions")
+    public Result<PageResult<ExamSessionVO>> history(
+            @RequestParam(defaultValue = "1") long page,
+            @RequestParam(defaultValue = "10") long size) {
+        return Result.ok(examService.history(page, size));
+    }
+
+}

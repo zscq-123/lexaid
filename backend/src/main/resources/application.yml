@@ -1,0 +1,42 @@
+server:
+  # 默认 8080；如被占用可通过环境变量 SERVER_PORT 覆盖（本机开发使用 8081）
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: lexaid-backend
+  datasource:
+    url: jdbc:mysql://localhost:3308/lexaid?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: lexaid123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+
+app:
+  jwt:
+    # 生产环境请通过环境变量覆盖
+    secret: LexAid-JWT-Secret-Key-ChangeMe-In-Production-2026
+    expire-hours: 24
+
+ai:
+  base-url: ${AI_BASE_URL:https://api.openai.com/v1}
+  api-key: ${AI_API_KEY:}
+  model: ${AI_MODEL:gpt-4o-mini}
+
+logging:
+  level:
+    com.lexaid: info

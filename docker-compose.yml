@@ -1,0 +1,19 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: lexaid-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: lexaid123
+      MYSQL_DATABASE: lexaid
+      TZ: Asia/Shanghai
+    ports:
+      - "3308:3306"
+    volumes:
+      - lexaid_mysql_data:/var/lib/mysql
+      - ./backend/src/main/resources/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./backend/src/main/resources/data.sql:/docker-entrypoint-initdb.d/02-data.sql:ro
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+volumes:
+  lexaid_mysql_data:
