@@ -2,6 +2,7 @@ package com.lexaid.exam;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lexaid.common.BizException;
@@ -14,6 +15,7 @@ import com.lexaid.exam.dto.ExamQuestionVO;
 import com.lexaid.exam.dto.ExamResultVO;
 import com.lexaid.exam.dto.ExamSessionVO;
 import com.lexaid.exam.dto.ExamSetupRequest;
+import com.lexaid.exam.dto.QuestionCategoryCount;
 import com.lexaid.exam.dto.QuestionOption;
 import com.lexaid.exam.dto.SubmitRequest;
 import com.lexaid.exam.dto.WrongQuestionVO;
@@ -55,6 +57,10 @@ public class ExamService {
     private final StudyRecordService studyRecordService;
     private final ObjectMapper objectMapper;
 
+    public List<QuestionCategoryCount> categoryCounts() {
+        return questionMapper.categoryCounts();
+    }
+
     /**
      * 组卷：按条件随机选题，支持按实体优先取关联题
      */
@@ -91,23 +97,25 @@ public class ExamService {
         config.put("sourceType", req.getSourceType());
         config.put("sourceId", req.getSourceId());
         config.put("questionIds", chosen);
+        String configJson;
         try {
-            ExamSession session = new ExamSession();
-            session.setUserId(UserContext.userId());
-            session.setConfig(objectMapper.writeValueAsString(config));
-            session.setScore(0);
-            session.setTotal(chosen.size());
-            session.setCorrect(0);
-            session.setStartTime(LocalDateTime.now());
-            examSessionMapper.insert(session);
-            return session.getId();
-        } catch (Exception e) {
-            throw new BizException("组卷失败：" + e.getMessage());
+            configJson = objectMapper.writeValueAsString(config);
+        } catch (JsonProcessingException e) {
+            throw new IllegalStateException("组卷配置序列化失败", e);
         }
+        ExamSession session = new ExamSession();
+        session.setUserId(UserContext.userId());
+        session.setConfig(configJson);
+        session.setScore(0);
+        session.setTotal(chosen.size());
+        session.setCorrect(0);
+        session.setStartTime(LocalDateTime.now());
+        examSessionMapper.insert(session);
+        return session.getId();
     }
 
     private LambdaQueryWrapper<Question> buildWrapper(String category, Integer difficulty) {
-        LambdaQueryWrapper<Question> qw = new LambdaQueryWrapper<>();
+        LambdaQueryWrapper<Question> qw = new LambdaQueryWrapper<Question>().select(Question::getId);
         if (StringUtils.hasText(category)) {
             qw.eq(Question::getCategory, category);
         }
@@ -155,77 +163,86 @@ public class ExamService {
      */
     @Transactional
     public ExamResultVO submit(Long sessionId, SubmitRequest req) {
-        ExamSession session = requireOwnedSession(sessionId);
-        if (session.getEndTime() != null) {
-            throw new BizException("该试卷已交卷");
-        }
+        ExamSession session = lockOwnedSession(sessionId);
+        if (session.getEndTime() != null) return resultOf(sessionId);
         List<Question> questions = loadQuestions(session);
-        Map<Long, String> answerMap = new HashMap<>();
-        if (req.getAnswers() != null) {
-            for (AnswerItem item : req.getAnswers()) {
-                answerMap.put(item.getQuestionId(), item.getAnswer());
-            }
+        Map<Long, String> answers = new HashMap<>();
+        for (AnswerItem answer : req.getAnswers()) {
+            answers.put(answer.getQuestionId(), answer.getAnswer());
         }
 
-        int correctCount = 0;
-        List<AnswerDetailVO> details = new ArrayList<>();
         LocalDateTime now = LocalDateTime.now();
-        for (Question q : questions) {
-            String userAnswer = answerMap.get(q.getId());
-            Boolean isCorrect = grade(q, userAnswer);
-            if (Boolean.TRUE.equals(isCorrect)) {
-                correctCount++;
-            }
-            AnswerRecord record = new AnswerRecord();
-            record.setSessionId(sessionId);
-            record.setUserId(session.getUserId());
-            record.setQuestionId(q.getId());
-            record.setUserAnswer(userAnswer);
-            record.setIsCorrect(isCorrect);
-            record.setAnsweredAt(now);
-            answerRecordMapper.insert(record);
-
-            details.add(new AnswerDetailVO(
-                    q.getId(), q.getType(), q.getStem(), parseOptions(q),
-                    userAnswer, displayAnswer(q), isCorrect, q.getAnalysis(),
-                    relatedItems(q.getId())));
+        int score = 0;
+        int correct = 0;
+        for (Question question : questions) {
+            String answer = answers.get(question.getId());
+            QuestionGrade grade = initialGrade(question, answer);
+            Boolean fullCredit = grade.points() == null ? null : grade.points() == QuestionGrade.maxPoints(question.getType());
+            if (grade.points() != null) score += grade.points();
+            if (Boolean.TRUE.equals(fullCredit)) correct++;
+            AnswerRecord row = new AnswerRecord();
+            row.setSessionId(sessionId);
+            row.setUserId(session.getUserId());
+            row.setQuestionId(question.getId());
+            row.setUserAnswer(answer);
+            row.setIsCorrect(fullCredit);
+            row.setGradingStatus(grade.status());
+            row.setGradePoints(grade.points());
+            row.setGradingFeedback(grade.feedback());
+            row.setAnsweredAt(now);
+            answerRecordMapper.insert(row);
         }
 
-        session.setScore(correctCount);
-        session.setCorrect(correctCount);
+        session.setScore(score);
+        session.setCorrect(correct);
         session.setTotal(questions.size());
         session.setEndTime(now);
         session.setDurationSec((int) Duration.between(session.getStartTime(), now).getSeconds());
         examSessionMapper.updateById(session);
-        studyRecordService.record(session.getUserId(), "ANSWER", "QUESTION", null,
-                "答题得分：" + correctCount + "/" + questions.size());
-        return new ExamResultVO(sessionId, correctCount, questions.size(), correctCount, details);
+        studyRecordService.record(session.getUserId(), "ANSWER", "QUESTION", null, "提交试卷，共 " + questions.size() + " 题");
+        return resultOf(sessionId);
     }
 
-    /**
-     * 回看试卷结果（从答题记录重建）
-     */
+    @Transactional
+    public ExamResultVO retryGrading(Long sessionId) {
+        ExamSession session = lockOwnedSession(sessionId);
+        if (session.getEndTime() == null) throw new BizException("该试卷尚未交卷");
+        answerRecordMapper.retryUnavailable(sessionId);
+        return resultOf(sessionId);
+    }
+
+    private ExamSession lockOwnedSession(Long sessionId) {
+        ExamSession session = examSessionMapper.selectByIdForUpdate(sessionId);
+        checkOwner(session);
+        return session;
+    }
+
+    /** Re-read one committed snapshot while the background worker may be updating scores. */
+    @Transactional(readOnly = true)
     public ExamResultVO resultOf(Long sessionId) {
         ExamSession session = requireOwnedSession(sessionId);
-        if (session.getEndTime() == null) {
-            throw new BizException("该试卷尚未交卷");
-        }
-        List<Question> questions = loadQuestions(session);
-        Map<Long, AnswerRecord> records = answerRecordMapper.selectList(
-                        new LambdaQueryWrapper<AnswerRecord>()
-                                .eq(AnswerRecord::getSessionId, sessionId))
-                .stream().collect(Collectors.toMap(AnswerRecord::getQuestionId, r -> r));
+        if (session.getEndTime() == null) throw new BizException("该试卷尚未交卷");
+        Map<Long, AnswerRecord> records = answerRecordMapper.selectList(new LambdaQueryWrapper<AnswerRecord>()
+                .eq(AnswerRecord::getSessionId, sessionId).orderByAsc(AnswerRecord::getId))
+                .stream().collect(Collectors.toMap(AnswerRecord::getQuestionId, r -> r, (older, newer) -> newer));
+        int maxScore = 0;
+        int gradedCount = 0;
         List<AnswerDetailVO> details = new ArrayList<>();
-        for (Question q : questions) {
+        for (Question q : loadQuestions(session)) {
             AnswerRecord ar = records.get(q.getId());
-            details.add(new AnswerDetailVO(
-                    q.getId(), q.getType(), q.getStem(), parseOptions(q),
+            QuestionGrade grade = QuestionGrade.stored(ar);
+            int max = QuestionGrade.maxPoints(q.getType());
+            if (grade.points() != null) {
+                maxScore += max;
+                gradedCount++;
+            }
+            details.add(new AnswerDetailVO(q.getId(), q.getType(), q.getStem(), parseOptions(q),
                     ar == null ? null : ar.getUserAnswer(), displayAnswer(q),
-                    ar == null ? null : ar.getIsCorrect(), q.getAnalysis(),
-                    relatedItems(q.getId())));
+                    ar == null ? null : ar.getIsCorrect(), q.getAnalysis(), relatedItems(q.getId()),
+                    grade.points(), max, grade.status(), grade.feedback()));
         }
-        return new ExamResultVO(sessionId, session.getScore(), session.getTotal(),
-                session.getCorrect(), details);
+        return new ExamResultVO(sessionId, session.getScore(), session.getTotal(), session.getCorrect(),
+                gradedCount, details, maxScore);
     }
 
     /**
@@ -275,22 +292,28 @@ public class ExamService {
                 continue;
             }
             AnswerRecord ar = lastAnswer.get(qid);
+            QuestionGrade grade = QuestionGrade.stored(ar);
             vos.add(new WrongQuestionVO(q.getId(), q.getType(), q.getStem(), parseOptions(q),
                     ar == null ? null : ar.getUserAnswer(), displayAnswer(q), q.getAnalysis(),
-                    q.getCategory(), ar == null ? null : ar.getIsCorrect(), relatedItems(q.getId())));
+                    q.getCategory(), ar == null ? null : ar.getIsCorrect(), relatedItems(q.getId()),
+                    grade.points(), QuestionGrade.maxPoints(q.getType()), grade.status(), grade.feedback()));
         }
         return new PageResult<>(vos, ids.size());
     }
 
     private ExamSession requireOwnedSession(Long sessionId) {
         ExamSession session = examSessionMapper.selectById(sessionId);
+        checkOwner(session);
+        return session;
+    }
+
+    private void checkOwner(ExamSession session) {
         if (session == null) {
             throw new BizException("试卷不存在");
         }
         if (!session.getUserId().equals(UserContext.userId())) {
             throw new BizException(403, "无权访问他人的试卷");
         }
-        return session;
     }
 
     private List<Question> loadQuestions(ExamSession session) {
@@ -341,8 +364,21 @@ public class ExamService {
                 s.getDurationSec(), category, difficulty, s.getStartTime(), s.getEndTime());
     }
 
+    private QuestionGrade initialGrade(Question q, String answer) {
+        if (!StringUtils.hasText(q.getAnswer())) {
+            return new QuestionGrade("NO_REFERENCE", null, "题库未提供参考答案，此题不计入得分。");
+        }
+        if ("SHORT".equals(q.getType())) {
+            if (!StringUtils.hasText(answer)) return new QuestionGrade("BLANK", 0, "未作答。");
+            return new QuestionGrade("PENDING", null, null);
+        }
+        Boolean correct = grade(q, answer);
+        if (correct == null) return new QuestionGrade("LEGACY_UNGRADED", null, "此题型暂不支持评分。");
+        return new QuestionGrade("OBJECTIVE", correct ? 1 : 0, null);
+    }
+
     /**
-     * 判分：单选/判断严格相等，多选全对得分，简答不判分
+     * 客观题判分：单选/判断严格相等，多选全对得分
      */
     private Boolean grade(Question q, String userAnswer) {
         return switch (q.getType()) {
@@ -358,7 +394,6 @@ public class ExamService {
                 yield !correct.isEmpty() && correct.equals(user);
             }
             case "JUDGE" -> Objects.equals(q.getAnswer(), userAnswer);
-            case "SHORT" -> null;
             default -> null;
         };
     }
@@ -403,6 +438,7 @@ public class ExamService {
         return switch (q.getType()) {
             case "SINGLE", "MULTIPLE" -> String.join(",", parseAnswerKeys(q));
             case "JUDGE" -> "true".equalsIgnoreCase(q.getAnswer()) ? "正确" : "错误";
+            case "SHORT" -> q.getAnswer();
             default -> TextUtil.excerpt(q.getAnswer(), 200);
         };
     }

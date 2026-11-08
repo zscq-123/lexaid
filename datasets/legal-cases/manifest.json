@@ -1,0 +1,72 @@
+{
+  "generatedBy": "scripts/build-legal-case-datasets.py",
+  "datasets": {
+    "Chinese-Law-Corpus-Guiding-Cases": {
+      "records": 278,
+      "jurisdictions": {
+        "CN": 278
+      },
+      "maximumContentCharacters": 9636,
+      "output": "datasets/legal-cases/lexaid-cases-cn-guiding.sql.gz",
+      "compressedBytes": 692820,
+      "sha256": "d2edac3e5e5e106c178cff506e4e4232cd023fb4c3a51a7ad76283dc5d2ef12f"
+    },
+    "Chinese-Law-Corpus-Gazette-Cases": {
+      "records": 445,
+      "jurisdictions": {
+        "CN": 445
+      },
+      "maximumContentCharacters": 40322,
+      "output": "datasets/legal-cases/lexaid-cases-cn-gazette.sql.gz",
+      "compressedBytes": 3818940,
+      "sha256": "9a3dcd5372996c97b2c536cc6df1f069b864c02492a555d122788341faed764c"
+    },
+    "LexGLUE-ECtHR-A": {
+      "records": 11000,
+      "jurisdictions": {
+        "ECHR": 11000
+      },
+      "maximumContentCharacters": 210351,
+      "output": "datasets/legal-cases/lexaid-cases-echr.sql.gz",
+      "compressedBytes": 33007097,
+      "sha256": "86de5a8a30be1424b8f1166d068edb648258c51f7d3f95b694fe9b1ac2a160b2"
+    },
+    "LexGLUE-SCOTUS/train": {
+      "records": 5000,
+      "jurisdictions": {
+        "US": 5000
+      },
+      "maximumContentCharacters": 562769,
+      "output": "datasets/legal-cases/lexaid-cases-us-train.sql.gz",
+      "compressedBytes": 58379626,
+      "sha256": "b07e2ece4f899c5da0058fadef00b12a018b65215a266ac9462444014391fa33"
+    },
+    "LexGLUE-SCOTUS/validation": {
+      "records": 1400,
+      "jurisdictions": {
+        "US": 1400
+      },
+      "maximumContentCharacters": 239807,
+      "output": "datasets/legal-cases/lexaid-cases-us-validation.sql.gz",
+      "compressedBytes": 23631773,
+      "sha256": "f6a5c73c566198a97685afd9131ff5ad1dfdeefe86f3805b4a8ee552f7813b9f"
+    },
+    "LexGLUE-SCOTUS/test": {
+      "records": 1400,
+      "jurisdictions": {
+        "US": 1400
+      },
+      "maximumContentCharacters": 577924,
+      "output": "datasets/legal-cases/lexaid-cases-us-test.sql.gz",
+      "compressedBytes": 24301780,
+      "sha256": "c0bc07d6fd8ba0003a1eb86e0c8f4b16d091c0a2acc2637e2f2afeab503314bd"
+    }
+  },
+  "licenses": {
+    "Chinese-Law-Corpus-Guiding-Cases": "CC0-1.0",
+    "Chinese-Law-Corpus-Gazette-Cases": "CC0-1.0",
+    "LexGLUE-SCOTUS": "CC-BY-4.0",
+    "LexGLUE-ECtHR-A": "CC-BY-4.0"
+  },
+  "totalRecords": 19523
+}

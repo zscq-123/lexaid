@@ -26,18 +26,23 @@ import java.util.Map;
 public class CaseService {
 
     private final CaseInfoMapper caseInfoMapper;
+    private final CaseCourtDirectory courtDirectory;
     private final TagService tagService;
     private final RelationService relationService;
     private final FavoriteService favoriteService;
     private final StudyRecordService studyRecordService;
 
-    public PageResult<CaseVO> page(String keyword, String caseType, String court,
+    public PageResult<CaseVO> page(String keyword, String caseType, String court, String courtNode,
+                                   String jurisdiction, String languageCode,
                                    Integer year, long page, long size) {
-        LambdaQueryWrapper<CaseInfo> qw = new LambdaQueryWrapper<>();
+        LambdaQueryWrapper<CaseInfo> qw = new LambdaQueryWrapper<CaseInfo>()
+                .select(CaseInfo.class, field -> !"content".equals(field.getProperty())
+                        && !"metadata".equals(field.getProperty()));
         if (StringUtils.hasText(keyword)) {
             qw.and(w -> w.like(CaseInfo::getTitle, keyword)
                     .or().like(CaseInfo::getSummary, keyword)
-                    .or().like(CaseInfo::getHolding, keyword));
+                    .or().like(CaseInfo::getHolding, keyword)
+                    .or().like(CaseInfo::getContent, keyword));
         }
         if (StringUtils.hasText(caseType)) {
             qw.eq(CaseInfo::getCaseType, caseType);
@@ -45,10 +50,19 @@ public class CaseService {
         if (StringUtils.hasText(court)) {
             qw.like(CaseInfo::getCourt, court);
         }
+        if (StringUtils.hasText(courtNode) && !courtDirectory.applyFilter(qw, courtNode)) {
+            return new PageResult<>(List.of(), 0);
+        }
+        if (StringUtils.hasText(jurisdiction)) {
+            qw.eq(CaseInfo::getJurisdiction, jurisdiction);
+        }
+        if (StringUtils.hasText(languageCode)) {
+            qw.eq(CaseInfo::getLanguageCode, languageCode);
+        }
         if (year != null) {
             qw.apply("YEAR(judge_date) = {0}", year);
         }
-        qw.orderByDesc(CaseInfo::getJudgeDate);
+        qw.orderByDesc(CaseInfo::getJudgeDate).orderByAsc(CaseInfo::getId);
         Page<CaseInfo> p = caseInfoMapper.selectPage(new Page<>(page, size), qw);
         if (StringUtils.hasText(keyword)) {
             studyRecordService.record(UserContext.userId(), "SEARCH",
@@ -78,11 +92,13 @@ public class CaseService {
 
     private CaseVO toVO(CaseInfo c, List<String> tags, boolean full) {
         return new CaseVO(
-                c.getId(), c.getTitle(), c.getCaseNo(), c.getCourt(), c.getJudgeDate(),
+                c.getId(), c.getTitle(), c.getCaseNo(), CaseCourtDirectory.classify(c).name(), c.getJudgeDate(),
                 c.getCaseType(),
                 full ? c.getSummary() : TextUtil.excerpt(c.getSummary(), 120),
                 full ? c.getHolding() : TextUtil.excerpt(c.getHolding(), 80),
-                c.getProcedure(), tags,
+                c.getProcedure(), full ? c.getContent() : null,
+                c.getJurisdiction(), c.getLanguageCode(), c.getStatus(),
+                c.getSourceDataset(), c.getSourceUrl(), c.getLicenseName(), tags,
                 favoriteService.isFavorite(UserContext.userId(), EntityChecker.CASE, c.getId()));
     }
 }

@@ -1,0 +1,2112 @@
+{
+  "journals": {
+    "German Law Journal": {
+      "crossrefSearch": 187,
+      "doajSearch": 183,
+      "candidates": 187,
+      "records": 160,
+      "authorAbstracts": 158,
+      "bodyTexts": 160
+    },
+    "Utrecht Law Review": {
+      "crossrefSearch": 38,
+      "doajSearch": 37,
+      "candidates": 38,
+      "records": 37,
+      "authorAbstracts": 37,
+      "bodyTexts": 37
+    },
+    "Utrecht Journal of International and European Law": {
+      "crossrefSearch": 8,
+      "doajSearch": 8,
+      "candidates": 8,
+      "records": 6,
+      "authorAbstracts": 4,
+      "bodyTexts": 0
+    },
+    "Tilburg Law Review": {
+      "crossrefSearch": 36,
+      "doajSearch": 37,
+      "candidates": 37,
+      "records": 37,
+      "authorAbstracts": 37,
+      "bodyTexts": 37
+    }
+  },
+  "excluded": [
+    {
+      "doi": "10.1017/glj.2024.10",
+      "title": "GLJ volume 25 issue 1 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.13",
+      "title": "Crime and Sanctions: Beyond Sanctions as a Foreign Policy Tool – ERRATUM",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.14",
+      "title": "GLJ volume 25 issue 2 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.22",
+      "title": "The Untapped Potential of the Systemic Criterion in the ECJ’s Case Law on Judicial Independence – CORRIGENDUM",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.23",
+      "title": "GLJ volume 25 issue 3 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.33",
+      "title": "GLJ volume 25 issue 4 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.34",
+      "title": "GLJ volume 25 issue 5 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.4",
+      "title": "My Body Is My Temple? Comparing Sexual Crimes and Property Crimes in a Human Rights Tradition – ERRATUM",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.41",
+      "title": "Corporations, CSR and Self Regulation: What Lessons from the Global Financial Crisis? – ERRATUM",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.5",
+      "title": "Demystifying autonomy: tracing the international law origins of the EU principle of autonomy – ERRATUM",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.7",
+      "title": "An Empirical Analysis of Credibility Assessment in German Asylum Cases – CORRIGENDUM",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.82",
+      "title": "GLJ volume 25 issue 6 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.83",
+      "title": "GLJ volume 25 issue 7 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.84",
+      "title": "GLJ volume 25 issue 8 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2024.85",
+      "title": "GLJ volume 25 issue 9 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2025.10133",
+      "title": "GLJ volume 26 issue 2 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2025.10135",
+      "title": "Ending The Past: International Law, Intertemporality, and Reparations for Past Wrongs – ERRATUM",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2025.10149",
+      "title": "GLJ volume 26 issue 3 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2025.10160",
+      "title": "GLJ volume 26 issue 5 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2025.10161",
+      "title": "GLJ volume 26 issue 4 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2025.10162",
+      "title": "Poverty in Judgecraft: New Narratives through the Language of Equality – CORRIGENDUM",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2025.10172",
+      "title": "GLJ volume 26 issue 6 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2025.16",
+      "title": "GLJ volume 26 issue 1 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2026.10177",
+      "title": "The Housing Challenge to Neoliberal Homeownership: Profitability Relativism and Governance Asymmetry as Post-Neoliberalization – Erratum",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2026.10201",
+      "title": "GLJ volume 26 issue 7 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2026.10208",
+      "title": "GLJ volume 26 issue 8 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.1017/glj.2026.10225",
+      "title": "GLJ volume 26 issue 9 Cover and Front matter",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.36633/ulr.1213",
+      "title": "Editorial: Twenty Years of the Utrecht Law Review",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.5334/ujiel.642",
+      "title": "Editorial of Volume 39 Issue I of the Utrecht Journal of International and European Law",
+      "reason": "notice or no complete author credit"
+    },
+    {
+      "doi": "10.5334/ujiel.677",
+      "title": "Editorial of Volume 40 Issue I of the Utrecht Journal of International and European Law",
+      "reason": "notice or no complete author credit"
+    }
+  ],
+  "records": 240,
+  "sha256": "6649ae0fe2237ce8416bb4c993a58b1bec99a03e04f827026daa1046566f657a",
+  "sources": [
+    {
+      "doi": "10.1017/glj.2023.100",
+      "issn": "2071-8322",
+      "doajId": "0b83e78a03e241b7835aff14c58a4095",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.100"
+    },
+    {
+      "doi": "10.1017/glj.2023.101",
+      "issn": "2071-8322",
+      "doajId": "4c7bbba7febf40afa0ba67233c7df65a",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.101"
+    },
+    {
+      "doi": "10.1017/glj.2023.102",
+      "issn": "2071-8322",
+      "doajId": "cfad92f64a864e7d9c7467e81a52d85c",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.102"
+    },
+    {
+      "doi": "10.1017/glj.2023.103",
+      "issn": "2071-8322",
+      "doajId": "86242bbceeda4d1da7fc5cc05514fbfe",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.103"
+    },
+    {
+      "doi": "10.1017/glj.2023.104",
+      "issn": "2071-8322",
+      "doajId": "236a0ab57a234ed5aa8e930d1e34df7b",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.104"
+    },
+    {
+      "doi": "10.1017/glj.2023.105",
+      "issn": "2071-8322",
+      "doajId": "e5548bc05e99484582137d6a646e4a99",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.105"
+    },
+    {
+      "doi": "10.1017/glj.2023.106",
+      "issn": "2071-8322",
+      "doajId": "7c0c0bc210264c65bfaf183fb789cbf3",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.106"
+    },
+    {
+      "doi": "10.1017/glj.2023.107",
+      "issn": "2071-8322",
+      "doajId": "d9f23a0a203748cea271d839adb8d070",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.107"
+    },
+    {
+      "doi": "10.1017/glj.2023.108",
+      "issn": "2071-8322",
+      "doajId": "ff2717e867544db9b077e8152650efc5",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.108"
+    },
+    {
+      "doi": "10.1017/glj.2023.109",
+      "issn": "2071-8322",
+      "doajId": "3f16d0ca8f1d4ca4ac0772bfbe7154b1",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.109"
+    },
+    {
+      "doi": "10.1017/glj.2023.110",
+      "issn": "2071-8322",
+      "doajId": "33f143fdd999492a9ad6478ca4a15a99",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.110"
+    },
+    {
+      "doi": "10.1017/glj.2023.111",
+      "issn": "2071-8322",
+      "doajId": "f6c6092410ef488a94468cd54a240137",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.111"
+    },
+    {
+      "doi": "10.1017/glj.2023.112",
+      "issn": "2071-8322",
+      "doajId": "651141b6ba364d11b4196dc58d343ba3",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.112"
+    },
+    {
+      "doi": "10.1017/glj.2023.113",
+      "issn": "2071-8322",
+      "doajId": "f2fe898632794a02a28d3b8c4808111f",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.113"
+    },
+    {
+      "doi": "10.1017/glj.2023.114",
+      "issn": "2071-8322",
+      "doajId": "851191f8cd974316b72b421e401e1347",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.114"
+    },
+    {
+      "doi": "10.1017/glj.2023.118",
+      "issn": "2071-8322",
+      "doajId": "54b34a18cab04f34b7d068dbe94fd4eb",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.118"
+    },
+    {
+      "doi": "10.1017/glj.2023.94",
+      "issn": "2071-8322",
+      "doajId": "7117450c7c264b42a948592f52a22c28",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.94"
+    },
+    {
+      "doi": "10.1017/glj.2023.95",
+      "issn": "2071-8322",
+      "doajId": "291e1f60b6ef4c71aa37150c406dc45d",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.95"
+    },
+    {
+      "doi": "10.1017/glj.2023.96",
+      "issn": "2071-8322",
+      "doajId": "4e933d68eb2f4c23bd91262b2e5ff074",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.96"
+    },
+    {
+      "doi": "10.1017/glj.2023.97",
+      "issn": "2071-8322",
+      "doajId": "e7a4ae2a75e943249e8dc8eea39d79ea",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.97"
+    },
+    {
+      "doi": "10.1017/glj.2023.98",
+      "issn": "2071-8322",
+      "doajId": "85f9091e908943c9a79b9874eefe28f5",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.98"
+    },
+    {
+      "doi": "10.1017/glj.2023.99",
+      "issn": "2071-8322",
+      "doajId": "9cdfef6393af4cc286cc432cdb65c87a",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2023.99"
+    },
+    {
+      "doi": "10.1017/glj.2024.11",
+      "issn": "2071-8322",
+      "doajId": "a79ad9c64abc47b98bc21372a6a224bb",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.11"
+    },
+    {
+      "doi": "10.1017/glj.2024.12",
+      "issn": "2071-8322",
+      "doajId": "4f77dc2fb2df490eb2f66fe8b8e31534",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.12"
+    },
+    {
+      "doi": "10.1017/glj.2024.15",
+      "issn": "2071-8322",
+      "doajId": "305328faf86e4d899d6d6bf339c2e910",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.15"
+    },
+    {
+      "doi": "10.1017/glj.2024.16",
+      "issn": "2071-8322",
+      "doajId": "fa98a582b45c48d8a4a4e24b5f1d9f8e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.16"
+    },
+    {
+      "doi": "10.1017/glj.2024.17",
+      "issn": "2071-8322",
+      "doajId": "c7bd9db18abb41bcaaa95dd8aa05a53d",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.17"
+    },
+    {
+      "doi": "10.1017/glj.2024.18",
+      "issn": "2071-8322",
+      "doajId": "2a76300356904be0afe4d8566cbc386f",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.18"
+    },
+    {
+      "doi": "10.1017/glj.2024.19",
+      "issn": "2071-8322",
+      "doajId": "1bb2b9ecd94d4ad8914e3762dcaff30b",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.19"
+    },
+    {
+      "doi": "10.1017/glj.2024.20",
+      "issn": "2071-8322",
+      "doajId": "6f8fa810794646cd871c0a06b0c0b1f2",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.20"
+    },
+    {
+      "doi": "10.1017/glj.2024.21",
+      "issn": "2071-8322",
+      "doajId": "f02c014e583b4def958899b98f6e1532",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.21"
+    },
+    {
+      "doi": "10.1017/glj.2024.24",
+      "issn": "2071-8322",
+      "doajId": "beb03e5177244dbb98d6efa0bc868a8d",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.24"
+    },
+    {
+      "doi": "10.1017/glj.2024.25",
+      "issn": "2071-8322",
+      "doajId": "e15775cba0fc486781963e470a8d69e7",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.25"
+    },
+    {
+      "doi": "10.1017/glj.2024.26",
+      "issn": "2071-8322",
+      "doajId": "af2729bfd08443e082eb90cc5de5cca8",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.26"
+    },
+    {
+      "doi": "10.1017/glj.2024.27",
+      "issn": "2071-8322",
+      "doajId": "92a28f8e70e34ed4baac39345c48088b",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.27"
+    },
+    {
+      "doi": "10.1017/glj.2024.28",
+      "issn": "2071-8322",
+      "doajId": "1c09eb8810af46fb979e87c2d74f8482",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.28"
+    },
+    {
+      "doi": "10.1017/glj.2024.29",
+      "issn": "2071-8322",
+      "doajId": "61948f3d1c8a4bb8a3f48306a8f2ac0e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.29"
+    },
+    {
+      "doi": "10.1017/glj.2024.30",
+      "issn": "2071-8322",
+      "doajId": "4e802ad078c148f4b881ea1eb3b5b3f3",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.30"
+    },
+    {
+      "doi": "10.1017/glj.2024.31",
+      "issn": "2071-8322",
+      "doajId": "ecf806bd70544f85a2c035e608110006",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.31"
+    },
+    {
+      "doi": "10.1017/glj.2024.35",
+      "issn": "2071-8322",
+      "doajId": "a55db50e7aec41b8a35bd9c06dafdf1e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.35"
+    },
+    {
+      "doi": "10.1017/glj.2024.36",
+      "issn": "2071-8322",
+      "doajId": "01b886de8d0543339c1a795c36ed8548",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.36"
+    },
+    {
+      "doi": "10.1017/glj.2024.37",
+      "issn": "2071-8322",
+      "doajId": "0c4feb500af54b00b953a34cd5e9258f",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.37"
+    },
+    {
+      "doi": "10.1017/glj.2024.38",
+      "issn": "2071-8322",
+      "doajId": "810539686f264f629b249ebef557bdf9",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.38"
+    },
+    {
+      "doi": "10.1017/glj.2024.39",
+      "issn": "2071-8322",
+      "doajId": "59cf97c79eae4d93b85ea43484c911bf",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.39"
+    },
+    {
+      "doi": "10.1017/glj.2024.40",
+      "issn": "2071-8322",
+      "doajId": "e739cd97861d4efda5494076d462b135",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.40"
+    },
+    {
+      "doi": "10.1017/glj.2024.44",
+      "issn": "2071-8322",
+      "doajId": "a9a000d471c348ef91804c6bb4f7a8a0",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.44"
+    },
+    {
+      "doi": "10.1017/glj.2024.45",
+      "issn": "2071-8322",
+      "doajId": "950e7eaae0e8403e86cf28724ed5e3a7",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.45"
+    },
+    {
+      "doi": "10.1017/glj.2024.46",
+      "issn": "2071-8322",
+      "doajId": "351dcb64723a459eb26d79f1ddbe3a49",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.46"
+    },
+    {
+      "doi": "10.1017/glj.2024.48",
+      "issn": "2071-8322",
+      "doajId": "0d3c179cdb7640c4a006f1949599eb1c",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.48"
+    },
+    {
+      "doi": "10.1017/glj.2024.49",
+      "issn": "2071-8322",
+      "doajId": "df1625c4988043b5a4de50f14161662d",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.49"
+    },
+    {
+      "doi": "10.1017/glj.2024.50",
+      "issn": "2071-8322",
+      "doajId": "53fd368ed88540858cda36ad3560ba46",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.50"
+    },
+    {
+      "doi": "10.1017/glj.2024.51",
+      "issn": "2071-8322",
+      "doajId": "b9a821cc9ba246dca539fc3aafe700be",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.51"
+    },
+    {
+      "doi": "10.1017/glj.2024.52",
+      "issn": "2071-8322",
+      "doajId": "a4bdbd1d8d2642328c0c3645205c7934",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.52"
+    },
+    {
+      "doi": "10.1017/glj.2024.53",
+      "issn": "2071-8322",
+      "doajId": "9ebc106d41fc4864a31ca10d9f94df3f",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.53"
+    },
+    {
+      "doi": "10.1017/glj.2024.54",
+      "issn": "2071-8322",
+      "doajId": "666268891285418ea812aa958fe2389c",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.54"
+    },
+    {
+      "doi": "10.1017/glj.2024.55",
+      "issn": "2071-8322",
+      "doajId": "3fddcbe86a7547389a0554606aa62e28",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.55"
+    },
+    {
+      "doi": "10.1017/glj.2024.56",
+      "issn": "2071-8322",
+      "doajId": "96698711ddd640d6abb6aa41d07a9029",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.56"
+    },
+    {
+      "doi": "10.1017/glj.2024.57",
+      "issn": "2071-8322",
+      "doajId": "257774b5955c4877b201831b496250af",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.57"
+    },
+    {
+      "doi": "10.1017/glj.2024.58",
+      "issn": "2071-8322",
+      "doajId": "e3261902462b4934afe25cf1c2fdd709",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.58"
+    },
+    {
+      "doi": "10.1017/glj.2024.59",
+      "issn": "2071-8322",
+      "doajId": "9372e6b942784690b6114390faa3bd70",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.59"
+    },
+    {
+      "doi": "10.1017/glj.2024.60",
+      "issn": "2071-8322",
+      "doajId": "ad18a461712342e29a6726c1a07559dc",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.60"
+    },
+    {
+      "doi": "10.1017/glj.2024.61",
+      "issn": "2071-8322",
+      "doajId": "7198c90e7d8742cb8b65db6261b7af65",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.61"
+    },
+    {
+      "doi": "10.1017/glj.2024.62",
+      "issn": "2071-8322",
+      "doajId": "02f288f407f84da69ab9c0198ced2de3",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.62"
+    },
+    {
+      "doi": "10.1017/glj.2024.63",
+      "issn": "2071-8322",
+      "doajId": "6d469d6fde034d6c93acaf6d0eeba5ae",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.63"
+    },
+    {
+      "doi": "10.1017/glj.2024.64",
+      "issn": "2071-8322",
+      "doajId": "5037872f90094c179e03ebfb22205349",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.64"
+    },
+    {
+      "doi": "10.1017/glj.2024.65",
+      "issn": "2071-8322",
+      "doajId": "30a3e2ee4bba4ea5ae71c9ba264d8f8f",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.65"
+    },
+    {
+      "doi": "10.1017/glj.2024.66",
+      "issn": "2071-8322",
+      "doajId": "c8dc2a8a523a4946bb78ccfb7ca9fc4d",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.66"
+    },
+    {
+      "doi": "10.1017/glj.2024.67",
+      "issn": "2071-8322",
+      "doajId": "d961845144744349966b4636d2fb4fbc",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.67"
+    },
+    {
+      "doi": "10.1017/glj.2024.68",
+      "issn": "2071-8322",
+      "doajId": "0fc8c067a99a4ed08e54200ae630044f",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.68"
+    },
+    {
+      "doi": "10.1017/glj.2024.69",
+      "issn": "2071-8322",
+      "doajId": "3715503c7dd14c7eb71144628b775be9",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.69"
+    },
+    {
+      "doi": "10.1017/glj.2024.70",
+      "issn": "2071-8322",
+      "doajId": "41bdde9494e14623a031503ea1feb643",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.70"
+    },
+    {
+      "doi": "10.1017/glj.2024.71",
+      "issn": "2071-8322",
+      "doajId": "b64a57f84c974a83a5f43feed3db858c",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.71"
+    },
+    {
+      "doi": "10.1017/glj.2024.72",
+      "issn": "2071-8322",
+      "doajId": "9da730f56336422db4c04bedbe7285d7",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.72"
+    },
+    {
+      "doi": "10.1017/glj.2024.73",
+      "issn": "2071-8322",
+      "doajId": "1a259f66b3654a7d86e46af775fe1e31",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.73"
+    },
+    {
+      "doi": "10.1017/glj.2024.74",
+      "issn": "2071-8322",
+      "doajId": "bf3b05a842714c14bb53a74646f3bdd9",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.74"
+    },
+    {
+      "doi": "10.1017/glj.2024.75",
+      "issn": "2071-8322",
+      "doajId": "98d00826d290481582a392362172f19d",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.75"
+    },
+    {
+      "doi": "10.1017/glj.2024.76",
+      "issn": "2071-8322",
+      "doajId": "687eb466c8ce4aca88a5202533328cb5",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.76"
+    },
+    {
+      "doi": "10.1017/glj.2024.77",
+      "issn": "2071-8322",
+      "doajId": "1ecb80996b0d4173a0afef8b040cbd17",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.77"
+    },
+    {
+      "doi": "10.1017/glj.2024.78",
+      "issn": "2071-8322",
+      "doajId": "66b56167242f4ab38d41786b73d71382",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.78"
+    },
+    {
+      "doi": "10.1017/glj.2024.79",
+      "issn": "2071-8322",
+      "doajId": "bdfd1592a34d4dbb85c83521412c4cde",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.79"
+    },
+    {
+      "doi": "10.1017/glj.2024.8",
+      "issn": "2071-8322",
+      "doajId": "5ee4d2b3b1094cdebcaf16276f11fcc2",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.8"
+    },
+    {
+      "doi": "10.1017/glj.2024.80",
+      "issn": "2071-8322",
+      "doajId": "8945c130c16941109619e515ca08f149",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.80"
+    },
+    {
+      "doi": "10.1017/glj.2024.81",
+      "issn": "2071-8322",
+      "doajId": "f1b5b7ffb9494e7f92255d813ead3798",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.81"
+    },
+    {
+      "doi": "10.1017/glj.2024.9",
+      "issn": "2071-8322",
+      "doajId": "9a752ef6a7d24c40822776339a121f80",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2024.9"
+    },
+    {
+      "doi": "10.1017/glj.2025.1",
+      "issn": "2071-8322",
+      "doajId": "6e439ab040a642f0914ecbeb788a626c",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.1"
+    },
+    {
+      "doi": "10.1017/glj.2025.10",
+      "issn": "2071-8322",
+      "doajId": "c5c02140df9f4dd38c49f4228ddc92d9",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10"
+    },
+    {
+      "doi": "10.1017/glj.2025.10136",
+      "issn": "2071-8322",
+      "doajId": "e49a79198bda45d199fd686cfb966c7a",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10136"
+    },
+    {
+      "doi": "10.1017/glj.2025.10137",
+      "issn": "2071-8322",
+      "doajId": "e27138a0acdc4859b4c2ec35859bdc9b",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10137"
+    },
+    {
+      "doi": "10.1017/glj.2025.10138",
+      "issn": "2071-8322",
+      "doajId": "4debea2315df41d5bc8162daa04b454e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10138"
+    },
+    {
+      "doi": "10.1017/glj.2025.10139",
+      "issn": "2071-8322",
+      "doajId": "df5723a5a8ea4fbea94c080721848bae",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10139"
+    },
+    {
+      "doi": "10.1017/glj.2025.10140",
+      "issn": "2071-8322",
+      "doajId": "508a5b71a4a740c38f44c2b68bdeb973",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10140"
+    },
+    {
+      "doi": "10.1017/glj.2025.10141",
+      "issn": "2071-8322",
+      "doajId": "776088f48b4f43358f8722685c9d01ab",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10141"
+    },
+    {
+      "doi": "10.1017/glj.2025.10142",
+      "issn": "2071-8322",
+      "doajId": "66a0ee8ffefb48f094e154a774a6bf1d",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10142"
+    },
+    {
+      "doi": "10.1017/glj.2025.10143",
+      "issn": "2071-8322",
+      "doajId": "247e642b75844576a8c2969b8fe62dc2",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10143"
+    },
+    {
+      "doi": "10.1017/glj.2025.10144",
+      "issn": "2071-8322",
+      "doajId": "8a3ec5d54ece4e0384999517f58e2c78",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10144"
+    },
+    {
+      "doi": "10.1017/glj.2025.10145",
+      "issn": "2071-8322",
+      "doajId": "a88eb55456344dd8b26bbef1d3dc71d7",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10145"
+    },
+    {
+      "doi": "10.1017/glj.2025.10146",
+      "issn": "2071-8322",
+      "doajId": "cf66bd42635641bdbbbabb6e64ebfbb8",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10146"
+    },
+    {
+      "doi": "10.1017/glj.2025.10147",
+      "issn": "2071-8322",
+      "doajId": "e177fd1e1b4b4909ab78992139799219",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10147"
+    },
+    {
+      "doi": "10.1017/glj.2025.10148",
+      "issn": "2071-8322",
+      "doajId": "cd0ec564f75e48d085c57a7408cd976e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10148"
+    },
+    {
+      "doi": "10.1017/glj.2025.10159",
+      "issn": "2071-8322",
+      "doajId": "4403c7115eee41959e6a09745d981a4b",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10159"
+    },
+    {
+      "doi": "10.1017/glj.2025.10163",
+      "issn": "2071-8322",
+      "doajId": "2fa2235f36134c52b2f9004c3b09218a",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10163"
+    },
+    {
+      "doi": "10.1017/glj.2025.10164",
+      "issn": "2071-8322",
+      "doajId": "f2827840644447f58d8b1a6c728b4b12",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10164"
+    },
+    {
+      "doi": "10.1017/glj.2025.10165",
+      "issn": "2071-8322",
+      "doajId": "f2593ba2075c475a90ccdb9a862f1100",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10165"
+    },
+    {
+      "doi": "10.1017/glj.2025.10166",
+      "issn": "2071-8322",
+      "doajId": "c04d84ece2b94e5c8e4f96ceceb6ebcf",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10166"
+    },
+    {
+      "doi": "10.1017/glj.2025.10167",
+      "issn": "2071-8322",
+      "doajId": null,
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10167"
+    },
+    {
+      "doi": "10.1017/glj.2025.10168",
+      "issn": "2071-8322",
+      "doajId": "0ee1c818f52c4610bcb7db16c28d60e8",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10168"
+    },
+    {
+      "doi": "10.1017/glj.2025.10169",
+      "issn": "2071-8322",
+      "doajId": "996384e2301d4ff69733c399cee1cd68",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10169"
+    },
+    {
+      "doi": "10.1017/glj.2025.10170",
+      "issn": "2071-8322",
+      "doajId": null,
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10170"
+    },
+    {
+      "doi": "10.1017/glj.2025.10171",
+      "issn": "2071-8322",
+      "doajId": null,
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10171"
+    },
+    {
+      "doi": "10.1017/glj.2025.10173",
+      "issn": "2071-8322",
+      "doajId": null,
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10173"
+    },
+    {
+      "doi": "10.1017/glj.2025.10174",
+      "issn": "2071-8322",
+      "doajId": "f62979d07c3b4fc49a6a127b61e4082b",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.10174"
+    },
+    {
+      "doi": "10.1017/glj.2025.11",
+      "issn": "2071-8322",
+      "doajId": "1c61a68a1f59448794f6a31d7b1ea9e7",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.11"
+    },
+    {
+      "doi": "10.1017/glj.2025.12",
+      "issn": "2071-8322",
+      "doajId": "c9869725f1ae48d2a29773c2cf5eab32",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.12"
+    },
+    {
+      "doi": "10.1017/glj.2025.13",
+      "issn": "2071-8322",
+      "doajId": "48107d5c841042e186e540378c85ec34",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.13"
+    },
+    {
+      "doi": "10.1017/glj.2025.14",
+      "issn": "2071-8322",
+      "doajId": "f3137c7512f54371999f54fb52031706",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.14"
+    },
+    {
+      "doi": "10.1017/glj.2025.15",
+      "issn": "2071-8322",
+      "doajId": "48c33594b50249dc9c05c9d5a9a70c33",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.15"
+    },
+    {
+      "doi": "10.1017/glj.2025.18",
+      "issn": "2071-8322",
+      "doajId": "83f14796c45d451ba39e651bffab64a5",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.18"
+    },
+    {
+      "doi": "10.1017/glj.2025.19",
+      "issn": "2071-8322",
+      "doajId": "abb842673ab2499191f3c4bdcb13e484",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.19"
+    },
+    {
+      "doi": "10.1017/glj.2025.2",
+      "issn": "2071-8322",
+      "doajId": "93886ac67ae8441f8c7c58b79e1d4b58",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.2"
+    },
+    {
+      "doi": "10.1017/glj.2025.20",
+      "issn": "2071-8322",
+      "doajId": "79a7fc0a19734df6affc240aa200336d",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.20"
+    },
+    {
+      "doi": "10.1017/glj.2025.21",
+      "issn": "2071-8322",
+      "doajId": "82514d6e96a544cc9f1a16bee7ce3926",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.21"
+    },
+    {
+      "doi": "10.1017/glj.2025.22",
+      "issn": "2071-8322",
+      "doajId": "02d1dbef9ab841e09d291c16b8d4a9ff",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.22"
+    },
+    {
+      "doi": "10.1017/glj.2025.23",
+      "issn": "2071-8322",
+      "doajId": "ff9d2935aa9e49d9b9d1ce6f26ce1b3d",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.23"
+    },
+    {
+      "doi": "10.1017/glj.2025.24",
+      "issn": "2071-8322",
+      "doajId": "704e17970c2c4198827840290acb2c19",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.24"
+    },
+    {
+      "doi": "10.1017/glj.2025.25",
+      "issn": "2071-8322",
+      "doajId": "25c40bf1ac6c44de8f2eca1fa30ffe2b",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.25"
+    },
+    {
+      "doi": "10.1017/glj.2025.26",
+      "issn": "2071-8322",
+      "doajId": "7d45766b13244a298c52813f70fa4303",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.26"
+    },
+    {
+      "doi": "10.1017/glj.2025.27",
+      "issn": "2071-8322",
+      "doajId": "bd65f4054a974dbd91f9623a42c7086a",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.27"
+    },
+    {
+      "doi": "10.1017/glj.2025.28",
+      "issn": "2071-8322",
+      "doajId": "2de8388098514639b0fa72710d5c7e29",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.28"
+    },
+    {
+      "doi": "10.1017/glj.2025.3",
+      "issn": "2071-8322",
+      "doajId": "5fce404c40ac4036862398ca7c18bd4e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.3"
+    },
+    {
+      "doi": "10.1017/glj.2025.4",
+      "issn": "2071-8322",
+      "doajId": "be9cf93ea67d4fca9d2c86d7b01af673",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.4"
+    },
+    {
+      "doi": "10.1017/glj.2025.5",
+      "issn": "2071-8322",
+      "doajId": "d23cbd83f76d4dc99b35dc9bcdffc227",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.5"
+    },
+    {
+      "doi": "10.1017/glj.2025.6",
+      "issn": "2071-8322",
+      "doajId": "649431d5bb24424f9622be076d7b5e88",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.6"
+    },
+    {
+      "doi": "10.1017/glj.2025.7",
+      "issn": "2071-8322",
+      "doajId": "cfb5979c9e2d437d987d608df5ed2e95",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.7"
+    },
+    {
+      "doi": "10.1017/glj.2025.8",
+      "issn": "2071-8322",
+      "doajId": "3dc2b19b64314be9b7bb3dc08d0a5cd4",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.8"
+    },
+    {
+      "doi": "10.1017/glj.2025.9",
+      "issn": "2071-8322",
+      "doajId": "1e5058255e05465fad314dfa24268952",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2025.9"
+    },
+    {
+      "doi": "10.1017/glj.2026.10175",
+      "issn": "2071-8322",
+      "doajId": "29bb5d6760974c5aa7d17f7070418210",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10175"
+    },
+    {
+      "doi": "10.1017/glj.2026.10176",
+      "issn": "2071-8322",
+      "doajId": "47c2a8b916c24c62abb89d1903ce7846",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10176"
+    },
+    {
+      "doi": "10.1017/glj.2026.10178",
+      "issn": "2071-8322",
+      "doajId": "b20b067e81ae40478e44aa478999eb4b",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10178"
+    },
+    {
+      "doi": "10.1017/glj.2026.10180",
+      "issn": "2071-8322",
+      "doajId": "f550926e4914467b8a92965e8826ca5f",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10180"
+    },
+    {
+      "doi": "10.1017/glj.2026.10181",
+      "issn": "2071-8322",
+      "doajId": "92dc08d118df478786f3566cf1374fbf",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10181"
+    },
+    {
+      "doi": "10.1017/glj.2026.10182",
+      "issn": "2071-8322",
+      "doajId": "9ca04c1b1ef84649b8676b6f01d935db",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10182"
+    },
+    {
+      "doi": "10.1017/glj.2026.10183",
+      "issn": "2071-8322",
+      "doajId": "e2e87a2b50bd44adafe841c8fdf063d6",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10183"
+    },
+    {
+      "doi": "10.1017/glj.2026.10184",
+      "issn": "2071-8322",
+      "doajId": "31f5f28118c24de485a853786d4f68c5",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10184"
+    },
+    {
+      "doi": "10.1017/glj.2026.10185",
+      "issn": "2071-8322",
+      "doajId": "ecc1427ffedf4f46a8a01b68b7994616",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10185"
+    },
+    {
+      "doi": "10.1017/glj.2026.10186",
+      "issn": "2071-8322",
+      "doajId": "3fc2037764fb434f980d7abb3ba2a8a0",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10186"
+    },
+    {
+      "doi": "10.1017/glj.2026.10187",
+      "issn": "2071-8322",
+      "doajId": "0a9bd7d058d54acb9c428c81ae3176ef",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10187"
+    },
+    {
+      "doi": "10.1017/glj.2026.10188",
+      "issn": "2071-8322",
+      "doajId": "4ad9e01f9e564c8dafd97e667e0f8e5f",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10188"
+    },
+    {
+      "doi": "10.1017/glj.2026.10189",
+      "issn": "2071-8322",
+      "doajId": "d0332601741b4b8f8c7475af294b4b66",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10189"
+    },
+    {
+      "doi": "10.1017/glj.2026.10190",
+      "issn": "2071-8322",
+      "doajId": "4525bfa462cc49c8bdbe445514664e21",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10190"
+    },
+    {
+      "doi": "10.1017/glj.2026.10191",
+      "issn": "2071-8322",
+      "doajId": "f2c99b32b7164154ab7302a7df8fcc4e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10191"
+    },
+    {
+      "doi": "10.1017/glj.2026.10192",
+      "issn": "2071-8322",
+      "doajId": "1fda122e69704f0eb1190f825d9df6e3",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10192"
+    },
+    {
+      "doi": "10.1017/glj.2026.10193",
+      "issn": "2071-8322",
+      "doajId": "f999ac8023ff44259964ed772d1ed082",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10193"
+    },
+    {
+      "doi": "10.1017/glj.2026.10194",
+      "issn": "2071-8322",
+      "doajId": "5534f5060b0d40838f3e96bb4d4191d0",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10194"
+    },
+    {
+      "doi": "10.1017/glj.2026.10195",
+      "issn": "2071-8322",
+      "doajId": "10d50448fc8d41efb8420d4a0fdfdbf2",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10195"
+    },
+    {
+      "doi": "10.1017/glj.2026.10196",
+      "issn": "2071-8322",
+      "doajId": "b73596625a1b4214be4c39054e15616a",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10196"
+    },
+    {
+      "doi": "10.1017/glj.2026.10198",
+      "issn": "2071-8322",
+      "doajId": "729046a5ac0547798e8909ec92ee0c45",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10198"
+    },
+    {
+      "doi": "10.1017/glj.2026.10199",
+      "issn": "2071-8322",
+      "doajId": "e0c58ec5ac5443688b54301e1e9b2c6c",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10199"
+    },
+    {
+      "doi": "10.1017/glj.2026.10200",
+      "issn": "2071-8322",
+      "doajId": "d845210816b54be0af11f152b732a381",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10200"
+    },
+    {
+      "doi": "10.1017/glj.2026.10202",
+      "issn": "2071-8322",
+      "doajId": "3aa42efcc1fc4a299b6566d78ca016e1",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10202"
+    },
+    {
+      "doi": "10.1017/glj.2026.10205",
+      "issn": "2071-8322",
+      "doajId": "6765a6f169ae4ca4b230a6b5461679cc",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://doi.org/10.1017/glj.2026.10205"
+    },
+    {
+      "doi": "10.36633/ulr.1004",
+      "issn": "1871-515X",
+      "doajId": "a08fbcbe371d453694f3fd513d8edd50",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1004/files/67601a1e77fc8.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1010",
+      "issn": "1871-515X",
+      "doajId": "152b6c30b4e34d5e8cc9eec769e4e164",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1010/files/67602bfb00f51.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1011",
+      "issn": "1871-515X",
+      "doajId": "968d41b0f980472f906efc1641c9ebbb",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1011/files/6760169cd044a.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1017",
+      "issn": "1871-515X",
+      "doajId": "d8c298b571954ef5a5b5733a67e4a394",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": true,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1017/files/676020d7e5951.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1020",
+      "issn": "1871-515X",
+      "doajId": "1a98abea195f42e8add9605db31014b3",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1020/files/67602af438aa3.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1022",
+      "issn": "1871-515X",
+      "doajId": "71d1d584a8604fd99abcad6696c54e58",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1022/files/676025154dfc8.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1045",
+      "issn": "1871-515X",
+      "doajId": "d5950803e82e4d3b9dff6618392693b5",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1045/files/676013735ad00.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1063",
+      "issn": "1871-515X",
+      "doajId": "a7b970330f3446e1bf59c37303e1155e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1063/files/68b57fd26311b.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1069",
+      "issn": "1871-515X",
+      "doajId": "03d135e2eda248cfb61464eab119f597",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1069/files/67050b9119008.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1074",
+      "issn": "1871-515X",
+      "doajId": "0dc1a455719945829a59c40253c55bbe",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1074/files/68b584b30c312.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1079",
+      "issn": "1871-515X",
+      "doajId": "4dfec2b064bd42f6941dc024695e040c",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1079/files/673b3019b08b9.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1080",
+      "issn": "1871-515X",
+      "doajId": "fead4d8ea7fd47acab6a565255c4f1ed",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1080/files/673b235c69ff8.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1081",
+      "issn": "1871-515X",
+      "doajId": "0e5b93aa55434573b2899e28949d5716",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1081/files/673b262d4ec46.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1097",
+      "issn": "1871-515X",
+      "doajId": "d931a8cb8b6346cbbde0c4213a3b3b19",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1097/files/68b5892e60f03.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1113",
+      "issn": "1871-515X",
+      "doajId": "90e297b49fd64f6b805d2898bb4a37e6",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1113/files/68dd136d16487.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1118",
+      "issn": "1871-515X",
+      "doajId": "401ed2b5b76f497cb3233e81eb13e2e0",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1118/files/68dd033494fb7.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1119",
+      "issn": "1871-515X",
+      "doajId": "ac2a68740bf24aef86726dee144d2931",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1119/files/68dd1a939327e.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1124",
+      "issn": "1871-515X",
+      "doajId": "a9157763a9504c8a8e14d272188d48e5",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1124/files/68dd0d52b905b.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1130",
+      "issn": "1871-515X",
+      "doajId": "8192127f7b874a639ac1537a9c0654bf",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1130/files/67051b1eb14a3.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1132",
+      "issn": "1871-515X",
+      "doajId": "7e0342b86dde47beba6c0ecc8401e68e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1132/files/68dd101c2a4aa.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1134",
+      "issn": "1871-515X",
+      "doajId": "357176bb370240ebb355f01e4e764c31",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1134/files/68dd15b9d5c7c.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1138",
+      "issn": "1871-515X",
+      "doajId": "5809ff5d8f2147c898d8385cfe0549fd",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1138/files/673b32b990711.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1148",
+      "issn": "1871-515X",
+      "doajId": "32a5789399f045a3921e064d51a276d4",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1148/files/677f7628d1289.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1152",
+      "issn": "1871-515X",
+      "doajId": "d10ffd6d783144a4bc984465853e23c3",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1152/files/68b574e58c4af.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1165",
+      "issn": "1871-515X",
+      "doajId": "a390c3c9b56d460d87a702460b214e73",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1165/files/68dd0791d1473.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1180",
+      "issn": "1871-515X",
+      "doajId": null,
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1180/files/6a0c67d9e4863.xml"
+    },
+    {
+      "doi": "10.36633/ulr.1222",
+      "issn": "1871-515X",
+      "doajId": "099389924eac405fa9785943d264056c",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/1222/files/68dd1c40da970.xml"
+    },
+    {
+      "doi": "10.36633/ulr.905",
+      "issn": "1871-515X",
+      "doajId": "779fc8293720443aaee4d0e860d756ec",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/905/files/68b5784c5074c.xml"
+    },
+    {
+      "doi": "10.36633/ulr.906",
+      "issn": "1871-515X",
+      "doajId": "e23c57946d5b4ef9ac94cd4be3399d08",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/906/files/6659a99f714fa.xml"
+    },
+    {
+      "doi": "10.36633/ulr.922",
+      "issn": "1871-515X",
+      "doajId": "3bd17def085b45cb9736f1d0158b65d4",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/922/files/6659a751bb406.xml"
+    },
+    {
+      "doi": "10.36633/ulr.925",
+      "issn": "1871-515X",
+      "doajId": "9a38f73392684876a51c2e9c01cd52c0",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/925/files/6659a5355e45b.xml"
+    },
+    {
+      "doi": "10.36633/ulr.938",
+      "issn": "1871-515X",
+      "doajId": "554dec6dc9f84eaeb815a68657ee38a3",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/938/files/670510692368d.xml"
+    },
+    {
+      "doi": "10.36633/ulr.943",
+      "issn": "1871-515X",
+      "doajId": "385dbeeeaea74b2aa52c8437e8a17b09",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/943/files/67051868da3f0.xml"
+    },
+    {
+      "doi": "10.36633/ulr.945",
+      "issn": "1871-515X",
+      "doajId": "5b7d6662316f49b19781ac71428487fe",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/945/files/6659a2e66b754.xml"
+    },
+    {
+      "doi": "10.36633/ulr.951",
+      "issn": "1871-515X",
+      "doajId": "04dea812f14d4b1a9af9e2053b7ee99a",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/951/files/67051621c5950.xml"
+    },
+    {
+      "doi": "10.36633/ulr.960",
+      "issn": "1871-515X",
+      "doajId": "3ac8fd934e66447f8b8c055e03a1dbe0",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/960/files/6659a042dc2e9.xml"
+    },
+    {
+      "doi": "10.36633/ulr.974",
+      "issn": "1871-515X",
+      "doajId": "0914323892904969b4f9110e23239122",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtlawreview.org/articles/974/files/66599e502aab1.xml"
+    },
+    {
+      "doi": "10.5334/ujiel.615",
+      "issn": "2053-5341",
+      "doajId": "513f21e506d8458c8fb48643cf875e17",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": null
+    },
+    {
+      "doi": "10.5334/ujiel.639",
+      "issn": "2053-5341",
+      "doajId": "184b502dc84a4362bdb5f471dd81e332",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": null
+    },
+    {
+      "doi": "10.5334/ujiel.644",
+      "issn": "2053-5341",
+      "doajId": "fc754ed700494843a0a47a4a46f90b46",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtjournal.org/article/view/26122"
+    },
+    {
+      "doi": "10.5334/ujiel.649",
+      "issn": "2053-5341",
+      "doajId": "ce2dbb6e23a54c769fef0e2b836cc4b8",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtjournal.org/article/view/26121"
+    },
+    {
+      "doi": "10.5334/ujiel.653",
+      "issn": "2053-5341",
+      "doajId": "633781d6bf4b47ea9e4ed8a9f2208059",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtjournal.org/article/view/26120"
+    },
+    {
+      "doi": "10.5334/ujiel.655",
+      "issn": "2053-5341",
+      "doajId": "21bfb9e6fba248198599092cb5922980",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://utrechtjournal.org/article/view/26119"
+    },
+    {
+      "doi": "10.5334/tilr.360",
+      "issn": "2211-2545",
+      "doajId": "6fa7f2d551d649d086073e358e29a33b",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/360/files/66a8ceff6835b.xml"
+    },
+    {
+      "doi": "10.5334/tilr.361",
+      "issn": "2211-2545",
+      "doajId": "b3ff9fc2d24d4fb9b844d59576649c42",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/361/files/66aa2e178e328.xml"
+    },
+    {
+      "doi": "10.5334/tilr.362",
+      "issn": "2211-2545",
+      "doajId": "7e8de25a604d4e52a74d440c5c81ab4f",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/362/files/66a8d11a8b0eb.xml"
+    },
+    {
+      "doi": "10.5334/tilr.364",
+      "issn": "2211-2545",
+      "doajId": "21100d6c57954642ad06b5f7c83e9f66",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/364/files/66a8d16a08718.xml"
+    },
+    {
+      "doi": "10.5334/tilr.365",
+      "issn": "2211-2545",
+      "doajId": "8235db17cebf458caa2ffa0054124d03",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/365/files/66a8d21d95939.xml"
+    },
+    {
+      "doi": "10.5334/tilr.368",
+      "issn": "2211-2545",
+      "doajId": "3c809bac51f64e748430fa477e4a7f29",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/368/files/66a8d2c97d70f.xml"
+    },
+    {
+      "doi": "10.5334/tilr.369",
+      "issn": "2211-2545",
+      "doajId": "4da76aefb4364305afa0d83ec9a08c6e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/369/files/66acb72bbe3b2.xml"
+    },
+    {
+      "doi": "10.5334/tilr.370",
+      "issn": "2211-2545",
+      "doajId": "e697059e0c4d4083a53d22652112dc5e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/370/files/66a8d31c3811b.xml"
+    },
+    {
+      "doi": "10.5334/tilr.371",
+      "issn": "2211-2545",
+      "doajId": "e6f83ace12234b05a364a85efa670be9",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/371/files/66a8d3615d398.xml"
+    },
+    {
+      "doi": "10.5334/tilr.373",
+      "issn": "2211-2545",
+      "doajId": "23137605872f41649959b7c2e6ee3a0a",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/373/files/66a8d3a8e96c3.xml"
+    },
+    {
+      "doi": "10.5334/tilr.374",
+      "issn": "2211-2545",
+      "doajId": "ccdb6229817f4050a43d08b776e99cce",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/374/files/66a8d3ffa0c43.xml"
+    },
+    {
+      "doi": "10.5334/tilr.383",
+      "issn": "2211-2545",
+      "doajId": "cb72bc343fc447e5837166b83b28aa96",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/383/files/672ca909b0200.xml"
+    },
+    {
+      "doi": "10.5334/tilr.386",
+      "issn": "2211-2545",
+      "doajId": "3df661349b3446da93573aa872addbda",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/386/files/672cb3bf56ca1.xml"
+    },
+    {
+      "doi": "10.5334/tilr.387",
+      "issn": "2211-2545",
+      "doajId": "40ef7089040e486f8d43e5e90e422bd1",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/387/files/672ca6e253c16.xml"
+    },
+    {
+      "doi": "10.5334/tilr.388",
+      "issn": "2211-2545",
+      "doajId": "2c4b3eda0ba844b7905efed205d52736",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/388/files/672cb83405068.xml"
+    },
+    {
+      "doi": "10.5334/tilr.390",
+      "issn": "2211-2545",
+      "doajId": "59d40f0520df456593c6d208d4c237ae",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/390/files/672c82f3c7be0.xml"
+    },
+    {
+      "doi": "10.5334/tilr.391",
+      "issn": "2211-2545",
+      "doajId": "13f2d8e9e8834c0ba765d175e1e13d93",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/391/files/672ca2574c32e.xml"
+    },
+    {
+      "doi": "10.5334/tilr.392",
+      "issn": "2211-2545",
+      "doajId": "829bad9dc49041f08b2cc2fb652af12e",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/392/files/672c9da8458e1.xml"
+    },
+    {
+      "doi": "10.5334/tilr.393",
+      "issn": "2211-2545",
+      "doajId": "d4a1a03189464ac5bbd52b5b9c5b2316",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/393/files/672c9bca07bef.xml"
+    },
+    {
+      "doi": "10.5334/tilr.394",
+      "issn": "2211-2545",
+      "doajId": "0e8d2fd10b39440ca1c2ed3b442c6345",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/394/files/6746f71b69da5.xml"
+    },
+    {
+      "doi": "10.5334/tilr.395",
+      "issn": "2211-2545",
+      "doajId": "deaf7b27c2c14b4bad1ab0299c0e4238",
+      "crossrefRegistered": false,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/395/files/6746f4ee812d3.xml"
+    },
+    {
+      "doi": "10.5334/tilr.398",
+      "issn": "2211-2545",
+      "doajId": "096188efbba3409894ce40abdfd32549",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/398/files/672ca4a308606.xml"
+    },
+    {
+      "doi": "10.5334/tilr.399",
+      "issn": "2211-2545",
+      "doajId": "a63f49d3f5ca4c69bd9494d1677aba36",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/399/files/6746fd4bf20db.xml"
+    },
+    {
+      "doi": "10.5334/tilr.401",
+      "issn": "2211-2545",
+      "doajId": "47beff0f25544c219e0a4a11e826d663",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/401/files/6746f91c68367.xml"
+    },
+    {
+      "doi": "10.5334/tilr.403",
+      "issn": "2211-2545",
+      "doajId": "246ce905c50e447eaabb00977d4ca214",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/403/files/674da67934f3e.xml"
+    },
+    {
+      "doi": "10.5334/tilr.411",
+      "issn": "2211-2545",
+      "doajId": "d31ab90eb5df45629dc093d7d3c11722",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/411/files/692980ef3cdce.xml"
+    },
+    {
+      "doi": "10.5334/tilr.416",
+      "issn": "2211-2545",
+      "doajId": "2c6f74d164e74242be32c621cc9e4a8d",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/416/files/692e890de3394.xml"
+    },
+    {
+      "doi": "10.5334/tilr.418",
+      "issn": "2211-2545",
+      "doajId": "651be3b9a8e54d7e9e95de16bee831d7",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/418/files/69298acf40ddd.xml"
+    },
+    {
+      "doi": "10.5334/tilr.419",
+      "issn": "2211-2545",
+      "doajId": "951cdea7270c4603835b49f251694896",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/419/files/692989b30b548.xml"
+    },
+    {
+      "doi": "10.5334/tilr.422",
+      "issn": "2211-2545",
+      "doajId": "94f78b9124544e688e4850bd30edcc04",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/422/files/69297a8f51c2e.xml"
+    },
+    {
+      "doi": "10.5334/tilr.423",
+      "issn": "2211-2545",
+      "doajId": "e99a8b2162f940d4966b679a7aa7e31a",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/423/files/692978fcbf888.xml"
+    },
+    {
+      "doi": "10.5334/tilr.440",
+      "issn": "2211-2545",
+      "doajId": "6eaaa8425c5c484593d919d70155eb67",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/440/files/6929740e38adf.xml"
+    },
+    {
+      "doi": "10.5334/tilr.443",
+      "issn": "2211-2545",
+      "doajId": "11efbe197c444177a924475a50e7d1d0",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/443/files/69297530daf05.xml"
+    },
+    {
+      "doi": "10.5334/tilr.449",
+      "issn": "2211-2545",
+      "doajId": "b4cad38a2c4340c2af5744d37a5e238a",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/449/files/6929730b3db28.xml"
+    },
+    {
+      "doi": "10.5334/tilr.450",
+      "issn": "2211-2545",
+      "doajId": "59e4f89422ac4be6860505a43069e855",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/450/files/69296f290acbc.xml"
+    },
+    {
+      "doi": "10.5334/tilr.451",
+      "issn": "2211-2545",
+      "doajId": "c945e84d88dd42848f32d7058bd047a1",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/451/files/695cfa074a6ac.xml"
+    },
+    {
+      "doi": "10.5334/tilr.457",
+      "issn": "2211-2545",
+      "doajId": "426c4c75853948f1b31a97365739d67f",
+      "crossrefRegistered": true,
+      "crossrefCcBy4": false,
+      "publisherEvidence": "https://tilburglawreview.com/articles/457/files/6932e9f930820.xml"
+    }
+  ]
+}

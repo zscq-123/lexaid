@@ -16,6 +16,13 @@ public record CaseVO(
         String summary,
         String holding,
         String procedure,
+        String content,
+        String jurisdiction,
+        String languageCode,
+        String status,
+        String sourceDataset,
+        String sourceUrl,
+        String licenseName,
         List<String> tags,
         boolean favorite
 ) {

@@ -19,5 +19,6 @@ public class Favorite {
     private Long userId;
     private String targetType;
     private Long targetId;
+    private Long folderId;
     private LocalDateTime createdAt;
 }

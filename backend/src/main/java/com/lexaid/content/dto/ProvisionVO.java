@@ -15,6 +15,13 @@ public record ProvisionVO(
         String content,
         LocalDate effectiveDate,
         String issuingAuthority,
+        String jurisdiction,
+        String languageCode,
+        String status,
+        String sourceDataset,
+        String sourceUrl,
+        String licenseName,
+        LocalDate promulgationDate,
         List<String> tags,
         boolean favorite
 ) {

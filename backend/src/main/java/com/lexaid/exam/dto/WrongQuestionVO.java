@@ -17,6 +17,10 @@ public record WrongQuestionVO(
         String analysis,
         String category,
         Boolean isCorrect,
-        List<RelatedItem> related
+        List<RelatedItem> related,
+        Integer score,
+        int maxScore,
+        String gradingStatus,
+        String feedback
 ) {
 }

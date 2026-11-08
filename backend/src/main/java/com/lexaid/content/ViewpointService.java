@@ -1,6 +1,7 @@
 package com.lexaid.content;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lexaid.common.BizException;
 import com.lexaid.common.PageResult;
@@ -32,16 +33,32 @@ public class ViewpointService {
     private final StudyRecordService studyRecordService;
 
     public PageResult<ViewpointVO> page(String scholar, String keyword, String tag,
-                                        long page, long size) {
-        LambdaQueryWrapper<ScholarViewpoint> qw = new LambdaQueryWrapper<>();
+                                        String languageCode, boolean papersOnly, long page, long size) {
+        // More than 80 non-whitespace code points guarantee the excerpt ends within
+        // this prefix, even after Java trims controls and collapses whitespace.
+        LambdaQueryWrapper<ScholarViewpoint> qw = new QueryWrapper<ScholarViewpoint>().select(
+                "id", "scholar_name", "title", "summary",
+                "CASE WHEN CHAR_LENGTH(REGEXP_REPLACE(LEFT(content,512),'[[:space:][:cntrl:]]','')) > 80 "
+                        + "THEN LEFT(content,512) ELSE content END AS content",
+                "source", "publish_year", "language_code", "source_dataset", "source_url",
+                "doi", "license_name", "summary_kind"
+        ).lambda();
         if (StringUtils.hasText(scholar)) {
-            qw.eq(ScholarViewpoint::getScholarName, scholar);
+            qw.like(ScholarViewpoint::getScholarName, scholar.trim());
         }
         if (StringUtils.hasText(keyword)) {
             qw.and(w -> w.like(ScholarViewpoint::getScholarName, keyword)
                     .or().like(ScholarViewpoint::getTitle, keyword)
                     .or().like(ScholarViewpoint::getSummary, keyword)
-                    .or().like(ScholarViewpoint::getContent, keyword));
+                    .or().like(ScholarViewpoint::getContent, keyword)
+                    .or().like(ScholarViewpoint::getDoi, keyword));
+        }
+        if (StringUtils.hasText(languageCode)) {
+            qw.and(w -> w.eq(ScholarViewpoint::getLanguageCode, languageCode)
+                    .or().likeRight(ScholarViewpoint::getLanguageCode, languageCode + "-"));
+        }
+        if (papersOnly) {
+            qw.in(ScholarViewpoint::getSummaryKind, "author_abstract", "metadata_only");
         }
         if (StringUtils.hasText(tag)) {
             List<Long> ids = tagService.idsWithTag(EntityChecker.VIEWPOINT, tag);
@@ -83,7 +100,8 @@ public class ViewpointService {
                 v.getId(), v.getScholarName(), v.getTitle(),
                 full ? v.getSummary() : TextUtil.excerpt(v.getSummary(), 120),
                 full ? v.getContent() : TextUtil.excerpt(v.getContent(), 80),
-                v.getSource(), v.getPublishYear(), tags,
+                v.getSource(), v.getPublishYear(), v.getLanguageCode(), v.getSourceDataset(),
+                v.getSourceUrl(), v.getDoi(), v.getLicenseName(), v.getSummaryKind(), tags,
                 favoriteService.isFavorite(UserContext.userId(), EntityChecker.VIEWPOINT, v.getId()));
     }
 }

@@ -1,5 +1,6 @@
 package com.lexaid.content;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.lexaid.common.TextUtil;
 import com.lexaid.exam.Question;
 import com.lexaid.exam.QuestionMapper;
@@ -35,22 +36,27 @@ public class EntityTitleService {
         }
         switch (type) {
             case EntityChecker.PROVISION -> {
-                for (Provision p : provisionMapper.selectBatchIds(ids)) {
+                for (Provision p : provisionMapper.selectList(new LambdaQueryWrapper<Provision>()
+                        .select(Provision::getId, Provision::getLawName, Provision::getArticleNo).in(Provision::getId, ids))) {
                     m.put(p.getId(), p.getLawName() + " " + p.getArticleNo());
                 }
             }
             case EntityChecker.CASE -> {
-                for (CaseInfo c : caseInfoMapper.selectBatchIds(ids)) {
+                for (CaseInfo c : caseInfoMapper.selectList(new LambdaQueryWrapper<CaseInfo>()
+                        .select(CaseInfo::getId, CaseInfo::getTitle).in(CaseInfo::getId, ids))) {
                     m.put(c.getId(), c.getTitle());
                 }
             }
             case EntityChecker.VIEWPOINT -> {
-                for (ScholarViewpoint v : viewpointMapper.selectBatchIds(ids)) {
+                for (ScholarViewpoint v : viewpointMapper.selectList(new LambdaQueryWrapper<ScholarViewpoint>()
+                        .select(ScholarViewpoint::getId, ScholarViewpoint::getTitle, ScholarViewpoint::getScholarName)
+                        .in(ScholarViewpoint::getId, ids))) {
                     m.put(v.getId(), v.getTitle() + "（" + v.getScholarName() + "）");
                 }
             }
             case EntityChecker.QUESTION -> {
-                for (Question q : questionMapper.selectBatchIds(ids)) {
+                for (Question q : questionMapper.selectList(new LambdaQueryWrapper<Question>()
+                        .select(Question::getId, Question::getStem).in(Question::getId, ids))) {
                     m.put(q.getId(), TextUtil.excerpt(q.getStem(), 60));
                 }
             }

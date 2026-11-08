@@ -4,16 +4,43 @@ services:
     container_name: lexaid-mysql
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: lexaid123
-      MYSQL_DATABASE: lexaid
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-lexaid-root-local}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-lexaid}
+      MYSQL_USER: ${MYSQL_USER:-lexaid}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-lexaid-local}
       TZ: Asia/Shanghai
     ports:
-      - "3308:3306"
+      - "127.0.0.1:${MYSQL_PORT:-3308}:3306"
     volumes:
       - lexaid_mysql_data:/var/lib/mysql
       - ./backend/src/main/resources/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
-      - ./backend/src/main/resources/data.sql:/docker-entrypoint-initdb.d/02-data.sql:ro
+      - ./datasets/legal-codes/00-schema-migration.sql:/docker-entrypoint-initdb.d/02-legal-code-schema.sql:ro
+      - ./datasets/legal-cases/00-schema-migration.sql:/docker-entrypoint-initdb.d/03-legal-case-schema.sql:ro
+      - ./backend/src/main/resources/data.sql:/docker-entrypoint-initdb.d/04-data.sql:ro
+      - ./datasets/lexaid-public-questions.sql.gz:/docker-entrypoint-initdb.d/05-public-questions.sql.gz:ro
+      - ./datasets/legal-codes/lexaid-laws-cn.sql.gz:/docker-entrypoint-initdb.d/06-laws-cn.sql.gz:ro
+      - ./datasets/legal-codes/lexaid-laws-us.sql.gz:/docker-entrypoint-initdb.d/07-laws-us.sql.gz:ro
+      - ./datasets/legal-codes/lexaid-laws-eu.sql.gz:/docker-entrypoint-initdb.d/08-laws-eu.sql.gz:ro
+      - ./datasets/legal-codes/lexaid-laws-uk.sql.gz:/docker-entrypoint-initdb.d/09-laws-uk.sql.gz:ro
+      - ./datasets/legal-cases/lexaid-cases-cn-guiding.sql.gz:/docker-entrypoint-initdb.d/10-cases-cn-guiding.sql.gz:ro
+      - ./datasets/legal-cases/lexaid-cases-cn-gazette.sql.gz:/docker-entrypoint-initdb.d/11-cases-cn-gazette.sql.gz:ro
+      - ./datasets/legal-cases/lexaid-cases-echr.sql.gz:/docker-entrypoint-initdb.d/12-cases-echr.sql.gz:ro
+      - ./datasets/legal-cases/lexaid-cases-us-train.sql.gz:/docker-entrypoint-initdb.d/13-cases-us-train.sql.gz:ro
+      - ./datasets/legal-cases/lexaid-cases-us-validation.sql.gz:/docker-entrypoint-initdb.d/14-cases-us-validation.sql.gz:ro
+      - ./datasets/legal-cases/lexaid-cases-us-test.sql.gz:/docker-entrypoint-initdb.d/15-cases-us-test.sql.gz:ro
+      - ./datasets/legal-papers/lexaid-papers.sql.gz:/docker-entrypoint-initdb.d/16-papers.sql.gz:ro
+      - ./backend/src/main/resources/community-friends.sql:/docker-entrypoint-initdb.d/17-community-friends.sql:ro
+      - ./backend/src/main/resources/community-posts.sql:/docker-entrypoint-initdb.d/18-community-posts.sql:ro
+      - ./backend/src/main/resources/user-avatar.sql:/docker-entrypoint-initdb.d/19-user-avatar.sql:ro
+      - ./backend/src/main/resources/favorite-folders.sql:/docker-entrypoint-initdb.d/20-favorite-folders.sql:ro
+      - ./backend/src/main/resources/subjective-grading.sql:/docker-entrypoint-initdb.d/21-subjective-grading.sql:ro
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-lexaid-root-local}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
 
 volumes:
   lexaid_mysql_data:

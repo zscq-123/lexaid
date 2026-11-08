@@ -35,7 +35,6 @@
 
 <script setup>
 import { onMounted, reactive, ref } from 'vue'
-import { ElMessage, ElMessageBox } from 'element-plus'
 import { createNote, deleteNote, listNotes, updateNote } from '../api/note'
 
 const props = defineProps({

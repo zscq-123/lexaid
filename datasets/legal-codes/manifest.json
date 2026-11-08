@@ -1,0 +1,79 @@
+{
+  "generatedBy": "scripts/build-legal-code-datasets.py",
+  "datasets": {
+    "Chinese-Law-Corpus": {
+      "records": 56182,
+      "emptyContentReplacedWithTitle": 0,
+      "maximumContentCharacters": 16537,
+      "categories": {
+        "修正案": 12,
+        "司法解释": 9227,
+        "宪法": 143,
+        "有关法律问题和重大问题的决定（部分）": 2,
+        "法律": 23315,
+        "法律解释": 25,
+        "监察法规": 347,
+        "行政法规": 23111
+      },
+      "jurisdictions": {
+        "CN": 56182
+      },
+      "output": "datasets/legal-codes/lexaid-laws-cn.sql.gz",
+      "compressedBytes": 6887696,
+      "sha256": "7c0bbafc33e2bf9bbbd9c2200a7ef1678ecaa2761f3426c5231ddb41096a3aaf"
+    },
+    "US-Code-119-138": {
+      "records": 60880,
+      "emptyContentReplacedWithTitle": 0,
+      "maximumContentCharacters": 374399,
+      "categories": {
+        "美国法典": 60880
+      },
+      "jurisdictions": {
+        "US": 60880
+      },
+      "output": "datasets/legal-codes/lexaid-laws-us.sql.gz",
+      "compressedBytes": 45768517,
+      "sha256": "01f132118a238c24cf183affcf97c67a1f9dbfb761efb4c80421d8dcbdba6474"
+    },
+    "EURLEX57K": {
+      "records": 57000,
+      "emptyContentReplacedWithTitle": 0,
+      "maximumContentCharacters": 19824,
+      "categories": {
+        "欧盟决定": 17239,
+        "欧盟指令": 2230,
+        "欧盟条例": 37531
+      },
+      "jurisdictions": {
+        "EU": 57000
+      },
+      "output": "datasets/legal-codes/lexaid-laws-eu.sql.gz",
+      "compressedBytes": 36502463,
+      "sha256": "a83822fc0f2e1d135a5ba5192a68b6e887323839b868872a292644baa4f5dce5"
+    },
+    "UK-LexAPI-2026-11-01": {
+      "records": 220060,
+      "emptyContentReplacedWithTitle": 9024,
+      "maximumContentCharacters": 11489,
+      "categories": {
+        "英国主要立法": 36537,
+        "英国保留欧盟法": 39674,
+        "英国次级立法": 143849
+      },
+      "jurisdictions": {
+        "GB": 220060
+      },
+      "output": "datasets/legal-codes/lexaid-laws-uk.sql.gz",
+      "compressedBytes": 54180303,
+      "sha256": "d60e595526f77c3f636aef19b696a9694bf2da56382ea787171a6a19424ea68a"
+    }
+  },
+  "licenses": {
+    "Chinese-Law-Corpus": "CC0-1.0",
+    "US-Code-119-138": "US-Government-Work-Public-Domain",
+    "EURLEX57K": "CC-BY-SA-4.0",
+    "UK-LexAPI-2026-11-01": "Open-Government-Licence-3.0"
+  },
+  "totalRecords": 394122
+}

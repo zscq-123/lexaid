@@ -1,10 +1,11 @@
 import axios from 'axios'
-import { ElMessage } from 'element-plus'
 import { useUserStore } from '../stores/user'
 import router from '../router'
 
+const apiBaseURL = window.lexaidConfig?.apiBaseUrl || import.meta.env.VITE_API_BASE_URL || '/api'
+
 const service = axios.create({
-  baseURL: '/api',
+  baseURL: apiBaseURL,
   timeout: 30000
 })
 
@@ -28,13 +29,19 @@ service.interceptors.response.use(
     return body
   },
   (err) => {
+    if (axios.isCancel(err)) return Promise.reject(err)
     const resp = err.response
     if (resp && resp.status === 401) {
       const store = useUserStore()
-      store.logout()
-      if (router.currentRoute.value.path !== '/login') {
-        ElMessage.error('登录已过期，请重新登录')
-        router.push('/login')
+      const sentAuthorization = err.config?.headers?.Authorization
+      if (store.token && sentAuthorization === 'Bearer ' + store.token) {
+        store.logout()
+        if (router.currentRoute.value.path !== '/login') {
+          ElMessage.error('登录已过期，请重新登录')
+          router.push('/login')
+        }
+      } else if (!sentAuthorization && !store.token) {
+        ElMessage.error(resp.data?.message || '请先登录')
       }
     } else if (resp && resp.data && resp.data.message) {
       ElMessage.error(resp.data.message)

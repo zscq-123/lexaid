@@ -10,6 +10,8 @@ public record ExamResultVO(
         Integer score,
         Integer total,
         Integer correct,
-        List<AnswerDetailVO> details
+        Integer gradedTotal,
+        List<AnswerDetailVO> details,
+        int maxScore
 ) {
 }

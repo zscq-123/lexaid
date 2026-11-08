@@ -3,12 +3,21 @@ server:
   port: ${SERVER_PORT:8080}
 
 spring:
+  config:
+    import: "optional:file:${user.home}/.config/lexaid/deepseek.properties"
+  servlet:
+    multipart:
+      max-file-size: 4MB
+      max-request-size: 21MB
   application:
     name: lexaid-backend
+  autoconfigure:
+    # 本项目完全使用 JWT，禁用未使用的内存用户和随机开发密码。
+    exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
   datasource:
-    url: jdbc:mysql://localhost:3308/lexaid?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: lexaid123
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3308/lexaid?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true}
+    username: ${SPRING_DATASOURCE_USERNAME:lexaid}
+    password: ${SPRING_DATASOURCE_PASSWORD:lexaid-local}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:
     time-zone: Asia/Shanghai
@@ -28,14 +37,16 @@ springdoc:
 
 app:
   jwt:
-    # 生产环境请通过环境变量覆盖
-    secret: LexAid-JWT-Secret-Key-ChangeMe-In-Production-2026
-    expire-hours: 24
+    # 仅供本机开发；生产环境必须通过 APP_JWT_SECRET 覆盖
+    secret: ${APP_JWT_SECRET:LexAid-Development-Only-Secret-Do-Not-Use-In-Production}
+    expire-hours: ${APP_JWT_EXPIRE_HOURS:24}
 
 ai:
-  base-url: ${AI_BASE_URL:https://api.openai.com/v1}
+  base-url: ${AI_BASE_URL:https://api.deepseek.com}
+  deepseek-api-key: ${DEEPSEEK_API_KEY:}
   api-key: ${AI_API_KEY:}
-  model: ${AI_MODEL:gpt-4o-mini}
+  model: ${AI_MODEL:deepseek-flash}
+  max-tokens: ${AI_MAX_TOKENS:1200}
 
 logging:
   level:

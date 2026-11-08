@@ -1,0 +1,10 @@
+[Unit]
+Description=Check LexAid's short-lived certificate twice a day
+
+[Timer]
+OnCalendar=*-*-* 03,15:15:00
+RandomizedDelaySec=15m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

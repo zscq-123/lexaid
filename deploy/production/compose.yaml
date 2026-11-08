@@ -1,0 +1,55 @@
+name: lexaid-study
+services:
+  database:
+    image: mysql:8.0
+    restart: unless-stopped
+    env_file: ./secrets/db.env
+    volumes:
+      - db:/var/lib/mysql
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --skip-log-bin
+      - --performance-schema=OFF
+      - --innodb-buffer-pool-size=96M
+      - --innodb-redo-log-capacity=64M
+      - --max-connections=45
+      - --max-allowed-packet=256M
+      - --temptable-max-ram=32M
+    mem_limit: 400m
+    memswap_limit: 640m
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=\"$$MYSQL_PASSWORD\" mysql -u\"$$MYSQL_USER\" \"$$MYSQL_DATABASE\" -se 'SELECT 1'"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+  backend:
+    image: eclipse-temurin:25-jre
+    restart: unless-stopped
+    depends_on:
+      database:
+        condition: service_healthy
+    env_file:
+      - ./secrets/backend.env
+      - ./secrets/deepseek.env
+    environment:
+      SERVER_FORWARD_HEADERS_STRATEGY: framework
+      SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE: 8
+      SERVER_TOMCAT_THREADS_MAX: 32
+      SERVER_PORT: 8080
+    volumes:
+      - ./app:/opt/lexaid:ro
+    command: ["java", "-XX:+UseSerialGC", "-XX:ActiveProcessorCount=2", "-Xms32m", "-Xmx192m", "-XX:MaxMetaspaceSize=152m", "-XX:MaxDirectMemorySize=48m", "-Xss512k", "-jar", "/opt/lexaid/lexaid.jar"]
+    mem_limit: 512m
+    memswap_limit: 768m
+  web:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports: ["18443:8443"]
+    volumes:
+      - ./web:/srv/lexaid:ro
+      - ./secrets/tls:/etc/lexaid/tls:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    mem_limit: 64m
+volumes:
+  db:

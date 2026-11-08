@@ -4,6 +4,7 @@
     <el-card v-if="detail" shadow="never" class="detail-card">
       <div class="head">
         <div>
+          <el-tag size="small" type="info" effect="plain">{{ jurisdictionLabel(detail.jurisdiction) }}</el-tag>
           <el-tag size="small">{{ detail.category }}</el-tag>
           <span class="title">{{ detail.lawName }} {{ detail.articleNo }}</span>
         </div>
@@ -17,8 +18,16 @@
       </div>
       <div class="meta">
         <span v-if="detail.chapter">章节：{{ detail.chapter }}</span>
+        <span v-if="detail.languageCode">语言：{{ detail.languageCode }}</span>
+        <span v-if="detail.status">状态：{{ detail.status }}</span>
+        <span v-if="detail.promulgationDate">公布日期：{{ detail.promulgationDate }}</span>
         <span v-if="detail.effectiveDate">生效日期：{{ detail.effectiveDate }}</span>
         <span v-if="detail.issuingAuthority">制定机关：{{ detail.issuingAuthority }}</span>
+      </div>
+      <div v-if="detail.sourceDataset || detail.licenseName" class="source">
+        来源：{{ detail.sourceDataset || '未标注' }}
+        <span v-if="detail.licenseName"> · 许可：{{ detail.licenseName }}</span>
+        <a v-if="detail.sourceUrl" :href="detail.sourceUrl" target="_blank" rel="noopener noreferrer">查看原文</a>
       </div>
       <div class="tags">
         <el-tag v-for="t in detail.tags" :key="t" size="small" type="info" effect="plain">{{ t }}</el-tag>
@@ -37,7 +46,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { ElMessage } from 'element-plus'
 import { Star, StarFilled } from '@element-plus/icons-vue'
 import { getProvision, getProvisionRelated } from '../../api/content'
 import { addFavorite, removeFavorite } from '../../api/favorite'
@@ -82,6 +90,10 @@ function askAi() {
   router.push({ path: '/ai-chat', query: { contextType: 'PROVISION', contextId: detail.value.id } })
 }
 
+function jurisdictionLabel(value) {
+  return { CN: '中国', US: '美国', EU: '欧盟', GB: '英国' }[value] || value || '未标注'
+}
+
 onMounted(load)
 </script>
 
@@ -99,13 +111,24 @@ onMounted(load)
   font-size: 20px;
   font-weight: 700;
   margin-left: 8px;
+  overflow-wrap: anywhere;
 }
 .meta {
   color: #909399;
   font-size: 13px;
   margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+}
+.source {
+  margin-top: 10px;
+  color: #606266;
+  font-size: 13px;
+}
+.source a {
+  margin-left: 10px;
+  color: #2e5fa3;
 }
 .tags {
   margin-top: 10px;

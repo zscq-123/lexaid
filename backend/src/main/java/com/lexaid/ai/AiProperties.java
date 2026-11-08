@@ -1,18 +1,22 @@
 package com.lexaid.ai;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * AI 配置（环境变量 AI_BASE_URL / AI_API_KEY / AI_MODEL）
+ * Shared configuration for chat and subjective grading. Keep credentials out of toString().
  */
-@Data
+@Getter
+@Setter
 @Component
 @ConfigurationProperties(prefix = "ai")
 public class AiProperties {
 
-    private String baseUrl = "https://api.openai.com/v1";
+    private String baseUrl = "https://api.deepseek.com";
+    private String deepseekApiKey = "";
     private String apiKey = "";
-    private String model = "gpt-4o-mini";
+    private String model = "deepseek-flash";
+    private int maxTokens = 1200;
 }

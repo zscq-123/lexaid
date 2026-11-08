@@ -27,6 +27,15 @@ public class CaseInfo {
     private String holding;
     @TableField("`procedure`")
     private String procedure;
+    private String content;
+    private String jurisdiction;
+    private String languageCode;
+    private String status;
+    private String sourceDataset;
+    private String sourceItemId;
+    private String sourceUrl;
+    private String licenseName;
+    private String metadata;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

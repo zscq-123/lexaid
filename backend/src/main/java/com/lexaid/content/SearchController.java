@@ -5,6 +5,7 @@ import com.lexaid.common.Result;
 import com.lexaid.common.TextUtil;
 import com.lexaid.common.UserContext;
 import com.lexaid.content.dto.SearchItem;
+import com.lexaid.exam.Question;
 import com.lexaid.stats.StudyRecordService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.util.StringUtils;
@@ -48,6 +49,7 @@ public class SearchController {
 
     private List<SearchItem> searchProvisions(String kw) {
         return provisionMapper.selectList(new LambdaQueryWrapper<Provision>()
+                        .select(Provision::getId, Provision::getLawName, Provision::getArticleNo, Provision::getContent)
                         .like(Provision::getContent, kw)
                         .or().like(Provision::getArticleNo, kw)
                         .or().like(Provision::getLawName, kw)
@@ -59,6 +61,7 @@ public class SearchController {
 
     private List<SearchItem> searchCases(String kw) {
         return caseInfoMapper.selectList(new LambdaQueryWrapper<CaseInfo>()
+                        .select(CaseInfo::getId, CaseInfo::getTitle, CaseInfo::getSummary)
                         .like(CaseInfo::getTitle, kw)
                         .or().like(CaseInfo::getSummary, kw)
                         .last("LIMIT 10"))
@@ -68,8 +71,10 @@ public class SearchController {
 
     private List<SearchItem> searchViewpoints(String kw) {
         return viewpointMapper.selectList(new LambdaQueryWrapper<ScholarViewpoint>()
+                        .select(ScholarViewpoint::getId, ScholarViewpoint::getTitle, ScholarViewpoint::getSummary)
                         .like(ScholarViewpoint::getTitle, kw)
                         .or().like(ScholarViewpoint::getScholarName, kw)
+                        .or().like(ScholarViewpoint::getDoi, kw)
                         .or().like(ScholarViewpoint::getSummary, kw)
                         .last("LIMIT 10"))
                 .stream().map(v -> new SearchItem("VIEWPOINT", v.getId(),
@@ -77,8 +82,9 @@ public class SearchController {
     }
 
     private List<SearchItem> searchQuestions(String kw) {
-        return questionMapper.selectList(new LambdaQueryWrapper<com.lexaid.exam.Question>()
-                        .like(com.lexaid.exam.Question::getStem, kw)
+        return questionMapper.selectList(new LambdaQueryWrapper<Question>()
+                        .select(Question::getId, Question::getStem, Question::getCategory, Question::getType)
+                        .like(Question::getStem, kw)
                         .last("LIMIT 10"))
                 .stream().map(q -> new SearchItem("QUESTION", q.getId(),
                         TextUtil.excerpt(q.getStem(), 60), q.getCategory() + "·" + q.getType())).toList();

@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:allowBackup="false" android:usesCleartextTraffic="false"
+        android:label="LexAid" android:icon="@drawable/app_icon" android:theme="@style/AppTheme">
+        <activity android:name=".StudyActivity" android:exported="true"
+            android:configChanges="keyboardHidden|keyboard|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

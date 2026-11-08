@@ -2,6 +2,7 @@ package com.lexaid.exam.dto;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import java.util.List;
@@ -14,5 +15,6 @@ public class SubmitRequest {
 
     @NotNull(message = "answers 不能为空")
     @Valid
-    private List<AnswerItem> answers;
+    @Size(max = 50, message = "单次最多提交 50 道题")
+    private List<@NotNull AnswerItem> answers;
 }

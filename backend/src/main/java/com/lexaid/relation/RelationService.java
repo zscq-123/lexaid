@@ -5,6 +5,7 @@ import com.lexaid.common.BizException;
 import com.lexaid.common.TextUtil;
 import com.lexaid.content.CaseInfo;
 import com.lexaid.content.CaseInfoMapper;
+import com.lexaid.content.EntityChecker;
 import com.lexaid.content.Provision;
 import com.lexaid.content.ProvisionMapper;
 import com.lexaid.content.ScholarViewpoint;
@@ -13,6 +14,8 @@ import com.lexaid.exam.Question;
 import com.lexaid.exam.QuestionMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,6 +41,7 @@ public class RelationService {
     private final CaseInfoMapper caseInfoMapper;
     private final ScholarViewpointMapper viewpointMapper;
     private final QuestionMapper questionMapper;
+    private final EntityChecker entityChecker;
 
     /**
      * 双向查询：返回与指定实体关联的内容，按类型分组
@@ -138,12 +142,15 @@ public class RelationService {
     }
 
     /**
-     * 写入关联（自动补反向记录），失败不报错（已存在则忽略）
+     * 写入关联（自动补反向记录），已存在的关联直接忽略
      */
+    @Transactional
     public void addRelation(String sourceType, Long sourceId, String targetType, Long targetId,
                             String relationType, String description) {
         validateType(sourceType);
         validateType(targetType);
+        entityChecker.checkExists(sourceType, sourceId);
+        entityChecker.checkExists(targetType, targetId);
         if (!RELATION_TYPES.contains(relationType)) {
             throw new BizException("不支持的关系类型：" + relationType);
         }
@@ -162,7 +169,7 @@ public class RelationService {
             r.setRelationType(relType);
             r.setDescription(desc);
             entityRelationMapper.insert(r);
-        } catch (Exception ignored) {
+        } catch (DuplicateKeyException ignored) {
             // 唯一约束冲突说明已存在，忽略
         }
     }

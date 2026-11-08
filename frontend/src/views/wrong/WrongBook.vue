@@ -7,28 +7,26 @@
       </el-radio-group>
     </el-card>
 
-    <el-card shadow="never" class="list-card">
-      <el-empty v-if="list.length === 0" description="暂无记录，去答题吧" />
+    <el-card shadow="never" class="list-card" v-loading="loading">
+      <el-empty v-if="!loading && list.length === 0" description="暂无记录，去答题吧" />
       <div v-for="(q, i) in list" :key="q.questionId" class="row">
         <div class="row-head">
           <span class="idx">{{ i + 1 }}</span>
           <el-tag size="small">{{ typeLabel(q.type) }}</el-tag>
-          <el-tag size="small" :type="q.isCorrect === null || q.isCorrect === undefined ? 'info' : q.isCorrect ? 'success' : 'danger'">
-            {{ q.isCorrect === null || q.isCorrect === undefined ? '待自评' : q.isCorrect ? '正确' : '错误' }}
-          </el-tag>
           <el-tag size="small" type="info" effect="plain">{{ q.category }}</el-tag>
         </div>
         <div class="stem">{{ q.stem }}</div>
         <div class="answer">
           <span>你的答案：{{ q.userAnswer || '（未作答）' }}</span>
           <span v-if="q.type !== 'SHORT'">正确答案：{{ q.correctAnswer }}</span>
-          <span v-else>参考答案：{{ q.correctAnswer }}</span>
+          <span v-else>参考答案：{{ q.correctAnswer || '未收录' }}</span>
         </div>
+        <QuestionGrade :question="q" />
         <div v-if="q.analysis" class="analysis">
           <div class="analysis-title">解析</div>
           {{ q.analysis }}
         </div>
-        <div v-if="q.related.length" class="related">
+        <div v-if="q.related?.length" class="related">
           <el-tag v-for="r in q.related" :key="r.type + r.id" size="small" effect="plain" class="rel" @click="go(r)">
             {{ relLabel(r.type) }}：{{ r.title }} →
           </el-tag>
@@ -49,9 +47,10 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { wrongQuestions } from '../../api/exam'
+import QuestionGrade from '../../components/QuestionGrade.vue'
 
 const router = useRouter()
 const list = ref([])
@@ -59,11 +58,25 @@ const total = ref(0)
 const page = ref(1)
 const pageSize = ref(10)
 const all = ref(false)
+const loading = ref(true)
+let latestRequest = 0
+let pollTimer
 
-async function load() {
-  const data = await wrongQuestions({ page: page.value, size: pageSize.value, all: all.value })
-  list.value = data.records
-  total.value = data.total
+async function load(background = false) {
+  const request = ++latestRequest
+  clearTimeout(pollTimer)
+  loading.value = !background
+  try {
+    const data = await wrongQuestions({ page: page.value, size: pageSize.value, all: all.value })
+    if (request !== latestRequest) return
+    list.value = data.records
+    total.value = data.total
+    if (data.records.some(q => q.gradingStatus === 'PENDING')) pollTimer = setTimeout(() => load(true), 5000)
+  } catch {
+    // API errors are displayed by the client. Keep any already-loaded records.
+  } finally {
+    if (request === latestRequest) loading.value = false
+  }
 }
 function reload() {
   page.value = 1
@@ -85,6 +98,10 @@ function go(r) {
 }
 
 onMounted(load)
+onBeforeUnmount(() => {
+  ++latestRequest
+  clearTimeout(pollTimer)
+})
 </script>
 
 <style scoped>
@@ -103,6 +120,7 @@ onMounted(load)
 }
 .row-head {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
 }
@@ -117,10 +135,12 @@ onMounted(load)
 }
 .answer {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 4px;
   color: #606266;
   font-size: 13px;
 }
+.stem, .answer, .analysis { white-space: pre-wrap; overflow-wrap: anywhere; }
 .analysis {
   margin-top: 8px;
   background: #f7f8fa;

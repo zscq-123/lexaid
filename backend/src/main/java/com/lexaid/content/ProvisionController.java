@@ -2,14 +2,20 @@ package com.lexaid.content;
 
 import com.lexaid.common.PageResult;
 import com.lexaid.common.Result;
+import com.lexaid.content.dto.ProvisionCategoryVO;
 import com.lexaid.content.dto.ProvisionVO;
 import com.lexaid.relation.RelatedGroups;
 import lombok.RequiredArgsConstructor;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * 法条接口
@@ -17,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/provisions")
 @RequiredArgsConstructor
+@Validated
 public class ProvisionController {
 
     private final ProvisionService provisionService;
@@ -26,10 +33,18 @@ public class ProvisionController {
             @RequestParam(required = false) String keyword,
             @RequestParam(required = false) String lawName,
             @RequestParam(required = false) String category,
+            @RequestParam(required = false) String jurisdiction,
+            @RequestParam(required = false) String languageCode,
             @RequestParam(required = false) String tag,
-            @RequestParam(defaultValue = "1") long page,
-            @RequestParam(defaultValue = "10") long size) {
-        return Result.ok(provisionService.page(keyword, lawName, category, tag, page, size));
+            @RequestParam(defaultValue = "1") @Min(1) long page,
+            @RequestParam(defaultValue = "10") @Min(1) @Max(100) long size) {
+        return Result.ok(provisionService.page(
+                keyword, lawName, category, jurisdiction, languageCode, tag, page, size));
+    }
+
+    @GetMapping("/categories")
+    public Result<List<ProvisionCategoryVO>> categories() {
+        return Result.ok(provisionService.categories());
     }
 
     @GetMapping("/{id}")

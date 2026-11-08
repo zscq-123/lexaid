@@ -1,0 +1,5180 @@
+{
+  "totalRecords": 6439,
+  "authorAbstracts": 1501,
+  "fullTexts": 388,
+  "journals": {
+    "华夏法学": {
+      "records": 24,
+      "authorAbstracts": 21,
+      "fullTexts": 21
+    },
+    "法学（汉斯出版社）": {
+      "records": 404,
+      "authorAbstracts": 46,
+      "fullTexts": 0
+    },
+    "Laws": {
+      "records": 100,
+      "authorAbstracts": 100,
+      "fullTexts": 100
+    },
+    "German Law Journal": {
+      "records": 160,
+      "authorAbstracts": 158,
+      "fullTexts": 160
+    },
+    "Utrecht Law Review": {
+      "records": 37,
+      "authorAbstracts": 37,
+      "fullTexts": 37
+    },
+    "Tilburg Law Review": {
+      "records": 37,
+      "authorAbstracts": 37,
+      "fullTexts": 37
+    },
+    "Utrecht Journal of International and European Law": {
+      "records": 6,
+      "authorAbstracts": 4,
+      "fullTexts": 0
+    },
+    "交大法學評論": {
+      "records": 74,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "月旦醫事法報告": {
+      "records": 118,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "月旦會計實務研究": {
+      "records": 45,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "现代法学研究": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "醫療品質雜誌": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "專利師": {
+      "records": 24,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "月旦律評": {
+      "records": 179,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "月旦法學教室": {
+      "records": 149,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "月旦法學雜誌": {
+      "records": 198,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Language Teaching and Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "月旦財稅實務釋評": {
+      "records": 25,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "月旦裁判時報": {
+      "records": 181,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "月旦實務選評": {
+      "records": 125,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "國立中正大學法學集刊": {
+      "records": 22,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育研究前沿进展": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "月旦民商法雜誌": {
+      "records": 46,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "政大法學評論": {
+      "records": 22,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "城市建筑与发展": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "元宇宙医学.": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育思想理论研究.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Asia Social Science Academy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Gong zhong yu zheng ce.": {
+      "records": 64,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "財產法暨經濟法": {
+      "records": 8,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "興大法學": {
+      "records": 11,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Theory and Practice of Social Science": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Yixin Publisher": {
+      "records": 9,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "中正財經法學": {
+      "records": 13,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Donga beopak yeongu": {
+      "records": 19,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Integration of Industry and Education": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "现代工程项目管理": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "体能科学": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "现代经济管理": {
+      "records": 8,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "国际全科医学": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "社会科学与计算研究": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "艺术与文化研究": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Shi dai ji shu.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育科学文献": {
+      "records": 7,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "月旦財經法雜誌": {
+      "records": 13,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "管理研究动态": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "科技与社会研究": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育学刊": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "智慧教育 =": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "She hui qi ye jing ji fa zhan =": {
+      "records": 36,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Chinese Legal Studies": {
+      "records": 27,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Chinese Marxism Studies": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Contemporary Social Science Research": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育政策論壇": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "工程管理与技术探讨": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "农业科技与发展": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "经济理论与经济史": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "科技创新发展": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Educational Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "工程建设": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "国际护理与健康": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "工程施工新技术": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "现代教育前沿": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Gyoyuk gaehyeok yeogyohak yeongu": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Ecohumanism": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pakistan Journal of Criminology": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of International Trade Law and Policy": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lecture Notes in Education Psychology and Public Media": {
+      "records": 23,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Arbitration International": {
+      "records": 38,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Informatics Education and Research": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Discrimination and the Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Theory and Practice in Humanities and Social Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Journal of World Investment & Trade": {
+      "records": 14,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of International Dispute Settlement": {
+      "records": 35,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Infrastructure Policy and Development": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Dhaka University Law Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Asia Pacific Law Review": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Critical Review of Social Sciences Studies": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Global International Journal of Innovative Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Conflict Resolution Quarterly": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law in Context": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Tourism and Hospitality Studies /International Journal of Tourism and Hospitality Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International journal of law, crime and justice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "SIGn Jurnal Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Theoretical and Applied Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Law and Administration": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Michigan Journal of International Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista de Derecho Privado │Universidad Blas Pascal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Annales de la Faculté de Droit d’Istanbul": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Law and Integration Problems": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Access to Justice in Eastern Europe": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "University of Toronto Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pakistan Journal of Life and Social Sciences (PJLSS)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Majallah al-dawlīyah lil-buḥūth wa-al-dirāsāt al-qānūnīyah =": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The journal of academic science.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JOURNAL \"ORBELIANI\"": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law and Management": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Research and Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Tax Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Lifestyle and SDGs Review": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "AUC IURIDICA": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Boğaziçi law review.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Leiden Journal of International Law": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Law and Political Economy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Syntax Admiration": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of International Arbitration": {
+      "records": 30,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Global Trade and Customs Journal": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Business Law Review": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lampung Journal of International Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Law Politic and Humanities": {
+      "records": 10,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Uzhhorod National University Herald Series Law": {
+      "records": 14,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Studia Iuridica": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "World Trade Review": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "环球经济与管理杂志": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Rabels Zeitschrift für ausländisches und internationales Privatrecht": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "PERAHU (PENERANGAN HUKUM) JURNAL ILMU HUKUM": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Advances in Social Sciences": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Ижтимоий-гуманитар фанларнинг долзарб муаммолари / Актуальные проблемы социально-гуманитарных наук / Actual Problems of Humanities and Social Sciences": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Chinese Journal of Transnational Law": {
+      "records": 10,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "人文与社会科学学刊": {
+      "records": 15,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Международное право и международные организации / International Law and International Organizations": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Research Publication and Reviews": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Dispute Settlement": {
+      "records": 13,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Common Market Law Review": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ERA Forum": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Environmental Politics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Financial Resilience and Regulation": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Journal of World Energy Law & Business": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Strani pravni zivot": {
+      "records": 17,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Ilmu Sosial Mamangan": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Cambridge Law Journal": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Information Systems Engineering & Management": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Applied Economics and Policy Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Harmonius Journal of Legal and Social Studies in South East Europe": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Herald of Economic Justice": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Dispute resolution review.": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "学知 Xue Zhi": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "环球社科评论": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "EuroGlobal Journal of Linguistics and Language Education.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Zakon": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Indonesia Sosial Sains": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JURNAL HUKUM MEDIA JUSTITIA NUSANTARA": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "An-Najah University Journal for Research - B (Humanities)": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Indus journal of social sciences.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law and Society": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Juridical scientific and electronic journal": {
+      "records": 7,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Ren wen she hui fa zhan.": {
+      "records": 10,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Frontiers in Sociology": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of International Economic Law": {
+      "records": 9,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Ecological Economics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Eurasian Scientific Journal of Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Formosa Journal of Multidisciplinary Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Humanities Social Sciences and Education": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Technium Social Sciences Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista Tribuna Internacional": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Журнал ВШЭ по международному праву (HSE University Journal of International Law)": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Journal of International Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal Of Law And Criminology": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Texas A&M Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ORBELIANI LAW REVIEW": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育政策與管理": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Arab Law Quarterly": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Edelweiss Applied Science and Technology": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "GRURRR. Gewerblicher Rechtsschutz und Urheberrecht, Rechtsprechungs-Report/GRUR-DVD/GRUR-CD/IIC/Gewerblicher Rechtsschutz und Urheberrecht/Gewerblicher Rechtsschutz und Urheberrecht. Internationaler Teil": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Территория новых возможностей. Вестник Владивостокского государственного университета экономики и сервиса": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Education and Humanities": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Studies Quarterly": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ADR Arbitraż i mediacja": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育研究月刊": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "NUJS journal of regulatory studies.": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Interdisciplinary Studies in Society, Law, and Politics": {
+      "records": 8,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The American Journal of Political Science Law and Criminology": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Journal of Legal Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ICSID Review - Foreign Investment Law Journal": {
+      "records": 27,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Development and Social Sciences": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "四川大学学报：医学版": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Anuario Mexicano de Derecho Internacional": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Bulletin of the Karaganda University “Law Series”": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal for the Semiotics of Law - Revue internationale de Sémiotique juridique": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Chinese Journal of International Law": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ACADEMIA International Journal for Social Sciences": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Vestnik Yaroslavskogo gosudarstvennogo universiteta im P G Demidova Seriya gumanitarnye nauki": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Akta": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Review of European Comparative & International Environmental Law": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Journal of Applied Science Engineering and Technology": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "燕大法學教室": {
+      "records": 25,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Global Economics and Management": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Interdisciplinary Journal of Research and Development": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Perspectives on Politics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Теория и практика общественного развития": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal For Multidisciplinary Research": {
+      "records": 15,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Glocalism Journal of Culture Politics and Innovation": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "CUADERNOS DE DERECHO TRANSNACIONAL": {
+      "records": 11,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Transnational Legal Theory": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Bulletin of Institute of Legislation and Legal Information of the Republic of Kazakhstan": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "VNU Journal of Science Legal Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law Review": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law and World": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "MILRev Metro Islamic Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Applied Economics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Moscow Journal of International Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Comparative Studies in Jurisprudence Law and Politics": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Arbitration.": {
+      "records": 17,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Intertax": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Law & Social Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Asia-Pacific Journal of Business & Commerce": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Advances in Economics and Management Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pravo - teorija i praksa": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Physical Education Health and Social Sciences": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law & Criminology Journal.": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "East African Journal of Law and Ethics": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Asian Journal of International Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The American Journal of Management and Economics Innovations": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "REVISTA BRASILEIRA DE ALTERNATIVE DISPUTE RESOLUTION": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Courier of Kutafin Moscow State Law University (MSAL)": {
+      "records": 11,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "“International Humanitarian University Herald Jurisprudence”": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Business and Politics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Widya Yuridika": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jordan Journal of Applied Science-Humanities Series": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Legal Spirit": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Social Sciences and Public Administration": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Juridical Journal of Samara University": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Meždunarodnoe pravosudie": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Politics and Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "E-Commerce Letters": {
+      "records": 10,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "MORFAI JOURNAL": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "澳門警學": {
+      "records": 11,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Private International Law": {
+      "records": 19,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Russian Law": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Problemy Prawa Prywatnego Międzynarodowego": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law and Humanities": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Activa Yuris Jurnal Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Advances in Economics Management and Political Sciences": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "中国科学与技术学报": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Qlantic Journal of Social Sciences and Humanities": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Business Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Law and Development Review": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "King s Law Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "NIU journal of humanities.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Economics Law and Policy": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista de Direito Internacional": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Law and Sustainable Development": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JURNAL HUKUM SEHASEN": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal Law and Government.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Semarang Law Review (SLR)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Res Justitia Jurnal Ilmu Hukum": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Uniform Law Review": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Transformative Society": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Health Education Law Information and Humanities": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Constitutional State": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Review of European and Comparative Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Ilmiah Hukum dan Hak Asasi Manusia": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Vestnik of Saint Petersburg University Law": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The American Journal of Interdisciplinary Innovations and Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "American Journal of International Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "建筑工程与管理": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Twejer": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "工程学研究与实用": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY RESEARCH AND ANALYSIS": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Yustisia Tirtayasa Jurnal Tugas Akhir": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Khatulistiwa Jurnal Pendidikan dan Sosial Humaniora": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "园林建设与城市规划": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "现代交通与路桥建设": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "水利电力技术与应用": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "地质研究与环境保护": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Liberty and International Affairs Institute for Research and European Studies - Bitola": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Geuthèë Penelitian Multidisiplin": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Environmental Agreements Politics Law and Economics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Hukum to-ra Hukum Untuk Mengatur dan Melindungi Masyarakat": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Maastricht Journal of European and Comparative Law": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Legal Ukraine": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Boston College Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Insolvency and Restructuring Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ZANKO Journal of Law and Politics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Vniversitas": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Electronic Security and Digital Forensics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "jurisprudence": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Asian Journal of Legal Education": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Science of Law Journal": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Indonesian Journal of International Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Investment Law Journal.": {
+      "records": 9,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Asia Social Science Practice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Social Science and Humanities": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista Ítalo-española de Derecho procesal": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "理论研究学刊": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "African Journal of Legal Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Wajah Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International and Comparative Law Quarterly": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Posthumanism": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Yustisia Jurnal Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Legal and Political Studies": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Business and Human Rights Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Globalization and Health": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "人文及社會科學集刊": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Asian International Arbitration Journal": {
+      "records": 7,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "US-China Law Review": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "World Economy and Management research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Central European Management Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Dong-A Journal of International Business Transactions Law": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "African Journal of Management and Business Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Social Sciences Spectrum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Strategic Management Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Advances in Social Behavior Research": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Professional Business Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "INTERNATIONAL JOURNAL OF CREATIVE RESEARCH THOUGHTS": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Business Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Economics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Vietnamese Journal of Legal Sciences": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Engineering Advances and Technologies for Sustainable Applications": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ASA Bulletin": {
+      "records": 17,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jusletter": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Privat Law and Business": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Rossijskoe pravosudie": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JUSTISI": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of African Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of European Competition Law & Practice": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "经济与管理学报": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Beijing Law Review": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Modern Economics & Management Forum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law Justice and Jurisprudence": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "社会科学前沿": {
+      "records": 36,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Journal of Law and Economics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Discover Artificial Intelligence": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "CREATIVE ECONOMY": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Frontiers in Marine Science": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law & Geoeconomics": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "财经管理": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "الرافدین للحقوق": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "BORDER CROSSING": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "USFQ Law Review": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lex Portus": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Vector European": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Arab German journal of Sharia & law sciences": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Международное право": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Sosial Humaniora dan Pendidikan": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Law and Practice of International Courts and Tribunals": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Review of International Organizations": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Research Vidyapith International Multidisciplinary Journal.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Science Education and Innovations in the Context of Modern Problems": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Teisė": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Central European Researchers Blog": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Trusts & Trustees": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista de Direito Internacional e Globalização Econômica": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "國際人文社科研究": {
+      "records": 12,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International journal of procedural law.": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JURNAL HUKUM PELITA": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Право и политика": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "AHKAM": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Scientific and informational bulletin of Ivano-Frankivsk University of Law named after King Danylo Halytskyi": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lex Russica": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Arbitraje": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Third World Quarterly": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Korea Trade": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Нотариальный вестник": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Frontiers in Humanities and Social Sciences": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Impresi Indonesia": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Vestnik of Polotsk State University Part D Economic and legal sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Regional Industry Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Anali Pravnog fakulteta u Beogradu": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Studia Universitatis Moldaviae Seria Stiinte Sociale": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "مجلة العلوم القانونية": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Transportation Research Interdisciplinary Perspectives": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Legal Issues of Economic Integration": {
+      "records": 8,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Scientific Journal of Public and Private Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Investment Law and Arbitration Review Online": {
+      "records": 20,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Economic Letters (EEL)": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Social science review archives.": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Brazilian Journal of Law Technology and Innovation": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Scientific notes of Taurida National V I Vernadsky University Series Juridical Sciences": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law Research Review Quarterly": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Current Issues of the State and Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Visnik Nacional’nogo universitetu «Lvivska politehnika» Seria Uridicni nauki": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "African Journal of Inter/Multidisciplinary Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Zbornik radova Pravnog fakulteta Novi Sad": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Research and Innovation in Social Science": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Justice Amnesty Law and Undoing Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Legal Affairs and Dispute Resolution in Engineering and Construction": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育学": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law Enforcement Review": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Dialogues in Human Geography": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Desentralisasi.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Vestnik Severo-Vostočnogo federalʹnogo universiteta imeni M.K. Ammosova. Seriâ \"Istoriâ. Politologiâ. Pravo\"": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "TalTech Journal of European Studies": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law in Changing World": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JIHAD Jurnal Ilmu Hukum dan Administrasi": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Environmental Sciences": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "BULLETIN of L N Gumilyov Eurasian National University Law Series": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "电子通信与计算机科学": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Max Planck Yearbook of United Nations Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Latin American Journal of European Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "African Journal of Law Political Research and Administration": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "PRAWO i WIĘŹ": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "مجلة آفاق للعلوم": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Essays of Faculty of Law University of Pécs Yearbook of [year]": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Problematika Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law Politics and Humanities Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Asia Pacific Journal on Human Rights and the Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of All Research Education & Scientific Methods": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "GLOBAL JOURNAL FOR RESEARCH ANALYSIS": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista e-mercatoria": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "经管前沿": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ACTUAL PROBLEMS OF INTERNATIONAL RELATIONS": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Media Iuris": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Locus Penelitian dan Pengabdian": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "社会科学研究与实践": {
+      "records": 16,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Politika Progresif Jurnal Hukum Politik dan Humaniora": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Constitutional Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Scientific Journal of Engineering and Management": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The rule-of-law state theory and practice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Climate Policy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "工程技术前沿": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The International Sports Law Journal": {
+      "records": 8,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Rossijskoe Pravo Obrazovanie Praktika Nauka": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Scientific Journal Of Humanities and Social Sciences": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Juridical Science and Practice": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Public Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Academic Journal of Sociology and Management": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law and Society": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Analytical and Comparative Jurisprudence": {
+      "records": 8,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Competition Law & Economics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Korean Chinese Relations Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "State and Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "法学视野": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Siberian Law Herald": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Public administration and local government": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Goettingen Journal of International Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Korean Law Review for Rehabilitation and Bankruptcy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Economic problems and legal practice": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Yonsei Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revue de prévention et règlement des différends": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Nangarhar University Social Science Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JOURNAL EQUITABLE": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Globalisasi Hukum.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Humanities Arts and Social Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Scientific and Social Sustainable Development": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Legal Research & Analysis": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Economy and Development": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Medical Research and Practice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Society and Economy": {
+      "records": 71,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Computer Law Review International": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "社会经济与发展": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Educational Theory Observation": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Modern Engineering": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Applied Statistics and Data Science": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Internet Policy Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "국제사법연구": {
+      "records": 13,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Social Science Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Social Development and Research": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Economics Research": {
+      "records": 7,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Educational Theory and Research": {
+      "records": 17,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Cultural Property": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Educational Science Theory": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Education and Teaching Innovation": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Sustainable Development Law and Policy (The)": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Finance and Investment": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Syntax Literate Jurnal Ilmiah Indonesia": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Cogent Social Sciences": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Comparative Law in Africa": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lex localis - Journal of Local Self-Government": {
+      "records": 13,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Engineering Research and Application": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Court Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law Social Sciences and Management": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Multidisciplinary Research and Growth Evaluation": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pravni zapisi": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "China and WTO Review": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Law Policy and Global Development": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ECONOMIC THEORY AND LAW": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Tạp chí Khoa học pháp lý Việt Nam.": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Veritas et Justitia": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "국제법학회논총": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Modern Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Indonesian Journal of Advanced Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Baltic Journal of Legal and Social Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Canadian Yearbook of international Law/Annuaire canadien de droit international": {
+      "records": 8,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jiaokewen zuzhi xinshi": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law and innovative society": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Energy law forum": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Review of Private Law/Revue européenne de droit privé/Europäische Zeitschrift für Privatrecht": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lishizhen Medicine and Materia Medica Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JURNAL RISET RUMPUN ILMU SOSIAL POLITIK DAN HUMANIORA": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Journal of Modern China Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Groningen Journal of International Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Foreign Affairs Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ELTE Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Social Science and Human Research": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "UDUS Law Journal": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Cheng shi sheng tai jian she.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "African Journal of International and Comparative Law": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Imam Ja afar Al-Sadiq University Journal of Legal Studies": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Potchefstroom Electronic Law Journal/Potchefstroomse Elektroniese Regsblad": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "RCMOS - Revista Científica Multidisciplinar O Saber": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "社会创新与经济发展青年学术论坛": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Asian and African Social Science and Humanities": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Northern Ireland Legal Quarterly": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International journal of research and scientific innovation": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Zeszyty Prawnicze Biura Analiz Sejmowych": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The American Journal of Comparative Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal on Culture History and Religion": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Nigerian Juridical Review/Nigerian juridical review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Batulis Civil Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "人文学刊": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "自然科学前沿": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Modern scientific journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Justitia et Pax": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Journal of Law and Public Administration": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista Brasileira de Arbitragem": {
+      "records": 15,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Corporate Law & Governance Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Culture Meida and Entertainment Laws": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "A&C - Revista de Direito Administrativoe & Constitucional": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "East African Law Journal (EALJ)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Global Policy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Computational and Experimental Science and Engineering": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Global Foreign Policies Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Global Environmental Politics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law and Policy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Social Sciences & Humanities Open": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Uzbek journal of law and digital policy.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Polish Review of International and European Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Applied Bioanalysis": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law, Crime and Justice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Analele Universitării din București Drept - Forum Juridic": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "State and Regions Series Law": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Scholars International Journal of Law Crime and Justice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Economic Sciences.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Current Research in Law & Practice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Santander Art and Culture Law Review": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Innovative Social Science and Humanities Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Perinatal Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Interdisciplinary Science Letters": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Advanced Multidisciplinary Research and Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Electronic supplement to Russian Juridical Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Učënye zapiski Kazanskogo universiteta. Seriâ Gumanitarnye nauki/Učenye zapiski Kazanskogo gosudarstvennogo universiteta. Seriâ Gumanitarnye nauki/Učenye zapiski Kazanskogo universiteta. Seriâ Gumanitarnye nauki": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Research in Education Humanities and Commerce": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Student Journal of International Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Kultura polisa": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Actual Problems of Russian Law": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "SINERGI Jurnal Riset Ilmiah": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "National Law School of India Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Zhongguo ruankexue": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law and Justice research journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Social Sciences": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JuristenZeitung": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Rechtjiva": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Часопис цивілістики": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Zeitschrift für Wettbewerbsrecht": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "当代教学研究": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of the European Academy Open University": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Michigan Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Ekonomìčna teorìâ": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JURNAL USM LAW REVIEW": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Mahkamah.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Asia Europe Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Azerbaijani Lawyer Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Baltic Journal of Economic Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Magyar Jog": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教研导刊": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Herald of Dagestan State University": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Hukum Administrasi Publik dan Negara": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Glasnik prava": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Athens Journal of Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Prolog": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Sultan Qaboos University Legal Studies Journal": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Civìlìstična platforma.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Publicationes Universitatis Miskolcinensis Sectio Juridica et Politica": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European State Aid Law Quarterly": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of World Trade": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Family Court Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Andalas Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Emerging Markets Finance and Trade": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "PERFECT EDUCATION FAIRY": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "SENTRI Jurnal Riset Ilmiah": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Legalis Journal of Law Review": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Arkansas law review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Interactions": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Biodiversity Science": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JIHK": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal Of Law Theory And Law Enforcement": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Yearbook of Islamic and Middle Eastern Law Online": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pena Justisia Media Komunikasi dan Kajian Hukum": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育研究与实践": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "经济管理前沿": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Paradigma Hukum Pembangunan": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Akademik Tarih ve Dusunce Dergisi": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Social & Legal Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Environmental Policy and Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal Equity of Law and Governance": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Nowa Polityka Wschodnia": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "SOCRATES Rīgas Stradiņa universitātes Juridiskās fakultātes elektroniskais juridisko zinātnisko rakstu žurnāls / SOCRATES Rīga Stradiņš University Faculty of Law Electronic Scientific Journal of Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Comparative and International Law Journal of Southern Africa": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "GRUR International": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Law and Commerce": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Ius Constituendum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Financial Administrative and Economic Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Veredas do Direito Direito Ambiental e Desenvolvimento Sustentável": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "东方教育学刊": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "En Líneas Generales": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "BRICS Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "工程技术论坛": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "مجلة القرار للبحوث العلمية المحكّمة": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "社会经济导刊": {
+      "records": 12,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Terang Jurnal Kajian Ilmu Sosial Politik dan Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Вестник Российского университета дружбы народов. Серия: Юридические науки": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Austrian Review of International and European Law Online": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Global vision research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "African Journal of Political Science and International Relations": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lex Publica": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law Ethics & Technology": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "人文与社会科学探索": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Financial Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Science of law.": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Officium Notarium": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "中国现代教育学报": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Foreign Trade Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Al-Biruni Journal of Humanities and Social Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Herald of Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育理论与研究": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Ilmu Hukum Sui Generis": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law Policy and Governance": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Yearbook of Private International Law": {
+      "records": 23,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JCMS Journal of Common Market Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Korea International Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "当代教育与艺术": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "World Tax Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Italian Yearbook of International Law Online": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Science and Research (IJSR)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Vilnius University Open Series": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Civil Law and Legal Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Legal and Cultural Analytics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Journal of International Legal Communication": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Alberta Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "亚太经济与社会发展研究": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Majelis": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "De Jure": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Historical and Social Studies": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "민사소송": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "African Yearbook of International Law Online / Annuaire Africain de droit international Online": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Korean Journal of International and Comparative Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Energy & Natural Resources Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Necmettin Erbakan Universitesi Hukuk Fakultesi Dergisi Necmettin Erbakan University": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Amandemen": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Monatsschrift für Deutsches Recht": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "KDCBAR Law Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Asian Journal of Comparative Law": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Asian Business Lawyer": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Journal of V N Karazin Kharkiv National University Series Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Review of International Political Economy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revue critique de droit international privé": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Iuris Dictio": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Actual problems of improving of current legislation of Ukraine": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Advances and Scholarly Researches in Allied Education": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Cambridge International Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JOURNAL OF ADVANCE AND FUTURE RESEARCH": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "科技创新与技术": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of East Asia and International Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law Development Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Ekasakti Journal of Law and Justice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Anales de la Facultad de Ciencias Juridicas y Sociales de la Universidad Nacional de La Plata": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "GANEC SWARA": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "South African Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista Ágora": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law and Politics Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Daulat Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jaksa Jurnal Kajian Ilmu Hukum dan Politik": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Genesis исторические исследования": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Legalpreneur Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Humanities Arts and Social Science": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Behavior & Law Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Híradástechnika/Infocommunications journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "社会发展与科技创新": {
+      "records": 13,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Državno odvjetništvo otvara razgovor": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Referendum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Central European Journal of Comparative Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Zeitschrift für das Privatrecht der Europäischen Union": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lex Mercatoria": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JURA - Juristische Ausbildung": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Glossa Iuridica": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "African Journal of Law and Justice System": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Privat Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Indian Journal of Information Sources and Services": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "PAMALI Pattimura Magister Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Mahkamah Kajian Ilmu Hukum Dan Hukum Islam": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Analogi Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Miscellanea Historico-Iuridica": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Advocate’s practice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Court administrator": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Research Horizon": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Sosial Teknologi": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Environmental Law and Policy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Critical humanistic social theory.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lexonomica": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista ANNEP de Direito Processual": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Yearbook of European Union and Comparative Law": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "SA Mercantile Law Journal = SA Tydskrif vir Handelsreg": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "پژوهشنامه حقوق کسب و کار و سرمایه گذاری   Research Journal on Business Law and Investment": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Reformasi Hukum": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law Government and Communication": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Alternate Dispute Resolution": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "مجلة الحق للعلوم الشرعية والقانونية": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Современная наука и исследования": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Mağallaẗ kulliyyaẗ al-Qalam al-ğāmiʿaẗ.": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Legal Concept": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Criminal Common and Statutory Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law Journal of the Higher School of Economics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Peking University Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista de Direito Civil Contemporâneo": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Наукові праці Міжрегіональної Академії управління персоналом Юридичні науки": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "AJIL Unbound": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "American Yearbook of International Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "مجلة الدراسات والبحوث القانونية": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Tianjin University Science and Technology": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Scholarly Research Journal for Interdisciplinary Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal for Research in Applied Science and Engineering Technology": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Slovo of the National School of Judges of Ukraine": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Dirasat Shari a and Law Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "InterEULawEast journal for the international and european law economics and market integrations": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pace international law review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Hong Kong Review of Belt and Road Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "医学研究 =": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "LawFoyer International Journal of Doctrinal Legal Research.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "AHKAM Jurnal Ilmu Syariah": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Interdisciplinary Social Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JURNAL ILMIAH GEMA PERENCANA": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Highlights in Business Economics and Management": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pravni vjesnik": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Bratislava Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Alʹmanah prava": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Contemporary Journal of Social Science Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Legal Political and Humanistic Inquiry": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Krytyka Prawa": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Economics Finances Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Wrocławsko-Lwowskie Zeszyty Prawnicze": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "مجلة الشرق الأوسط للعلوم الإنسانية والثقافية": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Recital Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Studia nad Autorytaryzmem i Totalitaryzmem": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Humanitarian and Natural Sciences Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "مجلة الشرق الأوسط للدراسات القانونية والفقهية": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Policy Research Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "EKONOMIKA I UPRAVLENIE PROBLEMY RESHENIYA": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Agora International Journal of Juridical Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Insurance Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Cadernos de Política Exterior - english version": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista Ibérica do Direito": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Collegium Studiosum Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Development and Management Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Pembangunan Hukum Indonesia": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Inha Law Review The Institute of Legal Studies Inha University": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Prawo w Działaniu": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Environmental Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Campion Journal of Multidisciplinary Research and Explorer": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Obiter": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Вестник Института права Башкирского государственного университета": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Legal horizons": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Economic society and humanities.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育教学与管理": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "社会科学与教育": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "科学技术与教育": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Aktual’ni problemi pravoznavstva": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of economics and law.": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Economic & Political Weekly": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "THE INTERNATIONAL COMMERCE & LAW REVIEW": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Acta Facultatis iuridicae Universitatis Comenianae.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Advances in Developmental Research": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Society and Security": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista Electrónica de Estudios Internacionales": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Northeast Asian Law Journal": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "국제경제법연구": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Philosophy Economics and Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista de Derecho Internacional y Relaciones Internacionales": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ELDER LAW": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Ukrainian Journal of International Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law and Information Technology": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "全球文化探索": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JURIST": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "FIU Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "文化法学评论": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Khazanah Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Juridical world": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "中国法学学刊": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "BIISS Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Proceedings of the ASIL Annual Meeting": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law and Public Policy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "民主與治理": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Advances in Law Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "فصلنامه علمی مطالعات روابط بین الملل": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lead Sci Journal of Management Innovation and Social Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Issues of juvenile justice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Global Economy Business and Finance": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Family and housing law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Sport economics law management": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Contemporary Southeast Asia": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Russian judge": {
+      "records": 7,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "CIVIL LAW": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Business law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pravo i biznes.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Azerbaijan Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "osteuropa recht": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Netherlands International Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law Policy and the Family": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Arbitrazh-civil procedure": {
+      "records": 13,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Comenius Bratislava legal forum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "National Law School Business Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Iustinianus Primus Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Kajian Pembaruan Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Nordic Journal of International Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Baltic Journal of Law & Politics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "World Economics and Finance Bulletin": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Public international and private international law": {
+      "records": 5,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Wroclaw Review of Law Administration & Economics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Przegląd Prawa i Administracji": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International journal of economics and business management": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Latinskaia Amerika": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Hukum Progresif": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International criminal law and international justice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Hasanuddin Journal of International Affairs": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Comparative Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Esade Law Review De lege ferenda": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pravosudie / Justice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of financial compliance.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Hokengakuzasshi (JOURNAL of INSURANCE SCIENCE)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Tribhuvan University Law Journal": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "AL-Qadisiya Journal For Law and Political Sciences": {
+      "records": 15,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Dogmatyka Prawa": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pravo i privreda": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "RU SCIENCE": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Science Technology and Social Transformation": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Foreign Legislation and Comparative Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Philippine Law Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pravo istoriya i sovremennost": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Bulletin on Public Administration and Legal Affairs": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lecture Notes in Education Arts Management and Social Science": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "NUM Law Review": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "中国村庄": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "环球科学": {
+      "records": 10,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "国际市场": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Anbar University for Law and Political Sciences": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "TRANSNATIONAL BUSINESS LAW JOURNAL": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Direito Público": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "University of Zawia Journal of Legal and Sharia Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law and Policy Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Research Journal of Social Sciences & Economics Review (RJSSER)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The International Law Review Association Student Forum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Scientific works Adilet": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "UMFST Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law, policy and society – Правo, пoлитика и oбществo - Huquq, siyosat va jamiyat": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "American Journal of Open University Education": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Monetary Economics and Management": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "IFR Journal of Humanities Social Science and Politics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Indonesian Journal of Law and Economics Review": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Greenation Sosial dan Politik": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Justicia Insight": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista de la Facultad de Jurisprudencia RFJ": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "生态环境与保护": {
+      "records": 8,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "计算机与自主智能研究进展": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "African Journal of Library Archives and Information Science": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Direito.Unb.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Direito Ambiental e Sociedade": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ABU Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Malaysian and Comparative Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JOURNAL OF SCIENTIFIC AND LEGAL STUDIES NORTH-EASTERN UNIVERSITY GOMBE": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Historical Research Law and Policy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Technology & Emerging Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "National Law School Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Vestnik of the Kyrgyz-Russian Slavic University": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "HPNLU Journal of Law Business & Economics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "新能源（New Energy）": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Хозяйство и право": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Spanish Yearbook of International Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "新闻与传播学刊": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JUSTICIA SAINS Jurnal Ilmu Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Stallion Journal for Multidisciplinary Associated Research Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Ius Comparatum Journal of Law Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Studies. The Review of European Law, Economics and Politics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista Española de Derecho Internacional": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Review of Law International Politics and Economics": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Työväentutkimus Vuosikirja": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Perspectives of Law and Public Administration.": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Mizan Journal of Islamic Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lambung Mangkurat Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Strathmore Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "University of Jos Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ENLIGHTEN (Jurnal Bimbingan dan Konseling Islam)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Premier Journal of Languages & Literature": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JURNAL ILMIAH WAHANA PENDIDIKAN": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Intellectual Property and Human Rights": {
+      "records": 14,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Restitution Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "O‘zbekistondagi ilmiy yangiliklar jurnali": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Annals of “Dunarea de Jos” University of Galati. Legal Sciences. Fascicle XXVI": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Prosiding Seminar Hukum Aktual Fakultas Hukum Universitas Islam Indonesia": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Chinese Language and Culture Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The International tax journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Islamic University in Uganda Journal of Comparative Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Development and Public Policy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of International Islamic Law, Human Right and Public Policy": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "IJOSPOL - International Journal of Social, Policy and Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "African Journal Of Criminal Law And Jurisprudence": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "DPCE Online": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Ethiopian International Journal of Multidisciplinary Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Multidisciplinary Journal for Research & Development": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Advanced Legal Studies and Governance (IJALSG)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "教育研究": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "经济学": {
+      "records": 7,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Commonwealth Law Review Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Dinamika Hukum & Masyarakat": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "IJLLE (International Journal of Law and Legal Ethics)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Educational Review Law And Social Sciences (IJERLAS)": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Scientific Journal of Actuarial Finance and Accounting": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "工程管理": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Mandalika Literature": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Ilmu Hukum Prima (IHP)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Limbago Journal of Constitutional Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "RIO LAW JURNAL": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Ar Ro is Mandalika (Armada)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Innovative and Creativity (Joecy)": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Общество и инновации": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Riset Multidisiplin Edukasi": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "农业科学": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "VNUHCM Journal of Economics Business and Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lex Lectio Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Central European Academy law review.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Research & Technology": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Bureaucracy Journal Indonesia Journal of Law and Social-Political Governance": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Fox Justi Jurnal Ilmu Hukum": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "BANI Arbitration and Law Journal": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "TPM Testing, psychometrics, methodology in applied psychology": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Islamic Economic Studies": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "DME Journal of Law.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Anusandhanvallari": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Juridical and Political Science": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Rechtsvinding": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal for Civil and Criminal Law for Legislative Studies (JCCLLS)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Indonesian Journal of Islamic Jurisprudence, Economic and Legal Theory.": {
+      "records": 9,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "HUE UNIVERSITY JOURNAL OF SCIENCE SOCIAL SCIENCES AND HUMANITIES": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Human Rights Law and Practice": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Health Economics and Social Sciences (IJHESS)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Corporate Governance and International Business Law": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pegem Journal of Education and Instruction": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European journal of law and technology": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Cultura": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Australian and New Zealand Maritime Law Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Student's Social Science Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The International Journal of Politics and Sociology Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JOURNAL OF ISLAMIC AND LAW STUDIES": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Kolaboratif Sains": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Acta Universitatis Danubius. Juridica": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Law of Torts and Consumer Protection Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "National Journal of Environmental Law": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Advanced Research and Multidisciplinary Trends (IJARMT)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Ekonomi": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Al-Mahkamah Islamic Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "COMPETENTIE Journal International Sustainable Research": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Suloh Jurnal Fakultas Hukum Universitas Malikussaleh": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Prayagraj Law Review.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "E Global Congress": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Consensus Jurnal Ilmu Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Constitutional Law and Jurisprudence": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Capital Market and Securities Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Oriental Journal of History Politics and Law": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Iqtishaduna Jurnal Ilmiah Mahasiswa Hukum Ekonomi Syari ah": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Judge Jurnal Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "مطالعات فقهی و فلسفی": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "DE LEGA LATA Jurnal Ilmu Hukum": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Commercial and Property Law": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "American Journal of Public Diplomacy and International Studies (2993-2157)": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "American journal of social and humanitarian research.": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "European Scholar Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "University of Nairobi Law Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Miasto Przyszłości": {
+      "records": 4,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International journal of scientific researchers ( IJSR ) INDEXING": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Neonatal Surgery": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "LONTAR MERAH": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Helsinki Law Review": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Central Asian Journal of Innovations on Tourism Management and Finance": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Studi sull'integrazione europea": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law Research Journal": {
+      "records": 13,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Integrative Perspectives of Social and Science Journal": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "LexScriptio A Journal of the Department of Jurisprudence and Public Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "JOURNAL SAINS STUDENT RESEARCH": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Research for Christianity in China (JRCC)": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Web of Semantics : Journal of Interdisciplinary Science": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Al-Madarat Scientific Journal for Humanities and Social Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Business and Legislation": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Multidisciplinary Sciences and Innovations": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Ariyah: Jurnal Hukum Ekonomi Bisnis": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "International Journal of Law and Jurisprudence": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "YANGI O‘ZBEKISTON, YANGI TADQIQOTLAR JURNALI": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Hukum Perdata dan Bisnis": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Ilmiah Nusantara.": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Jurisprudence, International Law and Contemporary Legal Issues": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Pakistan Journal of Social Science Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "BASUG Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "The Obafemi Awolowo University Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "SIMILIA SIMILIBUS: JURNAL HUKUM DAN PERADILAN": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Educator Insights: Journal of Teaching Theory and Practice": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Paneuropean Law Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Prosiding Seminar Nasional Hukum, Kebijakan Publik, Hak Asasi Manusia dan Keadilan": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Modern American Journal of Social Sciences and Humanities": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Lex Et Lustitia": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "EduVision: Journal of Innovations in Pedagogy and Educational Advancements": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "World Bulletin of Education and Learning": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revista Latinoamericana de Sociología Jurídica": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "CPS Digital Library - Series of Conferences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Nuevos desafíos del Derecho": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "NUSANTARA Jurnal Ilmu Pengetahuan Sosial": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "SAMARALI TA’LIM VA BARQAROR INNOVATSIYALAR JURNALI": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Revija za kriminalistiko in kriminologijo": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Tulane journal of international and comparative law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Annual Methodological Archive Research Review": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Research consortium archive.": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal for Current Sign": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Dialogue Social Science Review (DSSR)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "INJOSEDU: International Journal of Social and Education": {
+      "records": 2,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Private and Property Law - Rivers State University": {
+      "records": 3,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "민사법학": {
+      "records": 6,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Eurasian Journal of Law Finance and Applied Sciences": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "新时代教育": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Nagari Law Review": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Law and Economics": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurisocial journal of International Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Journal of Private and Commercial Law": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Indonesian State Law Review (ISLRev)": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "ISNU Nine-Star Multidisciplinary Journal": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Jurnal Kajian Hukum Dan Kebijakan Publik": {
+      "records": 1,
+      "authorAbstracts": 0,
+      "fullTexts": 0
+    },
+    "Yale Law Archive (OSF)": {
+      "records": 1855,
+      "authorAbstracts": 1098,
+      "fullTexts": 33
+    }
+  },
+  "languages": {
+    "zh": 1928,
+    "zh-CN": 46,
+    "und": 2217,
+    "en": 2248
+  },
+  "sources": {
+    "China-Law-Journal-Archive": 24,
+    "Crossref-law-journals": 504,
+    "DOAJ-Crossref-legal-journals": 240,
+    "DOAJ-NCTU-Law-Review": 74,
+    "OpenAlex-Law": 3742,
+    "Yale-Law-Archive-OSF": 1855
+  },
+  "extraSnapshots": {
+    "clj/records.json": {
+      "upstreamRows": 24,
+      "added": 24,
+      "duplicateDois": 0
+    },
+    "journals/records.json.gz": {
+      "upstreamRows": 240,
+      "added": 240,
+      "duplicateDois": 0
+    },
+    "yale/records.json.gz": {
+      "upstreamRows": 1855,
+      "added": 1855,
+      "duplicateDois": 0
+    },
+    "nctu/records.json.gz": {
+      "upstreamRows": 74,
+      "added": 74,
+      "duplicateDois": 0
+    },
+    "openalex/records.json.gz": {
+      "upstreamRows": 3760,
+      "added": 3742,
+      "duplicateDois": 18
+    }
+  },
+  "crossrefCandidates": {
+    "hans": 404,
+    "laws": 100
+  },
+  "crossrefExcluded": [],
+  "inputs": {
+    "crossref-catalog.json.gz": "70f3607ded8c33137176390728a084130432cb35ddc24e1e354b1d1f092cc937",
+    "clj/records.json": "30bf2622de3937ca8c5c14d356a73e28bd2918ceb16c501cd37555f39e599a58",
+    "journals/records.json.gz": "6649ae0fe2237ce8416bb4c993a58b1bec99a03e04f827026daa1046566f657a",
+    "yale/records.json.gz": "d281a29eb87a795c1c5b915a7a207d358d706e1d4f260ffc94f9a3bc4f0b9a19",
+    "nctu/records.json.gz": "31f80cf66c9a3d5c91ea527a8c59098eceba04e901871c2d3847a62d0f79146d",
+    "openalex/records.json.gz": "6f3896777371326a827e6708c2b5a8276bccc5cce00e2a362a4e1644cce78e1e",
+    "laws-texts.json.gz": "220b4e48e74c3ba9647e485cf58db8978e56d96a2246c99df7d8d396fbd8e453"
+  },
+  "output": "lexaid-papers.sql.gz",
+  "compressedBytes": 11272066,
+  "sha256": "172075711586d112507cb0bbd7ebfb6ad209b3e14f5322b099e86ba82bb03357"
+}

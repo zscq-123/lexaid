@@ -21,5 +21,8 @@ public class AnswerRecord {
     private Long questionId;
     private String userAnswer;
     private Boolean isCorrect;
+    private Integer gradePoints;
+    private String gradingStatus;
+    private String gradingFeedback;
     private LocalDateTime answeredAt;
 }

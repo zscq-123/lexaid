@@ -9,19 +9,33 @@
         </el-radio-group>
       </el-form-item>
       <el-form-item label="题目类别">
-        <el-select v-model="form.category" placeholder="全部类别" clearable style="width: 240px">
-          <el-option label="刑法" value="刑法" />
-          <el-option label="民法" value="民法" />
-          <el-option label="行政法" value="行政法" />
+        <el-select
+          v-model="form.category"
+          aria-label="题目类别"
+          :placeholder="categoriesFailed ? '类别加载失败，点击重试' : '全部类别'"
+          :loading="categoriesLoading"
+          :no-data-text="categoriesFailed ? '加载失败，重新展开以重试' : '暂无符合条件的类别'"
+          no-match-text="没有匹配的题目类别"
+          clearable
+          filterable
+          class="setup-select"
+          @visible-change="retryCategories"
+        >
+          <el-option v-for="option in categoryOptions" :key="option.category" :label="option.category" :value="option.category">
+            <span>{{ option.category }}</span><span class="option-count">{{ option.count }} 题</span>
+          </el-option>
         </el-select>
       </el-form-item>
       <el-form-item label="难度">
-        <el-select v-model="form.difficulty" placeholder="全部难度" clearable style="width: 240px">
-          <el-option v-for="i in 5" :key="i" :label="i + ' 星'" :value="i" />
+        <el-select v-model="form.difficulty" aria-label="难度" placeholder="全部难度" clearable class="setup-select">
+          <el-option v-for="i in 5" :key="i" :label="i + ' 星'" :value="i" :disabled="!supportsDifficulty(i)" />
         </el-select>
       </el-form-item>
       <el-form-item label="题量">
         <el-input-number v-model="form.count" :min="1" :max="50" />
+        <p v-if="selectedCount != null && selectedCount < form.count" class="tip pool-limit">
+          当前条件共有 {{ selectedCount }} 道题，本次将抽取全部 {{ selectedCount }} 道。
+        </p>
       </el-form-item>
       <template v-if="form.mode === 'entity'">
         <el-form-item label="实体类型">
@@ -40,16 +54,21 @@
         <el-button type="primary" :loading="loading" @click="start">开始答题</el-button>
       </el-form-item>
     </el-form>
+    <ExamHistory />
   </el-card>
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue'
+import { computed, onMounted, reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { createSession } from '../../api/exam'
+import { createSession, listQuestionCategories } from '../../api/exam'
+import ExamHistory from './ExamHistory.vue'
 
 const router = useRouter()
 const loading = ref(false)
+const categoryCounts = ref([])
+const categoriesLoading = ref(false)
+const categoriesFailed = ref(false)
 const form = reactive({
   mode: 'random',
   category: null,
@@ -58,6 +77,40 @@ const form = reactive({
   sourceType: 'PROVISION',
   sourceId: 4
 })
+
+const categoryOptions = computed(() => {
+  const counts = new Map()
+  for (const { category, difficulty, count } of categoryCounts.value) {
+    if (form.difficulty && difficulty !== form.difficulty) continue
+    counts.set(category, (counts.get(category) || 0) + count)
+  }
+  return Array.from(counts, ([category, count]) => ({ category, count }))
+    .sort((a, b) => a.category.localeCompare(b.category, 'zh-CN'))
+})
+const selectedCount = computed(() => categoryOptions.value.find(option => option.category === form.category)?.count)
+
+function supportsDifficulty(level) {
+  return !form.category || categoryCounts.value.some(row => row.category === form.category && row.difficulty === level)
+}
+
+async function loadCategories() {
+  if (categoriesLoading.value) return
+  categoriesLoading.value = true
+  categoriesFailed.value = false
+  try {
+    categoryCounts.value = await listQuestionCategories()
+  } catch {
+    categoriesFailed.value = true
+  } finally {
+    categoriesLoading.value = false
+  }
+}
+
+function retryCategories(open) {
+  if (open && categoriesFailed.value) loadCategories()
+}
+
+onMounted(loadCategories)
 
 async function start() {
   loading.value = true
@@ -85,6 +138,9 @@ async function start() {
 .card-title {
   font-weight: 600;
 }
+.setup-select { width: 240px; max-width: 100%; }
+.option-count { float: right; margin-left: 18px; color: #606266; font-size: 12px; font-weight: 400; }
+.pool-limit { width: 100%; }
 .tip {
   color: #909399;
   font-size: 12px;

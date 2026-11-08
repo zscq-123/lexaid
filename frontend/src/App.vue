@@ -1,26 +1,11 @@
 <template>
-  <router-view />
+  <el-config-provider :locale="zhCn">
+    <router-view />
+  </el-config-provider>
 </template>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html,
-body,
-#app {
-  height: 100%;
-}
-body {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 14px;
-  color: #303133;
-  background: #fff;
-}
-a {
-  color: #2e5fa3;
-  text-decoration: none;
-}
-</style>
+<script setup>
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+</script>
+
+<style src="./styles/theme.css"></style>

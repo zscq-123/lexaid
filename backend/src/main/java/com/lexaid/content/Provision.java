@@ -24,6 +24,15 @@ public class Provision {
     private String content;
     private LocalDate effectiveDate;
     private String issuingAuthority;
+    private String jurisdiction;
+    private String languageCode;
+    private String status;
+    private String sourceDataset;
+    private String sourceItemId;
+    private String sourceUrl;
+    private String licenseName;
+    private LocalDate promulgationDate;
+    private String metadata;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

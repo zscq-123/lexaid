@@ -17,60 +17,96 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '用户表';
 
 CREATE TABLE IF NOT EXISTS legal_provision (
-  id                BIGINT       NOT NULL AUTO_INCREMENT,
-  law_name          VARCHAR(100) NOT NULL,
-  category          VARCHAR(50)  NOT NULL,
-  chapter           VARCHAR(100) DEFAULT NULL,
-  article_no        VARCHAR(30)  NOT NULL,
-  content           TEXT         NOT NULL,
-  effective_date    DATE         DEFAULT NULL,
-  issuing_authority VARCHAR(100) DEFAULT NULL,
-  created_at        DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at        DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  id                 BIGINT        NOT NULL AUTO_INCREMENT,
+  law_name           VARCHAR(2000) NOT NULL,
+  category           VARCHAR(100)  NOT NULL,
+  chapter            VARCHAR(1000) DEFAULT NULL,
+  article_no         VARCHAR(191)  NOT NULL,
+  content            LONGTEXT      NOT NULL,
+  effective_date     DATE          DEFAULT NULL,
+  issuing_authority  VARCHAR(255)  DEFAULT NULL,
+  jurisdiction       VARCHAR(16)   NOT NULL DEFAULT 'CN',
+  language_code      VARCHAR(16)   NOT NULL DEFAULT 'zh-CN',
+  status             VARCHAR(64)   DEFAULT NULL,
+  source_dataset     VARCHAR(100)  DEFAULT NULL,
+  source_item_id     VARCHAR(191)  DEFAULT NULL,
+  source_url         VARCHAR(1000) DEFAULT NULL,
+  license_name       VARCHAR(100)  DEFAULT NULL,
+  promulgation_date  DATE          DEFAULT NULL,
+  metadata           JSON          DEFAULT NULL,
+  created_at         DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at         DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
-  KEY idx_provision_law (law_name),
+  UNIQUE KEY uk_provision_source_item (source_dataset, source_item_id),
+  KEY idx_provision_law (law_name(191)),
   KEY idx_provision_category (category),
-  KEY idx_provision_article (article_no)
+  KEY idx_provision_article (article_no),
+  KEY idx_provision_jurisdiction (jurisdiction),
+  KEY idx_provision_language (language_code),
+  KEY idx_provision_status (status)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '法条表';
 
 CREATE TABLE IF NOT EXISTS case_info (
-  id         BIGINT       NOT NULL AUTO_INCREMENT,
-  title      VARCHAR(200) NOT NULL,
-  case_no    VARCHAR(50)  DEFAULT NULL,
-  court      VARCHAR(100) DEFAULT NULL,
-  judge_date DATE         DEFAULT NULL,
-  case_type  VARCHAR(50)  DEFAULT NULL,
-  summary    TEXT         NOT NULL,
-  holding    TEXT         DEFAULT NULL,
-  `procedure` VARCHAR(50) DEFAULT NULL,
-  created_at DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  id                 BIGINT        NOT NULL AUTO_INCREMENT,
+  title              VARCHAR(2000) NOT NULL,
+  case_no            VARCHAR(191)  DEFAULT NULL,
+  court              VARCHAR(500)  DEFAULT NULL,
+  judge_date         DATE          DEFAULT NULL,
+  case_type          VARCHAR(100)  DEFAULT NULL,
+  summary            LONGTEXT      NOT NULL,
+  holding            LONGTEXT      DEFAULT NULL,
+  `procedure`        VARCHAR(100)  DEFAULT NULL,
+  content            LONGTEXT      DEFAULT NULL,
+  jurisdiction       VARCHAR(16)   NOT NULL DEFAULT 'CN',
+  language_code      VARCHAR(16)   NOT NULL DEFAULT 'zh-CN',
+  `status`           VARCHAR(64)   DEFAULT NULL,
+  source_dataset     VARCHAR(100)  DEFAULT NULL,
+  source_item_id     VARCHAR(191)  DEFAULT NULL,
+  source_url         VARCHAR(1000) DEFAULT NULL,
+  license_name       VARCHAR(100)  DEFAULT NULL,
+  metadata           JSON          DEFAULT NULL,
+  created_at         DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at         DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
+  UNIQUE KEY uk_case_source_item (source_dataset, source_item_id),
   KEY idx_case_type (case_type),
-  KEY idx_case_judge_date (judge_date)
+  KEY idx_case_judge_date (judge_date),
+  KEY idx_case_jurisdiction (jurisdiction),
+  KEY idx_case_language (language_code),
+  KEY idx_case_status (`status`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '案例表';
 
 CREATE TABLE IF NOT EXISTS scholar_viewpoint (
   id           BIGINT       NOT NULL AUTO_INCREMENT,
-  scholar_name VARCHAR(50)  NOT NULL,
-  title        VARCHAR(200) NOT NULL,
-  summary      TEXT         NOT NULL,
-  content      TEXT         DEFAULT NULL,
-  source       VARCHAR(200) DEFAULT NULL,
+  scholar_name TEXT         NOT NULL,
+  title        TEXT         NOT NULL,
+  summary      MEDIUMTEXT   NOT NULL,
+  content      MEDIUMTEXT   DEFAULT NULL,
+  source       VARCHAR(500) DEFAULT NULL,
   publish_year INT          DEFAULT NULL,
+  language_code VARCHAR(16) DEFAULT NULL,
+  source_dataset VARCHAR(120) DEFAULT NULL,
+  source_item_id VARCHAR(512) COLLATE utf8mb4_bin DEFAULT NULL,
+  source_url   TEXT         DEFAULT NULL,
+  doi          VARCHAR(512) COLLATE utf8mb4_bin DEFAULT NULL,
+  license_name VARCHAR(120) DEFAULT NULL,
+  summary_kind VARCHAR(32)  DEFAULT NULL,
   created_at   DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at   DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
-  KEY idx_viewpoint_scholar (scholar_name)
+  KEY idx_viewpoint_scholar (scholar_name(191)),
+  UNIQUE KEY uk_viewpoint_source (source_dataset, source_item_id),
+  UNIQUE KEY uk_viewpoint_doi (doi),
+  KEY idx_viewpoint_language (language_code)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '学者观点表';
 
 CREATE TABLE IF NOT EXISTS question (
   id         BIGINT      NOT NULL AUTO_INCREMENT,
   type       VARCHAR(20) NOT NULL COMMENT 'SINGLE/MULTIPLE/JUDGE/SHORT',
-  stem       TEXT        NOT NULL,
-  options    TEXT        DEFAULT NULL COMMENT '选择题选项 JSON [{key,text}]',
-  answer     TEXT        NOT NULL COMMENT '选择题键数组/判断题 true|false/简答参考答案',
-  analysis   TEXT        DEFAULT NULL,
+  stem       MEDIUMTEXT  NOT NULL,
+  options    MEDIUMTEXT  DEFAULT NULL COMMENT '选择题选项 JSON [{key,text}]',
+  answer     MEDIUMTEXT  NOT NULL COMMENT '选择题键数组/判断题 true|false/简答参考答案',
+  analysis   MEDIUMTEXT  DEFAULT NULL,
   difficulty TINYINT     NOT NULL DEFAULT 3 COMMENT '1~5',
   category   VARCHAR(50) DEFAULT NULL,
   created_at DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -79,6 +115,21 @@ CREATE TABLE IF NOT EXISTS question (
   KEY idx_question_type (type),
   KEY idx_question_category (category)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '题目表';
+
+CREATE TABLE IF NOT EXISTS question_source (
+  id             BIGINT       NOT NULL AUTO_INCREMENT,
+  question_id    BIGINT       NOT NULL,
+  dataset        VARCHAR(64)  NOT NULL,
+  source_item_id VARCHAR(191) NOT NULL,
+  source_task    VARCHAR(100) DEFAULT NULL,
+  license_name   VARCHAR(100) DEFAULT NULL,
+  source_url     VARCHAR(500) DEFAULT NULL,
+  metadata       JSON         DEFAULT NULL,
+  imported_at    DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY uk_question_source_item (dataset, source_item_id),
+  KEY idx_question_source_question (question_id)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '公开题目来源与许可信息';
 
 CREATE TABLE IF NOT EXISTS exam_session (
   id           BIGINT   NOT NULL AUTO_INCREMENT,
@@ -102,10 +153,16 @@ CREATE TABLE IF NOT EXISTS answer_record (
   user_id      BIGINT   NOT NULL,
   question_id  BIGINT   NOT NULL,
   user_answer  TEXT     DEFAULT NULL,
-  is_correct   BOOLEAN  DEFAULT NULL COMMENT '简答题为 NULL',
+  is_correct   BOOLEAN  DEFAULT NULL COMMENT '未判分为 NULL，满分为 true',
+  grade_points SMALLINT DEFAULT NULL,
+  grading_status VARCHAR(24) DEFAULT NULL,
+  grading_feedback TEXT DEFAULT NULL,
+  grade_token CHAR(36) DEFAULT NULL,
+  grade_lease_until DATETIME DEFAULT NULL,
   answered_at  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
   KEY idx_answer_session (session_id),
+  KEY idx_grading_queue (grading_status,grade_lease_until,id),
   KEY idx_answer_user (user_id, is_correct)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '答题明细表';
 
@@ -122,14 +179,26 @@ CREATE TABLE IF NOT EXISTS note (
   KEY idx_note_target (target_type, target_id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '笔记表';
 
+CREATE TABLE IF NOT EXISTS favorite_folder (
+  id         BIGINT      NOT NULL AUTO_INCREMENT,
+  user_id    BIGINT      NOT NULL,
+  name       VARCHAR(40) NOT NULL,
+  created_at DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY uk_favorite_folder_name (user_id, name),
+  CONSTRAINT fk_favorite_folder_user FOREIGN KEY (user_id) REFERENCES `user` (id) ON DELETE CASCADE
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '收藏分区';
+
 CREATE TABLE IF NOT EXISTS favorite (
   id          BIGINT      NOT NULL AUTO_INCREMENT,
   user_id     BIGINT      NOT NULL,
   target_type VARCHAR(20) NOT NULL,
   target_id   BIGINT      NOT NULL,
+  folder_id   BIGINT      DEFAULT NULL,
   created_at  DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
-  UNIQUE KEY uk_favorite (user_id, target_type, target_id)
+  UNIQUE KEY uk_favorite (user_id, target_type, target_id),
+  CONSTRAINT fk_favorite_folder FOREIGN KEY (folder_id) REFERENCES favorite_folder (id) ON DELETE SET NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '收藏表';
 
 CREATE TABLE IF NOT EXISTS study_record (

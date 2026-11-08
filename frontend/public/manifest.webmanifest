@@ -1,0 +1,15 @@
+{
+  "id": "/",
+  "name": "LexAid 法律学习",
+  "short_name": "LexAid",
+  "lang": "zh-CN",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f6f9",
+  "theme_color": "#f4f6f9",
+  "icons": [
+    { "src": "/mobile-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/mobile-icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

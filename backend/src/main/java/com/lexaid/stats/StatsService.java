@@ -39,9 +39,13 @@ public class StatsService {
                 new LambdaQueryWrapper<AnswerRecord>()
                         .eq(AnswerRecord::getUserId, userId)
                         .eq(AnswerRecord::getIsCorrect, true));
+        Long gradedAnswer = answerRecordMapper.selectCount(
+                new LambdaQueryWrapper<AnswerRecord>()
+                        .eq(AnswerRecord::getUserId, userId)
+                        .isNotNull(AnswerRecord::getIsCorrect));
         Integer totalSec = studyRecordMapper.selectTotalDurationSec(userId);
-        double accuracy = totalAnswer == null || totalAnswer == 0
-                ? 0 : (double) totalCorrect / totalAnswer;
+        double accuracy = gradedAnswer == null || gradedAnswer == 0
+                ? 0 : (double) totalCorrect / gradedAnswer;
         return new OverviewVO(
                 totalSec == null ? 0 : totalSec / 60L,
                 totalAnswer == null ? 0 : totalAnswer,

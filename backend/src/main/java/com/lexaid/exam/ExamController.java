@@ -6,8 +6,11 @@ import com.lexaid.exam.dto.ExamQuestionVO;
 import com.lexaid.exam.dto.ExamResultVO;
 import com.lexaid.exam.dto.ExamSessionVO;
 import com.lexaid.exam.dto.ExamSetupRequest;
+import com.lexaid.exam.dto.QuestionCategoryCount;
 import com.lexaid.exam.dto.SubmitRequest;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 import java.util.Map;
@@ -26,9 +30,15 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/exam")
 @RequiredArgsConstructor
+@Validated
 public class ExamController {
 
     private final ExamService examService;
+
+    @GetMapping("/categories")
+    public Result<List<QuestionCategoryCount>> categories() {
+        return Result.ok(examService.categoryCounts());
+    }
 
     @PostMapping("/sessions")
     public Result<Map<String, Long>> create(@Valid @RequestBody ExamSetupRequest req) {
@@ -51,10 +61,15 @@ public class ExamController {
         return Result.ok(examService.resultOf(id));
     }
 
+    @PostMapping("/sessions/{id}/retry-grading")
+    public Result<ExamResultVO> retryGrading(@PathVariable Long id) {
+        return Result.ok(examService.retryGrading(id));
+    }
+
     @GetMapping("/sessions")
     public Result<PageResult<ExamSessionVO>> history(
-            @RequestParam(defaultValue = "1") long page,
-            @RequestParam(defaultValue = "10") long size) {
+            @RequestParam(defaultValue = "1") @Min(1) long page,
+            @RequestParam(defaultValue = "10") @Min(1) @Max(100) long size) {
         return Result.ok(examService.history(page, size));
     }
 

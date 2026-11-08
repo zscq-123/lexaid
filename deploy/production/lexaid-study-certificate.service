@@ -1,0 +1,8 @@
+[Unit]
+Description=Renew the LexAid study HTTPS certificate
+After=network-online.target docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/lexaid-study
+ExecStart=/opt/certbot/bin/certbot renew --quiet --cert-name lexaid-ip --config-dir /opt/lexaid-study/acme/config --work-dir /opt/lexaid-study/acme/work --logs-dir /opt/lexaid-study/acme/logs --deploy-hook /opt/lexaid-study/install-tls.sh

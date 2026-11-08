@@ -16,6 +16,10 @@ public record AnswerDetailVO(
         String correctAnswer,
         Boolean isCorrect,
         String analysis,
-        List<RelatedItem> related
+        List<RelatedItem> related,
+        Integer score,
+        int maxScore,
+        String gradingStatus,
+        String feedback
 ) {
 }

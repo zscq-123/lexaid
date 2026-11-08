@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS user_avatar (
+  user_id     BIGINT NOT NULL PRIMARY KEY,
+  version     CHAR(36) CHARACTER SET ascii NOT NULL,
+  media_type  VARCHAR(16) NOT NULL,
+  image_bytes MEDIUMBLOB NOT NULL,
+  CONSTRAINT fk_avatar_user FOREIGN KEY (user_id) REFERENCES `user` (id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

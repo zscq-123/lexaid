@@ -10,6 +10,8 @@ import com.lexaid.common.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * 认证服务：注册、登录、当前用户
@@ -21,6 +23,7 @@ public class AuthService {
     private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;
+    private final AvatarService avatars;
 
     /**
      * 注册：用户名唯一，密码 BCrypt 加密
@@ -38,7 +41,7 @@ public class AuthService {
                 ? req.getUsername() : req.getNickname());
         user.setRole("USER");
         userMapper.insert(user);
-        return UserVO.from(user);
+        return UserVO.from(user, null);
     }
 
     /**
@@ -51,7 +54,7 @@ public class AuthService {
             throw new BizException("用户名或密码错误");
         }
         String token = jwtUtil.generate(user.getId(), user.getUsername(), user.getRole());
-        return new LoginResponse(token, UserVO.from(user));
+        return new LoginResponse(token, UserVO.from(user, avatars.version(user.getId())));
     }
 
     /**
@@ -62,6 +65,18 @@ public class AuthService {
         if (user == null) {
             throw new BizException(401, "用户不存在");
         }
-        return UserVO.from(user);
+        return UserVO.from(user, avatars.version(userId));
+    }
+
+    @Transactional
+    public UserVO replaceAvatar(long userId, MultipartFile upload) {
+        avatars.replace(userId, upload);
+        return me(userId);
+    }
+
+    @Transactional
+    public UserVO removeAvatar(long userId) {
+        avatars.remove(userId);
+        return me(userId);
     }
 }

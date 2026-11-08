@@ -49,7 +49,6 @@
 <script setup>
 import { onMounted, reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { ElMessage, ElMessageBox } from 'element-plus'
 import { createNote, deleteNote, listNotes, updateNote } from '../../api/note'
 
 const router = useRouter()

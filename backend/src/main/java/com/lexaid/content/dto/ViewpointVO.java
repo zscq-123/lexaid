@@ -13,6 +13,12 @@ public record ViewpointVO(
         String content,
         String source,
         Integer publishYear,
+        String languageCode,
+        String sourceDataset,
+        String sourceUrl,
+        String doi,
+        String licenseName,
+        String summaryKind,
         List<String> tags,
         boolean favorite
 ) {

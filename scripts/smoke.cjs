@@ -1,6 +1,8 @@
 // LexAid 前端冒烟测试：登录后遍历核心页面，收集控制台错误并截图
 // 运行：NODE_PATH=<bundled node_modules> node scripts/smoke.cjs
-const { chromium } = require('playwright')
+const { createRequire } = require('module')
+const frontendRequire = createRequire(require('path').join(__dirname, '..', 'frontend', 'package.json'))
+const { chromium } = frontendRequire('playwright')
 const fs = require('fs')
 const path = require('path')
 
@@ -26,7 +28,7 @@ async function main() {
   await page.screenshot({ path: path.join(SHOT_DIR, '01-login.png') })
   await page.locator('input[placeholder="用户名"]').fill('demo')
   await page.locator('input[placeholder="密码"]').fill('123456')
-  await page.getByRole('button', { name: '登 录' }).click()
+  await page.getByRole('button', { name: '登录', exact: true }).click()
   await page.waitForURL('**/dashboard', { timeout: 15000 })
   await page.waitForTimeout(1500)
   await page.screenshot({ path: path.join(SHOT_DIR, '02-dashboard.png') })
@@ -57,8 +59,10 @@ async function main() {
   await page.waitForURL('**/exam/run/**', { timeout: 15000 })
   await page.waitForTimeout(1000)
   await page.screenshot({ path: path.join(SHOT_DIR, '07-exam-run.png') })
+  const questionCount = await page.locator('.cards .el-button').count()
+  if (questionCount === 0) throw new Error('组卷成功但没有返回题目')
   // 逐题作答（选择题选第一项，判断选正确，简答填字）
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < questionCount; i++) {
     const typeTag = await page.locator('.stem .el-tag').first().textContent().catch(() => '')
     const btn = page.getByRole('button', { name: '下一题' })
     if (typeTag === '单选题' || typeTag === '判断题') {
@@ -68,7 +72,7 @@ async function main() {
     } else {
       await page.locator('textarea').fill('测试作答内容')
     }
-    if (i < 9) {
+    if (i < questionCount - 1) {
       if (await btn.isVisible().catch(() => false)) await btn.click()
       await page.waitForTimeout(200)
     }
@@ -98,6 +102,7 @@ async function main() {
   if (errors.length) {
     console.log('ERRORS:')
     errors.forEach((e) => console.log(e))
+    throw new Error(`检测到 ${errors.length} 个浏览器或 HTTP 错误`)
   } else {
     console.log('NO_CONSOLE_ERRORS')
   }

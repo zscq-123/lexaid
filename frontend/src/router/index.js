@@ -15,6 +15,8 @@ const routes = [
       { path: 'cases/:id', component: () => import('../views/cases/CaseDetail.vue') },
       { path: 'viewpoints', component: () => import('../views/viewpoints/ViewpointList.vue') },
       { path: 'viewpoints/:id', component: () => import('../views/viewpoints/ViewpointDetail.vue') },
+      { path: 'community', component: () => import('../views/community/Community.vue') },
+      { path: 'community/posts/:id', component: () => import('../views/community/PostDetail.vue') },
       { path: 'exam/setup', component: () => import('../views/exam/ExamSetup.vue') },
       { path: 'exam/run/:sessionId', component: () => import('../views/exam/ExamRun.vue') },
       { path: 'exam/result/:sessionId', component: () => import('../views/exam/ExamResult.vue') },
@@ -22,7 +24,12 @@ const routes = [
       { path: 'ai-chat', component: () => import('../views/ai/AiChat.vue') },
       { path: 'notes', component: () => import('../views/notes/NoteList.vue') },
       { path: 'stats', component: () => import('../views/stats/Stats.vue') },
-      { path: 'profile', component: () => import('../views/profile/Profile.vue') }
+      { path: 'profile', component: () => import('../views/profile/Profile.vue') },
+      {
+        path: 'admin',
+        component: () => import('../views/admin/AdminDashboard.vue'),
+        meta: { requiresAdmin: true }
+      }
     ]
   }
 ]
@@ -39,6 +46,9 @@ router.beforeEach((to) => {
     return { path: '/login' }
   }
   if (store.token && to.path === '/login') {
+    return { path: '/dashboard' }
+  }
+  if (to.meta.requiresAdmin && store.user?.role !== 'ADMIN') {
     return { path: '/dashboard' }
   }
   return true

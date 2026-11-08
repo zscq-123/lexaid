@@ -6,6 +6,7 @@ import com.lexaid.common.BizException;
 import com.lexaid.common.PageResult;
 import com.lexaid.common.TextUtil;
 import com.lexaid.common.UserContext;
+import com.lexaid.content.dto.ProvisionCategoryVO;
 import com.lexaid.content.dto.ProvisionVO;
 import com.lexaid.note.FavoriteService;
 import com.lexaid.relation.RelatedGroups;
@@ -32,7 +33,8 @@ public class ProvisionService {
     private final StudyRecordService studyRecordService;
 
     public PageResult<ProvisionVO> page(String keyword, String lawName, String category,
-                                        String tag, long page, long size) {
+                                        String jurisdiction, String languageCode, String tag,
+                                        long page, long size) {
         LambdaQueryWrapper<Provision> qw = new LambdaQueryWrapper<>();
         if (StringUtils.hasText(keyword)) {
             qw.and(w -> w.like(Provision::getLawName, keyword)
@@ -45,6 +47,12 @@ public class ProvisionService {
         }
         if (StringUtils.hasText(category)) {
             qw.eq(Provision::getCategory, category);
+        }
+        if (StringUtils.hasText(jurisdiction)) {
+            qw.eq(Provision::getJurisdiction, jurisdiction);
+        }
+        if (StringUtils.hasText(languageCode)) {
+            qw.eq(Provision::getLanguageCode, languageCode);
         }
         if (StringUtils.hasText(tag)) {
             List<Long> ids = tagService.idsWithTag(EntityChecker.PROVISION, tag);
@@ -67,6 +75,10 @@ public class ProvisionService {
         return new PageResult<>(vos, p.getTotal());
     }
 
+    public List<ProvisionCategoryVO> categories() {
+        return provisionMapper.selectCategories();
+    }
+
     public ProvisionVO detail(Long id) {
         Provision p = provisionMapper.selectById(id);
         if (p == null) {
@@ -85,7 +97,9 @@ public class ProvisionService {
         return new ProvisionVO(
                 p.getId(), p.getLawName(), p.getCategory(), p.getChapter(), p.getArticleNo(),
                 full ? p.getContent() : TextUtil.excerpt(p.getContent(), 120),
-                p.getEffectiveDate(), p.getIssuingAuthority(), tags,
+                p.getEffectiveDate(), p.getIssuingAuthority(), p.getJurisdiction(),
+                p.getLanguageCode(), p.getStatus(), p.getSourceDataset(), p.getSourceUrl(),
+                p.getLicenseName(), p.getPromulgationDate(), tags,
                 favoriteService.isFavorite(UserContext.userId(), EntityChecker.PROVISION, p.getId()));
     }
 }

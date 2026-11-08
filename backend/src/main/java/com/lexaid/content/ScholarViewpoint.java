@@ -22,6 +22,13 @@ public class ScholarViewpoint {
     private String content;
     private String source;
     private Integer publishYear;
+    private String languageCode;
+    private String sourceDataset;
+    private String sourceItemId;
+    private String sourceUrl;
+    private String doi;
+    private String licenseName;
+    private String summaryKind;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

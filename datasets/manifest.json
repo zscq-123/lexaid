@@ -1,0 +1,39 @@
+{
+  "generatedBy": "scripts/build-public-question-dataset.mjs",
+  "inputRecords": 25693,
+  "importedSourceRecords": 25693,
+  "skippedRecords": [],
+  "importedQuestions": 25598,
+  "duplicateQuestions": 95,
+  "sources": {
+    "LawBench": {
+      "input": 10000,
+      "imported": 10000,
+      "skipped": 0
+    },
+    "LexEval": {
+      "input": 14150,
+      "imported": 14150,
+      "skipped": 0
+    },
+    "LeCoQA": {
+      "input": 1543,
+      "imported": 1543,
+      "skipped": 0
+    }
+  },
+  "datasets": {
+    "LawBench": {
+      "license": "Apache-2.0",
+      "url": "https://github.com/open-compass/LawBench"
+    },
+    "LexEval": {
+      "license": "MIT",
+      "url": "https://github.com/CSHaitao/LexEval"
+    },
+    "LeCoQA": {
+      "license": "MIT",
+      "url": "https://github.com/oneal2000/LeCoQA"
+    }
+  }
+}
