@@ -38,11 +38,14 @@
         resize="vertical" :disabled="saving" placeholder="写下你的想法…" />
       <div class="visibility">
         <label for="post-visibility">谁可以看</label>
-        <el-select id="post-visibility" v-model="visibility" :disabled="saving" style="width: 140px">
+        <el-select id="post-visibility" v-model="visibility" aria-describedby="post-summary-use" :disabled="saving" style="width: 140px">
           <el-option value="PUBLIC" label="全部用户" />
           <el-option value="FRIENDS" label="仅好友" />
         </el-select>
       </div>
+      <small id="post-summary-use" role="status">{{ visibility === 'PUBLIC'
+        ? '公开帖收到至少 2 位用户合计 3 条评论后，AI 会整理讨论观点供知识库收录。'
+        : '仅好友可见的帖子不参与 AI 观点整理，也不进入讨论知识库。' }}</small>
       <p v-if="sendError" class="warning" role="alert">{{ sendError }}</p>
       <div class="submit">
         <el-button :disabled="saving" @click="requestClose">取消</el-button>

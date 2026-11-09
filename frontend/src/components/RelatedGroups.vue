@@ -6,11 +6,14 @@
         <div class="group-title">{{ group.label }}</div>
         <el-empty v-if="group.items.length === 0" :image-size="60" description="暂无" />
         <el-row v-else :gutter="12">
-          <el-col v-for="item in group.items" :key="item.type + item.id" :span="8">
-            <el-card class="item" shadow="hover" @click="go(item)">
-              <div class="item-title">{{ item.title }}</div>
-              <div class="item-summary">{{ item.summary }}</div>
-            </el-card>
+          <el-col v-for="item in group.items" :key="item.type + item.id" :xs="24" :sm="12" :md="8">
+            <component :is="item.type === 'QUESTION' ? 'button' : RouterLink" class="item"
+              v-bind="item.type === 'QUESTION' ? { type: 'button', disabled: starting } : { to: paths[item.type] + item.id }"
+              @click="item.type === 'QUESTION' && practice(item.id)">
+              <span class="item-title">{{ item.title }}</span>
+              <span class="item-summary">{{ item.summary }}</span>
+              <span v-if="item.type === 'QUESTION'" class="practice-label">练习此题</span>
+            </component>
           </el-col>
         </el-row>
       </el-col>
@@ -20,12 +23,14 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { RouterLink } from 'vue-router'
+import { useQuestionPractice } from '../composables/useQuestionPractice'
 
 const props = defineProps({
   groups: { type: Object, default: () => ({}) }
 })
-const router = useRouter()
+const { practice, starting } = useQuestionPractice()
+const paths = { PROVISION: '/provisions/', CASE: '/cases/', VIEWPOINT: '/viewpoints/' }
 
 const groups = computed(() => [
   { key: 'provisions', label: '相关法条', items: props.groups.provisions || [] },
@@ -35,11 +40,6 @@ const groups = computed(() => [
 ])
 const hasAny = computed(() => groups.value.some((g) => g.items.length > 0))
 
-function go(item) {
-  if (item.type === 'PROVISION') router.push(`/provisions/${item.id}`)
-  else if (item.type === 'CASE') router.push(`/cases/${item.id}`)
-  else if (item.type === 'VIEWPOINT') router.push(`/viewpoints/${item.id}`)
-}
 </script>
 
 <style scoped>
@@ -53,16 +53,25 @@ function go(item) {
   color: #2e5fa3;
 }
 .item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  border: 1px solid var(--lex-line);
+  border-radius: 10px;
+  background: var(--lex-surface);
   cursor: pointer;
   margin-bottom: 12px;
   border-radius: 8px;
 }
 .item-title {
+  display: block;
   font-weight: 600;
   margin-bottom: 6px;
   color: #303133;
   line-height: 1.5;
 }
+.practice-label { display: inline-block; margin-top: .5rem; color: var(--lex-accent); }
 .item-summary {
   color: #909399;
   font-size: 13px;

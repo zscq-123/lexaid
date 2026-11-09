@@ -2,6 +2,7 @@ package com.lexaid.ai;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.lexaid.common.image.SanitizedImage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -27,8 +28,14 @@ public class DeepSeekClient {
     private final WebClient client;
     private final URI endpoint;
     private final boolean official;
+    private final boolean keyless;
 
+    @Autowired
     public DeepSeekClient(AiProperties settings, WebClient.Builder builder) {
+        this(settings, builder, false);
+    }
+
+    DeepSeekClient(AiProperties settings, WebClient.Builder builder, boolean keyless) {
         this.settings = settings;
         this.client = builder.build();
         this.endpoint = URI.create(settings.getBaseUrl().replaceAll("/+$", "") + "/chat/completions");
@@ -36,6 +43,7 @@ public class DeepSeekClient {
                 && "api.deepseek.com".equalsIgnoreCase(endpoint.getHost())
                 && (endpoint.getPort() == -1 || endpoint.getPort() == 443)
                 && endpoint.getUserInfo() == null;
+        this.keyless = keyless && !official;
     }
 
     public static class UnavailableException extends RuntimeException {
@@ -50,7 +58,7 @@ public class DeepSeekClient {
     }
 
     public boolean isConfigured() {
-        return StringUtils.hasText(credential());
+        return keyless || StringUtils.hasText(credential());
     }
 
     public String complete(List<Map<String, String>> messages, boolean jsonOutput) {
@@ -108,7 +116,10 @@ public class DeepSeekClient {
         JsonNode response;
         try {
             response = client.post().uri(endpoint)
-                    .headers(headers -> headers.setBearerAuth(credential()))
+                    .headers(headers -> {
+                        String key = credential();
+                        if (StringUtils.hasText(key)) headers.setBearerAuth(key);
+                    })
                     .contentType(MediaType.APPLICATION_JSON)
                     .bodyValue(body).retrieve().bodyToMono(JsonNode.class).block(timeout);
         } catch (WebClientResponseException e) {

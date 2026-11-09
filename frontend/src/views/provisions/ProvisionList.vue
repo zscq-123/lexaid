@@ -9,13 +9,14 @@
           <el-input v-model="query.lawName" placeholder="中英文法律名称" clearable style="width: 220px" />
         </el-form-item>
         <el-form-item label="法域">
-          <el-select v-model="query.jurisdiction" placeholder="全部" clearable style="width: 120px">
+          <el-select v-model="query.jurisdiction" aria-label="法域" placeholder="全部" clearable style="width: 120px" @change="clearDirectory">
             <el-option label="中国" value="CN" />
             <el-option label="美国" value="US" />
             <el-option label="欧盟" value="EU" />
             <el-option label="英国" value="GB" />
           </el-select>
         </el-form-item>
+        <ProvisionDirectory :code="query.code" :jurisdiction="query.jurisdiction" :path="query.path" @select="selectDirectory" />
         <el-form-item label="类别">
           <el-select v-model="query.category" placeholder="全部类别" aria-label="类别" clearable filterable
             :loading="categoriesLoading" :no-data-text="categoriesFailed ? '加载失败，重新展开以重试' : '暂无类别'"
@@ -41,6 +42,7 @@
           <el-tag size="small">{{ p.category }}</el-tag>
           <span class="article">{{ p.lawName }} {{ p.articleNo }}</span>
         </div>
+        <div v-if="query.code && p.chapter && p.chapter !== query.path" class="row-outline">{{ p.chapter }}</div>
         <div class="row-content">{{ p.content }}</div>
         <div class="row-tags">
           <el-tag v-for="t in p.tags" :key="t" size="small" type="info" effect="plain">{{ t }}</el-tag>
@@ -64,6 +66,7 @@
 import { computed, onMounted, reactive, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { listProvisionCategories, listProvisions } from '../../api/content'
+import ProvisionDirectory from '../../components/ProvisionDirectory.vue'
 
 const route = useRoute()
 const list = ref([])
@@ -77,7 +80,7 @@ const query = reactive({
   lawName: '',
   jurisdiction: '',
   category: '',
-  tag: ''
+  tag: '', code: '', path: ''
 })
 
 const categories = ref([])
@@ -125,8 +128,20 @@ function search() {
   page.value = 1
   load()
 }
+function clearDirectory() {
+  query.code = ''
+  query.path = ''
+  if (query.category && !categoryOptions.value.includes(query.category)) query.category = ''
+  search()
+}
+function selectDirectory({ jurisdiction, code, path }) {
+  Object.assign(query, { jurisdiction, code, path })
+  if (code) query.lawName = ''
+  if (query.category && !categoryOptions.value.includes(query.category)) query.category = ''
+  search()
+}
 function reset() {
-  Object.assign(query, { keyword: '', lawName: '', jurisdiction: '', category: '', tag: '' })
+  Object.assign(query, { keyword: '', lawName: '', jurisdiction: '', category: '', tag: '', code: '', path: '' })
   search()
 }
 function jurisdictionLabel(value) {
@@ -178,6 +193,7 @@ onMounted(() => {
   font-size: 13px;
   margin-bottom: 6px;
 }
+.row-outline { margin: 0 0 5px; color: var(--lex-muted); font-size: .78rem; overflow-wrap: anywhere; }
 .row-tags {
   display: flex;
   gap: 6px;

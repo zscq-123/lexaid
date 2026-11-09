@@ -29,12 +29,17 @@ async function main() {
     await page.route(url => url.pathname.startsWith('/api/'), async route => {
       const api = new URL(route.request().url()).pathname
       let data
+      if (api === '/api/mock-exams/active') return route.fulfill({ json: { code: 200, data: null } })
       if (api === '/api/auth/me') data = { id: 2, username: 'learner' }
-      else if (api === '/api/exam/categories') data = []
+      else if (api === '/api/exam/subjects' || api === '/api/exam/code-books') data = []
+      else if (api === '/api/exam/progress') data = { total: 3, answered: submitted ? 1 : 0 }
       else if (api === '/api/exam/sessions') data = { total: 1, records: [
         { id: 8, total: 1, category: '民法', startTime: '2026-01-02T12:04:00', endTime: '2026-01-02T12:06:00' }
       ] }
-      else if (api === '/api/exam/sessions/7') data = [{ ...question, id: 1, options: [], category: '民法' }]
+      else if (api === '/api/exam/sessions/7') data = [
+        { ...question, id: 1, options: [], category: '民法' },
+        { ...objective, id: 3, options: [], category: '民法' }
+      ]
       else if (api === '/api/exam/sessions/7/submit') {
         submitted++
         assert.equal(route.request().postDataJSON().answers[0].answer, '测试作答')
@@ -53,7 +58,22 @@ async function main() {
     })
     const base = process.env.SMOKE_BASE || 'http://localhost:5173'
     await page.goto(base + '/exam/run/7')
+    const paperCount = n => page.getByText('本卷已答 ' + n + ' / 2 题', { exact: true }).waitFor()
+    await paperCount(0)
+    await page.getByRole('button', { name: '交 卷' }).click()
+    await page.getByText(/还有 2 题未作答/).waitFor()
+    await page.locator('.el-message-box__btns').getByRole('button', { name: '取消' }).click()
+    await page.getByRole('button', { name: '下一题' }).click()
+    await paperCount(0)
+    await page.getByRole('button', { name: '上一题' }).click()
+    await page.getByPlaceholder('请输入你的作答').fill('  ')
+    await paperCount(0)
     await page.getByPlaceholder('请输入你的作答').fill('测试作答')
+    await paperCount(1)
+    await page.getByPlaceholder('请输入你的作答').fill('')
+    await paperCount(0)
+    await page.getByPlaceholder('请输入你的作答').fill('测试作答')
+    await paperCount(1)
     await page.getByRole('button', { name: '交 卷' }).click()
     await page.locator('.el-message-box__btns .el-button--primary').click()
     await page.getByText('等待 DeepSeek 评分', {exact:true}).waitFor()

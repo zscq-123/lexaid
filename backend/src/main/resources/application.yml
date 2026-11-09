@@ -47,6 +47,10 @@ ai:
   api-key: ${AI_API_KEY:}
   model: ${AI_MODEL:deepseek-flash}
   max-tokens: ${AI_MAX_TOKENS:1200}
+  discussion:
+    base-url: ${DISCUSSION_AI_BASE_URL:}
+    model: ${DISCUSSION_AI_MODEL:}
+    api-key: ${DISCUSSION_AI_API_KEY:}
 
 logging:
   level:

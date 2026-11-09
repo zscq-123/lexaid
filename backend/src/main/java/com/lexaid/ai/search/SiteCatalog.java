@@ -1,5 +1,6 @@
 package com.lexaid.ai.search;
 
+import com.lexaid.exam.QuestionSubjects;
 import com.lexaid.relation.RelatedItem;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -43,7 +44,9 @@ class SiteCatalog {
                     COUNT(CASE WHEN summary_kind IN ('author_abstract','metadata_only') AND LENGTH(content)>0 THEN 1 END),' 篇。')
                 FROM scholar_viewpoint
                 """, String.class));
-        if (id == 5) return grouped(id, "题库与题目类别", "SELECT category, COUNT(*) FROM question GROUP BY category ORDER BY category");
+        if (id == 5) return grouped(id, "题库与法学科目",
+                "SELECT CONCAT_WS(' / '," + QuestionSubjects.DISCIPLINE + "," + QuestionSubjects.SUBJECT + "), COUNT(*)"
+                        + QuestionSubjects.FROM_QUESTION + " GROUP BY 1 ORDER BY 1");
         if (id == 6) return item(id, "我的学习与交流概况", db.queryForObject("""
                 SELECT CONCAT('笔记 ',(SELECT COUNT(*) FROM note WHERE user_id=?),' 条，收藏 ',
                     (SELECT COUNT(*) FROM favorite WHERE user_id=?),' 条，收藏分区 ',

@@ -14,6 +14,9 @@ public record ExamQuestionVO(
         List<QuestionOption> options,
         Integer difficulty,
         String category,
-        List<RelatedItem> related
+        List<RelatedItem> related,
+        String discipline,
+        String subject,
+        List<QuestionBook> codeBooks
 ) {
 }

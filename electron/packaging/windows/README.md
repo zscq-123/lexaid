@@ -1,6 +1,6 @@
 # LexAid Windows 安装包
 
-支持 64 位 Windows 10 和 Windows 11。运行 `LexAid-1.0.2-Windows-x64-Setup.exe`，安装完成后在开始菜单中打开 LexAid。安装位置为当前用户的 `%LOCALAPPDATA%\Programs\LexAid`。应用连接正式 HTTPS 服务，用户可在登录页注册账号。
+支持 64 位 Windows 10 和 Windows 11。运行 `LexAid-1.3.0-Windows-x64-Setup.exe`，安装完成后在开始菜单中打开 LexAid。安装位置为当前用户的 `%LOCALAPPDATA%\Programs\LexAid`。应用连接正式 HTTPS 服务，用户可在登录页注册账号。
 
 升级时先退出 LexAid，再运行新版安装程序。可从 Windows 的「已安装的应用」卸载。卸载保留当前用户的本地登录状态和显示偏好。安装程序支持静默参数 `/S`。当前安装包没有 Authenticode 签名，Windows 可能显示未知发布者提示。
 

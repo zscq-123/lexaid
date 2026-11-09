@@ -104,7 +104,7 @@ public class StatsService {
             long correct = ((Number) row.get("correct")).longValue();
             double accuracy = total == 0 ? 0 : (double) correct / total;
             result.add(new CategoryAccuracyVO(category, total, correct,
-                    Math.round(accuracy * 10000) / 100.0));
+                    Math.round(accuracy * 10000) / 100.0, (String) row.get("discipline"), category));
         }
         return result;
     }

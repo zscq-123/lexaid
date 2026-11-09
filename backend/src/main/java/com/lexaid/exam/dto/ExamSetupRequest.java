@@ -4,18 +4,14 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 组卷请求
  */
 @Data
-public class ExamSetupRequest {
-
-    private String category;
-
-    @Min(value = 1, message = "难度需在 1~5 之间")
-    @Max(value = 5, message = "难度需在 1~5 之间")
-    private Integer difficulty;
+@EqualsAndHashCode(callSuper = true)
+public class ExamSetupRequest extends QuestionScope {
 
     @NotNull(message = "题量不能为空")
     @Min(value = 1, message = "题量至少 1 道")

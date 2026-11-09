@@ -6,6 +6,7 @@ import { mkdir } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { createGzip } from 'node:zlib'
+import { buildSubjectSnapshot } from './build-question-subjects.mjs'
 
 const LAW_BENCH_TASKS = {
   '1-1': '法条背诵',
@@ -414,7 +415,10 @@ async function main() {
     ...leCoQaRecords(args.lecoqa)
   ]
   const stats = await writeSqlGzip(args.output, records)
+  const subjectOutput = args.subjects ?? join(dirname(args.output), 'question-legal-subjects.sql.gz')
+  const classification = await buildSubjectSnapshot(args.output, subjectOutput)
   const manifest = {
+    classification,
     generatedBy: 'scripts/build-public-question-dataset.mjs',
     ...stats,
     datasets: Object.fromEntries(Object.entries(SOURCES).map(([name, value]) => [name, value]))

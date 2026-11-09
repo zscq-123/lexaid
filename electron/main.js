@@ -2,7 +2,7 @@
 const { app, BrowserWindow, shell, protocol, net } = require('electron')
 const path = require('path')
 const { startRendererServer } = require('./renderer-server')
-const { isPaperLink } = require('./paper-link')
+const { isPaperLink, isExamLink } = require('./paper-link')
 const { createAppHandler, rendererURL } = require('./app-protocol')
 
 const distRoot = path.resolve(__dirname, '..', 'frontend', 'dist')
@@ -33,8 +33,11 @@ function createWindow(rendererUrl) {
   })
   win.webContents.setWindowOpenHandler(({ url }) => {
     const page = new URL(win.webContents.getURL() || 'about:blank')
-    if (isRendererPage(page.href, rendererUrl) && /^\/viewpoints\/\d+\/?$/.test(page.pathname) && isPaperLink(url)) {
-      shell.openExternal(url).catch(error => console.error('无法打开论文来源', error.message))
+    const exam = /^\/mock-exams\/(run|result)\/\d+\/?$/.exec(page.pathname)
+    const allowed = /^\/viewpoints\/\d+\/?$/.test(page.pathname) && isPaperLink(url)
+      || exam && isExamLink(url, exam[1] === 'result')
+    if (isRendererPage(page.href, rendererUrl) && allowed) {
+      shell.openExternal(url).catch(error => console.error('无法打开来源', error.message))
     }
     return { action: 'deny' }
   })

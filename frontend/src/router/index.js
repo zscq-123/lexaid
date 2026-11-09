@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useUserStore } from '../stores/user'
+import { activeExamFor, roomPath } from '../views/mock-exams/active'
 
 const routes = [
+  { path: '/mock-exams/run/:id(\\d+)', component: () => import('../views/mock-exams/MockRoom.vue'), meta: { mockRoom: true } },
   { path: '/login', component: () => import('../views/login/Login.vue') },
   {
     path: '/',
@@ -20,6 +22,8 @@ const routes = [
       { path: 'exam/setup', component: () => import('../views/exam/ExamSetup.vue') },
       { path: 'exam/run/:sessionId', component: () => import('../views/exam/ExamRun.vue') },
       { path: 'exam/result/:sessionId', component: () => import('../views/exam/ExamResult.vue') },
+      { path: 'mock-exams', component: () => import('../views/mock-exams/MockLobby.vue') },
+      { path: 'mock-exams/result/:id(\\d+)', component: () => import('../views/mock-exams/MockResult.vue') },
       { path: 'wrong-book', component: () => import('../views/wrong/WrongBook.vue') },
       { path: 'ai-chat', component: () => import('../views/ai/AiChat.vue') },
       { path: 'notes', component: () => import('../views/notes/NoteList.vue') },
@@ -40,10 +44,14 @@ const router = createRouter({
 })
 
 // 路由守卫：未登录跳登录页
-router.beforeEach((to) => {
+router.beforeEach(async (to) => {
   const store = useUserStore()
   if (!store.token && to.path !== '/login') {
     return { path: '/login' }
+  }
+  if (store.token) {
+    const id = await activeExamFor(store)
+    if (id && to.path !== roomPath(id)) return { path: roomPath(id), replace: true }
   }
   if (store.token && to.path === '/login') {
     return { path: '/dashboard' }

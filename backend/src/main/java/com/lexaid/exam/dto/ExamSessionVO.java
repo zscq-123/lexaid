@@ -14,6 +14,10 @@ public record ExamSessionVO(
         String category,
         Integer difficulty,
         LocalDateTime startTime,
-        LocalDateTime endTime
+        LocalDateTime endTime,
+        String discipline,
+        String subject,
+        String codeName,
+        String bookName
 ) {
 }

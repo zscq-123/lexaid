@@ -6,7 +6,7 @@
       <p v-else-if="!loading && !sessions.length">暂无答题记录</p>
       <ul v-else>
         <li v-for="session in sessions" :key="session.id">
-          <span>{{ session.category || '综合练习' }} · {{ session.total }} 题</span>
+          <span>{{ subjectLabel(session) || '综合练习' }} · {{ session.total }} 题</span>
           <time>{{ session.startTime?.replace('T', ' ').slice(0, 16) }}</time>
           <router-link :to="(session.endTime ? '/exam/result/' : '/exam/run/') + session.id">
             {{ session.endTime ? '查看成绩' : '进入答题' }}
@@ -22,6 +22,7 @@
 <script setup>
 import { ref } from 'vue'
 import { examHistory } from '../../api/exam'
+import { subjectLabel } from './subject-label'
 
 const sessions = ref([])
 const page = ref(1)

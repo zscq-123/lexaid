@@ -31,6 +31,15 @@ class DeepSeekGraderTest {
     }
 
     @Test
+    void respectsTheMaximumOfEachMockExamQuestion() {
+        var item = new DeepSeekGrader.Submission(11,"案例题","评分要点","作答",36);
+        String reply = "{\"grades\":[{\"questionId\":11,\"score\":35,\"feedback\":\"理由略有遗漏\"}]}";
+        when(client.complete(anyList(), eq(true))).thenReturn(reply,reply.replace("35","37"));
+        assertThat(grader.grade(List.of(item)).get(11L).score()).isEqualTo(35);
+        assertThatThrownBy(() -> grader.grade(List.of(item))).isInstanceOf(DeepSeekClient.UnavailableException.class);
+    }
+
+    @Test
     void rejectsAnInvalidBatchWithoutReturningPartialOrGuessedGrades() {
         String first = "{\"questionId\":11,\"score\":7,\"feedback\":\"遗漏一个要点。\"}";
         String second = "{\"questionId\":12,\"score\":5,\"feedback\":\"理由不充分。\"}";

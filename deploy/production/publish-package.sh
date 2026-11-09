@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 name=${1:?Pass a release filename}
-[[ $name =~ ^LexAid-[A-Za-z0-9._-]+\.(apk|dmg|exe|ipa|zip)$ ]] || exit 2
+[[ $name =~ ^LexAid-[A-Za-z0-9._-]+\.(apk|dmg|exe|hap|ipa|zip)$ ]] || exit 2
 cd packages
 read -r expected recorded < "$name.sha256"
 [[ $expected =~ ^[a-fA-F0-9]{64}$ && ${recorded#\*} == "$name" ]] || exit 2

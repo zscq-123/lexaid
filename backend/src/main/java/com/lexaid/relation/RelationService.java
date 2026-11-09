@@ -95,7 +95,7 @@ public class RelationService {
                 }),
                 buildItems("QUESTION", ids.get("QUESTION"), idSet -> {
                     Map<Long, RelatedItem> m = new HashMap<>();
-                    for (Question q : questionMapper.selectBatchIds(idSet)) {
+                    for (Question q : questionMapper.classifiedQuestions(List.copyOf(idSet))) {
                         m.put(q.getId(), questionItem(q));
                     }
                     return m;
@@ -138,7 +138,7 @@ public class RelationService {
 
     private RelatedItem questionItem(Question q) {
         return new RelatedItem("QUESTION", q.getId(),
-                TextUtil.excerpt(q.getStem(), 60), q.getCategory() + "·" + q.getType());
+                TextUtil.excerpt(q.getStem(), 60), q.getSubject() + "·" + q.getType());
     }
 
     /**

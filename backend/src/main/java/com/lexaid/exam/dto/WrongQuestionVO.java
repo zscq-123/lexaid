@@ -21,6 +21,9 @@ public record WrongQuestionVO(
         Integer score,
         int maxScore,
         String gradingStatus,
-        String feedback
+        String feedback,
+        String discipline,
+        String subject,
+        List<QuestionBook> codeBooks
 ) {
 }

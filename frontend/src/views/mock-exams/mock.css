@@ -1,0 +1,21 @@
+.mock-page { max-width: 900px; margin: 0 auto; color: var(--lex-ink); }
+.exam-lobby { margin-left: 0; }
+.mock-panel { background: var(--lex-surface); border: 1px solid var(--lex-line); border-radius: 14px; padding: clamp(16px, 3vw, 28px); margin-bottom: 16px; min-width: 0; }
+.mock-page h2 { font-size: 1.15rem; margin: 0 0 14px; }
+.mock-page fieldset { border: 0; margin: 0 0 18px; min-width: 0; }
+.mock-page legend, .time-label { display: block; font-weight: 600; margin: 0 0 7px; }
+.mock-page .choice { display: inline-flex; align-items: center; gap: 7px; margin: 0 16px 5px 0; min-height: 36px; cursor: pointer; }
+.mock-page input, .mock-page textarea { accent-color: var(--lex-accent); }
+.mock-page input[type=number] { border: 1px solid var(--lex-line); background: white; padding: 8px; border-radius: 7px; width: 94px; color: inherit; }
+.mock-page .paper-info { background: var(--lex-canvas); border-radius: 9px; padding: 12px 15px; margin-bottom: 18px; line-height: 1.65; }
+.mock-page .muted { color: var(--lex-muted); }
+.mock-page .rules { margin: 14px 0; }
+.mock-page button { color: var(--lex-ink); border: 1px solid var(--lex-line); background: white; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+.mock-page button.primary { background: var(--lex-accent); color: white; border-color: var(--lex-accent); }
+.mock-page button.text-button { border: none; background: transparent; color: var(--lex-accent); }
+.mock-page button:disabled { cursor: default; opacity: .48; }
+.mock-page .history-list { list-style: none; }
+.mock-page .history-list li { display: flex; gap: 12px; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--lex-line); }
+.mock-page .history-list li:last-child { border-bottom: none; }
+.mock-page .history-list a { white-space: nowrap; }
+.mock-page .long-text { white-space: pre-wrap; overflow-wrap: anywhere; }

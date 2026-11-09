@@ -1,0 +1,6 @@
+{
+  "string": [
+    { "name": "app_name", "value": "LexAid" },
+    { "name": "module_desc", "value": "LexAid 法律学习" }
+  ]
+}

@@ -1,6 +1,6 @@
 <template>
   <el-config-provider :locale="zhCn">
-    <router-view />
+    <router-view :key="$route.meta.mockRoom ? $route.path : undefined" />
   </el-config-provider>
 </template>
 

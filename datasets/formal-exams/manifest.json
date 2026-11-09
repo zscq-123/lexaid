@@ -1,0 +1,46 @@
+{
+  "revision": "044c695f62894deef41ad9a30797e1da0404945c",
+  "sources": [
+    {
+      "file": "3_4.json",
+      "source": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/3_4.json",
+      "rawRows": 500,
+      "accepted": 318
+    },
+    {
+      "file": "6_2.json",
+      "source": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json",
+      "rawRows": 1000,
+      "accepted": 4
+    },
+    {
+      "file": "6_3.json",
+      "source": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json",
+      "rawRows": 500,
+      "accepted": 3
+    }
+  ],
+  "filteredRows": {
+    "3_4.json": 182,
+    "6_2.json": 996,
+    "6_3.json": 497
+  },
+  "counts": {
+    "MOCK": {
+      "SINGLE": 153,
+      "INDEFINITE": 45,
+      "MULTIPLE": 145,
+      "SHORT": 12
+    },
+    "REAL": {
+      "SINGLE": 148,
+      "MULTIPLE": 105,
+      "INDEFINITE": 45,
+      "SHORT": 5
+    }
+  },
+  "questions": 658,
+  "originalSha256": "227d2f007205c8c37aff2319a6c7f599e731e676b9d95413a91765bbfd6ae9d9",
+  "removedFromOriginal": 2962,
+  "sha256": "8991aafa8c404a4e165eb0d6ce36b2a8cf09f1c98cd96bac475c56f8607dcfe5"
+}

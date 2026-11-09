@@ -91,6 +91,7 @@ const sections = [
   ] },
   { label: '学习', items: [
     { path: '/exam/setup', label: '模拟答题', icon: EditPen },
+    { path: '/mock-exams', label: '模拟考试', icon: Notebook },
     { path: '/wrong-book', label: '错题本', icon: CircleCheck },
     { path: '/notes', label: '学习笔记', icon: Memo },
     { path: '/stats', label: '学习统计', icon: TrendCharts }
@@ -125,7 +126,7 @@ const showPhoneTabs = computed(() => route.path === '/exam/setup' ||
   (route.path.split('/').length === 2 && !['/ai-chat', '/admin'].includes(route.path)))
 const pageTitles = {
   '/provisions': '法条检索', '/cases': '案例查询', '/viewpoints': '学者观点',
-  '/wrong-book': '错题本', '/notes': '学习笔记', '/stats': '学习统计'
+  '/mock-exams': '模拟考试', '/wrong-book': '错题本', '/notes': '学习笔记', '/stats': '学习统计'
 }
 const pageHeading = computed(() => pageTitles[route.path])
 const shortcut = /Mac|iPhone|iPad/.test(navigator.platform) ? '⌘ K' : 'Ctrl K'

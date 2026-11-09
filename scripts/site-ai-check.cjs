@@ -21,6 +21,7 @@ async function main() {
     await page.route(url => url.pathname.startsWith('/api/'), async route => {
       const url = new URL(route.request().url())
       const send = (data, status = 200) => route.fulfill({ status, json: { code: status, message: '来源不可访问', data } })
+      if (url.pathname === '/api/mock-exams/active') return route.fulfill({ json: { code: 200, data: null } })
       if (url.pathname === '/api/auth/me') return send({ id: 6, nickname: '读者' })
       if (url.pathname === '/api/ai/history') return send(history, failHistory ? 503 : 200)
       if (url.pathname === '/api/ai/chat') {
@@ -41,6 +42,7 @@ async function main() {
         lookups.push(url.searchParams.get('q'))
         return denied ? send(null, 404) : send(source)
       }
+      if (url.pathname === '/api/community/posts/32/discussion-summary') return send(null)
       if (url.pathname === '/api/community/posts/32') {
         if (denied) return send(null, 404)
         return send({ id: 32, authorId: 6, authorName: '读者', createdAt: '2026-10-01', visibility: 'PUBLIC',

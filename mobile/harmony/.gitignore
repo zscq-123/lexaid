@@ -1,0 +1,10 @@
+build/
+.hvigor/
+.idea/
+oh_modules/
+node_modules/
+local.properties
+*.p12
+*.p7b
+*.cer
+*.csr

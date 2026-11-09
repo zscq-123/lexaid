@@ -21,6 +21,7 @@
             <div class="links">
               <el-button type="primary" @click="$router.push('/exam/setup')">重新练习</el-button>
               <el-button @click="$router.push('/wrong-book')">查看错题本</el-button>
+              <el-button @click="router.push({ path: '/ai-chat', query: { contextType: 'EXAM', contextId: route.params.sessionId } })">AI 复盘本次作答</el-button>
             </div>
           </div>
         </div>
@@ -30,7 +31,9 @@
         <div class="q-head">
           <span class="q-index">第 {{ i + 1 }} 题</span>
           <el-tag size="small" type="info">{{ typeLabel(d.type) }}</el-tag>
+          <span v-if="subjectLabel(d)" class="question-subject">{{ subjectLabel(d) }}</span>
         </div>
+        <QuestionCodeBooks :books="d.codeBooks" />
         <div class="q-stem">{{ d.stem }}</div>
         <div class="q-body">
           <div>你的答案：{{ formatAnswer(d) }}</div>
@@ -56,6 +59,8 @@ import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import QuestionGrade from '../../components/QuestionGrade.vue'
 import { getSessionResult, retryGrading } from '../../api/exam'
+import { subjectLabel } from './subject-label'
+import QuestionCodeBooks from './QuestionCodeBooks.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -144,6 +149,7 @@ function go(r) {
 .links { margin-top: 12px; }
 .q-head, .q-related { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .q-index { font-weight: 600; }
+.question-subject { color: var(--lex-muted); font-size: .82rem; }
 .q-stem { margin: 10px 0; line-height: 1.8; font-size: 15px; }
 .q-body, .q-analysis { line-height: 1.9; color: #606266; }
 .q-body, .q-analysis, .q-stem { white-space: pre-wrap; overflow-wrap: anywhere; }

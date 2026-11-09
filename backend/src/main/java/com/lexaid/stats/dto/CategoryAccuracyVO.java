@@ -7,6 +7,8 @@ public record CategoryAccuracyVO(
         String category,
         long total,
         long correct,
-        double accuracy
+        double accuracy,
+        String discipline,
+        String subject
 ) {
 }

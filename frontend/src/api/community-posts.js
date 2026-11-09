@@ -2,8 +2,8 @@ import request from './request'
 
 const posts = '/community/posts'
 
-export const listPosts = (params) => request.get(posts, { params }).then((response) => response.data)
-export const getPost = id => request.get(`${posts}/${encodeURIComponent(id)}`).then(r => r.data)
+export const listPosts = (params, signal) => request.get(posts, { params, signal }).then((response) => response.data)
+export const getPost = (id, signal) => request.get(`${posts}/${encodeURIComponent(id)}`, { signal }).then(r => r.data)
 
 export function publishPost({ caption, visibility, files }) {
   const form = new FormData()
@@ -22,3 +22,9 @@ export const listPostComments = (id, params) =>
   request.get(`${posts}/${id}/comments`, { params }).then((response) => response.data)
 export const addPostComment = (id, content) =>
   request.post(`${posts}/${id}/comments`, { content }).then((response) => response.data)
+
+export const getDiscussionSummary = (id, signal) =>
+  request.get(`${posts}/${encodeURIComponent(id)}/discussion-summary`, { signal }).then(r => r.data)
+
+export const listDiscussionSummaries = (params, signal) =>
+  request.get('/community/discussion-summaries', { params, signal }).then(r => r.data)

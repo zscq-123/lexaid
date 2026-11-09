@@ -1,5 +1,6 @@
 package com.lexaid.ai.search;
 
+import com.lexaid.exam.QuestionSubjects;
 import com.lexaid.content.CourtRegionClassifier;
 import com.lexaid.relation.RelatedItem;
 import lombok.RequiredArgsConstructor;
@@ -40,8 +41,8 @@ public class PublicSiteSearch {
                         + " WHEN summary_kind='author_abstract' AND CHAR_LENGTH(TRIM(summary)) > 0 THEN '法学论文（收录摘要，未收录全文）'"
                         + " ELSE '法学论文（仅收录题录，未收录全文）' END ELSE '学者观点' END,"
                         + "source,publish_year,doi,language_code,source_dataset,source_url,license_name"),
-        QUESTION("question", "LEFT(stem,80)", "stem,category,type,difficulty",
-                "CONCAT_WS('\\n',stem,options)", "category,type,CONCAT('难度 ',difficulty)");
+        QUESTION("question", "LEFT(stem,80)", "stem," + QuestionSubjects.DISCIPLINE + "," + QuestionSubjects.SUBJECT + ",book_names,type,difficulty",
+                "CONCAT_WS('\\n',stem,options)", QuestionSubjects.DISCIPLINE + "," + QuestionSubjects.SUBJECT + ",book_names,type,CONCAT('难度 ',difficulty)");
 
         final String table;
         final String title;
@@ -58,9 +59,14 @@ public class PublicSiteSearch {
         }
 
         String taggedTable() {
-            return table + " LEFT JOIN (SELECT et.target_id,GROUP_CONCAT(t.name ORDER BY t.name SEPARATOR '、') AS tag_names"
+            String from = this == QUESTION ? table + " q" + QuestionSubjects.JOIN_SUBJECTS
+                    + " LEFT JOIN (SELECT question_id,GROUP_CONCAT(CONCAT_WS(' ',code_name,book_name)"
+                    + " ORDER BY code_name,book_name SEPARATOR '、') AS book_names FROM question_code_book"
+                    + " GROUP BY question_id) books ON books.question_id=q.id" : table;
+            String owner = this == QUESTION ? "q" : table;
+            return from + " LEFT JOIN (SELECT et.target_id,GROUP_CONCAT(t.name ORDER BY t.name SEPARATOR '、') AS tag_names"
                     + " FROM entity_tag et JOIN tag t ON t.id=et.tag_id WHERE et.target_type=:type"
-                    + " GROUP BY et.target_id) AS tags ON tags.target_id=" + table + ".id";
+                    + " GROUP BY et.target_id) AS tags ON tags.target_id=" + owner + ".id";
         }
     }
 

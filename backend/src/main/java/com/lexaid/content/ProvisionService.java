@@ -31,11 +31,13 @@ public class ProvisionService {
     private final RelationService relationService;
     private final FavoriteService favoriteService;
     private final StudyRecordService studyRecordService;
+    private final ProvisionOutline outline;
 
     public PageResult<ProvisionVO> page(String keyword, String lawName, String category,
                                         String jurisdiction, String languageCode, String tag,
-                                        long page, long size) {
+                                        long page, long size, String code, String path) {
         LambdaQueryWrapper<Provision> qw = new LambdaQueryWrapper<>();
+        outline.filter(qw, jurisdiction, code, path);
         if (StringUtils.hasText(keyword)) {
             qw.and(w -> w.like(Provision::getLawName, keyword)
                     .or().like(Provision::getChapter, keyword)
@@ -63,6 +65,7 @@ public class ProvisionService {
         }
         qw.orderByAsc(Provision::getId);
         Page<Provision> p = provisionMapper.selectPage(new Page<>(page, size), qw);
+        outline.fillLegacyPaths(p.getRecords());
         if (StringUtils.hasText(keyword)) {
             studyRecordService.record(UserContext.userId(), "SEARCH",
                     EntityChecker.PROVISION, null, "关键词：" + keyword);
@@ -84,6 +87,7 @@ public class ProvisionService {
         if (p == null) {
             throw new BizException("法条不存在");
         }
+        outline.fillLegacyPaths(List.of(p));
         studyRecordService.record(UserContext.userId(), "VIEW",
                 EntityChecker.PROVISION, id, null);
         return toVO(p, tagService.tagsOf(EntityChecker.PROVISION, id), true);

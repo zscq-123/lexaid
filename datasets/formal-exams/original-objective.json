@@ -1,0 +1,524 @@
+[
+  {
+    "id": 8100001,
+    "kind": "SINGLE",
+    "subject": "合同法",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_60fb3863b7364b759123a42d1df568ca.html",
+    "sourceLabel": "LexAid 原创综合案例 · 合同法",
+    "difficulty": 5,
+    "stem": "博物馆向制造商订购80万元展柜，交付24万元并明确约定为定金。因厂家根本违约不能实现合同目的，馆方选择定金责任，不另主张损害赔偿。就已付款及定金责任合并计算，厂家应返还多少？",
+    "options": [
+      {
+        "key": "A",
+        "text": "32万元"
+      },
+      {
+        "key": "B",
+        "text": "40万元"
+      },
+      {
+        "key": "C",
+        "text": "48万元"
+      },
+      {
+        "key": "D",
+        "text": "56万元"
+      }
+    ],
+    "answer": "B",
+    "explanation": "有效定金上限为16万元，应双倍返还32万元；超过上限的8万元应按普通给付返还，合计40万元。"
+  },
+  {
+    "id": 8100002,
+    "kind": "SINGLE",
+    "subject": "物权法",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_60fb3863b7364b759123a42d1df568ca.html",
+    "sourceLabel": "LexAid 原创综合案例 · 物权法",
+    "difficulty": 5,
+    "stem": "甲将手表借给乙参展，乙按正常市价卖给善意且无重大过失的丙并交付。丙赠与丁并交付。另有外观相同的手表是甲遗失后被拾得人丁占有的。下列关于第一块表的分析哪项正确？",
+    "options": [
+      {
+        "key": "A",
+        "text": "乙无处分权使丙不能取得所有权"
+      },
+      {
+        "key": "B",
+        "text": "丙虽善意，但必须先获得甲追认才能处分"
+      },
+      {
+        "key": "C",
+        "text": "丙取得所有权后可有效赠与丁，甲可向乙追偿"
+      },
+      {
+        "key": "D",
+        "text": "甲可在知道丁身份后二年内取回第一块表"
+      }
+    ],
+    "answer": "C",
+    "explanation": "应先辨明委托占有与遗失。出借物满足善意取得条件，丙取得权利后有权赠与；遗失物返还期限不适用于第一块表。"
+  },
+  {
+    "id": 8100003,
+    "kind": "SINGLE",
+    "subject": "商法学",
+    "sourceUrl": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html",
+    "sourceLabel": "LexAid 原创综合案例 · 商法学",
+    "difficulty": 5,
+    "stem": "2025年成立的有限责任公司股东甲在2026年将一笔尚未届期的认缴股权合法转让给乙，乙到期只缴一半。下列哪项正确？",
+    "options": [
+      {
+        "key": "A",
+        "text": "因出资原由甲认缴，乙不负缴资义务"
+      },
+      {
+        "key": "B",
+        "text": "甲乙对全部认缴额承担连带责任"
+      },
+      {
+        "key": "C",
+        "text": "甲对乙到期未缴部分承担补充责任"
+      },
+      {
+        "key": "D",
+        "text": "甲只在乙知道股权尚未缴足时负责"
+      }
+    ],
+    "answer": "C",
+    "explanation": "适用公司法第88条第一款。未届期转让的受让人承担缴资义务，转让人的责任限于受让人到期未缴部分。"
+  },
+  {
+    "id": 8100004,
+    "kind": "SINGLE",
+    "subject": "民事诉讼法学",
+    "sourceUrl": "https://ipc.court.gov.cn/zh-cn/news/view-6231.html",
+    "sourceLabel": "LexAid 原创综合案例 · 民事诉讼法学",
+    "difficulty": 5,
+    "stem": "债权人在仲裁前因情况紧急向被申请人住所地法院申请保全，已足额担保。法院冻结了与请求有关的账户。措施实施后债权人30日内既未起诉也未申请仲裁，第33天才申请仲裁。应如何处理原保全？",
+    "options": [
+      {
+        "key": "A",
+        "text": "足额担保使保全自动持续至仲裁结束"
+      },
+      {
+        "key": "B",
+        "text": "第33天申请仲裁可使已届满的期限自动延长"
+      },
+      {
+        "key": "C",
+        "text": "法院应解除原保全"
+      },
+      {
+        "key": "D",
+        "text": "只能由仲裁机构解除原保全"
+      }
+    ],
+    "answer": "C",
+    "explanation": "诉前保全的30日从实际采取措施后计算；未依法启动诉讼或仲裁，法院应解除。担保不能替代及时启动实体程序。"
+  },
+  {
+    "id": 8100005,
+    "kind": "SINGLE",
+    "subject": "行政法学",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_3712fbfaaed942b3b6b66f14d5288723.html",
+    "sourceLabel": "LexAid 原创综合案例 · 行政法学",
+    "difficulty": 5,
+    "stem": "某独立排污行为同时违反两个罚款规范。处罚前其中一个规范已修改，现行规定处罚较轻。机关有管辖权，事实与法律适用时间均无争议。下列哪项正确？",
+    "options": [
+      {
+        "key": "A",
+        "text": "一律用旧规范，并把两项罚款相加"
+      },
+      {
+        "key": "B",
+        "text": "先就每项规范确定适用的时间版本，再按照罚款数额高的规定罚一次"
+      },
+      {
+        "key": "C",
+        "text": "只要受两项规范调整就构成两个违法行为"
+      },
+      {
+        "key": "D",
+        "text": "首次违法即使严重污染也一律免罚"
+      }
+    ],
+    "answer": "B",
+    "explanation": "先处理从旧兼从轻，再处理同一行为违反多个规范时的罚款竞合。初次违法可不罚还有危害轻微、及时改正等条件。"
+  },
+  {
+    "id": 8100006,
+    "kind": "SINGLE",
+    "subject": "刑事诉讼法学",
+    "sourceUrl": "https://www.spp.gov.cn/spp/zdgz/201810/t20181027_396818.shtml",
+    "sourceLabel": "LexAid 原创综合案例 · 刑事诉讼法学",
+    "difficulty": 5,
+    "stem": "辩方提出侦查人员讯问时殴打嫌疑人的具体线索。法庭调查后不能排除刑讯逼供；另有与该供述内容基本相符、经合法程序收集的监控。就争议供述，下列哪项正确？",
+    "options": [
+      {
+        "key": "A",
+        "text": "监控能印证内容，足以免除对取证合法性的审查"
+      },
+      {
+        "key": "B",
+        "text": "辩方不能完全证明刑讯，故应采纳"
+      },
+      {
+        "key": "C",
+        "text": "应排除供述，另行判断其余证据能否达到证明标准"
+      },
+      {
+        "key": "D",
+        "text": "只有先对侦查人员作有罪判决才能排除供述"
+      }
+    ],
+    "answer": "C",
+    "explanation": "公诉方证明取证合法性，不能排除法定非法取证情形即排除该供述。独立证据是否足以定罪是另一项审查。"
+  },
+  {
+    "id": 8100007,
+    "kind": "MULTIPLE",
+    "subject": "民法学",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_60fb3863b7364b759123a42d1df568ca.html",
+    "sourceLabel": "LexAid 原创综合案例 · 民法学",
+    "difficulty": 5,
+    "stem": "甲公司的销货员在有效授权内签约，违反仅在公司内部传达的价格限制，买家善意且已尽合理核查义务。数月后买家接到明确撤权通知，销货员又以公司名义签第二份合同。关于两次交易，哪些说法正确？",
+    "options": [
+      {
+        "key": "A",
+        "text": "内部限制不能对抗第一笔交易中的善意买家"
+      },
+      {
+        "key": "B",
+        "text": "第二笔仅因用印真实，即构成表见代理"
+      },
+      {
+        "key": "C",
+        "text": "公司知悉第二份合同内容后开始履行，可构成追认"
+      },
+      {
+        "key": "D",
+        "text": "第一笔合同必然须股东会追认"
+      }
+    ],
+    "answer": "AC",
+    "explanation": "分别适用民法典第170条、171—172条及503条。撤权通知破坏合理信赖，但被代理人仍可通过履行作出追认。"
+  },
+  {
+    "id": 8100008,
+    "kind": "MULTIPLE",
+    "subject": "合同法",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_60fb3863b7364b759123a42d1df568ca.html",
+    "sourceLabel": "LexAid 原创综合案例 · 合同法",
+    "difficulty": 5,
+    "stem": "借款到期，保证书未约定保证方式及期间。债权人仅在到期五个月时向保证人催款，第七个月才首次起诉债务人。没有一般保证先诉抗辩的例外。哪些判断正确？",
+    "options": [
+      {
+        "key": "A",
+        "text": "应按一般保证确定双方权利义务"
+      },
+      {
+        "key": "B",
+        "text": "催款使六个月的保证期间重新起算"
+      },
+      {
+        "key": "C",
+        "text": "起诉债务人时保证期间已经届满"
+      },
+      {
+        "key": "D",
+        "text": "任何形式的保证均只需期间内向保证人催款"
+      }
+    ],
+    "answer": "AC",
+    "explanation": "保证方式不明适用一般保证；未约定保证期间为主债务期限届满后六个月。期间不中断、不延长；本案只向保证人催款不符合一般保证的主张要求。"
+  },
+  {
+    "id": 8100009,
+    "kind": "MULTIPLE",
+    "subject": "刑法学",
+    "sourceUrl": "https://www.court.gov.cn/zixun/xiangqing/251611.html",
+    "sourceLabel": "LexAid 原创综合案例 · 刑法学",
+    "difficulty": 5,
+    "stem": "甲持刀猛刺陌生人胸部时被路人乙击倒。刀被收走，甲明确丧失继续攻击能力。乙在确认危险已经解除后又以惩罚甲为由殴打甲。哪些判断正确？",
+    "options": [
+      {
+        "key": "A",
+        "text": "第一阶段可以考虑保护他人的特殊防卫"
+      },
+      {
+        "key": "B",
+        "text": "应分阶段判断两次打击的时间条件"
+      },
+      {
+        "key": "C",
+        "text": "只要两击间隔短，第二击必然属于防卫"
+      },
+      {
+        "key": "D",
+        "text": "只凭甲的最终伤情即可认定第一击过当"
+      }
+    ],
+    "answer": "AB",
+    "explanation": "他人严重人身危险正在发生时可实施防卫。危险已解除后的报复不具备时间条件。须追溯当时危险、目的和分别造成的结果。"
+  },
+  {
+    "id": 8100010,
+    "kind": "MULTIPLE",
+    "subject": "行政法学",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_3712fbfaaed942b3b6b66f14d5288723.html",
+    "sourceLabel": "LexAid 原创综合案例 · 行政法学",
+    "difficulty": 5,
+    "stem": "执法机关拟给予达到听证标准的较大数额罚款。当事人收到处罚告知后，在第三个工作日要求听证并提交新材料。哪些做法符合法律规定？",
+    "options": [
+      {
+        "key": "A",
+        "text": "由非本案调查人员主持听证"
+      },
+      {
+        "key": "B",
+        "text": "将当事人的申辩作为提高罚款的理由"
+      },
+      {
+        "key": "C",
+        "text": "复核当事人提出的新证据"
+      },
+      {
+        "key": "D",
+        "text": "让当事人负担机关组织听证的费用"
+      }
+    ],
+    "answer": "AC",
+    "explanation": "申请在期限内，应依法组织；听证主持人须符合回避和身份要求，当事人不负担听证组织费用，陈述申辩不构成加重处罚理由。"
+  },
+  {
+    "id": 8100011,
+    "kind": "MULTIPLE",
+    "subject": "民事诉讼法学",
+    "sourceUrl": "https://ipc.court.gov.cn/zh-cn/news/view-6231.html",
+    "sourceLabel": "LexAid 原创综合案例 · 民事诉讼法学",
+    "difficulty": 5,
+    "stem": "甲申请诉前保全，只请求乙支付50万元，却要求冻结乙的全部200万元存款及案外人自有财产。关于法院的审查和执行，哪些说法正确？",
+    "options": [
+      {
+        "key": "A",
+        "text": "应审查紧急性和担保"
+      },
+      {
+        "key": "B",
+        "text": "应以请求范围或与本案有关的财物为限"
+      },
+      {
+        "key": "C",
+        "text": "诉前保全可一律以未通知对方为由认定违法"
+      },
+      {
+        "key": "D",
+        "text": "接受诉前保全申请后应在48小时内作出裁定"
+      }
+    ],
+    "answer": "ABD",
+    "explanation": "民事诉讼法第104—105条要求审查紧迫性、担保及措施范围；裁定采取措施的，立即执行。"
+  },
+  {
+    "id": 8100012,
+    "kind": "MULTIPLE",
+    "subject": "侵权责任法",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_60fb3863b7364b759123a42d1df568ca.html",
+    "sourceLabel": "LexAid 原创综合案例 · 侵权责任法",
+    "difficulty": 5,
+    "stem": "大型展会入口存在已被反复反映的严重拥挤风险。观众丁故意将丙推倒，保安因组织者长期缺岗未能及时干预。经审理，两者对具体损害后果的作用均已证明。哪些说法正确？",
+    "options": [
+      {
+        "key": "A",
+        "text": "丁承担侵权责任"
+      },
+      {
+        "key": "B",
+        "text": "组织者对违反安全保障义务的部分承担相应补充责任"
+      },
+      {
+        "key": "C",
+        "text": "对丁与组织者一律按无过错责任处理"
+      },
+      {
+        "key": "D",
+        "text": "组织者承担补充责任后可以向丁追偿"
+      }
+    ],
+    "answer": "ABD",
+    "explanation": "依民法典第1198条，直接侵权第三人与未尽安全保障义务的组织者适用不同责任形态；组织者承担补充责任后有追偿权。"
+  },
+  {
+    "id": 8100013,
+    "kind": "INDEFINITE",
+    "subject": "物权法",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_60fb3863b7364b759123a42d1df568ca.html",
+    "sourceLabel": "LexAid 原创综合案例 · 物权法",
+    "difficulty": 5,
+    "stem": "甲遗失小提琴，被拾得人卖给有资质的乐器行，后者又把琴卖给善意购买者丙。甲知道丙身份后一周要求返还。判断各项说法。",
+    "options": [
+      {
+        "key": "A",
+        "text": "只要丙支付对价，甲即永远失去取回权"
+      },
+      {
+        "key": "B",
+        "text": "甲可在法定期限内向丙请求返还"
+      },
+      {
+        "key": "C",
+        "text": "甲取回时应向丙支付其购买该琴的费用"
+      },
+      {
+        "key": "D",
+        "text": "甲支付费用后不能向无处分权人追偿"
+      }
+    ],
+    "answer": "BC",
+    "explanation": "遗失物适用第312条的特别规则；从有经营资格的经营者购得，返还与费用偿还相联系，所有人支付后可再追偿。"
+  },
+  {
+    "id": 8100014,
+    "kind": "INDEFINITE",
+    "subject": "刑事诉讼法学",
+    "sourceUrl": "https://www.spp.gov.cn/spp/zdgz/201810/t20181027_396818.shtml",
+    "sourceLabel": "LexAid 原创综合案例 · 刑事诉讼法学",
+    "difficulty": 5,
+    "stem": "侦查人员违反法定程序收集一件物证，可能严重影响司法公正。另有证人在受到暴力威胁后所作证言。分别判断两件材料。",
+    "options": [
+      {
+        "key": "A",
+        "text": "只要与事实相关，两份材料都应直接采纳"
+      },
+      {
+        "key": "B",
+        "text": "争议物证可先审查是否补正或作出合理解释"
+      },
+      {
+        "key": "C",
+        "text": "暴力、威胁取得的证人证言应排除"
+      },
+      {
+        "key": "D",
+        "text": "无法补正或合理解释物证的程序缺陷时仍须采用该物证"
+      }
+    ],
+    "answer": "BC",
+    "explanation": "区分言词证据的法定强制排除和违法取得实物证据的处理，不能把真实性推定替代合法性审查。"
+  },
+  {
+    "id": 8100015,
+    "kind": "INDEFINITE",
+    "subject": "商法学",
+    "sourceUrl": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html",
+    "sourceLabel": "LexAid 原创综合案例 · 商法学",
+    "difficulty": 5,
+    "stem": "2025年设立的有限责任公司股东甲在2026年出资期满未缴，将股权转给乙。乙已收到催缴函副本，知道欠缴事实。判断各项说法。",
+    "options": [
+      {
+        "key": "A",
+        "text": "甲乙对出资不足部分承担连带责任"
+      },
+      {
+        "key": "B",
+        "text": "乙承担责任后，公司当然不能继续向甲主张任何未清偿的部分"
+      },
+      {
+        "key": "C",
+        "text": "此时适用未届期转让人仅负补充责任的规则"
+      },
+      {
+        "key": "D",
+        "text": "即使乙知道欠缴，也必然仅由甲对公司负责"
+      }
+    ],
+    "answer": "A",
+    "explanation": "第88条区分未届期转让与已逾期转让。后者中明知欠缴的受让人与转让人于不足范围内负连带责任，不得重复受偿。"
+  },
+  {
+    "id": 8100016,
+    "kind": "INDEFINITE",
+    "subject": "合同法",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_60fb3863b7364b759123a42d1df568ca.html",
+    "sourceLabel": "LexAid 原创综合案例 · 合同法",
+    "difficulty": 5,
+    "stem": "甲交付定金并约定违约金，乙根本违约。甲的实际损失超过生效的定金数额；同时有部分损失因甲拒绝合理减损措施而扩大。判断各项说法。",
+    "options": [
+      {
+        "key": "A",
+        "text": "甲可就同一违约同时取得全部约定违约金和定金罚则"
+      },
+      {
+        "key": "B",
+        "text": "选择定金责任后，可就超过定金数额的可赔损失请求补足"
+      },
+      {
+        "key": "C",
+        "text": "甲能把自己本可合理避免的扩大损失全部转给乙"
+      },
+      {
+        "key": "D",
+        "text": "只要法院支持返还甲原付的钱，就代表已赔偿甲全部违约损失"
+      }
+    ],
+    "answer": "B",
+    "explanation": "民法典第588条允许在择用定金后填补超出定金的损失；第591条限制扩大损失。返还原付款与损失填补有别。"
+  },
+  {
+    "id": 8100017,
+    "kind": "INDEFINITE",
+    "subject": "行政法学",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_3712fbfaaed942b3b6b66f14d5288723.html",
+    "sourceLabel": "LexAid 原创综合案例 · 行政法学",
+    "difficulty": 5,
+    "stem": "执法人员已查清违法事实，但在作出较大数额罚款前既未告知拟处罚的事实依据与听证权，也拒绝接受当事人申辩。当事人没有放弃权利。判断各项说法。",
+    "options": [
+      {
+        "key": "A",
+        "text": "事实没有争议，即可省略告知程序"
+      },
+      {
+        "key": "B",
+        "text": "当事人未主动要求，即等于放弃听证"
+      },
+      {
+        "key": "C",
+        "text": "现阶段不能直接作出处罚决定，应依法保障程序权利"
+      },
+      {
+        "key": "D",
+        "text": "当事人提出申辩后可依法仅因申辩加重处罚"
+      }
+    ],
+    "answer": "C",
+    "explanation": "依行政处罚法第44、45、62条，决定前告知及听取意见属法定程序；未告知不能从沉默推定放弃。"
+  },
+  {
+    "id": 8100018,
+    "kind": "INDEFINITE",
+    "subject": "婚姻家庭与继承法",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_60fb3863b7364b759123a42d1df568ca.html",
+    "sourceLabel": "LexAid 原创综合案例 · 婚姻家庭与继承法",
+    "difficulty": 5,
+    "stem": "甲先依法订立自书遗嘱，数年后另立多页打印遗嘱改变分配方案。打印遗嘱仅一名适格见证人到场，各页均签名。另有依法应当保留份额的继承人。判断各项说法。",
+    "options": [
+      {
+        "key": "A",
+        "text": "日期靠后的打印件当然优先"
+      },
+      {
+        "key": "B",
+        "text": "少于两名适格见证人影响该打印遗嘱的形式效力"
+      },
+      {
+        "key": "C",
+        "text": "应在处分遗产前考虑必要保留份额"
+      },
+      {
+        "key": "D",
+        "text": "打印遗嘱形式存在缺陷使先前自书遗嘱也当然失效"
+      }
+    ],
+    "answer": "BC",
+    "explanation": "民法典第1136、1141、1142条要求分别判断遗嘱形式、有效遗嘱之间的冲突和必要份额，不能仅比较日期。"
+  }
+]

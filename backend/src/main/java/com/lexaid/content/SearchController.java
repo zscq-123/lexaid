@@ -5,7 +5,6 @@ import com.lexaid.common.Result;
 import com.lexaid.common.TextUtil;
 import com.lexaid.common.UserContext;
 import com.lexaid.content.dto.SearchItem;
-import com.lexaid.exam.Question;
 import com.lexaid.stats.StudyRecordService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.util.StringUtils;
@@ -82,11 +81,8 @@ public class SearchController {
     }
 
     private List<SearchItem> searchQuestions(String kw) {
-        return questionMapper.selectList(new LambdaQueryWrapper<Question>()
-                        .select(Question::getId, Question::getStem, Question::getCategory, Question::getType)
-                        .like(Question::getStem, kw)
-                        .last("LIMIT 10"))
+        return questionMapper.searchForLibrary(kw)
                 .stream().map(q -> new SearchItem("QUESTION", q.getId(),
-                        TextUtil.excerpt(q.getStem(), 60), q.getCategory() + "·" + q.getType())).toList();
+                        TextUtil.excerpt(q.getStem(), 60), q.getSubject() + "·" + q.getType())).toList();
     }
 }

@@ -7,6 +7,10 @@ import com.lexaid.exam.dto.ExamResultVO;
 import com.lexaid.exam.dto.ExamSessionVO;
 import com.lexaid.exam.dto.ExamSetupRequest;
 import com.lexaid.exam.dto.QuestionCategoryCount;
+import com.lexaid.exam.dto.QuestionProgress;
+import com.lexaid.exam.dto.QuestionScope;
+import com.lexaid.exam.dto.CodeBookCount;
+import com.lexaid.exam.dto.SubjectCount;
 import com.lexaid.exam.dto.SubmitRequest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Max;
@@ -14,6 +18,7 @@ import jakarta.validation.constraints.Min;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,6 +43,21 @@ public class ExamController {
     @GetMapping("/categories")
     public Result<List<QuestionCategoryCount>> categories() {
         return Result.ok(examService.categoryCounts());
+    }
+
+    @GetMapping("/subjects")
+    public Result<List<SubjectCount>> subjects() {
+        return Result.ok(examService.subjectCounts());
+    }
+
+    @GetMapping("/code-books")
+    public Result<List<CodeBookCount>> codeBooks() {
+        return Result.ok(examService.codeBookCounts());
+    }
+
+    @GetMapping("/progress")
+    public Result<QuestionProgress> progress(@Valid @ModelAttribute QuestionScope scope) {
+        return Result.ok(examService.progress(scope));
     }
 
     @PostMapping("/sessions")

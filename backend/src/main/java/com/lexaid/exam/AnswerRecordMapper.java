@@ -88,13 +88,9 @@ public interface AnswerRecordMapper extends BaseMapper<AnswerRecord> {
     /**
      * 按类别统计正确率
      */
-    @Select("""
-            SELECT q.category AS category, COUNT(*) AS total,
-                   COALESCE(SUM(CASE WHEN ar.is_correct = 1 THEN 1 ELSE 0 END), 0) AS correct
-            FROM answer_record ar JOIN question q ON ar.question_id = q.id
-            WHERE ar.user_id = #{userId} AND ar.is_correct IS NOT NULL
-            GROUP BY q.category
-            ORDER BY total DESC
-            """)
+    @Select("SELECT " + QuestionSubjects.DISCIPLINE + " AS discipline, " + QuestionSubjects.SUBJECT +
+            " AS category, COUNT(*) AS total, SUM(ar.is_correct = 1) AS correct " +
+            " FROM answer_record ar JOIN question q ON ar.question_id=q.id " + QuestionSubjects.JOIN_SUBJECTS +
+            " WHERE ar.user_id=#{userId} AND ar.is_correct IS NOT NULL GROUP BY 1,2 ORDER BY total DESC,1,2")
     List<Map<String, Object>> selectCategoryAccuracy(@Param("userId") Long userId);
 }

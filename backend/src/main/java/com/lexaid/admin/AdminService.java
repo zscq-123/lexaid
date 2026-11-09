@@ -1,5 +1,6 @@
 package com.lexaid.admin;
 
+import com.lexaid.exam.QuestionSubjects;
 import com.lexaid.common.BizException;
 import com.lexaid.common.PageResult;
 import lombok.RequiredArgsConstructor;
@@ -201,9 +202,9 @@ public class AdminService {
                            target_type, target_id, created_at AS occurred_at
                     FROM study_record WHERE user_id=:id
                     UNION ALL
-                    SELECT 'ANSWER', 'ANSWER', CONCAT('完成', COALESCE(q.category, '综合'), '题目'),
+                    SELECT 'ANSWER', 'ANSWER', CONCAT('完成', %s, '题目'),
                            'QUESTION', ar.question_id, ar.answered_at
-                    FROM answer_record ar LEFT JOIN question q ON q.id=ar.question_id WHERE ar.user_id=:id
+                    FROM answer_record ar LEFT JOIN question q ON q.id=ar.question_id %s WHERE ar.user_id=:id
                     UNION ALL
                     SELECT 'NOTE', 'NOTE', CONCAT('记录', target_type, '笔记'), target_type, target_id, created_at
                     FROM note WHERE user_id=:id
@@ -214,7 +215,7 @@ public class AdminService {
                     SELECT 'POST', 'POST', COALESCE(NULLIF(LEFT(caption, 80) COLLATE utf8mb4_unicode_ci, ''), '发布图片动态'),
                            NULL, NULL, created_at FROM community_post WHERE author_id=:id
                 ) recent ORDER BY occurred_at DESC LIMIT 20
-                """, Map.of("id", id), (rs, n) -> new RecentActivity(rs.getString("category"),
+                """.formatted(QuestionSubjects.SUBJECT, QuestionSubjects.JOIN_SUBJECTS), Map.of("id", id), (rs, n) -> new RecentActivity(rs.getString("category"),
                 rs.getString("action_type"), rs.getString("title"), rs.getString("target_type"),
                 nullableLong(rs, "target_id"), time(rs.getTimestamp("occurred_at"))));
         return new UserDetail(profile, counts, activities);

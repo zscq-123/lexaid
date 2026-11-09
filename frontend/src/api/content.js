@@ -1,6 +1,10 @@
 import request from './request'
 
 // 法条
+export const listProvisionCodes = (jurisdiction, signal) =>
+  request.get('/provisions/outline/codes', { params: { jurisdiction: jurisdiction || undefined }, signal }).then(r => r.data)
+export const getProvisionOutline = (jurisdiction, code, signal) =>
+  request.get('/provisions/outline', { params: { jurisdiction, code }, signal }).then(r => r.data)
 export const listProvisions = (params) => request.get('/provisions', { params }).then((r) => r.data)
 export const listProvisionCategories = () => request.get('/provisions/categories').then((r) => r.data)
 export const getProvision = (id) => request.get(`/provisions/${id}`).then((r) => r.data)

@@ -21,6 +21,10 @@ systemctl list-timers lexaid-study-certificate.timer
 curl -fsS https://154.36.185.110:18443/ -o /dev/null
 ```
 
+## 社区推理服务
+
+社区观点整理默认使用现有推理服务。若已有可从后端容器访问的本地模型服务，在 `secrets/backend.env` 设置 `DISCUSSION_AI_BASE_URL` 和实际的 `DISCUSSION_AI_MODEL`，需要认证时再设置 `DISCUSSION_AI_API_KEY`。用 `docker compose up -d --force-recreate backend` 重新读取这些环境变量。
+
 ## 当前主机的内存配置
 
 这台 4 GB 的共享主机在 `/etc/fstab` 启用了 `/swap.img`。首次导入时，宿主的 `vm.swappiness=0` 伴随持续内存回收和 OOM。部署后通过独立文件 `/etc/sysctl.d/99-zz-lexaid-study-memory.conf` 将其设为 `30`，应用后确认已有服务恢复健康。该参数作用于整台主机。若需恢复部署前的设置，移除这一个覆盖文件并执行 `sysctl -w vm.swappiness=0`。Compose 文件中的内存限额仅作用于 LexAid 容器。

@@ -1,7 +1,9 @@
 package com.lexaid.ai.search;
 
+import com.lexaid.exam.QuestionSubjects;
 import com.lexaid.common.BizException;
 import com.lexaid.community.friends.FriendService;
+import com.lexaid.community.posts.DiscussionSummaryService;
 import com.lexaid.community.posts.PostService;
 import com.lexaid.relation.RelatedItem;
 import com.lexaid.stats.StatsService;
@@ -96,13 +98,13 @@ public class PersonalSiteSearch {
             """.formatted(TARGET_TITLE, TARGET_JOINS);
     private static final String WRONG = """
             SELECT q.id,CONCAT('错题 · ',LEFT(q.stem,100)) title,
-               CONCAT_WS(' · ',q.category,q.stem,CONCAT('我的答案：',COALESCE(a.user_answer,'')),
+               CONCAT_WS(' · ',%s,%s,q.stem,CONCAT('我的答案：',COALESCE(a.user_answer,'')),
                CONCAT('参考答案：',q.answer),CONCAT('得分：',a.grade_points),a.grading_feedback,q.analysis) summary,
                a.id recent
-            FROM answer_record a JOIN question q ON q.id=a.question_id
+            FROM answer_record a JOIN question q ON q.id=a.question_id %s
             WHERE a.user_id=:viewer AND a.is_correct=0 AND NOT EXISTS (
                SELECT 1 FROM answer_record b WHERE b.user_id=a.user_id AND b.question_id=a.question_id AND b.id>a.id)
-            """;
+            """.formatted(QuestionSubjects.DISCIPLINE, QuestionSubjects.SUBJECT, QuestionSubjects.JOIN_SUBJECTS);
     private static final String CONTACTS = """
             SELECT u.id,COALESCE(NULLIF(u.nickname,''),u.username) title,
                CONCAT_WS(' · ',u.username,CASE WHEN f.state='ACCEPTED' THEN '我的好友'
@@ -115,7 +117,12 @@ public class PersonalSiteSearch {
             "NOTE", NOTES, "FAVORITE", FAVORITES, "FOLDER", FOLDERS,
             "STUDY", ACTIVITY, "WRONG", WRONG, "FRIEND", CONTACTS);
     private static final String EXAMS = """
-            SELECT e.id,CONCAT(COALESCE(NULLIF(JSON_UNQUOTE(JSON_EXTRACT(e.config,'$.category')),'null'),'综合'),'试卷 #',e.id) title,
+            SELECT e.id,CONCAT(COALESCE(NULLIF(CONCAT_WS(' / ',
+                   NULLIF(JSON_UNQUOTE(JSON_EXTRACT(e.config,'$.discipline')),'null'),
+                   NULLIF(JSON_UNQUOTE(JSON_EXTRACT(e.config,'$.subject')),'null'),
+                   NULLIF(JSON_UNQUOTE(JSON_EXTRACT(e.config,'$.codeName')),'null'),
+                   NULLIF(JSON_UNQUOTE(JSON_EXTRACT(e.config,'$.bookName')),'null')), ''),
+                   NULLIF(JSON_UNQUOTE(JSON_EXTRACT(e.config,'$.category')),'null'),'综合'),'试卷 #',e.id) title,
                CONCAT_WS(' · ',IF(e.end_time IS NULL,'进行中','已交卷'),e.start_time,CONCAT(e.total,' 题'),
                    IF(e.end_time IS NULL,NULL,CONCAT('已得 ',e.score,' 分，当前已评分满分 ',
                      (SELECT COALESCE(SUM(IF(t.type='SHORT',10,1)),0) FROM answer_record ar
@@ -125,24 +132,26 @@ public class PersonalSiteSearch {
                e.id recent
             FROM exam_session e WHERE e.user_id=:viewer
             """;
-    private static final String EXAM_ANSWER = """
-            FROM answer_record a JOIN question q ON q.id=a.question_id
+    private static final String EXAM_ANSWER = " FROM answer_record a JOIN question q ON q.id=a.question_id "
+            + QuestionSubjects.JOIN_SUBJECTS + """
             WHERE a.user_id=:viewer AND a.session_id=%s
               AND EXISTS (SELECT 1 FROM exam_session graded WHERE graded.id=a.session_id
                           AND graded.user_id=a.user_id AND graded.end_time IS NOT NULL)
             """;
-    private static final String ANSWER_TEXT = "CONCAT_WS(' ',q.stem,q.category,q.answer,q.analysis,a.user_answer,a.grading_feedback)";
+    private static final String ANSWER_TEXT = "CONCAT_WS(' ',q.stem," + QuestionSubjects.DISCIPLINE + ","
+            + QuestionSubjects.SUBJECT + ",q.answer,q.analysis,a.user_answer,a.grading_feedback)";
 
     private List<RelatedItem> exams(long user, Long id, List<String> terms, int limit) {
         String matching = contains(terms, ANSWER_TEXT);
-        String extra = "EXISTS (SELECT 1 " + EXAM_ANSWER.formatted("s.id") + " AND (" + matching + "))";
+        String extra = "EXISTS (SELECT 1 " + EXAM_ANSWER.formatted("hits.id") + " AND (" + matching + "))";
         return records(user, "EXAM", id, terms, limit, EXAMS, extra).stream().map(exam -> {
             if (exam.summary().startsWith("进行中")) return exam;
             String sql = """
-                    SELECT q.stem, q.answer, q.analysis, a.user_answer, COALESCE(a.grade_points,a.is_correct) earned, a.grading_feedback
-                    """ + EXAM_ANSWER.formatted(":id") + " ORDER BY (" + matching + ") DESC, a.id LIMIT 5";
+                    SELECT CONCAT_WS(' / ',%s,%s) topic, q.stem, q.answer, q.analysis, a.user_answer,
+                           COALESCE(a.grade_points,a.is_correct) earned, a.grading_feedback
+                    """.formatted(QuestionSubjects.DISCIPLINE, QuestionSubjects.SUBJECT) + EXAM_ANSWER.formatted(":id") + " ORDER BY (" + matching + ") DESC, a.id LIMIT 5";
             List<String> excerpts = db.query(sql, params(user, exam.id(), terms, 5), (rs, i) ->
-                    snippet(rs.getString("stem"), terms, 140)
+                    rs.getString("topic") + " · " + snippet(rs.getString("stem"), terms, 140)
                     + "；我的答案：" + snippet(rs.getString("user_answer"), terms, 200)
                     + "；参考答案：" + snippet(rs.getString("answer"), terms, 230)
                     + "；解析：" + snippet(rs.getString("analysis"), terms, 180)
@@ -167,14 +176,27 @@ public class PersonalSiteSearch {
                 """ + audience;
         String commentsFrom = " FROM community_post_comment c JOIN `user` u ON u.id=c.author_id ";
         String matching = contains(terms, "CONCAT_WS(' ',u.nickname,u.username,c.content)");
-        String extra = "EXISTS (SELECT 1 " + commentsFrom + " WHERE c.post_id=s.id AND (" + matching + "))";
-        return records(user, "POST", id, terms, limit, source, extra).stream().map(post -> {
+        String extra = "EXISTS (SELECT 1 " + commentsFrom + " WHERE c.post_id=hits.id AND (" + matching + "))";
+        extra += " OR EXISTS (SELECT 1" + DiscussionSummaryService.PUBLIC_ARCHIVE_FROM
+                + " AND p.id=hits.id AND (" + contains(terms, "d.search_text") + "))";
+        var hits = records(user, "POST", id, terms, limit, source, extra);
+        if (hits.isEmpty()) return hits;
+        // Recheck freshness and public visibility when reading the archived text, not just when matching IDs.
+        Map<Long, String> archived = new LinkedHashMap<>();
+        db.query("SELECT p.id,d.search_text" + DiscussionSummaryService.PUBLIC_ARCHIVE_FROM + " AND p.id IN (:ids)",
+                Map.of("ids", hits.stream().map(RelatedItem::id).toList()),
+                rs -> { archived.put(rs.getLong(1), rs.getString(2)); });
+        return hits.stream().map(post -> {
             String sql = "SELECT COALESCE(NULLIF(u.nickname,''),u.username) author, c.content " + commentsFrom
                     + " JOIN community_post p ON p.id=c.post_id WHERE p.id=:id AND " + audience
                     + " ORDER BY (" + matching + ") DESC, c.id DESC LIMIT 4";
             List<String> excerpts = db.query(sql, params(user, post.id(), terms, 4), (rs, i) ->
                     rs.getString("author") + "：" + snippet(rs.getString("content"), terms, 400));
-            return appendDetails(post, "评论：\n", excerpts);
+            var result = appendDetails(post, "评论：\n", excerpts);
+            String digest = archived.get(post.id());
+            if (digest == null) return result;
+            return appendDetails(result, "AI 观点整理（来自本帖；请按评论编号核对原文）：\n",
+                    List.of(snippet(digest, terms, 1400)));
         }).toList();
     }
 
@@ -193,7 +215,7 @@ public class PersonalSiteSearch {
                 .filter(day -> day.answerCount() > 0 || day.studyMinutes() > 0)
                 .map(day -> day.date() + " " + day.answerCount() + "/" + day.correctCount() + "/" + day.studyMinutes())
                 .collect(Collectors.joining("，"));
-        detail += "\n类别正确率：" + stats.categoryAccuracy(user).stream()
+        detail += "\n法学科目正确率：" + stats.categoryAccuracy(user).stream()
                 .map(cat -> cat.category() + " " + cat.correct() + "/" + cat.total() + "（" + cat.accuracy() + "%）")
                 .collect(Collectors.joining("，"));
         return new RelatedItem("STATS", user, "我的学习统计", snippet(detail, terms, 2600));
@@ -224,10 +246,10 @@ public class PersonalSiteSearch {
 
     private List<RelatedItem> records(long viewer, String type, Long id, List<String> terms, int limit,
                                       String source, String extraMatch) {
-        String matches = contains(terms, "CONCAT_WS(' ',s.title,s.summary)");
-        String where = id != null ? "s.id=:id" : "(" + matches + (extraMatch == null ? "" : " OR " + extraMatch) + ")";
-        String sql = "SELECT s.id, s.title, s.summary FROM (" + source + ") s WHERE " + where
-                + " ORDER BY " + titleScore(terms) + " DESC, s.recent DESC, s.id DESC LIMIT :limit";
+        String matches = contains(terms, "CONCAT_WS(' ',hits.title,hits.summary)");
+        String where = id != null ? "hits.id=:id" : "(" + matches + (extraMatch == null ? "" : " OR " + extraMatch) + ")";
+        String sql = "SELECT hits.id, hits.title, hits.summary FROM (" + source + ") hits WHERE " + where
+                + " ORDER BY " + titleScore(terms) + " DESC, hits.recent DESC, hits.id DESC LIMIT :limit";
         return db.query(sql, params(viewer, id, terms, limit), (rs, i) -> new RelatedItem(type, rs.getLong("id"),
                 snippet(rs.getString("title"), List.of(), 150), snippet(rs.getString("summary"), terms, id == null ? 900 : 3000)));
     }
@@ -246,7 +268,7 @@ public class PersonalSiteSearch {
 
     private static String titleScore(List<String> terms) {
         if (terms.isEmpty()) return "(0+0)";
-        return IntStream.range(0, terms.size()).mapToObj(i -> "(LOCATE(:t" + i + ",s.title)>0)")
+        return IntStream.range(0, terms.size()).mapToObj(i -> "(LOCATE(:t" + i + ",hits.title)>0)")
                 .collect(Collectors.joining("+"));
     }
 

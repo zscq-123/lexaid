@@ -3,11 +3,15 @@
     <el-card shadow="never" class="run-card">
       <template #header>
         <div class="run-header">
-          <span>第 {{ current + 1 }} / {{ questions.length }} 题<span v-if="currentQuestion?.category"> · {{ currentQuestion.category }}</span></span>
+          <span>第 {{ current + 1 }} / {{ questions.length }} 题<span v-if="subjectLabel(currentQuestion)"> · {{ subjectLabel(currentQuestion) }}</span></span>
           <span class="timer"><el-icon><Timer /></el-icon> {{ formatTime(elapsed) }}</span>
         </div>
       </template>
-      <el-progress :percentage="progress" :stroke-width="8" />
+      <div v-if="questions.length" class="paper-progress">
+        <span role="status">本卷已答 {{ answeredCount }} / {{ questions.length }} 题</span>
+        <el-progress aria-label="本卷作答进度" :percentage="progress" :stroke-width="8" :show-text="false" />
+      </div>
+      <QuestionCodeBooks :books="currentQuestion?.codeBooks" />
 
       <template v-if="currentQuestion">
         <div class="stem">
@@ -52,7 +56,7 @@
       <div class="nav">
         <el-button @click="prev" :disabled="current === 0">上一题</el-button>
         <el-button v-if="current < questions.length - 1" type="primary" @click="next">下一题</el-button>
-        <el-button v-else type="success" :loading="submitting" :disabled="confirming" @click="confirmSubmit">交 卷</el-button>
+        <el-button type="success" :loading="submitting" :disabled="confirming || !questions.length" @click="confirmSubmit">交 卷</el-button>
       </div>
     </el-card>
 
@@ -81,6 +85,8 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Timer } from '@element-plus/icons-vue'
 import { getSession, submitSession } from '../../api/exam'
+import { subjectLabel } from './subject-label'
+import QuestionCodeBooks from './QuestionCodeBooks.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -95,7 +101,8 @@ let active = true
 let timer = null
 
 const currentQuestion = computed(() => questions.value[current.value])
-const progress = computed(() => (questions.value.length ? ((current.value + 1) / questions.value.length) * 100 : 0))
+const answeredCount = computed(() => questions.value.filter(q => isAnswered(q.id)).length)
+const progress = computed(() => questions.value.length ? Math.round(answeredCount.value * 100 / questions.value.length) : 0)
 const answerValue = computed({
   get: () => {
     const q = currentQuestion.value
@@ -132,7 +139,7 @@ function saveMultiple(val) {
 function isAnswered(id) {
   const v = answers.value[id]
   if (Array.isArray(v)) return v.length > 0
-  return v !== undefined && v !== null && v !== ''
+  return typeof v === 'string' && v.trim().length > 0
 }
 function prev() {
   if (current.value > 0) current.value--
@@ -151,7 +158,7 @@ function typeLabel(t) {
 
 async function confirmSubmit() {
   if (confirming.value || submitting.value) return
-  const unAnswered = questions.value.filter((q) => !isAnswered(q.id)).length
+  const unAnswered = questions.value.length - answeredCount.value
   const hasSubjectiveAnswers = questions.value.some(q => q.type === 'SHORT' && isAnswered(q.id))
   const note = hasSubjectiveAnswers ? '交卷后，DeepSeek 将根据参考答案为简答题评分。' : ''
   confirming.value = true
@@ -206,6 +213,13 @@ onBeforeUnmount(() => {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
+}
+.paper-progress {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--lex-muted);
+  font-variant-numeric: tabular-nums;
 }
 .timer {
   display: inline-flex;

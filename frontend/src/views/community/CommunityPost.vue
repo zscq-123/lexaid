@@ -1,5 +1,5 @@
 <template>
-  <article class="post">
+  <article ref="article" class="post" :tabindex="detail ? -1 : undefined">
     <header>
       <UserAvatar :user-id="post.authorId" :version="post.authorAvatarVersion" :name="post.authorName" />
       <div class="byline">
@@ -37,6 +37,8 @@
       <button type="button" class="reaction" :aria-expanded="commentsOpen" @click="toggleComments">
         <el-icon><ChatRound /></el-icon><span>评论</span><span v-if="post.commentCount">{{ post.commentCount }}</span>
       </button>
+      <router-link v-if="!detail" class="discussion-link" :to="{ path: '/community/posts/' + post.id,
+        hash: summaryCandidate ? '#discussion-summary' : '' }">{{ summaryCandidate ? 'AI 观点整理' : '查看讨论' }}</router-link>
     </div>
     <section v-if="commentsOpen" class="comments" aria-label="评论">
       <form class="comment-form" @submit.prevent="sendComment">
@@ -49,7 +51,8 @@
       <p v-else-if="commentLoading" class="muted" role="status">正在加载评论…</p>
       <p v-else-if="!comments.length" class="muted">还没有评论</p>
       <ul v-else>
-        <li v-for="comment in comments" :key="comment.id">
+        <li v-for="comment in comments" :key="comment.id" :data-comment-id="comment.id" tabindex="-1"
+          :class="{ cited: highlighted === comment.id }">
           <div class="comment-author">
             <UserAvatar :user-id="comment.authorId" :version="comment.authorAvatarVersion" :name="comment.authorName" :size="24" />
             <strong>{{ comment.authorName }}</strong>
@@ -58,6 +61,7 @@
           <p>{{ comment.content }}</p>
         </li>
       </ul>
+      <p v-if="sourceMissing" class="muted" role="status">这条评论的位置或可见性已变更，请重新查看观点整理。</p>
       <el-pagination v-if="commentsTotal > commentPageSize" small layout="prev, pager, next"
         :current-page="commentsPage" :page-size="commentPageSize" :total="commentsTotal" @current-change="loadComments" />
     </section>
@@ -65,17 +69,21 @@
 </template>
 
 <script setup>
-import { computed, onBeforeUnmount, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { ArrowLeft, ArrowRight, ChatRound } from '@element-plus/icons-vue'
 import { addPostComment, deletePost, listPostComments, loadPostImage, setPostLike } from '../../api/community-posts'
 import { useUserStore } from '../../stores/user'
 import { useNearViewport } from '../../composables/useNearViewport'
 import UserAvatar from '../../components/UserAvatar.vue'
 
-const props = defineProps({ post: { type: Object, required: true } })
+const props = defineProps({ post: { type: Object, required: true }, detail: Boolean })
 const emit = defineEmits(['change', 'contact', 'deleted'])
 const user = useUserStore()
 const ownPost = computed(() => String(props.post.authorId) === String(user.user?.id))
+const summaryCandidate = computed(() => props.post.visibility === 'PUBLIC' && props.post.commentCount >= 3)
+const article = ref(null)
+const highlighted = ref(null)
+const sourceMissing = ref(false)
 const timeLabel = (value) => (value || '').replace('T', ' ').slice(0, 16)
 const images = computed(() => props.post.imageIds || [])
 const index = ref(0)
@@ -177,6 +185,8 @@ function toggleComments() {
 
 async function loadComments(page = commentsPage.value) {
   const request = ++commentRequest
+  highlighted.value = null
+  sourceMissing.value = false
   commentsPage.value = page
   commentLoading.value = true
   commentError.value = ''
@@ -186,6 +196,7 @@ async function loadComments(page = commentsPage.value) {
       comments.value = result.records
       commentsTotal.value = result.total
       emit('change', { commentCount: result.total })
+      return result
     }
   } catch {
     if (request === commentRequest) commentError.value = '评论加载失败。'
@@ -193,6 +204,42 @@ async function loadComments(page = commentsPage.value) {
     if (request === commentRequest) commentLoading.value = false
   }
 }
+
+let sourceSelection = 0
+async function revealSource(source) {
+  const selection = ++sourceSelection
+  if (!source) return
+  if (source.id === 0) {
+    highlighted.value = null
+    sourceMissing.value = false
+    article.value?.focus({ preventScroll: true })
+    article.value?.scrollIntoView({ block: 'start' })
+    return
+  }
+  commentsOpen.value = true
+  let page = Math.max(1, source.page || 1)
+  let first = 1
+  let last = Infinity
+  // Comments are newest first. Locate the original even if new replies shifted its page.
+  while (first <= last && selection === sourceSelection) {
+    const result = await loadComments(page)
+    if (!result || selection !== sourceSelection || !commentsOpen.value) return
+    if (result.records.some(c => c.id === source.id)) {
+      highlighted.value = source.id
+      await nextTick()
+      const row = article.value?.querySelector('[data-comment-id="' + source.id + '"]')
+      row?.focus({ preventScroll: true })
+      row?.scrollIntoView({ block: 'center' })
+      return
+    }
+    last = Math.min(last, Math.ceil(result.total / commentPageSize))
+    if (!result.records.length || result.records[0].id < source.id) last = Math.min(last, page - 1)
+    else first = page + 1
+    page = Math.floor((first + last) / 2)
+  }
+  if (selection === sourceSelection) sourceMissing.value = true
+}
+defineExpose({ revealSource })
 
 async function sendComment() {
   const content = draft.value.trim()
@@ -225,6 +272,7 @@ header { display: flex; align-items: center; gap: 10px; padding: 15px 18px; }
 .caption { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.65; padding: 3px 18px 10px; color: #263750; }
 .photo + .caption { padding-top: 15px; }
 .interactions { display: flex; gap: 7px; padding: 4px 12px 12px; }
+.discussion-link { color: var(--lex-accent); font-size: .82rem; margin-left: auto; align-self: center; padding: 6px 2px; }
 .reaction { display: inline-flex; align-items: center; gap: 6px; padding: 6px; border: none; border-radius: 5px; color: #586c83; background: transparent; font: inherit; cursor: pointer; }
 .reaction .el-icon { font-size: 18px; }
 .heart { display: grid; place-items: center; width: 19px; font-family: system-ui, sans-serif; font-size: 23px; line-height: 18px; text-align: center; }
@@ -241,6 +289,8 @@ header { display: flex; align-items: center; gap: 10px; padding: 15px 18px; }
 .comment-form, .comment-author { display: flex; align-items: center; gap: 8px; }
 .comments ul { list-style: none; }
 .comments li { margin-top: 13px; }
+.comments li.cited { border-inline-start: 3px solid var(--lex-accent); padding-inline-start: 10px; }
+.post { scroll-margin-top: calc(var(--toolbar-height, 56px) + 12px); }
 .comment-author strong { overflow-wrap: anywhere; }
 .comment-author time { margin-left: auto; }
 .comment-author time, .muted { font-size: 12px; color: #68788d; }

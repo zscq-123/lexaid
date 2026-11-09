@@ -16,7 +16,12 @@ import com.lexaid.exam.dto.ExamResultVO;
 import com.lexaid.exam.dto.ExamSessionVO;
 import com.lexaid.exam.dto.ExamSetupRequest;
 import com.lexaid.exam.dto.QuestionCategoryCount;
+import com.lexaid.exam.dto.QuestionProgress;
+import com.lexaid.exam.dto.QuestionScope;
 import com.lexaid.exam.dto.QuestionOption;
+import com.lexaid.exam.dto.CodeBookCount;
+import com.lexaid.exam.dto.QuestionBook;
+import com.lexaid.exam.dto.SubjectCount;
 import com.lexaid.exam.dto.SubmitRequest;
 import com.lexaid.exam.dto.WrongQuestionVO;
 import com.lexaid.relation.EntityRelation;
@@ -32,7 +37,7 @@ import org.springframework.util.StringUtils;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -61,30 +66,47 @@ public class ExamService {
         return questionMapper.categoryCounts();
     }
 
+    public List<SubjectCount> subjectCounts() {
+        return questionMapper.subjectCounts();
+    }
+
+    public List<CodeBookCount> codeBookCounts() {
+        return questionMapper.codeBookCounts();
+    }
+
+    public QuestionProgress progress(QuestionScope scope) {
+        requireCodeForBook(scope);
+        return questionMapper.progress(UserContext.userId(), scope);
+    }
+
+    private void requireCodeForBook(QuestionScope req) {
+        if (StringUtils.hasText(req.getBookName()) && !StringUtils.hasText(req.getCodeName())) {
+            throw new BizException("选择编之前请先选择法典");
+        }
+    }
+
     /**
      * 组卷：按条件随机选题，支持按实体优先取关联题
      */
     public Long createSession(ExamSetupRequest req) {
         int count = req.getCount();
         List<Long> chosen = new ArrayList<>();
-        if (StringUtils.hasText(req.getSourceType()) && req.getSourceId() != null) {
+        requireCodeForBook(req);
+        if ("QUESTION".equals(req.getSourceType())) {
+            if (count != 1 || req.getSourceId() == null ||
+                    questionMapper.draw(req, List.of(req.getSourceId()), List.of(), 1).isEmpty()) {
+                throw new BizException("指定的练习题不可用");
+            }
+            chosen.add(req.getSourceId());
+        } else if (StringUtils.hasText(req.getSourceType()) && req.getSourceId() != null) {
             List<Long> relatedIds = relatedQuestionIds(req.getSourceType(), req.getSourceId());
             if (!relatedIds.isEmpty()) {
-                List<Long> candidates = questionMapper.selectList(buildWrapper(req.getCategory(), req.getDifficulty())
-                                .in(Question::getId, relatedIds)
-                                .last("ORDER BY RAND() LIMIT " + count))
-                        .stream().map(Question::getId).toList();
-                chosen.addAll(candidates);
+                chosen.addAll(questionMapper.draw(req, relatedIds, List.of(), count));
             }
         }
         int remain = count - chosen.size();
         if (remain > 0) {
-            LambdaQueryWrapper<Question> fillQw = buildWrapper(req.getCategory(), req.getDifficulty());
-            if (!chosen.isEmpty()) {
-                fillQw.notIn(Question::getId, chosen);
-            }
-            fillQw.last("ORDER BY RAND() LIMIT " + remain);
-            chosen.addAll(questionMapper.selectList(fillQw).stream().map(Question::getId).toList());
+            chosen.addAll(questionMapper.draw(req, null, chosen, remain));
         }
         if (chosen.isEmpty()) {
             throw new BizException("没有符合条件的题目");
@@ -92,6 +114,10 @@ public class ExamService {
 
         Map<String, Object> config = new LinkedHashMap<>();
         config.put("category", req.getCategory());
+        config.put("discipline", req.getDiscipline());
+        config.put("subject", req.getSubject());
+        config.put("codeName", req.getCodeName());
+        config.put("bookName", req.getBookName());
         config.put("difficulty", req.getDifficulty());
         config.put("count", count);
         config.put("sourceType", req.getSourceType());
@@ -112,17 +138,6 @@ public class ExamService {
         session.setStartTime(LocalDateTime.now());
         examSessionMapper.insert(session);
         return session.getId();
-    }
-
-    private LambdaQueryWrapper<Question> buildWrapper(String category, Integer difficulty) {
-        LambdaQueryWrapper<Question> qw = new LambdaQueryWrapper<Question>().select(Question::getId);
-        if (StringUtils.hasText(category)) {
-            qw.eq(Question::getCategory, category);
-        }
-        if (difficulty != null) {
-            qw.eq(Question::getDifficulty, difficulty);
-        }
-        return qw;
     }
 
     /**
@@ -155,7 +170,8 @@ public class ExamService {
     public List<ExamQuestionVO> questionsOf(Long sessionId) {
         ExamSession session = requireOwnedSession(sessionId);
         List<Question> questions = loadQuestions(session);
-        return questions.stream().map(this::toExamQuestion).toList();
+        var books = bookMappings(questions);
+        return questions.stream().map(q -> toExamQuestion(q, books.getOrDefault(q.getId(), List.of()))).toList();
     }
 
     /**
@@ -228,7 +244,9 @@ public class ExamService {
         int maxScore = 0;
         int gradedCount = 0;
         List<AnswerDetailVO> details = new ArrayList<>();
-        for (Question q : loadQuestions(session)) {
+        List<Question> questions = loadQuestions(session);
+        var books = bookMappings(questions);
+        for (Question q : questions) {
             AnswerRecord ar = records.get(q.getId());
             QuestionGrade grade = QuestionGrade.stored(ar);
             int max = QuestionGrade.maxPoints(q.getType());
@@ -239,7 +257,8 @@ public class ExamService {
             details.add(new AnswerDetailVO(q.getId(), q.getType(), q.getStem(), parseOptions(q),
                     ar == null ? null : ar.getUserAnswer(), displayAnswer(q),
                     ar == null ? null : ar.getIsCorrect(), q.getAnalysis(), relatedItems(q.getId()),
-                    grade.points(), max, grade.status(), grade.feedback()));
+                    grade.points(), max, grade.status(), grade.feedback(), q.getDiscipline(), q.getSubject(),
+                    books.getOrDefault(q.getId(), List.of())));
         }
         return new ExamResultVO(sessionId, session.getScore(), session.getTotal(), session.getCorrect(),
                 gradedCount, details, maxScore);
@@ -270,7 +289,8 @@ public class ExamService {
         if (pageIds.isEmpty()) {
             return new PageResult<>(List.of(), ids.size());
         }
-        List<Question> questions = questionMapper.selectBatchIds(pageIds);
+        List<Question> questions = questionMapper.classifiedQuestions(pageIds);
+        var books = bookMappings(questions);
         Map<Long, Question> qMap = questions.stream()
                 .collect(Collectors.toMap(Question::getId, q -> q));
         // 最近一次错答内容
@@ -295,8 +315,9 @@ public class ExamService {
             QuestionGrade grade = QuestionGrade.stored(ar);
             vos.add(new WrongQuestionVO(q.getId(), q.getType(), q.getStem(), parseOptions(q),
                     ar == null ? null : ar.getUserAnswer(), displayAnswer(q), q.getAnalysis(),
-                    q.getCategory(), ar == null ? null : ar.getIsCorrect(), relatedItems(q.getId()),
-                    grade.points(), QuestionGrade.maxPoints(q.getType()), grade.status(), grade.feedback()));
+                    q.getSubject(), ar == null ? null : ar.getIsCorrect(), relatedItems(q.getId()),
+                    grade.points(), QuestionGrade.maxPoints(q.getType()), grade.status(), grade.feedback(),
+                    q.getDiscipline(), q.getSubject(), books.getOrDefault(q.getId(), List.of())));
         }
         return new PageResult<>(vos, ids.size());
     }
@@ -327,7 +348,7 @@ public class ExamService {
                         .map(v -> ((Number) v).longValue())
                         .toList();
                 if (!ids.isEmpty()) {
-                    Map<Long, Question> map = questionMapper.selectBatchIds(ids).stream()
+                    Map<Long, Question> map = questionMapper.classifiedQuestions(ids).stream()
                             .collect(Collectors.toMap(Question::getId, q -> q));
                     List<Question> ordered = new ArrayList<>();
                     for (Long id : ids) {
@@ -345,26 +366,41 @@ public class ExamService {
         throw new BizException("试卷数据异常");
     }
 
-    private ExamQuestionVO toExamQuestion(Question q) {
+    private Map<Long,List<QuestionBook>> bookMappings(List<Question> questions) {
+        if (questions.isEmpty()) return Map.of();
+        return questionMapper.booksOf(questions.stream().map(Question::getId).toList()).stream()
+                .collect(Collectors.groupingBy(QuestionBook::questionId));
+    }
+
+    private ExamQuestionVO toExamQuestion(Question q, List<QuestionBook> books) {
         return new ExamQuestionVO(q.getId(), q.getType(), q.getStem(),
-                parseOptions(q), q.getDifficulty(), q.getCategory(), relatedItems(q.getId()));
+                parseOptions(q), q.getDifficulty(), q.getSubject(), relatedItems(q.getId()), q.getDiscipline(), q.getSubject(), books);
     }
 
     private ExamSessionVO toSessionVO(ExamSession s) {
         String category = null;
         Integer difficulty = null;
+        String discipline = null;
+        String subject = null;
+        String codeName = null;
+        String bookName = null;
         try {
             Map<String, Object> config = objectMapper.readValue(s.getConfig(), new TypeReference<>() {
             });
             category = (String) config.get("category");
+            discipline = (String) config.get("discipline");
+            subject = (String) config.get("subject");
+            codeName = (String) config.get("codeName");
+            bookName = (String) config.get("bookName");
+            if (category == null) category = subject != null ? subject : discipline;
             difficulty = config.get("difficulty") == null ? null : ((Number) config.get("difficulty")).intValue();
         } catch (Exception ignored) {
         }
         return new ExamSessionVO(s.getId(), s.getTotal(), s.getCorrect(), s.getScore(),
-                s.getDurationSec(), category, difficulty, s.getStartTime(), s.getEndTime());
+                s.getDurationSec(), category, difficulty, s.getStartTime(), s.getEndTime(), discipline, subject, codeName, bookName);
     }
 
-    private QuestionGrade initialGrade(Question q, String answer) {
+    QuestionGrade initialGrade(Question q, String answer) {
         if (!StringUtils.hasText(q.getAnswer())) {
             return new QuestionGrade("NO_REFERENCE", null, "题库未提供参考答案，此题不计入得分。");
         }
@@ -383,14 +419,13 @@ public class ExamService {
     private Boolean grade(Question q, String userAnswer) {
         return switch (q.getType()) {
             case "SINGLE" -> {
-                List<String> keys = parseAnswerKeys(q);
+                List<String> keys = parseKeys(q.getAnswer());
                 yield !keys.isEmpty() && Objects.equals(userAnswer, keys.get(0));
             }
             case "MULTIPLE" -> {
-                List<String> correct = parseAnswerKeys(q);
-                List<String> user = parseUserKeys(userAnswer);
-                Collections.sort(correct);
-                Collections.sort(user);
+                var keyOrder = Comparator.nullsFirst(Comparator.<String>naturalOrder());
+                var correct = parseKeys(q.getAnswer()).stream().sorted(keyOrder).toList();
+                var user = parseKeys(userAnswer).stream().sorted(keyOrder).toList();
                 yield !correct.isEmpty() && correct.equals(user);
             }
             case "JUDGE" -> Objects.equals(q.getAnswer(), userAnswer);
@@ -398,22 +433,11 @@ public class ExamService {
         };
     }
 
-    private List<String> parseAnswerKeys(Question q) {
+    private List<String> parseKeys(String answer) {
+        if (!StringUtils.hasText(answer)) return List.of();
         try {
-            return objectMapper.readValue(q.getAnswer(), new TypeReference<List<String>>() {
-            });
-        } catch (Exception e) {
-            return List.of(q.getAnswer() == null ? "" : q.getAnswer());
-        }
-    }
-
-    private List<String> parseUserKeys(String answer) {
-        if (!StringUtils.hasText(answer)) {
-            return List.of();
-        }
-        try {
-            return objectMapper.readValue(answer, new TypeReference<List<String>>() {
-            });
+            List<String> keys = objectMapper.readValue(answer, new TypeReference<>() {});
+            return keys != null ? keys : List.of();
         } catch (Exception e) {
             return List.of(answer);
         }
@@ -436,7 +460,7 @@ public class ExamService {
      */
     private String displayAnswer(Question q) {
         return switch (q.getType()) {
-            case "SINGLE", "MULTIPLE" -> String.join(",", parseAnswerKeys(q));
+            case "SINGLE", "MULTIPLE" -> String.join(",", parseKeys(q.getAnswer()));
             case "JUDGE" -> "true".equalsIgnoreCase(q.getAnswer()) ? "正确" : "错误";
             case "SHORT" -> q.getAnswer();
             default -> TextUtil.excerpt(q.getAnswer(), 200);

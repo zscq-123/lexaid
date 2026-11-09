@@ -17,6 +17,7 @@
       </router-link>
     </section>
 
+    <TopicStudy />
     <section class="libraries">
       <h2>资料检索</h2>
       <div class="library-grid">
@@ -31,8 +32,8 @@
     <div class="lower-grid">
       <section class="panel reading">
         <div class="panel-heading">
-          <h2>{{ weakCategory ? '薄弱类别推荐' : '阅读推荐' }}</h2>
-          <span class="category">{{ weakCategory || '高频考点' }}</span>
+          <h2>{{ recommendedSubject ? '薄弱科目推荐' : '阅读推荐' }}</h2>
+          <span class="category">{{ recommendedSubject || '高频考点' }}</span>
         </div>
         <div v-if="readingLoading" class="list-status" role="status">正在加载推荐…</div>
         <div v-else-if="readingError" class="list-status" role="alert">
@@ -73,6 +74,7 @@ import { computed, onMounted, ref } from 'vue'
 import { ArrowRight, Calendar, ChatDotRound, ChatLineRound, CircleCheck, Clock, Collection, EditPen, Finished, Memo, Notebook, Reading } from '@element-plus/icons-vue'
 import { listProvisions, listViewpoints } from '../../api/content'
 import { statsCategory, statsOverview } from '../../api/stats'
+import TopicStudy from './TopicStudy.vue'
 
 const date = new Date()
 const dateKey = [date.getFullYear(), String(date.getMonth() + 1).padStart(2, '0'), String(date.getDate()).padStart(2, '0')].join('-')
@@ -105,20 +107,28 @@ const weakCategory = computed(() => {
   return measured.length ? measured.reduce((a, b) => a.accuracy < b.accuracy ? a : b).category : null
 })
 
+const recommendedSubject = ref('')
+async function readings(subject) {
+  const term = subject?.replace(/学$/, '')
+  const [p, v] = await Promise.all([
+    listProvisions({ ...(term ? { category: term } : { tag: '高频考点' }), size: 3 }),
+    listViewpoints({ ...(term ? { keyword: term } : { tag: '案例分析' }), size: 3 })
+  ])
+  return [
+    ...p.records.map(x => ({ typeLabel: '法条', to: '/provisions/' + x.id, title: x.lawName + ' ' + x.articleNo, summary: x.content })),
+    ...v.records.map(x => ({ typeLabel: '学者观点', to: '/viewpoints/' + x.id, title: x.title, summary: x.summary }))
+  ]
+}
+
 async function loadRecommendations() {
   readingLoading.value = true
   readingError.value = false
   try {
     categories.value = await statsCategory()
     const cat = weakCategory.value
-    const [p, v] = await Promise.all([
-      listProvisions({ ...(cat ? { category: cat } : { tag: '高频考点' }), size: 3 }),
-      listViewpoints({ ...(cat ? { keyword: cat } : { tag: '案例分析' }), size: 3 })
-    ])
-    recommendations.value = [
-      ...p.records.map(x => ({ typeLabel: '法条', to: '/provisions/' + x.id, title: x.lawName + ' ' + x.articleNo, summary: x.content })),
-      ...v.records.map(x => ({ typeLabel: '学者观点', to: '/viewpoints/' + x.id, title: x.title, summary: x.summary }))
-    ]
+    const matches = cat && !['待判定', '跨学科综合'].includes(cat) ? await readings(cat) : []
+    recommendedSubject.value = matches.length ? cat : ''
+    recommendations.value = matches.length ? matches : await readings()
   } catch {
     readingError.value = true
   } finally {

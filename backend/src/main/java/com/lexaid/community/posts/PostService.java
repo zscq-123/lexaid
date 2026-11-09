@@ -140,6 +140,7 @@ public class PostService {
         long commentId = insert("""
                 INSERT INTO community_post_comment (post_id,author_id,content) VALUES (:id,:viewer,:text)
                 """, Map.of("id", id, "viewer", UserContext.userId(), "text", text));
+        DiscussionSummaryService.queueAfterComment(db, id);
         return db.queryForObject(COMMENTS + " WHERE c.id=:id", Map.of("id", commentId), COMMENT_MAPPER);
     }
 

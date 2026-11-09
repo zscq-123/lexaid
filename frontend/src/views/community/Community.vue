@@ -8,6 +8,9 @@
       <button type="button" :aria-current="tab === 'feed' ? 'page' : undefined" @click="showFeed">
         <el-icon><ChatDotRound /></el-icon>动态
       </button>
+      <button type="button" :aria-current="tab === 'library' ? 'page' : undefined" @click="navigateTab('library')">
+        <el-icon><Collection /></el-icon>讨论知识库
+      </button>
       <button type="button" :aria-current="tab === 'friends' ? 'page' : undefined" @click="showFriends()">
         <el-icon><User /></el-icon>通讯录
       </button>
@@ -39,22 +42,28 @@
       <el-pagination v-if="total > pageSize && !error" layout="prev, pager, next" background :pager-count="5"
         :current-page="page" :page-size="pageSize" :total="total" @current-change="changePage" />
     </div>
+    <DiscussionLibrary v-else-if="tab === 'library'" />
     <FriendsPanel v-else :target-user-id="targetUserId" @target-opened="targetUserId = null" @changed="invalidateFeed" />
     <CommunityComposer v-model="composerOpen" @published="onPublished" />
   </section>
 </template>
 
 <script setup>
-import { computed, onMounted, ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import { ChatDotRound, EditPen, Refresh, User } from '@element-plus/icons-vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { ChatDotRound, Collection, EditPen, Refresh, User } from '@element-plus/icons-vue'
 import { listPosts } from '../../api/community-posts'
+import { useUserStore } from '../../stores/user'
 import CommunityComposer from './CommunityComposer.vue'
 import CommunityPost from './CommunityPost.vue'
+import DiscussionLibrary from './DiscussionLibrary.vue'
 import FriendsPanel from './FriendsPanel.vue'
 
-const tab = ref('feed')
 const route = useRoute()
+const router = useRouter()
+const user = useUserStore()
+const tab = computed(() => route.query.member || route.query.tab === 'friends' ? 'friends'
+  : route.query.tab === 'library' ? 'library' : 'feed')
 const targetUserId = ref(null)
 const composerOpen = ref(false)
 const scopes = [{ id: 'all', label: '全部' }, { id: 'friends', label: '好友' }, { id: 'mine', label: '我的' }]
@@ -66,15 +75,17 @@ const page = ref(1)
 const total = ref(0)
 const loading = ref(true)
 const error = ref(false)
-let requestId = 0
+let feedRequest
 
 async function load() {
-  const id = ++requestId
+  feedRequest?.abort()
+  const request = new AbortController()
+  feedRequest = request
   loading.value = true
   error.value = false
   try {
-    const result = await listPosts({ scope: scope.value, page: page.value, size: pageSize })
-    if (id !== requestId || tab.value !== 'feed') return
+    const result = await listPosts({ scope: scope.value, page: page.value, size: pageSize }, request.signal)
+    if (request.signal.aborted) return
     const last = Math.max(1, Math.ceil(result.total / pageSize))
     if (page.value > last) {
       page.value = last
@@ -84,9 +95,9 @@ async function load() {
     posts.value = result.records
     total.value = result.total
   } catch {
-    if (id === requestId) error.value = true
+    if (!request.signal.aborted) error.value = true
   } finally {
-    if (id === requestId) loading.value = false
+    if (!request.signal.aborted) loading.value = false
   }
 }
 
@@ -103,14 +114,19 @@ function setScope(next) {
   load()
 }
 function showFeed() {
-  if (tab.value === 'feed') return
-  tab.value = 'feed'
-  load()
+  navigateTab('feed')
+}
+function navigateTab(next, member = null) {
+  const query = { ...route.query }
+  delete query.member
+  delete query.tab
+  if (next !== 'feed') query.tab = next
+  if (member) query.member = String(member)
+  return router.push({ path: '/community', query })
 }
 function showFriends(id = null) {
-  requestId++
   targetUserId.value = id
-  tab.value = 'friends'
+  navigateTab('friends', id)
 }
 function invalidateFeed() {
   posts.value = []
@@ -123,18 +139,21 @@ function updatePost(id, changes) {
 }
 function onDeleted() { load() }
 function onPublished() {
-  tab.value = 'feed'
   scope.value = 'mine'
   page.value = 1
   total.value = 0
   ElMessage.success('帖子已发布')
-  load()
+  if (tab.value === 'feed') load()
+  else showFeed()
 }
-watch(() => route.query.member, id => {
+watch([tab, () => route.query.member, () => user.token], ([next, id, token], previous) => {
+  feedRequest?.abort()
+  if (token !== previous?.[2]) invalidateFeed()
   const value = Number(id)
-  if (Number.isSafeInteger(value) && value > 0) showFriends(value)
+  targetUserId.value = Number.isSafeInteger(value) && value > 0 ? value : null
+  if (token && next === 'feed' && route.path === '/community') load()
 }, { immediate: true })
-onMounted(() => { if (tab.value === 'feed') load() })
+onBeforeUnmount(() => feedRequest?.abort())
 </script>
 
 <style scoped>
@@ -155,6 +174,7 @@ h1 { font-size: clamp(23px, 3vw, 30px); font-weight: 680; line-height: 1.25; }
 .empty-icon { color: #7b99bf; }
 .feed > :deep(.el-pagination) { justify-self: center; }
 @media (max-width: 600px) {
+  .sections { gap: 16px; flex-wrap: wrap; }
   .page-head { padding-top: 0; }
   .scopes { gap: 1px; }
   .scopes button { padding-inline: 11px; }

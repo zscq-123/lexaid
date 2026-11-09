@@ -19,6 +19,7 @@ async function main() {
       const method = route.request().method()
       const body = route.request().postDataJSON()
       let data
+      if (api === '/api/mock-exams/active') return route.fulfill({ json: { code: 200, data: null } })
       if (api === '/api/auth/me') data = { id: 7, username: 'reader' }
       else if (api === '/api/favorites' && method === 'GET') data = favorites
       else if (api === '/api/favorites/folders' && method === 'GET') data = folders

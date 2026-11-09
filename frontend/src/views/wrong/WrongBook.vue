@@ -13,8 +13,9 @@
         <div class="row-head">
           <span class="idx">{{ i + 1 }}</span>
           <el-tag size="small">{{ typeLabel(q.type) }}</el-tag>
-          <el-tag size="small" type="info" effect="plain">{{ q.category }}</el-tag>
+          <span v-if="subjectLabel(q)" class="question-subject">{{ subjectLabel(q) }}</span>
         </div>
+        <QuestionCodeBooks :books="q.codeBooks" />
         <div class="stem">{{ q.stem }}</div>
         <div class="answer">
           <span>你的答案：{{ q.userAnswer || '（未作答）' }}</span>
@@ -26,6 +27,7 @@
           <div class="analysis-title">解析</div>
           {{ q.analysis }}
         </div>
+        <el-button v-if="q.isCorrect === false" class="practice-link" @click="review(q)">情景迁移练习</el-button>
         <div v-if="q.related?.length" class="related">
           <el-tag v-for="r in q.related" :key="r.type + r.id" size="small" effect="plain" class="rel" @click="go(r)">
             {{ relLabel(r.type) }}：{{ r.title }} →
@@ -43,6 +45,7 @@
         @current-change="changePage"
       />
     </el-card>
+    <ScenarioPractice v-model="practiceOpen" :source="practiceSource" />
   </div>
 </template>
 
@@ -50,9 +53,18 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { wrongQuestions } from '../../api/exam'
+import ScenarioPractice from './ScenarioPractice.vue'
 import QuestionGrade from '../../components/QuestionGrade.vue'
+import { subjectLabel } from '../exam/subject-label'
+import QuestionCodeBooks from '../exam/QuestionCodeBooks.vue'
 
 const router = useRouter()
+const practiceOpen = ref(false)
+const practiceSource = ref(null)
+function review(question) {
+  practiceSource.value = question
+  practiceOpen.value = true
+}
 const list = ref([])
 const total = ref(0)
 const page = ref(1)
@@ -105,6 +117,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+.question-subject { font-size: .82rem; color: var(--lex-muted); overflow-wrap: anywhere; }
 .filter-card,
 .list-card {
   border-radius: 8px;
@@ -153,6 +166,7 @@ onBeforeUnmount(() => {
   font-weight: 600;
   color: #2e5fa3;
 }
+.practice-link { margin-top: 10px; }
 .related {
   margin-top: 8px;
   display: flex;
