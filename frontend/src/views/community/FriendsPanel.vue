@@ -79,7 +79,10 @@
           <el-button type="primary" :disabled="busy" @click="respond(selected.requestId, true)">接受申请</el-button>
         </template>
         <el-button v-else-if="selected?.relationship === 'NONE'" type="primary" :loading="busy" @click="send">发送申请</el-button>
-        <el-button v-else-if="selected?.relationship === 'FRIEND'" type="danger" plain :disabled="busy" @click="remove">删除好友</el-button>
+        <template v-else-if="selected?.relationship === 'FRIEND'">
+          <el-button type="primary" :icon="ChatLineSquare" :disabled="busy" @click="messageFriend">发消息</el-button>
+          <el-button type="danger" plain :disabled="busy" @click="remove">删除好友</el-button>
+        </template>
         <el-button v-else @click="dialog = false">关闭</el-button>
       </template>
     </el-dialog>
@@ -88,7 +91,8 @@
 
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
-import { ArrowRight, Plus, Search } from '@element-plus/icons-vue'
+import { useRouter } from 'vue-router'
+import { ArrowRight, ChatLineSquare, Plus, Search } from '@element-plus/icons-vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import UserAvatar from '../../components/UserAvatar.vue'
 import {
@@ -97,6 +101,7 @@ import {
 
 const props = defineProps({ targetUserId: { type: [Number, String], default: null } })
 const emit = defineEmits(['target-opened', 'changed'])
+const router = useRouter()
 const tab = ref('contacts'), contacts = ref([]), requests = ref([]), contactFilter = ref('')
 const query = ref(''), matches = ref([]), searched = ref(false), searching = ref(false)
 const dialog = ref(false), selected = ref(null), note = ref(''), loading = ref(false), busy = ref(false)
@@ -197,6 +202,11 @@ async function act(operation, success) {
   }
 }
 const send = () => act(() => sendInvitation(selected.value.id, note.value), '好友申请已发送')
+function messageFriend() {
+  if (!selected.value) return
+  dialog.value = false
+  router.push({ path: '/messages', query: { user: String(selected.value.id) } })
+}
 const respond = (id, accept) => act(() => answerInvitation(id, accept), accept ? '已添加到通讯录' : '已拒绝申请')
 async function remove() {
   const person = selected.value

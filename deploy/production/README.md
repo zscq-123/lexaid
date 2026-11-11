@@ -12,6 +12,10 @@
 
 ## 更新和检查
 
+包含资源库的版本首次部署前，先在现有数据库执行 `backend/src/main/resources/resources.sql` 创建 `learning_resource` 表；该脚本可重复执行。包含私信的版本还需执行 `backend/src/main/resources/messages.sql` 创建 `direct_message` 表。
+
+Nginx 必须为 `/ws/` 配置 WebSocket Upgrade 转发（本目录的 `nginx.conf` 已包含）；否则私信会自动降级为轮询同步。
+
 先发布新静态资源，最后替换 `web/index.html`。将安装包和同名的 `.sha256` 文件上传到 `packages/`，再执行 `./publish-package.sh 安装包文件名`。脚本校验 SHA-256 并发布到 `web/downloads/`，同名旧版本的内容若不同会拒绝发布。更新后端时先把 JAR 上传到同目录的临时文件，再原子替换 `app/lexaid.jar` 并执行 `docker compose restart backend`。数据库保存在该项目的命名卷中。可通过以下命令检查运行状态。
 
 ```sh

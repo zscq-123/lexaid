@@ -33,6 +33,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>录制并发送私信语音消息。</string>
 	<key>NSCameraUsageDescription</key>
 	<string>拍照上传头像或在交流天地分享照片。</string>
 	<key>NSPhotoLibraryUsageDescription</key>

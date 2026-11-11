@@ -7,8 +7,9 @@ spring:
     import: "optional:file:${user.home}/.config/lexaid/deepseek.properties"
   servlet:
     multipart:
-      max-file-size: 4MB
-      max-request-size: 21MB
+      # 学习资源不设上传大小上限；图片仍由业务层限制为单张 4 MB。
+      max-file-size: -1
+      max-request-size: -1
   application:
     name: lexaid-backend
   autoconfigure:

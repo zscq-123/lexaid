@@ -38,6 +38,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.POST, "/api/relations").hasRole("ADMIN")
+                        // The handshake authenticates with a short-lived ticket in MessageHandshakeInterceptor.
+                        .requestMatchers("/ws/**").permitAll()
                         .requestMatchers(
                                 "/api/auth/register",
                                 "/api/auth/login",

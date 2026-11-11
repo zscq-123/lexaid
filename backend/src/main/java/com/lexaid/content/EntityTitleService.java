@@ -5,6 +5,7 @@ import com.lexaid.common.TextUtil;
 import com.lexaid.exam.Question;
 import com.lexaid.exam.QuestionMapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;
@@ -23,6 +24,7 @@ public class EntityTitleService {
     private final CaseInfoMapper caseInfoMapper;
     private final ScholarViewpointMapper viewpointMapper;
     private final QuestionMapper questionMapper;
+    private final JdbcTemplate jdbc;
 
     public String title(String type, Long id) {
         Map<Long, String> m = batch(type, List.of(id));
@@ -59,6 +61,29 @@ public class EntityTitleService {
                         .select(Question::getId, Question::getStem).in(Question::getId, ids))) {
                     m.put(q.getId(), TextUtil.excerpt(q.getStem(), 60));
                 }
+            }
+            case "MESSAGE" -> {
+                String placeholders = String.join(",", java.util.Collections.nCopies(ids.size(), "?"));
+                jdbc.query("SELECT id, kind, content, file_name, recalled_at FROM direct_message WHERE id IN ("
+                                + placeholders + ")",
+                        rs -> {
+                            String title;
+                            if (rs.getTimestamp("recalled_at") != null) {
+                                title = "消息已撤回";
+                            } else {
+                                String kind = rs.getString("kind");
+                                String content = rs.getString("content");
+                                title = switch (kind) {
+                                    case "IMAGE" -> content == null || content.isBlank() ? "[图片]" : content;
+                                    case "FILE" -> content == null || content.isBlank()
+                                            ? "[文件] " + rs.getString("file_name") : content;
+                                    case "VOICE" -> "[语音]";
+                                    default -> content == null ? "" : content;
+                                };
+                                title = TextUtil.excerpt(title, 60);
+                            }
+                            m.put(rs.getLong("id"), title);
+                        }, ids.toArray());
             }
             default -> {
             }

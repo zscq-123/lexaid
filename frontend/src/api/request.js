@@ -23,7 +23,7 @@ service.interceptors.response.use(
   (res) => {
     const body = res.data
     if (body && body.code !== undefined && body.code !== 200) {
-      ElMessage.error(body.message || '请求失败')
+      if (!res.config?.silent) ElMessage.error(body.message || '请求失败')
       return Promise.reject(new Error(body.message))
     }
     return body
@@ -43,9 +43,9 @@ service.interceptors.response.use(
       } else if (!sentAuthorization && !store.token) {
         ElMessage.error(resp.data?.message || '请先登录')
       }
-    } else if (resp && resp.data && resp.data.message) {
+    } else if (!err.config?.silent && resp && resp.data && resp.data.message) {
       ElMessage.error(resp.data.message)
-    } else {
+    } else if (!err.config?.silent) {
       ElMessage.error('网络异常，请稍后重试')
     }
     return Promise.reject(err)

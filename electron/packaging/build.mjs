@@ -47,7 +47,7 @@ try {
     // Re-sign the customized bundle and verify all nested objects before disk image creation.
     run('codesign',['--force','--deep','--sign','-','--timestamp=none',app])
     run('codesign',['--verify','--deep','--strict',app])
-    run('lipo',['-verify_arch',arch === 'x64' ? 'x86_64' : 'arm64',path.join(app,'Contents/MacOS/LexAid')])
+    run('lipo',[path.join(app,'Contents/MacOS/LexAid'),'-verify_arch',arch === 'x64' ? 'x86_64' : 'arm64'])
     const volume = path.join(work,'volume-'+arch)
     await mkdir(volume)
     await rename(app,path.join(volume,'LexAid.app'))

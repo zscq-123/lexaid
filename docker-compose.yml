@@ -40,7 +40,9 @@ services:
       - ./backend/src/main/resources/mock-exams.sql:/docker-entrypoint-initdb.d/25-mock-exams.sql:ro
       - ./datasets/formal-exams/formal-exam-bank.sql.gz:/docker-entrypoint-initdb.d/26-formal-exam-bank.sql.gz:ro
       - ./datasets/formal-exams/formal-exam-bank-reviewed.sql.gz:/docker-entrypoint-initdb.d/27-formal-exam-bank-reviewed.sql.gz:ro
-    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+      - ./backend/src/main/resources/resources.sql:/docker-entrypoint-initdb.d/28-resources.sql:ro
+      - ./backend/src/main/resources/messages.sql:/docker-entrypoint-initdb.d/29-messages.sql:ro
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-allowed-packet=1G
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-lexaid-root-local}"]
       interval: 5s

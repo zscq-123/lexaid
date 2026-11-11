@@ -24,6 +24,7 @@
             <router-link v-for="item in section.items" :key="item.path" :to="item.path" role="menuitem" class="el-menu-item"
               :class="{ 'is-active': activePath === item.path }" :aria-current="activePath === item.path ? 'page' : undefined" @click="closeMenu">
               <el-icon><component :is="item.icon" /></el-icon><span>{{ item.label }}</span>
+              <span v-if="item.path === '/messages' && messageStore.unreadTotal" class="nav-unread">{{ unreadLabel }}</span>
             </router-link>
           </div>
         </div>
@@ -39,6 +40,10 @@
           <kbd aria-hidden="true">{{ shortcut }}</kbd>
         </button>
         <div class="right">
+          <router-link to="/messages" class="message-shortcut" :aria-label="messageStore.unreadTotal ? '私信，' + unreadLabel + ' 条未读' : '私信'">
+            <el-icon><ChatLineSquare /></el-icon><span>私信</span>
+            <span v-if="messageStore.unreadTotal" class="header-unread" aria-hidden="true">{{ unreadLabel }}</span>
+          </router-link>
           <router-link to="/ai-chat" class="ai-shortcut"><el-icon><ChatDotRound /></el-icon><span>AI 问答</span></router-link>
           <el-dropdown @command="onCommand">
             <button type="button" class="user" :aria-label="displayName + '，账户菜单'">
@@ -74,12 +79,14 @@
 
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { ElNotification } from 'element-plus'
 import { useRoute, useRouter } from 'vue-router'
 import {
-  ArrowDown, ChatDotRound, ChatLineRound, CircleCheck, Close, Collection, EditPen,
-  DataAnalysis, Grid, Memo, Menu, Notebook, Reading, Search, TrendCharts, User
+  ArrowDown, ChatDotRound, ChatLineRound, ChatLineSquare, CircleCheck, Close, Collection, EditPen,
+  DataAnalysis, FolderOpened, Grid, Memo, Menu, Notebook, Reading, Search, TrendCharts, User
 } from '@element-plus/icons-vue'
 import { useUserStore } from '../stores/user'
+import { useMessageStore } from '../stores/messages'
 import UserAvatar from '../components/UserAvatar.vue'
 import ShellSearch from './ShellSearch.vue'
 
@@ -87,7 +94,8 @@ const sections = [
   { label: '资料库', items: [
     { path: '/provisions', label: '法条', icon: Notebook },
     { path: '/cases', label: '案例', icon: Collection },
-    { path: '/viewpoints', label: '学者观点', icon: Reading }
+    { path: '/viewpoints', label: '学者观点', icon: Reading },
+    { path: '/resources', label: '资源库', icon: FolderOpened }
   ] },
   { label: '学习', items: [
     { path: '/exam/setup', label: '模拟答题', icon: EditPen },
@@ -97,6 +105,7 @@ const sections = [
     { path: '/stats', label: '学习统计', icon: TrendCharts }
   ] },
   { label: '交流与个人', items: [
+    { path: '/messages', label: '私信', icon: ChatLineSquare },
     { path: '/community', label: '交流天地', icon: ChatLineRound },
     { path: '/ai-chat', label: 'AI 问答', icon: ChatDotRound },
     { path: '/profile', label: '个人中心', icon: User }
@@ -108,13 +117,16 @@ const sections = [
 const route = useRoute()
 const router = useRouter()
 const userStore = useUserStore()
+const messageStore = useMessageStore()
 const visibleSections = computed(() => sections.filter(section => !section.adminOnly || userStore.user?.role === 'ADMIN'))
 const menuOpen = ref(false)
 const menuButton = ref(null)
 const closeButton = ref(null)
 const drawerMotion = ref(false)
 const searchOpen = ref(false)
+let unsubscribeMessages = null
 const displayName = computed(() => userStore.user?.nickname || userStore.user?.username || '用户')
+const unreadLabel = computed(() => messageStore.unreadTotal > 99 ? '99+' : String(messageStore.unreadTotal))
 const activePath = computed(() => route.path.startsWith('/exam/') ? '/exam/setup' : '/' + route.path.split('/')[1])
 const phoneTabs = [
   { path: '/dashboard', label: '工作台', icon: Grid },
@@ -197,14 +209,31 @@ watch(() => route.path, () => {
   closeMenu()
   if (narrow.matches) document.querySelector('.workspace > main')?.scrollTo(0, 0)
 })
+watch(() => userStore.token, (token) => {
+  if (token) {
+    messageStore.ensureConnected()
+    messageStore.refreshUnread()
+  } else {
+    messageStore.disconnect()
+  }
+}, { immediate: true })
 onMounted(() => {
   narrow.addEventListener('change', viewportChanged)
   window.addEventListener('keydown', keyShortcut)
   if (route.path !== '/profile') userStore.fetchMe().catch(() => {})
+  messageStore.ensureConnected()
+  messageStore.refreshUnread()
+  unsubscribeMessages = messageStore.subscribe(event => {
+    if (event.type === 'REMINDER') {
+      ElNotification({ title: '消息提醒', message: event.preview || '你设置了一条消息提醒', type: 'info', duration: 12000 })
+    }
+  })
 })
 onBeforeUnmount(() => {
   narrow.removeEventListener('change', viewportChanged)
   window.removeEventListener('keydown', keyShortcut)
+  unsubscribeMessages?.()
+  messageStore.disconnect()
 })
 function onCommand(cmd) {
   if (cmd === 'logout') {
@@ -312,7 +341,15 @@ function onCommand(cmd) {
 }
 .search-launch kbd { margin-left: auto; font: 11px/1.3 var(--el-font-family); color: #68788c; }
 .right { display: flex; align-items: center; gap: 15px; margin-left: auto; }
-.ai-shortcut { display: inline-flex; align-items: center; gap: 6px; padding: 5px 8px; border-radius: 7px; color: #335a88; font-size: .82rem; font-weight: 560; }
+.ai-shortcut, .message-shortcut { display: inline-flex; align-items: center; gap: 6px; padding: 5px 8px; border-radius: 7px; color: #335a88; font-size: .82rem; font-weight: 560; }
+.message-shortcut { position: relative; }
+.nav-unread, .header-unread {
+  display: inline-grid; place-items: center; min-width: 18px; height: 18px; padding: 0 5px;
+  border-radius: 9px; background: #b23b3b; color: white; font-size: 11px; line-height: 1; font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+.nav-unread { margin-left: auto; }
+.header-unread { position: absolute; top: -2px; right: -3px; min-width: 16px; height: 16px; padding: 0 4px; }
 .user { gap: 7px; border-radius: 18px; padding: 3px 5px 3px 3px; font-size: .83rem; font-weight: 550; }
 .user-name { max-width: 14ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .user-chevron { color: var(--lex-muted); }
@@ -339,6 +376,8 @@ function onCommand(cmd) {
   .mobile-close { margin-left: auto; }
   .right { margin-left: 0; gap: 0; }
   .user-name, .user-chevron, .ai-shortcut, .search-launch span, .search-launch kbd { display: none; }
+  .message-shortcut { min-width: 44px; min-height: 44px; justify-content: center; padding: 0; }
+  .message-shortcut > span:not(.header-unread) { display: none; }
   .search-launch { width: 44px; height: 44px; border: 0; background: transparent; font-size: 1.12rem; margin-left: auto; justify-content: center; }
   .icon-button, .user { min-width: 44px; min-height: 44px; justify-content: center; }
   .aside {

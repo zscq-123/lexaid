@@ -52,6 +52,21 @@ public class FavoriteService {
         }
     }
 
+    /**
+     * 收藏一条私信。调用方必须先校验消息属于该用户且仍然可见。
+     */
+    public void addMessageFavorite(Long userId, Long messageId) {
+        try {
+            Favorite f = new Favorite();
+            f.setUserId(userId);
+            f.setTargetType("MESSAGE");
+            f.setTargetId(messageId);
+            favoriteMapper.insert(f);
+        } catch (DuplicateKeyException ignored) {
+            // 唯一约束：已收藏
+        }
+    }
+
     public void remove(Long userId, Long favoriteId) {
         Favorite f = favoriteMapper.selectById(favoriteId);
         if (f == null) {

@@ -61,6 +61,15 @@ public class FriendService {
                 viewer, viewer, other).stream().findFirst().orElseThrow(() -> new BizException(404, "账号不存在"));
     }
 
+    public boolean areFriends(long first, long second) {
+        if (first == second) return false;
+        Long count = jdbc.queryForObject("""
+                SELECT COUNT(*) FROM community_friend_pair
+                WHERE user_low=? AND user_high=? AND state='ACCEPTED'
+                """, Long.class, Math.min(first, second), Math.max(first, second));
+        return count != null && count > 0;
+    }
+
     public List<Person> friends(long viewer) {
         String sql = "SELECT " + PERSON_COLUMNS + " "
                 + DIRECTORY_FROM + " AND f.state = 'ACCEPTED' ORDER BY COALESCE(u.nickname,u.username), u.id";

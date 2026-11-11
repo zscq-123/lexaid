@@ -71,7 +71,7 @@
 
 <script setup>
 import { computed, onMounted, ref } from 'vue'
-import { ArrowRight, Calendar, ChatDotRound, ChatLineRound, CircleCheck, Clock, Collection, EditPen, Finished, Memo, Notebook, Reading } from '@element-plus/icons-vue'
+import { ArrowRight, Calendar, ChatDotRound, ChatLineRound, CircleCheck, Clock, Collection, EditPen, Finished, FolderOpened, Memo, Notebook, Reading } from '@element-plus/icons-vue'
 import { listProvisions, listViewpoints } from '../../api/content'
 import { statsCategory, statsOverview } from '../../api/stats'
 import TopicStudy from './TopicStudy.vue'
@@ -95,7 +95,8 @@ const cards = computed(() => [
 const libraries = [
   { path: '/provisions', label: '法条检索', icon: Notebook, theme: 'provisions' },
   { path: '/cases', label: '案例查询', icon: Collection, theme: 'cases' },
-  { path: '/viewpoints', label: '学者观点', icon: Reading, theme: 'viewpoints' }
+  { path: '/viewpoints', label: '学者观点', icon: Reading, theme: 'viewpoints' },
+  { path: '/resources', label: '学习资源', icon: FolderOpened, theme: 'resources' }
 ]
 const tools = [
   { path: '/ai-chat', label: 'AI 问答', icon: ChatDotRound },
@@ -159,12 +160,13 @@ h2 { font-size: 1.12rem; line-height: 1.35; font-weight: 650; letter-spacing: -.
 .stat-value { margin-top: .4rem; font-size: clamp(1.55rem,2.5vw,2rem); font-weight: 650; line-height: 1.1; letter-spacing: -.045em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .stat-value small { margin-left: .25rem; color: var(--lex-muted, #58687b); font-size: .74rem; font-weight: 480; letter-spacing: 0; }
 .libraries { margin: 1.65rem 0; }
-.library-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .78rem; margin-top: .7rem; }
+.library-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .78rem; margin-top: .7rem; }
 .library-link { display: flex; align-items: center; gap: .7rem; padding: 1.15rem clamp(.65rem,1.5vw,1.15rem); color: var(--lex-ink, #182438); background: var(--lex-surface, white); border: 1px solid var(--lex-line, #dce2e9); border-radius: var(--lex-radius, 14px); font-size: .96rem; font-weight: 600; }
 .library-glyph { border-radius: .65rem; width: 2.4rem; height: 2.4rem; font-size: 1.25rem; background: var(--glyph-bg); color: var(--glyph); }
 .provisions { --glyph: #285b90; --glyph-bg: #e9f1fa; }
 .cases      { --glyph: #76572e; --glyph-bg: #f6efe1; }
 .viewpoints { --glyph: #476b5a; --glyph-bg: #e9f2ed; }
+.resources  { --glyph: #6b4f8b; --glyph-bg: #f0ebf7; }
 .chevron { flex: none; color: #708299; font-size: .86rem; margin-left: auto; }
 .lower-grid { display: grid; grid-template-columns: minmax(0,1.75fr) minmax(14rem,1fr); gap: 1rem; align-items: start; }
 .panel { min-width: 0; padding: 1.1rem 1.2rem .35rem; }
@@ -204,6 +206,7 @@ h2 { font-size: 1.12rem; line-height: 1.35; font-weight: 650; letter-spacing: -.
   .metrics { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem 0; }
   .stat-card:nth-child(3) { border-left: 0; }
   .lower-grid { grid-template-columns: 1fr; }
+  .library-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .library-link { flex-direction: column; gap: .5rem; align-items: flex-start; padding: .8rem; }
   .library-link .chevron { display: none; }
 }

@@ -75,6 +75,17 @@ final class LibraryBrowser: NSObject, ObservableObject, WKNavigationDelegate, WK
         return .allow
     }
 
+    @available(iOS 15.0, *)
+    func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin,
+                 initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType,
+                 decisionHandler: @escaping (WKPermissionDecision) -> Void) {
+        if type == .microphone, origin.host == Self.home.host, origin.port == (Self.home.port ?? -1) {
+            decisionHandler(.grant)
+        } else {
+            decisionHandler(.deny)
+        }
+    }
+
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         loading = false
         failure = nil

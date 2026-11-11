@@ -82,7 +82,7 @@ import {
 
 const ALL = 'all'
 const UNFILED = 'unfiled'
-const typeLabels = { PROVISION: '法条', CASE: '案例', VIEWPOINT: '学者观点 / 论文', QUESTION: '题目' }
+const typeLabels = { PROVISION: '法条', CASE: '案例', VIEWPOINT: '学者观点 / 论文', QUESTION: '题目', MESSAGE: '聊天消息' }
 const detailPaths = { PROVISION: '/provisions/', CASE: '/cases/', VIEWPOINT: '/viewpoints/' }
 const folders = ref([])
 const items = ref([])
@@ -111,7 +111,7 @@ const filtered = computed(() => items.value.filter(item => {
 }))
 const pageItems = computed(() => filtered.value.slice((page.value - 1) * pageSize, page.value * pageSize))
 const emptyDescription = computed(() => {
-  if (!items.value.length) return '还没有收藏，可在法条、案例或学者观点详情页点击「收藏」。'
+  if (!items.value.length) return '还没有收藏，可在法条、案例、学者观点详情页或私信消息菜单中点击「收藏」。'
   return selectedFolder.value !== ALL && selectedType.value === ALL ? '这个分区还没有收藏' : '没有符合条件的收藏'
 })
 

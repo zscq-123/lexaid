@@ -1,5 +1,6 @@
 package com.lexaid.mobile;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.ClipData;
@@ -24,6 +25,7 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.PermissionRequest;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -38,6 +40,7 @@ import java.util.List;
 public class StudyActivity extends Activity {
     private static final Uri SITE = Uri.parse("https://154.36.185.110:18443/");
     private static final int SELECT_IMAGES = 10;
+    private static final int REQUEST_AUDIO = 11;
     private static final int PAPER = Color.rgb(245, 247, 250);
 
     private WebView web;
@@ -46,6 +49,7 @@ public class StudyActivity extends Activity {
     private TextView errorText;
     private Uri retryPage = SITE;
     private ValueCallback<Uri[]> pendingImages;
+    private PermissionRequest pendingAudioPermission;
 
     @Override
     protected void onCreate(Bundle state) {
@@ -132,6 +136,27 @@ public class StudyActivity extends Activity {
             }
 
             @Override
+            public void onPermissionRequest(PermissionRequest request) {
+                runOnUiThread(() -> {
+                    boolean wantsAudio = false;
+                    for (String resource : request.getResources()) {
+                        if (PermissionRequest.RESOURCE_AUDIO_CAPTURE.equals(resource)) wantsAudio = true;
+                    }
+                    if (!wantsAudio) {
+                        request.deny();
+                        return;
+                    }
+                    if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+                        request.grant(new String[]{PermissionRequest.RESOURCE_AUDIO_CAPTURE});
+                        return;
+                    }
+                    if (pendingAudioPermission != null) pendingAudioPermission.deny();
+                    pendingAudioPermission = request;
+                    requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, REQUEST_AUDIO);
+                });
+            }
+
+            @Override
             public boolean onShowFileChooser(WebView view, ValueCallback<Uri[]> callback, FileChooserParams params) {
                 finishPicker(null);
                 if (view.getUrl() == null || !isSite(Uri.parse(view.getUrl()))) {
@@ -141,8 +166,28 @@ public class StudyActivity extends Activity {
                 pendingImages = callback;
                 Intent picker = new Intent(Intent.ACTION_OPEN_DOCUMENT);
                 picker.addCategory(Intent.CATEGORY_OPENABLE);
-                picker.setType("image/*");
-                picker.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"image/jpeg", "image/png"});
+                String[] accepted = params.getAcceptTypes();
+                if (accepted == null) accepted = new String[0];
+                boolean imagesOnly = accepted.length > 0;
+                List<String> imageTypes = new ArrayList<>();
+                for (String type : accepted) {
+                    if (type.startsWith("image/")) imageTypes.add(type);
+                    else imagesOnly = false;
+                }
+                if (imagesOnly && !imageTypes.isEmpty()) {
+                    picker.setType("image/*");
+                    picker.putExtra(Intent.EXTRA_MIME_TYPES, imageTypes.toArray(new String[0]));
+                } else {
+                    picker.setType("*/*");
+                    picker.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{
+                            "application/pdf",
+                            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                            "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                            "text/plain",
+                            "text/markdown"
+                    });
+                }
                 picker.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, params.getMode() == FileChooserParams.MODE_OPEN_MULTIPLE);
                 try {
                     startActivityForResult(picker, SELECT_IMAGES);
@@ -211,23 +256,28 @@ public class StudyActivity extends Activity {
         if (result == RESULT_OK && data != null) {
             ClipData clip = data.getClipData();
             if (clip != null) {
-                for (int i = 0; i < clip.getItemCount(); i++) addImage(selected, clip.getItemAt(i).getUri());
+                for (int i = 0; i < clip.getItemCount(); i++) addAttachment(selected, clip.getItemAt(i).getUri());
             } else {
-                addImage(selected, data.getData());
+                addAttachment(selected, data.getData());
             }
         }
         finishPicker(selected.isEmpty() ? null : selected.toArray(new Uri[0]));
     }
 
-    private void addImage(List<Uri> result, Uri uri) {
+    private void addAttachment(List<Uri> result, Uri uri) {
         if (uri == null || !"content".equals(uri.getScheme()) || checkUriPermission(uri, Process.myPid(),
                 Process.myUid(), Intent.FLAG_GRANT_READ_URI_PERMISSION) != PackageManager.PERMISSION_GRANTED) return;
-        try {
-            String type = getContentResolver().getType(uri);
-            if ("image/jpeg".equals(type) || "image/png".equals(type)) result.add(uri);
-        } catch (SecurityException ignored) {
-            // The provider can revoke the read grant before the picker returns.
-        }
+        result.add(uri);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode != REQUEST_AUDIO || pendingAudioPermission == null) return;
+        boolean granted = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
+        if (granted) pendingAudioPermission.grant(new String[]{PermissionRequest.RESOURCE_AUDIO_CAPTURE});
+        else pendingAudioPermission.deny();
+        pendingAudioPermission = null;
     }
 
     private void finishPicker(Uri[] selected) {
@@ -261,6 +311,10 @@ public class StudyActivity extends Activity {
     }
 
     @Override protected void onDestroy() {
+        if (pendingAudioPermission != null) {
+            pendingAudioPermission.deny();
+            pendingAudioPermission = null;
+        }
         finishPicker(null);
         ((android.view.ViewGroup) web.getParent()).removeView(web);
         web.destroy();

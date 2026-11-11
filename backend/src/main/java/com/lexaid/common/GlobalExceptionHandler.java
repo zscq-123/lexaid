@@ -51,7 +51,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MaxUploadSizeExceededException.class)
     public ResponseEntity<Result<Void>> handleUploadLimit(MaxUploadSizeExceededException e) {
         return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE)
-                .body(Result.error(413, "每张图片最多 4 MB，多图上传合计最多 20 MB"));
+                .body(Result.error(413, "上传内容超过服务器允许的大小，请稍后重试"));
     }
 
     @ExceptionHandler({HttpMessageNotReadableException.class, MissingServletRequestPartException.class})

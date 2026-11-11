@@ -1,6 +1,6 @@
 # LexAid for iPhone and iPad
 
-LexAid 支持 iOS 和 iPadOS 16 及以上版本。SwiftUI 应用通过 WKWebView 打开线上学习站点，使用同一套账号、内容与登录状态。内置浏览器保留会话，支持系统左右滑动前进和后退、键盘避让、系统图片与文件选取。外部 HTTPS 资料在 Safari 阅读窗口中打开。打开页面需要联网。
+LexAid 支持 iOS 和 iPadOS 16 及以上版本。SwiftUI 应用通过 WKWebView 打开线上学习站点，使用同一套账号、内容与登录状态。内置浏览器保留会话，支持系统左右滑动前进和后退、键盘避让、系统图片与文件选取；私信语音录制使用系统麦克风权限。外部 HTTPS 资料在 Safari 阅读窗口中打开。打开页面需要联网。
 
 ## 在模拟器安装
 
