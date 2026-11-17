@@ -99,7 +99,6 @@ public class AuthService {
         return new UserVO(user.getId(), user.getUsername(), user.getNickname(), user.getRole(), avatarVersion,
                 profile.gender(), profile.phone(), profile.examGoal(), profile.legalExamAttempts(),
                 profile.masterExamAttempts(), profile.legalExamYear(), profile.masterExamYear(),
-                profile.legalExamDate(), profile.masterExamDate(),
                 profile.legalExamStage(), profile.masterExamStage(), profile.preparationStatus());
     }
 }
