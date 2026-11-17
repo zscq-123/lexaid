@@ -3,6 +3,7 @@ package com.lexaid.auth;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.lexaid.auth.dto.LoginRequest;
 import com.lexaid.auth.dto.LoginResponse;
+import com.lexaid.auth.dto.ProfileUpdateRequest;
 import com.lexaid.auth.dto.RegisterRequest;
 import com.lexaid.auth.dto.UserVO;
 import com.lexaid.common.BizException;
@@ -24,6 +25,7 @@ public class AuthService {
     private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;
     private final AvatarService avatars;
+    private final UserProfileService profiles;
 
     /**
      * 注册：用户名唯一，密码 BCrypt 加密
@@ -41,7 +43,7 @@ public class AuthService {
                 ? req.getUsername() : req.getNickname());
         user.setRole("USER");
         userMapper.insert(user);
-        return UserVO.from(user, null);
+        return view(user, null);
     }
 
     /**
@@ -54,7 +56,7 @@ public class AuthService {
             throw new BizException("用户名或密码错误");
         }
         String token = jwtUtil.generate(user.getId(), user.getUsername(), user.getRole());
-        return new LoginResponse(token, UserVO.from(user, avatars.version(user.getId())));
+        return new LoginResponse(token, view(user, avatars.version(user.getId())));
     }
 
     /**
@@ -65,7 +67,19 @@ public class AuthService {
         if (user == null) {
             throw new BizException(401, "用户不存在");
         }
-        return UserVO.from(user, avatars.version(userId));
+        return view(user, avatars.version(userId));
+    }
+
+    @Transactional
+    public UserVO updateProfile(long userId, ProfileUpdateRequest request) {
+        User user = userMapper.selectById(userId);
+        if (user == null) {
+            throw new BizException(401, "用户不存在");
+        }
+        user.setNickname(request.getNickname().trim());
+        userMapper.updateById(user);
+        profiles.save(userId, request);
+        return view(user, avatars.version(userId));
     }
 
     @Transactional
@@ -78,5 +92,13 @@ public class AuthService {
     public UserVO removeAvatar(long userId) {
         avatars.remove(userId);
         return me(userId);
+    }
+
+    private UserVO view(User user, String avatarVersion) {
+        var profile = profiles.get(user.getId());
+        return new UserVO(user.getId(), user.getUsername(), user.getNickname(), user.getRole(), avatarVersion,
+                profile.gender(), profile.phone(), profile.examGoal(), profile.legalExamAttempts(),
+                profile.masterExamAttempts(), profile.legalExamYear(), profile.masterExamYear(),
+                profile.legalExamStage(), profile.masterExamStage(), profile.preparationStatus());
     }
 }

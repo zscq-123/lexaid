@@ -2,6 +2,7 @@ package com.lexaid.auth;
 
 import com.lexaid.auth.dto.LoginRequest;
 import com.lexaid.auth.dto.LoginResponse;
+import com.lexaid.auth.dto.ProfileUpdateRequest;
 import com.lexaid.auth.dto.RegisterRequest;
 import com.lexaid.auth.dto.UserVO;
 import com.lexaid.common.Result;
@@ -10,6 +11,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,5 +39,10 @@ public class AuthController {
     @GetMapping("/me")
     public Result<UserVO> me() {
         return Result.ok(authService.me(UserContext.userId()));
+    }
+
+    @PutMapping("/me")
+    public Result<UserVO> updateMe(@Valid @RequestBody ProfileUpdateRequest req) {
+        return Result.ok(authService.updateProfile(UserContext.userId(), req));
     }
 }

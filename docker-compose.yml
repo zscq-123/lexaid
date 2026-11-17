@@ -48,6 +48,7 @@ services:
       - ./backend/src/main/resources/question-structure-review-20261112.sql:/docker-entrypoint-initdb.d/33-question-structure-review.sql:ro
       - ./backend/src/main/resources/mock-exam-content-review-20261112.sql:/docker-entrypoint-initdb.d/34-mock-exam-content-review.sql:ro
       - ./backend/src/main/resources/question-teaching-batch-001.sql:/docker-entrypoint-initdb.d/35-question-teaching-batch-001.sql:ro
+      - ./backend/src/main/resources/user-profile.sql:/docker-entrypoint-initdb.d/36-user-profile.sql:ro
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-allowed-packet=128M
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-lexaid-root-local}"]

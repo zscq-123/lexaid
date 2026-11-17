@@ -148,7 +148,7 @@ ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ npm start
 
 ### 5. macOS 正式版
 
-正式版连接同一套线上账号和资料。macOS 13 及以上按芯片选择 [Apple Silicon 安装包](https://154.36.185.110:18443/downloads/LexAid-1.4.2-macOS-arm64.dmg) 或 [Intel 安装包](https://154.36.185.110:18443/downloads/LexAid-1.4.2-macOS-x64.dmg)，打开磁盘映像，将 LexAid 拖到「应用程序」。两个安装包都采用本机临时签名，尚未经过 Apple 公证。
+正式版连接同一套线上账号和资料。macOS 13 及以上按芯片选择 [Apple Silicon 安装包](https://154.36.185.110:18443/downloads/LexAid-1.5.0-macOS-arm64.dmg) 或 [Intel 安装包](https://154.36.185.110:18443/downloads/LexAid-1.5.0-macOS-x64.dmg)，打开磁盘映像，将 LexAid 拖到「应用程序」。两个安装包都采用本机临时签名，尚未经过 Apple 公证。
 
 要在 Mac 上重建两个架构的 DMG，请先构建前端，再运行打包命令。产物和 SHA-256 校验文件位于项目根目录的 `release/`。
 
@@ -161,7 +161,7 @@ ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ npm start
 
 | 平台 | 安装与使用 |
 | --- | --- |
-| Windows 10/11 x64 | 运行 [Windows 安装程序](https://154.36.185.110:18443/downloads/LexAid-1.4.2-Windows-x64-Setup.exe)，从开始菜单打开 LexAid。[打包说明](electron/packaging/windows/README.md) |
+| Windows 10/11 x64 | 运行 [Windows 安装程序](https://154.36.185.110:18443/downloads/LexAid-1.5.0-Windows-x64-Setup.exe)，从开始菜单打开 LexAid。[打包说明](electron/packaging/windows/README.md) |
 | Android 9 及以上 | 在手机上下载并打开 [Android APK](https://154.36.185.110:18443/downloads/LexAid-1.0.0-Android.apk)。[Android 工程](mobile/android/README.md) |
 | HarmonyOS NEXT / HarmonyOS 5 及以上 | 鸿蒙手机与平板使用 ArkWeb 加载同一线上服务。提供[未签名调试 HAP](https://154.36.185.110:18443/downloads/LexAid-1.0.0-HarmonyOS-Debug-Unsigned.hap) 和 [DevEco Studio 工程](https://154.36.185.110:18443/downloads/LexAid-1.0.0-HarmonyOS-DevEco.zip)。真机安装前须配置设备调试签名。[构建与安装说明](mobile/harmony/README.md) |
 | iPhone / iPad | 用 Safari 打开[线上版](https://154.36.185.110:18443/)，从分享菜单选择「添加到主屏幕」。原生客户端支持 iOS 16 及以上，提供[模拟器包](https://154.36.185.110:18443/downloads/LexAid-1.0.0-iOS-Simulator.zip)和 [Xcode 工程](https://154.36.185.110:18443/downloads/LexAid-1.0.0-iOS-Xcode.zip)。[真机归档](https://154.36.185.110:18443/downloads/LexAid-1.0.0-iOS-Device-Unsigned.xcarchive.zip)需要 Apple 开发团队签名后才能安装。[iOS 签名与构建说明](mobile/ios/README.md) |

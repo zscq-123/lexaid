@@ -35,6 +35,8 @@ systemctl start lexaid-study-certificate.service
 
 学习质量升级还需先执行 `backend/src/main/resources/question-quality.sql`。该幂等脚本仅建立复核记录表，不删除题目或改写历史作答；新后端会动态隔离未达到质量门槛的题目。首次导入已通过 `30-question-quality.sql` 纳入初始化清单。详见 `docs/learning-quality-upgrade-2026-11-11.md`。
 
+个人资料扩展需执行 `backend/src/main/resources/user-profile.sql`。该幂等脚本新增独立的 `user_profile` 表，用于保存性别、手机号及法考/法硕备考信息，不改写现有账号、题库或作答数据；新数据卷通过 `36-user-profile.sql` 初始化。
+
 复审版本另需执行 `backend/src/main/resources/question-seed-corrections.sql`：只修正原内容仍匹配的种子题 15、17、27，将原文与修订内容存入 `question_content_revision`，不重写历史作答。新数据卷通过 `31-question-seed-corrections.sql` 初始化。升级后所有外部导入题统一等待教学复核；旧答卷中的参考答案须满足当前资格与作答时点检查。部署前先备份并在目标库检查迁移匹配数量，详见 `docs/question-audit-2026-11-11.md`。
 
 2026-11-12 全量审计另有两个幂等迁移，按顺序执行 `question-seed-review-20261112.sql`（种子题 13、22 的理论/条文适用范围）和 `question-structure-review-20261112.sql`（87 道 LexEval 题的选项结构）。文件均在 `backend/src/main/resources/`，新数据卷分别通过 `32-question-seed-review.sql`、`33-question-structure-review.sql` 导入。迁移仅匹配原始内容并归档修订；结构迁移还跳过已有作答记录的题目，输出每题的应用或跳过原因。不要将结构修复或迁移成功视为法律答案审核通过。部署前保留数据库备份并核实输出；本地验证不代表已部署生产。逐题证据和核验边界见 `docs/full-question-review-2026-11-12.md`。

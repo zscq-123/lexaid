@@ -1,12 +1,13 @@
 import { defineStore } from 'pinia'
-import { login as loginApi, register as registerApi, getMe, uploadAvatar, removeAvatar } from '../api/auth'
+import { login as loginApi, register as registerApi, getMe, updateMe, uploadAvatar, removeAvatar } from '../api/auth'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
     token: localStorage.getItem('lexaid_token') || '',
     user: JSON.parse(localStorage.getItem('lexaid_user') || 'null'),
     profileRevision: 0,
-    avatarSaving: false
+    avatarSaving: false,
+    profileSaving: false
   }),
   getters: {
     isLogin: (s) => !!s.token
@@ -16,6 +17,7 @@ export const useUserStore = defineStore('user', {
       const data = await loginApi(form)
       this.profileRevision++
       this.avatarSaving = false
+      this.profileSaving = false
       this.token = data.token
       localStorage.setItem('lexaid_token', data.token)
       this.setUser(data.user)
@@ -29,7 +31,7 @@ export const useUserStore = defineStore('user', {
       localStorage.setItem('lexaid_user', JSON.stringify(user))
     },
     async fetchMe() {
-      if (!this.token || this.avatarSaving) return false
+      if (!this.token || this.avatarSaving || this.profileSaving) return false
       const token = this.token
       const revision = ++this.profileRevision
       const user = await getMe()
@@ -38,7 +40,7 @@ export const useUserStore = defineStore('user', {
       return true
     },
     async saveAvatar(file) {
-      if (!this.token || this.avatarSaving) return false
+      if (!this.token || this.avatarSaving || this.profileSaving) return false
       const token = this.token
       const revision = ++this.profileRevision
       this.avatarSaving = true
@@ -51,9 +53,24 @@ export const useUserStore = defineStore('user', {
         if (this.token === token && revision === this.profileRevision) this.avatarSaving = false
       }
     },
+    async saveProfile(profile) {
+      if (!this.token || this.profileSaving || this.avatarSaving) return false
+      const token = this.token
+      const revision = ++this.profileRevision
+      this.profileSaving = true
+      try {
+        const user = await updateMe(profile)
+        if (this.token !== token || revision !== this.profileRevision) return false
+        this.setUser(user)
+        return true
+      } finally {
+        if (this.token === token && revision === this.profileRevision) this.profileSaving = false
+      }
+    },
     logout() {
       this.profileRevision++
       this.avatarSaving = false
+      this.profileSaving = false
       this.token = ''
       this.user = null
       localStorage.removeItem('lexaid_token')
