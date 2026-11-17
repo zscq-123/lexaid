@@ -1,0 +1,99 @@
+{
+  "batch": "059",
+  "segment": "segment-624b96e2a136",
+  "database": "lexaid",
+  "verifiedAt": "2026-11-12T06:28:20.075764+00:00",
+  "migration": "backend/src/main/resources/teaching-batch-059-segment-624b96e2a136.sql",
+  "migrationSha256": "dd2e49b8b8883a7e3d5c963cd872b063f3fc96caef47ee23f92b292bf8314056",
+  "records": [
+    {
+      "target": "question:10024827",
+      "id": 10024827,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "8bac2fad7ca3d4e7a2b8eef579496b0a87326cf7cd472b677041bc0f4cff10a0",
+      "afterHash": "8bac2fad7ca3d4e7a2b8eef579496b0a87326cf7cd472b677041bc0f4cff10a0",
+      "revisionKey": "2026-11-12-teaching-059-10024827"
+    },
+    {
+      "target": "question:10024832",
+      "id": 10024832,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "3c58c87dfdea5d715619d6870a2f0da0c32faecd7b04b7c89a7afff7f66c9923",
+      "afterHash": "3c58c87dfdea5d715619d6870a2f0da0c32faecd7b04b7c89a7afff7f66c9923",
+      "revisionKey": "2026-11-12-teaching-059-10024832"
+    },
+    {
+      "target": "question:10024834",
+      "id": 10024834,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "ebe8b5f2a0114df5baa885e0fd0fd10825f0163167a1f1bb515ae31480ab3f47",
+      "afterHash": "ebe8b5f2a0114df5baa885e0fd0fd10825f0163167a1f1bb515ae31480ab3f47",
+      "revisionKey": "2026-11-12-teaching-059-10024834"
+    },
+    {
+      "target": "question:10024835",
+      "id": 10024835,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "201bbc443a5a4931b7a350e548280d23095dc19b450cfec13fcb866927561576",
+      "afterHash": "201bbc443a5a4931b7a350e548280d23095dc19b450cfec13fcb866927561576",
+      "revisionKey": "2026-11-12-teaching-059-10024835"
+    },
+    {
+      "target": "question:10024836",
+      "id": 10024836,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "cb652e036870f992bcb1f21d76e81437be0b0beda3bc93c940f878045c1f0986",
+      "afterHash": "cb652e036870f992bcb1f21d76e81437be0b0beda3bc93c940f878045c1f0986",
+      "revisionKey": "2026-11-12-teaching-059-10024836"
+    },
+    {
+      "target": "question:10025086",
+      "id": 10025086,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9b3929afda3d5ddc1bb506f9eab6c119ff1d67eb80807fdb536348ca3fd228de",
+      "afterHash": "9b3929afda3d5ddc1bb506f9eab6c119ff1d67eb80807fdb536348ca3fd228de",
+      "revisionKey": "2026-11-12-teaching-059-10025086"
+    }
+  ],
+  "exactAfterMatches": 6,
+  "archives": {
+    "question_content_revision": {
+      "total": 6,
+      "applied": 6
+    }
+  },
+  "historyBefore": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyAfter": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyPreserved": true,
+  "repeatChecksums": {
+    "question": "1463481137",
+    "question_legal_subject": "4169332068",
+    "mock_exam_bank": "1432156791",
+    "question_content_revision": "489704628",
+    "mock_exam_content_revision": "802010516"
+  },
+  "idempotent": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false
+}

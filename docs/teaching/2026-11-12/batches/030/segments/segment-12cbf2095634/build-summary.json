@@ -1,0 +1,186 @@
+{
+  "batch": "030",
+  "segment": "segment-12cbf2095634",
+  "records": 2,
+  "groups": 1,
+  "tables": {
+    "question": 1,
+    "mock_exam_bank": 1
+  },
+  "eligibleTargets": [
+    "question:10016897",
+    "mock_exam_bank:1340230"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10016702",
+      "targets": [
+        "question:10016702",
+        "mock_exam_bank:1340035"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340035",
+        "held for human/evidence review question:10016702"
+      ]
+    },
+    {
+      "contentGroup": "question:10016773",
+      "targets": [
+        "question:10016773",
+        "mock_exam_bank:1340106"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340106",
+        "held for human/evidence review question:10016773"
+      ]
+    },
+    {
+      "contentGroup": "question:10016825",
+      "targets": [
+        "question:10016825",
+        "mock_exam_bank:1340158"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340158",
+        "held for human/evidence review question:10016825"
+      ]
+    },
+    {
+      "contentGroup": "question:10016903",
+      "targets": [
+        "question:10016903",
+        "mock_exam_bank:1340236"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340236",
+        "held for human/evidence review question:10016903"
+      ]
+    },
+    {
+      "contentGroup": "question:10016915",
+      "targets": [
+        "question:10016915",
+        "mock_exam_bank:1340248"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340248",
+        "held for human/evidence review question:10016915"
+      ]
+    },
+    {
+      "contentGroup": "question:10016919",
+      "targets": [
+        "question:10016919",
+        "mock_exam_bank:1340252"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340252",
+        "held for human/evidence review question:10016919"
+      ]
+    },
+    {
+      "contentGroup": "question:10016933",
+      "targets": [
+        "question:10016933",
+        "mock_exam_bank:1340266"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340266",
+        "held for human/evidence review question:10016933"
+      ]
+    },
+    {
+      "contentGroup": "question:10016959",
+      "targets": [
+        "question:10016959",
+        "mock_exam_bank:1340292"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340292",
+        "held for human/evidence review question:10016959"
+      ]
+    },
+    {
+      "contentGroup": "question:10016966",
+      "targets": [
+        "question:10016966",
+        "mock_exam_bank:1340299"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340299",
+        "held for human/evidence review question:10016966"
+      ]
+    },
+    {
+      "contentGroup": "question:10016975",
+      "targets": [
+        "question:10016975",
+        "mock_exam_bank:1340308"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340308",
+        "held for human/evidence review question:10016975"
+      ]
+    },
+    {
+      "contentGroup": "question:10016986",
+      "targets": [
+        "question:10016986",
+        "mock_exam_bank:1340319"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340319",
+        "held for human/evidence review question:10016986"
+      ]
+    },
+    {
+      "contentGroup": "question:10017058",
+      "targets": [
+        "question:10017058",
+        "mock_exam_bank:1340391"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340391",
+        "held for human/evidence review question:10017058"
+      ]
+    },
+    {
+      "contentGroup": "question:10017063",
+      "targets": [
+        "question:10017063",
+        "mock_exam_bank:1340396"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:1340396",
+        "missing cross-review question:10017063"
+      ]
+    },
+    {
+      "contentGroup": "question:10017085",
+      "targets": [
+        "question:10017085",
+        "mock_exam_bank:1340418"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:1340418",
+        "missing cross-review question:10017085"
+      ]
+    },
+    {
+      "contentGroup": "question:10017120",
+      "targets": [
+        "question:10017120",
+        "mock_exam_bank:1340453"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:1340453",
+        "missing cross-review question:10017120"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-030-segment-12cbf2095634.sql",
+  "migrationSha256": "69d06510b09546d6d4c83f47775e97793253aaf5ef74ccea6192a32718344cd0"
+}

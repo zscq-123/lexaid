@@ -138,6 +138,10 @@ public class StudyActivity extends Activity {
             @Override
             public void onPermissionRequest(PermissionRequest request) {
                 runOnUiThread(() -> {
+                    if (!isSite(request.getOrigin())) {
+                        request.deny();
+                        return;
+                    }
                     boolean wantsAudio = false;
                     for (String resource : request.getResources()) {
                         if (PermissionRequest.RESOURCE_AUDIO_CAPTURE.equals(resource)) wantsAudio = true;
@@ -153,6 +157,13 @@ public class StudyActivity extends Activity {
                     if (pendingAudioPermission != null) pendingAudioPermission.deny();
                     pendingAudioPermission = request;
                     requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, REQUEST_AUDIO);
+                });
+            }
+
+            @Override
+            public void onPermissionRequestCanceled(PermissionRequest request) {
+                runOnUiThread(() -> {
+                    if (pendingAudioPermission == request) pendingAudioPermission = null;
                 });
             }
 
@@ -274,10 +285,14 @@ public class StudyActivity extends Activity {
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode != REQUEST_AUDIO || pendingAudioPermission == null) return;
-        boolean granted = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
-        if (granted) pendingAudioPermission.grant(new String[]{PermissionRequest.RESOURCE_AUDIO_CAPTURE});
-        else pendingAudioPermission.deny();
+        PermissionRequest request = pendingAudioPermission;
         pendingAudioPermission = null;
+        boolean granted = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
+        if (granted && isSite(request.getOrigin())) {
+            request.grant(new String[]{PermissionRequest.RESOURCE_AUDIO_CAPTURE});
+        } else {
+            request.deny();
+        }
     }
 
     private void finishPicker(Uri[] selected) {

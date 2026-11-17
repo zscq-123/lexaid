@@ -1,0 +1,51 @@
+{
+  "scope": {
+    "source": "lecoqa-source.jsonl",
+    "sortBy": "id",
+    "indexRange": [
+      0,
+      515
+    ],
+    "firstId": 10024055,
+    "lastId": 10024569
+  },
+  "records": 515,
+  "fullContentReadRecords": 515,
+  "fieldsRead": [
+    "stem",
+    "answer",
+    "analysis"
+  ],
+  "decisionCounts": {
+    "CONFIRMED_DEFECT": 81,
+    "REQUIRES_MORE_VERIFICATION": 238,
+    "NO_SPECIFIC_DEFECT_IDENTIFIED": 196
+  },
+  "reviewerKind": "AI",
+  "humanReviewedRecords": 0,
+  "fullLegalReasoningVerifiedRecords": 0,
+  "validation": {
+    "uniqueIds": true,
+    "exactScopeCoverage": true,
+    "contentHashesMatchSource": true,
+    "requiredFieldsComplete": true,
+    "allConfirmedIssuesHaveOfficialUrlAndVersion": true
+  },
+  "reviewArtifact": "/tmp/lexaid-full-review/lecoqa-semantic-backend.jsonl",
+  "reviewArtifactSha256": "970106735271e7614af46e776856589f1f7c43146a30b45e24de6a15736d5bd1",
+  "sourceArtifactSha256": "06b77170cebd5be8311b87a5b3676aee40c53f870ef154ebe5250dbb176c816a",
+  "method": "AI逐批完整阅读范围内全部题干、答案、解析后逐条撰写记录；针对确定问题复用官方语料或检索官方来源。验证脚本只检查覆盖和字段完整性，不产生语义审核结论。",
+  "limits": [
+    "已阅读不等于法律正确性通过。",
+    "CONFIRMED_DEFECT确认记录所列窄点，不代表整题法律推理已完整核验。",
+    "NO_SPECIFIC_DEFECT_IDENTIFIED仅表示本轮实读未识别具体缺陷，不能作为教学批准。",
+    "未核完全部法律依据，515条legalReasoningVerified均为false，未登记人工审核或改变题库隔离状态。"
+  ],
+  "knownPendingExample": {
+    "id": 10024458,
+    "decision": "REQUIRES_MORE_VERIFICATION",
+    "note": "奋斗者协议与奖金对价论断仍需区分真正无单位安排的自愿延时和法定加班；官方案例确认格式条款预先放弃法定加班费无效，但尚未逐一核实题称多数裁判及奖金事实。",
+    "officialUrl": "https://chinajob.mohrss.gov.cn/h5/c/2022-07-18/356295.shtml"
+  },
+  "validatedAt": "2026-11-11T23:02:38.994556+00:00"
+}

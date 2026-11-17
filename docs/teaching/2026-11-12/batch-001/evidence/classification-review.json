@@ -1,0 +1,146 @@
+[
+  {
+    "id": 10024085,
+    "before": {
+      "discipline": "综合与待判定",
+      "subject": "待判定"
+    },
+    "after": {
+      "discipline": "民商法",
+      "subject": "物权法"
+    },
+    "afterHash": "30a6fc107300230e014f2e66025fe6da930aa312f0e663b7ee939d0d4f1e5154",
+    "reviewer": "backend_audit",
+    "reviewerKind": "AI",
+    "humanApproval": false,
+    "rationale": "按改写后主要法律关系及请求路径确定主学科，作者另行确认分类与教学重点相符。"
+  },
+  {
+    "id": 10024089,
+    "before": {
+      "discipline": "综合与待判定",
+      "subject": "待判定"
+    },
+    "after": {
+      "discipline": "民商法",
+      "subject": "物权法"
+    },
+    "afterHash": "dc32735fe2fb821f6853eedfea01c11e74954af7348f180c3c514eefeac6fe5a",
+    "reviewer": "backend_audit",
+    "reviewerKind": "AI",
+    "humanApproval": false,
+    "rationale": "按改写后主要法律关系及请求路径确定主学科，作者另行确认分类与教学重点相符。"
+  },
+  {
+    "id": 10024405,
+    "before": {
+      "discipline": "综合与待判定",
+      "subject": "待判定"
+    },
+    "after": {
+      "discipline": "诉讼与争议解决",
+      "subject": "民事诉讼法学"
+    },
+    "afterHash": "6e23397586c2a6fdd5aef093955adcd3e4567f8198b713870d8d14746bea9d7a",
+    "reviewer": "backend_audit",
+    "reviewerKind": "AI",
+    "humanApproval": false,
+    "rationale": "按改写后主要法律关系及请求路径确定主学科，作者另行确认分类与教学重点相符。"
+  },
+  {
+    "id": 10024627,
+    "before": {
+      "discipline": "综合与待判定",
+      "subject": "待判定"
+    },
+    "after": {
+      "discipline": "诉讼与争议解决",
+      "subject": "行政诉讼法学"
+    },
+    "afterHash": "fabb71305661ee4baf294cd15031aa872ae22313dfa140ed3edf61b58f06cbd0",
+    "reviewer": "frontend_search_audit",
+    "reviewerKind": "AI",
+    "humanApproval": false,
+    "rationale": "按改写后主要法律关系及请求路径确定主学科，作者另行确认分类与教学重点相符。"
+  },
+  {
+    "id": 10024637,
+    "before": {
+      "discipline": "综合与待判定",
+      "subject": "待判定"
+    },
+    "after": {
+      "discipline": "宪法与行政法",
+      "subject": "行政法学"
+    },
+    "afterHash": "494ea3e92c60668547495e2e32f9035382f87eda1b3142537f62422fae617daf",
+    "reviewer": "frontend_search_audit",
+    "reviewerKind": "AI",
+    "humanApproval": false,
+    "rationale": "按改写后主要法律关系及请求路径确定主学科，作者另行确认分类与教学重点相符。"
+  },
+  {
+    "id": 10024638,
+    "before": {
+      "discipline": "综合与待判定",
+      "subject": "待判定"
+    },
+    "after": {
+      "discipline": "宪法与行政法",
+      "subject": "行政法学"
+    },
+    "afterHash": "9bcaa1975941c14b73b82699241ce1d44dda97daefa9270e75baedc81e4a9b3f",
+    "reviewer": "frontend_search_audit",
+    "reviewerKind": "AI",
+    "humanApproval": false,
+    "rationale": "按改写后主要法律关系及请求路径确定主学科，作者另行确认分类与教学重点相符。"
+  },
+  {
+    "id": 10024930,
+    "before": {
+      "discipline": "综合与待判定",
+      "subject": "待判定"
+    },
+    "after": {
+      "discipline": "民商法",
+      "subject": "侵权责任法"
+    },
+    "afterHash": "fddc1e09163ade68929a04e8708fc5143d5d27ae7fe6b91ff0f1fc44b30c40c6",
+    "reviewer": "frontend_search_audit",
+    "reviewerKind": "AI",
+    "humanApproval": false,
+    "rationale": "按改写后主要法律关系及请求路径确定主学科，作者另行确认分类与教学重点相符。"
+  },
+  {
+    "id": 10024973,
+    "before": {
+      "discipline": "综合与待判定",
+      "subject": "待判定"
+    },
+    "after": {
+      "discipline": "诉讼与争议解决",
+      "subject": "行政诉讼法学"
+    },
+    "afterHash": "ffda262f04bb5afa044b440ce00bfae6d4fced86c065f2119395af49435fee13",
+    "reviewer": "frontend_search_audit",
+    "reviewerKind": "AI",
+    "humanApproval": false,
+    "rationale": "按改写后主要法律关系及请求路径确定主学科，作者另行确认分类与教学重点相符。"
+  },
+  {
+    "id": 10025073,
+    "before": {
+      "discipline": "综合与待判定",
+      "subject": "待判定"
+    },
+    "after": {
+      "discipline": "经济与社会法",
+      "subject": "环境与资源保护法学"
+    },
+    "afterHash": "5def6a0a57310eefedf7c91a05493d14d3e273b42aafbf96d0d0ae1bc25855c6",
+    "reviewer": "frontend_search_audit",
+    "reviewerKind": "AI",
+    "humanApproval": false,
+    "rationale": "按改写后主要法律关系及请求路径确定主学科，作者另行确认分类与教学重点相符。"
+  }
+]

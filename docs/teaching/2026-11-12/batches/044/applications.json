@@ -1,0 +1,174 @@
+{
+  "batch": "044",
+  "database": "lexaid",
+  "segments": [
+    {
+      "segment": "segment-e3caca8d885a",
+      "migration": "backend/src/main/resources/teaching-batch-044-segment-e3caca8d885a.sql",
+      "migrationSha256": "bc327c27a52f6e53a98ad38cc0b1a321729f8ebe368e3d37c1cce6a572c1da5f",
+      "exactAfterMatches": 17,
+      "historyPreserved": true,
+      "idempotent": true,
+      "releaseApproval": false
+    }
+  ],
+  "records": [
+    {
+      "target": "question:10024220",
+      "id": 10024220,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "5ff3f6c4c0500be6dba7c328988e0d83e91bc59718630317b7fa589c8095429b",
+      "afterHash": "5ff3f6c4c0500be6dba7c328988e0d83e91bc59718630317b7fa589c8095429b",
+      "revisionKey": "2026-11-12-teaching-044-10024220"
+    },
+    {
+      "target": "question:10024221",
+      "id": 10024221,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "07ad5b4277d92e463ce3385ae3a8eb4e99637f12705c5ccaa1ab85af1beb9ae6",
+      "afterHash": "07ad5b4277d92e463ce3385ae3a8eb4e99637f12705c5ccaa1ab85af1beb9ae6",
+      "revisionKey": "2026-11-12-teaching-044-10024221"
+    },
+    {
+      "target": "question:10024222",
+      "id": 10024222,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "dd6c2ef2bc21420b0efb44bd1659d2a52fe0e98de94dfe007951857d1a39aac4",
+      "afterHash": "dd6c2ef2bc21420b0efb44bd1659d2a52fe0e98de94dfe007951857d1a39aac4",
+      "revisionKey": "2026-11-12-teaching-044-10024222"
+    },
+    {
+      "target": "question:10024224",
+      "id": 10024224,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "33ed4f3282a347d257c3cc291414495c688d030fba1b9cf3bc9d48cbe68383a2",
+      "afterHash": "33ed4f3282a347d257c3cc291414495c688d030fba1b9cf3bc9d48cbe68383a2",
+      "revisionKey": "2026-11-12-teaching-044-10024224"
+    },
+    {
+      "target": "question:10024225",
+      "id": 10024225,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "af654fd633ad67368f4ae532e7b5bad4152448df4061af4fc9892e4c1d14277a",
+      "afterHash": "af654fd633ad67368f4ae532e7b5bad4152448df4061af4fc9892e4c1d14277a",
+      "revisionKey": "2026-11-12-teaching-044-10024225"
+    },
+    {
+      "target": "question:10024226",
+      "id": 10024226,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a89d1584d3ac448d3c87987a7a4670b21027c12b0428b8f9bd0d500325165e3e",
+      "afterHash": "a89d1584d3ac448d3c87987a7a4670b21027c12b0428b8f9bd0d500325165e3e",
+      "revisionKey": "2026-11-12-teaching-044-10024226"
+    },
+    {
+      "target": "question:10024227",
+      "id": 10024227,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "31609e2bca76569d396f2e1c202331c3b4813363bc500fa1043ee468eeadbfc3",
+      "afterHash": "31609e2bca76569d396f2e1c202331c3b4813363bc500fa1043ee468eeadbfc3",
+      "revisionKey": "2026-11-12-teaching-044-10024227"
+    },
+    {
+      "target": "question:10024228",
+      "id": 10024228,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "53a4b49fff1d4fa7016aaa179012207d3a1591231b09236d5559fe774e4f99f7",
+      "afterHash": "53a4b49fff1d4fa7016aaa179012207d3a1591231b09236d5559fe774e4f99f7",
+      "revisionKey": "2026-11-12-teaching-044-10024228"
+    },
+    {
+      "target": "question:10024230",
+      "id": 10024230,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "59b2d49e9006e1fe464a2aa939848c5d7c29fb87aa57e0df87c236d7b2ac5c14",
+      "afterHash": "59b2d49e9006e1fe464a2aa939848c5d7c29fb87aa57e0df87c236d7b2ac5c14",
+      "revisionKey": "2026-11-12-teaching-044-10024230"
+    },
+    {
+      "target": "question:10024231",
+      "id": 10024231,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "66102857c375d27fe8d565b4e8dc6b0f8d1cbbb1e92c77316523b3051f0d7a58",
+      "afterHash": "66102857c375d27fe8d565b4e8dc6b0f8d1cbbb1e92c77316523b3051f0d7a58",
+      "revisionKey": "2026-11-12-teaching-044-10024231"
+    },
+    {
+      "target": "question:10024232",
+      "id": 10024232,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "8a7b1087bb73daded1f359bde6cbfcd606b4d088829c80f512c5740224f11237",
+      "afterHash": "8a7b1087bb73daded1f359bde6cbfcd606b4d088829c80f512c5740224f11237",
+      "revisionKey": "2026-11-12-teaching-044-10024232"
+    },
+    {
+      "target": "question:10024234",
+      "id": 10024234,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2460941d617c01497a6cbfcd1d1b6050fa2d8d2ae0308e63bc47ef194a7f463d",
+      "afterHash": "2460941d617c01497a6cbfcd1d1b6050fa2d8d2ae0308e63bc47ef194a7f463d",
+      "revisionKey": "2026-11-12-teaching-044-10024234"
+    },
+    {
+      "target": "question:10024237",
+      "id": 10024237,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "13c4e485de836e67b16b1e6b0c52353327eb6729dd7865775099c87cec6248fd",
+      "afterHash": "13c4e485de836e67b16b1e6b0c52353327eb6729dd7865775099c87cec6248fd",
+      "revisionKey": "2026-11-12-teaching-044-10024237"
+    },
+    {
+      "target": "question:10024238",
+      "id": 10024238,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "70fe241fdc2d3cdc24ce9f1ba64ee6805eccb2661ed73f35731c777d0ed05999",
+      "afterHash": "70fe241fdc2d3cdc24ce9f1ba64ee6805eccb2661ed73f35731c777d0ed05999",
+      "revisionKey": "2026-11-12-teaching-044-10024238"
+    },
+    {
+      "target": "question:10024239",
+      "id": 10024239,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "152fee47bb4d99bff690bf3e9d6a9f42bc73e7d5b80df54d263fb151467bb19f",
+      "afterHash": "152fee47bb4d99bff690bf3e9d6a9f42bc73e7d5b80df54d263fb151467bb19f",
+      "revisionKey": "2026-11-12-teaching-044-10024239"
+    },
+    {
+      "target": "question:10024240",
+      "id": 10024240,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "3536ab50cd5f3387eb2588dc34736a378e78d5a16e53cfc37fc6494ca5175119",
+      "afterHash": "3536ab50cd5f3387eb2588dc34736a378e78d5a16e53cfc37fc6494ca5175119",
+      "revisionKey": "2026-11-12-teaching-044-10024240"
+    },
+    {
+      "target": "question:10024242",
+      "id": 10024242,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "fbcf8a45059656fd0b03f02b056ed24961b3f793cdc8615a9d0b17d7693a0e4e",
+      "afterHash": "fbcf8a45059656fd0b03f02b056ed24961b3f793cdc8615a9d0b17d7693a0e4e",
+      "revisionKey": "2026-11-12-teaching-044-10024242"
+    }
+  ],
+  "exactAfterMatches": 17,
+  "historyPreserved": true,
+  "idempotent": true,
+  "releaseApproval": false
+}

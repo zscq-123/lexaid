@@ -1,0 +1,11 @@
+{
+  "commit": "538b29936f988ee063fb789ad5d3aef3bf217932",
+  "sourceUrl": "https://raw.githubusercontent.com/oneal2000/LeCoQA/538b29936f988ee063fb789ad5d3aef3bf217932/data/queries.json",
+  "sha256": "b36f2f7bacd771fc7d447652fd662e3c234550821394ca5c22e4c9dfbdf91d27",
+  "bytes": 3016870,
+  "verifiedAt": "2026-11-11T22:47:14.439374+00:00",
+  "sourceRecords": 1543,
+  "compared": 1543,
+  "matched": 1543,
+  "mismatches": []
+}

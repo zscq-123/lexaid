@@ -17,7 +17,7 @@
         </div>
         <progress :value="progress.answered" :max="progress.total" aria-label="做题进度"
           :aria-valuetext="`已做 ${progress.answered} 道，共 ${progress.total} 道`" />
-        <p class="hint">交卷后更新，重复作答只计一题。</p>
+        <p class="hint">仅统计当前可练题库中的实际作答，重复作答只计一题；未答与跳过不计。累计作答次数请看学习统计。</p>
       </template>
     </div>
   </section>

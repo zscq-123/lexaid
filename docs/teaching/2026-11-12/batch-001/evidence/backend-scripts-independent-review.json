@@ -1,0 +1,58 @@
+{
+  "reviewer": "backend_audit",
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "scope": [
+    "scripts/build-teaching-question-batch.py",
+    "scripts/test-teaching-question-batch.py",
+    "scripts/plan-question-explanations.py"
+  ],
+  "scriptSha256": {
+    "scripts/build-teaching-question-batch.py": "7fddbf83903d33df3617751506bb8ff5a2aee9d3b85ed4df8c9298f3780157d8",
+    "scripts/test-teaching-question-batch.py": "a05baf7b6f7bba9f1ba2e93f49b3d696bf37fdad19519a24ea26476998157f41",
+    "scripts/plan-question-explanations.py": "2b210185f3c17999ef22816965b3911f511c1871167b6af996166bd480a98143"
+  },
+  "filesFullyRead": true,
+  "productionMigrationBlockingFindings": [],
+  "findings": [
+    {
+      "severity": "P2",
+      "file": "scripts/test-teaching-question-batch.py",
+      "line": 38,
+      "title": "Temporary-table harness still executes persistent archive CREATE",
+      "trigger": "Run fixture()+build_sql on a database where persistent question_content_revision does not exist.",
+      "effect": "A persistent empty question_content_revision table is created despite the temporary table shadow and test no-persistent-mutation claim. No question data leak was found.",
+      "evidence": "MySQL 8.0.46 check_if_table_exists only looks for temporary table when ha_lex_create_tmp_table is true; ordinary CREATE checks persistent dictionary. Existing local table predates these independent tests.",
+      "officialSource": "https://github.com/mysql/mysql-server/blob/mysql-8.0.46/sql/sql_table.cc#L8598",
+      "suggestedFix": "In test-only execution, omit the archive CREATE already covered by temporary fixture, while keeping production SQL unchanged.",
+      "status": "RESOLVED",
+      "resolution": "Root removed exactly one persistent archive CREATE from test-only SQL, asserts its presence, and reuses filtered SQL for repeated run. Production SQL unchanged. Independent rerun passed."
+    }
+  ],
+  "checks": {
+    "independentDatabaseTests": [
+      "missing classification row with fallback baseline inserts exact classification and reruns safely",
+      "archive before_content mismatch rejects update",
+      "archive after_content mismatch rejects update",
+      "archive evidence_urls mismatch rejects update",
+      "archive question_id mismatch rejects update",
+      "explicit rollback restores both content and classification and removes archive insert",
+      "exact pending archive applies once"
+    ],
+    "allDraftReviewAfterHashesMatch": 216,
+    "independentBuilderRecords": 216,
+    "classificationCorrections": 9,
+    "generatedMigrationSha256": "13a876468433aafb258bd9517a9cc29a5006615bc44f8014156f5dd4404c6ba3",
+    "planRecords": 11603,
+    "bidirectionalSameBatchSharedSourceExamRecords": 325,
+    "nonFirstBatchMaximumContentGroups": 50,
+    "planFirstBatchRecords": 216,
+    "providedTestSuitePassed": 20
+  },
+  "limits": [
+    "No writes to persistent question data; SQL exercises used temporary shadows over preexisting archive schema.",
+    "Content reviews are independent AI reviews, not human approval.",
+    "This audit does not prove runtime publication/release; generated SQL deliberately does not write question_quality_review."
+  ],
+  "unresolvedFindings": []
+}

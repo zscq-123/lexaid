@@ -11,7 +11,8 @@
       </div>
     </div>
     <PaperDocument v-if="detail && isPaper" :paper="detail" :source-link="sourceLink" />
-    <el-card v-else-if="detail" shadow="never" class="detail-card">
+    <SourceProvenance v-if="detail" :source="detail" kind="VIEWPOINT" />
+    <el-card v-if="detail && !isPaper" shadow="never" class="detail-card">
       <div>
         <el-tag size="small" type="warning">{{ detail.scholarName }}</el-tag>
         <span class="title">{{ detail.title }}</span>
@@ -51,6 +52,7 @@ import { addFavorite, listFavorites, removeFavorite } from '../../api/favorite'
 import NotePanel from '../../components/NotePanel.vue'
 import RelatedGroups from '../../components/RelatedGroups.vue'
 import PaperDocument from './PaperDocument.vue'
+import SourceProvenance from '../../components/SourceProvenance.vue'
 
 const route = useRoute()
 const router = useRouter()

@@ -8,6 +8,12 @@ public record OverviewVO(
         long totalAnswer,
         long totalCorrect,
         double accuracy,
-        long streakDays
+        long streakDays,
+        long distinctQuestions,
+        long gradedAnswer,
+        long skippedAnswer,
+        long repeatedAnswer,
+        long totalIncorrect,
+        long ungradedAnswer
 ) {
 }

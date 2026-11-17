@@ -1,0 +1,64 @@
+{
+  "sqlBytes": 227863,
+  "sqlSha256": "05867a5e85a1b198a4e83adcc54c72eaa8fa29d116b3aeca43a0918f638f290c",
+  "proposalCount": 87,
+  "isolatedDatabase": "lexaid_upgrade_20261111_check",
+  "tables": "TEMPORARY question, answer_record, question_content_revision; no durable fixture writes",
+  "baseline": [
+    {
+      "check": "first",
+      "changed": 87,
+      "archives": 87,
+      "appliedArchives": 87,
+      "matchesProposal": 87,
+      "matchingArchives": 87
+    },
+    {
+      "check": "repeated",
+      "changed": 0,
+      "archives": 87,
+      "appliedArchives": 87,
+      "matchesProposal": 87,
+      "matchingArchives": 87
+    }
+  ],
+  "protectedFields": [
+    "type",
+    "stem",
+    "options",
+    "answer",
+    "analysis",
+    "category"
+  ],
+  "guarded": [
+    {
+      "check": "guardedFirst",
+      "changed": 79,
+      "archives": 80,
+      "appliedArchives": 79,
+      "matchesProposal": 79,
+      "matchingArchives": 79
+    },
+    {
+      "check": "guardedRows",
+      "unchanged": 8,
+      "historyRows": 1,
+      "historyArchiveRows": 0
+    },
+    {
+      "check": "guardedRepeated",
+      "changed": 0,
+      "archives": 80,
+      "appliedArchives": 79,
+      "matchesProposal": 79,
+      "matchingArchives": 79
+    },
+    {
+      "check": "guardedRows",
+      "unchanged": 8,
+      "historyRows": 1,
+      "historyArchiveRows": 0
+    }
+  ],
+  "passed": true
+}

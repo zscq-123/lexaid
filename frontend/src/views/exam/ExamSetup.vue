@@ -2,11 +2,12 @@
   <el-card shadow="never" class="setup-card">
     <template #header><span class="card-title">组卷设置</span></template>
     <ExamCoverage :filters="filters" />
+    <QuestionQuality />
     <el-form :model="form" label-width="100px" style="max-width: 520px">
       <el-form-item label="组卷方式">
         <el-radio-group v-model="form.mode">
           <el-radio value="random">随机组卷</el-radio>
-          <el-radio value="entity">按实体组卷</el-radio>
+          <el-radio value="entity">围绕学习内容组卷</el-radio>
         </el-radio-group>
       </el-form-item>
       <el-form-item label="法学大类">
@@ -71,20 +72,20 @@
         </p>
       </el-form-item>
       <template v-if="form.mode === 'entity'">
-        <el-form-item label="实体类型">
+        <el-form-item label="学习内容类型">
           <el-select v-model="form.sourceType" class="setup-select">
             <el-option label="法条" value="PROVISION" />
             <el-option label="案例" value="CASE" />
             <el-option label="观点" value="VIEWPOINT" />
           </el-select>
         </el-form-item>
-        <el-form-item label="实体 ID">
-          <el-input-number v-model="form.sourceId" :min="1" />
-          <div class="tip">优先选取该实体关联题目，不足时补随机题</div>
+        <el-form-item label="选择学习内容">
+          <KnowledgePicker v-model="form.sourceId" :type="form.sourceType" />
+          <div class="tip">只抽取该内容关联的可练题，不足题量时按实际数量组卷。</div>
         </el-form-item>
       </template>
       <el-form-item>
-        <el-button type="primary" :loading="loading" :disabled="subjectsLoading || subjectsFailed || !selectedCount" @click="start">开始答题</el-button>
+        <el-button type="primary" :loading="loading" :disabled="subjectsLoading || subjectsFailed || !selectedCount || (form.mode === 'entity' && !form.sourceId)" @click="start">开始答题</el-button>
       </el-form-item>
     </el-form>
     <ExamHistory />
@@ -97,6 +98,8 @@ import { useRouter } from 'vue-router'
 import { createSession, listQuestionSubjects, listCodeBooks } from '../../api/exam'
 import ExamHistory from './ExamHistory.vue'
 import ExamCoverage from './ExamCoverage.vue'
+import KnowledgePicker from '../../components/KnowledgePicker.vue'
+import QuestionQuality from './QuestionQuality.vue'
 
 const router = useRouter()
 const loading = ref(false)
@@ -114,7 +117,7 @@ const form = reactive({
   difficulty: null,
   count: 10,
   sourceType: 'PROVISION',
-  sourceId: 4
+  sourceId: null
 })
 const filters = computed(() => ({
   discipline: form.discipline || undefined,

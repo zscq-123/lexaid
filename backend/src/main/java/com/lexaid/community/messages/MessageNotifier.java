@@ -57,11 +57,11 @@ public class MessageNotifier {
         sockets.send(userId, event);
     }
 
-    public void reminder(long userId, String preview) {
+    public boolean reminder(long userId, String preview) {
         Map<String, Object> event = new LinkedHashMap<>();
         event.put("type", "REMINDER");
         event.put("preview", preview);
-        sockets.send(userId, event);
+        return sockets.send(userId, event) > 0;
     }
 
     public void messagesRead(long readerId, long peerId, LocalDateTime readAt) {

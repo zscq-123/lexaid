@@ -1,0 +1,22 @@
+{
+  "batch": "139",
+  "originalSegment": "segment-7cb45a3be647",
+  "originalMigration": "backend/src/main/resources/teaching-batch-139-segment-7cb45a3be647.sql",
+  "originalAttempt": "PARTIAL_APPLICATION_RECONCILED",
+  "originalProposedRecords": 25,
+  "confirmedAppliedInOriginalAttempt": 21,
+  "baselineChangedTargets": [
+    "question:10011730",
+    "question:10011731",
+    "question:10011736",
+    "question:10011756"
+  ],
+  "recoverySegment": "segment-7851cdc897ec",
+  "recoveryMigration": "backend/src/main/resources/teaching-batch-139-segment-7851cdc897ec.sql",
+  "recoveryMigrationSha256": "e35030bc7be53a9d8e544d87946791357a920c62ec86520c7979b4ecc5e36907",
+  "reconciledRecords": 21,
+  "historyPreserved": true,
+  "idempotent": true,
+  "verifiedAt": "2026-11-12T11:59:33.864851+00:00",
+  "resolution": "The 21 applied records were confirmed against current logical after-state and revision archives, then recorded by the idempotent recovery segment. The four baseline-drift targets remain unapplied and are being held for manual baseline review."
+}

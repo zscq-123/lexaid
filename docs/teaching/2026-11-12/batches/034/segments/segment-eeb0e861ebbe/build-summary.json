@@ -1,0 +1,82 @@
+{
+  "batch": "034",
+  "segment": "segment-eeb0e861ebbe",
+  "records": 8,
+  "groups": 4,
+  "tables": {
+    "question": 4,
+    "mock_exam_bank": 4
+  },
+  "eligibleTargets": [
+    "question:10016839",
+    "mock_exam_bank:1340172",
+    "question:10016945",
+    "mock_exam_bank:1340278",
+    "question:10016969",
+    "mock_exam_bank:1340302",
+    "question:10017105",
+    "mock_exam_bank:1340438"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10016677",
+      "targets": [
+        "question:10016677",
+        "mock_exam_bank:1340010"
+      ],
+      "reasons": [
+        "cross-review not PASS mock_exam_bank:1340010",
+        "cross-review not PASS question:10016677"
+      ]
+    },
+    {
+      "contentGroup": "question:10016776",
+      "targets": [
+        "question:10016776",
+        "mock_exam_bank:1340109"
+      ],
+      "reasons": [
+        "cross-review not PASS mock_exam_bank:1340109",
+        "cross-review not PASS question:10016776"
+      ]
+    },
+    {
+      "contentGroup": "question:10016918",
+      "targets": [
+        "question:10016918",
+        "mock_exam_bank:1340251"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340251",
+        "held for human/evidence review question:10016918"
+      ]
+    },
+    {
+      "contentGroup": "question:10016991",
+      "targets": [
+        "question:10016991",
+        "mock_exam_bank:1340324"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340324",
+        "held for human/evidence review question:10016991"
+      ]
+    },
+    {
+      "contentGroup": "question:10017151",
+      "targets": [
+        "question:10017151",
+        "mock_exam_bank:1340484"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340484",
+        "held for human/evidence review question:10017151"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-034-segment-eeb0e861ebbe.sql",
+  "migrationSha256": "ae1ee4921510809e8097793699a80535f02acce014c305efb26d621e9e25fee1"
+}

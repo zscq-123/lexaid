@@ -1,0 +1,66 @@
+{
+  "batch": "057",
+  "database": "lexaid",
+  "segments": [
+    {
+      "segment": "segment-6834e27364fa",
+      "migration": "backend/src/main/resources/teaching-batch-057-segment-6834e27364fa.sql",
+      "migrationSha256": "bf7abe5842250854f1014edc84727537257e2bc0fbc83421a4eeb2f28cd0de99",
+      "exactAfterMatches": 5,
+      "historyPreserved": true,
+      "idempotent": true,
+      "releaseApproval": false
+    }
+  ],
+  "records": [
+    {
+      "target": "question:10025136",
+      "id": 10025136,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "23939290dcd6fd11853320c57260c71482e765081dbc6ccb8aa85f8c8f8f8183",
+      "afterHash": "23939290dcd6fd11853320c57260c71482e765081dbc6ccb8aa85f8c8f8f8183",
+      "revisionKey": "2026-11-12-teaching-057-10025136"
+    },
+    {
+      "target": "question:10025137",
+      "id": 10025137,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "f7ce249bdb9da5656dd82fe19ca1256bfcf5a858905910228eee4a51396b5839",
+      "afterHash": "f7ce249bdb9da5656dd82fe19ca1256bfcf5a858905910228eee4a51396b5839",
+      "revisionKey": "2026-11-12-teaching-057-10025137"
+    },
+    {
+      "target": "question:10025225",
+      "id": 10025225,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "7f476fc93f667bf4f2fb547db0a85aa0c2cb99bddb5e6cfdc7afea1ee16750f4",
+      "afterHash": "7f476fc93f667bf4f2fb547db0a85aa0c2cb99bddb5e6cfdc7afea1ee16750f4",
+      "revisionKey": "2026-11-12-teaching-057-10025225"
+    },
+    {
+      "target": "question:10025264",
+      "id": 10025264,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "91927697c19faddb419392f019fc77f36b3241d9c10b85dc8686d4f7f27b91bd",
+      "afterHash": "91927697c19faddb419392f019fc77f36b3241d9c10b85dc8686d4f7f27b91bd",
+      "revisionKey": "2026-11-12-teaching-057-10025264"
+    },
+    {
+      "target": "question:10025487",
+      "id": 10025487,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6ab0ae56d061ae83f9803ed4574194b05ff4ad67104ce751a93f796487144829",
+      "afterHash": "6ab0ae56d061ae83f9803ed4574194b05ff4ad67104ce751a93f796487144829",
+      "revisionKey": "2026-11-12-teaching-057-10025487"
+    }
+  ],
+  "exactAfterMatches": 5,
+  "historyPreserved": true,
+  "idempotent": true,
+  "releaseApproval": false
+}

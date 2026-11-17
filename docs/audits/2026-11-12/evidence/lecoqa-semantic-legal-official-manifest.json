@@ -1,0 +1,208 @@
+[
+  {
+    "law": "行政处罚法",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_3712fbfaaed942b3b6b66f14d5288723.html",
+    "promulgated": "2021-01-22",
+    "effective": "2021-07-15",
+    "retrievedAt": "2026-11-12",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 494,
+      "missingLines": []
+    },
+    "articleCount": 86,
+    "textSha256": "eaba2692754dc8f525b2e3c8cf947e9b28fe877e6a67826efaf4854e951f9f6b",
+    "file": "/tmp/lexaid-full-review/official/行政处罚法.json",
+    "sha256": "f7dc4261312817b79e780b0bef1cd6db4a829375d50500544e80a9e8d141b0c5",
+    "usage": "Only the explicit articles listed per finding were used as narrow legal proof."
+  },
+  {
+    "law": "民法典",
+    "url": "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html",
+    "promulgated": "2020-05-28",
+    "effective": "2021-01-01",
+    "retrievedAt": "2026-11-12",
+    "coverage": null,
+    "articleCount": 1260,
+    "textSha256": "9223a6814a43bbdfad2b4c1f5ef4c7e20e39a7008806ac1c232b6c1814e9980e",
+    "file": "/tmp/lexaid-full-review/official/民法典.json",
+    "sha256": "48f5d2f7c22cdc69d550e5f3eaa168ddc10d47acbda7dbb3ae5abe4b56a4b3f4",
+    "usage": "Only the explicit articles listed per finding were used as narrow legal proof."
+  },
+  {
+    "law": "国务院关于修改和废止部分行政法规的决定（国务院令628号）",
+    "url": "https://www.shanwei.gov.cn/gdsw110/zwgk/0200/0202/content/post_219244.html",
+    "promulgated": "2012-11-09",
+    "effective": "2013-01-01",
+    "evidenceFile": "semantic-extra-web-results.json",
+    "coverage": "official search-rendered entire decision; also railway implementing notice verified at https://www.12306.cn/%2Fmormhweb/kygfwj/gfxwj/201301/t20130105_1830.html",
+    "retrievedAt": "2026-11-12",
+    "file": "/tmp/lexaid-full-review/semantic-extra-web-results.json",
+    "sha256": "477a92a5285ca3023f943fcd5470b7abcec7bcc01ee26a325fb59213a32d94dd",
+    "usage": "Partial browser/search evidence only; no claim of complete official corpus."
+  },
+  {
+    "law": "最高人民法院关于适用《民法典》有关担保制度的解释",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282721.html",
+    "promulgated": "2020-12-25",
+    "effective": "2021-01-01",
+    "retrievedAt": "2026-11-12",
+    "coverage": null,
+    "articleCount": 71,
+    "textSha256": "2f30c1257acf0225f89444aead1bcd250cacafaa9aa0f60049c1e725d057cda7",
+    "file": "/tmp/lexaid-full-review/official/最高人民法院关于适用《民法典》有关担保制度的解释.json",
+    "sha256": "d3cd9e7a04c99b1aed00f7106a144bea41d2613b7e2e24d5130373c0eddf6398",
+    "usage": "Only the explicit articles listed per finding were used as narrow legal proof."
+  },
+  {
+    "law": "中华人民共和国海商法",
+    "url": "https://www.js.msa.gov.cn/art/2026/1/5/art_842_2101.html",
+    "promulgated": "2025-10-28",
+    "effective": "2026-05-01",
+    "evidenceFile": "semantic-extra-web-results.json",
+    "coverage": "official browser rendered articles 2,43,310; partial saved output, not full-corpus comparison",
+    "retrievedAt": "2026-11-12",
+    "file": "/tmp/lexaid-full-review/semantic-extra-web-results.json",
+    "sha256": "477a92a5285ca3023f943fcd5470b7abcec7bcc01ee26a325fb59213a32d94dd",
+    "usage": "Partial browser/search evidence only; no claim of complete official corpus."
+  },
+  {
+    "law": "最高人民法院关于审理民间借贷案件适用法律若干问题的规定",
+    "url": "https://cicc.court.gov.cn/html/1/380/385/12844.html",
+    "promulgated": "2020-12-23",
+    "effective": "2021-01-01",
+    "retrievedAt": "2026-11-12",
+    "coverage": null,
+    "articleCount": 31,
+    "textSha256": "e9f24439d3e664679df3815c5aacaf7ce49fe298d971f3570c0f75a8d9e0392c",
+    "file": "/tmp/lexaid-full-review/official/最高人民法院关于审理民间借贷案件适用法律若干问题的规定.json",
+    "sha256": "6734a45e6178a9a13fd69b4fe3a709de7ca53895083d2a19e8be7a4e48d23e08",
+    "usage": "Only the explicit articles listed per finding were used as narrow legal proof."
+  },
+  {
+    "law": "行政许可法",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5211784/content.html",
+    "promulgated": "2019-04-23",
+    "effective": "2019-04-23",
+    "retrievedAt": "2026-11-12",
+    "coverage": {
+      "firstLine": 46,
+      "lastLine": 628,
+      "missingLines": []
+    },
+    "articleCount": 83,
+    "textSha256": "a1314cc23348f405ca2406398645cac2bba1446180ed22a91ae3c569d73889ec",
+    "file": "/tmp/lexaid-full-review/official/行政许可法.json",
+    "sha256": "d1c4cb5fc6328e24f50d4f499ae827bbde52e95795b6458df10cdc2e23657ea7",
+    "usage": "Only the explicit articles listed per finding were used as narrow legal proof."
+  },
+  {
+    "law": "公司法",
+    "url": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html",
+    "promulgated": "2023-12-29",
+    "effective": "2024-07-01",
+    "retrievedAt": "2026-11-12",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 1439,
+      "missingLines": []
+    },
+    "articleCount": 266,
+    "textSha256": "727c252cb7c3c903fa05ec43d766961e4624c249cba349110761cde06907dfab",
+    "file": "/tmp/lexaid-full-review/official/公司法.json",
+    "sha256": "679fa25b52efca1b032384dca54a91776bce967981d9a39c82d9d4ea66da9a4b",
+    "usage": "Only the explicit articles listed per finding were used as narrow legal proof."
+  },
+  {
+    "law": "刑法",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html",
+    "promulgated": "2023-12-29",
+    "effective": "2024-03-01",
+    "retrievedAt": "2026-11-12",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 2818,
+      "missingLines": []
+    },
+    "articleCount": 505,
+    "textSha256": "c3afb39c5be6c412a2fa54d7a0e5622e8c82b6d8bb42bd3f5d65c3aa9c5aa795",
+    "file": "/tmp/lexaid-full-review/official/刑法.json",
+    "sha256": "72a66dafcfddd9c7642fa87e9d6a6623068ceb409faf58583b75f0871e990226",
+    "usage": "Only the explicit articles listed per finding were used as narrow legal proof."
+  },
+  {
+    "law": "最高人民检察院公安部关于公安机关管辖的刑事案件立案追诉标准的规定（二）",
+    "url": "https://www.spp.gov.cn/xwfbh/wsfbt/202204/t20220429_555906.shtml",
+    "promulgated": "2022-04-06",
+    "effective": "2022-05-15",
+    "evidenceFile": "semantic-prosecution-excerpts.txt",
+    "coverage": "official search-rendered excerpts; direct access 403; filing/prosecution criteria only, not universal historical conviction/sentencing thresholds",
+    "retrievedAt": "2026-11-12",
+    "file": "/tmp/lexaid-full-review/semantic-prosecution-excerpts.txt",
+    "sha256": "29a4e51912e6248889aca8c36d2a6567dd97abfc480ade362090e12b22d869d6",
+    "usage": "Partial browser/search evidence only; no claim of complete official corpus."
+  },
+  {
+    "law": "民事诉讼法",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5220330/content.html",
+    "promulgated": "2023-09-01",
+    "effective": "2024-01-01",
+    "retrievedAt": "2026-11-12",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 1810,
+      "missingLines": []
+    },
+    "articleCount": 306,
+    "textSha256": "e48bba279aed76e75c9935e93993ad6f9c1985672f5f4005ab4fd7e1666f91f0",
+    "file": "/tmp/lexaid-full-review/official/民事诉讼法.json",
+    "sha256": "6cc791337ca4d9716785a0927367cac318215c0d2108ea01a9835549b3a37e30",
+    "usage": "Only the explicit articles listed per finding were used as narrow legal proof."
+  },
+  {
+    "law": "最高人民法院关于限制被执行人高消费及有关消费的若干规定",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/15046.html",
+    "promulgated": "2015-07-06",
+    "effective": "2015-07-22",
+    "evidenceFile": "semantic-extra-web-results.json",
+    "coverage": "official search-rendered excerpts: first, fourth and fifth articles; not full-law certification",
+    "retrievedAt": "2026-11-12",
+    "file": "/tmp/lexaid-full-review/semantic-extra-web-results.json",
+    "sha256": "477a92a5285ca3023f943fcd5470b7abcec7bcc01ee26a325fb59213a32d94dd",
+    "usage": "Partial browser/search evidence only; no claim of complete official corpus."
+  },
+  {
+    "law": "著作权法",
+    "url": "https://www.ncac.gov.cn/xxfb/flfg/flfg_532/202103/t20210309_50530.html",
+    "promulgated": "2020-11-11",
+    "effective": "2021-06-01",
+    "retrievedAt": "2026-11-12",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 546,
+      "missingLines": []
+    },
+    "articleCount": 67,
+    "textSha256": "d44b9625b9ee7172e1c0c2b9157cf99a004905cf75fd72f0e86c1e4d5802f73f",
+    "file": "/tmp/lexaid-full-review/official/著作权法.json",
+    "sha256": "e007dd53e177b5bf1713c51873feabba4429b248dba4e74566689d9df1c9948a",
+    "usage": "Only the explicit articles listed per finding were used as narrow legal proof."
+  },
+  {
+    "law": "治安管理处罚法",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html",
+    "promulgated": "2025-06-27",
+    "effective": "2026-01-01",
+    "retrievedAt": "2026-11-12",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 871,
+      "missingLines": []
+    },
+    "articleCount": 144,
+    "textSha256": "da7cd736af2f865e7f813cbd93c9ee952d3d868abac84d0b7bf8bf0c9194b1a5",
+    "file": "/tmp/lexaid-full-review/official/治安管理处罚法.json",
+    "sha256": "8e85cf88931d2bfff8286f5a1be6ee91fb04c4c8d337ef78b24bfba62a99cf24",
+    "usage": "Only the explicit articles listed per finding were used as narrow legal proof."
+  }
+]

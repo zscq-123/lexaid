@@ -67,34 +67,39 @@ public class MessageWebSocketHandler extends TextWebSocketHandler {
         return userSessions != null && userSessions.stream().anyMatch(WebSocketSession::isOpen);
     }
 
-    public void send(long userId, Object payload) {
+    public int send(long userId, Object payload) {
         Set<WebSocketSession> userSessions = sessions.get(userId);
-        if (userSessions == null || userSessions.isEmpty()) return;
+        if (userSessions == null || userSessions.isEmpty()) return 0;
+        int delivered = 0;
         for (WebSocketSession session : List.copyOf(userSessions)) {
-            send(session, payload);
+            if (send(session, payload)) delivered++;
         }
+        return delivered;
     }
 
-    private void send(WebSocketSession session, Object payload) {
+    private boolean send(WebSocketSession session, Object payload) {
         if (!session.isOpen()) {
             remove(session);
-            return;
+            return false;
         }
         String json;
         try {
             json = objectMapper.writeValueAsString(payload);
         } catch (Exception e) {
             log.warn("私信消息序列化失败", e);
-            return;
+            return false;
         }
         try {
             synchronized (session) {
                 if (session.isOpen()) session.sendMessage(new TextMessage(json));
+                else return false;
             }
+            return true;
         } catch (Exception e) {
             log.debug("私信 WebSocket 推送失败: {}", e.getMessage());
             remove(session);
             closeQuietly(session, CloseStatus.SERVER_ERROR);
+            return false;
         }
     }
 

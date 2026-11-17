@@ -9,6 +9,12 @@
       </el-col>
     </el-row>
 
+    <el-card v-if="overview" shadow="never" class="count-explanation">
+      <p>实际作答 {{ overview.totalAnswer }} 次 = 首次作答 {{ overview.distinctQuestions }} 道 + 重复作答 {{ overview.repeatedAnswer }} 次。</p>
+      <p>已评分 {{ overview.gradedAnswer }} 次 = 答对 {{ overview.totalCorrect }} 次 + 答错 {{ overview.totalIncorrect }} 次；另有 {{ overview.ungradedAnswer }} 次待评分或无法评分。</p>
+      <p>正确率 = 答对次数 ÷ 已评分次数。未作答 / 跳过 {{ overview.skippedAnswer }} 次，不计入答题次数、正确率和错题本。</p>
+    </el-card>
+
     <el-row :gutter="16" class="charts">
       <el-col :span="24" :md="14">
         <el-card shadow="never" class="chart-card">
@@ -80,7 +86,7 @@ let recordsRequest = 0
 
 const cards = computed(() => [
   { label: '累计学习时长（分钟）', value: overview.value?.totalStudyMinutes ?? 0 },
-  { label: '答题总数', value: overview.value?.totalAnswer ?? 0 },
+  { label: '实际作答次数（含重复）', value: overview.value?.totalAnswer ?? 0 },
   { label: '正确率', value: (overview.value?.accuracy ?? 0) + '%' },
   { label: '连续学习天数', value: overview.value?.streakDays ?? 0 }
 ])
@@ -110,13 +116,13 @@ function renderCharts() {
     lineChart ??= echarts.init(lineRef.value, null, { renderer: 'svg' })
     lineChart.setOption({
       ...chartOptions,
-      legend: { top: 0, left: 'center', data: ['答题数', '正确数'] },
+      legend: { top: 0, left: 'center', data: ['作答次数', '答对次数'] },
       grid: { left: 40, right: 16, top: 42, bottom: 32 },
       xAxis: { type: 'category', axisLabel: { hideOverlap: true }, data: daily.value.map((d) => d.date.slice(5)) },
       yAxis: { type: 'value', minInterval: 1 },
       series: [
-        { name: '答题数', type: 'line', smooth: true, data: daily.value.map((d) => d.answerCount), itemStyle: { color: '#2e5fa3' } },
-        { name: '正确数', type: 'line', smooth: true, data: daily.value.map((d) => d.correctCount), itemStyle: { color: '#67c23a' } }
+        { name: '作答次数', type: 'line', smooth: true, data: daily.value.map((d) => d.answerCount), itemStyle: { color: '#2e5fa3' } },
+        { name: '答对次数', type: 'line', smooth: true, data: daily.value.map((d) => d.correctCount), itemStyle: { color: '#67c23a' } }
       ]
     })
   }
@@ -196,6 +202,7 @@ onBeforeUnmount(() => {
   margin-top: 16px;
   row-gap: 16px;
 }
+.count-explanation { margin-top: 16px; color: var(--lex-muted); font-size: .85rem; line-height: 1.8; }
 .chart-card {
   border-radius: 8px;
 }

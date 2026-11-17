@@ -1,0 +1,248 @@
+{
+  "batch": "004",
+  "segment": "segment-3c9d365f1486",
+  "records": 5,
+  "groups": 5,
+  "tables": {
+    "mock_exam_bank": 5
+  },
+  "eligibleTargets": [
+    "mock_exam_bank:8100007",
+    "mock_exam_bank:8100009",
+    "mock_exam_bank:8100011",
+    "mock_exam_bank:8100012",
+    "mock_exam_bank:8100013"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "mock_exam_bank:8000001",
+      "targets": [
+        "mock_exam_bank:8000001"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000001"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000002",
+      "targets": [
+        "mock_exam_bank:8000002"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000002"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000003",
+      "targets": [
+        "mock_exam_bank:8000003"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000003"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000004",
+      "targets": [
+        "mock_exam_bank:8000004"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000004"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000005",
+      "targets": [
+        "mock_exam_bank:8000005"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000005"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000006",
+      "targets": [
+        "mock_exam_bank:8000006"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000006"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000007",
+      "targets": [
+        "mock_exam_bank:8000007"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000007"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000008",
+      "targets": [
+        "mock_exam_bank:8000008"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000008"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000009",
+      "targets": [
+        "mock_exam_bank:8000009"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000009"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000010",
+      "targets": [
+        "mock_exam_bank:8000010"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000010"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000011",
+      "targets": [
+        "mock_exam_bank:8000011"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000011"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8000012",
+      "targets": [
+        "mock_exam_bank:8000012"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8000012"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100001",
+      "targets": [
+        "mock_exam_bank:8100001"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8100001"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100002",
+      "targets": [
+        "mock_exam_bank:8100002"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8100002"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100003",
+      "targets": [
+        "mock_exam_bank:8100003"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8100003"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100004",
+      "targets": [
+        "mock_exam_bank:8100004"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8100004"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100005",
+      "targets": [
+        "mock_exam_bank:8100005"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8100005"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100006",
+      "targets": [
+        "mock_exam_bank:8100006"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8100006"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100008",
+      "targets": [
+        "mock_exam_bank:8100008"
+      ],
+      "reasons": [
+        "already applied mock_exam_bank:8100008"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100010",
+      "targets": [
+        "mock_exam_bank:8100010"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100010"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100014",
+      "targets": [
+        "mock_exam_bank:8100014"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100014"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100015",
+      "targets": [
+        "mock_exam_bank:8100015"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100015"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100016",
+      "targets": [
+        "mock_exam_bank:8100016"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100016"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100017",
+      "targets": [
+        "mock_exam_bank:8100017"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100017"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100018",
+      "targets": [
+        "mock_exam_bank:8100018"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100018"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-004-segment-3c9d365f1486.sql",
+  "migrationSha256": "ab10cdb41af7490875163c045da717dc4d1ffe3a8575ac0618f3f980a8619dd1"
+}

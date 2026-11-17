@@ -22,7 +22,7 @@ class StatsServiceTest {
         EntityTitleService entityTitleService = mock(EntityTitleService.class);
         StatsService service = new StatsService(studyRecordMapper, answerRecordMapper, entityTitleService);
 
-        when(answerRecordMapper.selectCount(any())).thenReturn(10L, 6L, 8L);
+        when(answerRecordMapper.totals(7L)).thenReturn(new AnswerRecordMapper.Totals(10, 3, 6, 8, 4));
         when(studyRecordMapper.selectTotalDurationSec(7L)).thenReturn(600);
         when(studyRecordMapper.selectActivityDates(7L)).thenReturn(List.of(LocalDate.now()));
 
@@ -31,5 +31,10 @@ class StatsServiceTest {
         assertThat(overview.totalAnswer()).isEqualTo(10);
         assertThat(overview.totalCorrect()).isEqualTo(6);
         assertThat(overview.accuracy()).isEqualTo(75.0);
+        assertThat(overview.distinctQuestions()).isEqualTo(3);
+        assertThat(overview.repeatedAnswer()).isEqualTo(7);
+        assertThat(overview.skippedAnswer()).isEqualTo(4);
+        assertThat(overview.totalIncorrect()).isEqualTo(2);
+        assertThat(overview.ungradedAnswer()).isEqualTo(2);
     }
 }

@@ -72,4 +72,9 @@ public class ProvisionController {
     public Result<RelatedGroups> related(@PathVariable Long id) {
         return Result.ok(provisionService.related(id));
     }
+
+    @GetMapping("/{id}/versions")
+    public Result<List<ProvisionVO>> versions(@PathVariable Long id) {
+        return Result.ok(provisionService.versions(id));
+    }
 }

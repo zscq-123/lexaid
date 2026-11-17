@@ -1,6 +1,8 @@
 package com.lexaid.ai.search;
 
 import com.lexaid.exam.QuestionSubjects;
+import com.lexaid.exam.QuestionQuality;
+import com.lexaid.content.LegalCitation;
 import com.lexaid.content.CourtRegionClassifier;
 import com.lexaid.relation.RelatedItem;
 import lombok.RequiredArgsConstructor;
@@ -76,6 +78,10 @@ public class PublicSiteSearch {
         if (limit <= 0) return List.of();
         int take = Math.min(limit, 24);
         List<String> keywords = keywords(terms);
+        LegalCitation citation = LegalCitation.fromTerms(keywords);
+        if (citation != null && (scope == null || "PROVISION".equals(scope))) {
+            return exactProvisions(citation, keywords, take);
+        }
         if (scope == null && keywords.isEmpty()) return List.of();
         List<Hit> candidates = new ArrayList<>();
         boolean papersOnly = "PAPER".equals(scope);
@@ -88,11 +94,10 @@ public class PublicSiteSearch {
         if (scope == null) candidates.sort(Comparator.comparingInt(Hit::score).reversed()
                 .thenComparing(Hit::source).thenComparingLong(Hit::id));
 
-        // Reserve room for one hit from each matching collection, then fill by relevance.
+        // Rank by relevance without reserving slots for weak matches in other collections.
         Map<Source, Hit> best = new EnumMap<>(Source.class);
         for (Hit hit : candidates) best.putIfAbsent(hit.source(), hit);
         LinkedHashSet<Hit> selected = new LinkedHashSet<>();
-        for (Hit hit : candidates) if (hit.equals(best.get(hit.source())) && selected.size() < take) selected.add(hit);
         for (Hit hit : candidates) if (selected.size() < take) selected.add(hit);
         Map<Source, Map<Long, RelatedItem>> documents = new EnumMap<>(Source.class);
         for (Source source : best.keySet()) {
@@ -133,11 +138,31 @@ public class PublicSiteSearch {
             case VIEWPOINT -> "publish_year DESC,id DESC";
             case QUESTION -> "id DESC";
         } : "relevance DESC,id";
-        String sql = "SELECT id," + score + " AS relevance FROM " + (scores.isEmpty() ? source.table : source.taggedTable())
+        String sql = "SELECT id," + score + " AS relevance FROM " + (scores.isEmpty() && source != Source.QUESTION ? source.table : source.taggedTable())
                 + (papersOnly ? " WHERE " + IS_PAPER : "")
+                + (source == Source.QUESTION ? " WHERE " + QuestionQuality.ELIGIBLE : "")
                 + (scores.isEmpty() ? "" : " HAVING relevance > 0")
                 + " ORDER BY " + order + " LIMIT :limit";
         return db.query(sql, params, (rs, row) -> new Hit(source, rs.getLong("id"), rs.getInt("relevance")));
+    }
+
+    private List<RelatedItem> exactProvisions(LegalCitation citation, List<String> terms, int limit) {
+        var params = new MapSqlParameterSource("laws", citation.lawNames())
+                .addValue("articles", citation.articleNames()).addValue("limit", limit)
+                .addValue("year", citation.versionYear());
+        // Collapse copies only when dates, status and normalized text agree; preserve conflicting versions.
+        List<Long> ids = db.query("""
+                SELECT id FROM (
+                  SELECT id,effective_date,promulgation_date,ROW_NUMBER() OVER (
+                    PARTITION BY effective_date,promulgation_date,status,SHA2(REGEXP_REPLACE(content,'[[:space:]]+',''),256)
+                    ORDER BY (source_url IS NOT NULL AND source_url!='') DESC,id
+                  ) AS copy_no FROM legal_provision WHERE law_name IN (:laws) AND article_no IN (:articles)
+                    AND (:year IS NULL OR YEAR(promulgation_date)=:year OR YEAR(effective_date)=:year)
+                ) versions WHERE copy_no=1 ORDER BY effective_date DESC,promulgation_date DESC,id LIMIT :limit
+                """, params, (rs, row) -> rs.getLong("id"));
+        if (ids.isEmpty()) return List.of();
+        Map<Long, RelatedItem> items = passages(Source.PROVISION, ids, terms, 3600, false);
+        return ids.stream().map(items::get).filter(java.util.Objects::nonNull).toList();
     }
 
     private static String contains(String field, String parameter, String keyword) {
@@ -164,12 +189,15 @@ public class PublicSiteSearch {
                 + (source == Source.CASE ? "jurisdiction,court,case_no,source_dataset,"
                 + "CASE WHEN source_dataset='Chinese-Law-Corpus-Guiding-Cases' THEN holding END AS judgment," : "")
                 + "SUBSTRING(" + source.body + ",GREATEST(1," + position + "-140),:length) AS passage FROM "
-                + source.taggedTable() + " WHERE id IN (:ids)" + (papersOnly ? " AND " + IS_PAPER : "");
+                + source.taggedTable() + " WHERE id IN (:ids)" + (papersOnly ? " AND " + IS_PAPER : "")
+                + (source == Source.QUESTION ? " AND " + QuestionQuality.ELIGIBLE : "");
         Map<Long, RelatedItem> hits = new HashMap<>();
         db.query(sql, params, rs -> {
             long id = rs.getLong("id");
             String passage = rs.getString("passage");
             String header = rs.getString("header");
+            if (source == Source.PROVISION) header = "版本信息来自收录记录；有效区间与现行效力尚未经人工核验。" + header;
+            if (source == Source.CASE || source == Source.VIEWPOINT) header = "引用前请核对原文、版本及定位信息；缺失信息不得推定已核验。" + header;
             if (source == Source.CASE) {
                 String court = CourtRegionClassifier.classify(rs.getString("jurisdiction"), rs.getString("court"),
                         rs.getString("case_no"), rs.getString("judgment"), rs.getString("source_dataset")).name();

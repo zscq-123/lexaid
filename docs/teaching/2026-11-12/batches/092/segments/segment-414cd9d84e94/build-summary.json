@@ -1,0 +1,276 @@
+{
+  "batch": "092",
+  "segment": "segment-414cd9d84e94",
+  "records": 24,
+  "groups": 24,
+  "tables": {
+    "question": 24
+  },
+  "eligibleTargets": [
+    "question:10011053",
+    "question:10011054",
+    "question:10011055",
+    "question:10011056",
+    "question:10011057",
+    "question:10011058",
+    "question:10011059",
+    "question:10011060",
+    "question:10011061",
+    "question:10011062",
+    "question:10011063",
+    "question:10011064",
+    "question:10011065",
+    "question:10011066",
+    "question:10011067",
+    "question:10011068",
+    "question:10011069",
+    "question:10011070",
+    "question:10011071",
+    "question:10011072",
+    "question:10011073",
+    "question:10011074",
+    "question:10011075",
+    "question:10011076"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10011045",
+      "targets": [
+        "question:10011045"
+      ],
+      "reasons": [
+        "stale cross-review hash question:10011045"
+      ]
+    },
+    {
+      "contentGroup": "question:10011046",
+      "targets": [
+        "question:10011046"
+      ],
+      "reasons": [
+        "stale cross-review hash question:10011046"
+      ]
+    },
+    {
+      "contentGroup": "question:10011047",
+      "targets": [
+        "question:10011047"
+      ],
+      "reasons": [
+        "stale cross-review hash question:10011047"
+      ]
+    },
+    {
+      "contentGroup": "question:10011048",
+      "targets": [
+        "question:10011048"
+      ],
+      "reasons": [
+        "stale cross-review hash question:10011048"
+      ]
+    },
+    {
+      "contentGroup": "question:10011049",
+      "targets": [
+        "question:10011049"
+      ],
+      "reasons": [
+        "stale cross-review hash question:10011049"
+      ]
+    },
+    {
+      "contentGroup": "question:10011050",
+      "targets": [
+        "question:10011050"
+      ],
+      "reasons": [
+        "stale cross-review hash question:10011050"
+      ]
+    },
+    {
+      "contentGroup": "question:10011051",
+      "targets": [
+        "question:10011051"
+      ],
+      "reasons": [
+        "stale cross-review hash question:10011051"
+      ]
+    },
+    {
+      "contentGroup": "question:10011052",
+      "targets": [
+        "question:10011052"
+      ],
+      "reasons": [
+        "stale cross-review hash question:10011052"
+      ]
+    },
+    {
+      "contentGroup": "question:10011077",
+      "targets": [
+        "question:10011077"
+      ],
+      "reasons": [
+        "missing cross-review question:10011077"
+      ]
+    },
+    {
+      "contentGroup": "question:10011078",
+      "targets": [
+        "question:10011078"
+      ],
+      "reasons": [
+        "missing cross-review question:10011078"
+      ]
+    },
+    {
+      "contentGroup": "question:10011079",
+      "targets": [
+        "question:10011079"
+      ],
+      "reasons": [
+        "missing cross-review question:10011079"
+      ]
+    },
+    {
+      "contentGroup": "question:10011080",
+      "targets": [
+        "question:10011080"
+      ],
+      "reasons": [
+        "missing cross-review question:10011080"
+      ]
+    },
+    {
+      "contentGroup": "question:10011081",
+      "targets": [
+        "question:10011081"
+      ],
+      "reasons": [
+        "missing cross-review question:10011081"
+      ]
+    },
+    {
+      "contentGroup": "question:10011082",
+      "targets": [
+        "question:10011082"
+      ],
+      "reasons": [
+        "missing cross-review question:10011082"
+      ]
+    },
+    {
+      "contentGroup": "question:10011083",
+      "targets": [
+        "question:10011083"
+      ],
+      "reasons": [
+        "missing cross-review question:10011083"
+      ]
+    },
+    {
+      "contentGroup": "question:10011084",
+      "targets": [
+        "question:10011084"
+      ],
+      "reasons": [
+        "missing cross-review question:10011084"
+      ]
+    },
+    {
+      "contentGroup": "question:10011085",
+      "targets": [
+        "question:10011085"
+      ],
+      "reasons": [
+        "missing cross-review question:10011085"
+      ]
+    },
+    {
+      "contentGroup": "question:10011086",
+      "targets": [
+        "question:10011086"
+      ],
+      "reasons": [
+        "missing cross-review question:10011086"
+      ]
+    },
+    {
+      "contentGroup": "question:10011087",
+      "targets": [
+        "question:10011087"
+      ],
+      "reasons": [
+        "missing cross-review question:10011087"
+      ]
+    },
+    {
+      "contentGroup": "question:10011088",
+      "targets": [
+        "question:10011088"
+      ],
+      "reasons": [
+        "missing cross-review question:10011088"
+      ]
+    },
+    {
+      "contentGroup": "question:10011089",
+      "targets": [
+        "question:10011089"
+      ],
+      "reasons": [
+        "missing proposal question:10011089"
+      ]
+    },
+    {
+      "contentGroup": "question:10011090",
+      "targets": [
+        "question:10011090"
+      ],
+      "reasons": [
+        "missing proposal question:10011090"
+      ]
+    },
+    {
+      "contentGroup": "question:10011091",
+      "targets": [
+        "question:10011091"
+      ],
+      "reasons": [
+        "missing proposal question:10011091"
+      ]
+    },
+    {
+      "contentGroup": "question:10011092",
+      "targets": [
+        "question:10011092"
+      ],
+      "reasons": [
+        "missing proposal question:10011092"
+      ]
+    },
+    {
+      "contentGroup": "question:10011093",
+      "targets": [
+        "question:10011093"
+      ],
+      "reasons": [
+        "missing proposal question:10011093"
+      ]
+    },
+    {
+      "contentGroup": "question:10011094",
+      "targets": [
+        "question:10011094"
+      ],
+      "reasons": [
+        "missing proposal question:10011094"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-092-segment-414cd9d84e94.sql",
+  "migrationSha256": "b25e071eeac03facf6a6ec50dc61851cf9871ac5266dd68ae796f7441d79822b"
+}

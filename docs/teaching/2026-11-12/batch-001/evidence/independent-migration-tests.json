@@ -1,0 +1,26 @@
+{
+  "tests": 20,
+  "passed": [
+    "baseline content and classification applied",
+    "repeat is idempotent",
+    "archive retains one applied revision",
+    "skip drifted type",
+    "skip drifted stem",
+    "skip drifted options",
+    "skip drifted answer",
+    "skip drifted analysis",
+    "skip drifted category",
+    "skip drifted discipline",
+    "skip drifted subject",
+    "archive conflict does not overwrite question or archive",
+    "missing target reported",
+    "stale independent review rejected",
+    "human approval cannot be claimed by AI",
+    "self review cannot approve a draft",
+    "unresolved findings block a draft",
+    "unverified original content is rejected",
+    "preview escapes untrusted question content",
+    "historical answer/reason/score unchanged in every scenario"
+  ],
+  "persistentDatabaseMutation": false
+}

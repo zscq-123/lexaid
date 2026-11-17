@@ -1,0 +1,67 @@
+{
+  "batch": "030",
+  "segment": "segment-12cbf2095634",
+  "database": "lexaid",
+  "verifiedAt": "2026-11-12T02:31:06.174826+00:00",
+  "migration": "backend/src/main/resources/teaching-batch-030-segment-12cbf2095634.sql",
+  "migrationSha256": "69d06510b09546d6d4c83f47775e97793253aaf5ef74ccea6192a32718344cd0",
+  "records": [
+    {
+      "target": "question:10016897",
+      "id": 10016897,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "1347582218adfe49e7c2e1d4713507a9e645942e97b67eeb9c81f67bc419f225",
+      "afterHash": "1347582218adfe49e7c2e1d4713507a9e645942e97b67eeb9c81f67bc419f225",
+      "revisionKey": "2026-11-12-teaching-030-10016897"
+    },
+    {
+      "target": "mock_exam_bank:1340230",
+      "id": 1340230,
+      "table": "mock_exam_bank",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "bf3ef59402575ca4117c60b6ab85b22a7c8cfacf5887bcf3ec4d3bcfa6bb4694",
+      "afterHash": "bf3ef59402575ca4117c60b6ab85b22a7c8cfacf5887bcf3ec4d3bcfa6bb4694",
+      "revisionKey": "2026-11-12-teaching-030-mock-1340230"
+    }
+  ],
+  "exactAfterMatches": 2,
+  "archives": {
+    "question_content_revision": {
+      "total": 1,
+      "applied": 1
+    },
+    "mock_exam_content_revision": {
+      "total": 1,
+      "applied": 1
+    }
+  },
+  "historyBefore": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyAfter": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyPreserved": true,
+  "repeatChecksums": {
+    "question": "4225110621",
+    "question_legal_subject": "4169332068",
+    "mock_exam_bank": "3990753894",
+    "question_content_revision": "668403008",
+    "mock_exam_content_revision": "2651346486"
+  },
+  "idempotent": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false
+}

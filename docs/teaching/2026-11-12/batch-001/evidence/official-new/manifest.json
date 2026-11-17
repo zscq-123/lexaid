@@ -1,0 +1,50 @@
+[
+  {
+    "name": "建设工程解释二2026",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/504221.html",
+    "effective": "2026-06-30",
+    "retrievedAsOf": "2026-11-12",
+    "html": "建设工程解释二2026.html.gz",
+    "text": "建设工程解释二2026.txt.gz",
+    "sha256": "b81d27db348c11afa6c3b45c2933b8060def286b4fc02eb19ba8d0395e79e705",
+    "characters": 4150,
+    "htmlSha256": "3f0a04189d38050a7ea96e372ec2796868b14c00ea1adfba9b857a8b7d1c1c9f",
+    "textSha256": "b81d27db348c11afa6c3b45c2933b8060def286b4fc02eb19ba8d0395e79e705"
+  },
+  {
+    "name": "劳动争议解释二2025",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/472691.html",
+    "effective": "2025-09-01",
+    "retrievedAsOf": "2026-11-12",
+    "html": "劳动争议解释二2025.html.gz",
+    "text": "劳动争议解释二2025.txt.gz",
+    "sha256": "a203677d239b4d83a9bb224f4ba63983d4c3a5be0d882cc563a12c9fc8affb70",
+    "characters": 5037,
+    "htmlSha256": "d26d62a2509a5e40720b14aab779392a9b168148801bf370e815b2a5a63769f3",
+    "textSha256": "a203677d239b4d83a9bb224f4ba63983d4c3a5be0d882cc563a12c9fc8affb70"
+  },
+  {
+    "name": "生态公益诉讼解释2026",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/508041.html",
+    "effective": "2026-08-15",
+    "retrievedAsOf": "2026-11-12",
+    "html": "生态公益诉讼解释2026.html.gz",
+    "text": "生态公益诉讼解释2026.txt.gz",
+    "sha256": "900901c33e82e01afeb47b3ce94a87d1f5f2cb18c8cba32793bd669ee27984d3",
+    "characters": 41828,
+    "htmlSha256": "d13653be1369dbeb5e2d26f1cf304731eba91527485c49435c94406c50d3848b",
+    "textSha256": "900901c33e82e01afeb47b3ce94a87d1f5f2cb18c8cba32793bd669ee27984d3"
+  },
+  {
+    "name": "生态环境法典2026",
+    "url": "https://ecro.mee.gov.cn/fgbz/fl/202604/t20260416_1148993.html",
+    "effective": "2026-08-15",
+    "retrievedAsOf": "2026-11-12",
+    "html": "生态环境法典2026.html.gz",
+    "text": "生态环境法典2026.txt.gz",
+    "sha256": "89624a1f3402da3524dc183dc528617f915896eb4fac9ec08a6441b4d825cd9e",
+    "characters": 171085,
+    "htmlSha256": "90a9e90a61dd46bac892b7848d3d90ca78483a3bf156ad0d612ad4d4684983b8",
+    "textSha256": "89624a1f3402da3524dc183dc528617f915896eb4fac9ec08a6441b4d825cd9e"
+  }
+]

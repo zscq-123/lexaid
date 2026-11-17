@@ -1,0 +1,63 @@
+{
+  "batch": "152",
+  "segment": "segment-8e8ca0f453cf",
+  "database": "lexaid",
+  "verifiedAt": "2026-11-12T14:20:50.828310+00:00",
+  "migration": "backend/src/main/resources/teaching-batch-152-segment-8e8ca0f453cf.sql",
+  "migrationSha256": "4da34883a9b0c01063c7ef5fc89bebe3ab59f05b840a6b2955a1258949db1b06",
+  "records": [
+    {
+      "target": "question:10006958",
+      "id": 10006958,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9baa7a35a3ecc7b009ae6a4475aca7a317c10b342ac5cd88571fd693a953e65f",
+      "afterHash": "9baa7a35a3ecc7b009ae6a4475aca7a317c10b342ac5cd88571fd693a953e65f",
+      "revisionKey": "2026-11-12-teaching-152-10006958"
+    },
+    {
+      "target": "question:10006959",
+      "id": 10006959,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "60439f93bff23788b8ff0a596b638f7b3fa941a5c3f2a4477d1449844f07aa84",
+      "afterHash": "60439f93bff23788b8ff0a596b638f7b3fa941a5c3f2a4477d1449844f07aa84",
+      "revisionKey": "2026-11-12-teaching-152-10006959"
+    }
+  ],
+  "exactAfterMatches": 2,
+  "archives": {
+    "question_content_revision": {
+      "total": 2,
+      "applied": 2
+    }
+  },
+  "historyBefore": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyAfter": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyPreserved": true,
+  "repeatChecksums": {
+    "question": "235290353",
+    "question_legal_subject": "4169332068",
+    "mock_exam_bank": "1432156791",
+    "question_content_revision": "2249503022",
+    "mock_exam_content_revision": "802010516"
+  },
+  "idempotent": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false
+}

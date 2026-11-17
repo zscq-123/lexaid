@@ -1,0 +1,19 @@
+{
+  "snapshotAt": "2026-11-11T16:02:32.191698+00:00",
+  "database": "lexaid",
+  "scope": "Full automated rule scan; not full legal approval or human dual review",
+  "total": 25628,
+  "counts": {
+    "ELIGIBLE": 30,
+    "DATASET_REVIEW": 11160,
+    "UNCLASSIFIED": 3029,
+    "MISSING_CONTENT": 15,
+    "TASK_INSTRUCTION": 11391,
+    "INVALID_CHOICES": 3
+  },
+  "eligibleBySource": {
+    "seed": 30
+  },
+  "querySha256": "966d02b17bd34f16a89b73ce27cc8cd9cb676e635d82d1041a0255087f07865d",
+  "manifestSha256": "89c8ea334a15b44073fa9dcf7d5091f17758c4da01988c95feadcdee121d483e"
+}

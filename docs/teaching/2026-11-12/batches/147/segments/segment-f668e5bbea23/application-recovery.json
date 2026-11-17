@@ -1,0 +1,54 @@
+{
+  "batch": "147",
+  "originalSegment": "segment-f668e5bbea23",
+  "originalAttemptStatus": "PARTIAL_STATUS_CHECK_FAILURE",
+  "originalAttemptObservedAt": "2026-11-12",
+  "originalAttemptRows": 12,
+  "originalAttemptAppliedOrAlreadyApplied": [
+    "question:10023068",
+    "question:10023070",
+    "question:10023071",
+    "question:10023072",
+    "question:10023076",
+    "question:10023077",
+    "question:10023649"
+  ],
+  "originalAttemptStatusChanged": [
+    "question:10022622",
+    "question:10023103",
+    "question:10023156",
+    "question:10023163",
+    "question:10023204"
+  ],
+  "reconciledAndVerified": [
+    "question:10022622",
+    "question:10023068",
+    "question:10023070",
+    "question:10023071",
+    "question:10023072",
+    "question:10023076",
+    "question:10023077",
+    "question:10023103",
+    "question:10023156",
+    "question:10023163",
+    "question:10023204",
+    "question:10023649"
+  ],
+  "rootCause": "Single-choice answers are persisted as JSON text arrays in the question table, while the live after-state comparison only decoded MULTIPLE values. For five SINGLE questions, the database content was updated, but the final comparison treated the serialized answer as a string and did not mark the matching revision archive applied.",
+  "resolution": "Extended the live and proposal logical projections to normalize both SINGLE and MULTIPLE answer arrays. Preflight confirmed exact revision archives and exact live after content, then reran the same guarded segment to complete the five missing applied_at markers.",
+  "remainingHeld": [],
+  "recoveryReport": "docs/teaching/2026-11-12/batches/147/segments/segment-f668e5bbea23/applications.json",
+  "verification": {
+    "exactAfterMatches": 12,
+    "archivesApplied": 12,
+    "historyPreserved": true,
+    "idempotent": true,
+    "humanApproval": false,
+    "releaseApproval": false
+  },
+  "notes": [
+    "The original apply command returned a partial status-check failure after committing database changes and did not write the normal application report.",
+    "The reconciliation verified matching before/after/evidence archives for all 12 revisions and did not overwrite any content.",
+    "The successful follow-up records exact after-state matching, complete applied revision archives, unchanged answer/exam history checksums, and idempotence."
+  ]
+}

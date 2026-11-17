@@ -1,0 +1,63 @@
+{
+  "batch": "130",
+  "originalSegment": "segment-ec3053f943d8",
+  "originalAttemptStatus": "PARTIAL_BASELINE_DRIFT",
+  "originalAttemptObservedAt": "2026-11-12",
+  "originalAttemptRows": 20,
+  "originalAttemptAppliedOrAlreadyApplied": [
+    "question:10000712",
+    "question:10008739",
+    "question:10010487",
+    "question:10010493",
+    "question:10010500",
+    "question:10010550",
+    "question:10010594",
+    "question:10010614",
+    "question:10010641",
+    "question:10010713",
+    "question:10010721",
+    "question:10010730",
+    "question:10010804",
+    "question:10010805",
+    "question:10010816",
+    "question:10010851",
+    "question:10011732",
+    "question:10012340",
+    "question:10012369"
+  ],
+  "originalAttemptBaselineChanged": [
+    "question:10010382"
+  ],
+  "recoverySegment": "segment-467969a137b9",
+  "recoveredAndVerified": [
+    "question:10000712",
+    "question:10008739",
+    "question:10010487",
+    "question:10010493",
+    "question:10010500",
+    "question:10010550",
+    "question:10010594",
+    "question:10010614",
+    "question:10010641",
+    "question:10010713",
+    "question:10010721",
+    "question:10010730",
+    "question:10010804",
+    "question:10010805",
+    "question:10010816",
+    "question:10010851",
+    "question:10011732",
+    "question:10012340",
+    "question:10012369"
+  ],
+  "remainingHeld": [
+    "question:10010382"
+  ],
+  "holdReason": "The frozen source baseline differs from the live database. Live stem, answer and analysis currently match the proposed after text, but there is no archive marker for this revision. Do not synthesize application history or overwrite without human baseline reconciliation.",
+  "recoveryReport": "docs/teaching/2026-11-12/batches/130/segments/segment-467969a137b9/applications.json",
+  "notes": [
+    "The first apply command returned a failure after the migration transaction and did not write its normal report. The recovery segment recorded only the 19 rows with matching applied revision archives.",
+    "The recovery execution verified exact after content, archive counts, idempotence and unchanged answer/exam history checksums.",
+    "Human approval and release approval remain false."
+  ]
+}

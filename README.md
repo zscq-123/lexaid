@@ -4,16 +4,18 @@ LexAid 面向需要把法律规则用到具体案情中的学习者。在工作�
 
 在「错题本」选择「情景迁移练习」，先解答新案情，再查看判断依据与两道题的事实差异。练习记录归当前学习者所有。在「交流天地」选择「讨论知识库」，可按关键词检索观点整理，并从每条要点返回原帖或具体评论。
 
+2026-11-11 学习质量升级：加入题库隔离与复核门槛，统一实际作答、重复与跳过的统计口径，支持法律名称与条号精确检索、版本对照、搜索选材组卷、六个争点学习提纲和带标签的错题笔记。升级步骤及验证边界见[升级说明](docs/learning-quality-upgrade-2026-11-11.md)。
+
 ## 功能模块
 
 - 法条检索 / 案例查询 / 学者观点导航：多条件检索、详情、标签、收藏、笔记、关联内容跳转
 - 法条检索可按法域和法律展开原始目录，逐级选择编、分编、章、节。选择上级会包含其下属条文。
-- 模拟答题支持按法学门类、科目以及有明确依据的法典和编组卷。当前题库有 8 个门类，19,007 题归入具体科目，701 题涉及多学科，5,920 题待判定。5,480 题有明确的编级依据，一题可关联多编。
+- 模拟答题支持按法学门类、科目以及有明确依据的法典和编组卷。原始收录共 25,628 题（含 30 道教学种子题）；可练数量由质量规则动态计算，组卷页展示可练数量与待复核原因。来源任务标签与未分类数据不会被当作已审核科目。
 - 答题进度：组卷页显示当前筛选范围内的已做题数和剩余题数。交卷后按题去重，答错和待评分均计入，空白答案不计入。答题页实时显示本卷已答题数。
 - 模拟考试独立计时，支持历年真题、模拟客观卷和主观案例卷，可设置 1–480 分钟。交卷规则、评分及来源见[正式考试题库](datasets/formal-exams/README.md)。
 - 日常练习支持随机组卷或按法条、案例等关联内容组卷，可在任意一道题交卷，随后查看成绩、逐题解析和错题记录。
 - AI 辅助问答：可携带上下文提问，回答附引用来源；未配置 API Key 时降级为本地检索结果
-- 学习笔记：对任意实体记笔记，仅本人可增删改
+- 学习笔记：关联法条、案例、观点或题目，仅本人可增删改；支持正文中的 #标签 筛选，可从错题本记错因，再从笔记回到对应题目
 - 学习资源库：上传 PDF、DOCX、PPTX、XLSX、TXT 或 Markdown 学习资料，可保存为仅自己可见的个人资源，也可公开到社区供所有登录用户检索和下载
 - 交流天地：登录后可发布文字或多图动态，排列封面及图片顺序，选择「全部用户」或「仅好友」，并点赞、评论。通讯录支持搜索账号或昵称、填写验证消息、接受或拒绝申请、删除好友。
 - 私信：好友之间可发送实时文字、图片、语音和 PDF/DOCX/PPTX/XLSX/TXT/MD 文件，支持会话列表、未读提醒、历史消息分页、已读回执和会话信息面板（查找聊天内容、消息免打扰、置顶聊天、清空聊天记录）；消息右键菜单支持复制、放大阅读、翻译、搜一搜、转发、收藏、多选、提醒、引用、撤回、单条删除和清空记录。发送后 2 分钟内可撤回消息。消息通过 WebSocket 推送，连接不可用时自动降级为轮询同步。
@@ -70,11 +72,19 @@ docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql -u "$MYSQL_
 docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql -u "$MYSQL_USER" "$MYSQL_DATABASE"' < backend/src/main/resources/community-discussion-summaries.sql
 docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql -u "$MYSQL_USER" "$MYSQL_DATABASE"' < backend/src/main/resources/resources.sql
 docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql -u "$MYSQL_USER" "$MYSQL_DATABASE"' < backend/src/main/resources/messages.sql
+docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql --default-character-set=utf8mb4 -u "$MYSQL_USER" "$MYSQL_DATABASE"' < backend/src/main/resources/question-quality.sql
+docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql --default-character-set=utf8mb4 -u "$MYSQL_USER" "$MYSQL_DATABASE"' < backend/src/main/resources/question-seed-corrections.sql
+docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql --default-character-set=utf8mb4 -u "$MYSQL_USER" "$MYSQL_DATABASE"' < backend/src/main/resources/question-seed-review-20261112.sql
+docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql --default-character-set=utf8mb4 -u "$MYSQL_USER" "$MYSQL_DATABASE"' < backend/src/main/resources/question-structure-review-20261112.sql
 gzip -dc datasets/question-legal-subjects.sql.gz | docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql --default-character-set=utf8mb4 -u "$MYSQL_USER" "$MYSQL_DATABASE"'
 docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql --default-character-set=utf8mb4 -u "$MYSQL_USER" "$MYSQL_DATABASE"' < backend/src/main/resources/mock-exams.sql
 gzip -dc datasets/formal-exams/formal-exam-bank.sql.gz | docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql --default-character-set=utf8mb4 -u "$MYSQL_USER" "$MYSQL_DATABASE"'
 gzip -dc datasets/formal-exams/formal-exam-bank-reviewed.sql.gz | docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql --default-character-set=utf8mb4 -u "$MYSQL_USER" "$MYSQL_DATABASE"'
+docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql --default-character-set=utf8mb4 -u "$MYSQL_USER" "$MYSQL_DATABASE"' < backend/src/main/resources/mock-exam-content-review-20261112.sql
+docker exec -i lexaid-mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" mysql --default-character-set=utf8mb4 -u "$MYSQL_USER" "$MYSQL_DATABASE"' < backend/src/main/resources/question-teaching-batch-001.sql
 ```
+
+教学题改写按批次维护，范围和进度见 [`datasets/question-explanations/README.md`](datasets/question-explanations/README.md)。第 001 批修订 216 道 LeCoQA 问题题的答案与解析，并补齐其中 9 道的学科分类；必须在学科映射导入后执行。迁移核对原文、分类和内容哈希，保留修订前后内容，输出应用或跳过原因；AI 交叉复核不会自动建立人工审核记录或解除外部题库质量门禁。
 
 ```bash
 cd backend
@@ -216,7 +226,7 @@ java -jar backend/target/lexaid-backend-1.0.0.jar
 
 交流模块的跨账号回归脚本会在指定的测试后端注册三个用户。连接独立测试库的后端启动后，运行 `COMMUNITY_TEST_API=http://127.0.0.1:18081/api node scripts/community-check.mjs`，可验证发帖、图片读取、好友审批、撤销好友权限与删帖。
 
-资源库的跨账号回归脚本会注册两个用户，验证个人资源隔离、公开资源可见、编辑与删除权限、下载计数、格式校验，并上传一个 21 MB 文件确认没有应用层大小上限。运行 `RESOURCE_TEST_API=http://127.0.0.1:18081/api node scripts/resource-check.mjs`。
+资源库的跨账号回归脚本会注册两个用户，验证个人资源隔离、公开资源可见、编辑与删除权限、下载计数、格式校验，并上传一个 21 MB 文件验证大文件传输。运行 `RESOURCE_TEST_API=http://127.0.0.1:18081/api node scripts/resource-check.mjs`。
 
 私信回归脚本会注册三个用户、建立好友关系，验证好友限制、WebSocket 实时送达、已读回执、图片/语音/文件消息、附件下载权限、撤回、会话设置、聊天内容查找、清空聊天记录、引用、转发、收藏、单条删除、提醒、会话列表、历史记录和删除好友后的发送限制。脚本使用全局 WebSocket，需 Node.js 22+；运行 `MESSAGES_TEST_API=http://127.0.0.1:18081/api node scripts/messages-check.mjs`。
 
@@ -290,6 +300,6 @@ lexaid/
 
 - 若 8080 端口被其他项目占用，可使用上述环境变量同步调整后端端口和前端代理目标。
 - 「学者观点」同时包含原有教学观点和可追溯的论文记录。选中「仅看论文」即可查阅论文。
-- 资源库不设置应用层文件大小上限，图片上传仍受单张 4 MB 限制；实际可上传大小取决于服务器内存、MySQL 的 `max_allowed_packet` 与存储空间。
+- 资源库和私信文档的单文件上限为 100 MB；图片上传仍受单张 4 MB 限制，语音消息上限为 20 MB。
 - 私信仅允许好友之间发送；图片消息会重新编码并限制为 4 MB，语音消息支持 1–300 秒（最大 20 MB），文件消息沿用资源库支持的文档类型且不设应用层大小限制；实际上限同样取决于服务器与反向代理配置。WebSocket 连接使用一次性短期票据，不把 JWT 放入连接地址；桌面端等不支持 WebSocket 的环境会自动使用轮询同步。
 - 题库可能依据历史法律版本制作，不可将参考答案直接视为现行法律意见；数据来源、许可和未直接再发布的数据集见 [`datasets/README.md`](datasets/README.md)。

@@ -1,0 +1,39 @@
+{
+  "batch": "026",
+  "database": "lexaid",
+  "segments": [
+    {
+      "segment": "segment-dbfec21947bf",
+      "migration": "backend/src/main/resources/teaching-batch-026-segment-dbfec21947bf.sql",
+      "migrationSha256": "3f21d1a79a4faaa8aafbd2031bd7188f8f244c47b9cba84331c109316484d474",
+      "exactAfterMatches": 2,
+      "historyPreserved": true,
+      "idempotent": true,
+      "releaseApproval": false
+    }
+  ],
+  "records": [
+    {
+      "target": "question:10016941",
+      "id": 10016941,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "4dd0570440f13fc8377f21f8b850df742c00d08410678380aea8748d751cc5a8",
+      "afterHash": "4dd0570440f13fc8377f21f8b850df742c00d08410678380aea8748d751cc5a8",
+      "revisionKey": "2026-11-12-teaching-026-10016941"
+    },
+    {
+      "target": "mock_exam_bank:1340274",
+      "id": 1340274,
+      "table": "mock_exam_bank",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "aa0634313ec9630f2aadf70381d5447fb6ada2a844cd6049b1fe37d7048d152e",
+      "afterHash": "aa0634313ec9630f2aadf70381d5447fb6ada2a844cd6049b1fe37d7048d152e",
+      "revisionKey": "2026-11-12-teaching-026-mock-1340274"
+    }
+  ],
+  "exactAfterMatches": 2,
+  "historyPreserved": true,
+  "idempotent": true,
+  "releaseApproval": false
+}

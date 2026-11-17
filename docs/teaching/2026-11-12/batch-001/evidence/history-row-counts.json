@@ -1,0 +1,15 @@
+{
+  "local": {
+    "database": "lexaid",
+    "answerRecords": 0,
+    "examSessions": 2,
+    "mockItems": 0,
+    "mockBank": 658,
+    "formalApprovals": 0
+  },
+  "isolated": {
+    "database": "lexaid_upgrade_20261111_check",
+    "answerRecords": 42,
+    "examSessions": 47
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "batch": "099",
+  "segment": "segment-a7e1cb6c97aa",
+  "records": 49,
+  "groups": 49,
+  "tables": {
+    "question": 49
+  },
+  "eligibleTargets": [
+    "question:10011395",
+    "question:10011396",
+    "question:10011397",
+    "question:10011398",
+    "question:10011399",
+    "question:10011400",
+    "question:10011401",
+    "question:10011402",
+    "question:10011403",
+    "question:10011404",
+    "question:10011405",
+    "question:10011406",
+    "question:10011407",
+    "question:10011408",
+    "question:10011409",
+    "question:10011410",
+    "question:10011411",
+    "question:10011412",
+    "question:10011413",
+    "question:10011414",
+    "question:10011416",
+    "question:10011417",
+    "question:10011418",
+    "question:10011419",
+    "question:10011420",
+    "question:10011421",
+    "question:10011422",
+    "question:10011423",
+    "question:10011424",
+    "question:10011425",
+    "question:10011426",
+    "question:10011427",
+    "question:10011428",
+    "question:10011429",
+    "question:10011430",
+    "question:10011431",
+    "question:10011432",
+    "question:10011433",
+    "question:10011434",
+    "question:10011435",
+    "question:10011436",
+    "question:10011437",
+    "question:10011438",
+    "question:10011439",
+    "question:10011440",
+    "question:10011441",
+    "question:10011442",
+    "question:10011443",
+    "question:10011444"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10011415",
+      "targets": [
+        "question:10011415"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10011415"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-099-segment-a7e1cb6c97aa.sql",
+  "migrationSha256": "04872002040b5026dd767417eb63be393b08a5cf796eaf5df6d57e4b78642c86"
+}

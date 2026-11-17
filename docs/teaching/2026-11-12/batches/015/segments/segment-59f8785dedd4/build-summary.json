@@ -1,0 +1,111 @@
+{
+  "batch": "015",
+  "segment": "segment-59f8785dedd4",
+  "records": 4,
+  "groups": 2,
+  "tables": {
+    "question": 2,
+    "mock_exam_bank": 2
+  },
+  "eligibleTargets": [
+    "question:10016920",
+    "mock_exam_bank:1340253",
+    "question:10016973",
+    "mock_exam_bank:1340306"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10016769",
+      "targets": [
+        "question:10016769",
+        "mock_exam_bank:1340102"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340102",
+        "held for human/evidence review question:10016769"
+      ]
+    },
+    {
+      "contentGroup": "question:10017037",
+      "targets": [
+        "question:10017037",
+        "mock_exam_bank:1340370"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340370",
+        "held for human/evidence review question:10017037"
+      ]
+    },
+    {
+      "contentGroup": "question:10017103",
+      "targets": [
+        "question:10017103",
+        "mock_exam_bank:1340436"
+      ],
+      "reasons": [
+        "missing proposal mock_exam_bank:1340436",
+        "missing proposal question:10017103"
+      ]
+    },
+    {
+      "contentGroup": "question:10017108",
+      "targets": [
+        "question:10017108",
+        "mock_exam_bank:1340441"
+      ],
+      "reasons": [
+        "missing proposal mock_exam_bank:1340441",
+        "missing proposal question:10017108"
+      ]
+    },
+    {
+      "contentGroup": "question:10017110",
+      "targets": [
+        "question:10017110",
+        "mock_exam_bank:1340443"
+      ],
+      "reasons": [
+        "missing proposal mock_exam_bank:1340443",
+        "missing proposal question:10017110"
+      ]
+    },
+    {
+      "contentGroup": "question:10017131",
+      "targets": [
+        "question:10017131",
+        "mock_exam_bank:1340464"
+      ],
+      "reasons": [
+        "missing proposal mock_exam_bank:1340464",
+        "missing proposal question:10017131"
+      ]
+    },
+    {
+      "contentGroup": "question:10017134",
+      "targets": [
+        "question:10017134",
+        "mock_exam_bank:1340467"
+      ],
+      "reasons": [
+        "missing proposal mock_exam_bank:1340467",
+        "missing proposal question:10017134"
+      ]
+    },
+    {
+      "contentGroup": "question:10017160",
+      "targets": [
+        "question:10017160",
+        "mock_exam_bank:1340493"
+      ],
+      "reasons": [
+        "missing proposal mock_exam_bank:1340493",
+        "missing proposal question:10017160"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-015-segment-59f8785dedd4.sql",
+  "migrationSha256": "e78da560b1358206723328dfe022434758840084757c561c7d5312adef3045dd"
+}

@@ -21,9 +21,10 @@ const score = computed(() => props.question.score ??
 const maximum = computed(() => props.question.maxScore ?? (props.question.type === 'SHORT' ? 10 : 1))
 const labels = {
   PENDING: '等待 DeepSeek 评分', UNAVAILABLE: '评分暂不可用',
-  NO_REFERENCE: '缺少参考答案', LEGACY_UNGRADED: '历史作答未评分', BLANK: '未作答'
+  NO_REFERENCE: '缺少参考答案', LEGACY_UNGRADED: '历史作答未评分', BLANK: '未作答', SKIPPED: '未作答 / 跳过', QUARANTINED: '待复核 · 暂停评分'
 }
 const label = computed(() => {
+  if (props.question.practiceEligible === false && score.value != null) return '历史评分 · 仅供回顾'
   if (status.value === 'AI_GRADED') {
     if (score.value === maximum.value) return '满分'
     return score.value > 0 ? '部分得分' : '未得分'

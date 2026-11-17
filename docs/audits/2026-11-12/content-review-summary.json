@@ -1,0 +1,27 @@
+{
+  "lecoqa": {
+    "total": 1543,
+    "fullFieldsReadByAI": 1543,
+    "shards": {
+      "backend": 515,
+      "frontend": 515,
+      "legal": 513
+    },
+    "semanticDecisions": {
+      "CONFIRMED_DEFECT": 202,
+      "REQUIRES_MORE_VERIFICATION": 726,
+      "NO_SPECIFIC_DEFECT_IDENTIFIED": 615
+    },
+    "combinedDecisions": {
+      "CONFIRMED_DEFECT": 216,
+      "REQUIRES_MORE_VERIFICATION": 715,
+      "NO_SPECIFIC_DEFECT_IDENTIFIED": 612
+    },
+    "priorFindingsRetainedBeyondShardDecision": 14,
+    "legalReasoningFullyVerified": 0,
+    "confirmedIssues": 204
+  },
+  "lexevalIndependentCompleteRead": 87,
+  "humanApprovalsCreated": 0,
+  "scope": "Complete reading records are not full legal certification; source consistency and individual issue findings remain separate."
+}

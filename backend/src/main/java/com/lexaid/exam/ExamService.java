@@ -39,6 +39,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -68,6 +69,10 @@ public class ExamService {
 
     public List<SubjectCount> subjectCounts() {
         return questionMapper.subjectCounts();
+    }
+
+    public List<QuestionMapper.QualityCount> qualityCounts() {
+        return questionMapper.qualityCounts();
     }
 
     public List<CodeBookCount> codeBookCounts() {
@@ -105,11 +110,11 @@ public class ExamService {
             }
         }
         int remain = count - chosen.size();
-        if (remain > 0) {
+        if (remain > 0 && !StringUtils.hasText(req.getSourceType())) {
             chosen.addAll(questionMapper.draw(req, null, chosen, remain));
         }
         if (chosen.isEmpty()) {
-            throw new BizException("没有符合条件的题目");
+            throw new BizException("没有符合条件的可练题；关联内容可能尚未配题，或题目正在复核。");
         }
 
         Map<String, Object> config = new LinkedHashMap<>();
@@ -170,6 +175,7 @@ public class ExamService {
     public List<ExamQuestionVO> questionsOf(Long sessionId) {
         ExamSession session = requireOwnedSession(sessionId);
         List<Question> questions = loadQuestions(session);
+        requirePracticeQuestions(questions);
         var books = bookMappings(questions);
         return questions.stream().map(q -> toExamQuestion(q, books.getOrDefault(q.getId(), List.of()))).toList();
     }
@@ -182,6 +188,7 @@ public class ExamService {
         ExamSession session = lockOwnedSession(sessionId);
         if (session.getEndTime() != null) return resultOf(sessionId);
         List<Question> questions = loadQuestions(session);
+        requirePracticeQuestions(questions);
         Map<Long, String> answers = new HashMap<>();
         for (AnswerItem answer : req.getAnswers()) {
             answers.put(answer.getQuestionId(), answer.getAnswer());
@@ -243,24 +250,30 @@ public class ExamService {
                 .stream().collect(Collectors.toMap(AnswerRecord::getQuestionId, r -> r, (older, newer) -> newer));
         int maxScore = 0;
         int gradedCount = 0;
+        int score = 0;
+        int correct = 0;
         List<AnswerDetailVO> details = new ArrayList<>();
         List<Question> questions = loadQuestions(session);
+        Set<Long> eligible = eligibleQuestionIds(questions);
         var books = bookMappings(questions);
         for (Question q : questions) {
             AnswerRecord ar = records.get(q.getId());
-            QuestionGrade grade = QuestionGrade.stored(ar);
+            boolean available = eligible.contains(q.getId()) && QuestionGrade.referenceCurrent(q, ar);
+            QuestionGrade grade = QuestionGrade.historical(ar, q.getType(), available);
             int max = QuestionGrade.maxPoints(q.getType());
             if (grade.points() != null) {
                 maxScore += max;
                 gradedCount++;
+                score += grade.points();
+                if (Boolean.TRUE.equals(ar.getIsCorrect())) correct++;
             }
             details.add(new AnswerDetailVO(q.getId(), q.getType(), q.getStem(), parseOptions(q),
-                    ar == null ? null : ar.getUserAnswer(), displayAnswer(q),
-                    ar == null ? null : ar.getIsCorrect(), q.getAnalysis(), relatedItems(q.getId()),
+                    ar == null ? null : ar.getUserAnswer(), available ? displayAnswer(q) : null,
+                    ar == null || "SKIPPED".equals(grade.status()) ? null : ar.getIsCorrect(), available ? q.getAnalysis() : null, relatedItems(q.getId()),
                     grade.points(), max, grade.status(), grade.feedback(), q.getDiscipline(), q.getSubject(),
-                    books.getOrDefault(q.getId(), List.of())));
+                    books.getOrDefault(q.getId(), List.of()), available));
         }
-        return new ExamResultVO(sessionId, session.getScore(), session.getTotal(), session.getCorrect(),
+        return new ExamResultVO(sessionId, score, session.getTotal(), correct,
                 gradedCount, details, maxScore);
     }
 
@@ -280,9 +293,14 @@ public class ExamService {
      * 错题本：最近错题分页（Java 内存分页）
      */
     public PageResult<WrongQuestionVO> wrongQuestions(long page, long size, boolean all) {
+        return wrongQuestions(page,size,all,null);
+    }
+
+    public PageResult<WrongQuestionVO> wrongQuestions(long page, long size, boolean all, Long questionId) {
         List<Long> ids = all
                 ? answerRecordMapper.selectLatestAnsweredQuestionIds(UserContext.userId())
                 : answerRecordMapper.selectLatestWrongQuestionIds(UserContext.userId());
+        if (questionId != null) ids = ids.stream().filter(questionId::equals).toList();
         int from = (int) Math.min((page - 1) * size, ids.size());
         int to = (int) Math.min(page * size, ids.size());
         List<Long> pageIds = ids.subList(from, to);
@@ -290,17 +308,14 @@ public class ExamService {
             return new PageResult<>(List.of(), ids.size());
         }
         List<Question> questions = questionMapper.classifiedQuestions(pageIds);
+        Set<Long> eligible = new HashSet<>(questionMapper.eligibleIds(pageIds));
         var books = bookMappings(questions);
         Map<Long, Question> qMap = questions.stream()
                 .collect(Collectors.toMap(Question::getId, q -> q));
         // 最近一次错答内容
         Map<Long, AnswerRecord> lastAnswer = new HashMap<>();
         for (Long qid : pageIds) {
-            AnswerRecord ar = answerRecordMapper.selectOne(new LambdaQueryWrapper<AnswerRecord>()
-                    .eq(AnswerRecord::getUserId, UserContext.userId())
-                    .eq(AnswerRecord::getQuestionId, qid)
-                    .orderByDesc(AnswerRecord::getId)
-                    .last("LIMIT 1"));
+            AnswerRecord ar = answerRecordMapper.latestAnswer(UserContext.userId(), qid);
             if (ar != null) {
                 lastAnswer.put(qid, ar);
             }
@@ -312,12 +327,13 @@ public class ExamService {
                 continue;
             }
             AnswerRecord ar = lastAnswer.get(qid);
-            QuestionGrade grade = QuestionGrade.stored(ar);
+            boolean available = eligible.contains(qid) && QuestionGrade.referenceCurrent(q, ar);
+            QuestionGrade grade = QuestionGrade.historical(ar, q.getType(), available);
             vos.add(new WrongQuestionVO(q.getId(), q.getType(), q.getStem(), parseOptions(q),
-                    ar == null ? null : ar.getUserAnswer(), displayAnswer(q), q.getAnalysis(),
+                    ar == null ? null : ar.getUserAnswer(), available ? displayAnswer(q) : null, available ? q.getAnalysis() : null,
                     q.getSubject(), ar == null ? null : ar.getIsCorrect(), relatedItems(q.getId()),
                     grade.points(), QuestionGrade.maxPoints(q.getType()), grade.status(), grade.feedback(),
-                    q.getDiscipline(), q.getSubject(), books.getOrDefault(q.getId(), List.of())));
+                    q.getDiscipline(), q.getSubject(), books.getOrDefault(q.getId(), List.of()), available));
         }
         return new PageResult<>(vos, ids.size());
     }
@@ -372,6 +388,17 @@ public class ExamService {
                 .collect(Collectors.groupingBy(QuestionBook::questionId));
     }
 
+    private Set<Long> eligibleQuestionIds(List<Question> questions) {
+        if (questions.isEmpty()) return Set.of();
+        return new HashSet<>(questionMapper.eligibleIds(questions.stream().map(Question::getId).toList()));
+    }
+
+    private void requirePracticeQuestions(List<Question> questions) {
+        if (eligibleQuestionIds(questions).size() != questions.size()) {
+            throw new BizException(409, "此试卷包含正在复核的题目，请重新组卷；历史作答已保留。");
+        }
+    }
+
     private ExamQuestionVO toExamQuestion(Question q, List<QuestionBook> books) {
         return new ExamQuestionVO(q.getId(), q.getType(), q.getStem(),
                 parseOptions(q), q.getDifficulty(), q.getSubject(), relatedItems(q.getId()), q.getDiscipline(), q.getSubject(), books);
@@ -401,11 +428,13 @@ public class ExamService {
     }
 
     QuestionGrade initialGrade(Question q, String answer) {
+        if (!AnswerStatus.answered(q.getType(), answer)) {
+            return new QuestionGrade("SKIPPED", null, "未作答 / 跳过，不计入答题次数、正确率和错题本。");
+        }
         if (!StringUtils.hasText(q.getAnswer())) {
             return new QuestionGrade("NO_REFERENCE", null, "题库未提供参考答案，此题不计入得分。");
         }
         if ("SHORT".equals(q.getType())) {
-            if (!StringUtils.hasText(answer)) return new QuestionGrade("BLANK", 0, "未作答。");
             return new QuestionGrade("PENDING", null, null);
         }
         Boolean correct = grade(q, answer);

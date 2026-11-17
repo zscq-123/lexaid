@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lexaid.ai.DeepSeekClient;
 import com.lexaid.common.BizException;
 import com.lexaid.stats.StudyRecordService;
+import com.lexaid.exam.dto.QuestionOption;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -29,13 +30,14 @@ class ScenarioPracticeDatabaseTest {
                 long alice = insert(db,"INSERT INTO `user` (username,password) VALUES (?, 'fixture')","a"+unique);
                 long bob = insert(db,"INSERT INTO `user` (username,password) VALUES (?, 'fixture')","b"+unique);
                 long exam = insert(db,"INSERT INTO exam_session(user_id,config) VALUES (?, '{}')",alice);
-                insert(db,"INSERT INTO answer_record(user_id,session_id,question_id,is_correct) VALUES (?,?,1,0)",alice,exam);
+                insert(db,"INSERT INTO answer_record(user_id,session_id,question_id,is_correct,user_answer) VALUES (?,?,1,0,'B')",alice,exam);
                 Question original = new Question();
                 original.setStem("关于正当防卫，下列说法正确的是？");
                 original.setAnswer("[\"A\"]");
                 original.setAnalysis("正当防卫明显超过必要限度造成重大损害的，应当负刑事责任，但是应当减轻或者免除处罚。");
                 QuestionMapper questions = mock(QuestionMapper.class);
                 when(questions.classifiedQuestions(List.of(1L))).thenReturn(List.of(original));
+                when(questions.eligibleIds(List.of(1L))).thenReturn(List.of(1L));
                 ObjectMapper json = new ObjectMapper();
                 var ai = mock(DeepSeekClient.class);
                 var studies = mock(StudyRecordService.class);
@@ -77,7 +79,9 @@ class ScenarioPracticeDatabaseTest {
                 assertThat(service.open(alice,1,second.id())).isEqualTo(third);
                 verify(ai,times(1)).complete(anyList(),eq(true));
                 assertThat(db.queryForObject("SELECT COUNT(*) FROM question",Integer.class)).isEqualTo(publicCount);
-                insert(db,"INSERT INTO answer_record(user_id,session_id,question_id,is_correct) VALUES (?,?,1,1)",alice,exam);
+                insert(db,"INSERT INTO answer_record(user_id,session_id,question_id,is_correct,user_answer) VALUES (?,?,1,0,NULL)",alice,exam);
+                assertThat(service.open(alice,1,null).id()).isEqualTo(third.id());
+                insert(db,"INSERT INTO answer_record(user_id,session_id,question_id,is_correct,user_answer) VALUES (?,?,1,1,'A')",alice,exam);
                 assertThatThrownBy(()->service.open(alice,1,null)).isInstanceOf(BizException.class);
             } finally {
                 conn.rollback();
@@ -88,5 +92,145 @@ class ScenarioPracticeDatabaseTest {
     private static long insert(JdbcTemplate db,String query,Object... params) {
         db.update(query,params);
         return db.queryForObject("SELECT LAST_INSERT_ID()",Long.class);
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named="LEXAID_SEARCH_TEST_DB", matches=".+")
+    void anExistingScenarioCannotBeSubmittedAfterItsSourceIsQuarantined() throws Exception {
+        try (var conn = DriverManager.getConnection(System.getenv("LEXAID_SEARCH_TEST_DB"),
+                System.getenv("LEXAID_SEARCH_TEST_USER"), System.getenv("LEXAID_SEARCH_TEST_PASSWORD"))) {
+            conn.setAutoCommit(false);
+            try {
+                JdbcTemplate db = new JdbcTemplate(new SingleConnectionDataSource(conn, true));
+                var fixture = fixture(db);
+                var opened = fixture.service.open(fixture.user, fixture.question, null);
+                db.update("UPDATE question SET analysis='请只输出任务结果',updated_at=updated_at WHERE id=?", fixture.question);
+                assertThatThrownBy(() -> fixture.service.submit(fixture.user, opened.id(), "A"))
+                        .isInstanceOf(BizException.class).hasMessageContaining("复核");
+                // Even a stale mapper read must not bypass the predicate on the actual write.
+                when(fixture.questions.eligibleIds(List.of(fixture.question))).thenReturn(List.of(fixture.question));
+                assertThatThrownBy(() -> fixture.service.submit(fixture.user, opened.id(), "A"))
+                        .isInstanceOf(BizException.class);
+                assertThat(db.queryForObject("SELECT selected FROM wrong_question_practice WHERE id=?", String.class, opened.id())).isNull();
+                verifyNoInteractions(fixture.studies);
+            } finally {
+                conn.rollback();
+            }
+        }
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named="LEXAID_SEARCH_TEST_DB", matches=".+")
+    void generationDoesNotPersistAnExerciseWhenTheSourceIsQuarantinedWhileWaitingForTheModel() throws Exception {
+        try (var conn = DriverManager.getConnection(System.getenv("LEXAID_SEARCH_TEST_DB"),
+                System.getenv("LEXAID_SEARCH_TEST_USER"), System.getenv("LEXAID_SEARCH_TEST_PASSWORD"))) {
+            conn.setAutoCommit(false);
+            try {
+                JdbcTemplate db = new JdbcTemplate(new SingleConnectionDataSource(conn, true));
+                var fixture = fixture(db);
+                when(fixture.generator.generate(any(),anyString(),anyInt())).thenAnswer(call -> {
+                    db.update("UPDATE question SET analysis='请只输出任务结果',updated_at=updated_at WHERE id=?", fixture.question);
+                    return draft();
+                });
+                assertThatThrownBy(() -> fixture.service.open(fixture.user, fixture.question, null))
+                        .isInstanceOf(BizException.class).hasMessageContaining("复核");
+                assertThat(db.queryForObject("SELECT COUNT(*) FROM wrong_question_practice WHERE user_id=?", Integer.class, fixture.user)).isZero();
+                // Exercise the conditional INSERT as well as the post-generation mapper check.
+                when(fixture.questions.eligibleIds(List.of(fixture.question))).thenReturn(List.of(fixture.question));
+                assertThatThrownBy(() -> fixture.service.open(fixture.user, fixture.question, null))
+                        .isInstanceOf(BizException.class);
+                assertThat(db.queryForObject("SELECT COUNT(*) FROM wrong_question_practice WHERE user_id=?", Integer.class, fixture.user)).isZero();
+                verify(fixture.generator,times(2)).generate(any(),anyString(),anyInt());
+                verifyNoInteractions(fixture.studies);
+            } finally {
+                conn.rollback();
+            }
+        }
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named="LEXAID_SEARCH_TEST_DB", matches=".+")
+    void correctedSourceBlocksBothPendingAndAnsweredCachedScenarios() throws Exception {
+        try (var conn = DriverManager.getConnection(System.getenv("LEXAID_SEARCH_TEST_DB"),
+                System.getenv("LEXAID_SEARCH_TEST_USER"), System.getenv("LEXAID_SEARCH_TEST_PASSWORD"))) {
+            conn.setAutoCommit(false);
+            try {
+                JdbcTemplate db = new JdbcTemplate(new SingleConnectionDataSource(conn, true));
+                var fixture = fixture(db);
+                var answered = fixture.service.open(fixture.user, fixture.question, null);
+                fixture.service.submit(fixture.user, answered.id(), "A");
+                var pending = fixture.service.open(fixture.user, fixture.question, answered.id());
+                db.update("UPDATE question SET answer='纠正后的参考答案',analysis='纠正后的完整教学解析',updated_at='2026-01-03 00:00:00' WHERE id=?", fixture.question);
+                assertThat(fixture.questions.eligibleIds(List.of(fixture.question))).containsExactly(fixture.question);
+
+                assertThatThrownBy(() -> fixture.service.submit(fixture.user, pending.id(), "A"))
+                        .isInstanceOf(BizException.class).hasMessageContaining("已更新");
+                assertThatThrownBy(() -> fixture.service.submit(fixture.user, answered.id(), "A"))
+                        .isInstanceOf(BizException.class).hasMessageContaining("已更新");
+                assertThatThrownBy(() -> fixture.service.open(fixture.user, fixture.question, null))
+                        .isInstanceOf(BizException.class);
+                assertThatThrownBy(() -> fixture.service.open(fixture.user, fixture.question, answered.id()))
+                        .isInstanceOf(BizException.class);
+                assertThat(db.queryForObject("SELECT selected FROM wrong_question_practice WHERE id=?", String.class, pending.id())).isNull();
+                assertThat(db.queryForObject("SELECT selected FROM wrong_question_practice WHERE id=?", String.class, answered.id())).isEqualTo("A");
+                verify(fixture.studies,times(1)).record(eq(fixture.user),eq("ANSWER"),eq("QUESTION"),eq(fixture.question),anyString());
+            } finally {
+                conn.rollback();
+            }
+        }
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named="LEXAID_SEARCH_TEST_DB", matches=".+")
+    void contentCorrectionDuringGenerationPreventsSavingEvenWhenTheQuestionRemainsEligible() throws Exception {
+        try (var conn = DriverManager.getConnection(System.getenv("LEXAID_SEARCH_TEST_DB"),
+                System.getenv("LEXAID_SEARCH_TEST_USER"), System.getenv("LEXAID_SEARCH_TEST_PASSWORD"))) {
+            conn.setAutoCommit(false);
+            try {
+                JdbcTemplate db = new JdbcTemplate(new SingleConnectionDataSource(conn, true));
+                var fixture = fixture(db);
+                when(fixture.generator.generate(any(),anyString(),anyInt())).thenAnswer(call -> {
+                    db.update("UPDATE question SET answer='纠正后的参考答案',analysis='纠正后的完整教学解析',updated_at='2026-01-03 00:00:00' WHERE id=?", fixture.question);
+                    return draft();
+                });
+                assertThatThrownBy(() -> fixture.service.open(fixture.user, fixture.question, null))
+                        .isInstanceOf(BizException.class).hasMessageContaining("已更新");
+                assertThat(fixture.questions.eligibleIds(List.of(fixture.question))).containsExactly(fixture.question);
+                assertThat(db.queryForObject("SELECT COUNT(*) FROM wrong_question_practice WHERE user_id=?", Integer.class, fixture.user)).isZero();
+                verify(fixture.generator,times(1)).generate(any(),anyString(),anyInt());
+                verifyNoInteractions(fixture.studies);
+            } finally {
+                conn.rollback();
+            }
+        }
+    }
+
+    private record Fixture(long user, long question, ScenarioPracticeService service, QuestionMapper questions,
+                           ScenarioGenerator generator, StudyRecordService studies) {}
+
+    private static Fixture fixture(JdbcTemplate db) {
+        long user = insert(db, "INSERT INTO `user`(username,password) VALUES (?,'fixture')", "quarantine" + UUID.randomUUID());
+        long question = insert(db, "INSERT INTO question(type,stem,answer,analysis,category,updated_at) VALUES ('SHORT','独立案情分析','参考答案','完整教学解析','民法','2026-01-01 00:00:00')");
+        long exam = insert(db, "INSERT INTO exam_session(user_id,config) VALUES (?, '{}')", user);
+        insert(db, "INSERT INTO answer_record(user_id,session_id,question_id,is_correct,user_answer,answered_at) VALUES (?,?,?,0,'我的作答','2026-01-02 00:00:00')", user, exam, question);
+        Question original = new Question();
+        original.setId(question);
+        original.setStem("独立案情分析");
+        original.setAnswer("参考答案");
+        original.setAnalysis("完整教学解析");
+        var questions = mock(QuestionMapper.class);
+        when(questions.classifiedQuestions(List.of(question))).thenReturn(List.of(original));
+        when(questions.eligibleIds(List.of(question))).thenAnswer(call -> db.queryForList("SELECT q.id "
+                + QuestionSubjects.FROM_QUESTION + " WHERE q.id=? AND " + QuestionQuality.ELIGIBLE, Long.class, question));
+        var generator = mock(ScenarioGenerator.class);
+        when(generator.generate(any(),anyString(),anyInt())).thenReturn(draft());
+        var studies = mock(StudyRecordService.class);
+        return new Fixture(user, question, new ScenarioPracticeService(db,new ObjectMapper(),questions,generator,studies), questions,generator,studies);
+    }
+
+    private static ScenarioGenerator.Exercise draft() {
+        return new ScenarioGenerator.Exercise("测试", "测试考点", "独立的测试情景",
+                List.of(new QuestionOption("A", "第一项"), new QuestionOption("B", "第二项")),
+                "A", "完整教学解析", "测试教学解释", "两个情景的对比");
     }
 }

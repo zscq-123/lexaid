@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lexaid.ai.DeepSeekClient;
 import com.lexaid.common.BizException;
+import com.lexaid.content.LegalCitation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -41,7 +42,7 @@ public class SiteQueryPlanner {
             .flatMap(words -> Arrays.stream(words.split("[|]"))).distinct()
             .sorted(Comparator.comparingInt(String::length).reversed()).map(Pattern::quote)
             .collect(java.util.stream.Collectors.joining("|")), Pattern.CASE_INSENSITIVE);
-    private static final Pattern ARTICLE = Pattern.compile("第\\s*([0-9]{1,4}|[零〇一二三四五六七八九十百千]{1,12})\\s*条");
+    private static final Pattern ARTICLE = Pattern.compile("第\\s*([0-9]{1,4}|[零〇一二三四五六七八九十百千]{1,12})\\s*条(?:之([0-9]{1,4}|[零〇一二三四五六七八九十百千]{1,12}))?");
     private static final Pattern FILLER = Pattern.compile("请问|帮我|能不能|能否|查一下|查找|查询|搜索|找找|给我|列出|最近|最新|我的|站内|全站|关于|有关|相关的?|有哪些|有没有|是什么|有什么|告诉我|[，,。？?!！：:；;、]|的");
     private final DeepSeekClient client;
     private final ObjectMapper mapper;
@@ -60,6 +61,16 @@ public class SiteQueryPlanner {
 
     public Plan plan(String question, String scope, List<String> recentQuestions) {
         Plan fallback = local(question, scope);
+        // An explicit citation must not be broadened by a model's query rewrite.
+        var citation = LegalCitation.parse(question);
+        if ((scope == null || "PROVISION".equals(scope)) && citation != null
+                && (fallback.scopes().isEmpty() || fallback.scopes().equals(List.of("PROVISION")))) {
+            List<String> terms = new ArrayList<>(List.of(citation.law(),citation.article(),citation.numericArticle()));
+            if (citation.versionYear() != null) terms.add(citation.versionYear() + "年版");
+            return new Plan(terms, List.of("PROVISION"));
+        }
+        // Rewriting a comparison must not silently discard one of its named statutes/articles.
+        if (LegalCitation.hasMultipleCitations(question)) return fallback;
         if (!client.isConfigured() || question.length() < 7) return fallback;
         String instructions = """
                 将提问改写为本站检索计划。只输出 JSON {"terms":["关键词"],"scopes":["来源"]}。
@@ -145,13 +156,15 @@ public class SiteQueryPlanner {
     }
 
     private static LinkedHashSet<String> literals(String text) {
-        LinkedHashSet<String> terms = new LinkedHashSet<>();
+        LinkedHashSet<String> terms = new LinkedHashSet<>(LegalCitation.literalTerms(text));
         Matcher titles = QUOTED.matcher(text);
         while (titles.find()) addTerm(terms, titles.group(1));
         Matcher articles = ARTICLE.matcher(text);
         while (articles.find()) {
             if (Character.isDigit(articles.group(1).charAt(0))) {
-                addTerm(terms, "第" + chineseNumber(Integer.parseInt(articles.group(1))) + "条");
+                addTerm(terms, "第" + chineseNumber(Integer.parseInt(articles.group(1))) + "条"
+                        + (articles.group(2) == null ? "" : "之" + (articles.group(2).matches("[0-9]+")
+                        ? chineseNumber(Integer.parseInt(articles.group(2))) : articles.group(2))));
             }
             addTerm(terms, articles.group().strip());
             String[] leading = FILLER.split(text.substring(0, articles.start()));

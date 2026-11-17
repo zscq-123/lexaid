@@ -38,7 +38,11 @@ public class ProvisionService {
                                         long page, long size, String code, String path) {
         LambdaQueryWrapper<Provision> qw = new LambdaQueryWrapper<>();
         outline.filter(qw, jurisdiction, code, path);
-        if (StringUtils.hasText(keyword)) {
+        LegalCitation citation = LegalCitation.parse(keyword);
+        if (citation != null) {
+            qw.in(Provision::getLawName,citation.lawNames()).in(Provision::getArticleNo,citation.articleNames());
+            if (citation.versionYear() != null) qw.apply("(YEAR(promulgation_date)={0} OR YEAR(effective_date)={0})",citation.versionYear());
+        } else if (StringUtils.hasText(keyword)) {
             qw.and(w -> w.like(Provision::getLawName, keyword)
                     .or().like(Provision::getChapter, keyword)
                     .or().like(Provision::getArticleNo, keyword)
@@ -95,6 +99,19 @@ public class ProvisionService {
 
     public RelatedGroups related(Long id) {
         return relationService.relatedGroups(EntityChecker.PROVISION, id);
+    }
+
+    public List<ProvisionVO> versions(Long id) {
+        Provision current = provisionMapper.selectById(id);
+        if (current == null) throw new BizException(404, "法条不存在");
+        String shortName = current.getLawName().replaceFirst("^中华人民共和国", "");
+        return provisionMapper.selectList(new LambdaQueryWrapper<Provision>()
+                .eq(Provision::getJurisdiction, current.getJurisdiction())
+                .in(Provision::getLawName, shortName, "中华人民共和国" + shortName)
+                .eq(Provision::getArticleNo, current.getArticleNo())
+                .orderByDesc(Provision::getEffectiveDate).orderByDesc(Provision::getPromulgationDate)
+                .orderByAsc(Provision::getId).last("LIMIT 100"))
+                .stream().map(p -> toVO(p, List.of(), false)).toList();
     }
 
     private ProvisionVO toVO(Provision p, List<String> tags, boolean full) {

@@ -1,0 +1,172 @@
+{
+  "batch": "046",
+  "segment": "segment-41c66661e3d5",
+  "records": 37,
+  "groups": 37,
+  "tables": {
+    "question": 37
+  },
+  "eligibleTargets": [
+    "question:10024333",
+    "question:10024334",
+    "question:10024337",
+    "question:10024338",
+    "question:10024339",
+    "question:10024340",
+    "question:10024341",
+    "question:10024343",
+    "question:10024345",
+    "question:10024347",
+    "question:10024350",
+    "question:10024351",
+    "question:10024352",
+    "question:10024354",
+    "question:10024356",
+    "question:10024357",
+    "question:10024359",
+    "question:10024360",
+    "question:10024529",
+    "question:10024530",
+    "question:10024531",
+    "question:10024532",
+    "question:10024533",
+    "question:10024535",
+    "question:10024536",
+    "question:10024537",
+    "question:10024541",
+    "question:10024641",
+    "question:10024679",
+    "question:10024680",
+    "question:10024681",
+    "question:10024685",
+    "question:10024686",
+    "question:10024687",
+    "question:10024688",
+    "question:10024689",
+    "question:10024690"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10024335",
+      "targets": [
+        "question:10024335"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024335"
+      ]
+    },
+    {
+      "contentGroup": "question:10024336",
+      "targets": [
+        "question:10024336"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024336"
+      ]
+    },
+    {
+      "contentGroup": "question:10024342",
+      "targets": [
+        "question:10024342"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024342"
+      ]
+    },
+    {
+      "contentGroup": "question:10024344",
+      "targets": [
+        "question:10024344"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024344"
+      ]
+    },
+    {
+      "contentGroup": "question:10024353",
+      "targets": [
+        "question:10024353"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024353"
+      ]
+    },
+    {
+      "contentGroup": "question:10024358",
+      "targets": [
+        "question:10024358"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024358"
+      ]
+    },
+    {
+      "contentGroup": "question:10024519",
+      "targets": [
+        "question:10024519"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024519"
+      ]
+    },
+    {
+      "contentGroup": "question:10024534",
+      "targets": [
+        "question:10024534"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024534"
+      ]
+    },
+    {
+      "contentGroup": "question:10024538",
+      "targets": [
+        "question:10024538"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024538"
+      ]
+    },
+    {
+      "contentGroup": "question:10024539",
+      "targets": [
+        "question:10024539"
+      ],
+      "reasons": [
+        "stale cross-review hash question:10024539"
+      ]
+    },
+    {
+      "contentGroup": "question:10024540",
+      "targets": [
+        "question:10024540"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024540"
+      ]
+    },
+    {
+      "contentGroup": "question:10024636",
+      "targets": [
+        "question:10024636"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024636"
+      ]
+    },
+    {
+      "contentGroup": "question:10024684",
+      "targets": [
+        "question:10024684"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024684"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-046-segment-41c66661e3d5.sql",
+  "migrationSha256": "5f1d1587e4a3547a0c87e65c25953da28edfbbbc6de82b371d817e112da597f8"
+}

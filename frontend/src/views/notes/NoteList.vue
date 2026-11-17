@@ -7,15 +7,19 @@
         <el-option label="观点" value="VIEWPOINT" />
         <el-option label="题目" value="QUESTION" />
       </el-select>
+      <el-select v-model="tagFilter" clearable placeholder="全部标签" style="width: 180px">
+        <el-option v-for="tag in tags" :key="tag" :label="'#' + tag" :value="tag" />
+      </el-select>
     </div>
-    <el-empty v-if="notes.length === 0" description="还没有笔记" />
-    <div v-for="n in notes" :key="n.id" class="row">
+    <el-empty v-if="filteredNotes.length === 0" description="当前筛选下还没有笔记" />
+    <div v-for="n in filteredNotes" :key="n.id" class="row">
       <div class="row-head">
         <el-tag size="small">{{ typeLabel(n.targetType) }}</el-tag>
         <span class="target" @click="go(n)">{{ n.targetTitle }}</span>
         <span class="time">{{ formatTime(n.createdAt) }}</span>
       </div>
       <div class="content">{{ n.content }}</div>
+      <el-tag v-for="tag in noteTags(n.content)" :key="tag" size="small" effect="plain" @click="tagFilter = tag">#{{ tag }}</el-tag>
       <div class="actions">
         <el-button link type="primary" size="small" @click="openEdit(n)">编辑</el-button>
         <el-button link type="danger" size="small" @click="remove(n)">删除</el-button>
@@ -24,15 +28,15 @@
     <el-dialog v-model="dialog" :title="editing ? '编辑笔记' : '新建笔记'" width="520px">
       <el-form label-width="90px">
         <el-form-item label="关联类型">
-          <el-select v-model="form.targetType" style="width: 200px">
+          <el-select v-model="form.targetType" disabled style="width: 200px">
             <el-option label="法条" value="PROVISION" />
             <el-option label="案例" value="CASE" />
             <el-option label="观点" value="VIEWPOINT" />
             <el-option label="题目" value="QUESTION" />
           </el-select>
         </el-form-item>
-        <el-form-item label="关联 ID">
-          <el-input-number v-model="form.targetId" :min="1" />
+        <el-form-item label="关联内容">
+          <span>{{ editing?.targetTitle }}</span>
         </el-form-item>
         <el-form-item label="内容">
           <el-input v-model="form.content" type="textarea" :rows="6" placeholder="记录学习心得…" />
@@ -47,12 +51,16 @@
 </template>
 
 <script setup>
-import { onMounted, reactive, ref } from 'vue'
+import { computed, onMounted, reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { createNote, deleteNote, listNotes, updateNote } from '../../api/note'
+import { noteTags } from '../../utils/note-tags'
 
 const router = useRouter()
 const notes = ref([])
+const tagFilter = ref('')
+const tags = computed(() => [...new Set(notes.value.flatMap(n => noteTags(n.content)))].sort())
+const filteredNotes = computed(() => notes.value.filter(n => !tagFilter.value || noteTags(n.content).includes(tagFilter.value)))
 const typeFilter = ref('')
 const dialog = ref(false)
 const editing = ref(null)
@@ -98,6 +106,7 @@ async function remove(n) {
 function go(n) {
   const map = { PROVISION: '/provisions/', CASE: '/cases/', VIEWPOINT: '/viewpoints/' }
   if (map[n.targetType]) router.push(map[n.targetType] + n.targetId)
+  else if (n.targetType === 'QUESTION') router.push({ path: '/wrong-book', query: { question: n.targetId } })
 }
 function typeLabel(t) {
   return { PROVISION: '法条', CASE: '案例', VIEWPOINT: '观点', QUESTION: '题目' }[t] || t

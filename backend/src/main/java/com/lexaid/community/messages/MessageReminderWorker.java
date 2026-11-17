@@ -33,9 +33,10 @@ public class MessageReminderWorker {
         for (Due reminder : due) {
             if (!sockets.isOnline(reminder.userId())) continue;
             try {
-                notifier.reminder(reminder.userId(), reminder.preview());
-                jdbc.update("UPDATE message_reminder SET notified_at = NOW(6) WHERE id = ? AND notified_at IS NULL",
-                        reminder.id());
+                if (notifier.reminder(reminder.userId(), reminder.preview())) {
+                    jdbc.update("UPDATE message_reminder SET notified_at = NOW(6) WHERE id = ? AND notified_at IS NULL",
+                            reminder.id());
+                }
             } catch (RuntimeException e) {
                 log.warn("私信提醒推送失败 reminderId={}", reminder.id(), e);
             }

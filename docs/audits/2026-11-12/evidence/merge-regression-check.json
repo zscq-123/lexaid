@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "mismatchedReadingFingerprintRejected": true,
+  "fixtureQuestionId": 10024055,
+  "expectedMergeExit": 1,
+  "completeRealDatasetMergePassed": true,
+  "additionalOfficialUrlIncluded": true
+}

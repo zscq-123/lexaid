@@ -1,0 +1,412 @@
+{
+  "batch": "155",
+  "segment": "segment-e027b7679d51",
+  "records": 7,
+  "groups": 7,
+  "tables": {
+    "question": 7
+  },
+  "eligibleTargets": [
+    "question:10021179",
+    "question:10021180",
+    "question:10021182",
+    "question:10021184",
+    "question:10021212",
+    "question:10021244",
+    "question:10021248"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10021081",
+      "targets": [
+        "question:10021081"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021081"
+      ]
+    },
+    {
+      "contentGroup": "question:10021082",
+      "targets": [
+        "question:10021082"
+      ],
+      "reasons": [
+        "already applied question:10021082"
+      ]
+    },
+    {
+      "contentGroup": "question:10021083",
+      "targets": [
+        "question:10021083"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021083"
+      ]
+    },
+    {
+      "contentGroup": "question:10021084",
+      "targets": [
+        "question:10021084"
+      ],
+      "reasons": [
+        "already applied question:10021084"
+      ]
+    },
+    {
+      "contentGroup": "question:10021107",
+      "targets": [
+        "question:10021107"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021107"
+      ]
+    },
+    {
+      "contentGroup": "question:10021108",
+      "targets": [
+        "question:10021108"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021108"
+      ]
+    },
+    {
+      "contentGroup": "question:10021109",
+      "targets": [
+        "question:10021109"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021109"
+      ]
+    },
+    {
+      "contentGroup": "question:10021110",
+      "targets": [
+        "question:10021110"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021110"
+      ]
+    },
+    {
+      "contentGroup": "question:10021111",
+      "targets": [
+        "question:10021111"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021111"
+      ]
+    },
+    {
+      "contentGroup": "question:10021112",
+      "targets": [
+        "question:10021112"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021112"
+      ]
+    },
+    {
+      "contentGroup": "question:10021135",
+      "targets": [
+        "question:10021135"
+      ],
+      "reasons": [
+        "already applied question:10021135"
+      ]
+    },
+    {
+      "contentGroup": "question:10021136",
+      "targets": [
+        "question:10021136"
+      ],
+      "reasons": [
+        "already applied question:10021136"
+      ]
+    },
+    {
+      "contentGroup": "question:10021137",
+      "targets": [
+        "question:10021137"
+      ],
+      "reasons": [
+        "already applied question:10021137"
+      ]
+    },
+    {
+      "contentGroup": "question:10021139",
+      "targets": [
+        "question:10021139"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021139"
+      ]
+    },
+    {
+      "contentGroup": "question:10021140",
+      "targets": [
+        "question:10021140"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021140"
+      ]
+    },
+    {
+      "contentGroup": "question:10021161",
+      "targets": [
+        "question:10021161"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021161"
+      ]
+    },
+    {
+      "contentGroup": "question:10021162",
+      "targets": [
+        "question:10021162"
+      ],
+      "reasons": [
+        "already applied question:10021162"
+      ]
+    },
+    {
+      "contentGroup": "question:10021163",
+      "targets": [
+        "question:10021163"
+      ],
+      "reasons": [
+        "already applied question:10021163"
+      ]
+    },
+    {
+      "contentGroup": "question:10021164",
+      "targets": [
+        "question:10021164"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021164"
+      ]
+    },
+    {
+      "contentGroup": "question:10021165",
+      "targets": [
+        "question:10021165"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021165"
+      ]
+    },
+    {
+      "contentGroup": "question:10021166",
+      "targets": [
+        "question:10021166"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021166"
+      ]
+    },
+    {
+      "contentGroup": "question:10021181",
+      "targets": [
+        "question:10021181"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021181"
+      ]
+    },
+    {
+      "contentGroup": "question:10021183",
+      "targets": [
+        "question:10021183"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021183"
+      ]
+    },
+    {
+      "contentGroup": "question:10021211",
+      "targets": [
+        "question:10021211"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021211"
+      ]
+    },
+    {
+      "contentGroup": "question:10021216",
+      "targets": [
+        "question:10021216"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021216"
+      ]
+    },
+    {
+      "contentGroup": "question:10021240",
+      "targets": [
+        "question:10021240"
+      ],
+      "reasons": [
+        "already applied question:10021240"
+      ]
+    },
+    {
+      "contentGroup": "question:10021241",
+      "targets": [
+        "question:10021241"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021241"
+      ]
+    },
+    {
+      "contentGroup": "question:10021242",
+      "targets": [
+        "question:10021242"
+      ],
+      "reasons": [
+        "already applied question:10021242"
+      ]
+    },
+    {
+      "contentGroup": "question:10021243",
+      "targets": [
+        "question:10021243"
+      ],
+      "reasons": [
+        "already applied question:10021243"
+      ]
+    },
+    {
+      "contentGroup": "question:10021245",
+      "targets": [
+        "question:10021245"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021245"
+      ]
+    },
+    {
+      "contentGroup": "question:10021246",
+      "targets": [
+        "question:10021246"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021246"
+      ]
+    },
+    {
+      "contentGroup": "question:10021247",
+      "targets": [
+        "question:10021247"
+      ],
+      "reasons": [
+        "already applied question:10021247"
+      ]
+    },
+    {
+      "contentGroup": "question:10021249",
+      "targets": [
+        "question:10021249"
+      ],
+      "reasons": [
+        "already applied question:10021249"
+      ]
+    },
+    {
+      "contentGroup": "question:10021250",
+      "targets": [
+        "question:10021250"
+      ],
+      "reasons": [
+        "already applied question:10021250"
+      ]
+    },
+    {
+      "contentGroup": "question:10021263",
+      "targets": [
+        "question:10021263"
+      ],
+      "reasons": [
+        "already applied question:10021263"
+      ]
+    },
+    {
+      "contentGroup": "question:10021264",
+      "targets": [
+        "question:10021264"
+      ],
+      "reasons": [
+        "already applied question:10021264"
+      ]
+    },
+    {
+      "contentGroup": "question:10021265",
+      "targets": [
+        "question:10021265"
+      ],
+      "reasons": [
+        "already applied question:10021265"
+      ]
+    },
+    {
+      "contentGroup": "question:10021266",
+      "targets": [
+        "question:10021266"
+      ],
+      "reasons": [
+        "already applied question:10021266"
+      ]
+    },
+    {
+      "contentGroup": "question:10021267",
+      "targets": [
+        "question:10021267"
+      ],
+      "reasons": [
+        "already applied question:10021267"
+      ]
+    },
+    {
+      "contentGroup": "question:10021268",
+      "targets": [
+        "question:10021268"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021268"
+      ]
+    },
+    {
+      "contentGroup": "question:10021273",
+      "targets": [
+        "question:10021273"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021273"
+      ]
+    },
+    {
+      "contentGroup": "question:10021274",
+      "targets": [
+        "question:10021274"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10021274"
+      ]
+    },
+    {
+      "contentGroup": "question:10021275",
+      "targets": [
+        "question:10021275"
+      ],
+      "reasons": [
+        "already applied question:10021275"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-155-segment-e027b7679d51.sql",
+  "migrationSha256": "73cc17b337799845634611f0316e8d699e2c0bd1f4285ab6df5f81b63c7d1d5f"
+}

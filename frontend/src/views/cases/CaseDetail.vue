@@ -24,11 +24,7 @@
         <span v-if="detail.judgeDate">裁判日期：{{ detail.judgeDate }}</span>
         <span v-if="detail.procedure">程序：{{ detail.procedure }}</span>
       </div>
-      <div v-if="detail.sourceDataset || detail.licenseName" class="source">
-        来源：{{ detail.sourceDataset || '未标注' }}
-        <span v-if="detail.licenseName"> · 许可：{{ detail.licenseName }}</span>
-        <a v-if="detail.sourceUrl" :href="detail.sourceUrl" target="_blank" rel="noopener noreferrer">查看原文</a>
-      </div>
+      <SourceProvenance :source="detail" kind="CASE" />
       <div class="tags">
         <el-tag v-for="t in detail.tags" :key="t" size="small" type="info" effect="plain">{{ t }}</el-tag>
       </div>
@@ -62,6 +58,7 @@ import { getCase, getCaseRelated } from '../../api/content'
 import { addFavorite, listFavorites, removeFavorite } from '../../api/favorite'
 import NotePanel from '../../components/NotePanel.vue'
 import RelatedGroups from '../../components/RelatedGroups.vue'
+import SourceProvenance from '../../components/SourceProvenance.vue'
 
 const route = useRoute()
 const router = useRouter()

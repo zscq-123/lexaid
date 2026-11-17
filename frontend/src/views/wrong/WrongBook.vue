@@ -1,10 +1,12 @@
 <template>
   <div>
     <el-card shadow="never" class="filter-card">
+      <p v-if="route.query.question" class="question-subject">正在查看笔记关联的题目。<router-link to="/wrong-book">返回全部错题</router-link></p>
       <el-radio-group v-model="all" @change="reload">
         <el-radio-button :value="false">仅错题</el-radio-button>
-        <el-radio-button :value="true">全部</el-radio-button>
+        <el-radio-button :value="true">全部已答题</el-radio-button>
       </el-radio-group>
+      <p class="question-subject">以每题最近一次实际作答为准；未答与跳过不会新增错题，也不会清除先前的错题。</p>
     </el-card>
 
     <el-card shadow="never" class="list-card" v-loading="loading">
@@ -19,20 +21,21 @@
         <div class="stem">{{ q.stem }}</div>
         <div class="answer">
           <span>你的答案：{{ q.userAnswer || '（未作答）' }}</span>
-          <span v-if="q.type !== 'SHORT'">正确答案：{{ q.correctAnswer }}</span>
-          <span v-else>参考答案：{{ q.correctAnswer || '未收录' }}</span>
+          <span v-if="q.practiceEligible !== false">{{ q.type === 'SHORT' ? '参考答案' : '正确答案' }}：{{ q.correctAnswer || '未收录' }}</span>
         </div>
         <QuestionGrade :question="q" />
         <div v-if="q.analysis" class="analysis">
           <div class="analysis-title">解析</div>
           {{ q.analysis }}
         </div>
-        <el-button v-if="q.isCorrect === false" class="practice-link" @click="review(q)">情景迁移练习</el-button>
+        <p v-if="q.practiceEligible === false" class="question-subject">此题已更新或正在复核，作答及已完成评分保留为历史记录；暂不展示参考答案、解析及评分说明，重新练习请从组卷入口开始。</p>
+        <el-button v-if="q.isCorrect === false && q.practiceEligible" class="practice-link" @click="review(q)">情景迁移练习</el-button>
         <div v-if="q.related?.length" class="related">
           <el-tag v-for="r in q.related" :key="r.type + r.id" size="small" effect="plain" class="rel" @click="go(r)">
             {{ relLabel(r.type) }}：{{ r.title }} →
           </el-tag>
         </div>
+        <details class="review-notes"><summary>记录错因与关联依据</summary><NotePanel target-type="QUESTION" :target-id="q.questionId" /></details>
       </div>
       <el-pagination
         v-if="total > pageSize"
@@ -50,15 +53,17 @@
 </template>
 
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { onBeforeUnmount, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { wrongQuestions } from '../../api/exam'
 import ScenarioPractice from './ScenarioPractice.vue'
 import QuestionGrade from '../../components/QuestionGrade.vue'
+import NotePanel from '../../components/NotePanel.vue'
 import { subjectLabel } from '../exam/subject-label'
 import QuestionCodeBooks from '../exam/QuestionCodeBooks.vue'
 
 const router = useRouter()
+const route = useRoute()
 const practiceOpen = ref(false)
 const practiceSource = ref(null)
 function review(question) {
@@ -79,7 +84,7 @@ async function load(background = false) {
   clearTimeout(pollTimer)
   loading.value = !background
   try {
-    const data = await wrongQuestions({ page: page.value, size: pageSize.value, all: all.value })
+    const data = await wrongQuestions({ page: page.value, size: pageSize.value, all: all.value, questionId: route.query.question || undefined })
     if (request !== latestRequest) return
     list.value = data.records
     total.value = data.total
@@ -109,7 +114,7 @@ function go(r) {
   if (map[r.type]) router.push(map[r.type] + r.id)
 }
 
-onMounted(load)
+watch(() => route.query.question, question => { all.value = !!question; reload() }, { immediate: true })
 onBeforeUnmount(() => {
   ++latestRequest
   clearTimeout(pollTimer)
@@ -167,6 +172,8 @@ onBeforeUnmount(() => {
   color: #2e5fa3;
 }
 .practice-link { margin-top: 10px; }
+.review-notes { margin-top: 12px; }
+.review-notes summary { cursor: pointer; color: var(--lex-accent); }
 .related {
   margin-top: 8px;
   display: flex;

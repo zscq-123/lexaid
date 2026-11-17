@@ -8,6 +8,7 @@ export const getProvisionOutline = (jurisdiction, code, signal) =>
 export const listProvisions = (params) => request.get('/provisions', { params }).then((r) => r.data)
 export const listProvisionCategories = () => request.get('/provisions/categories').then((r) => r.data)
 export const getProvision = (id) => request.get(`/provisions/${id}`).then((r) => r.data)
+export const getProvisionVersions = (id) => request.get(`/provisions/${id}/versions`).then((r) => r.data)
 export const getProvisionRelated = (id) => request.get(`/provisions/${id}/related`).then((r) => r.data)
 
 // 案例

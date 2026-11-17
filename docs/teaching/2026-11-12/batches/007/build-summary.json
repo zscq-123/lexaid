@@ -1,0 +1,12 @@
+{
+  "batch": "007",
+  "records": 2,
+  "subjects": {
+    "民法学": 2
+  },
+  "independentReviewPass": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migrationSha256": "b7cd458b0340df67fd4575223986e4d1cc992972fb57d528d1e2cb460c4a0c9a"
+}

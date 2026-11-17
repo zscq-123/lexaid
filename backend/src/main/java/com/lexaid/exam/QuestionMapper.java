@@ -19,22 +19,17 @@ import java.util.List;
  */
 public interface QuestionMapper extends BaseMapper<Question> {
     @Select("SELECT q.id,q.type,q.stem," + QuestionSubjects.SUBJECT + " AS subject " +
-            QuestionSubjects.FROM_QUESTION + " WHERE q.stem LIKE CONCAT('%',#{keyword},'%') " +
-            "OR " + QuestionSubjects.SUBJECT + "=#{keyword} OR " + QuestionSubjects.DISCIPLINE + "=#{keyword} LIMIT 10")
+            QuestionSubjects.FROM_QUESTION + " WHERE " + QuestionQuality.ELIGIBLE + " AND (q.stem LIKE CONCAT('%',#{keyword},'%') " +
+            "OR " + QuestionSubjects.SUBJECT + "=#{keyword} OR " + QuestionSubjects.DISCIPLINE + "=#{keyword}) LIMIT 10")
     List<Question> searchForLibrary(@Param("keyword") String keyword);
 
-    @Select("""
-            SELECT category, difficulty, COUNT(*) AS count
-            FROM question
-            WHERE category REGEXP '[^[:space:]]'
-            GROUP BY category, difficulty
-            ORDER BY category, difficulty
-            """)
+    @Select("SELECT category,difficulty,COUNT(*) AS count " + QuestionSubjects.FROM_QUESTION
+            + " WHERE " + QuestionQuality.ELIGIBLE + " GROUP BY category,difficulty ORDER BY category,difficulty")
     List<QuestionCategoryCount> categoryCounts();
 
     @Select("SELECT " + QuestionSubjects.DISCIPLINE + " AS discipline, " + QuestionSubjects.SUBJECT +
             " AS subject, q.difficulty, COUNT(*) AS count " + QuestionSubjects.FROM_QUESTION +
-            " GROUP BY 1,2,3 ORDER BY 1,2,3")
+            " WHERE " + QuestionQuality.ELIGIBLE + " GROUP BY 1,2,3 ORDER BY 1,2,3")
     List<SubjectCount> subjectCounts();
 
     // Each verified link contributes once to its book and once to the code subtotal.
@@ -42,7 +37,7 @@ public interface QuestionMapper extends BaseMapper<Question> {
             " AS subject, b.code_name AS codeName, IF(levels.by_book=1,b.book_name,NULL) AS bookName, " +
             " q.difficulty, COUNT(DISTINCT q.id) AS count " + QuestionSubjects.FROM_QUESTION +
             " JOIN question_code_book b ON b.question_id=q.id CROSS JOIN (SELECT 0 AS by_book UNION ALL SELECT 1) levels " +
-            " GROUP BY 1,2,3,4,5 ORDER BY 1,2,3,4,5")
+            " WHERE " + QuestionQuality.ELIGIBLE + " GROUP BY 1,2,3,4,5 ORDER BY 1,2,3,4,5")
     List<CodeBookCount> codeBookCounts();
 
     String IDS = "<foreach collection='ids' item='id' open='(' close=')' separator=','>#{id}</foreach>";
@@ -61,7 +56,12 @@ public interface QuestionMapper extends BaseMapper<Question> {
             QuestionSubjects.SUBJECT + " AS subject " + QuestionSubjects.FROM_QUESTION + " WHERE q.id IN " + IDS + "</script>")
     List<Question> classifiedQuestions(@Param("ids") List<Long> ids);
 
+    @Select("<script>SELECT q.id " + QuestionSubjects.FROM_QUESTION + " WHERE q.id IN " + IDS
+            + " AND " + QuestionQuality.ELIGIBLE + "</script>")
+    List<Long> eligibleIds(@Param("ids") List<Long> ids);
+
     String POOL_FILTERS =
+            " AND " + QuestionQuality.ELIGIBLE +
             "<if test=\"req.category != null and req.category != ''\"> AND q.category=#{req.category} </if>" +
             "<if test='req.difficulty != null'> AND q.difficulty=#{req.difficulty} </if>" +
             "<if test=\"req.discipline != null and req.discipline != ''\"> AND " +
@@ -72,8 +72,7 @@ public interface QuestionMapper extends BaseMapper<Question> {
                 "WHERE b.question_id=q.id AND b.code_name=#{req.codeName} " +
                 "<if test=\"req.bookName != null and req.bookName != ''\">AND b.book_name=#{req.bookName}</if>) </if>";
 
-    // Each submitted question appears at most once in the user's set, regardless of grading state.
-    // A cleared multiple-choice answer is stored as []; the same literal can be a written answer.
+    // Coverage counts distinct, actually answered questions within the eligible pool.
     @Select("<script>SELECT COUNT(*) AS total, COUNT(done.question_id) AS answered " + QuestionSubjects.FROM_QUESTION +
             " LEFT JOIN (SELECT question_id, MAX(REGEXP_REPLACE(user_answer,'[[:space:]]+','') != '[]') AS has_choice " +
             " FROM answer_record WHERE user_id=#{userId} AND user_answer REGEXP '[^[:space:]]' GROUP BY question_id) done " +
@@ -88,4 +87,10 @@ public interface QuestionMapper extends BaseMapper<Question> {
             "</where> ORDER BY RAND() LIMIT #{limit}</script>")
     List<Long> draw(@Param("req") ExamSetupRequest req, @Param("ids") List<Long> ids,
                    @Param("excluded") List<Long> excluded, @Param("limit") int limit);
+
+    record QualityCount(String reason, long count) {}
+
+    @Select("SELECT " + QuestionQuality.REASON + " AS reason,COUNT(*) AS count "
+            + QuestionSubjects.FROM_QUESTION + " GROUP BY reason ORDER BY count DESC")
+    List<QualityCount> qualityCounts();
 }

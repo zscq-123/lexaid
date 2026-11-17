@@ -35,7 +35,7 @@
       <p v-if="fileWarning" class="warning" role="alert">{{ fileWarning }}</p>
       <label for="post-caption">帖子正文</label>
       <el-input id="post-caption" v-model="caption" type="textarea" :rows="4" maxlength="2200" show-word-limit
-        resize="vertical" :disabled="saving" placeholder="写下你的想法…" />
+        resize="vertical" :disabled="saving" placeholder="关键事实 → 争点 → 依据（版本 / 案号 / 原文链接）→ 个人观点与待核实问题" />
       <div class="visibility">
         <label for="post-visibility">谁可以看</label>
         <el-select id="post-visibility" v-model="visibility" aria-describedby="post-summary-use" :disabled="saving" style="width: 140px">

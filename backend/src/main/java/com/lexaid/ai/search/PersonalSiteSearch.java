@@ -1,6 +1,8 @@
 package com.lexaid.ai.search;
 
 import com.lexaid.exam.QuestionSubjects;
+import com.lexaid.exam.AnswerStatus;
+import com.lexaid.exam.QuestionQuality;
 import com.lexaid.common.BizException;
 import com.lexaid.community.friends.FriendService;
 import com.lexaid.community.posts.DiscussionSummaryService;
@@ -96,15 +98,28 @@ public class PersonalSiteSearch {
               CONCAT_WS(' · ',x.created_at,%s,x.detail, CONCAT(x.duration_sec,' 秒')) summary,x.id recent
             FROM study_record x %s WHERE x.user_id=:viewer
             """.formatted(TARGET_TITLE, TARGET_JOINS);
+    // Retain the owner's history, but do not feed quarantined teaching material back to the model.
+    private static final String ANSWER_HISTORY_FROM = " FROM answer_record a JOIN (SELECT q.id,q.type,q.stem,q.answer,q.analysis,q.updated_at,"
+            + QuestionSubjects.DISCIPLINE + " AS discipline," + QuestionSubjects.SUBJECT + " AS subject,"
+            + QuestionQuality.ELIGIBLE + " AS practice_eligible " + QuestionSubjects.FROM_QUESTION
+            + " JOIN (SELECT DISTINCT question_id FROM answer_record WHERE user_id=:viewer) owned ON owned.question_id=q.id "
+            + ") q ON q.id=a.question_id ";
+    private static final String CURRENT_REFERENCE = "(q.practice_eligible AND q.updated_at<=a.answered_at)";
+    private static final String VISIBLE_ANSWER = "IF(" + CURRENT_REFERENCE + ",q.answer,NULL)";
+    private static final String VISIBLE_ANALYSIS = "IF(" + CURRENT_REFERENCE + ",q.analysis,NULL)";
+    private static final String VISIBLE_FEEDBACK = "IF(" + CURRENT_REFERENCE + ",a.grading_feedback,NULL)";
+    private static final String HISTORY_NOTICE = "题目已更新或正在复核；历史评分仅供回顾，不能作为当前答案依据。";
+    private static final String REVIEW_NOTICE = "IF(" + CURRENT_REFERENCE + ",NULL,'" + HISTORY_NOTICE + "')";
     private static final String WRONG = """
             SELECT q.id,CONCAT('错题 · ',LEFT(q.stem,100)) title,
-               CONCAT_WS(' · ',%s,%s,q.stem,CONCAT('我的答案：',COALESCE(a.user_answer,'')),
-               CONCAT('参考答案：',q.answer),CONCAT('得分：',a.grade_points),a.grading_feedback,q.analysis) summary,
+               CONCAT_WS(' · ',q.discipline,q.subject,%s,q.stem,CONCAT('我的答案：',COALESCE(a.user_answer,'')),
+               CONCAT('参考答案：',%s),CONCAT('历史得分：',COALESCE(a.grade_points,a.is_correct)),%s,%s) summary,
                a.id recent
-            FROM answer_record a JOIN question q ON q.id=a.question_id %s
-            WHERE a.user_id=:viewer AND a.is_correct=0 AND NOT EXISTS (
-               SELECT 1 FROM answer_record b WHERE b.user_id=a.user_id AND b.question_id=a.question_id AND b.id>a.id)
-            """.formatted(QuestionSubjects.DISCIPLINE, QuestionSubjects.SUBJECT, QuestionSubjects.JOIN_SUBJECTS);
+            %s
+            WHERE a.user_id=:viewer AND a.is_correct=0 AND %s AND NOT EXISTS (
+               SELECT 1 FROM answer_record b WHERE b.user_id=a.user_id AND b.question_id=a.question_id AND b.id>a.id AND %s)
+            """.formatted(REVIEW_NOTICE, VISIBLE_ANSWER, VISIBLE_FEEDBACK, VISIBLE_ANALYSIS, ANSWER_HISTORY_FROM,
+                AnswerStatus.ANSWERED.replace("ar.", "a."), AnswerStatus.ANSWERED.replace("ar.", "b."));
     private static final String CONTACTS = """
             SELECT u.id,COALESCE(NULLIF(u.nickname,''),u.username) title,
                CONCAT_WS(' · ',u.username,CASE WHEN f.state='ACCEPTED' THEN '我的好友'
@@ -124,22 +139,22 @@ public class PersonalSiteSearch {
                    NULLIF(JSON_UNQUOTE(JSON_EXTRACT(e.config,'$.bookName')),'null')), ''),
                    NULLIF(JSON_UNQUOTE(JSON_EXTRACT(e.config,'$.category')),'null'),'综合'),'试卷 #',e.id) title,
                CONCAT_WS(' · ',IF(e.end_time IS NULL,'进行中','已交卷'),e.start_time,CONCAT(e.total,' 题'),
-                   IF(e.end_time IS NULL,NULL,CONCAT('已得 ',e.score,' 分，当前已评分满分 ',
-                     (SELECT COALESCE(SUM(IF(t.type='SHORT',10,1)),0) FROM answer_record ar
+                   IF(e.end_time IS NULL,NULL,
+                     (SELECT CONCAT('已得 ',COALESCE(SUM(COALESCE(ar.grade_points,ar.is_correct)),0),
+                         ' 分，当前已评分满分 ',COALESCE(SUM(IF(t.type='SHORT',10,1)),0),
+                         ' 分，答对 ',COALESCE(SUM(ar.is_correct=1),0),' 道') FROM answer_record ar
                       JOIN question t ON t.id=ar.question_id WHERE ar.user_id=e.user_id AND ar.session_id=e.id
-                      AND (ar.grade_points IS NOT NULL OR ar.is_correct IS NOT NULL)),
-                     ' 分，答对 ',e.correct,' 道'))) summary,
+                      AND %s AND (ar.grade_points IS NOT NULL OR ar.is_correct IS NOT NULL)))) summary,
                e.id recent
             FROM exam_session e WHERE e.user_id=:viewer
-            """;
-    private static final String EXAM_ANSWER = " FROM answer_record a JOIN question q ON q.id=a.question_id "
-            + QuestionSubjects.JOIN_SUBJECTS + """
+            """.formatted(AnswerStatus.ANSWERED.replace("q.","t."));
+    private static final String EXAM_ANSWER = ANSWER_HISTORY_FROM + """
             WHERE a.user_id=:viewer AND a.session_id=%s
               AND EXISTS (SELECT 1 FROM exam_session graded WHERE graded.id=a.session_id
                           AND graded.user_id=a.user_id AND graded.end_time IS NOT NULL)
             """;
-    private static final String ANSWER_TEXT = "CONCAT_WS(' ',q.stem," + QuestionSubjects.DISCIPLINE + ","
-            + QuestionSubjects.SUBJECT + ",q.answer,q.analysis,a.user_answer,a.grading_feedback)";
+    private static final String ANSWER_TEXT = "CONCAT_WS(' ',q.stem,q.discipline,q.subject,"
+            + VISIBLE_ANSWER + "," + VISIBLE_ANALYSIS + ",a.user_answer," + VISIBLE_FEEDBACK + ")";
 
     private List<RelatedItem> exams(long user, Long id, List<String> terms, int limit) {
         String matching = contains(terms, ANSWER_TEXT);
@@ -147,16 +162,22 @@ public class PersonalSiteSearch {
         return records(user, "EXAM", id, terms, limit, EXAMS, extra).stream().map(exam -> {
             if (exam.summary().startsWith("进行中")) return exam;
             String sql = """
-                    SELECT CONCAT_WS(' / ',%s,%s) topic, q.stem, q.answer, q.analysis, a.user_answer,
-                           COALESCE(a.grade_points,a.is_correct) earned, a.grading_feedback
-                    """.formatted(QuestionSubjects.DISCIPLINE, QuestionSubjects.SUBJECT) + EXAM_ANSWER.formatted(":id") + " ORDER BY (" + matching + ") DESC, a.id LIMIT 5";
+                    SELECT CONCAT_WS(' / ',q.discipline,q.subject) topic, q.stem, %s answer, %s analysis, a.user_answer,
+                           IF(%s,COALESCE(a.grade_points,a.is_correct),NULL) earned, %s grading_feedback,
+                           %s reference_current,COALESCE((%s),0) answered
+                    """.formatted(VISIBLE_ANSWER, VISIBLE_ANALYSIS, AnswerStatus.ANSWERED.replace("ar.","a."),
+                        VISIBLE_FEEDBACK, CURRENT_REFERENCE, AnswerStatus.ANSWERED.replace("ar.","a."))
+                    + EXAM_ANSWER.formatted(":id") + " ORDER BY (" + matching + ") DESC, a.id LIMIT 5";
             List<String> excerpts = db.query(sql, params(user, exam.id(), terms, 5), (rs, i) ->
                     rs.getString("topic") + " · " + snippet(rs.getString("stem"), terms, 140)
                     + "；我的答案：" + snippet(rs.getString("user_answer"), terms, 200)
-                    + "；参考答案：" + snippet(rs.getString("answer"), terms, 230)
-                    + "；解析：" + snippet(rs.getString("analysis"), terms, 180)
-                    + "；" + (rs.getObject("earned") == null ? "尚无得分" : "得分 " + rs.getInt("earned"))
-                    + " " + snippet(rs.getString("grading_feedback"), terms, 180));
+                    + (rs.getBoolean("reference_current")
+                        ? "；参考答案：" + snippet(rs.getString("answer"), terms, 230)
+                            + "；解析：" + snippet(rs.getString("analysis"), terms, 180)
+                            + " " + snippet(rs.getString("grading_feedback"), terms, 180)
+                        : "；" + HISTORY_NOTICE)
+                    + "；" + (!rs.getBoolean("answered") ? "未作答 / 跳过"
+                        : rs.getObject("earned") == null ? "尚无得分" : "历史得分 " + rs.getInt("earned")));
             return appendDetails(exam, "", excerpts);
         }).toList();
     }
@@ -208,9 +229,11 @@ public class PersonalSiteSearch {
 
     private RelatedItem learningStats(long user, List<String> terms) {
         var overview = stats.overview(user);
-        String detail = "累计作答 %d 题，满分 %d 题，正确率 %.2f%%，学习 %d 分钟，连续学习 %d 天。"
+        String detail = "实际作答 %d 次（含重复），满分 %d 次，正确率 %.2f%%，学习 %d 分钟，连续学习 %d 天。"
                 .formatted(overview.totalAnswer(), overview.totalCorrect(), overview.accuracy(),
                         overview.totalStudyMinutes(), overview.streakDays());
+        detail += " 已做不同题目 " + overview.distinctQuestions() + " 道；重复作答 " + overview.repeatedAnswer()
+                + " 次；正确率分母为已评分 " + overview.gradedAnswer() + " 次。未答/跳过 " + overview.skippedAnswer() + " 次，不计入正确率。";
         detail += "\n最近 30 天有活动的日期（作答/正确/学习分钟）：\n" + stats.daily(user, 30).stream()
                 .filter(day -> day.answerCount() > 0 || day.studyMinutes() > 0)
                 .map(day -> day.date() + " " + day.answerCount() + "/" + day.correctCount() + "/" + day.studyMinutes())

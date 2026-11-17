@@ -1,0 +1,14 @@
+{
+  "tests": 7,
+  "passed": [
+    "missing classification row with fallback baseline inserts exact classification and reruns safely",
+    "archive before_content mismatch rejects update",
+    "archive after_content mismatch rejects update",
+    "archive evidence_urls mismatch rejects update",
+    "archive question_id mismatch rejects update",
+    "explicit rollback restores both content and classification and removes archive insert",
+    "exact pending archive applies once"
+  ],
+  "persistentDatabaseMutation": false,
+  "reviewer": "backend_audit"
+}

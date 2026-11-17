@@ -1,0 +1,1334 @@
+{
+  "database": "lexaid_upgrade_20261111_check",
+  "verifiedAt": "2026-11-11T23:48:34.189344+00:00",
+  "migrationSha256": "13a876468433aafb258bd9517a9cc29a5006615bc44f8014156f5dd4404c6ba3",
+  "records": [
+    {
+      "id": 10024055,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6ba3af8b2e27fba1a211c9a850046ee48c2d1129b86e1d41f8e4821017d63c07",
+      "revisionKey": "2026-11-12-teaching-001-10024055"
+    },
+    {
+      "id": 10024075,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "7e37ef36c7d76942a392eceb70483ada8bbcefaa7365032ab5d3e2ecedd76ac3",
+      "revisionKey": "2026-11-12-teaching-001-10024075"
+    },
+    {
+      "id": 10024077,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "5f476c39d10939fadecb2130cf2df07071f7beb27a534c853e6b0702c4f167e8",
+      "revisionKey": "2026-11-12-teaching-001-10024077"
+    },
+    {
+      "id": 10024078,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "186af1cef81e28123420e644765955528a3ffa1495e62aab8341201c491801c8",
+      "revisionKey": "2026-11-12-teaching-001-10024078"
+    },
+    {
+      "id": 10024081,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "7bcb9397dfc3e8631ded509b479ea715887b345eab3eaea425b28da819993c8e",
+      "revisionKey": "2026-11-12-teaching-001-10024081"
+    },
+    {
+      "id": 10024085,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "931d1a8bd7c76065dc5fdcf68a4ba22e70a0cee5226fd3f18f39a847690b1771",
+      "revisionKey": "2026-11-12-teaching-001-10024085"
+    },
+    {
+      "id": 10024089,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0aa70b9bc901ed7a9eb2efc7108bb1426f938f75e2da8df33aa9b01faeaf83b9",
+      "revisionKey": "2026-11-12-teaching-001-10024089"
+    },
+    {
+      "id": 10024092,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "1ff8835d51611f48078d0b9d4b03e7aa4ed6187a8da5f1fce9796fb0b8e4cc9e",
+      "revisionKey": "2026-11-12-teaching-001-10024092"
+    },
+    {
+      "id": 10024094,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "e471a3102af875702d772ed1156b6095e867a3ce7a6652494ef18f476c0a8125",
+      "revisionKey": "2026-11-12-teaching-001-10024094"
+    },
+    {
+      "id": 10024095,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "17385e204ee8d0757c6ccc8cc63e5cf314658087fe48b7fe22109dc7b3b2e6c4",
+      "revisionKey": "2026-11-12-teaching-001-10024095"
+    },
+    {
+      "id": 10024096,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "38cb26230091f1f8c78a9d773b8a88ece43790e9086ec6ad02b784aef757b6c5",
+      "revisionKey": "2026-11-12-teaching-001-10024096"
+    },
+    {
+      "id": 10024100,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "5fceedc9b03e8e73dc9c02cf0080d71fde7686bf9e8eea1c216b91a008d20b76",
+      "revisionKey": "2026-11-12-teaching-001-10024100"
+    },
+    {
+      "id": 10024132,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0937187286d0293c3e6f270ff336a89ac88fcf1cf8633add4791c0c9fb72e8a2",
+      "revisionKey": "2026-11-12-teaching-001-10024132"
+    },
+    {
+      "id": 10024134,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "c01db1d377b3aa60d8d8d5043851fb82b4d7a0aa975f3c35b14772387c50dd19",
+      "revisionKey": "2026-11-12-teaching-001-10024134"
+    },
+    {
+      "id": 10024165,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d916325306b403a8939f069c369d6fa511ada2b26c5eb022996ba05d70587872",
+      "revisionKey": "2026-11-12-teaching-001-10024165"
+    },
+    {
+      "id": 10024169,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "4b6d1d62d84eb49b3f16371232b8bfb63b38e9c5dbb1ca7ffe6c6b76d249638f",
+      "revisionKey": "2026-11-12-teaching-001-10024169"
+    },
+    {
+      "id": 10024172,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "df1308b556b8c8b61587e8744a4b659e5f00fbf14ae0a54c04b2830b812962e1",
+      "revisionKey": "2026-11-12-teaching-001-10024172"
+    },
+    {
+      "id": 10024173,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "33a1df30e6e953333d9bcd14d9279ad57d708e52e1487029ba0ed0b3ea4b1e7a",
+      "revisionKey": "2026-11-12-teaching-001-10024173"
+    },
+    {
+      "id": 10024184,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "12b1fe130598fa2e10d91fa11ec35928821f60a1bb9a9e2cd3eacbd5c79d676f",
+      "revisionKey": "2026-11-12-teaching-001-10024184"
+    },
+    {
+      "id": 10024199,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "359d92d950d01b8482a8cfb3ae19e51f31826458ae44220fb81698ebe587964a",
+      "revisionKey": "2026-11-12-teaching-001-10024199"
+    },
+    {
+      "id": 10024202,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "14bdece816da76a96e3329b6e71e6c522581310f07bb887a9f3084e052da769c",
+      "revisionKey": "2026-11-12-teaching-001-10024202"
+    },
+    {
+      "id": 10024206,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "1c510d3d1032ac014b57892ed5b9dd04ceeacd12d80ffc0bafc7d52594641256",
+      "revisionKey": "2026-11-12-teaching-001-10024206"
+    },
+    {
+      "id": 10024211,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "22998888c67ca8d3a8e90cfb110b0ebb9cdb866565c46f857a08a0313dc1d6a0",
+      "revisionKey": "2026-11-12-teaching-001-10024211"
+    },
+    {
+      "id": 10024213,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "11d3690dcc60f3952cf3e6dd180ac04b6dab92f8250eb885e71319a3c4d4330f",
+      "revisionKey": "2026-11-12-teaching-001-10024213"
+    },
+    {
+      "id": 10024215,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "76bcbce87b59ed79c8117ad45e1b5add57e365009ab3bd8e323b034c36e5d7e3",
+      "revisionKey": "2026-11-12-teaching-001-10024215"
+    },
+    {
+      "id": 10024259,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "8a669205005575eb9ddf0a2bd6f6efea83f5ec8580c27c70d714cd652b7337a8",
+      "revisionKey": "2026-11-12-teaching-001-10024259"
+    },
+    {
+      "id": 10024269,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "29fc8a0730f446baeac966ada33127e7347f044f93401291891b7cbc6cb3929e",
+      "revisionKey": "2026-11-12-teaching-001-10024269"
+    },
+    {
+      "id": 10024271,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "10613251a93019d9c19cc33dfdd6d90ceabdd53dfe1a41d8c2a6a5106d0107b3",
+      "revisionKey": "2026-11-12-teaching-001-10024271"
+    },
+    {
+      "id": 10024278,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "bdc608475a609a4f14e2f096779706f9fc9d37747d13426ded6ff7311470a225",
+      "revisionKey": "2026-11-12-teaching-001-10024278"
+    },
+    {
+      "id": 10024280,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "028f8f011f66ee9b3cef81d7e1c2394ec64596dd31b83230a90e56e0161e2b6c",
+      "revisionKey": "2026-11-12-teaching-001-10024280"
+    },
+    {
+      "id": 10024285,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "3f446769ad5bf9d9476450e1e08b588586847745c3f891d69b0fca5a04ae5214",
+      "revisionKey": "2026-11-12-teaching-001-10024285"
+    },
+    {
+      "id": 10024294,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "51513a7313d2b4b0b1a469f3334105234af722feb910c2266d08183aed0bf51a",
+      "revisionKey": "2026-11-12-teaching-001-10024294"
+    },
+    {
+      "id": 10024300,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "895190c0a3e363b70c23a3b2c0d4ed5f1e61b908c65cc8233b49a2d1ed8e94eb",
+      "revisionKey": "2026-11-12-teaching-001-10024300"
+    },
+    {
+      "id": 10024301,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "5d536137cf18ad65085fc380fbddf659e01f1bbc6a9b99a6d72d433b9f646ec6",
+      "revisionKey": "2026-11-12-teaching-001-10024301"
+    },
+    {
+      "id": 10024304,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "c251a21f59428ac31e80ab2d84104642b322da5200ee6dc2ed2525451f068908",
+      "revisionKey": "2026-11-12-teaching-001-10024304"
+    },
+    {
+      "id": 10024305,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "f45444c999587fd86974ca890c80f1cdb4a5a1fa0ef625650e8cf14e849d8958",
+      "revisionKey": "2026-11-12-teaching-001-10024305"
+    },
+    {
+      "id": 10024307,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "96fd24e33cf9394eee3167e51c219d651746ec219d14c76abaa772c84a501184",
+      "revisionKey": "2026-11-12-teaching-001-10024307"
+    },
+    {
+      "id": 10024309,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d167d06a7de3c9b3f2d47e4d1831d0be3a6aa8b7d4c66f9ed8bce58962613da0",
+      "revisionKey": "2026-11-12-teaching-001-10024309"
+    },
+    {
+      "id": 10024311,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "b73060565c170248dfcb247b7ce6ba93576088f3e354d8a14ac5404360a9f7cc",
+      "revisionKey": "2026-11-12-teaching-001-10024311"
+    },
+    {
+      "id": 10024313,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "c11a852f0059628bdce3f5c328e4dd78d7068f73214c0892540c7f5e43a58e1f",
+      "revisionKey": "2026-11-12-teaching-001-10024313"
+    },
+    {
+      "id": 10024315,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "775cc661a8e9cc3548f23bd971a9c5ef913f91a9ed423d829e39d47a8f64996c",
+      "revisionKey": "2026-11-12-teaching-001-10024315"
+    },
+    {
+      "id": 10024322,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "8b50e8d9c93ec2c42d388be36ded493b10d7f492805cfc3cba7031045da49a6b",
+      "revisionKey": "2026-11-12-teaching-001-10024322"
+    },
+    {
+      "id": 10024323,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "5103904bbd718cfab9852308aa94c11ba58617fba77b7adb03391b5822347de4",
+      "revisionKey": "2026-11-12-teaching-001-10024323"
+    },
+    {
+      "id": 10024332,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "8820bdc630154685dca58972a8e068fa3a41289c6431ddcbaf2419c55d699e24",
+      "revisionKey": "2026-11-12-teaching-001-10024332"
+    },
+    {
+      "id": 10024346,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2d5d702ad98c736c381cb89907620cb26137856aa720058fd3295492bc640229",
+      "revisionKey": "2026-11-12-teaching-001-10024346"
+    },
+    {
+      "id": 10024348,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0a37593e9ff4ce898d21eee0196ce37bf15f1419e7d7ff054f4ff6478df2001a",
+      "revisionKey": "2026-11-12-teaching-001-10024348"
+    },
+    {
+      "id": 10024349,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a4eac5bdf49b3c5431ac57615efd3629c993d85c7ea7711fddd9bdb5701ca8fd",
+      "revisionKey": "2026-11-12-teaching-001-10024349"
+    },
+    {
+      "id": 10024355,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "20c196e251960fd937f2b7f2f624c0be3ab90eeb05c62940746df4a7967808af",
+      "revisionKey": "2026-11-12-teaching-001-10024355"
+    },
+    {
+      "id": 10024361,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "84977ec6fbf2b84ff12e207d0561851df8e1628f854d37fbf763403c117f1410",
+      "revisionKey": "2026-11-12-teaching-001-10024361"
+    },
+    {
+      "id": 10024363,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a5c31ce9f447b3eafba346180114b8980ed203b92e7310387c06edb21cb3d2e0",
+      "revisionKey": "2026-11-12-teaching-001-10024363"
+    },
+    {
+      "id": 10024368,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d0592173b9f3e7115774eb8a91a926045a3c251cc245e58cdf2638ee044da9ae",
+      "revisionKey": "2026-11-12-teaching-001-10024368"
+    },
+    {
+      "id": 10024371,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9f1c8c33227abc8b85382ed6176a3b1d340810439eed6dde9e22fe97ce03139d",
+      "revisionKey": "2026-11-12-teaching-001-10024371"
+    },
+    {
+      "id": 10024375,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0ac8e41d80473a742f5cac2c1bfe7b43cf1bf227a4e15688de6371c2e1f03314",
+      "revisionKey": "2026-11-12-teaching-001-10024375"
+    },
+    {
+      "id": 10024377,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "8366d23b2108fb8c54964fe199636a1db8e37f7d41da97352cd37d8eb3793cdb",
+      "revisionKey": "2026-11-12-teaching-001-10024377"
+    },
+    {
+      "id": 10024380,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "bc064243f74c82e74eaab4810da9366fb99ee6a989159d592cb218675a61601d",
+      "revisionKey": "2026-11-12-teaching-001-10024380"
+    },
+    {
+      "id": 10024382,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "7a192cf46e97be6f9b0d0c2efd7af4cb3eb4f6450c4bfbe8b8a26e9145a7e002",
+      "revisionKey": "2026-11-12-teaching-001-10024382"
+    },
+    {
+      "id": 10024400,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "e1a30f58f05a8303254b407c2a9f060650f2677d18577788becd90341ea081c6",
+      "revisionKey": "2026-11-12-teaching-001-10024400"
+    },
+    {
+      "id": 10024401,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "bbc84416e5743a8877bd837a06e754687c95b5e90daa8ae7345be231d983e97e",
+      "revisionKey": "2026-11-12-teaching-001-10024401"
+    },
+    {
+      "id": 10024405,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "e855da0260f9c59788de417c10bce3233cff98f41016da883997fb4f5a3b0a52",
+      "revisionKey": "2026-11-12-teaching-001-10024405"
+    },
+    {
+      "id": 10024408,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "e0e3396d8fb8fb54a71fd42777e71091d24596a2fe08a8d461f6532fe30e1542",
+      "revisionKey": "2026-11-12-teaching-001-10024408"
+    },
+    {
+      "id": 10024436,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "f3f8bfee973833d7727f41e48c6fb8c97e1be87a7a2311598ff9efd191e857af",
+      "revisionKey": "2026-11-12-teaching-001-10024436"
+    },
+    {
+      "id": 10024437,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "aaf77df3d123c241d3db3b52558c85cdce540308c64d874d9128fec041ae1ee7",
+      "revisionKey": "2026-11-12-teaching-001-10024437"
+    },
+    {
+      "id": 10024438,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a0a6456a3c788bd9e6f68b36bf76c205389fe459bf5705e4605abea293417521",
+      "revisionKey": "2026-11-12-teaching-001-10024438"
+    },
+    {
+      "id": 10024439,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "4b535c6a02ae1137487316727431ed4840b00915c975413e705d4f3dfa8a4651",
+      "revisionKey": "2026-11-12-teaching-001-10024439"
+    },
+    {
+      "id": 10024441,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0e4d7c9a2a47becd72f6f6d6afb01792c9455b9572ebda6bd2e1c0f04474139d",
+      "revisionKey": "2026-11-12-teaching-001-10024441"
+    },
+    {
+      "id": 10024442,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9c9b238fe311c7abefe7f928cb33611d0069fdcc3214f7fc23583b497f715140",
+      "revisionKey": "2026-11-12-teaching-001-10024442"
+    },
+    {
+      "id": 10024449,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "b5c6daf1ac8188153303852fdc3176e8f3000f65bc2bd462271996276c7cb737",
+      "revisionKey": "2026-11-12-teaching-001-10024449"
+    },
+    {
+      "id": 10024463,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "c1e7332aa341cc02514f13a1772408377b196b430b3ced60f6a911738aca38cd",
+      "revisionKey": "2026-11-12-teaching-001-10024463"
+    },
+    {
+      "id": 10024472,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "234d687ce7828cf8b4ff6dd97a159f784684cf83257d76acfac80fca5934fabf",
+      "revisionKey": "2026-11-12-teaching-001-10024472"
+    },
+    {
+      "id": 10024497,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "e764aed4aa8986c76479340d823a2174861fb7a27bf65763d5a5986f3e9f3a87",
+      "revisionKey": "2026-11-12-teaching-001-10024497"
+    },
+    {
+      "id": 10024499,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6653d9ed645718210b510147109bdcd82131e6626bf487e85ad6b7ad3bc21efc",
+      "revisionKey": "2026-11-12-teaching-001-10024499"
+    },
+    {
+      "id": 10024508,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a12ba9e159871905ca8c62aff96079dfd6468302368bb43b01a3a0dcb71d6820",
+      "revisionKey": "2026-11-12-teaching-001-10024508"
+    },
+    {
+      "id": 10024510,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "763a80dbbb010e84d3337728544932bf9102b09b90ace3ecc98b91eed68b3d82",
+      "revisionKey": "2026-11-12-teaching-001-10024510"
+    },
+    {
+      "id": 10024512,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "dec13ac2c28de88baa6f44ba91aebb0e9819a8f363505eed79384d3126f8ea9b",
+      "revisionKey": "2026-11-12-teaching-001-10024512"
+    },
+    {
+      "id": 10024518,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "eb14ff272ef49856592381b4a8950bd57d181e66795fa8c56fafd207c2b23743",
+      "revisionKey": "2026-11-12-teaching-001-10024518"
+    },
+    {
+      "id": 10024521,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "c86a1c4ac020cfcb9fcaa762b2592b0341f8de9c2e6701e5d40c8c72fd0180f0",
+      "revisionKey": "2026-11-12-teaching-001-10024521"
+    },
+    {
+      "id": 10024526,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "ea958dc8f81f8cbbb383b52d9a1ac0828ef010a304d2f8d998ec72ca4fa4cbc4",
+      "revisionKey": "2026-11-12-teaching-001-10024526"
+    },
+    {
+      "id": 10024528,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "28bf0a6d6e668f40ed910e44e87168064af233bd8621a2c5935f754b3365f02f",
+      "revisionKey": "2026-11-12-teaching-001-10024528"
+    },
+    {
+      "id": 10024543,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "43306e9be99d12e1c72f256dcca30b67697d4aa8cbdb624fefd7673ef47fdbe7",
+      "revisionKey": "2026-11-12-teaching-001-10024543"
+    },
+    {
+      "id": 10024544,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "bae6f5d231a28b872fe1a935cd210d79e6d8ef645d4eaf109e6f07c19b76c4d2",
+      "revisionKey": "2026-11-12-teaching-001-10024544"
+    },
+    {
+      "id": 10024548,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9e567d54507539f7f29e0c9174699ba8b06aacb8c2fe2546b74d313c4b71f889",
+      "revisionKey": "2026-11-12-teaching-001-10024548"
+    },
+    {
+      "id": 10024558,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0d53847090155ed6897a372fb971daeec413d15558b03014affd6874fd074246",
+      "revisionKey": "2026-11-12-teaching-001-10024558"
+    },
+    {
+      "id": 10024560,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "b8339d877abc3f83e93adc60ea35ed3fe8a52fac4ed0f854dc806d3fb6e7e7cf",
+      "revisionKey": "2026-11-12-teaching-001-10024560"
+    },
+    {
+      "id": 10024581,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "278318dbbbba42ac729d2d724443df794772cdb182578d9ab0f8a50266ab7c8f",
+      "revisionKey": "2026-11-12-teaching-001-10024581"
+    },
+    {
+      "id": 10024586,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d1895722a8dccee4b6eb8810d656cfe091759b95e30d02c739ce3a1d063d41b4",
+      "revisionKey": "2026-11-12-teaching-001-10024586"
+    },
+    {
+      "id": 10024597,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d326420b6d8b2ccc7d80b954c46747c7c14dda453bc683cef457830476d8c6c2",
+      "revisionKey": "2026-11-12-teaching-001-10024597"
+    },
+    {
+      "id": 10024617,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "df01a1e495f8b91f6d7d937374271f46e6575e5ec758c913e061fa78997bc972",
+      "revisionKey": "2026-11-12-teaching-001-10024617"
+    },
+    {
+      "id": 10024621,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "8c18f1b909f3b64c3347cd1943e403542117388f896aabe17bb746e461827943",
+      "revisionKey": "2026-11-12-teaching-001-10024621"
+    },
+    {
+      "id": 10024627,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2d4547ee07742ffe8fb9824367d3084778e167ab32d348c97150bcfb86a88157",
+      "revisionKey": "2026-11-12-teaching-001-10024627"
+    },
+    {
+      "id": 10024637,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "feade57b477b39c5c731ae75791b09983e46d25a01995a973457ffd32a36ad94",
+      "revisionKey": "2026-11-12-teaching-001-10024637"
+    },
+    {
+      "id": 10024638,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "10a26bdee6909975147b83f42ed48ae2972eff4e33044504790782cd6da6bfb1",
+      "revisionKey": "2026-11-12-teaching-001-10024638"
+    },
+    {
+      "id": 10024640,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "391c90ee301a9e01798461bf6001b057c56360a8c5f969085fb2bb4fe9596cd7",
+      "revisionKey": "2026-11-12-teaching-001-10024640"
+    },
+    {
+      "id": 10024652,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "dc6854663d39e241a84509b9ac1da35cb701f62fe633421235b8288064a72845",
+      "revisionKey": "2026-11-12-teaching-001-10024652"
+    },
+    {
+      "id": 10024672,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0a2f99d1517399e85843c763f13f515e6d4c2b7a4c62c930ef217ceaccc5be9d",
+      "revisionKey": "2026-11-12-teaching-001-10024672"
+    },
+    {
+      "id": 10024675,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a65b8766906032d0dd5c4c120fbfe7a62f7d473dbe3ea7803dbc00a3c31eb483",
+      "revisionKey": "2026-11-12-teaching-001-10024675"
+    },
+    {
+      "id": 10024677,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "3844e13754e88e640e4faef952b99ce3056b79090084bcd5de5f92c0cc3443f6",
+      "revisionKey": "2026-11-12-teaching-001-10024677"
+    },
+    {
+      "id": 10024683,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d7bf63b6abf51c33d5c58a5760411fc41fbc91e15e8f21335e8f8bb62a8701dc",
+      "revisionKey": "2026-11-12-teaching-001-10024683"
+    },
+    {
+      "id": 10024700,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "908f145f917784b1ff874dff4602cf916032bbe0b9ef6ab09853265f107c1795",
+      "revisionKey": "2026-11-12-teaching-001-10024700"
+    },
+    {
+      "id": 10024702,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6aac8befc5cd83728dc8df2b47e395688caf9a7ed366980718c812a39c6cc318",
+      "revisionKey": "2026-11-12-teaching-001-10024702"
+    },
+    {
+      "id": 10024706,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "e459d77d7366c825eb011d4fc0a8acb70f688e2e76e566adf33bc140d07bf0b8",
+      "revisionKey": "2026-11-12-teaching-001-10024706"
+    },
+    {
+      "id": 10024758,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9f7ce28e70bfcdec66133e9b85b4a10dd38d22914598f30121a64ebcdf61f779",
+      "revisionKey": "2026-11-12-teaching-001-10024758"
+    },
+    {
+      "id": 10024800,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6a1a332072334d2a29c76276d68d832fdad12ecc68579537793b5f2ac64f8489",
+      "revisionKey": "2026-11-12-teaching-001-10024800"
+    },
+    {
+      "id": 10024801,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d2b3b4735414667b45317aa008ca5a3cbed25a2608ba32a7fe8cf6e8a3930040",
+      "revisionKey": "2026-11-12-teaching-001-10024801"
+    },
+    {
+      "id": 10024806,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "cfa6de37a5be20dcb3bee46240499137fbf2485bb092823b5ac47a5c7cde3ba0",
+      "revisionKey": "2026-11-12-teaching-001-10024806"
+    },
+    {
+      "id": 10024809,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "29a1810b61108423e7da9aa3ce39bc0794df7616566850372d7c2049f839b184",
+      "revisionKey": "2026-11-12-teaching-001-10024809"
+    },
+    {
+      "id": 10024925,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0d6ae4d437de547b6d88a0dde42569e5f10dc09d5bbd77277c2606b2274791f3",
+      "revisionKey": "2026-11-12-teaching-001-10024925"
+    },
+    {
+      "id": 10024930,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9f0865ed75ffa463ecc6c2fb8115f162b0ae5d4ea99c5c2287204cd228dde1d3",
+      "revisionKey": "2026-11-12-teaching-001-10024930"
+    },
+    {
+      "id": 10024948,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2ad306ef2d7b0183e0ac829a39bf556f93a0bc5869dc93f3b5ecee759b822c22",
+      "revisionKey": "2026-11-12-teaching-001-10024948"
+    },
+    {
+      "id": 10024950,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6095c226d84d29a07ef6ab4d74cc11f519a8a5133601e44c8cd572435fea4598",
+      "revisionKey": "2026-11-12-teaching-001-10024950"
+    },
+    {
+      "id": 10024951,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0009cf320f661ed0244c228a2e19fef5fce1c99372b20bc10db5f9da12d977c6",
+      "revisionKey": "2026-11-12-teaching-001-10024951"
+    },
+    {
+      "id": 10024954,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "14909d608a7fd45fc2c91ff4b4e8f49657b21b65770a065ef16a574213904ec9",
+      "revisionKey": "2026-11-12-teaching-001-10024954"
+    },
+    {
+      "id": 10024956,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "46f1323ba0ee6a68412990050816175ad89de4d2731e72215993ed87d325e1c5",
+      "revisionKey": "2026-11-12-teaching-001-10024956"
+    },
+    {
+      "id": 10024962,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "30f08289de1f488935b3a50e57dd709ead7c1432583c97b4b819a2ed7da5ffe8",
+      "revisionKey": "2026-11-12-teaching-001-10024962"
+    },
+    {
+      "id": 10024973,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9b41f3e35bf04c17e7264803dc275f9b77e2f3d561f47cfaa6a6f85deda976b1",
+      "revisionKey": "2026-11-12-teaching-001-10024973"
+    },
+    {
+      "id": 10025006,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "f30264ebf60329adbff190a9d1c77899323688f87d49a5fd268f2af95e70b1f7",
+      "revisionKey": "2026-11-12-teaching-001-10025006"
+    },
+    {
+      "id": 10025007,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "ed4787a4e381d1929891a80668567dce90b1b023e46102c481d2b5a0961fe063",
+      "revisionKey": "2026-11-12-teaching-001-10025007"
+    },
+    {
+      "id": 10025022,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "b2fb06f46fb80ea4adc2aea09cabb1cdbf16938b9ad388397d1e43e423067418",
+      "revisionKey": "2026-11-12-teaching-001-10025022"
+    },
+    {
+      "id": 10025024,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "4ccf01f82486026e6440221d750c71c8e705a261d12b9c2a8a850395de8f771c",
+      "revisionKey": "2026-11-12-teaching-001-10025024"
+    },
+    {
+      "id": 10025040,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "325fd384dda371ebfdb89d3aac28479d6b545c0ef90b7ac0725f9747ea0e7c2e",
+      "revisionKey": "2026-11-12-teaching-001-10025040"
+    },
+    {
+      "id": 10025062,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9be89ae693668a586e7058983eb04853b744c83032971ece2f59b0786344e9d1",
+      "revisionKey": "2026-11-12-teaching-001-10025062"
+    },
+    {
+      "id": 10025065,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "19bd4b82afcea4a217eeb6006a06672290e087a993e194903d8a5c4d1895b082",
+      "revisionKey": "2026-11-12-teaching-001-10025065"
+    },
+    {
+      "id": 10025071,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "db14dad1fc992da8ded5f0b5f932aa34849c7ee16a8a26a1f7586a5103bb0a15",
+      "revisionKey": "2026-11-12-teaching-001-10025071"
+    },
+    {
+      "id": 10025072,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d77606aeba4a68e3f7f1e11a1097a0fba0def7a7647540265dbc31dfebef4d33",
+      "revisionKey": "2026-11-12-teaching-001-10025072"
+    },
+    {
+      "id": 10025073,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2a36839369b015ea6376e1b1e99c23773b7e5ad28665ae8b9e34f020cb93efa1",
+      "revisionKey": "2026-11-12-teaching-001-10025073"
+    },
+    {
+      "id": 10025074,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6563e589d44f6f9b9c218aec5e727e797a05661bcf25af3f9c3fcd3a55bf2f19",
+      "revisionKey": "2026-11-12-teaching-001-10025074"
+    },
+    {
+      "id": 10025079,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "34e40c84ed11c570a7c41821d1970b4f1f6afe13921e8a2feb378ded6422f075",
+      "revisionKey": "2026-11-12-teaching-001-10025079"
+    },
+    {
+      "id": 10025087,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "78634935e2dab96d681621d7d3b467771fd5954311c01722546384d87676bd57",
+      "revisionKey": "2026-11-12-teaching-001-10025087"
+    },
+    {
+      "id": 10025089,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "063a923a47ecf9342566e600e1c786ae375f4879dfbd72ced99db13b3b1ce3fa",
+      "revisionKey": "2026-11-12-teaching-001-10025089"
+    },
+    {
+      "id": 10025105,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6702960448882e6a9f3cb1ec969d2c5ab7c7aba077c8fb3b116432a802860af9",
+      "revisionKey": "2026-11-12-teaching-001-10025105"
+    },
+    {
+      "id": 10025108,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "14fe73401b7e60e5a961433eca1ba4e7f424f5929be52a2cd9cfa2e185de9e16",
+      "revisionKey": "2026-11-12-teaching-001-10025108"
+    },
+    {
+      "id": 10025113,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "07861c2e081be8804683c878bf5d9ec9f143d944b1c3942d223456920dd40e0b",
+      "revisionKey": "2026-11-12-teaching-001-10025113"
+    },
+    {
+      "id": 10025114,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "985a54629ce31f37bc605387ee6a7043e152d105b366eea21a1ff310fbad6c40",
+      "revisionKey": "2026-11-12-teaching-001-10025114"
+    },
+    {
+      "id": 10025115,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a8bcfcde1cdfa50db3f7bddddef71263546256897374776bf01b2f20cd575276",
+      "revisionKey": "2026-11-12-teaching-001-10025115"
+    },
+    {
+      "id": 10025126,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "8af49c0513c7a69348656f78c829e9c390b9c936961bced6db267476e2d1798b",
+      "revisionKey": "2026-11-12-teaching-001-10025126"
+    },
+    {
+      "id": 10025129,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d6ce2c15937093804b583a1d6bf0e49b9c0b7fb731d7ab7a00fd78a9991a40a2",
+      "revisionKey": "2026-11-12-teaching-001-10025129"
+    },
+    {
+      "id": 10025141,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "beebad527a7c0536fb7f87f758b0676d7c0d7ef5b089085f77fd6cf0dc0738cb",
+      "revisionKey": "2026-11-12-teaching-001-10025141"
+    },
+    {
+      "id": 10025143,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "cb83b3a257e7cc5ad20c847331f4310016db52d314abe2eb0267141bfcfc251d",
+      "revisionKey": "2026-11-12-teaching-001-10025143"
+    },
+    {
+      "id": 10025154,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a18293ff9c5d4cf457f4df8c36ef90f48aba2495dccdabc2e6911b6b7cee0960",
+      "revisionKey": "2026-11-12-teaching-001-10025154"
+    },
+    {
+      "id": 10025163,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "aa95cb8516bbf73b2340b68f32a4af8de8de71dbc946e041a080b042f542c895",
+      "revisionKey": "2026-11-12-teaching-001-10025163"
+    },
+    {
+      "id": 10025178,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "78e3cf9ec1069be5eb1b47cc4a98ef07e59ffe4098db1927b50bd691d3602b11",
+      "revisionKey": "2026-11-12-teaching-001-10025178"
+    },
+    {
+      "id": 10025183,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "b2938fb3149326928f05e5af4095b3b23f7f000544322b626543ae401e60efce",
+      "revisionKey": "2026-11-12-teaching-001-10025183"
+    },
+    {
+      "id": 10025186,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "cc761ec0325c04f46c2f46fb44f91356bf0e4689a4103de6702d33e0b7fe075b",
+      "revisionKey": "2026-11-12-teaching-001-10025186"
+    },
+    {
+      "id": 10025189,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "ab717e202b898c1ca64b23b316281fb6fb204b6be6e9873206cbb76516deb19f",
+      "revisionKey": "2026-11-12-teaching-001-10025189"
+    },
+    {
+      "id": 10025194,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6101aeef0228a8c6cee552160c8d655d26abaf5af6510eedfa28a7f2a8641250",
+      "revisionKey": "2026-11-12-teaching-001-10025194"
+    },
+    {
+      "id": 10025199,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0bbda765ca91551aed8bcf2f8c905d1bd83dadb0b1c3eba6d3485431af8ea5a3",
+      "revisionKey": "2026-11-12-teaching-001-10025199"
+    },
+    {
+      "id": 10025201,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "50e04084874c8adacd421e0b8f2392e3b11eea3321b371639a24f93f63b54b0d",
+      "revisionKey": "2026-11-12-teaching-001-10025201"
+    },
+    {
+      "id": 10025228,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "b20672d87fe6d9005d5acd2b20f358e828ab3aa89ba2f542dfa65a04a832d651",
+      "revisionKey": "2026-11-12-teaching-001-10025228"
+    },
+    {
+      "id": 10025229,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "85ca1c2a032d57de659a448ed188f2267b118ff898b971f2c455bfd5b6185e41",
+      "revisionKey": "2026-11-12-teaching-001-10025229"
+    },
+    {
+      "id": 10025240,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6308aeeecfc27a003955874b09300f71bcbb3e9fdc6be57b874527a9687d31dc",
+      "revisionKey": "2026-11-12-teaching-001-10025240"
+    },
+    {
+      "id": 10025244,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6495d6da638c28126e1b4dc0e9f217271198b5b38080d6cfa379b2138be08ee3",
+      "revisionKey": "2026-11-12-teaching-001-10025244"
+    },
+    {
+      "id": 10025250,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "98d038f0e40836dbe8d90592e7de5532d3c25d4584e7f933e58358f88c5093d5",
+      "revisionKey": "2026-11-12-teaching-001-10025250"
+    },
+    {
+      "id": 10025252,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a35fc4fa13d5a641bfa3645fe2a726bb9fd7699b68ed04a2d113114a4fb5bd97",
+      "revisionKey": "2026-11-12-teaching-001-10025252"
+    },
+    {
+      "id": 10025253,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2922d42ee6dd2128ed51e2e868818fa9e6a12a2ecd4fd330eaa16b07a9455677",
+      "revisionKey": "2026-11-12-teaching-001-10025253"
+    },
+    {
+      "id": 10025260,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "badf693f270119d6f049bfb178d8ce3ab02c5fd315f08c8f81a210920148dc39",
+      "revisionKey": "2026-11-12-teaching-001-10025260"
+    },
+    {
+      "id": 10025261,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "5674cca9182fc2a2d07ac91fdcd9b0262e54e121b84f6071855b818da21a132e",
+      "revisionKey": "2026-11-12-teaching-001-10025261"
+    },
+    {
+      "id": 10025267,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d6c5b1fb64496c46ab1ec3c5af70383a1ad06d6496c06f715fbb09091f7ae22b",
+      "revisionKey": "2026-11-12-teaching-001-10025267"
+    },
+    {
+      "id": 10025268,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a176c5bde44c3a17a1aa127ba910f9d34055ad849eabd453d711a71a8d7cb331",
+      "revisionKey": "2026-11-12-teaching-001-10025268"
+    },
+    {
+      "id": 10025270,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6ee1320bb62eb1a05c9059409f64d9df0dc25a51f3d911e0a4c04db41cb3d9cd",
+      "revisionKey": "2026-11-12-teaching-001-10025270"
+    },
+    {
+      "id": 10025274,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "1311e9c2e56d1ce2379c051b60b5764c0ce6f037d7d3216e0b6fe769a26cabaa",
+      "revisionKey": "2026-11-12-teaching-001-10025274"
+    },
+    {
+      "id": 10025275,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9a85b86384fadc99c51e0b3f08590a725b930085661e55adbf685bb6335a6f22",
+      "revisionKey": "2026-11-12-teaching-001-10025275"
+    },
+    {
+      "id": 10025278,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d0640157743c1a6994e1d66ecbf11fe88901f3c68b2b25a79452c2299d4a2cd9",
+      "revisionKey": "2026-11-12-teaching-001-10025278"
+    },
+    {
+      "id": 10025281,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "485e80665ba71b3a8b7fce47dc5d7eb906e1c0b8bb6f84e77d0d903e429f3644",
+      "revisionKey": "2026-11-12-teaching-001-10025281"
+    },
+    {
+      "id": 10025305,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "44ec3c2e000a8df22b8a8c4e346ab3fd38dc7a579410b780aec25553b91d96c7",
+      "revisionKey": "2026-11-12-teaching-001-10025305"
+    },
+    {
+      "id": 10025317,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "7e53075977d65e5d233916ae54d2285a824d0b6652a694aa5e680a325d8da60c",
+      "revisionKey": "2026-11-12-teaching-001-10025317"
+    },
+    {
+      "id": 10025319,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0ef7d1183427d49700c4795e680f08cbac4166bf01ca1ede9df745dd0cc577a9",
+      "revisionKey": "2026-11-12-teaching-001-10025319"
+    },
+    {
+      "id": 10025322,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "694ff2df77d5bc0660f777fe35f40d4554a319e206620b782148d8df6d90c84e",
+      "revisionKey": "2026-11-12-teaching-001-10025322"
+    },
+    {
+      "id": 10025332,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "f60b47d7ed235fb15766332819796cf55ba0e9037d64f7ee2c20a9789c2eb7fb",
+      "revisionKey": "2026-11-12-teaching-001-10025332"
+    },
+    {
+      "id": 10025335,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9200d0d72d327dd1e675a95af3ac9f5ab21e97cf00473cb9b121dd2d24768b19",
+      "revisionKey": "2026-11-12-teaching-001-10025335"
+    },
+    {
+      "id": 10025372,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0180fd185ef2398e35c14b3b9a41729fcb8b8d9b6d318621482bcd56ff9ce6e8",
+      "revisionKey": "2026-11-12-teaching-001-10025372"
+    },
+    {
+      "id": 10025373,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2caf7ddb374d9e33c684e06b7ecdaa3bfee3d0db99134417e8c89d118ae39463",
+      "revisionKey": "2026-11-12-teaching-001-10025373"
+    },
+    {
+      "id": 10025379,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2111edbfdf6ed5a6cc4ab6f6db1b5deae79da83224aff90984abdebb36b04f13",
+      "revisionKey": "2026-11-12-teaching-001-10025379"
+    },
+    {
+      "id": 10025381,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "8ad04f868079af12fdb829b00ae72086826c36fdfca3279148cedacb78e35164",
+      "revisionKey": "2026-11-12-teaching-001-10025381"
+    },
+    {
+      "id": 10025388,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "137af30df0ddbbebe9806a606e3b2fc542733643cce5a6cee0d76c77dec2cc68",
+      "revisionKey": "2026-11-12-teaching-001-10025388"
+    },
+    {
+      "id": 10025395,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "76a8424850864ce0e11c49d0ba8c0dbf266a530fb40cc57aaa4159236a26fdf5",
+      "revisionKey": "2026-11-12-teaching-001-10025395"
+    },
+    {
+      "id": 10025401,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "92b52d90a5d9752ec3f9a0fe86eee34603f934992a9ed9aeaddc683efb4ae779",
+      "revisionKey": "2026-11-12-teaching-001-10025401"
+    },
+    {
+      "id": 10025414,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "7d23e9772129dc78f9a5e6deaeeacd6f4ecbfbdb2bf20bdd89439d1496a6aada",
+      "revisionKey": "2026-11-12-teaching-001-10025414"
+    },
+    {
+      "id": 10025416,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "50c06f78bb991d44a7a4c4d61372bd99dab1fad78ed92873292ba8ff27944b95",
+      "revisionKey": "2026-11-12-teaching-001-10025416"
+    },
+    {
+      "id": 10025423,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "e9b2c3b45be13084f02dd3d5b9cbfdf3afbcf9247c0cb6505d95dd7b0616c4fe",
+      "revisionKey": "2026-11-12-teaching-001-10025423"
+    },
+    {
+      "id": 10025433,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "5c42eb6a0d84b3110dfc0558db175366a5f56d56cb5cc813ddce095aa07874be",
+      "revisionKey": "2026-11-12-teaching-001-10025433"
+    },
+    {
+      "id": 10025435,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "4fed7125eb6029256868f8945db5a3b14180f8846d845604b478b86f9f054e53",
+      "revisionKey": "2026-11-12-teaching-001-10025435"
+    },
+    {
+      "id": 10025437,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9f86ae885ee68efcc7d62c546637d5f6c37b0dc54fac4598b0c30080670c64b7",
+      "revisionKey": "2026-11-12-teaching-001-10025437"
+    },
+    {
+      "id": 10025438,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "ce0a32f26a1d7885da253edcde6c9d4027c0658bba75a7548a1d2dc3c8bad86e",
+      "revisionKey": "2026-11-12-teaching-001-10025438"
+    },
+    {
+      "id": 10025447,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "36c6635b505f82a88229446548889981e0de458588345df54c354b09cabf7feb",
+      "revisionKey": "2026-11-12-teaching-001-10025447"
+    },
+    {
+      "id": 10025448,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "eb17fc02864898e4bbd332499d355432110c09149483a66adbbb70e0bce55d21",
+      "revisionKey": "2026-11-12-teaching-001-10025448"
+    },
+    {
+      "id": 10025452,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9e6216f6da9a8639482589a78c77834732f2a6cdb9a32699cf357b22b9d6e229",
+      "revisionKey": "2026-11-12-teaching-001-10025452"
+    },
+    {
+      "id": 10025455,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2764298ff4344580ad963bac4c5ea85aa60a3478f1d420ff2156997df3540e80",
+      "revisionKey": "2026-11-12-teaching-001-10025455"
+    },
+    {
+      "id": 10025459,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "7117388be0da6751a4ae5859274a8d4f84a12b9701c90ab28f060b0e833cfbea",
+      "revisionKey": "2026-11-12-teaching-001-10025459"
+    },
+    {
+      "id": 10025463,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "8c7e6792161f209067ba340566d37657c224cab29c72f0fa409241b798896db5",
+      "revisionKey": "2026-11-12-teaching-001-10025463"
+    },
+    {
+      "id": 10025471,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9823345c78308458f610a24df9b7809997b3f0dd8b4ffac6baabf261d9494397",
+      "revisionKey": "2026-11-12-teaching-001-10025471"
+    },
+    {
+      "id": 10025472,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "641d7c975330d7b36d10e74569261fcfb5f37b483f16684de590f9349e259ef1",
+      "revisionKey": "2026-11-12-teaching-001-10025472"
+    },
+    {
+      "id": 10025473,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9d979a8682737a2f5d8a1a80414d409c0e53b1011696ee98180214adcc403699",
+      "revisionKey": "2026-11-12-teaching-001-10025473"
+    },
+    {
+      "id": 10025477,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "c9b35b7cdc1fc53ab1a0f311920bd33d70f7d4893625202f8df53c5ad0c8d14f",
+      "revisionKey": "2026-11-12-teaching-001-10025477"
+    },
+    {
+      "id": 10025489,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "cb88875c654b33dc45caf41ab639881f3a1efdf4eca78c633ed00c185d51a2a4",
+      "revisionKey": "2026-11-12-teaching-001-10025489"
+    },
+    {
+      "id": 10025492,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "13ed6a536348d8f2e8f87ae3295619cb293121296aa16ae7716a591e9de09115",
+      "revisionKey": "2026-11-12-teaching-001-10025492"
+    },
+    {
+      "id": 10025493,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "65dc7081e837409ac27cc66b28b44c2b65814d150ec3e5e71d8b6b2b66fc139e",
+      "revisionKey": "2026-11-12-teaching-001-10025493"
+    },
+    {
+      "id": 10025508,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "5b125e55d72e17c0af106df8ef2fd3b18a9abada825081e9dac206f6eb50a1df",
+      "revisionKey": "2026-11-12-teaching-001-10025508"
+    },
+    {
+      "id": 10025513,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "831b4e8e57e52a79bf5cc7b87bc1a9aab123f373e6d26e9c97915cb50f4ad0fd",
+      "revisionKey": "2026-11-12-teaching-001-10025513"
+    },
+    {
+      "id": 10025522,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "3162a6cbc24443da1e315013efe53f6f7612e337880c94c37e6099273e5aa0b4",
+      "revisionKey": "2026-11-12-teaching-001-10025522"
+    },
+    {
+      "id": 10025526,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "3604cd35e3acf90ec332047e4dbd1fba745a9802aa9338bc589ad300796ffbe9",
+      "revisionKey": "2026-11-12-teaching-001-10025526"
+    },
+    {
+      "id": 10025528,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2baf2900e21207b5db17b8bf367195c6f7da2014f6cd0df215ae64709f6ba2d0",
+      "revisionKey": "2026-11-12-teaching-001-10025528"
+    },
+    {
+      "id": 10025532,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "3e0722aa9039ecabae73e1dd65bb0a2a812f05455408b4595ada14e29d3885da",
+      "revisionKey": "2026-11-12-teaching-001-10025532"
+    },
+    {
+      "id": 10025533,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d3dcf1762f672e5d6f4338fe8a452651f419ce0543e98b86abf74bd76a3bf620",
+      "revisionKey": "2026-11-12-teaching-001-10025533"
+    },
+    {
+      "id": 10025537,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "cb2228b48b70a3dcb5fef3f598e4ff1878be482d51250b8ccdd7ca95f6150495",
+      "revisionKey": "2026-11-12-teaching-001-10025537"
+    },
+    {
+      "id": 10025539,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a97a19d07152b0c827238fef44453df94dec909ac31f78d9aa1d673926d98536",
+      "revisionKey": "2026-11-12-teaching-001-10025539"
+    },
+    {
+      "id": 10025545,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9c09d098e3ec81d70035bcd4da75c6c8b4d577a8c2ed02c9ce00ca8ff285c2b2",
+      "revisionKey": "2026-11-12-teaching-001-10025545"
+    },
+    {
+      "id": 10025546,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "e0aefb4cc658f7866ae34dca455a4e0d9686837ce29bc39bb766f3b14bae7307",
+      "revisionKey": "2026-11-12-teaching-001-10025546"
+    },
+    {
+      "id": 10025549,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "27db6cf5c1cdebc25bb3be4319bd3f94ecb1e6f6ff6a23929e03205bd4ed647e",
+      "revisionKey": "2026-11-12-teaching-001-10025549"
+    },
+    {
+      "id": 10025554,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "3ffd7c4080ec9523c4c0f62bc92d06d82a95fe0e633298c4b76db179d918baf4",
+      "revisionKey": "2026-11-12-teaching-001-10025554"
+    },
+    {
+      "id": 10025558,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d05819185903466a4d5ee32bb0e5c23bb72296bd0a327d6af281ce61a89c6e1b",
+      "revisionKey": "2026-11-12-teaching-001-10025558"
+    },
+    {
+      "id": 10025568,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "768a6481c9376af8510b3a1642273d6c1a455d15e7c55ccdedcb2364afe33bf0",
+      "revisionKey": "2026-11-12-teaching-001-10025568"
+    },
+    {
+      "id": 10025571,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "268a53ee4997eb3a978ad2f0b75a6422ee6e3dceb30830c56ada524973c70db9",
+      "revisionKey": "2026-11-12-teaching-001-10025571"
+    },
+    {
+      "id": 10025574,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a637ca72e228790a979586bb21a844e610bae557bbc0572f465115fe12621205",
+      "revisionKey": "2026-11-12-teaching-001-10025574"
+    },
+    {
+      "id": 10025575,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "f4e6951230dd57f6361b1af815dd5c5a76c613ef4fcd929ae01b9fa6caa35531",
+      "revisionKey": "2026-11-12-teaching-001-10025575"
+    },
+    {
+      "id": 10025578,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "699563ebbf6ff7cf32df55c0b9a4f5f9994c09f92bc62c13cae0cf5f8e9d6ca3",
+      "revisionKey": "2026-11-12-teaching-001-10025578"
+    },
+    {
+      "id": 10025590,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "2793bf4f3619a1f96c92864e7f25c47bf6653b9416c68f0e1d94ba9c9300a563",
+      "revisionKey": "2026-11-12-teaching-001-10025590"
+    },
+    {
+      "id": 10025594,
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "ce6ecdb70d60ad3117d415d09ea2cda87e4e753624ab3e243b994712eddf7137",
+      "revisionKey": "2026-11-12-teaching-001-10025594"
+    }
+  ],
+  "exactAfterMatches": 216,
+  "archive": {
+    "total": 216,
+    "applied": 216
+  },
+  "historyBefore": {
+    "answer_record": "1777265582",
+    "exam_session": "2127863247",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "mock_exam_bank": "0",
+    "question_source": "56665642"
+  },
+  "historyAfter": {
+    "answer_record": "1777265582",
+    "exam_session": "2127863247",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "mock_exam_bank": "0",
+    "question_source": "56665642"
+  },
+  "historyPreserved": true,
+  "repeatPreservedChecksums": {
+    "question": "4109215981",
+    "question_legal_subject": "4169332068",
+    "question_content_revision": "66220574"
+  },
+  "idempotent": true,
+  "releaseApproval": false
+}

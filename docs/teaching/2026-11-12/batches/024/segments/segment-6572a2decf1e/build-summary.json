@@ -1,0 +1,87 @@
+{
+  "batch": "024",
+  "segment": "segment-6572a2decf1e",
+  "records": 2,
+  "groups": 1,
+  "tables": {
+    "question": 1,
+    "mock_exam_bank": 1
+  },
+  "eligibleTargets": [
+    "question:10016739",
+    "mock_exam_bank:1340072"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10016751",
+      "targets": [
+        "question:10016751",
+        "mock_exam_bank:1340084"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340084",
+        "held for human/evidence review question:10016751"
+      ]
+    },
+    {
+      "contentGroup": "question:10016814",
+      "targets": [
+        "question:10016814",
+        "mock_exam_bank:1340147"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340147",
+        "held for human/evidence review question:10016814"
+      ]
+    },
+    {
+      "contentGroup": "question:10017031",
+      "targets": [
+        "question:10017031",
+        "mock_exam_bank:1340364"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340364",
+        "held for human/evidence review question:10017031"
+      ]
+    },
+    {
+      "contentGroup": "question:10017048",
+      "targets": [
+        "question:10017048",
+        "mock_exam_bank:1340381"
+      ],
+      "reasons": [
+        "missing proposal mock_exam_bank:1340381",
+        "missing proposal question:10017048"
+      ]
+    },
+    {
+      "contentGroup": "question:10017064",
+      "targets": [
+        "question:10017064",
+        "mock_exam_bank:1340397"
+      ],
+      "reasons": [
+        "missing proposal mock_exam_bank:1340397",
+        "missing proposal question:10017064"
+      ]
+    },
+    {
+      "contentGroup": "question:10017079",
+      "targets": [
+        "question:10017079",
+        "mock_exam_bank:1340412"
+      ],
+      "reasons": [
+        "missing proposal mock_exam_bank:1340412",
+        "missing proposal question:10017079"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-024-segment-6572a2decf1e.sql",
+  "migrationSha256": "be0d07789d5d6fcde7aefabbafdfc896fd801dd6abf9e31b238c476b8b7ef67c"
+}

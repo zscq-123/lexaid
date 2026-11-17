@@ -1,0 +1,54 @@
+{
+  "batch": "010",
+  "segment": "segment-7353fdcf6cdf",
+  "records": 2,
+  "groups": 1,
+  "tables": {
+    "question": 1,
+    "mock_exam_bank": 1
+  },
+  "eligibleTargets": [
+    "question:10017150",
+    "mock_exam_bank:1340483"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10017128",
+      "targets": [
+        "question:10017128",
+        "mock_exam_bank:1340461"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340461",
+        "held for human/evidence review question:10017128"
+      ]
+    },
+    {
+      "contentGroup": "question:10017162",
+      "targets": [
+        "question:10017162",
+        "mock_exam_bank:1340495"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340495",
+        "held for human/evidence review question:10017162"
+      ]
+    },
+    {
+      "contentGroup": "question:10017164",
+      "targets": [
+        "question:10017164",
+        "mock_exam_bank:1340497"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340497",
+        "held for human/evidence review question:10017164"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-010-segment-7353fdcf6cdf.sql",
+  "migrationSha256": "b580c8f304ae99b7177c24b938c22f06cad82130e39a2c2a3ec3d1c31f45fe7a"
+}

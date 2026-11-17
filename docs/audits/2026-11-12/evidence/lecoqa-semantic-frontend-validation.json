@@ -1,0 +1,22 @@
+{
+  "total": 515,
+  "uniqueIds": 515,
+  "expectedRange": [
+    515,
+    1030
+  ],
+  "exactIdOrderMatch": true,
+  "exactIndexRange": true,
+  "contentHashMatches": 515,
+  "threeFieldsReadInFull": 515,
+  "confirmedCount": 31,
+  "confirmedIssueCount": 31,
+  "confirmedEvidenceComplete": true,
+  "onlyConfirmedHaveIssues": true,
+  "fieldLengthsMatch": true,
+  "allAI": true,
+  "allFullLegalVerificationFalse": true,
+  "outputSha256": "040067aa2e158325e28c0f5aef2bb64d307bae2de4760c2b161f9033d23b2515",
+  "sourceSha256": "06b77170cebd5be8311b87a5b3676aee40c53f870ef154ebe5250dbb176c816a",
+  "result": "PASS"
+}

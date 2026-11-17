@@ -1,0 +1,14 @@
+{
+  "total": 658,
+  "sourceFieldMatches": 658,
+  "lexeval": 325,
+  "originalCases": 30,
+  "historicalObjective": 298,
+  "historicalSubjective": 5,
+  "originalFullContentRead": 30,
+  "historicalLocalRubricRead": 5,
+  "originalCorrectionsApplied": 3,
+  "historicalObjectiveOptionAndKeyMatches": 298,
+  "legalAnswersIndividuallyFullyVerified": 0,
+  "scope": "Source/structural audit of all 658. Full semantic reading of 30 original cases plus local 5 historical rubrics; no claim that 658 legal arguments are all verified."
+}

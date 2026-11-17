@@ -1,0 +1,405 @@
+{
+  "files": [
+    {
+      "file": "after/manifest.jsonl.gz",
+      "bytes": 1109334,
+      "sha256": "2d7379da7716f1f61380bad00ce73f968b90f98ecca88bf80a9b64cbc93ea10f"
+    },
+    {
+      "file": "after/summary.json",
+      "bytes": 576,
+      "sha256": "488d226ed90745e6e152746ba56600b57c64dba9bed1f18b293be71d366f2946"
+    },
+    {
+      "file": "applied-revisions.json",
+      "bytes": 133082,
+      "sha256": "6d333b7db2e999a12c8d44ad026c9d1a00be1b2ce5890604b35db330f7430347"
+    },
+    {
+      "file": "content-review-summary.json",
+      "bytes": 784,
+      "sha256": "2a2f455b7b2d1bdc33b32246ec339e10a152b1cecb98259272d53c8ee4009577"
+    },
+    {
+      "file": "evidence/README.md",
+      "bytes": 2410,
+      "sha256": "570964e3040ffe4f66df73f295ca53bede1e3e02332f90a228101aab141c64fb"
+    },
+    {
+      "file": "evidence/benchmark-purpose-summary.json",
+      "bytes": 137,
+      "sha256": "83d6b25acf5008f92f76f47fde451495df263f1f577d405897aa1ed67c6cbc44"
+    },
+    {
+      "file": "evidence/citation-differences.json",
+      "bytes": 18601,
+      "sha256": "7d990318e9ba4686b5fbf4b930ba0e64f31f7bc5950be13e56830d2b4bf9e437"
+    },
+    {
+      "file": "evidence/complete-importer-comparison.json",
+      "bytes": 19898,
+      "sha256": "68e3fb397fd966aa0944eedac30b704d6858b1a8438172bc0c67e6f269e6e572"
+    },
+    {
+      "file": "evidence/corrections-independent-review.json",
+      "bytes": 108356,
+      "sha256": "4c5e30c3a370e7bf9fa657601439804a54cce3088fa5971f3b6c40bb1922052c"
+    },
+    {
+      "file": "evidence/formal-application.json",
+      "bytes": 302,
+      "sha256": "3d8af406646b11663d8d5bfaa0ff90920a8a36d02bfe87f99df6cc31b74c71c5"
+    },
+    {
+      "file": "evidence/formal-corrections.json",
+      "bytes": 10034,
+      "sha256": "791a297c47562030795351532a492d50081b6b65cb2fd7ee656e91633d1ba5ec"
+    },
+    {
+      "file": "evidence/formal-migration-test.json",
+      "bytes": 150,
+      "sha256": "e98fa27b45cb2511d49dec9ed7db5a97bc7f029ac441ea10195f1fc1426af4e1"
+    },
+    {
+      "file": "evidence/formal-real-source-check.jsonl.gz",
+      "bytes": 3714,
+      "sha256": "2a53a20d1a0457bc242d93f5fe8895a40f09624a12a4d698cc2de2e208ea0069"
+    },
+    {
+      "file": "evidence/formal-source-pages-manifest.json",
+      "bytes": 2315,
+      "sha256": "480521ac176f15546cf44274cb1a81ec2c067f8d92857b5d010a96ccb8d00caf"
+    },
+    {
+      "file": "evidence/formal-summary.json",
+      "bytes": 523,
+      "sha256": "a751079899cf64008567db358431878ad6e7a1c855a42ef002f0dbf958c0ca56"
+    },
+    {
+      "file": "evidence/lawbench-report.md",
+      "bytes": 3543,
+      "sha256": "235ba5b1851f6e02784da36104e9e16e271f0daace435a64c79622ed85024b1a"
+    },
+    {
+      "file": "evidence/lawbench-source-check.jsonl.gz",
+      "bytes": 466751,
+      "sha256": "b74f54c7292226cfa551b75f03523c9bfa58024e322d0918dc9d104767eb4050"
+    },
+    {
+      "file": "evidence/lawbench-source-manifest.json",
+      "bytes": 6392,
+      "sha256": "83a6b3efa35041cfb02965668b8b357a032f67c5fcd54fb5161bd6a7d619ddc6"
+    },
+    {
+      "file": "evidence/lawbench-summary.json",
+      "bytes": 3995,
+      "sha256": "23bf8a8c39bb3390a9caad62fd9cee1b20cbd3ce5dc7e2bff7934ec477104042"
+    },
+    {
+      "file": "evidence/lecoqa-reference-scan-report.md",
+      "bytes": 4184,
+      "sha256": "ed8d372ccfb1e54f06631b9ea96f3ded5586c7ad62d0c1d5916d2d3cebddca8f"
+    },
+    {
+      "file": "evidence/lecoqa-reference-scan-summary.json",
+      "bytes": 12176,
+      "sha256": "9dfc171d677309ce464f662a4b388be5b27b7089a81991e5b33383dc7c2537c6"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-all.jsonl.gz",
+      "bytes": 209212,
+      "sha256": "fda4e7c2af900e04a34a2a46b5fcc26d27a4a63003918e84be4a30212be2a553"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-backend-summary.json",
+      "bytes": 2104,
+      "sha256": "17e6ca10e1d8465142024a48ea716df5d746ecb9af25543cf0b1835504d03362"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-backend.jsonl.gz",
+      "bytes": 65198,
+      "sha256": "ae7654e27640eca4d4e9abd9e87dedd7f462ca0f4bc8badc6c0d14c5613f28d9"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-frontend-summary.json",
+      "bytes": 2400,
+      "sha256": "38203930f7a7514bdad35ad79d34e31f9a6003a111d95b116346a4d16c2f7522"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-frontend-validation.json",
+      "bytes": 604,
+      "sha256": "a3ed6135c43e4082055a359c7de9bb726314e18c0281b543654d4ea3e634e60e"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-frontend.jsonl.gz",
+      "bytes": 65653,
+      "sha256": "29b5addfb30380351d224a2a493fe50425bea79637fee1fcccc3b4d3db988ab7"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-legal-evidence.jsonl.gz",
+      "bytes": 68026,
+      "sha256": "a4d93e9d329c0c2b806832de25b0fe592ea9bd9490fde8330a140419f9977c35"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-legal-official-manifest.json",
+      "bytes": 9582,
+      "sha256": "f8da12f7eba9af0e875ab18c09151d929d2097863ac35e2704b6545db7823c1a"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-legal-report.md",
+      "bytes": 26395,
+      "sha256": "6a87f562bdb84ed54d9ee5dea555432f7866e448d0d1075f2cdabd6cb17c490f"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-legal-summary.json",
+      "bytes": 8318,
+      "sha256": "c12f185e9e5851a69bb714e689b0cfa094b2e1553c3f57ca093db1ac62f543b9"
+    },
+    {
+      "file": "evidence/lecoqa-semantic-legal.jsonl.gz",
+      "bytes": 80014,
+      "sha256": "26669a6a820030c41e4e87b53d97ab36c1a2289464dddae7da69e38bdb42c64c"
+    },
+    {
+      "file": "evidence/lecoqa-source-manifest.json",
+      "bytes": 423,
+      "sha256": "5dea5f9cc9cc9e1a7791f75d9e278e23f8d2202007a67ac5d222504d85a967a4"
+    },
+    {
+      "file": "evidence/lecoqa-source-verification.jsonl.gz",
+      "bytes": 74735,
+      "sha256": "27b285fe3197aaedcdb65f2b607e643a9985c91cc56f5d2691d123454547858a"
+    },
+    {
+      "file": "evidence/lexeval-corrections.jsonl.gz",
+      "bytes": 21048,
+      "sha256": "33fa35a7995ed1660e2b8d6db2b5b69a1ce65b49c9b2e9162d9c2bcf8afac6d9"
+    },
+    {
+      "file": "evidence/lexeval-report.md",
+      "bytes": 4414,
+      "sha256": "2e6a386ab175d1751848b9d9f2856ab950c36c5b76ddbde31274d9dd6d9e2802"
+    },
+    {
+      "file": "evidence/lexeval-source-verification.jsonl.gz",
+      "bytes": 1292090,
+      "sha256": "c98a2c283f22ea108520143bd9604739411eeb9919bef41fcc88f391dd1cb13e"
+    },
+    {
+      "file": "evidence/lexeval-structure-migration-report.json",
+      "bytes": 1382,
+      "sha256": "d6b004e1ae25588df5acde1bd7261a27f3297143a3c35e5edbf64a336ee7304e"
+    },
+    {
+      "file": "evidence/lexeval-summary.json",
+      "bytes": 6006,
+      "sha256": "1da769d5fc0e59dbe36ee929db1ec4c12ee9f7040f83c7a6a4b564385ea9de25"
+    },
+    {
+      "file": "evidence/manual-evidence-manifest.json",
+      "bytes": 7592,
+      "sha256": "04c94d4e78e41eb20f3e59438a66cc11386da3c433c52a7abcfdd02b588d44ea"
+    },
+    {
+      "file": "evidence/manual-findings.json",
+      "bytes": 58790,
+      "sha256": "bbf33191270086acf4e5f2505d700c8475bd7c980ab2443ed548341b8e8fafa5"
+    },
+    {
+      "file": "evidence/merge-regression-check.json",
+      "bytes": 211,
+      "sha256": "6f5bfd425aee20a9ca40f742986739958be795eef2d43a6bc7a74877c6448147"
+    },
+    {
+      "file": "evidence/missing-official-sources.json",
+      "bytes": 43858,
+      "sha256": "15566c7aad1e2cc1e8da9efdb501eb176c15d02b77553b4da931c5d063e4601c"
+    },
+    {
+      "file": "evidence/official-corpus-manifest.json",
+      "bytes": 22806,
+      "sha256": "77324b1cadb6e30c51c242f44fc4e901272544c4ebe9044dcc6814140205bd1d"
+    },
+    {
+      "file": "evidence/replay/audit-formal-bank.mjs",
+      "bytes": 8040,
+      "sha256": "3666102f0c7f7392bb74d362b68f8916b759834e8200f6acb970e5de118b7429"
+    },
+    {
+      "file": "evidence/replay/audit-lecoqa.py",
+      "bytes": 6799,
+      "sha256": "12b34711b9d084d35e687267a3bd8caea0f86342de669c45926539909dc44b7a"
+    },
+    {
+      "file": "evidence/replay/build-formal-corrections.py",
+      "bytes": 4912,
+      "sha256": "19778fc747bbb0ac0d114ca87348f9196a2b482e521e471d0034848cec81ad96"
+    },
+    {
+      "file": "evidence/replay/build-manual-review.py",
+      "bytes": 14977,
+      "sha256": "a6077f00ffbe49a749d0a0f448cd2cdefff0190ab801c27e6d9f324cc2b811bf"
+    },
+    {
+      "file": "evidence/replay/build-structure-migration.py",
+      "bytes": 5333,
+      "sha256": "73c3ebcaced337b19a815460705b2e6e171064aa9ac9c17d13de61d0cb944a59"
+    },
+    {
+      "file": "evidence/replay/check-complete-importer.mjs",
+      "bytes": 4774,
+      "sha256": "5b4225a95d912cef679e2651a55592b0ee06a28ca24182cd9ae4a2968567e95b"
+    },
+    {
+      "file": "evidence/replay/check-final-viewer.mjs",
+      "bytes": 2411,
+      "sha256": "a0d9bfc53bac8d859044b73283c5c05d867916c57e25745994fdcf4675656fbd"
+    },
+    {
+      "file": "evidence/replay/check-formal-real.py",
+      "bytes": 2728,
+      "sha256": "9d9d54e92491144589d3e0d7859c9e26d51c00b37a96a1c7795dbd857be340b6"
+    },
+    {
+      "file": "evidence/replay/check-lecoqa-source.py",
+      "bytes": 2305,
+      "sha256": "5325abf3665436801fe9d6f703497367b163a5290ac72617654f3e8a99beb813"
+    },
+    {
+      "file": "evidence/replay/check-structure-migration.py",
+      "bytes": 6091,
+      "sha256": "6039c42d2cd888dff4d3948519f2fa071fb89d296ada83da82c03b94fb64d881"
+    },
+    {
+      "file": "evidence/replay/corrections-independent-review.py",
+      "bytes": 7793,
+      "sha256": "4bf5d3845478db3ab530840dcf2fb0daccf3df0822ec2039500623687acbe369"
+    },
+    {
+      "file": "evidence/replay/finalize-lecoqa.py",
+      "bytes": 12072,
+      "sha256": "fb478022c26c60aea4cbdb21845875cc1213534099dddd55dbd63e7cd507e8ad"
+    },
+    {
+      "file": "evidence/replay/finalize-semantic-legal.py",
+      "bytes": 22316,
+      "sha256": "aa6b98925b28060e8d6a34b6b65fa29af21c3bbd168c01897fdcf3787e1930bb"
+    },
+    {
+      "file": "evidence/replay/importer-original-helpers.mjs",
+      "bytes": 2417,
+      "sha256": "3c8d40bf690617aaff8c9743cfec2da8310d5ec8eca21875cc6100e7cfdd4320"
+    },
+    {
+      "file": "evidence/replay/independent-report-repro.py",
+      "bytes": 1367,
+      "sha256": "16f4eecbec59fa4b8cfa5d2fa74b914a28c19521d4c412eaa40b00fa51892538"
+    },
+    {
+      "file": "evidence/replay/lawbench-audit.py",
+      "bytes": 16262,
+      "sha256": "aa76bcc3d8d604c47d8eb67ad15c917e22e88c9b11ff27d4451319c0d003a3bf"
+    },
+    {
+      "file": "evidence/replay/lawbench-export.py",
+      "bytes": 2778,
+      "sha256": "172d1a433b9a9f47bd6ae6957722b8486d84258930542e0f8cd586c0912809de"
+    },
+    {
+      "file": "evidence/replay/lawbench-source-check.mjs",
+      "bytes": 1889,
+      "sha256": "5cc3e0f5e952ab7c0ef593c6b9680944e7e5e0b242b66c9f93d4fc628a984b36"
+    },
+    {
+      "file": "evidence/replay/lexeval-audit.py",
+      "bytes": 16119,
+      "sha256": "7d6c1688a7854dc04b25ce3259b7e7a3fc53cd3326099d4f7f4f7e75fcf723cb"
+    },
+    {
+      "file": "evidence/replay/merge-web-corpus.py",
+      "bytes": 1911,
+      "sha256": "5ffbd6b84de1acb572fa112dbe2749b3518888dea82f783c93f9877bd4dd8c8f"
+    },
+    {
+      "file": "evidence/replay/validate-lecoqa-semantic-backend.py",
+      "bytes": 3197,
+      "sha256": "7c06321e88d2ecb7135d02dcb840cf5bbc70f7598c9e26f3f7e28c51dba533c5"
+    },
+    {
+      "file": "evidence/replay-inputs.tar.gz",
+      "bytes": 32909094,
+      "sha256": "b21203b96fc611ba4bf00a0ce5c633080b4fd9fdce36b906b700e83d5ce73410"
+    },
+    {
+      "file": "evidence/review-ledgers-before-merge.tar.gz",
+      "bytes": 14044167,
+      "sha256": "5eb02042e83d88fbef2797051af5cece38464b2115656a43db68b6cc75a46686"
+    },
+    {
+      "file": "evidence/structure-application.json",
+      "bytes": 3202,
+      "sha256": "8d5037de737a09e2183233bbf4563e39a9321f94a05193b4d4d584beb5bf1b1d"
+    },
+    {
+      "file": "evidence/validation.json",
+      "bytes": 11511,
+      "sha256": "80406a8dedf11725d9185e6ef6d9fd181792fe941bdc50da181b0940130005c2"
+    },
+    {
+      "file": "evidence/viewer-check.json",
+      "bytes": 264,
+      "sha256": "e202059661d704d9a6ce0a6a3664ab28039aa58c96a96bcef12c31c7a40f8a2a"
+    },
+    {
+      "file": "formal.jsonl.gz",
+      "bytes": 105626,
+      "sha256": "446ff1b69141a0ecb15d926ab1b5f3226d0c9995d56a7eb9309618139675b2b6"
+    },
+    {
+      "file": "index.csv",
+      "bytes": 32307190,
+      "sha256": "a0c5cc462fa00806878bae5ca87584a514f385f3ad485534a00a2ce85d32b59a"
+    },
+    {
+      "file": "index.jsonl.gz",
+      "bytes": 8527235,
+      "sha256": "0cb411145dfef8cb8c1713da9e29efa2f6e07d16f8e2cd844cc1a8fe416974d9"
+    },
+    {
+      "file": "lawbench.jsonl.gz",
+      "bytes": 4349065,
+      "sha256": "cca40e4fe92cdfaa633692abfcb0f5d77dd6b4bcc0c48cb1388a75ca40baf33b"
+    },
+    {
+      "file": "lecoqa.jsonl.gz",
+      "bytes": 519534,
+      "sha256": "f719b5bc512ae0b3a02069a7ad21f869db4e112f9a7533c2c80d73199f696744"
+    },
+    {
+      "file": "lexeval.jsonl.gz",
+      "bytes": 8804162,
+      "sha256": "091dac99abeb55119afa08b577c2a8dba2b663a5f4a2e559d39cd99c74b0bc69"
+    },
+    {
+      "file": "review.html",
+      "bytes": 40147669,
+      "sha256": "d7e6911fb9cad51213af13a53d6076642c74e82ca7557c870a2308d253c6d30b"
+    },
+    {
+      "file": "seed.jsonl.gz",
+      "bytes": 5989,
+      "sha256": "08b2afca54666445c2e5df307d211a1f5e4221241c94f56aa3013278970795c4"
+    },
+    {
+      "file": "summary.json",
+      "bytes": 612,
+      "sha256": "0dc1e08e5446df9dc6e4dded2636cf6439f1868be986d125033eec5a922f98ec"
+    }
+  ],
+  "mainReport": {
+    "file": "../../full-question-review-2026-11-12.md",
+    "sha256": "60ff97fc40c1e0932beb13b884a856d6d41ba820d7329ef2eafdae2b7b847efd"
+  },
+  "filesCount": 79,
+  "scope": "Audit artifacts only; not human approval or production deployment"
+}

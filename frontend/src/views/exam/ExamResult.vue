@@ -13,6 +13,7 @@
           <div class="summary-info">
             <div class="score">{{ maximum > 0 ? result.score + ' / ' + maximum + ' 分' : '暂无已评分题目' }}</div>
             <div class="score-label">已评分 {{ gradedTotal }} / {{ result.total }} 题</div>
+            <p v-if="skippedCount" class="score-note">未作答 / 跳过 {{ skippedCount }} 题，不计入得分率、答题次数与错题本。</p>
             <p v-if="pendingCount" class="score-note" role="status">{{ pendingCount }} 道简答题等待 DeepSeek 评分</p>
             <p v-if="unavailableCount" class="score-note">
               {{ unavailableCount }} 道题评分暂不可用
@@ -37,8 +38,9 @@
         <div class="q-stem">{{ d.stem }}</div>
         <div class="q-body">
           <div>你的答案：{{ formatAnswer(d) }}</div>
-          <div>{{ d.type === 'SHORT' ? '参考答案' : '正确答案' }}：{{ d.correctAnswer || '未收录' }}</div>
+          <div v-if="d.practiceEligible !== false">{{ d.type === 'SHORT' ? '参考答案' : '正确答案' }}：{{ d.correctAnswer || '未收录' }}</div>
         </div>
+        <p v-if="d.practiceEligible === false" class="score-note">此题已更新或正在复核，暂不展示参考答案、解析及评分说明。历史评分仅供回顾，不能作为当前答案依据。</p>
         <QuestionGrade :question="d" />
         <template v-if="d.analysis">
           <el-divider content-position="left">解析</el-divider>
@@ -76,6 +78,7 @@ const gradedTotal = computed(() => result.value?.gradedTotal ?? result.value?.de
 const maximum = computed(() => result.value?.maxScore ?? gradedTotal.value)
 const rate = computed(() => maximum.value > 0 ? Math.round(result.value.score * 100 / maximum.value) : null)
 const pendingCount = computed(() => result.value?.details?.filter(d => d.gradingStatus === 'PENDING').length ?? 0)
+const skippedCount = computed(() => result.value?.details?.filter(d => d.gradingStatus === 'SKIPPED').length ?? 0)
 const unavailableCount = computed(() => result.value?.details?.filter(d => d.gradingStatus === 'UNAVAILABLE').length ?? 0)
 
 async function refresh(retry = false) {

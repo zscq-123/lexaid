@@ -1,0 +1,30 @@
+{
+  "criminal": {
+    "title": "国家税务总局：中华人民共和国刑法（2023年修正）",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html"
+  },
+  "civil": {
+    "title": "国家统计局：中华人民共和国民法典",
+    "url": "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html"
+  },
+  "admin": {
+    "title": "市场监管总局：中华人民共和国行政处罚法（2021年修订）",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_3712fbfaaed942b3b6b66f14d5288723.html"
+  },
+  "company": {
+    "title": "市场监管总局：中华人民共和国公司法（2023年修订）",
+    "url": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+  },
+  "security": {
+    "title": "市场监管总局：中华人民共和国治安管理处罚法（2025年修订）",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html"
+  },
+  "guarantee": {
+    "title": "最高人民法院：民法典有关担保制度的解释",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282721.html"
+  },
+  "tort": {
+    "title": "上海一中院：侵权责任纠纷开庭，法官这样建议（2024-01-09）",
+    "url": "https://www.a-court.gov.cn/xxfb/no1court_412/docs/202401/d_4001042.html"
+  }
+}

@@ -238,7 +238,7 @@ public class MessageService {
         if (source.fileSize() > 0) bytes = attachment(viewer, id).bytes();
         long newId = insert(viewer, recipient, source.content(), source.kind(), source.fileName(),
                 source.mediaType(), source.fileSize() > 0 ? source.fileSize() : null,
-                source.durationSeconds() > 0 ? source.durationSeconds() : null, bytes, source.quoted());
+                source.durationSeconds() > 0 ? source.durationSeconds() : null, bytes, null);
         return find(newId);
     }
 

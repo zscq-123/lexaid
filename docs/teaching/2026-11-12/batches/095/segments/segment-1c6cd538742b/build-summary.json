@@ -1,0 +1,180 @@
+{
+  "batch": "095",
+  "segment": "segment-1c6cd538742b",
+  "records": 36,
+  "groups": 36,
+  "tables": {
+    "question": 36
+  },
+  "eligibleTargets": [
+    "question:10011207",
+    "question:10011208",
+    "question:10011209",
+    "question:10011210",
+    "question:10011211",
+    "question:10011212",
+    "question:10011213",
+    "question:10011214",
+    "question:10011215",
+    "question:10011216",
+    "question:10011217",
+    "question:10011218",
+    "question:10011219",
+    "question:10011221",
+    "question:10011222",
+    "question:10011223",
+    "question:10011224",
+    "question:10011225",
+    "question:10011226",
+    "question:10011227",
+    "question:10011228",
+    "question:10011229",
+    "question:10011230",
+    "question:10011231",
+    "question:10011232",
+    "question:10011233",
+    "question:10011234",
+    "question:10011235",
+    "question:10011236",
+    "question:10011237",
+    "question:10011238",
+    "question:10011240",
+    "question:10011241",
+    "question:10011242",
+    "question:10011243",
+    "question:10011244"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10011195",
+      "targets": [
+        "question:10011195"
+      ],
+      "reasons": [
+        "already applied question:10011195"
+      ]
+    },
+    {
+      "contentGroup": "question:10011196",
+      "targets": [
+        "question:10011196"
+      ],
+      "reasons": [
+        "already applied question:10011196"
+      ]
+    },
+    {
+      "contentGroup": "question:10011197",
+      "targets": [
+        "question:10011197"
+      ],
+      "reasons": [
+        "already applied question:10011197"
+      ]
+    },
+    {
+      "contentGroup": "question:10011198",
+      "targets": [
+        "question:10011198"
+      ],
+      "reasons": [
+        "already applied question:10011198"
+      ]
+    },
+    {
+      "contentGroup": "question:10011199",
+      "targets": [
+        "question:10011199"
+      ],
+      "reasons": [
+        "already applied question:10011199"
+      ]
+    },
+    {
+      "contentGroup": "question:10011200",
+      "targets": [
+        "question:10011200"
+      ],
+      "reasons": [
+        "already applied question:10011200"
+      ]
+    },
+    {
+      "contentGroup": "question:10011201",
+      "targets": [
+        "question:10011201"
+      ],
+      "reasons": [
+        "already applied question:10011201"
+      ]
+    },
+    {
+      "contentGroup": "question:10011202",
+      "targets": [
+        "question:10011202"
+      ],
+      "reasons": [
+        "already applied question:10011202"
+      ]
+    },
+    {
+      "contentGroup": "question:10011203",
+      "targets": [
+        "question:10011203"
+      ],
+      "reasons": [
+        "already applied question:10011203"
+      ]
+    },
+    {
+      "contentGroup": "question:10011204",
+      "targets": [
+        "question:10011204"
+      ],
+      "reasons": [
+        "already applied question:10011204"
+      ]
+    },
+    {
+      "contentGroup": "question:10011205",
+      "targets": [
+        "question:10011205"
+      ],
+      "reasons": [
+        "already applied question:10011205"
+      ]
+    },
+    {
+      "contentGroup": "question:10011206",
+      "targets": [
+        "question:10011206"
+      ],
+      "reasons": [
+        "already applied question:10011206"
+      ]
+    },
+    {
+      "contentGroup": "question:10011220",
+      "targets": [
+        "question:10011220"
+      ],
+      "reasons": [
+        "cross-review not PASS question:10011220"
+      ]
+    },
+    {
+      "contentGroup": "question:10011239",
+      "targets": [
+        "question:10011239"
+      ],
+      "reasons": [
+        "cross-review not PASS question:10011239"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-095-segment-1c6cd538742b.sql",
+  "migrationSha256": "dcfc2a907c4b88e9639381e05c5e095222bfc8beb1cfd4a8b6464ea5b66d2333"
+}

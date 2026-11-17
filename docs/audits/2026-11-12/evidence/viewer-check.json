@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "total": 26286,
+  "lecoqa": 1543,
+  "confirmed": 216,
+  "pending": 715,
+  "revised": 92,
+  "sourceAndDecisionFilters": true,
+  "search": true,
+  "pagination": true,
+  "additionalOfficialLinks": true,
+  "mobile390": true,
+  "pageErrors": []
+}

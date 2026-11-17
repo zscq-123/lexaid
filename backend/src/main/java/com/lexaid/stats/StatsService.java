@@ -33,25 +33,17 @@ public class StatsService {
     private final EntityTitleService entityTitleService;
 
     public OverviewVO overview(Long userId) {
-        Long totalAnswer = answerRecordMapper.selectCount(
-                new LambdaQueryWrapper<AnswerRecord>().eq(AnswerRecord::getUserId, userId));
-        Long totalCorrect = answerRecordMapper.selectCount(
-                new LambdaQueryWrapper<AnswerRecord>()
-                        .eq(AnswerRecord::getUserId, userId)
-                        .eq(AnswerRecord::getIsCorrect, true));
-        Long gradedAnswer = answerRecordMapper.selectCount(
-                new LambdaQueryWrapper<AnswerRecord>()
-                        .eq(AnswerRecord::getUserId, userId)
-                        .isNotNull(AnswerRecord::getIsCorrect));
+        var totals = answerRecordMapper.totals(userId);
         Integer totalSec = studyRecordMapper.selectTotalDurationSec(userId);
-        double accuracy = gradedAnswer == null || gradedAnswer == 0
-                ? 0 : (double) totalCorrect / gradedAnswer;
+        double accuracy = totals.graded() == 0 ? 0 : (double) totals.correct() / totals.graded();
         return new OverviewVO(
                 totalSec == null ? 0 : totalSec / 60L,
-                totalAnswer == null ? 0 : totalAnswer,
-                totalCorrect == null ? 0 : totalCorrect,
+                totals.attempts(),
+                totals.correct(),
                 Math.round(accuracy * 10000) / 100.0,
-                streakDays(userId));
+                streakDays(userId), totals.distinctQuestions(), totals.graded(), totals.skipped(),
+                totals.attempts() - totals.distinctQuestions(), totals.graded() - totals.correct(),
+                totals.attempts() - totals.graded());
     }
 
     /**

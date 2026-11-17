@@ -1,0 +1,2663 @@
+{
+  "schemaVersion": 1,
+  "reviewerKind": "INDEPENDENT_AI_AGENT",
+  "reviewedAt": "2026-11-11T22:42:14.693384+00:00",
+  "scope": "87条结构修复的独立来源与转换审核，不是人工法律准入审核",
+  "inputFile": "/tmp/lexaid-full-review/lexeval-corrections.jsonl",
+  "inputSha256": "33a78c1d18a856d6462456c5419f9b3bdc2bafe78c92c03e4161c327d91ccb1e",
+  "importerSha256": "e5e23cf4f8e3b3f7e610aedd8ec000fc1d8921c93c346b8e836a06828691d385",
+  "counts": {
+    "reviewed": 87,
+    "fullSourceCompared": 87,
+    "manualFullContentRead": 87,
+    "structurePass": 87,
+    "structureFail": 0,
+    "humanReview": 0,
+    "legalApproved": 0
+  },
+  "upstreamCommit": "044c695f62894deef41ad9a30797e1da0404945c",
+  "records": [
+    {
+      "id": 10021700,
+      "expectedContentHash": "de5487febbf6d5137336571794715a42726a0b44ef02e46d95890df4691f7378",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "A"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0142",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L143",
+          "upstreamRecordHash": "8f7e85b6147587489d01278c4fa5ca092053c296fd50d04002c984e04ff9cb61",
+          "independentCanonicalRecordSha256": "8f7e85b6147587489d01278c4fa5ca092053c296fd50d04002c984e04ff9cb61",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021701,
+      "expectedContentHash": "acee119d3ed9c548da2698c9d7ead79f9a2a79b02021fb8c9c69a23275fec139",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0143",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L144",
+          "upstreamRecordHash": "4be352d61d37e03331d20654c4acabca214ed42b436d945545112edaa69567a9",
+          "independentCanonicalRecordSha256": "4be352d61d37e03331d20654c4acabca214ed42b436d945545112edaa69567a9",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021702,
+      "expectedContentHash": "a0dc6664bfd1f31846077766948f8c65d361a20c2818dae2af3a449abbcfa572",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "A"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0144",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L145",
+          "upstreamRecordHash": "364be5c8af3c8ca190d15ddcfe1c28e2dbde5aa41c48b253daea39ddf17a6ffd",
+          "independentCanonicalRecordSha256": "364be5c8af3c8ca190d15ddcfe1c28e2dbde5aa41c48b253daea39ddf17a6ffd",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021703,
+      "expectedContentHash": "456d8101f3d2eb55d6561a0c71f491b50273cde58c32296d71c578ab22ffaa62",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0145",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L146",
+          "upstreamRecordHash": "abf27a4a2625aa18055c865b888db4b16b5be43bb01f70e5f9da4688c39da2b0",
+          "independentCanonicalRecordSha256": "abf27a4a2625aa18055c865b888db4b16b5be43bb01f70e5f9da4688c39da2b0",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021704,
+      "expectedContentHash": "2f72fef534961ba4fbf38e7f2d1cc6e460323734bb0b7cbde625b9a47f53078e",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "B",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0146",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L147",
+          "upstreamRecordHash": "3aa77512b4a495019cedd174bc4674b4102b482c650c9a3fccc3b3173187ca03",
+          "independentCanonicalRecordSha256": "3aa77512b4a495019cedd174bc4674b4102b482c650c9a3fccc3b3173187ca03",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021705,
+      "expectedContentHash": "12b80520f4708cd6a53443175d59861460c9520fe17f788550b0792a8c69854a",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0147",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L148",
+          "upstreamRecordHash": "fe1fbc260ed7d61baaf58cf83ebbddc6708754f0ec2579bcc0a5e461a49437d0",
+          "independentCanonicalRecordSha256": "fe1fbc260ed7d61baaf58cf83ebbddc6708754f0ec2579bcc0a5e461a49437d0",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021706,
+      "expectedContentHash": "58e04693afe7ef813058c649fa591575fd3d1972f187421944193e888a1b5f5e",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0148",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L149",
+          "upstreamRecordHash": "179f139cd64f45489676bcd0e3bcc14796de9b87b375c6b2c36428113c3f5fa1",
+          "independentCanonicalRecordSha256": "179f139cd64f45489676bcd0e3bcc14796de9b87b375c6b2c36428113c3f5fa1",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021707,
+      "expectedContentHash": "c9226aa18ddc185f7a3122977abb2237ffb7cfaf585df8aee49f148731c78077",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0149",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L150",
+          "upstreamRecordHash": "1741e108ab32646ca911952b3db877689426b2882ca1fa849ccd141042e266d4",
+          "independentCanonicalRecordSha256": "1741e108ab32646ca911952b3db877689426b2882ca1fa849ccd141042e266d4",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021708,
+      "expectedContentHash": "3594eab2d09b6c17818e869b445229bd0efb6163d464dedc7783c2aeec47637b",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0150",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L151",
+          "upstreamRecordHash": "c68fb083a051fa1c1cba106595317300695971a5ce57d0436e458b6ef9cd7222",
+          "independentCanonicalRecordSha256": "c68fb083a051fa1c1cba106595317300695971a5ce57d0436e458b6ef9cd7222",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021709,
+      "expectedContentHash": "fc59c44b55c7c447f68d8af6dfc059517eac1b736c27daeffdbfaa4b48ba671f",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0151",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L152",
+          "upstreamRecordHash": "67809dff8cb10fd623dca22481305b464ac4030eb409886c7cc4b43218f381a9",
+          "independentCanonicalRecordSha256": "67809dff8cb10fd623dca22481305b464ac4030eb409886c7cc4b43218f381a9",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021710,
+      "expectedContentHash": "4ce0f6062165b8ca8bc7fd4b50024d064acbde455e510eeb19d6ee1e6c2ea144",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0152",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L153",
+          "upstreamRecordHash": "78ec4c1102494f8d7e62de6111d2498fff43d4bf746fccfe1f4f0f3e9526ad9e",
+          "independentCanonicalRecordSha256": "78ec4c1102494f8d7e62de6111d2498fff43d4bf746fccfe1f4f0f3e9526ad9e",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021711,
+      "expectedContentHash": "b1839d357e6cfa8f366d5bc2e9118ba5528d7b9b4b70c68809396371450dc180",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0153",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L154",
+          "upstreamRecordHash": "8a239cac11b591b1f01706ab441615f12873b61b247dc75546543fb74a9e610d",
+          "independentCanonicalRecordSha256": "8a239cac11b591b1f01706ab441615f12873b61b247dc75546543fb74a9e610d",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021712,
+      "expectedContentHash": "bc8fbfaaf4dca97ec3c579f7a524321077bbf3dcffabd2fb313b04f760d95e9d",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0154",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L155",
+          "upstreamRecordHash": "64742b840ede9309753cda2460b94eae74f76169b5e2fbb146dee5be1402fd5d",
+          "independentCanonicalRecordSha256": "64742b840ede9309753cda2460b94eae74f76169b5e2fbb146dee5be1402fd5d",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021713,
+      "expectedContentHash": "6e74e6de9972cc30f510b30c79ecfcdb81d7c7b950d6eb77d5abce2a050e9a31",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0155",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L156",
+          "upstreamRecordHash": "24b2631283d6b8332a3be9e15049cb919b62ff5e00fa77f614c2dca8133d7e42",
+          "independentCanonicalRecordSha256": "24b2631283d6b8332a3be9e15049cb919b62ff5e00fa77f614c2dca8133d7e42",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021714,
+      "expectedContentHash": "e7952e7116adf150c8de7b28d5998f99e7055ba3402486807a446650b185d353",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "A"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0156",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L157",
+          "upstreamRecordHash": "6c0bca98317e7ea5364c32dec5089510d05fd96b4976f5d4cba43c9886dd5365",
+          "independentCanonicalRecordSha256": "6c0bca98317e7ea5364c32dec5089510d05fd96b4976f5d4cba43c9886dd5365",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021715,
+      "expectedContentHash": "9ce3c3eb8428494ef2c88e5d1fbeede40c7c69456cfb1c1155f4f14cf55e02d2",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0157",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L158",
+          "upstreamRecordHash": "6b5215969f8fa85b1b76adb959abe39bca8e373af92704f05ee40ba992706ece",
+          "independentCanonicalRecordSha256": "6b5215969f8fa85b1b76adb959abe39bca8e373af92704f05ee40ba992706ece",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021716,
+      "expectedContentHash": "cd24acf0b554a45b86e538a55c6b2f348630db26f0febdebeb826be33ffd5aca",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0158",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L159",
+          "upstreamRecordHash": "14d6bd58331fc19e3722c491766ef88f9c4375a5e6f55d9585d0c8ff6f66378a",
+          "independentCanonicalRecordSha256": "14d6bd58331fc19e3722c491766ef88f9c4375a5e6f55d9585d0c8ff6f66378a",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021717,
+      "expectedContentHash": "25da973f31eb6fe22e6b59ffd270991ce2f62729752273d2a294b9dafc120c9b",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0159",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L160",
+          "upstreamRecordHash": "9f7b6655fb6a43b32e0a6e40ceca0749ab0d73fb8fbff2a756bad887a710ec08",
+          "independentCanonicalRecordSha256": "9f7b6655fb6a43b32e0a6e40ceca0749ab0d73fb8fbff2a756bad887a710ec08",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021718,
+      "expectedContentHash": "ae09e0d66520c1bacd61fafed2320a067fa89212a37481500ef80d13d116bcfb",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0160",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L161",
+          "upstreamRecordHash": "15ee4cb9b9b3dcd7148e92e128d1398842273b955438a3fdd9ea765078910263",
+          "independentCanonicalRecordSha256": "15ee4cb9b9b3dcd7148e92e128d1398842273b955438a3fdd9ea765078910263",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021719,
+      "expectedContentHash": "1de9203d4aedb56577cf3f958e810131ad492c047b144b678fa2632929a42247",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0161",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L162",
+          "upstreamRecordHash": "73d2ed3e991ffb9842159f2e32c554e559519876c8b35bcc4d3406f2cb2ed22e",
+          "independentCanonicalRecordSha256": "73d2ed3e991ffb9842159f2e32c554e559519876c8b35bcc4d3406f2cb2ed22e",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021720,
+      "expectedContentHash": "3f1a909640c1bba1bfb8f9df5c2118e808c3b4be49341a98527183896a86ff23",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0162",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L163",
+          "upstreamRecordHash": "07ef96e070b7fbd97ff7f54cca4fbae138ac3c3e5c09d301d5176cc5e79424bb",
+          "independentCanonicalRecordSha256": "07ef96e070b7fbd97ff7f54cca4fbae138ac3c3e5c09d301d5176cc5e79424bb",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021721,
+      "expectedContentHash": "6432be04a7f51a869e901323b8bca0eb14e3a5dc1cd0c8bddd84f27c043c9c0c",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0163",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L164",
+          "upstreamRecordHash": "32dbca3b967982a8e0dcf25d6c384ce23c19514f548abacb43ebd40e8da947a1",
+          "independentCanonicalRecordSha256": "32dbca3b967982a8e0dcf25d6c384ce23c19514f548abacb43ebd40e8da947a1",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021722,
+      "expectedContentHash": "4840022f72c450c4ed503d1c1db710c9f50439907e351fc08b7697503d617dae",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0164",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L165",
+          "upstreamRecordHash": "c9f138f9254eeb7934e80db3b3d0500a960f6000318da614da2c3fa4f5754f8f",
+          "independentCanonicalRecordSha256": "c9f138f9254eeb7934e80db3b3d0500a960f6000318da614da2c3fa4f5754f8f",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021723,
+      "expectedContentHash": "e358a9956c68000a025a415aa84ab7cfa1009f44b01b11fd24b73d077f869055",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0165",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L166",
+          "upstreamRecordHash": "d5d7e031b79e58e91a55bbe625a735251a6f05809c358e596518f57165a1bbb6",
+          "independentCanonicalRecordSha256": "d5d7e031b79e58e91a55bbe625a735251a6f05809c358e596518f57165a1bbb6",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021724,
+      "expectedContentHash": "8546f928ce87a95e97e066346adf223fc37170231b5ffe6a53f9a15ad96c3f72",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0166",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L167",
+          "upstreamRecordHash": "aa506f643cac8d2545cd65724c98f7bfba9870d557032fa33bcf37bb8d3d5fcb",
+          "independentCanonicalRecordSha256": "aa506f643cac8d2545cd65724c98f7bfba9870d557032fa33bcf37bb8d3d5fcb",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021725,
+      "expectedContentHash": "2c38307bbd38ff525c697a83c366860a317de75d052e8dcdc2424e5ba06e2247",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0167",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L168",
+          "upstreamRecordHash": "80954f50deb92b934ddad15e864ff4e15f9ef9319b3bb64bf80aba0b712acc8e",
+          "independentCanonicalRecordSha256": "80954f50deb92b934ddad15e864ff4e15f9ef9319b3bb64bf80aba0b712acc8e",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021726,
+      "expectedContentHash": "b7b5e55a4c3b591cfed783cd6b35965df7324f18e5368a8fa5b99ccb4a159768",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0168",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L169",
+          "upstreamRecordHash": "4c899a08439744927309dcf37072967ae993b24fee5b8ba99af47cf00bc53269",
+          "independentCanonicalRecordSha256": "4c899a08439744927309dcf37072967ae993b24fee5b8ba99af47cf00bc53269",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021727,
+      "expectedContentHash": "2d0fccca70c5f05c45ca9ba47cdb9bceba2b25ad0213df45d27a1d758320c554",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0169",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L170",
+          "upstreamRecordHash": "3b977efea1613b4e71d7675c335150de48ae1c2c690c763a0dc567b98956df9b",
+          "independentCanonicalRecordSha256": "3b977efea1613b4e71d7675c335150de48ae1c2c690c763a0dc567b98956df9b",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021728,
+      "expectedContentHash": "79c06927066f020c97d1c6f41895bff395badd3f02006ba1510bd2631d8be9e6",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0170",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L171",
+          "upstreamRecordHash": "0a6791e4f79a64c047a03e6c1dca6eb3cc92463160386323cb499e13fa631404",
+          "independentCanonicalRecordSha256": "0a6791e4f79a64c047a03e6c1dca6eb3cc92463160386323cb499e13fa631404",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021729,
+      "expectedContentHash": "cd6447cd9758b83c1bbb1d81a8ec3f72426ce7ab85a8ae20f0e885b5daca5124",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0171",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L172",
+          "upstreamRecordHash": "dca5c8e914f9c03bedebb51dac5e7d34ae1a5ea54482dce79a9d55f43163433d",
+          "independentCanonicalRecordSha256": "dca5c8e914f9c03bedebb51dac5e7d34ae1a5ea54482dce79a9d55f43163433d",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021730,
+      "expectedContentHash": "2d1a6fc8f510589653ebd0867176dc00f89960ff7d3cf487ac2e488602724680",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0172",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L173",
+          "upstreamRecordHash": "54bd3cb33207d947681dce4df9007ad19922343b418509e40faaf9f682dd25d0",
+          "independentCanonicalRecordSha256": "54bd3cb33207d947681dce4df9007ad19922343b418509e40faaf9f682dd25d0",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021731,
+      "expectedContentHash": "607874967e7617261823da39ad0e86c68f06a9416efc1aea1027a8879247c25b",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "A"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0173",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L174",
+          "upstreamRecordHash": "b97dcaa019d8e5339c681ed69532f3cec79a270f746a6732d978a1a7e3ba083b",
+          "independentCanonicalRecordSha256": "b97dcaa019d8e5339c681ed69532f3cec79a270f746a6732d978a1a7e3ba083b",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021732,
+      "expectedContentHash": "f4f3d930ac2107b59d583dd15c8af6624b3d8bcaf7931c46d39d3aadf2d5f53b",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0174",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L175",
+          "upstreamRecordHash": "55bcb88eedc6a76c6b7878ab047e9dda80a982dbb7635ccf0e046df1ea632c25",
+          "independentCanonicalRecordSha256": "55bcb88eedc6a76c6b7878ab047e9dda80a982dbb7635ccf0e046df1ea632c25",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10021733,
+      "expectedContentHash": "131ad64ec2431cdb5daaeee8cd5a208c57d830ce0ad4c0513b854bc1aa1fe846",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_1:0175",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_1.json#L176",
+          "upstreamRecordHash": "d597abe587e3da821bf173dc6f3688c734d34d2ba5e1b6e75006a497b7498197",
+          "independentCanonicalRecordSha256": "d597abe587e3da821bf173dc6f3688c734d34d2ba5e1b6e75006a497b7498197",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022924,
+      "expectedContentHash": "df2244a46072987712b961daf5c04744dbdf08e20d5070baf49e8d74f0c933b6",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0367",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L368",
+          "upstreamRecordHash": "61b20523ab4519d7662a963a14c7738cdcf8835b8ccfa989194156392ff609d0",
+          "independentCanonicalRecordSha256": "61b20523ab4519d7662a963a14c7738cdcf8835b8ccfa989194156392ff609d0",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022925,
+      "expectedContentHash": "87d7fc5174cfa721eeda33fe0bae68ffe6d88110cfb09c872c686e3cafd7cc46",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0368",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L369",
+          "upstreamRecordHash": "fc8456a2a061efe8edb4a8da3ad8b287e398f21196dc21331ae877e93c94d8df",
+          "independentCanonicalRecordSha256": "fc8456a2a061efe8edb4a8da3ad8b287e398f21196dc21331ae877e93c94d8df",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022926,
+      "expectedContentHash": "544c62880e0513e3970fd3762d33d33b514790051f67d5ddc98aa5d41a6246f6",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0369",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L370",
+          "upstreamRecordHash": "1ee277dd29fad55a3cf8a267f622e86b0f5bee794b39c9896c62588658f79964",
+          "independentCanonicalRecordSha256": "1ee277dd29fad55a3cf8a267f622e86b0f5bee794b39c9896c62588658f79964",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022927,
+      "expectedContentHash": "ed7971760053ff6d7fc551cc2349e4aa7ac0853ca3e021068c269d025d4e8cd2",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0370",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L371",
+          "upstreamRecordHash": "753a50c77a2130fecb92899eb6eec0e7f7ed8f83337ade777ea4bf91b2607508",
+          "independentCanonicalRecordSha256": "753a50c77a2130fecb92899eb6eec0e7f7ed8f83337ade777ea4bf91b2607508",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022928,
+      "expectedContentHash": "a7521d36fcc55aca2eff962410ecd38ff1ee0bc58348715a3b988f0d95ed4c87",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0371",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L372",
+          "upstreamRecordHash": "6c52db5818d8fe38513f05b7b456fe61eb280498808c6e99078cb8936b2437aa",
+          "independentCanonicalRecordSha256": "6c52db5818d8fe38513f05b7b456fe61eb280498808c6e99078cb8936b2437aa",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022929,
+      "expectedContentHash": "de41de2e1bde9de102144c4e875dcbda0033960a6b66de0b9683d1ad1459c4c6",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0372",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L373",
+          "upstreamRecordHash": "3c3f6c226ba482b45d3c29209811aea5f00e48427b1eb934b51f9ed31d170b08",
+          "independentCanonicalRecordSha256": "3c3f6c226ba482b45d3c29209811aea5f00e48427b1eb934b51f9ed31d170b08",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022930,
+      "expectedContentHash": "87df00f68f33464cc2011e885732b76132b599ff095052d15c1ea606b9e12adf",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0373",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L374",
+          "upstreamRecordHash": "541c78c3cbd6fe381a2e6f7adb2d4fc0da574e7635ad24fd1a4e32034a116ecf",
+          "independentCanonicalRecordSha256": "541c78c3cbd6fe381a2e6f7adb2d4fc0da574e7635ad24fd1a4e32034a116ecf",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022931,
+      "expectedContentHash": "77988c1d4742ad688a35d49642691e34e2b10e015fba3a54f222d81ea6147564",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "B",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0374",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L375",
+          "upstreamRecordHash": "6cd70298fe907248ef30dd712755ca84a60f083ed4ebf1fd5dc1eabfac272905",
+          "independentCanonicalRecordSha256": "6cd70298fe907248ef30dd712755ca84a60f083ed4ebf1fd5dc1eabfac272905",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022932,
+      "expectedContentHash": "c153701549d482f43cf00b430f34bead30b42e7e7ce823104c6cc1290fefadc4",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0375",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L376",
+          "upstreamRecordHash": "bd80fa9320c4347f0e601df8948ff78e3fe5936c1c4612ab216f79c61b6f4811",
+          "independentCanonicalRecordSha256": "bd80fa9320c4347f0e601df8948ff78e3fe5936c1c4612ab216f79c61b6f4811",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022933,
+      "expectedContentHash": "8b252bbe3523239cad0e84793ccc322b5a9f73e350e901d61c4bcb9bfdbf612e",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0376",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L377",
+          "upstreamRecordHash": "30355eedb61d4d108bb1db1ea87bba8e9cce8f020badc25d4a0937998f3377a7",
+          "independentCanonicalRecordSha256": "30355eedb61d4d108bb1db1ea87bba8e9cce8f020badc25d4a0937998f3377a7",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022934,
+      "expectedContentHash": "ccbb121e54b6aa8b73a97abd0fc6f20b3a88fb378ca49851e2282a9ca0493b85",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0377",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L378",
+          "upstreamRecordHash": "3eb06ddec7fd669abe3ff41ab7940feec624257af0254b936f472888aca296fe",
+          "independentCanonicalRecordSha256": "3eb06ddec7fd669abe3ff41ab7940feec624257af0254b936f472888aca296fe",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022935,
+      "expectedContentHash": "c5fa7abfcae8635ff19a34d14131065e0fc2162667c886bc78ace937833a6d30",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0378",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L379",
+          "upstreamRecordHash": "2a5fbe6c4e473d24d3fb8913dab65bd1d86675bfb3c2beed717ca1e1ebaf84f8",
+          "independentCanonicalRecordSha256": "2a5fbe6c4e473d24d3fb8913dab65bd1d86675bfb3c2beed717ca1e1ebaf84f8",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022936,
+      "expectedContentHash": "c64d8e92fa821999fe3e16d395a6be29d4d6fb1b890c1ee34dded00118f5540e",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0379",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L380",
+          "upstreamRecordHash": "b813230ee23b5235551ea502dda4f9b048362f70f8c1036fbed078b29eb6645d",
+          "independentCanonicalRecordSha256": "b813230ee23b5235551ea502dda4f9b048362f70f8c1036fbed078b29eb6645d",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022937,
+      "expectedContentHash": "f9ab716dd7d6ab3c47d35dacb8fd26270a4cc5bc23aea664fe33d22e5f45e59c",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0380",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L381",
+          "upstreamRecordHash": "b005255766ff6fc3317999a2d8d80459f9f78b3d9f8402099f93c45678167bb4",
+          "independentCanonicalRecordSha256": "b005255766ff6fc3317999a2d8d80459f9f78b3d9f8402099f93c45678167bb4",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022938,
+      "expectedContentHash": "a6a472ef467fb5a7d3538b47d3798a9d1936269ec7b9383bee674f24759a9882",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "A"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0381",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L382",
+          "upstreamRecordHash": "dee1ece08ead461ca8f0234ddea5f945e0b6793c57b4974ebf50aec285936e69",
+          "independentCanonicalRecordSha256": "dee1ece08ead461ca8f0234ddea5f945e0b6793c57b4974ebf50aec285936e69",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022939,
+      "expectedContentHash": "06d58a7614bfc973897e1a8bbad00e565869d8112a5e8347c6f51d068b192f3c",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0382",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L383",
+          "upstreamRecordHash": "8658f52edc47587ccf359c8c231e70d71cd2e12d5dc51c8bc595e64849154a9d",
+          "independentCanonicalRecordSha256": "8658f52edc47587ccf359c8c231e70d71cd2e12d5dc51c8bc595e64849154a9d",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022940,
+      "expectedContentHash": "17289c186d846240244f6f489e00b564d4818e535105904a5e28501ed7a9f81e",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0383",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L384",
+          "upstreamRecordHash": "53da213c4a05dfdd230e2f31481aaac17622f40b148854871ad81b58399a5221",
+          "independentCanonicalRecordSha256": "53da213c4a05dfdd230e2f31481aaac17622f40b148854871ad81b58399a5221",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022941,
+      "expectedContentHash": "1b3c4fdf976af91636e4fb2f2c34dd81411d33703b1847f15605856e690eb459",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0384",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L385",
+          "upstreamRecordHash": "2c22ebb6403d9a619de23a24f516184a0f13ae8f02327eb27698df3c303170cc",
+          "independentCanonicalRecordSha256": "2c22ebb6403d9a619de23a24f516184a0f13ae8f02327eb27698df3c303170cc",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022942,
+      "expectedContentHash": "abf0b6878be74a0f626865b5851e0c4ec6d46657103b5ab7d8fe65cb7df88eda",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0385",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L386",
+          "upstreamRecordHash": "859b9b64d9b176ffc84ebe4ab505a0ecc19d3917277a406be4216006a0848375",
+          "independentCanonicalRecordSha256": "859b9b64d9b176ffc84ebe4ab505a0ecc19d3917277a406be4216006a0848375",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10022943,
+      "expectedContentHash": "bc79959dc3f2a420b70acf0f706336a29c293bf6e65d4f1e6e9098d369dcfc94",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_2:0386",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_2.json#L387",
+          "upstreamRecordHash": "02dae6300365b1ec05d63db6a483aeb258471c86d46a7021d665dbdfeaec6d64",
+          "independentCanonicalRecordSha256": "02dae6300365b1ec05d63db6a483aeb258471c86d46a7021d665dbdfeaec6d64",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023685,
+      "expectedContentHash": "3ec89766d83a321bf4d64f0c188e751ca90f3530df42db3feb1470054cb73415",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0129",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L130",
+          "upstreamRecordHash": "8567a5f003bcd8be4b73536e692853aef95b67f5e8827ce9ef0e5e1321cec5ba",
+          "independentCanonicalRecordSha256": "8567a5f003bcd8be4b73536e692853aef95b67f5e8827ce9ef0e5e1321cec5ba",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023686,
+      "expectedContentHash": "13018de83f5573c0474cfb10784c7df64e704b29744c10d3884227e41cb20179",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0130",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L131",
+          "upstreamRecordHash": "7cdd9f39f9254c0e64484cb4aecdc395014f7d0daa0698a8a652793a0fb300bd",
+          "independentCanonicalRecordSha256": "7cdd9f39f9254c0e64484cb4aecdc395014f7d0daa0698a8a652793a0fb300bd",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023687,
+      "expectedContentHash": "a995c2b39f0e95958d94f94d0c5db28e85b9d2a70229e4936a8736a53b3a3397",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0131",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L132",
+          "upstreamRecordHash": "abe42a7ac588f29c7614d30b0e5c72788befe834dde970e8fb80d68b035f45a5",
+          "independentCanonicalRecordSha256": "abe42a7ac588f29c7614d30b0e5c72788befe834dde970e8fb80d68b035f45a5",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023688,
+      "expectedContentHash": "d2efa63ca3ad7ce11c2581c8dcdc75297246b236467538250e4fc82a85bd068f",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "A"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0132",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L133",
+          "upstreamRecordHash": "5c941a6803fc9bfdfc2789445c43dfe6d6b1b94bb69705775ded5028f9de2ab1",
+          "independentCanonicalRecordSha256": "5c941a6803fc9bfdfc2789445c43dfe6d6b1b94bb69705775ded5028f9de2ab1",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023689,
+      "expectedContentHash": "f2646b292b696b73946b8dcc6c4ed7debe71bc39ee652ddd95f519c1fa538832",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0133",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L134",
+          "upstreamRecordHash": "df0ad37b6bbd2d92a31d038810e158b03f0bde6d8fbb5662d3311a46d1085d5d",
+          "independentCanonicalRecordSha256": "df0ad37b6bbd2d92a31d038810e158b03f0bde6d8fbb5662d3311a46d1085d5d",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023690,
+      "expectedContentHash": "43415f369468907f14b0ab62a0b99121f69bc79a763f820436975c14203077eb",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0134",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L135",
+          "upstreamRecordHash": "22dc820dc98d8d15d8aec7bd685a84467f1867cb28b031637bd47e376ad51b2c",
+          "independentCanonicalRecordSha256": "22dc820dc98d8d15d8aec7bd685a84467f1867cb28b031637bd47e376ad51b2c",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023691,
+      "expectedContentHash": "772df7a086756d14997e657ca2e0ede3419166125281d5ba964b3d7cb6920dc5",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0135",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L136",
+          "upstreamRecordHash": "7a1ea3d96752e838123ddffd4d08c9c416e1ecc8fe831da1948fd6a582ef07f0",
+          "independentCanonicalRecordSha256": "7a1ea3d96752e838123ddffd4d08c9c416e1ecc8fe831da1948fd6a582ef07f0",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023692,
+      "expectedContentHash": "c1fd5e53818b5b4a2bf5ad4c1e9d1e98139212db7cebb554d24795b0c1e9cb4d",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "A"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0136",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L137",
+          "upstreamRecordHash": "81604a02357ed112c5725a568452ae7285803e10ad8b4a5961954165cdf3d4c7",
+          "independentCanonicalRecordSha256": "81604a02357ed112c5725a568452ae7285803e10ad8b4a5961954165cdf3d4c7",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023693,
+      "expectedContentHash": "bf700069d201362c40c828dcf8cc54707fba1ebe1bcc748e458f698eda85d597",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0137",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L138",
+          "upstreamRecordHash": "43c352f6381a6e9c8a4172efbf7b381aa915934845e0d1f900d5505299978ac4",
+          "independentCanonicalRecordSha256": "43c352f6381a6e9c8a4172efbf7b381aa915934845e0d1f900d5505299978ac4",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023694,
+      "expectedContentHash": "ec2b42847e4354ae14ac1b24e603af2d0804002571c1875575aadef68435e80a",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0138",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L139",
+          "upstreamRecordHash": "5d3fcf2d81cce9cfc3598ae82b35418196d468df7123494e6f7d1ae8b4aa5bf3",
+          "independentCanonicalRecordSha256": "5d3fcf2d81cce9cfc3598ae82b35418196d468df7123494e6f7d1ae8b4aa5bf3",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023695,
+      "expectedContentHash": "b9f21625f48de800d71052d4c311041b97d1cb09c09c2c487ace2bc929414b7c",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0139",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L140",
+          "upstreamRecordHash": "aee9d69b869fa45518e7624235d9f28015f0078122505e8391757da23d7c2b27",
+          "independentCanonicalRecordSha256": "aee9d69b869fa45518e7624235d9f28015f0078122505e8391757da23d7c2b27",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023696,
+      "expectedContentHash": "3ae0fb8cba2fcd15b055eba2550d4d135ad3eaaefd333b0f81bfc392bbbf4634",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0140",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L141",
+          "upstreamRecordHash": "c1b4c0cbc6c61d08a8340f804f69668587446d78f00289acf3123e82137f336a",
+          "independentCanonicalRecordSha256": "c1b4c0cbc6c61d08a8340f804f69668587446d78f00289acf3123e82137f336a",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023697,
+      "expectedContentHash": "c2eee6a84e88484ec5c19de42096f9f578f4b09d688169403d51e2532d40566d",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "A"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0141",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L142",
+          "upstreamRecordHash": "cb488696de27f87af6ddf6aacaa4f6edcec6338ff126a30dc64a70de47adf622",
+          "independentCanonicalRecordSha256": "cb488696de27f87af6ddf6aacaa4f6edcec6338ff126a30dc64a70de47adf622",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023698,
+      "expectedContentHash": "bd855c11780b9a3adc032eab83ed846778fcb0daa8bcac7f46b8cb987f8f9823",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "A"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0142",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L143",
+          "upstreamRecordHash": "37203ca7c45cb32e10ea1d8ca03e20d9b0b4c8c79910b2fdc81fa59d69b8e341",
+          "independentCanonicalRecordSha256": "37203ca7c45cb32e10ea1d8ca03e20d9b0b4c8c79910b2fdc81fa59d69b8e341",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023699,
+      "expectedContentHash": "b3ab55b15ae7bde4d99671545a0072dc7cb00d35400c3e6eacc5a33dc46e7063",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "B"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0143",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L144",
+          "upstreamRecordHash": "6b10416e9b45bc1f3be676630c4fde37b826301d25155435a62e255723c474ab",
+          "independentCanonicalRecordSha256": "6b10416e9b45bc1f3be676630c4fde37b826301d25155435a62e255723c474ab",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023700,
+      "expectedContentHash": "42e0594fe1a3aeb897afac58f0a41a7a4d70a44b0e2f9126fc8e7ddc1b3e51fd",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0144",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L145",
+          "upstreamRecordHash": "6393d45ca07fcd4dcb1f9ddbea5478ca19ae8107dc111a6a75f6f137822857f8",
+          "independentCanonicalRecordSha256": "6393d45ca07fcd4dcb1f9ddbea5478ca19ae8107dc111a6a75f6f137822857f8",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023701,
+      "expectedContentHash": "6bf0cd6ecde96c9bc4b1c6573b9740144f90e0c1a3f71a4b158428cfb290e186",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0145",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L146",
+          "upstreamRecordHash": "80709316a99684cea32ddaa92ce57de52c0fec3d35ffb8ed98d67193f437eb09",
+          "independentCanonicalRecordSha256": "80709316a99684cea32ddaa92ce57de52c0fec3d35ffb8ed98d67193f437eb09",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023702,
+      "expectedContentHash": "6c3d41384919a3bc723304bd20937ae6d5ad93ef44468eac3e5707b0cda6f098",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0146",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L147",
+          "upstreamRecordHash": "7d2ec219899abda44e60370d5d76ad0bdf48b1abd988e3308903d5f0029cd36b",
+          "independentCanonicalRecordSha256": "7d2ec219899abda44e60370d5d76ad0bdf48b1abd988e3308903d5f0029cd36b",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023703,
+      "expectedContentHash": "47e7f4a63dfce2a17cc4ebeba43850d50c34a35e7ecff7fe724a232a5a3f18da",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0147",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L148",
+          "upstreamRecordHash": "5a50ce5e5ccac38afe57e58ec51d3eb4f19d1bc714ee2ecbeaeb1d2e5618bec0",
+          "independentCanonicalRecordSha256": "5a50ce5e5ccac38afe57e58ec51d3eb4f19d1bc714ee2ecbeaeb1d2e5618bec0",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023704,
+      "expectedContentHash": "e7ad177dca36c041720157313010b2468d4525a3d2e4ec7be4fca4aefdd2e79c",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0148",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L149",
+          "upstreamRecordHash": "db42eca9e786c376bc96cbb513e443e0ba4b9054a892590d547714e1de70df9a",
+          "independentCanonicalRecordSha256": "db42eca9e786c376bc96cbb513e443e0ba4b9054a892590d547714e1de70df9a",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023705,
+      "expectedContentHash": "91023c32c481f0a5130b03a38bda1996bb09944dc0ad4c04040b529514bba4e0",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0149",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L150",
+          "upstreamRecordHash": "73816d5dbf04902636a409aa7692171409c9c4b2c876feeb890264844b1f5047",
+          "independentCanonicalRecordSha256": "73816d5dbf04902636a409aa7692171409c9c4b2c876feeb890264844b1f5047",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023706,
+      "expectedContentHash": "1e3c735011445a3c08fb482694d2455f70da354e27dcdde71266d332add1d426",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0150",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L151",
+          "upstreamRecordHash": "4b23849b25b40cb073037a6bd2c441e140ef2b42d63fd7b1ad975ab644178eb1",
+          "independentCanonicalRecordSha256": "4b23849b25b40cb073037a6bd2c441e140ef2b42d63fd7b1ad975ab644178eb1",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023707,
+      "expectedContentHash": "0472b8e1a046a734ae998b1bda4137b77b4b214ed49e8f75952d8f3dfda5c88f",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0151",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L152",
+          "upstreamRecordHash": "54bb24ca19752550617daadff5c379f67893ba07c0076b24ee554d86ab893898",
+          "independentCanonicalRecordSha256": "54bb24ca19752550617daadff5c379f67893ba07c0076b24ee554d86ab893898",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023708,
+      "expectedContentHash": "c33675f8bc1cfaccaa4787f7536059d4419a781617e0c9b88658c12ba1e70f43",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0152",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L153",
+          "upstreamRecordHash": "0038549dddf604b6c348356ed91b89bebd78f1d9834d966c3d9e4a2f4ae4e3a0",
+          "independentCanonicalRecordSha256": "0038549dddf604b6c348356ed91b89bebd78f1d9834d966c3d9e4a2f4ae4e3a0",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023709,
+      "expectedContentHash": "e1aeadd91f0984fda63dfef415b3c725d944066ebdfc5ba96049defece201d5f",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "C"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0153",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L154",
+          "upstreamRecordHash": "c6b8ad0abcc0b52fd52896ccc0166e963e8a19c843dfd0eaa8b9cee5912ac4ed",
+          "independentCanonicalRecordSha256": "c6b8ad0abcc0b52fd52896ccc0166e963e8a19c843dfd0eaa8b9cee5912ac4ed",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023710,
+      "expectedContentHash": "a99457738afb95309ad0094c5943fe8e23c768d4a88e45a4f70ff82cc0889975",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0154",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L155",
+          "upstreamRecordHash": "1c6f273001dc0266bea48edf6cbde3482e878148a967ab0321d804d2d2a7cc09",
+          "independentCanonicalRecordSha256": "1c6f273001dc0266bea48edf6cbde3482e878148a967ab0321d804d2d2a7cc09",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023711,
+      "expectedContentHash": "e8f672b012cddb4e6f36c11fc6699274fa0af3d717b207eae7d94456b1230a1e",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0155",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L156",
+          "upstreamRecordHash": "0441a1bd4d7c9082dbf76138b0babe4ad7de10081c7a3fc735f73a1a936c0955",
+          "independentCanonicalRecordSha256": "0441a1bd4d7c9082dbf76138b0babe4ad7de10081c7a3fc735f73a1a936c0955",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023712,
+      "expectedContentHash": "3ed30bf7873e55ea5b8fb66f2de18afa0d635f78d22b40debb94e982e1f9a06b",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "B",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0156",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L157",
+          "upstreamRecordHash": "ba1d72225128abffd3f8c6c53ed7537b0fe7f4de9cb21b2d09475b11e8e340e0",
+          "independentCanonicalRecordSha256": "ba1d72225128abffd3f8c6c53ed7537b0fe7f4de9cb21b2d09475b11e8e340e0",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023713,
+      "expectedContentHash": "2e4fdd7ceb3122e894e05ddecb95f998a177bdfe5a0e1dc2a4f2aa0f03489ba1",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0157",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L158",
+          "upstreamRecordHash": "29006c9877539668a8be34c4bec7ec85517a84b71dfbb6fa8f8fe2ba126a3efe",
+          "independentCanonicalRecordSha256": "29006c9877539668a8be34c4bec7ec85517a84b71dfbb6fa8f8fe2ba126a3efe",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023714,
+      "expectedContentHash": "7f0da20c843294fec276796990573d41838f3a4b064fb82edc561db65333ab69",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "A"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0158",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L159",
+          "upstreamRecordHash": "189d54797126b7b0f8b8abc809ed5ae30b4955871cb9913fac0a2f3363611159",
+          "independentCanonicalRecordSha256": "189d54797126b7b0f8b8abc809ed5ae30b4955871cb9913fac0a2f3363611159",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023715,
+      "expectedContentHash": "02f46565b4f6134b8214bd4c36fec0e655dbc6148e2369f9868f9a33b4ea5177",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0159",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L160",
+          "upstreamRecordHash": "62f7cd284bcd8c50b61c6754f3c909579f79b44ca186a3e148d7a4f91be12d56",
+          "independentCanonicalRecordSha256": "62f7cd284bcd8c50b61c6754f3c909579f79b44ca186a3e148d7a4f91be12d56",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023716,
+      "expectedContentHash": "a4379256348a3621aa11a5dbc047a40346f2da0cb5a60da5f5aa6b8e6e6387da",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [],
+      "beforeType": "SHORT",
+      "afterType": "SINGLE",
+      "answerKeys": [
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0160",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L161",
+          "upstreamRecordHash": "3611b2a305547cdd1c0dca5873a55b35b2eb84291aa92701dd30fd219daffc07",
+          "independentCanonicalRecordSha256": "3611b2a305547cdd1c0dca5873a55b35b2eb84291aa92701dd30fd219daffc07",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    },
+    {
+      "id": 10023745,
+      "expectedContentHash": "029fc4b1d8f2fd8b704255988208a46a3970d1ca75e33605a1d0de2389066500",
+      "structuralConclusion": "PASS_SOURCE_PRESERVING_STRUCTURE_ONLY",
+      "issues": [],
+      "formattingNormalization": [
+        "移除引出选项的题干末尾冒号，不改变字词和选项"
+      ],
+      "beforeType": "SHORT",
+      "afterType": "MULTIPLE",
+      "answerKeys": [
+        "B",
+        "D"
+      ],
+      "optionCount": 4,
+      "sources": [
+        {
+          "sourceItemId": "6_3:0189",
+          "upstreamUrl": "https://github.com/CSHaitao/LexEval/blob/044c695f62894deef41ad9a30797e1da0404945c/data/6_3.json#L190",
+          "upstreamRecordHash": "4db1a56740dcf882b0d345032567a66ad222b8d2f6bfa1330513dbba14884956",
+          "independentCanonicalRecordSha256": "4db1a56740dcf882b0d345032567a66ad222b8d2f6bfa1330513dbba14884956",
+          "fullInputCompared": true,
+          "fullOptionsCompared": true,
+          "originalAnswerCompared": true
+        }
+      ],
+      "manualFullContentRead": true,
+      "manualReadingScope": "完整阅读题干、全部选项、源答案及转换结果；完整before与固定上游由独立程序逐字段核对。",
+      "humanReview": false,
+      "legalReviewApproved": false
+    }
+  ],
+  "parserBoundaryReview": {
+    "status": "DETECTED_REGRESSION_FIXED_AND_RECHECKED",
+    "previousFinding": "独立审核发现LawBench 2-8的500条[正确答案]A<eoa>原生包装回归，另一代理已修复。最初口头估计1000不准确：1-2另500条使用正确答案:X。并未受此包装回归影响。",
+    "importerSha256": "e5e23cf4f8e3b3f7e610aedd8ec000fc1d8921c93c346b8e836a06828691d385",
+    "boundaryCases": [
+      {
+        "answer": "选项A",
+        "expected": [
+          "A"
+        ],
+        "actual": [
+          "A"
+        ],
+        "pass": true
+      },
+      {
+        "answer": "B D",
+        "expected": [
+          "B",
+          "D"
+        ],
+        "actual": [
+          "B",
+          "D"
+        ],
+        "pass": true
+      },
+      {
+        "answer": "正确答案:A。",
+        "expected": [
+          "A"
+        ],
+        "actual": [
+          "A"
+        ],
+        "pass": true
+      },
+      {
+        "answer": "[正确答案]A<eoa>",
+        "expected": [
+          "A"
+        ],
+        "actual": [
+          "A"
+        ],
+        "pass": true
+      },
+      {
+        "answer": "Because this is correct",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "answer": "A because",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "answer": "AA",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "answer": "A I",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "answer": "[正确答案]A",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "answer": "[正确答案]A<eoa> trailing",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      }
+    ],
+    "lawbenchSourceRowsChecked": 1000,
+    "lawbenchFailures": [],
+    "affectedSourceItems": 500,
+    "affectedTasks": [
+      "2-8"
+    ]
+  },
+  "substantiveContentFlags": [
+    {
+      "id": 10021709,
+      "status": "SOURCE_ANSWER_REQUIRES_SUBSTANTIVE_REVIEW",
+      "sourceAnswer": "选项D",
+      "finding": "题目问符合劳动法的行为，源答案选仅因发现前科而解除的D，但C被依法追究刑事责任本身有劳动法第二十五条依据；A/B对应第二十六条并受通知和其他条件约束。结构修复应忠实保留源数据而继续隔离，不能标为法律审核通过。",
+      "officialSource": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_d9aa750028b14b99a776cb93726a360d.html",
+      "articles": [
+        "第二十五条",
+        "第二十六条"
+      ],
+      "replacementAnswerApproved": false
+    }
+  ],
+  "limits": [
+    "人工审核人数为0；此为AI独立复核。",
+    "87条均实际阅读，法律适用并未逐条核验；结构与来源一致不能代替答案正确。",
+    "当前来源中的表述缺项、歧义或法律错误保持隔离，本任务没有覆盖修改源答案。"
+  ]
+}

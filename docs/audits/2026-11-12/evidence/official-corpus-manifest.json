@@ -1,0 +1,503 @@
+[
+  {
+    "law": "保险法",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_4c715a53f3d4402c89f62ae77809f638.html",
+    "promulgated": "2015-04-24",
+    "effective": "2015-04-24",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/保险法.json",
+    "fileSha256": "c124440d1a64fac4ddd6bd751a6b8a02001cf81d0ca1be656638f983939d0ef1",
+    "articleMapSha256": "59fa0210ad28d59669d49d71455f288cb7954b6d3de408bd53d2f07121b1812f",
+    "textSha256": "f97121b2ff54c1fb259b39fd843fc4ea39c58b78ba5bd32a2545950357d4bd06",
+    "articleCount": 185,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 927,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-保险法-400.txt",
+      "web-保险法-900.txt",
+      "web-保险法-150.txt",
+      "web-保险法-550.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "公司法",
+    "url": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html",
+    "promulgated": "2023-12-29",
+    "effective": "2024-07-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/公司法.json",
+    "fileSha256": "679fa25b52efca1b032384dca54a91776bce967981d9a39c82d9d4ea66da9a4b",
+    "articleMapSha256": "0b15b215caf9fc5802449b04a26f12b5476c986275bc0465653cb51a9df32a58",
+    "textSha256": "727c252cb7c3c903fa05ec43d766961e4624c249cba349110761cde06907dfab",
+    "articleCount": 266,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 1439,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-公司法-200.txt",
+      "web-公司法-550.txt",
+      "web-公司法-750.txt",
+      "web-公司法-1250.txt",
+      "web-公司法-1050.txt",
+      "web-公司法-0.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "农村土地承包法",
+    "url": "https://www.forestry.gov.cn/c/www/gklcfl/300020.jhtml",
+    "promulgated": "2018-12-29",
+    "effective": "2019-01-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/农村土地承包法.json",
+    "fileSha256": "5b3c1607bd28508c69c2a073b0a23fba631e936a1698f23935b52264cfabd3b1",
+    "articleMapSha256": "c291e770bcbb51a1e56e563e53f5b380acd38c1369439ed67ffb6a1f9fbfb91f",
+    "textSha256": "3a02bd1d46398799ab517c08474e18eb381660012807b0186a3f508a73f854f0",
+    "articleCount": 70,
+    "status": "downloaded",
+    "coverage": null,
+    "rawSegments": null,
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "刑法",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html",
+    "promulgated": "2023-12-29",
+    "effective": "2024-03-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/刑法.json",
+    "fileSha256": "72a66dafcfddd9c7642fa87e9d6a6623068ceb409faf58583b75f0871e990226",
+    "articleMapSha256": "bd73d4388a0f7c835de05bd64e18fbd53d8b2df7e521c2917816983921bb219f",
+    "textSha256": "c3afb39c5be6c412a2fa54d7a0e5622e8c82b6d8bb42bd3f5d65c3aa9c5aa795",
+    "articleCount": 505,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 2818,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-刑法-1370.txt",
+      "web-刑法-900.txt",
+      "web-刑法-2440.txt",
+      "web-刑法-1850.txt",
+      "web-刑法-1500.txt",
+      "web-刑法-350.txt",
+      "web-刑法-0.txt",
+      "web-刑法-1060.txt",
+      "web-刑法-2200.txt",
+      "web-刑法-1720.txt",
+      "web-刑法-2600.txt",
+      "web-刑法-700.txt",
+      "web-刑法-1150.txt",
+      "web-刑法-2100.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "劳动合同法",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193025/content.html",
+    "promulgated": "2012-12-28",
+    "effective": "2013-07-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/劳动合同法.json",
+    "fileSha256": "2c8794c4542f034af1aee599137b85c5e646d5428c90bc6708cd069cbc3023ca",
+    "articleMapSha256": "2fe40b2e02ffdff83825c2f95fd30a3b0863096855e4d43b373a6ef2cef4485b",
+    "textSha256": "f50cf083b183120e8a491d9aace382fa0e0e44822bf8ff2cad7c6ddeab41a546",
+    "articleCount": 98,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 46,
+      "lastLine": 708,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-劳动合同法-550.txt",
+      "labor-web-1.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "合伙企业法",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_28f19c7b1d204e69a131292d0b793078.html",
+    "promulgated": "2006-08-27",
+    "effective": "2007-06-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/合伙企业法.json",
+    "fileSha256": "eeb023feb7ed96d8068d10226efe76324ba1c2e5bfa8f2c2da763ad4e3107b36",
+    "articleMapSha256": "a699ae0d0c0eea0bb3e8ea6e957ef34f7ac58830824828cb7bc5ec6222027493",
+    "textSha256": "9ef8683313179c8f92890da36fb20346b4919f3c048c5e09f86ae44d008d1a0c",
+    "articleCount": 109,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 532,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-合伙企业法-200.txt",
+      "web-合伙企业法-500.txt",
+      "web-合伙企业法-0.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "商标法",
+    "url": "https://www.cnipa.gov.cn/art/2019/7/30/art_95_28179.html",
+    "promulgated": "2019-04-23",
+    "effective": "2019-11-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/商标法.json",
+    "fileSha256": "bb1fd8b8d7b3efebbdecd86330bd80ba846f7cad7da2b4a705730b12d04ba876",
+    "articleMapSha256": "f10a3874bea75663fa391acee0e15e6dd0727fae30b9d56e67016d195ce93bdd",
+    "textSha256": "09cd86e39ed282658afc5acbf8d436f7a1ff78a3018c064f08521a7cfa23c791",
+    "articleCount": 73,
+    "status": "downloaded",
+    "coverage": null,
+    "rawSegments": null,
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "商标法未来版本",
+    "url": "https://www.cnipa.gov.cn/art/2026/6/26/art_95_206942.html",
+    "promulgated": "2026-06-26",
+    "effective": "2027-01-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/商标法未来版本.json",
+    "fileSha256": "b9579d57de26b797c654cf60b3b9fa25f2e823bfed431ec9993be2a89b2984d3",
+    "articleMapSha256": "74f9079e2408b4d8b20031d84471e829085df7f3db48a7f516b67e955fce7ff6",
+    "textSha256": "2e507461f4bf7f823892f185cc492ee28e31588d7e1c3e76ea8b4308c1a2cf6d",
+    "articleCount": 87,
+    "status": "downloaded",
+    "coverage": null,
+    "rawSegments": null,
+    "futureVersion": true,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "土地管理法",
+    "url": "https://fgs.moa.gov.cn/flfg/202007/t20200716_6348746.htm",
+    "promulgated": "2019-08-26",
+    "effective": "2020-01-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/土地管理法.json",
+    "fileSha256": "e5096763f3f46ada70515fe6ae00134727363f7422bb466faa23ba09ab43a11b",
+    "articleMapSha256": "651fbafd4abb7c05d311379ae22f98f15c590ee4dd5ac83c27dfa6c23b5ad1d8",
+    "textSha256": "da96c3c029dee5c766597b9f88b1a27e6e9ec7da578f4cc9c49fd5c77c63309e",
+    "articleCount": 87,
+    "status": "downloaded",
+    "coverage": null,
+    "rawSegments": null,
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "政府信息公开条例",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_dd2bea320df84cfc91245630c8fb2ee7.html",
+    "promulgated": "2019-04-03",
+    "effective": "2019-05-15",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/政府信息公开条例.json",
+    "fileSha256": "e89cdea5e67a7d8c5042330d99870c24a6f04d8424b92313c282d1d401d4c86c",
+    "articleMapSha256": "6f2150a9663737082a80f47ffdd546d0597f786ae167f3a390fcf967df29d35f",
+    "textSha256": "46706464c3416922c805b452b86c0ac47bd644f17e8621205f26bf188969839e",
+    "articleCount": 56,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 269,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-政府信息公开条例-150.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "旅游法",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_55b4bbc9a30547a9912e7ed61ffa7e20.html",
+    "promulgated": "2018-10-26",
+    "effective": "2018-10-26",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/旅游法.json",
+    "fileSha256": "814b390c24d8bf8006173a2811c0e2c378b97117e77975fa72e2cd8992034740",
+    "articleMapSha256": "cd022e44b361f24663733a8c4be94a7fb7d5bb0a6e13e583bd62d6c99cd22fdc",
+    "textSha256": "ec09e0d09610e05e606b5aceff874843a27ccf7fa07efa078b266f407d46535a",
+    "articleCount": 112,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 537,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-旅游法-0.txt",
+      "web-旅游法-200.txt",
+      "web-旅游法-500.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（一）",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/282111.html",
+    "promulgated": "2020-12-29",
+    "effective": "2021-01-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（一）.json",
+    "fileSha256": "62bc48993fe2fd0d18084c75969511d0690a2423ac718f2cc437056199cb0a8f",
+    "articleMapSha256": "f74f7479c56d3511b37248ad0e9aedd36e054732f4452506fe88fb2e863cd6d9",
+    "textSha256": "26a85889cef6c9b737be8f01313ff145b84ed4b2e0637e18216b6bb923f1e3a1",
+    "articleCount": 45,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 201,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（一）-150.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "最高人民法院关于审理民间借贷案件适用法律若干问题的规定",
+    "url": "https://cicc.court.gov.cn/html/1/380/385/12844.html",
+    "promulgated": "2020-12-23",
+    "effective": "2021-01-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/最高人民法院关于审理民间借贷案件适用法律若干问题的规定.json",
+    "fileSha256": "6734a45e6178a9a13fd69b4fe3a709de7ca53895083d2a19e8be7a4e48d23e08",
+    "articleMapSha256": "83966a65c5d07884ac1d0ca69959469f8fad79b14e8dd69e1b33394ce4dc5748",
+    "textSha256": "e9f24439d3e664679df3815c5aacaf7ce49fe298d971f3570c0f75a8d9e0392c",
+    "articleCount": 31,
+    "status": "downloaded",
+    "coverage": null,
+    "rawSegments": null,
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "最高人民法院关于适用《民法典》有关担保制度的解释",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/282721.html",
+    "promulgated": "2020-12-25",
+    "effective": "2021-01-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/最高人民法院关于适用《民法典》有关担保制度的解释.json",
+    "fileSha256": "d3cd9e7a04c99b1aed00f7106a144bea41d2613b7e2e24d5130373c0eddf6398",
+    "articleMapSha256": "41823369cb003c397dee5259175dfb5b27484e36b455ee3751c3b5af2861265f",
+    "textSha256": "2f30c1257acf0225f89444aead1bcd250cacafaa9aa0f60049c1e725d057cda7",
+    "articleCount": 71,
+    "status": "downloaded",
+    "coverage": null,
+    "rawSegments": null,
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "民事诉讼法",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5220330/content.html",
+    "promulgated": "2023-09-01",
+    "effective": "2024-01-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/民事诉讼法.json",
+    "fileSha256": "6cc791337ca4d9716785a0927367cac318215c0d2108ea01a9835549b3a37e30",
+    "articleMapSha256": "67f9775d4eb9fa21b1d8387e443b06682375b6d809ac7db26343885006e9ea0c",
+    "textSha256": "e48bba279aed76e75c9935e93993ad6f9c1985672f5f4005ab4fd7e1666f91f0",
+    "articleCount": 306,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 1810,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-民事诉讼法-0.txt",
+      "web-民事诉讼法-1050.txt",
+      "web-民事诉讼法-1250.txt",
+      "web-民事诉讼法-300.txt",
+      "web-民事诉讼法-1550.txt",
+      "web-民事诉讼法-750.txt",
+      "web-民事诉讼法-550.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "民法典",
+    "url": "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html",
+    "promulgated": "2020-05-28",
+    "effective": "2021-01-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/民法典.json",
+    "fileSha256": "48f5d2f7c22cdc69d550e5f3eaa168ddc10d47acbda7dbb3ae5abe4b56a4b3f4",
+    "articleMapSha256": "88188a0d4a58a792a23704bb9844c87629a0b77f7a4d9ba69d0147968b7bb6f4",
+    "textSha256": "9223a6814a43bbdfad2b4c1f5ef4c7e20e39a7008806ac1c232b6c1814e9980e",
+    "articleCount": 1260,
+    "status": "downloaded",
+    "coverage": null,
+    "rawSegments": null,
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "治安管理处罚法",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html",
+    "promulgated": "2025-06-27",
+    "effective": "2026-01-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/治安管理处罚法.json",
+    "fileSha256": "8e85cf88931d2bfff8286f5a1be6ee91fb04c4c8d337ef78b24bfba62a99cf24",
+    "articleMapSha256": "692c4e81a861ea81aa4a4a566ca040857b480316d8027ee5f71c27c22a8b2b3c",
+    "textSha256": "da7cd736af2f865e7f813cbd93c9ee952d3d868abac84d0b7bf8bf0c9194b1a5",
+    "articleCount": 144,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 871,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-治安管理处罚法-0.txt",
+      "web-治安管理处罚法-250.txt",
+      "web-治安管理处罚法-650.txt",
+      "web-治安管理处罚法-500.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "物业管理条例",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_f716cd25569f491a80528f22e8da464e.html",
+    "promulgated": "2018-03-19",
+    "effective": "2018-03-19",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/物业管理条例.json",
+    "fileSha256": "74eea1dff58ffc55d3d4c5b7b38c1818cce202bccd0a9d378099d64a6b2d1c32",
+    "articleMapSha256": "ce6deb546125a442c7e02e583774b2df025713296be0b603fd604b9d2915c88a",
+    "textSha256": "0c9b232d008d271040bf3402faf3a109f29532197a8f24c7b180a98ac5584811",
+    "articleCount": 67,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 579,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-物业管理条例-150.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "著作权法",
+    "url": "https://www.ncac.gov.cn/xxfb/flfg/flfg_532/202103/t20210309_50530.html",
+    "promulgated": "2020-11-11",
+    "effective": "2021-06-01",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/著作权法.json",
+    "fileSha256": "e007dd53e177b5bf1713c51873feabba4429b248dba4e74566689d9df1c9948a",
+    "articleMapSha256": "d971f9822e5eab453f2956fb22d83ed500ebfd753b9093449857f9f15738defa",
+    "textSha256": "d44b9625b9ee7172e1c0c2b9157cf99a004905cf75fd72f0e86c1e4d5802f73f",
+    "articleCount": 67,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 546,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-著作权法-150.txt",
+      "web-著作权法-550.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "行政处罚法",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_3712fbfaaed942b3b6b66f14d5288723.html",
+    "promulgated": "2021-01-22",
+    "effective": "2021-07-15",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/行政处罚法.json",
+    "fileSha256": "f7dc4261312817b79e780b0bef1cd6db4a829375d50500544e80a9e8d141b0c5",
+    "articleMapSha256": "851eb4b7a2c81e557f22ef5665175ee302999ab22b1048e49b9a83d73803d915",
+    "textSha256": "eaba2692754dc8f525b2e3c8cf947e9b28fe877e6a67826efaf4854e951f9f6b",
+    "articleCount": 86,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 0,
+      "lastLine": 494,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-行政处罚法-200.txt",
+      "web-行政处罚法-0.txt",
+      "web-行政处罚法-450.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  },
+  {
+    "law": "行政许可法",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5211784/content.html",
+    "promulgated": "2019-04-23",
+    "effective": "2019-04-23",
+    "retrievedAt": "2026-11-12",
+    "retrievalTimePrecision": "date (original collection did not capture exact timestamp)",
+    "file": "official/行政许可法.json",
+    "fileSha256": "d1c4cb5fc6328e24f50d4f499ae827bbde52e95795b6458df10cdc2e23657ea7",
+    "articleMapSha256": "fe6053715ebdc6cd2390020ece19dd699cd47b2ad0eced81557bb5d53d074e2d",
+    "textSha256": "a1314cc23348f405ca2406398645cac2bba1446180ed22a91ae3c569d73889ec",
+    "articleCount": 83,
+    "status": "downloaded_via_web_tool",
+    "coverage": {
+      "firstLine": 46,
+      "lastLine": 628,
+      "missingLines": []
+    },
+    "rawSegments": [
+      "web-行政许可法-600.txt",
+      "web-行政许可法-200.txt"
+    ],
+    "futureVersion": false,
+    "scope": "Official source quotation corpus; does not prove every later amendment, interpretation, transitional provision or legal application has been exhausted."
+  }
+]

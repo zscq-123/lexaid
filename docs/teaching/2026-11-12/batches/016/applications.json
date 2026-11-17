@@ -1,0 +1,66 @@
+{
+  "batch": "016",
+  "database": "lexaid",
+  "segments": [
+    {
+      "segment": "segment-6e98b64b5c23",
+      "migration": "backend/src/main/resources/teaching-batch-016-segment-6e98b64b5c23.sql",
+      "migrationSha256": "a04c3de385bd7f353d328d1480257006458c7674602d47e9bb31fce6923d7f2d",
+      "exactAfterMatches": 2,
+      "historyPreserved": true,
+      "idempotent": true,
+      "releaseApproval": false
+    },
+    {
+      "segment": "segment-b596ea07fa8f",
+      "migration": "backend/src/main/resources/teaching-batch-016-segment-b596ea07fa8f.sql",
+      "migrationSha256": "710acf66401931a4b5598252162a1cc9cb43a120d35427b8d6e766d99016713a",
+      "exactAfterMatches": 2,
+      "historyPreserved": true,
+      "idempotent": true,
+      "releaseApproval": false
+    }
+  ],
+  "records": [
+    {
+      "target": "question:10017000",
+      "id": 10017000,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "00b29fed487b40073df3e0c2ff9fbec9d5882bed2d3d6f678b8c22877a1494d2",
+      "afterHash": "00b29fed487b40073df3e0c2ff9fbec9d5882bed2d3d6f678b8c22877a1494d2",
+      "revisionKey": "2026-11-12-teaching-016-10017000"
+    },
+    {
+      "target": "mock_exam_bank:1340333",
+      "id": 1340333,
+      "table": "mock_exam_bank",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0133f459cb951a71ce6e2a74d9d9f9b2d091068a9b685016bedf981bbddd1afc",
+      "afterHash": "0133f459cb951a71ce6e2a74d9d9f9b2d091068a9b685016bedf981bbddd1afc",
+      "revisionKey": "2026-11-12-teaching-016-mock-1340333"
+    },
+    {
+      "target": "question:10017093",
+      "id": 10017093,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "b8f69151f3bc41faf1a8a9fe31ea2706cc5983397e3f1ef5aae4f47d8c1448ab",
+      "afterHash": "b8f69151f3bc41faf1a8a9fe31ea2706cc5983397e3f1ef5aae4f47d8c1448ab",
+      "revisionKey": "2026-11-12-teaching-016-10017093"
+    },
+    {
+      "target": "mock_exam_bank:1340426",
+      "id": 1340426,
+      "table": "mock_exam_bank",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9f415cdf1876c03eded3f7a98a9ebac621d452679c59ca33376b6c1b450ab088",
+      "afterHash": "9f415cdf1876c03eded3f7a98a9ebac621d452679c59ca33376b6c1b450ab088",
+      "revisionKey": "2026-11-12-teaching-016-mock-1340426"
+    }
+  ],
+  "exactAfterMatches": 4,
+  "historyPreserved": true,
+  "idempotent": true,
+  "releaseApproval": false
+}

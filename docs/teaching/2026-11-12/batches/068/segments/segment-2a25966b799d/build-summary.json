@@ -1,0 +1,37 @@
+{
+  "batch": "068",
+  "segment": "segment-2a25966b799d",
+  "records": 1,
+  "groups": 1,
+  "tables": {
+    "question": 1
+  },
+  "eligibleTargets": [
+    "question:10024402"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10025076",
+      "targets": [
+        "question:10025076"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10025076"
+      ]
+    },
+    {
+      "contentGroup": "question:10025077",
+      "targets": [
+        "question:10025077"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10025077"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-068-segment-2a25966b799d.sql",
+  "migrationSha256": "dd9ae942ab688e075f7c3c19fc196b1473a2ec7345047d24048c9b43ac308ec6"
+}

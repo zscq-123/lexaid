@@ -95,8 +95,9 @@ public class RelationService {
                 }),
                 buildItems("QUESTION", ids.get("QUESTION"), idSet -> {
                     Map<Long, RelatedItem> m = new HashMap<>();
+                    var eligible = new java.util.HashSet<>(questionMapper.eligibleIds(List.copyOf(idSet)));
                     for (Question q : questionMapper.classifiedQuestions(List.copyOf(idSet))) {
-                        m.put(q.getId(), questionItem(q));
+                        if (eligible.contains(q.getId())) m.put(q.getId(), questionItem(q));
                     }
                     return m;
                 }));

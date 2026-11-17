@@ -12,9 +12,12 @@ import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.Objects;
+import java.time.LocalDateTime;
 
 /** Pending rows form a persistent queue. No database transaction spans the remote call. */
 @Component
@@ -27,7 +30,8 @@ public class SubjectiveGradingWorker {
     private final DeepSeekGrader grader;
 
     private record Batch(long sessionId, String token, List<Submission> submissions,
-                         Map<Long, Long> recordIds, Map<Long, QuestionGrade> results) {}
+                         Map<Long, Long> recordIds, Map<Long, QuestionGrade> results,
+                         Map<Long, LocalDateTime> revisions) {}
 
     @Scheduled(fixedDelayString = "${ai.grading.poll-interval-ms:1500}")
     public void processNextBatch() {
@@ -56,30 +60,38 @@ public class SubjectiveGradingWorker {
         List<AnswerRecord> records = answers.nextGradingBatch(sessionId);
         if (records.isEmpty()) return null;
         Map<Long, Question> byId = new HashMap<>();
-        for (Question q : questions.selectBatchIds(records.stream().map(AnswerRecord::getQuestionId).toList())) {
+        List<Long> ids = records.stream().map(AnswerRecord::getQuestionId).toList();
+        var eligible = new HashSet<>(questions.eligibleIds(ids));
+        for (Question q : questions.selectBatchIds(ids)) {
             byId.put(q.getId(), q);
         }
         String token = UUID.randomUUID().toString();
         List<Submission> submissions = new ArrayList<>();
         Map<Long, Long> recordIds = new HashMap<>();
         Map<Long, QuestionGrade> results = new HashMap<>();
+        Map<Long, LocalDateTime> revisions = new HashMap<>();
         int chars = 0;
         for (AnswerRecord record : records) {
             long id = record.getQuestionId();
             Question q = byId.get(id);
-            if (q == null || !StringUtils.hasText(q.getAnswer())) {
+            if (q != null && !AnswerStatus.answered(q.getType(), record.getUserAnswer())) {
+                results.put(id, QuestionGrade.stored(record, q.getType()));
+            } else if (q == null || !StringUtils.hasText(q.getAnswer())) {
                 results.put(id, new QuestionGrade("NO_REFERENCE", null, "参考答案不可用，此题不计入得分。"));
+            } else if (!eligible.contains(id) || !QuestionGrade.referenceCurrent(q, record)) {
+                results.put(id, QuestionGrade.quarantined());
             } else {
                 int size = q.getStem().length() + q.getAnswer().length() + record.getUserAnswer().length();
                 // A long case can be graded alone without truncating the evidence supplied to the model.
                 if (!submissions.isEmpty() && chars + size > 48000) break;
                 chars += size;
                 submissions.add(new Submission(id, q.getStem(), q.getAnswer(), record.getUserAnswer()));
+                revisions.put(id, q.getUpdatedAt());
             }
             answers.claimGrade(record.getId(), token);
             recordIds.put(id, record.getId());
         }
-        return new Batch(sessionId, token, submissions, recordIds, results);
+        return new Batch(sessionId, token, submissions, recordIds, results, revisions);
     }
 
     private void finish(Batch batch) {
@@ -87,8 +99,18 @@ public class SubjectiveGradingWorker {
         if (session == null) return;
         int earned = 0;
         int fullCreditCount = 0;
+        List<Long> ids = new ArrayList<>(batch.recordIds().keySet());
+        var eligible = new HashSet<>(questions.eligibleIds(ids));
+        Map<Long, Question> current = new HashMap<>();
+        questions.selectBatchIds(ids).forEach(q -> current.put(q.getId(), q));
         for (var entry : batch.results().entrySet()) {
             QuestionGrade grade = entry.getValue();
+            Question question = current.get(entry.getKey());
+            boolean changed = question == null || !Objects.equals(question.getUpdatedAt(), batch.revisions().get(entry.getKey()));
+            if ((!eligible.contains(entry.getKey()) || changed) &&
+                    ("AI_GRADED".equals(grade.status()) || "UNAVAILABLE".equals(grade.status()))) {
+                grade = QuestionGrade.quarantined();
+            }
             Boolean fullCredit = grade.points() == null ? null : grade.points() == QuestionGrade.maxPoints("SHORT");
             int applied = answers.finishGrade(batch.recordIds().get(entry.getKey()), batch.token(),
                     grade.status(), grade.points(), grade.feedback(), fullCredit);

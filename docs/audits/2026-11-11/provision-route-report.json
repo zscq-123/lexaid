@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": [
+    "failed version load hides stale text and notes",
+    "retry loads requested version",
+    "late favorite response does not mark another version"
+  ],
+  "pageErrors": []
+}

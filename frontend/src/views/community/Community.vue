@@ -33,6 +33,12 @@
         <div v-if="posts.length === 0" class="status-card">
           <el-icon class="empty-icon" :size="32"><ChatDotRound /></el-icon>
           <p>{{ emptyLabel }}</p>
+          <div v-if="scope !== 'friends'" class="discussion-starters">
+            <strong>讨论题示例 · 非用户帖子</strong>
+            <p>读完一则案例，试着列出“关键事实—争点—依据—不同观点—仍待核实的问题”。</p>
+            <p>可以从“哪些事实变化会改变防卫限度的判断？”或“违约责任与侵权责任如何区分？”开始。</p>
+            <p>讨论约定：注明法条版本、案号或原文链接；区分事实与个人观点；尊重分歧，避免披露当事人的个人信息。</p>
+          </div>
           <el-button v-if="scope === 'friends'" @click="showFriends()">打开通讯录</el-button>
           <el-button v-else type="primary" plain @click="composerOpen = true">发布第一条帖子</el-button>
         </div>
@@ -172,6 +178,7 @@ h1 { font-size: clamp(23px, 3vw, 30px); font-weight: 680; line-height: 1.25; }
 .status-card { display: grid; justify-items: center; align-content: center; gap: 12px; min-height: 215px; padding: 28px; border: 1px solid #dde4ed; border-radius: 12px; background: #fff; }
 .status-card p { font-size: 15px; color: #52677f; }
 .empty-icon { color: #7b99bf; }
+.discussion-starters { margin: 16px auto; max-width: 560px; text-align: left; font-size: .86rem; line-height: 1.8; color: var(--lex-muted); }
 .feed > :deep(.el-pagination) { justify-self: center; }
 @media (max-width: 600px) {
   .sections { gap: 16px; flex-wrap: wrap; }

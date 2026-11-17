@@ -1,0 +1,63 @@
+{
+  "batch": "069",
+  "segment": "segment-62bf8e69e621",
+  "records": 18,
+  "groups": 18,
+  "tables": {
+    "question": 18
+  },
+  "eligibleTargets": [
+    "question:10024109",
+    "question:10024113",
+    "question:10024114",
+    "question:10024115",
+    "question:10024116",
+    "question:10024117",
+    "question:10024118",
+    "question:10024119",
+    "question:10024120",
+    "question:10024122",
+    "question:10024123",
+    "question:10024124",
+    "question:10024125",
+    "question:10024126",
+    "question:10024127",
+    "question:10024128",
+    "question:10024403",
+    "question:10025030"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10024121",
+      "targets": [
+        "question:10024121"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024121"
+      ]
+    },
+    {
+      "contentGroup": "question:10024404",
+      "targets": [
+        "question:10024404"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10024404"
+      ]
+    },
+    {
+      "contentGroup": "question:10025542",
+      "targets": [
+        "question:10025542"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10025542"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-069-segment-62bf8e69e621.sql",
+  "migrationSha256": "4a85ba61ba9060dcc663d5cab16a4fdf10840d790232879395b032f5e971b126"
+}

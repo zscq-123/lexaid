@@ -1,0 +1,371 @@
+{
+  "backend": {
+    "totals": {
+      "tests": 124,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "suites": [
+      {
+        "suite": "com.lexaid.admin.AdminServiceTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "7b535fe75a959adb941046b11298ea79a2e60bb97250d8f165c9ab4bf3f4fd8a"
+      },
+      {
+        "suite": "com.lexaid.ai.AiSiteImageTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "8302ba44226dc30dbc372d2e02e56c139b5ddbfc8821f928156fc5effa9993af"
+      },
+      {
+        "suite": "com.lexaid.ai.DeepSeekClientTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "788e9b60cd4319b7e62257836e25c05e28e78f50b0efa217872488c63d820838"
+      },
+      {
+        "suite": "com.lexaid.ai.DeepSeekGraderTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "176994d17342df2b3fab7a220dd6b32ec897021918ce1964c6c036990c7969dc"
+      },
+      {
+        "suite": "com.lexaid.ai.DeepSeekVisionTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "4645bb1fb84ff6c31fb15c766d34d11e472e9670b0f47119b48ab023b617f496"
+      },
+      {
+        "suite": "com.lexaid.ai.DiscussionModelTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "93d7db5ee24bde7d73449ff3d14435a1bad59794d659bc0af9b1ef0287d1f2c4"
+      },
+      {
+        "suite": "com.lexaid.ai.search.ExactProvisionDatabaseTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "b405b6057a04f026408e41a18545c515c21de97df4bcfad2226fa7cb17c460ef"
+      },
+      {
+        "suite": "com.lexaid.ai.search.PersonalSiteSearchTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "2713b09add7a40eabdbbb2453cdf74dd3a47c0f00917551b7ea3eb4335a1cbf4"
+      },
+      {
+        "suite": "com.lexaid.ai.search.PublicSiteSearchTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "5da5088a1edd4179fe0df0ffb94f345dea673ff884f72da95e1f5285a50fb595"
+      },
+      {
+        "suite": "com.lexaid.ai.search.SiteQueryPlannerTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "cb6be4bbcd4bbf2ee72a7bb11e6ce539487d1968c3c564e4f1d1662dc0cc256c"
+      },
+      {
+        "suite": "com.lexaid.auth.AvatarServiceTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "4d8ef1ddc53db809052acde206812c6283e15956d2942d20cb96d40856675d0c"
+      },
+      {
+        "suite": "com.lexaid.common.GlobalExceptionHandlerTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "149aaeaff55f40636ffa957947c7c78609dc4ad817a8b4ba801efa2ccbe0dc2c"
+      },
+      {
+        "suite": "com.lexaid.common.TextUtilTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "ab92a05219a5dbdf71df3e5be5cc1431c8cb5610398c5dc9a0059e49f836c9fe"
+      },
+      {
+        "suite": "com.lexaid.community.friends.FriendServiceTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "ff9bd6cb311dea0e45fcde8382a5df8905642abac03fcfde0998e4aa287f5ec6"
+      },
+      {
+        "suite": "com.lexaid.community.messages.MessageHandshakeInterceptorTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "6c888afc37de0ee6260892474fc2a95bd75dedd21c86fa15456311da42d9be87"
+      },
+      {
+        "suite": "com.lexaid.community.messages.MessageReminderWorkerTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "040061083b3e271d1060954b8f79d32d820d244dada81610b8e8e1bb814b0035"
+      },
+      {
+        "suite": "com.lexaid.community.messages.MessageServiceTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "8184631fb70e4645a9157ecbc9a40e696ff6e0cd24a82c24c09a54f83383d882"
+      },
+      {
+        "suite": "com.lexaid.community.messages.MessageTicketServiceTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "2432d9cc8c06cf16957c33630b0b99868fe8c6923d988de6e9f0c0083c4c0a0c"
+      },
+      {
+        "suite": "com.lexaid.community.messages.MessageWebSocketHandlerTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "e5032db5f5e2ca90d69267bf2ec8c7c41e55bb274fd5c9c2153a5e41ea5edf85"
+      },
+      {
+        "suite": "com.lexaid.community.messages.VoiceClipTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "62d5f735c4b4fd41170a64d29b7daa89a5ab34fc49bb892764bc367afb45d973"
+      },
+      {
+        "suite": "com.lexaid.community.posts.DiscussionDigestTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "610e395ebeef0e7ae556269e6ac264f29f066ce63e942805d94b62eb91d49a9f"
+      },
+      {
+        "suite": "com.lexaid.community.posts.DiscussionSummaryDatabaseTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "f737707dd0bca68402842cdd4c9759ed582ecf044c402f28357452103ae0bd25"
+      },
+      {
+        "suite": "com.lexaid.community.posts.PostImageQuestionTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "f64820f468a6e5f7a6fb8550451e829376b1ae484eeae90ec950043103a035b8"
+      },
+      {
+        "suite": "com.lexaid.community.posts.PostImageTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "f67198f79876af280ff2092f1614af49db26b345dd0f13867c80504d22e83963"
+      },
+      {
+        "suite": "com.lexaid.community.posts.PostServiceTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "6392409b06b58315cf71b75e7c75f821d6f8d051a553caf38aab8416cb27727d"
+      },
+      {
+        "suite": "com.lexaid.content.CaseCourtDirectoryTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "a5ee8bfe70e456d98c0f0700df86f2d4b9065a6682187bcba32c7708dced5f7b"
+      },
+      {
+        "suite": "com.lexaid.content.CourtRegionClassifierTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "ac3b15bf32050ac23e9af7139c423c40dd0a9956ce04f0f7569e9ffe40a2ad4d"
+      },
+      {
+        "suite": "com.lexaid.content.LegalCitationTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "cf0805b55951305a8669d1c398d0764322b0fa4011b4e05959ab35aaa0ff8d89"
+      },
+      {
+        "suite": "com.lexaid.content.ProvisionOutlineTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "3d90fb9b1fc51001563d53aeabd0d33bb83304d56adcff5868650dcf9b4cd1b5"
+      },
+      {
+        "suite": "com.lexaid.exam.AnswerStatusTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "d582f4a6281d4c173f898f7ae59861ac61cc92eab6c58e6c5e050d24df714df4"
+      },
+      {
+        "suite": "com.lexaid.exam.ExamQualityLifecycleTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "7bc5cc36941eeb42433d6426ac883d554b115b367ce76eb2566ba018b17abd9f"
+      },
+      {
+        "suite": "com.lexaid.exam.MultipleChoiceGradingTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "9ae394b0dde2ae17adba63267348f330e8f35750a781fb5fa06681f8a5f6aad4"
+      },
+      {
+        "suite": "com.lexaid.exam.PracticeStatisticsDatabaseTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "ad18f9dd74aa0757ab3bf254503b33ab5a83dfa9ca98a4e84feec72b5afc3823"
+      },
+      {
+        "suite": "com.lexaid.exam.QuestionSubjectsDatabaseTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "9060d5fffdfa6cfe8819f786150587c640bdbf913c513cce51b2c6e8aa1e0c1d"
+      },
+      {
+        "suite": "com.lexaid.exam.ScenarioGenerationGateTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "8a24259efb29cd6c6efe746e35b0cefb00275f49b3496344d867ff0b0be729f2"
+      },
+      {
+        "suite": "com.lexaid.exam.ScenarioGeneratorTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "3afd0592ebee5b56f9048f4f2babca24fb3d73e1c9fec842bde80c91f64227c9"
+      },
+      {
+        "suite": "com.lexaid.exam.ScenarioPracticeDatabaseTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "f55c89f9f4e4d51c849334672d1f8931e1d42f2130d628ee2e73de7cdd0c83ab"
+      },
+      {
+        "suite": "com.lexaid.exam.SubjectiveGradingWorkerTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "eeb48fff7ccb135b3ba4125fec151a853ed2247160a3f44b5c6dfd71168bd351"
+      },
+      {
+        "suite": "com.lexaid.mockexam.MockExamDatabaseTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "918970c19ae3556a9e2f55eb40831cc18fb5b508c38a38d8b4d736b9ac0e098a"
+      },
+      {
+        "suite": "com.lexaid.note.FavoriteFolderServiceTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "50f2fa5b213eccd6dab86c4c40c7f29f786213f844aeb39309b0fea608404b5e"
+      },
+      {
+        "suite": "com.lexaid.resource.ResourceFileTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "dc30e2a9673572fc9e5b0f0ac044b57079616d0ef013cafa95a7ad00919ec022"
+      },
+      {
+        "suite": "com.lexaid.resource.ResourceServiceTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "69d81fa40931413c96a6907ffce67563d8feab013d907d3cf242af6ecbd1911d"
+      },
+      {
+        "suite": "com.lexaid.stats.StatsServiceTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reportSha256": "4d53c216e2d26ca5ef8cbbc4606bd771bd4a1b98e1ab5161eb19401314189630"
+      }
+    ],
+    "database": "lexaid_upgrade_20261111_check"
+  },
+  "node": {
+    "datasetAndSubjects": 12,
+    "formalBank": 3,
+    "failures": 0,
+    "skipped": 0
+  },
+  "frontendBuild": {
+    "passed": true,
+    "warnings": [
+      "existing large chart chunk",
+      "third-party pure-annotation warnings"
+    ]
+  },
+  "productionDeployed": false
+}

@@ -1,5 +1,5 @@
 // Run against a disposable LexAid database. This check creates two users and uploads a 21 MB file
-// to confirm the resource library has no application-level upload ceiling.
+// to exercise large-file transfer below the 100 MB application limit.
 import assert from 'node:assert/strict'
 import { randomUUID } from 'node:crypto'
 

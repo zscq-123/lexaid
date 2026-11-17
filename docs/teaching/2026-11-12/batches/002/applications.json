@@ -1,0 +1,153 @@
+{
+  "batch": "002",
+  "database": "lexaid",
+  "verifiedAt": "2026-11-12T00:25:23.407678+00:00",
+  "migrationSha256": "7381b403bb5c334eed577056a33ad9a0d0c740bcce846f8e410269ca7744cff6",
+  "records": [
+    {
+      "target": "question:1",
+      "id": 1,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "894d525e8dfe323ad4e74b41a73bd69f64a9e216cf25973a61ca4daf6c2e9fb7",
+      "afterHash": "d4b80c53994fd427a4e16037d5d79236b8506668dc116dd28fbca405be8a7bf6"
+    },
+    {
+      "target": "question:2",
+      "id": 2,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a20e47ab395f6544b8fa45a390f1d25a3f5aeb54e733513b8d7649a48bc7b635",
+      "afterHash": "5c57a6e3d5db0b7894fe769e2808748755b2a9a3e1f522f782c4a1ffafd80deb"
+    },
+    {
+      "target": "question:3",
+      "id": 3,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "f35d097fd1fe6417a769d92aefc53e1ee71301f56bd375e36e1a8d6a7d804d79",
+      "afterHash": "5538faa65612910d43794bea46180b55d0ec1baf0a80226394dd6e50ba5f1c31"
+    },
+    {
+      "target": "question:4",
+      "id": 4,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "70121ab807e10aed2b9c883f11b17db095d5fc090b2f171426e6c32b580a65dd",
+      "afterHash": "0f3fda5c6714b8d7cfb2f3d37e7ab460765de8c316b4f00f3b55d4c4dacaae74"
+    },
+    {
+      "target": "question:5",
+      "id": 5,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "371d98fa8f6e2e48294cab27a5ac823bbd14e9f2e33891131dff4cc80f6a8268",
+      "afterHash": "8089adaa6b792aad74af50454e246bc5a8fd2fd640147944d7113f6b8a418410"
+    },
+    {
+      "target": "question:13",
+      "id": 13,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "4a76e4284af6addbd2bd49f2ac4af897ab24d8a375aa957ec6adf05d7feeff91",
+      "afterHash": "5022acf7d08e54e2a6ff3dc613ae9697e3833d7014004c16f99fb93dd624104f"
+    },
+    {
+      "target": "question:14",
+      "id": 14,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0ff2811222c1e23830e7e32c2d810f933318f072f044058204d8eb9d74a1cfbe",
+      "afterHash": "4386299f62ed416216c6e6d043f92dd29767cb85902e181e489b91832ef756e7"
+    },
+    {
+      "target": "question:15",
+      "id": 15,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "e0d5781c083743f89d00f6df9fb353bc5f4201b4341ff45317a21a958d81169a",
+      "afterHash": "4142b6189216f9786b6e321cc1899279edf9360ec538eb041731d1208f6a79f5"
+    },
+    {
+      "target": "question:19",
+      "id": 19,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "b9afd1ccce9e24537f48ecf254724490f1711337634a2d167e0c1f1e936f08af",
+      "afterHash": "2f3d7a42ceaa96ee3e2c2445f9432798c7fdb0b59ec095e15700818255d240a5"
+    },
+    {
+      "target": "question:20",
+      "id": 20,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "66f5b74688c92c1ade101beaf98dce953e7a523d471ec9f4345eb533514e2def",
+      "afterHash": "48c39d76d8ea8e70a14f6d039099c531dd64372694ba76a4cc671a56e50ccb8b"
+    },
+    {
+      "target": "question:21",
+      "id": 21,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "3120097bda5e34527103a52a1fea7310b8a3f1fde5f8a5099af86afd54a8e12f",
+      "afterHash": "58c6912171a0e1f2a93e452d488dda6e74dbb762c326de4b880307efb67b7052"
+    },
+    {
+      "target": "question:22",
+      "id": 22,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "4788379deee0df47fd0b49380c68ccc589957f923ecf123883ddd6ba3fba0992",
+      "afterHash": "f9ea4f8eec390ec3dec27f91e2b9ea94426bae88ee1018fa2b41b3f25fdac0a5"
+    },
+    {
+      "target": "question:27",
+      "id": 27,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "cd76a1a396c3a4e46c9d41f220dad0904f8f86fa3437e71e535f88e985b425fd",
+      "afterHash": "541b9b17ae4df057050a68ce3e7c5dbedd15962ce1a87a427b6ab39fe76a7b8e"
+    },
+    {
+      "target": "question:28",
+      "id": 28,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d07b28a9032c7ac42d99efbb9f34173466ba30a54e13dc9b59b22e6259167406",
+      "afterHash": "a28c39d173ba2cc4313e5025145afe0d7968d75a2677e6f53a566c29ac7a52f8"
+    }
+  ],
+  "exactAfterMatches": 14,
+  "archive": {
+    "total": 14,
+    "applied": 14
+  },
+  "historyBefore": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "mock_exam_bank": "219410861",
+    "question_source": "56665642"
+  },
+  "historyAfter": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "mock_exam_bank": "219410861",
+    "question_source": "56665642"
+  },
+  "historyPreserved": true,
+  "repeatChecksums": {
+    "question": "2562910285",
+    "question_legal_subject": "4169332068",
+    "question_content_revision": "209989023"
+  },
+  "idempotent": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false
+}

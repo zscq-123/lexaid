@@ -42,7 +42,13 @@ services:
       - ./datasets/formal-exams/formal-exam-bank-reviewed.sql.gz:/docker-entrypoint-initdb.d/27-formal-exam-bank-reviewed.sql.gz:ro
       - ./backend/src/main/resources/resources.sql:/docker-entrypoint-initdb.d/28-resources.sql:ro
       - ./backend/src/main/resources/messages.sql:/docker-entrypoint-initdb.d/29-messages.sql:ro
-    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-allowed-packet=1G
+      - ./backend/src/main/resources/question-quality.sql:/docker-entrypoint-initdb.d/30-question-quality.sql:ro
+      - ./backend/src/main/resources/question-seed-corrections.sql:/docker-entrypoint-initdb.d/31-question-seed-corrections.sql:ro
+      - ./backend/src/main/resources/question-seed-review-20261112.sql:/docker-entrypoint-initdb.d/32-question-seed-review.sql:ro
+      - ./backend/src/main/resources/question-structure-review-20261112.sql:/docker-entrypoint-initdb.d/33-question-structure-review.sql:ro
+      - ./backend/src/main/resources/mock-exam-content-review-20261112.sql:/docker-entrypoint-initdb.d/34-mock-exam-content-review.sql:ro
+      - ./backend/src/main/resources/question-teaching-batch-001.sql:/docker-entrypoint-initdb.d/35-question-teaching-batch-001.sql:ro
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-allowed-packet=128M
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-lexaid-root-local}"]
       interval: 5s

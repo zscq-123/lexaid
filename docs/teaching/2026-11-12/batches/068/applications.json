@@ -1,0 +1,30 @@
+{
+  "batch": "068",
+  "database": "lexaid",
+  "segments": [
+    {
+      "segment": "segment-2a25966b799d",
+      "migration": "backend/src/main/resources/teaching-batch-068-segment-2a25966b799d.sql",
+      "migrationSha256": "dd9ae942ab688e075f7c3c19fc196b1473a2ec7345047d24048c9b43ac308ec6",
+      "exactAfterMatches": 1,
+      "historyPreserved": true,
+      "idempotent": true,
+      "releaseApproval": false
+    }
+  ],
+  "records": [
+    {
+      "target": "question:10024402",
+      "id": 10024402,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "b920decc6e99b48a68eb2c38dc981c2465a1fd98533eb39374e55e0ea7913d51",
+      "afterHash": "b920decc6e99b48a68eb2c38dc981c2465a1fd98533eb39374e55e0ea7913d51",
+      "revisionKey": "2026-11-12-teaching-068-10024402"
+    }
+  ],
+  "exactAfterMatches": 1,
+  "historyPreserved": true,
+  "idempotent": true,
+  "releaseApproval": false
+}

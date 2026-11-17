@@ -39,38 +39,40 @@ public interface AnswerRecordMapper extends BaseMapper<AnswerRecord> {
     int finishGrade(@Param("id") long id, @Param("token") String token, @Param("status") String status,
                     @Param("points") Integer points, @Param("feedback") String feedback, @Param("fullCredit") Boolean fullCredit);
 
-    @Update("""
-            UPDATE answer_record SET grading_status = 'PENDING', grading_feedback = NULL
-            WHERE session_id = #{sessionId} AND grading_status = 'UNAVAILABLE'
-            """)
+    @Update("UPDATE answer_record ar JOIN question q ON q.id=ar.question_id " + QuestionSubjects.JOIN_SUBJECTS
+            + " SET ar.grading_status='PENDING',ar.grading_feedback=NULL "
+            + "WHERE ar.session_id=#{sessionId} AND ar.grading_status='UNAVAILABLE' AND "
+            + AnswerStatus.ANSWERED + " AND " + QuestionQuality.ELIGIBLE)
     void retryUnavailable(@Param("sessionId") long sessionId);
 
     /**
      * 查询用户最近一次为错的题目 id（按最近作答时间倒序）
      */
-    @Select("""
-            SELECT ar.question_id
-            FROM answer_record ar
-            WHERE ar.user_id = #{userId} AND ar.is_correct = false
-              AND ar.id = (SELECT MAX(ar2.id) FROM answer_record ar2
-                           WHERE ar2.user_id = #{userId}
-                             AND ar2.question_id = ar.question_id)
-            ORDER BY ar.answered_at DESC
-            """)
+    String LATEST_ANSWER = " FROM answer_record ar JOIN question q ON q.id=ar.question_id "
+            + "WHERE ar.user_id=#{userId} AND " + AnswerStatus.ANSWERED
+            + " AND ar.id=(SELECT MAX(ar2.id) FROM answer_record ar2 WHERE ar2.user_id=ar.user_id "
+            + "AND ar2.question_id=ar.question_id AND " + AnswerStatus.NEWER_ANSWERED + ") ";
+
+    @Select("SELECT ar.question_id" + LATEST_ANSWER + " AND ar.is_correct=0 ORDER BY ar.answered_at DESC,ar.id DESC")
     List<Long> selectLatestWrongQuestionIds(@Param("userId") Long userId);
 
     /**
      * 查询用户最近一次作答过的题目 id（全部，含答对与未判分）
      */
-    @Select("""
-            SELECT ar.question_id
-            FROM answer_record ar
-            WHERE ar.user_id = #{userId}
-              AND ar.id = (SELECT MAX(ar2.id) FROM answer_record ar2
-                           WHERE ar2.user_id = #{userId} AND ar2.question_id = ar.question_id)
-            ORDER BY ar.answered_at DESC
-            """)
+    @Select("SELECT ar.question_id" + LATEST_ANSWER + " ORDER BY ar.answered_at DESC,ar.id DESC")
     List<Long> selectLatestAnsweredQuestionIds(@Param("userId") Long userId);
+
+    @Select("SELECT ar.*" + LATEST_ANSWER + " AND ar.question_id=#{questionId}")
+    AnswerRecord latestAnswer(@Param("userId") Long userId, @Param("questionId") Long questionId);
+
+    record Totals(long attempts, long distinctQuestions, long correct, long graded, long skipped) {}
+
+    @Select("SELECT COALESCE(SUM(answered),0) AS attempts, COUNT(DISTINCT IF(answered,question_id,NULL)) AS distinctQuestions, "
+            + "COALESCE(SUM(answered AND is_correct=1),0) AS correct, "
+            + "COALESCE(SUM(answered AND is_correct IS NOT NULL),0) AS graded, COALESCE(SUM(NOT answered),0) AS skipped "
+            + "FROM (SELECT ar.question_id,ar.is_correct,COALESCE((" + AnswerStatus.ANSWERED + "),0) AS answered "
+            + "FROM answer_record ar JOIN question q ON q.id=ar.question_id WHERE ar.user_id=#{userId}) records")
+    Totals totals(@Param("userId") Long userId);
 
     /**
      * 每日答题数与正确数
@@ -78,8 +80,9 @@ public interface AnswerRecordMapper extends BaseMapper<AnswerRecord> {
     @Select("""
             SELECT DATE(answered_at) AS d, COUNT(*) AS c,
                    COALESCE(SUM(CASE WHEN is_correct = 1 THEN 1 ELSE 0 END), 0) AS ok
-            FROM answer_record
-            WHERE user_id = #{userId} AND answered_at >= #{from}
+            FROM answer_record ar JOIN question q ON q.id=ar.question_id
+            WHERE ar.user_id = #{userId} AND answered_at >= #{from} AND
+            """ + AnswerStatus.ANSWERED + """
             GROUP BY DATE(answered_at)
             """)
     List<Map<String, Object>> selectDailyAnswer(@Param("userId") Long userId,
@@ -91,6 +94,6 @@ public interface AnswerRecordMapper extends BaseMapper<AnswerRecord> {
     @Select("SELECT " + QuestionSubjects.DISCIPLINE + " AS discipline, " + QuestionSubjects.SUBJECT +
             " AS category, COUNT(*) AS total, SUM(ar.is_correct = 1) AS correct " +
             " FROM answer_record ar JOIN question q ON ar.question_id=q.id " + QuestionSubjects.JOIN_SUBJECTS +
-            " WHERE ar.user_id=#{userId} AND ar.is_correct IS NOT NULL GROUP BY 1,2 ORDER BY total DESC,1,2")
+            " WHERE ar.user_id=#{userId} AND " + AnswerStatus.ANSWERED + " AND ar.is_correct IS NOT NULL GROUP BY 1,2 ORDER BY total DESC,1,2")
     List<Map<String, Object>> selectCategoryAccuracy(@Param("userId") Long userId);
 }

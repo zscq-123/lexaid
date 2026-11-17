@@ -1,0 +1,12 @@
+{
+  "batch": "006",
+  "records": 3,
+  "subjects": {
+    "合同法": 3
+  },
+  "independentReviewPass": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migrationSha256": "32eabc5fdbc7a3adb24b9f7395e9914f01f2bba7a5b8f54bc9ed9fe74f3771d7"
+}

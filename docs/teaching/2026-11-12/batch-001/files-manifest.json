@@ -1,0 +1,681 @@
+{
+  "scope": "Batch 001 artifacts and implementation plus all-candidate plan; excludes this manifest itself",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 22871,
+      "sha256": "3917195d97e0c554a6118a023fcad926a7af51169219edf0218c023e2db3b2e8"
+    },
+    {
+      "path": "backend/src/main/resources/question-teaching-batch-001.sql",
+      "bytes": 1535406,
+      "sha256": "13a876468433aafb258bd9517a9cc29a5006615bc44f8014156f5dd4404c6ba3"
+    },
+    {
+      "path": "datasets/question-explanations/2026-11-12/backend.jsonl",
+      "bytes": 360945,
+      "sha256": "b24d55434d8f11273e7923bbd07b8efd6f655615275597d4577392e9a58f835b"
+    },
+    {
+      "path": "datasets/question-explanations/2026-11-12/frontend.jsonl",
+      "bytes": 190437,
+      "sha256": "3d3305de8d2ec4d1bbd49a36cd6f73ceae6d416e9997f0e3a9bd0ca01aa4ce4d"
+    },
+    {
+      "path": "datasets/question-explanations/2026-11-12/legal.jsonl",
+      "bytes": 315660,
+      "sha256": "73a9112e0aee4650086dd015a026f754f88f3689fd8411568bd96b61b6cbba51"
+    },
+    {
+      "path": "datasets/question-explanations/2026-11-12/review-backend.jsonl",
+      "bytes": 33868,
+      "sha256": "4a0cccb82e7b7bd5bc60008446413000ec810f8d407d95bfdc5f0af4a8aa2a00"
+    },
+    {
+      "path": "datasets/question-explanations/2026-11-12/review-frontend.jsonl",
+      "bytes": 20332,
+      "sha256": "19ecc1200f10e85c798a01886b06279c0694bb32fa79bbc91bcd6c6b3e32ab7c"
+    },
+    {
+      "path": "datasets/question-explanations/2026-11-12/review-legal.jsonl",
+      "bytes": 38643,
+      "sha256": "946386883149856b68bdfeb6de2e87bba9d5a4a0f78824c2cd36602778b9d411"
+    },
+    {
+      "path": "datasets/question-explanations/README.md",
+      "bytes": 4896,
+      "sha256": "461c4f1a056369988bb1d613d66594542ab2b9c36b15d29d39612e496775fe51"
+    },
+    {
+      "path": "datasets/question-explanations/plan-summary.json",
+      "bytes": 493,
+      "sha256": "b72de7ebc6d5ef095fdd1158a378a0b139f206b0a503e8098c558faf73d5ed5a"
+    },
+    {
+      "path": "datasets/question-explanations/plan.jsonl",
+      "bytes": 6893139,
+      "sha256": "e82117619cd763b12a53e5146b604786070766ad804aa66798d0789b76ac1e2f"
+    },
+    {
+      "path": "deploy/production/README.md",
+      "bytes": 6663,
+      "sha256": "6acafec5c78fbb72a3ee2a3582a8d97813bb6fb02e845037cce62d4d4cec1428"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 4805,
+      "sha256": "4fa4acea02e5302adf1f8552ecbf4abd727e0404dce586f768dc6f08a87d82f3"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/README.md",
+      "bytes": 5540,
+      "sha256": "71a28fad0a525f5fb92b6ece3d8f5a641d466f04bad1f0d2c5cdf283c9e4f8c1"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/after/manifest.jsonl.gz",
+      "bytes": 1109292,
+      "sha256": "6e9d45264b7001593639e3cfd9ad23438d4e11ffdca0d7dc19e49948fb7ce8dc"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/after/summary.json",
+      "bytes": 576,
+      "sha256": "c6976d82d7382784c0941ff32b74abe620ca7dc4deb20c7a08a1810725845ab4"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/applications.json",
+      "bytes": 49818,
+      "sha256": "bd21986fc522651cb33bde1a04ce915eff77ac1caf8f527257169c24d485c7dd"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/before/manifest.jsonl.gz",
+      "bytes": 1109334,
+      "sha256": "2d7379da7716f1f61380bad00ce73f968b90f98ecca88bf80a9b64cbc93ea10f"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/before/summary.json",
+      "bytes": 576,
+      "sha256": "00fe71ee48836fed87d3d91eb562d55819d9c0614b8e240e337c35f6e6ed03b4"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/build-summary.json",
+      "bytes": 776,
+      "sha256": "e1a3a8ea1c4610d77827fe388fd8ec9834852277c53b9631f120c0544a914331"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/backend-batch-independent-tests.json",
+      "bytes": 554,
+      "sha256": "6b338c7cb0174b2bfa5954718b2a49fa2736f7aa6b7b8dd82a9277427e9b0493"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/backend-batch-independent-tests.py",
+      "bytes": 3453,
+      "sha256": "5be3658b6a76fda49c6544c96cdc87ed6f3b198f6f5c45eda16fe1efd3e1db26"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/backend-scripts-independent-review.json",
+      "bytes": 3219,
+      "sha256": "a74764ef8286cf39c04d4f56441147988481d99af8038b5182c4fc46b6690d03"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/classification-review.json",
+      "bytes": 4761,
+      "sha256": "f17a51cec4553edc92831a2022c6d300e01b9ae201123bea01a4f490256aad64"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/content-verification.json",
+      "bytes": 3334,
+      "sha256": "fec405a15626f404e682e906a6029a0a06488b47d70070b8ce11648893e448fe"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/history-row-counts.json",
+      "bytes": 278,
+      "sha256": "4273def8bde2db2b35a6ef0403c4913923a5bc3bd01492c256d6233d0962ccdf"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/independent-migration-tests.json",
+      "bytes": 847,
+      "sha256": "19fa4973c7c09c5b3ec721646ca3160b7e6d744150786ddad0722ffc4409cc4e"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/isolated-applications.json",
+      "bytes": 49841,
+      "sha256": "4063dcfcbec01d3781759180aa8d9f29199f4e68749814e61ef3b773fb46bcce"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/lecoqa-originals.jsonl.gz",
+      "bytes": 661841,
+      "sha256": "ef4127b2e804db1584bc7945cdc21438bf317e76a20785058c5fda66069c6e7f"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/lexeval-source-ids.jsonl.gz",
+      "bytes": 69845,
+      "sha256": "bd7640e1496e3631b3263e01149262ab0bb2a03780f795f8ef805cefd36e18ad"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/local-application-check.py",
+      "bytes": 3400,
+      "sha256": "4fa1574fa09ff90fbccca4e0fe89b3de06cde6c5cd10ffd916a1e2601a4e250a"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/migration-tests.json",
+      "bytes": 847,
+      "sha256": "19fa4973c7c09c5b3ec721646ca3160b7e6d744150786ddad0722ffc4409cc4e"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/backend-additional/manifest.json",
+      "bytes": 754,
+      "sha256": "1c3f04dc3ac5da80cd2331e05614c0054d9a694d4ef34c11e60d2a79fc9a6829"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/backend-additional/医疗损害2020.txt.gz",
+      "bytes": 72631,
+      "sha256": "60de3db796ba8e30aa4527a18f77fb05c118b674cada954987688e8b0f75d504"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/backend-additional/商标指南第二版.pdf.gz",
+      "bytes": 942790,
+      "sha256": "e79855e9bf10cb25beddf18666b09c3f9447efb5405943a44084efc81e7398ea"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/1c6f02edfb1f.html.gz",
+      "bytes": 15149,
+      "sha256": "9370133fb645762efcb5b46b8f179633ff6b3da85d42499ed51db325b6ec7e63"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/1c6f02edfb1f.txt.gz",
+      "bytes": 8960,
+      "sha256": "f49d2862f384a7ea4e860297f0a154b91cb66435e3b82341f36768d65de49530"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/265ef840940b.html.gz",
+      "bytes": 145233,
+      "sha256": "6b47003173a4a475c291d6eaeb1fae813eaf8ff6b2e2a9b18e3feda1eb21fb54"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/265ef840940b.txt.gz",
+      "bytes": 123242,
+      "sha256": "4fed4126cb480ae6f136aa3ef22ca38c424bb474b018ac025ccacd36b58284d7"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/714d44f00386.html.gz",
+      "bytes": 22521,
+      "sha256": "9264b4a711507fe216b10825f23040b3743638546389367f7fdffe51945c77fc"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/714d44f00386.txt.gz",
+      "bytes": 14656,
+      "sha256": "5ba1967a319a608fd7de5c6ae6804ad41ad2b528e11a531f4b1f99f91349c603"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/799b8c4cfa8d.html.gz",
+      "bytes": 19433,
+      "sha256": "235f8bd9a4d68449be209def1b28f03117e917aac083c7e3e18337b612706086"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/799b8c4cfa8d.txt.gz",
+      "bytes": 11072,
+      "sha256": "3b9a35bfdfdf34d4391de9eebf682cb0f33d75fa562d6c5ef58735aff9c44a49"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/825f202a14d7.html.gz",
+      "bytes": 12999,
+      "sha256": "cdcb86f4fba5189017ce1bc9b49cac2e2341d056451c5686cc04bb1561de3395"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/825f202a14d7.txt.gz",
+      "bytes": 5724,
+      "sha256": "8342e80ccfad7ad60a5a78c8ae160454795bcb01cf4302c352ba6feec6324b43"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/ae288cba8708.html.gz",
+      "bytes": 7393,
+      "sha256": "842c3143ea266e3c7211d2f5ddcc99165bf15f415f7e287dd10207717c333c00"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/ae288cba8708.txt.gz",
+      "bytes": 3984,
+      "sha256": "329c1f4feb589f99571cb078fead4a5395a887cb1fdbf00fc29d89fbdb3d95d0"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/b829a64b466c.html.gz",
+      "bytes": 7927,
+      "sha256": "0419352c1cbe276fe3dfe76aaef758776d2316e0eeea3881dcec91eed72b68d1"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/b829a64b466c.txt.gz",
+      "bytes": 4405,
+      "sha256": "8852869218de6101586ab722dd3b9988f823e32c623d52b2f665bbb8db253784"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/ba9bf2330c26.html.gz",
+      "bytes": 5171,
+      "sha256": "71dd5b2ce8a550381d1c322322da2e28d76a0cba51c9237d6cd54391a324492b"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/ba9bf2330c26.txt.gz",
+      "bytes": 1842,
+      "sha256": "63144b9038adb01a0da2cc8dd9235352d8169cc90ef8069bb40043061835d6a7"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/c35dda574032.html.gz",
+      "bytes": 7261,
+      "sha256": "cdd0d5ca107a526cf6b08bce9e6b6a1772adc81acf6e845e793a0e4eb5f7ac96"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/c35dda574032.txt.gz",
+      "bytes": 3929,
+      "sha256": "b78e0362090c7c6251ed77954dfe5abce7babf198290f36301321ec6269e8198"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/capture-hashes.json",
+      "bytes": 1873,
+      "sha256": "091af035a5bbbf22bfb5877d9abc68fe8a2e625fee0bee0a6a7ef999af3d7542"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/d6e2b1e9b103.html.gz",
+      "bytes": 6371,
+      "sha256": "c0768fdebb038debff4168c24340cf93c0f53aaa61427b8eb61989238c4c55b0"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/d6e2b1e9b103.txt.gz",
+      "bytes": 3139,
+      "sha256": "bb53dfdd0ecff6e9aa0f98b22ff1ab220ecab044d2b15ff2890a1831f14c255f"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/frontend/manifest.json",
+      "bytes": 8075,
+      "sha256": "843e59592a82b49921403ae1eeddf3e41e71407403550fe71b1959914ce8449e"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/1dc6025fd61b1b4a.html.gz",
+      "bytes": 7310,
+      "sha256": "c017d622ba0d7088648c4a0f2a8b5d9038b03540dabc84cc4c40572d43fd266b"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/1dc6025fd61b1b4a.txt.gz",
+      "bytes": 3782,
+      "sha256": "6f5bd2af7ff914f479baca4b9dbc5f433b90f50740a3e7239da9046b42cfb507"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/1ef2e7f65dca32a8.html.gz",
+      "bytes": 4841,
+      "sha256": "b8fcb0cdd9c5b18ce5aaa7b4e8b1d5f439285af4736c1172cc788416daf2cbb8"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/1ef2e7f65dca32a8.txt.gz",
+      "bytes": 1631,
+      "sha256": "49e49198bd8d9577dc43b8c0665f3d62f4f6f8e8054c272d8413053520dd97c8"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/2019f41c65d158dc.html.gz",
+      "bytes": 77798,
+      "sha256": "a26115f953a0b0bc5223a3399de80001071c84bc1cd0366f9b70f2b2d790377b"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/2019f41c65d158dc.txt.gz",
+      "bytes": 72631,
+      "sha256": "60de3db796ba8e30aa4527a18f77fb05c118b674cada954987688e8b0f75d504"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/29b55f709c655f6a.html.gz",
+      "bytes": 5728,
+      "sha256": "1d90213b093f6153a86be7eb4e6c5ff84695f1831475dccb78ca7a085e60f0b6"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/29b55f709c655f6a.txt.gz",
+      "bytes": 2981,
+      "sha256": "8cd435326bb43cc12e6783e62eea2c6e1823cbc36668253236f48f9dd73dc713"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/2e8ace6589dfa051.html.gz",
+      "bytes": 32334,
+      "sha256": "9722ea130f083dadc4baa8dbe4e21cc27d464340d15bcc0a742174f3ece07827"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/2e8ace6589dfa051.txt.gz",
+      "bytes": 28043,
+      "sha256": "7db3660b24020c00c4065d9ec91f52b9a94bf89aae5543e20b4d95ab39281a19"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/32a34ba5b2bb79b0.html.gz",
+      "bytes": 6106,
+      "sha256": "ecc354cc86034397394680fbc00a80011ed82d24d208eef48f3ba5a47d81d99c"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/32a34ba5b2bb79b0.txt.gz",
+      "bytes": 2740,
+      "sha256": "8fa90a9d3e147333e430c97ecabece53cb5c5ec8b2435a7fa3a012989ae55200"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/3651d3ad4e02071c.html.gz",
+      "bytes": 82784,
+      "sha256": "d63ad161026a74f16b83995cf7c249174439224585a9f01cb49c69d790892a4c"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/3651d3ad4e02071c.txt.gz",
+      "bytes": 76916,
+      "sha256": "5973250a8c66bd352ce25fe5f0a5a179157f5fcc865c2a50b643ea02cc30d437"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/49c5c0386466f31d.html.gz",
+      "bytes": 18425,
+      "sha256": "55c398b3676b0455212e06ee90273f99bed55d4d7deb124edf579085085c26c8"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/49c5c0386466f31d.txt.gz",
+      "bytes": 7697,
+      "sha256": "17a0844266b5e84654dbb3da9ec3f94a3e05dea337ce266625b505b4f896625c"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/5ed237217d8a942f.html.gz",
+      "bytes": 10316,
+      "sha256": "2044d61b9fc929e06d2257046eadf38bbefec61b298e5265e4c7a6309bdfaa16"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/5ed237217d8a942f.txt.gz",
+      "bytes": 6876,
+      "sha256": "d0c1a0ae8e8d49adcb6542cc4521125b6d8bc8dcb97d3fd7aca31d3d2c313bd9"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/61c0578d130c62d5.html.gz",
+      "bytes": 21171,
+      "sha256": "d3031a8f8d34331ca8aedef68c61eb4a71cbd05c6ae6d9a32f833243d376dbb9"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/61c0578d130c62d5.txt.gz",
+      "bytes": 15279,
+      "sha256": "1d1b7cfd4d3ae5176b178c1f19a20dca4fd253e6aa9fb9bfaba664d141b1f9c0"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/6583bfcffb8f0ea0.html.gz",
+      "bytes": 14279,
+      "sha256": "5815b0118757891a3845e55fd2c61a012bf85cc69e4bb077cd6f4040d1719a18"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/6583bfcffb8f0ea0.txt.gz",
+      "bytes": 9056,
+      "sha256": "87e67b80f0556f7d7b07a12404946f99da5754fb704334f991922bb6e85af420"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/6b8c3cf4d671a7d9.html.gz",
+      "bytes": 540,
+      "sha256": "2bf055221dc461b83c75fa0430d1abd5cdb618d154575fb0cd73732335942286"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/6b8c3cf4d671a7d9.txt.gz",
+      "bytes": 20,
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/768d57873e4d8951.html.gz",
+      "bytes": 18236,
+      "sha256": "4b7731e6f76c5cc94ee5e615baea3c1108dc80f1e8b5ba7e85dcbd27482e5668"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/768d57873e4d8951.txt.gz",
+      "bytes": 6262,
+      "sha256": "8e61a7f5db0a2797146ac926cecb35afe99c125b03e8c6a36b52a9b86e36221d"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/79fa29f8b6ebdc0f.html.gz",
+      "bytes": 8230,
+      "sha256": "39ce3b23341f828a841f75de18c44a5b2a3e32444d762bdcf867b64dec339c18"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/79fa29f8b6ebdc0f.txt.gz",
+      "bytes": 4818,
+      "sha256": "e420c77e0d82c73d6bea3893f66808c152f347bb70c4d1d344562fbb44b825e5"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/80178d3fdb90b305.html.gz",
+      "bytes": 7489,
+      "sha256": "8248799a04416bde65f642a6c0d8163586a6d9d6c242844a2fd6703416c4d775"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/80178d3fdb90b305.txt.gz",
+      "bytes": 1779,
+      "sha256": "bd82b89c45334f7a2e31d9d66c0bec3d7e6f838cc6f151b3763bffb0c29501ca"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/843eef5244e1d9cb.html.gz",
+      "bytes": 6265,
+      "sha256": "57ec7dd23f2da6906d2b118f2cebc663bad41c52ee0056554c95e1eabe08e64a"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/843eef5244e1d9cb.txt.gz",
+      "bytes": 3030,
+      "sha256": "b7c15474485beaa7753d74309efb1c45da596dec3a338725d553e479697e4403"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/88a5de6d4f195dd2.html.gz",
+      "bytes": 13644,
+      "sha256": "14d42e7d01e69e41508f4754028e0fffef068e82fe1454a76e4be66e77a02f0a"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/88a5de6d4f195dd2.txt.gz",
+      "bytes": 5438,
+      "sha256": "cc68c1c44ae57e0d6979a5441058e490ce08370966c104438fcfed6f338f82c6"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/92b6031946f2d189.html.gz",
+      "bytes": 10267,
+      "sha256": "8c2da68004196f712452c3fc29f14fd6c3435ea4c97735b881bc1196db915059"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/92b6031946f2d189.txt.gz",
+      "bytes": 7260,
+      "sha256": "ebb3b877860bbcc6ea5b83ba3c607ea8c93458b9fa9e484c1c1a0e9e139d988a"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/aada1e17e378a21c.html.gz",
+      "bytes": 9136,
+      "sha256": "b84a866664f8ad766e39775feac272265e81003630b0c5e874bd2486b86fc613"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/aada1e17e378a21c.txt.gz",
+      "bytes": 6115,
+      "sha256": "363c332d1e1dbc7e919804bf3976e7a60c9b3b1c7de527129bc6c8302557b3f0"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/bb8c8c9025ccfe98.html.gz",
+      "bytes": 12400,
+      "sha256": "b0ae957031db971e6d13a8414394b5d313d6663ac282b30aacd97bee97848b07"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/bb8c8c9025ccfe98.txt.gz",
+      "bytes": 5095,
+      "sha256": "d7f8b2dc537d95799cb9b27ab80789723c78c4d4e3d7b8e579aff048761cc33b"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/c6263793e4172350.html.gz",
+      "bytes": 3877,
+      "sha256": "f1a9a02bf18c439dc6200a2f5cd0ec344ba01e3e77d50c84ac4bb46eb2022ced"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/c6263793e4172350.txt.gz",
+      "bytes": 380,
+      "sha256": "fd0debe82415361e4ec302882a87e561be3c10f341eadffea2c5aacdbe5303a1"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/capture-hashes.json",
+      "bytes": 5365,
+      "sha256": "3281d412860687a2af4c9f3bd7465d4e26a629ad1d4b5dac697ead07b8fed151"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/cb87f668ac97971b.html.gz",
+      "bytes": 6981,
+      "sha256": "f73e4ab6babfae2c23f9936e47a748909b41305534d8c8b89711468a6edec9be"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/cb87f668ac97971b.txt.gz",
+      "bytes": 5052,
+      "sha256": "56360f8825856b439caa419b2331872b8197ecdc3c2e1bb20a0ce5c2892da4b6"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/d2cb3985022fad16.pdf.gz",
+      "bytes": 942790,
+      "sha256": "e79855e9bf10cb25beddf18666b09c3f9447efb5405943a44084efc81e7398ea"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/d560887b85d5bbdb.html.gz",
+      "bytes": 13981,
+      "sha256": "217a2b99087695a6f1fd366830b66a137a90a7c053bc8751abad4ffed9e4f8ae"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/d560887b85d5bbdb.txt.gz",
+      "bytes": 6650,
+      "sha256": "9dadb0f10677386f084e90a21449d74e1901c8dbbe6deb52f2e9f61e7cd5a2a2"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/e181bdfb07027887.html.gz",
+      "bytes": 7026,
+      "sha256": "31a9fb7706253e4b573567bfbfa29b39be7954d9c3755465f6d59021008f23f6"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/e181bdfb07027887.txt.gz",
+      "bytes": 3679,
+      "sha256": "97cf1b084bf1240e1948facb7a1d77f17074f24c21583d33f65faa7538bcd591"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/e4a82961fe4428a9.html.gz",
+      "bytes": 8993,
+      "sha256": "b9683f0c225df9a21b2ee4623ea198812eba77791cea8cfff7e69a8491a18016"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/e4a82961fe4428a9.txt.gz",
+      "bytes": 2064,
+      "sha256": "8a46f41306f6c7e0c8c66ba7eae0accb7191cfa550c85b79cb7ef635628cd106"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/ec116706ee1c8f17.html.gz",
+      "bytes": 12671,
+      "sha256": "48d41dd16778c4940fda437b7e3d17af9990560692dd5cac2a461b1946ae93e0"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/ec116706ee1c8f17.txt.gz",
+      "bytes": 8268,
+      "sha256": "f4e8e91cbafe03208d632a59cb1a016a5d4402059b5f9b646a82aa841a7f0e4f"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/fabad01926bb25e5.html.gz",
+      "bytes": 136797,
+      "sha256": "f22fa0bfef591dafae63701f4a35fb581ba949bfdc2982c5f5ca03fb0a4166af"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/fabad01926bb25e5.txt.gz",
+      "bytes": 124531,
+      "sha256": "38d193698bea577c9a1d40f2ea2c0dd6163368f4bcc736fb1ba3a280d7110513"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/legal/manifest.json",
+      "bytes": 29483,
+      "sha256": "b3a46f7feccc8909c162570637b507d6635740e2daeef223ee2934e11263cbb4"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/manifest.json",
+      "bytes": 2241,
+      "sha256": "0d9c67db350bfef65bd2feee8ecfa96b45472885c685f9342201c34e3df92dae"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/劳动争议解释二2025.html.gz",
+      "bytes": 8230,
+      "sha256": "39ce3b23341f828a841f75de18c44a5b2a3e32444d762bdcf867b64dec339c18"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/劳动争议解释二2025.txt.gz",
+      "bytes": 4818,
+      "sha256": "e420c77e0d82c73d6bea3893f66808c152f347bb70c4d1d344562fbb44b825e5"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/建设工程解释二2026.html.gz",
+      "bytes": 7393,
+      "sha256": "842c3143ea266e3c7211d2f5ddcc99165bf15f415f7e287dd10207717c333c00"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/建设工程解释二2026.txt.gz",
+      "bytes": 3984,
+      "sha256": "329c1f4feb589f99571cb078fead4a5395a887cb1fdbf00fc29d89fbdb3d95d0"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/生态公益诉讼解释2026.html.gz",
+      "bytes": 32334,
+      "sha256": "9722ea130f083dadc4baa8dbe4e21cc27d464340d15bcc0a742174f3ece07827"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/生态公益诉讼解释2026.txt.gz",
+      "bytes": 28043,
+      "sha256": "7db3660b24020c00c4065d9ec91f52b9a94bf89aae5543e20b4d95ab39281a19"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/生态环境法典2026.html.gz",
+      "bytes": 145233,
+      "sha256": "6b47003173a4a475c291d6eaeb1fae813eaf8ff6b2e2a9b18e3feda1eb21fb54"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/official-new/生态环境法典2026.txt.gz",
+      "bytes": 123242,
+      "sha256": "4fed4126cb480ae6f136aa3ef22ca38c424bb474b018ac025ccacd36b58284d7"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/preview-check.json",
+      "bytes": 157,
+      "sha256": "4056ebe3206e12a80e73901acb36b3a0a91c67d12077b803f623226d9c818348"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/preview-mobile.png",
+      "bytes": 261798,
+      "sha256": "daf44150dc17e720346cc3f8bff06c8f16221b11f62feb9e51e4a13ffc1f7fb6"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/question-metadata.jsonl.gz",
+      "bytes": 2722324,
+      "sha256": "423107253b7b4fbff2866cc0cd568da8c0088d1231dc73f79f4f9781bd86f8bf"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/review-backend-first-pass.jsonl.gz",
+      "bytes": 8443,
+      "sha256": "9a0af6a03cee0e706c0fab3f778cc6762c06f2b365a55da1e49bf2c9229d1f7f"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/review-frontend-first-pass.jsonl.gz",
+      "bytes": 2038,
+      "sha256": "de92fec00267c44f9683dd419c6c69a40b06aafccce6cd5d690d0d04a5017409"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/evidence/review-legal-first-pass.jsonl.gz",
+      "bytes": 6401,
+      "sha256": "d7f8c60f94fe702a11bd96abe704646b58501026a2e03a300d4ade9557d30015"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/preview.html",
+      "bytes": 835943,
+      "sha256": "1219a7e54aaff0d42bda509da1881411d4d5c73728a70467811c6833f98ad3e9"
+    },
+    {
+      "path": "docs/teaching/2026-11-12/batch-001/revisions.jsonl",
+      "bytes": 1030379,
+      "sha256": "6b80c101798dd6661c65bbc3aa08d6a602c9384a8148a55b5b7b2c5c37d75bcc"
+    },
+    {
+      "path": "scripts/build-teaching-question-batch.py",
+      "bytes": 16276,
+      "sha256": "7fddbf83903d33df3617751506bb8ff5a2aee9d3b85ed4df8c9298f3780157d8"
+    },
+    {
+      "path": "scripts/plan-question-explanations.py",
+      "bytes": 6801,
+      "sha256": "2b210185f3c17999ef22816965b3911f511c1871167b6af996166bd480a98143"
+    },
+    {
+      "path": "scripts/teaching-preview-check.mjs",
+      "bytes": 2814,
+      "sha256": "9a1a8f97391fd6929649c2e8a6301e2479b6ecee22d067665beaa3f63f2a41f6"
+    },
+    {
+      "path": "scripts/test-teaching-question-batch.py",
+      "bytes": 8330,
+      "sha256": "a05baf7b6f7bba9f1ba2e93f49b3d696bf37fdad19519a24ea26476998157f41"
+    }
+  ],
+  "totalBytes": 21173382
+}

@@ -4,6 +4,7 @@ import com.lexaid.ai.dto.ChatMessageVO;
 import com.lexaid.ai.dto.ChatRequest;
 import com.lexaid.common.BizException;
 import com.lexaid.common.TextUtil;
+import com.lexaid.content.LegalCitation;
 import com.lexaid.relation.RelatedItem;
 import com.lexaid.relation.RelationService;
 import lombok.RequiredArgsConstructor;
@@ -80,7 +81,8 @@ public class SiteRetriever {
                 && SiteQueryPlanner.local(question, null).scopes().isEmpty()) {
             for (RelatedItem item : sources.search(viewer, plan.terms(), null, question, MAX_REFS)) put(evidence, item);
         }
-        if (id != null && SiteQueryPlanner.KNOWLEDGE.contains(scope) && evidence.size() < MAX_REFS) {
+        if (id != null && LegalCitation.fromTerms(plan.terms()) == null
+                && SiteQueryPlanner.KNOWLEDGE.contains(scope) && evidence.size() < MAX_REFS) {
             var groups = relations.relatedGroups(scope, id);
             for (var group : List.of(groups.provisions(), groups.cases(), groups.viewpoints(), groups.questions())) {
                 for (RelatedItem item : group) if (evidence.size() < MAX_REFS) evidence.putIfAbsent(key(item), item);

@@ -22,6 +22,7 @@ import java.util.zip.ZipInputStream;
  */
 public record ResourceFile(String fileName, String extension, String mediaType, byte[] bytes) {
 
+    static final long MAX_BYTES = 100L * 1024 * 1024;
     private static final int MAX_FILE_NAME_CODE_POINTS = 180;
     private static final long MAX_ZIP_ENTRIES = 50_000;
 
@@ -37,6 +38,9 @@ public record ResourceFile(String fileName, String extension, String mediaType, 
     public static ResourceFile read(MultipartFile upload) {
         if (upload == null || upload.isEmpty() || upload.getSize() <= 0) {
             throw new BizException("请选择要上传的学习资源文件");
+        }
+        if (upload.getSize() > MAX_BYTES) {
+            throw new BizException(413, "学习资源文件不能超过 100 MB");
         }
         byte[] bytes;
         try {

@@ -1,0 +1,12 @@
+{
+  "batch": "002",
+  "records": 14,
+  "subjects": {
+    "刑法学": 14
+  },
+  "independentReviewPass": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migrationSha256": "7381b403bb5c334eed577056a33ad9a0d0c740bcce846f8e410269ca7744cff6"
+}

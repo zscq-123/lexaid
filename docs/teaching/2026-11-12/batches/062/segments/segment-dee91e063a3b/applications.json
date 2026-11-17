@@ -1,0 +1,63 @@
+{
+  "batch": "062",
+  "segment": "segment-dee91e063a3b",
+  "database": "lexaid",
+  "verifiedAt": "2026-11-12T07:02:25.348303+00:00",
+  "migration": "backend/src/main/resources/teaching-batch-062-segment-dee91e063a3b.sql",
+  "migrationSha256": "4babdc778fe24e233b43eb592bb7d1799957f4a4c187e4389f6be740257358bb",
+  "records": [
+    {
+      "target": "question:10024576",
+      "id": 10024576,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "fae50879035e79187646689407eab5c764b23100a10c416726ac0cc1094adc9f",
+      "afterHash": "fae50879035e79187646689407eab5c764b23100a10c416726ac0cc1094adc9f",
+      "revisionKey": "2026-11-12-teaching-062-10024576"
+    },
+    {
+      "target": "question:10024577",
+      "id": 10024577,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a93afad979d98022d33f9d1d069f7404a8eb6fef787d0eb85751f078bde47f5b",
+      "afterHash": "a93afad979d98022d33f9d1d069f7404a8eb6fef787d0eb85751f078bde47f5b",
+      "revisionKey": "2026-11-12-teaching-062-10024577"
+    }
+  ],
+  "exactAfterMatches": 2,
+  "archives": {
+    "question_content_revision": {
+      "total": 2,
+      "applied": 2
+    }
+  },
+  "historyBefore": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyAfter": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyPreserved": true,
+  "repeatChecksums": {
+    "question": "2001511810",
+    "question_legal_subject": "4169332068",
+    "mock_exam_bank": "1432156791",
+    "question_content_revision": "59567420",
+    "mock_exam_content_revision": "802010516"
+  },
+  "idempotent": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false
+}

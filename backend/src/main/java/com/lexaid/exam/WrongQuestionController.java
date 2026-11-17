@@ -27,7 +27,8 @@ public class WrongQuestionController {
     public Result<PageResult<WrongQuestionVO>> wrongQuestions(
             @RequestParam(defaultValue = "1") @Min(1) long page,
             @RequestParam(defaultValue = "10") @Min(1) @Max(100) long size,
-            @RequestParam(defaultValue = "false") boolean all) {
-        return Result.ok(examService.wrongQuestions(page, size, all));
+            @RequestParam(defaultValue = "false") boolean all,
+            @RequestParam(required=false) @Min(1) Long questionId) {
+        return Result.ok(examService.wrongQuestions(page, size, all, questionId));
     }
 }

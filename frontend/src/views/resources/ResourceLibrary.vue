@@ -110,7 +110,7 @@
           @click="fileInput?.click()">
           <el-icon :size="30"><UploadFilled /></el-icon>
           <strong>选择学习资源文件</strong>
-          <small>支持 PDF、DOCX、PPTX、XLSX、TXT、MD；文件大小不限</small>
+          <small>支持 PDF、DOCX、PPTX、XLSX、TXT、MD；单个文件不超过 100 MB</small>
         </button>
         <div v-else class="selected-file">
           <span class="selected-icon" :class="'ext-' + extensionOf(uploadFile.name)">
@@ -214,6 +214,7 @@ const FORMATS = [
 ]
 const BADGE_LABELS = { ...Object.fromEntries(FORMATS.map(item => [item.value, item.label])), md: 'MD' }
 const ACCEPT = '.pdf,.docx,.pptx,.xlsx,.txt,.md'
+const MAX_FILE_BYTES = 100 * 1024 * 1024
 const pageSize = 12
 
 const tab = ref('community')
@@ -332,6 +333,10 @@ function selectFile(event) {
   const extension = extensionOf(file.name)
   if (!FORMATS.some(item => item.value === extension)) {
     fileError.value = '仅支持 PDF、DOCX、PPTX、XLSX、TXT 或 MD 文件'
+    return
+  }
+  if (file.size > MAX_FILE_BYTES) {
+    fileError.value = '单个学习资源文件不能超过 100 MB'
     return
   }
   uploadFile.value = file

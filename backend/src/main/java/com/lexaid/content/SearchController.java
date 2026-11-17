@@ -47,12 +47,14 @@ public class SearchController {
     }
 
     private List<SearchItem> searchProvisions(String kw) {
-        return provisionMapper.selectList(new LambdaQueryWrapper<Provision>()
-                        .select(Provision::getId, Provision::getLawName, Provision::getArticleNo, Provision::getContent)
-                        .like(Provision::getContent, kw)
-                        .or().like(Provision::getArticleNo, kw)
-                        .or().like(Provision::getLawName, kw)
-                        .last("LIMIT 10"))
+        var query = new LambdaQueryWrapper<Provision>()
+                .select(Provision::getId, Provision::getLawName, Provision::getArticleNo, Provision::getContent);
+        var citation = LegalCitation.parse(kw);
+        if (citation != null) {
+            query.in(Provision::getLawName,citation.lawNames()).in(Provision::getArticleNo,citation.articleNames());
+            if (citation.versionYear() != null) query.apply("(YEAR(promulgation_date)={0} OR YEAR(effective_date)={0})",citation.versionYear());
+        } else query.like(Provision::getContent,kw).or().like(Provision::getArticleNo,kw).or().like(Provision::getLawName,kw);
+        return provisionMapper.selectList(query.orderByDesc(Provision::getEffectiveDate).last("LIMIT 10"))
                 .stream().map(p -> new SearchItem("PROVISION", p.getId(),
                         p.getLawName() + " " + p.getArticleNo(),
                         TextUtil.excerpt(p.getContent(), 80))).toList();

@@ -1,0 +1,875 @@
+{
+  "passed": true,
+  "totalRecords": 24150,
+  "totalUnchanged": 24063,
+  "expectedStructuralRecoveries": 87,
+  "unexpectedRegressions": 0,
+  "baseline": "git HEAD parseChoice/toQuestion structural fields; analysis intentionally excluded because instructions are removed",
+  "baselineCommit": "15fbb651ecd5fce491b113468a09798248530c6f",
+  "baselineHelperSha256": "3c8d40bf690617aaff8c9743cfec2da8310d5ec8eca21875cc6100e7cfdd4320",
+  "counts": {
+    "LawBench": {
+      "records": 10000,
+      "unchanged": 10000,
+      "changed": 0,
+      "choiceBefore": 1500,
+      "choiceAfter": 1500,
+      "nativeWrapper": 500,
+      "shortPreserved": 8500
+    },
+    "LexEval": {
+      "records": 14150,
+      "unchanged": 14063,
+      "changed": 87,
+      "choiceBefore": 11304,
+      "choiceAfter": 11391,
+      "nativeWrapper": 0,
+      "shortPreserved": 2759
+    }
+  },
+  "taskCounts": {
+    "LawBench/1-1.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/1-2.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/2-1.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/2-10.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/2-2.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/2-3.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/2-4.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/2-5.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/2-6.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/2-7.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/2-8.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/2-9.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/3-1.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/3-2.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/3-3.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/3-4.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/3-5.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/3-6.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/3-7.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LawBench/3-8.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LexEval/1_1.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LexEval/1_2.json": {
+      "records": 1000,
+      "unchanged": 1000,
+      "changed": 0
+    },
+    "LexEval/1_3.json": {
+      "records": 300,
+      "unchanged": 300,
+      "changed": 0
+    },
+    "LexEval/2_1.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LexEval/2_2.json": {
+      "records": 300,
+      "unchanged": 300,
+      "changed": 0
+    },
+    "LexEval/2_3.json": {
+      "records": 100,
+      "unchanged": 100,
+      "changed": 0
+    },
+    "LexEval/2_4.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LexEval/2_5.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LexEval/3_1.json": {
+      "records": 1000,
+      "unchanged": 1000,
+      "changed": 0
+    },
+    "LexEval/3_2.json": {
+      "records": 1000,
+      "unchanged": 1000,
+      "changed": 0
+    },
+    "LexEval/3_3.json": {
+      "records": 1000,
+      "unchanged": 1000,
+      "changed": 0
+    },
+    "LexEval/3_4.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LexEval/3_5.json": {
+      "records": 400,
+      "unchanged": 400,
+      "changed": 0
+    },
+    "LexEval/3_6.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LexEval/4_1.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LexEval/4_2.json": {
+      "records": 300,
+      "unchanged": 300,
+      "changed": 0
+    },
+    "LexEval/5_1.json": {
+      "records": 1000,
+      "unchanged": 1000,
+      "changed": 0
+    },
+    "LexEval/5_2.json": {
+      "records": 1000,
+      "unchanged": 1000,
+      "changed": 0
+    },
+    "LexEval/5_3.json": {
+      "records": 250,
+      "unchanged": 250,
+      "changed": 0
+    },
+    "LexEval/5_4.json": {
+      "records": 500,
+      "unchanged": 500,
+      "changed": 0
+    },
+    "LexEval/6_1.json": {
+      "records": 1000,
+      "unchanged": 966,
+      "changed": 34
+    },
+    "LexEval/6_2.json": {
+      "records": 1000,
+      "unchanged": 980,
+      "changed": 20
+    },
+    "LexEval/6_3.json": {
+      "records": 500,
+      "unchanged": 467,
+      "changed": 33
+    }
+  },
+  "conservativeExceptions": [
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "3_5:0020",
+      "originalAnswer": null,
+      "reason": "UPSTREAM_EMPTY_ANSWER"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "3_5:0182",
+      "originalAnswer": null,
+      "reason": "UPSTREAM_EMPTY_ANSWER"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "3_5:0294",
+      "originalAnswer": null,
+      "reason": "UPSTREAM_EMPTY_ANSWER"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "4_2:0061",
+      "originalAnswer": "CD（无效合同不一定要撤销）",
+      "reason": "ANNOTATED_ANSWER_REMAINS_UNPARSED"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0233",
+      "originalAnswer": "C（可能累犯）",
+      "reason": "ANNOTATED_ANSWER_REMAINS_UNPARSED"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0539",
+      "originalAnswer": "B（平等且倾斜保护）",
+      "reason": "ANNOTATED_ANSWER_REMAINS_UNPARSED"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0768",
+      "originalAnswer": "ABD（B是善意的歧视）",
+      "reason": "ANNOTATED_ANSWER_REMAINS_UNPARSED"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0825",
+      "originalAnswer": "AB（区分现状与歧视）",
+      "reason": "ANNOTATED_ANSWER_REMAINS_UNPARSED"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0868",
+      "originalAnswer": "AC（D错但是不涉及歧视）",
+      "reason": "ANNOTATED_ANSWER_REMAINS_UNPARSED"
+    }
+  ],
+  "upstreamCommits": {
+    "LawBench": "e30981bb3ff54c41571f222e0b23e92d27375388",
+    "LexEval": "044c695f62894deef41ad9a30797e1da0404945c"
+  },
+  "files": [
+    {
+      "dataset": "LawBench",
+      "file": "1-1.json",
+      "sha256": "2e4fbcb42a7e7cce6f1a3f771a01cf7896384aecdc5b2900c74550497426c40e"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "1-2.json",
+      "sha256": "860d9f9e64706d5396d014027e571e1191b25c753fbea35a31710fc741fa8aa3"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "2-1.json",
+      "sha256": "dc799c07cc1b49543b748febb379d82c06cb72fa9e0737b90a87600ee914be8a"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "2-10.json",
+      "sha256": "968a7f84211f9b5c4a621c22b1795f5d92322244a2898903a0c17996391a2c98"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "2-2.json",
+      "sha256": "293d1876af2cf3f15061817aaf25e817eb977b0134ac3cec2189adf4a003389e"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "2-3.json",
+      "sha256": "48a389305914b03010c7a612a36362ee723b9c3e7f42c5695122e89ad49f2e9c"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "2-4.json",
+      "sha256": "7f9a55fa37d8bc4d1fb1306e728cc98caa0e596747d6200c77b693703d2dc260"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "2-5.json",
+      "sha256": "68782e85bef4f0459878c89b5fb5897f92ad79bf0603c48e75769b0bd6dff1d1"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "2-6.json",
+      "sha256": "7f6780eff758196790ed17c4cdd8136d85719eca7a89bd94eee6df10659e8359"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "2-7.json",
+      "sha256": "db4b7c6a8f673131383b9840413626e18f84d221955d870766bd8a68ca8ee164"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "2-8.json",
+      "sha256": "e9edc46b0bb95514720fbbf9e32042303cdbbce87358811b3ad1dc0dc8aee3e6"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "2-9.json",
+      "sha256": "2b47a232d0f142819ccc268be8ecb8978396f29707261ebd0ae7c7f1e42d8963"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "3-1.json",
+      "sha256": "6ca91fff5ab6cd4fd6f46316edf0e4c6fd5bddd3ebf73ad3e7dc505e29591c1a"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "3-2.json",
+      "sha256": "2e209fb2343db7dea424131ac8f7cb41d1bd291e6fe09be761e474eb1fdaa87d"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "3-3.json",
+      "sha256": "64378a7d7c3548cbe336d989f50a1301ba531ef53fc97b4dd879fda7e6fec755"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "3-4.json",
+      "sha256": "7aa28afdfbdddb49adf09e2d3295bdf0c03a3309edbb0fad238129390d79fa49"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "3-5.json",
+      "sha256": "0289bde514d8d188c2d8c9fda762e39e4b36523de2801584792496e2f8191c3a"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "3-6.json",
+      "sha256": "17f8f78c9c279417455cd543577468acb16e88a3193b73c1f3d67240b8fe7fdf"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "3-7.json",
+      "sha256": "21502f2cf10dc00a657bd64e9fd9173ae483973dba81126f928e783aec53337c"
+    },
+    {
+      "dataset": "LawBench",
+      "file": "3-8.json",
+      "sha256": "3eb1989dd55e03e1414d8a68854e551e044d8d32544971e63c9d24d271374382"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "1_1.json",
+      "sha256": "5ca932f1ee319ee3d7bb4808f7dec0e74ba55b42e7c7a24eea77beda025c49b8"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "1_2.json",
+      "sha256": "72d1ca2c87bebe08c0a9c9a27f3f3195d543578f291a5eb9b8d6d3143f07e0ae"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "1_3.json",
+      "sha256": "65b6c5226bce1795b1fa7ea27d08bd26d613f2c50208d58981401e18883d0af3"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "2_1.json",
+      "sha256": "038b10e1e953861255693f5c60024e6c42fe8ba917bd1411b87696a0dc501c93"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "2_2.json",
+      "sha256": "de469f48594960d5e428e5a64837483feb275507438928b4542a5dc98fa49115"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "2_3.json",
+      "sha256": "e6a21078d09c3ad35423476933b903dc5bc0cfd2987c24eeefa532efd1afad98"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "2_4.json",
+      "sha256": "75d699a7eb3032035c38033b2845f590f4836d6a6db58d453b4391e8e907b58d"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "2_5.json",
+      "sha256": "2997819ce8d4aa9266e4fd435213186140fc40b059ea967e99df38fbf0cd4d24"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "3_1.json",
+      "sha256": "30cd96dd9f517b31cbff908a6f879b44414a8dc5e5e9d55452bbd8baa631e5bc"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "3_2.json",
+      "sha256": "821b883fee7808c3a6aa423e6bafe9d416f81a927a3b055ff17319eec9e433ed"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "3_3.json",
+      "sha256": "34154f68950bb8d43f8801883e68d176ce78199e2c85faa61d3c788ef0a2548b"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "3_4.json",
+      "sha256": "057c203b1df6cd10370328c36ad7b64dfaeed8673a0e75453cd0efa7491536db"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "3_5.json",
+      "sha256": "dfeb484743379f176539e0617098d03a97f09c10def1057aaac5addbf6dca532"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "3_6.json",
+      "sha256": "f73bdbc2cc40487f2c120fc3ce8fa30ac24c754ac3f70a8e88773c5c1dcb7a51"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "4_1.json",
+      "sha256": "c92921b52be525b13b78f5305b5c924d039f209a46e97f79eead73a46c8e4262"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "4_2.json",
+      "sha256": "3cc23d6bb78cab3ab61af739a7dc6cdefb5c31620a58591e05eecdca99a635ea"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "5_1.json",
+      "sha256": "9a1dc46c6c51c584f45322092fe0674d32541d38b59aa8aacb224c14489a3aa2"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "5_2.json",
+      "sha256": "648d978c79ae9f6aee1bf43a6551ec9c1546dc93c779d6a3cc633395341bb070"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "5_3.json",
+      "sha256": "c024a0cd318f17982c70890fbf6870aa57cfdc57e94069281f08d3786185f71f"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "5_4.json",
+      "sha256": "18914ec0f990911ce74c4230533788d7e368515336ed2ba7230a9cf9b40d5f88"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "6_1.json",
+      "sha256": "ebbd5688d8de195def1221fc449bc50dae36bd84c5b2b283911a9def88ccb03b"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "6_2.json",
+      "sha256": "f2e661a567bbb7c36c02b1dd83fc567ac4c9878705e1f228fac16c5860bea6f8"
+    },
+    {
+      "dataset": "LexEval",
+      "file": "6_3.json",
+      "sha256": "44719b84bc8a6d87754df88314f233b0c97de75d23acb5a683ce0e517663af68"
+    }
+  ],
+  "importerSha256": "e5e23cf4f8e3b3f7e610aedd8ec000fc1d8921c93c346b8e836a06828691d385",
+  "changedSources": [
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0142"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0143"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0144"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0145"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0146"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0147"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0148"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0149"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0150"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0151"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0152"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0153"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0154"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0155"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0156"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0157"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0158"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0159"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0160"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0161"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0162"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0163"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0164"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0165"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0166"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0167"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0168"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0169"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0170"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0171"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0172"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0173"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0174"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_1:0175"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0367"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0368"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0369"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0370"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0371"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0372"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0373"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0374"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0375"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0376"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0377"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0378"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0379"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0380"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0381"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0382"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0383"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0384"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0385"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_2:0386"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0129"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0130"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0131"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0132"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0133"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0134"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0135"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0136"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0137"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0138"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0139"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0140"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0141"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0142"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0143"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0144"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0145"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0146"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0147"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0148"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0149"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0150"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0151"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0152"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0153"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0154"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0155"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0156"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0157"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0158"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0159"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0160"
+    },
+    {
+      "dataset": "LexEval",
+      "sourceItemId": "6_3:0189"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "batch": "131",
+  "originalSegment": "segment-2b40f32ff3a0",
+  "originalAttemptStatus": "PARTIAL_BASELINE_DRIFT",
+  "originalAttemptObservedAt": "2026-11-12",
+  "originalAttemptRows": 5,
+  "originalAttemptAppliedOrAlreadyApplied": [
+    "question:10017270",
+    "question:10023205",
+    "question:10023938"
+  ],
+  "originalAttemptBaselineChanged": [
+    "question:10022680",
+    "question:10023710"
+  ],
+  "recoverySegment": "segment-8b413cad4ac3",
+  "recoveredAndVerified": [
+    "question:10017270",
+    "question:10023205",
+    "question:10023938"
+  ],
+  "remainingHeld": [
+    "question:10022680",
+    "question:10023710"
+  ],
+  "holdReason": "The frozen source baseline differs from the live database. Live stem, answer and analysis currently match the proposed after text, but there is no archive marker for this revision. Do not synthesize application history or overwrite without human baseline reconciliation.",
+  "recoveryReport": "docs/teaching/2026-11-12/batches/131/segments/segment-8b413cad4ac3/applications.json",
+  "notes": [
+    "The first apply command returned a failure after the migration transaction and did not write its normal report. The recovery segment recorded only the three rows with matching applied revision archives.",
+    "The recovery execution verified exact after content, archive counts, idempotence and unchanged answer/exam history checksums.",
+    "Human approval and release approval remain false."
+  ]
+}

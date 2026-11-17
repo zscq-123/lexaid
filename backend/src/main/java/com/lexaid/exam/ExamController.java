@@ -40,6 +40,11 @@ public class ExamController {
 
     private final ExamService examService;
 
+    @GetMapping("/quality")
+    public Result<List<QuestionMapper.QualityCount>> quality() {
+        return Result.ok(examService.qualityCounts());
+    }
+
     @GetMapping("/categories")
     public Result<List<QuestionCategoryCount>> categories() {
         return Result.ok(examService.categoryCounts());

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "医疗损害2020",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/282621.html",
+    "path": "医疗损害2020.txt.gz",
+    "bytes": 294289,
+    "sha256": "4c98a568f2418dff5f5d73a16c9c47fe636fa76d0c868e81248215a31613a6a0"
+  },
+  {
+    "name": "商标指南第二版",
+    "url": "https://www.cnipa.gov.cn/module/download/downfile.jsp?classid=0&filename=90e629cd05114970bb26ce028198002c.pdf&showname=%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%94%BF%E5%8A%A1%E6%9C%8D%E5%8A%A1%E4%BA%8B%E9%A1%B9%E5%8A%9E%E4%BA%8B%E6%8C%87%E5%8D%97%EF%BC%88%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%89.pdf",
+    "path": "商标指南第二版.pdf.gz",
+    "bytes": 1316945,
+    "sha256": "73ca749975228efcd695f00f2b4dc15051e607bfb96f6f098849a34c659f71ec"
+  }
+]

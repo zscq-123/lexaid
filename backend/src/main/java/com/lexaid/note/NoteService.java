@@ -31,9 +31,8 @@ public class NoteService {
         LambdaQueryWrapper<Note> qw = new LambdaQueryWrapper<Note>()
                 .eq(Note::getUserId, userId)
                 .orderByDesc(Note::getId);
-        if (StringUtils.hasText(targetType) && targetId != null) {
-            qw.eq(Note::getTargetType, targetType).eq(Note::getTargetId, targetId);
-        }
+        if (StringUtils.hasText(targetType)) qw.eq(Note::getTargetType, targetType);
+        if (targetId != null) qw.eq(Note::getTargetId, targetId);
         List<Note> notes = noteMapper.selectList(qw);
         List<NoteVO> vos = new ArrayList<>();
         for (Note n : notes) {

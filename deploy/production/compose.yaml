@@ -14,7 +14,7 @@ services:
       - --innodb-buffer-pool-size=96M
       - --innodb-redo-log-capacity=64M
       - --max-connections=45
-      - --max-allowed-packet=256M
+      - --max-allowed-packet=128M
       - --temptable-max-ram=32M
     mem_limit: 400m
     memswap_limit: 640m

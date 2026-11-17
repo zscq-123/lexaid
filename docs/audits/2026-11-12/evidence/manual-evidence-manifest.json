@@ -1,0 +1,117 @@
+[
+  {
+    "file": "manual-evidence/cnipa-natural-person.txt",
+    "sha256": "4c27fca7cc36bba2b407a1c39960dce2b266c1ab55b5c31b41b5946629dc3d02",
+    "retrievedAt": "2026-11-12",
+    "urls": [
+      "https://www.cnipa.gov.cn/jact/front/mailpubdetail.do?sysid=13&transactId=483024"
+    ],
+    "note": "May contain search excerpts or access failure; inspect file, not a complete corpus by default."
+  },
+  {
+    "file": "manual-evidence/search-current-environment-law.txt",
+    "sha256": "911d95fac67a94024e19cda15a7adc1bfa42a5a1b1e99d94cc60961ff743e04a",
+    "retrievedAt": "2026-11-12",
+    "urls": [
+      "https://aspirantes.serviciocivil.gov.co/storage/solicituds/80419039_personeria.pdf",
+      "https://calcareers.ca.gov/CalHrPublic/Jobs/JobPostingPrint.aspx?jcid=489764",
+      "https://dss.mo.gov/dys/pdf/waverly-feb2026.pdf",
+      "https://e.xzxw.com/xzrb/202603/13/aac96a4b-8c3c-4d44-a610-26d8b9eccb9b.pdf",
+      "https://ecro.mee.gov.cn/fgbz/fl/202604/t20260416_1148993.html",
+      "https://eprints.soton.ac.uk/489764/",
+      "https://meeb.sz.gov.cn/gkmlpt/content/12/12920/post_12920154.html",
+      "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526611.PDF",
+      "https://sthjt.fujian.gov.cn/zwgk/zfxxgkzl/zfxxgkml/jytabl/rddbjy/202604/P020260402556182916964.pdf",
+      "https://stream.labase-lextenso.fr/jp-commente/ce/2026-06/489764-CE-17062026-489764",
+      "https://www.forestry.gov.cn/c/www/lcdt/684290.jhtml",
+      "https://www.forestry.gov.cn/lyj/1/dfdt/20261014/690681.html",
+      "https://www.hunan.gov.cn/hnszf/hnyw/sy/hnyw1/202608/t20260815_34045331.html",
+      "https://www.mee.gov.cn/?%2FappisosPE%2Flist=c0ae.aspx%2FDefEGKq.mee.gov.cn%2FshowtimeyTKcgnSY.asp",
+      "https://www.mee.gov.cn/?zbb=true",
+      "https://www.mee.gov.cn/ywgz/fgbz/fl/202603/t20260313_1146496.shtml?f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiI2OTMxMTQ0MzQ0NzgwOWU0LWY3NzNlYjc0MzIwYmFiMjYifQ%3D%3D&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light&use_xbridge3=true",
+      "https://www.tid.gov.hk/en/tradecircular/files/2026/ci2482026a.pdf",
+      "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%B3%95%E5%BE%8B%E5%88%97%E8%A1%A8",
+      "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E7%94%9F%E6%80%81%E7%8E%AF%E5%A2%83%E6%B3%95%E5%85%B8",
+      "https://zoek.officielebekendmakingen.nl/gmb-2026-489764.html"
+    ],
+    "note": "May contain search excerpts or access failure; inspect file, not a complete corpus by default."
+  },
+  {
+    "file": "manual-evidence/search-version-and-qualification.txt",
+    "sha256": "1a3f8f813ee728f9b12592573aad894bb41e6fd32ff0dc8bc0c6bf707251d4bd",
+    "retrievedAt": "2026-11-12",
+    "urls": [
+      "https://fg.amac.org.cn/governmentrules_3854/flfg/sfjs/202402/t20240222_25177.html",
+      "https://hudong.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202107/t20210730_547843.html",
+      "https://sdcourt.gov.cn/dyzy/resource/cms/article/372898/40945768/2025061808253996335.pdf",
+      "https://www.cnipa.gov.cn/jact/front/mailpubdetail.do?sysid=13&transactId=483024",
+      "https://www.court.gov.cn/zixun/xiangqing/141312.html",
+      "https://www.court.gov.cn/zixun/xiangqing/2022.html",
+      "https://www.court.gov.cn/zixun/xiangqing/346881.html",
+      "https://www.court.gov.cn/zixun/xiangqing/346891.html",
+      "https://www.mee.gov.cn/hjzl/sthjzk/hjzywr/202211/W020221116716100586404.pdf",
+      "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk03/202202/t20220222_969609.html",
+      "https://www.mee.gov.cn/ywdt/gsgg/gongshi/wqgs_1/202207/W020220729413171000290.pdf",
+      "https://www.mee.gov.cn/ywgz/fgbz/fl/202603/t20260313_1146496.shtml?f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiI2OTMxMTQ0MzQ0NzgwOWU0LWY3NzNlYjc0MzIwYmFiMjYifQ%3D%3D&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light&use_xbridge3=true",
+      "https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202404/t20240426_1127804.html",
+      "https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202404/t20240426_1127804.html?tt_force_outside=1",
+      "https://www.moe.gov.cn/jyb_xxgk/gk_gbgg/moe_0/moe_495/moe_1054/tnull_11007.html",
+      "https://www.sse.org.cn/lawrules/rules/P020220927413512619381.pdf",
+      "https://xxgk.dhu.edu.cn/_upload/article/files/b7/ec/dcb5f9764eafa0e6a78aa9e9c2e3/6f801dd5-cf41-4ebb-a475-8be8f614e6c8.pdf",
+      "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%AD%A6%E4%BD%8D%E6%9D%A1%E4%BE%8B",
+      "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%AD%A6%E4%BD%8D%E6%B3%95",
+      "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%B3%95%E5%BE%8B%E5%88%97%E8%A1%A8",
+      "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E7%8E%AF%E5%A2%83%E4%BF%9D%E6%8A%A4%E9%83%A8",
+      "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E7%8E%AF%E5%A2%83%E5%99%AA%E5%A3%B0%E6%B1%A1%E6%9F%93%E9%98%B2%E6%B2%BB%E6%B3%95",
+      "https://zh.wikipedia.org/wiki/%E9%9D%9E%E6%B3%95%E9%9B%86%E8%B5%84"
+    ],
+    "note": "May contain search excerpts or access failure; inspect file, not a complete corpus by default."
+  },
+  {
+    "file": "manual-evidence/学位法.txt",
+    "sha256": "9b9dc9e8f6aec16d923d9d0f0966fe022fe31de5620315d326f97e79e5360352",
+    "retrievedAt": "2026-11-12",
+    "urls": [
+      "https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202404/t20240426_1127804.html",
+      "https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202404/t20240426_1127804.html:"
+    ],
+    "note": "May contain search excerpts or access failure; inspect file, not a complete corpus by default."
+  },
+  {
+    "file": "manual-evidence/未成年人保护法.txt",
+    "sha256": "dd6d23c220a3d1f9edade5ce470999685a655b05157543b8e4b67935f139ebaf",
+    "retrievedAt": "2026-11-12",
+    "urls": [
+      "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_54358c05e57642ab895176413f7cd4d7.html"
+    ],
+    "note": "May contain search excerpts or access failure; inspect file, not a complete corpus by default."
+  },
+  {
+    "file": "manual-evidence/消费民事公益诉讼解释.txt",
+    "sha256": "f97155b0a27d130d1de75351ec35f7c87870f8de8df688b685293109f20e489e",
+    "retrievedAt": "2026-11-12",
+    "urls": [
+      "https://www.court.gov.cn/zixun/xiangqing/20082.html"
+    ],
+    "note": "May contain search excerpts or access failure; inspect file, not a complete corpus by default."
+  },
+  {
+    "file": "manual-evidence/盗窃解释.txt",
+    "sha256": "35e440d5b394349e25b4eeda385ad40052ce2769d48c2d11208e325b516670a5",
+    "retrievedAt": "2026-11-12",
+    "urls": [
+      "https://www.court.gov.cn/fabu/xiangqing/5228.html?sid_for_share=95263_4"
+    ],
+    "note": "May contain search excerpts or access failure; inspect file, not a complete corpus by default."
+  },
+  {
+    "file": "manual-evidence/贷款诈骗立案标准.txt",
+    "sha256": "9e96d4c59b2496052fa2c5810e2b7c107418cc5ccde9c470c20c5202fa64da8f",
+    "retrievedAt": "2026-11-12",
+    "urls": [
+      "https://www.spp.gov.cn/xwfbh/wsfbt/202204/t20220429_555906.shtml",
+      "https://www.spp.gov.cn/xwfbh/wsfbt/202204/t20220429_555906.shtml:"
+    ],
+    "note": "May contain search excerpts or access failure; inspect file, not a complete corpus by default."
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "batch": "131",
+  "segment": "segment-8b413cad4ac3",
+  "records": 3,
+  "groups": 3,
+  "tables": {
+    "question": 3
+  },
+  "eligibleTargets": [
+    "question:10017270",
+    "question:10023205",
+    "question:10023938"
+  ],
+  "skippedGroups": [],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-131-segment-8b413cad4ac3.sql",
+  "migrationSha256": "82324bb0b2b2e9d937b2ab5eac909b6d97731b5116eace22781ec0c10152297d"
+}

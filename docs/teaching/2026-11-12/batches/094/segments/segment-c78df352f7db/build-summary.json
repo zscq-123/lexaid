@@ -1,0 +1,388 @@
+{
+  "batch": "094",
+  "segment": "segment-c78df352f7db",
+  "records": 10,
+  "groups": 10,
+  "tables": {
+    "question": 10
+  },
+  "eligibleTargets": [
+    "question:10011153",
+    "question:10011154",
+    "question:10011165",
+    "question:10011166",
+    "question:10011167",
+    "question:10011168",
+    "question:10011169",
+    "question:10011170",
+    "question:10011171",
+    "question:10011172"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10011145",
+      "targets": [
+        "question:10011145"
+      ],
+      "reasons": [
+        "already applied question:10011145"
+      ]
+    },
+    {
+      "contentGroup": "question:10011146",
+      "targets": [
+        "question:10011146"
+      ],
+      "reasons": [
+        "already applied question:10011146"
+      ]
+    },
+    {
+      "contentGroup": "question:10011147",
+      "targets": [
+        "question:10011147"
+      ],
+      "reasons": [
+        "already applied question:10011147"
+      ]
+    },
+    {
+      "contentGroup": "question:10011148",
+      "targets": [
+        "question:10011148"
+      ],
+      "reasons": [
+        "already applied question:10011148"
+      ]
+    },
+    {
+      "contentGroup": "question:10011149",
+      "targets": [
+        "question:10011149"
+      ],
+      "reasons": [
+        "already applied question:10011149"
+      ]
+    },
+    {
+      "contentGroup": "question:10011150",
+      "targets": [
+        "question:10011150"
+      ],
+      "reasons": [
+        "already applied question:10011150"
+      ]
+    },
+    {
+      "contentGroup": "question:10011151",
+      "targets": [
+        "question:10011151"
+      ],
+      "reasons": [
+        "already applied question:10011151"
+      ]
+    },
+    {
+      "contentGroup": "question:10011152",
+      "targets": [
+        "question:10011152"
+      ],
+      "reasons": [
+        "already applied question:10011152"
+      ]
+    },
+    {
+      "contentGroup": "question:10011155",
+      "targets": [
+        "question:10011155"
+      ],
+      "reasons": [
+        "already applied question:10011155"
+      ]
+    },
+    {
+      "contentGroup": "question:10011156",
+      "targets": [
+        "question:10011156"
+      ],
+      "reasons": [
+        "already applied question:10011156"
+      ]
+    },
+    {
+      "contentGroup": "question:10011157",
+      "targets": [
+        "question:10011157"
+      ],
+      "reasons": [
+        "already applied question:10011157"
+      ]
+    },
+    {
+      "contentGroup": "question:10011158",
+      "targets": [
+        "question:10011158"
+      ],
+      "reasons": [
+        "already applied question:10011158"
+      ]
+    },
+    {
+      "contentGroup": "question:10011159",
+      "targets": [
+        "question:10011159"
+      ],
+      "reasons": [
+        "already applied question:10011159"
+      ]
+    },
+    {
+      "contentGroup": "question:10011160",
+      "targets": [
+        "question:10011160"
+      ],
+      "reasons": [
+        "already applied question:10011160"
+      ]
+    },
+    {
+      "contentGroup": "question:10011161",
+      "targets": [
+        "question:10011161"
+      ],
+      "reasons": [
+        "already applied question:10011161"
+      ]
+    },
+    {
+      "contentGroup": "question:10011162",
+      "targets": [
+        "question:10011162"
+      ],
+      "reasons": [
+        "already applied question:10011162"
+      ]
+    },
+    {
+      "contentGroup": "question:10011163",
+      "targets": [
+        "question:10011163"
+      ],
+      "reasons": [
+        "already applied question:10011163"
+      ]
+    },
+    {
+      "contentGroup": "question:10011164",
+      "targets": [
+        "question:10011164"
+      ],
+      "reasons": [
+        "already applied question:10011164"
+      ]
+    },
+    {
+      "contentGroup": "question:10011173",
+      "targets": [
+        "question:10011173"
+      ],
+      "reasons": [
+        "missing cross-review question:10011173"
+      ]
+    },
+    {
+      "contentGroup": "question:10011174",
+      "targets": [
+        "question:10011174"
+      ],
+      "reasons": [
+        "missing cross-review question:10011174"
+      ]
+    },
+    {
+      "contentGroup": "question:10011175",
+      "targets": [
+        "question:10011175"
+      ],
+      "reasons": [
+        "missing cross-review question:10011175"
+      ]
+    },
+    {
+      "contentGroup": "question:10011176",
+      "targets": [
+        "question:10011176"
+      ],
+      "reasons": [
+        "missing cross-review question:10011176"
+      ]
+    },
+    {
+      "contentGroup": "question:10011177",
+      "targets": [
+        "question:10011177"
+      ],
+      "reasons": [
+        "missing proposal question:10011177"
+      ]
+    },
+    {
+      "contentGroup": "question:10011178",
+      "targets": [
+        "question:10011178"
+      ],
+      "reasons": [
+        "missing proposal question:10011178"
+      ]
+    },
+    {
+      "contentGroup": "question:10011179",
+      "targets": [
+        "question:10011179"
+      ],
+      "reasons": [
+        "missing proposal question:10011179"
+      ]
+    },
+    {
+      "contentGroup": "question:10011180",
+      "targets": [
+        "question:10011180"
+      ],
+      "reasons": [
+        "missing proposal question:10011180"
+      ]
+    },
+    {
+      "contentGroup": "question:10011181",
+      "targets": [
+        "question:10011181"
+      ],
+      "reasons": [
+        "missing proposal question:10011181"
+      ]
+    },
+    {
+      "contentGroup": "question:10011182",
+      "targets": [
+        "question:10011182"
+      ],
+      "reasons": [
+        "missing proposal question:10011182"
+      ]
+    },
+    {
+      "contentGroup": "question:10011183",
+      "targets": [
+        "question:10011183"
+      ],
+      "reasons": [
+        "missing proposal question:10011183"
+      ]
+    },
+    {
+      "contentGroup": "question:10011184",
+      "targets": [
+        "question:10011184"
+      ],
+      "reasons": [
+        "missing proposal question:10011184"
+      ]
+    },
+    {
+      "contentGroup": "question:10011185",
+      "targets": [
+        "question:10011185"
+      ],
+      "reasons": [
+        "missing proposal question:10011185"
+      ]
+    },
+    {
+      "contentGroup": "question:10011186",
+      "targets": [
+        "question:10011186"
+      ],
+      "reasons": [
+        "missing proposal question:10011186"
+      ]
+    },
+    {
+      "contentGroup": "question:10011187",
+      "targets": [
+        "question:10011187"
+      ],
+      "reasons": [
+        "missing proposal question:10011187"
+      ]
+    },
+    {
+      "contentGroup": "question:10011188",
+      "targets": [
+        "question:10011188"
+      ],
+      "reasons": [
+        "missing proposal question:10011188"
+      ]
+    },
+    {
+      "contentGroup": "question:10011189",
+      "targets": [
+        "question:10011189"
+      ],
+      "reasons": [
+        "missing proposal question:10011189"
+      ]
+    },
+    {
+      "contentGroup": "question:10011190",
+      "targets": [
+        "question:10011190"
+      ],
+      "reasons": [
+        "missing proposal question:10011190"
+      ]
+    },
+    {
+      "contentGroup": "question:10011191",
+      "targets": [
+        "question:10011191"
+      ],
+      "reasons": [
+        "missing proposal question:10011191"
+      ]
+    },
+    {
+      "contentGroup": "question:10011192",
+      "targets": [
+        "question:10011192"
+      ],
+      "reasons": [
+        "missing proposal question:10011192"
+      ]
+    },
+    {
+      "contentGroup": "question:10011193",
+      "targets": [
+        "question:10011193"
+      ],
+      "reasons": [
+        "missing proposal question:10011193"
+      ]
+    },
+    {
+      "contentGroup": "question:10011194",
+      "targets": [
+        "question:10011194"
+      ],
+      "reasons": [
+        "missing proposal question:10011194"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-094-segment-c78df352f7db.sql",
+  "migrationSha256": "0a35691f4bc8cd9a22431e6b0a1f766d4332ff93dcf1b7d97e16172af206b582"
+}

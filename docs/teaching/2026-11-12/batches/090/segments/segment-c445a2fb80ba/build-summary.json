@@ -1,0 +1,172 @@
+{
+  "batch": "090",
+  "segment": "segment-c445a2fb80ba",
+  "records": 37,
+  "groups": 37,
+  "tables": {
+    "question": 37
+  },
+  "eligibleTargets": [
+    "question:10010232",
+    "question:10010249",
+    "question:10010269",
+    "question:10010302",
+    "question:10010320",
+    "question:10010324",
+    "question:10010340",
+    "question:10010341",
+    "question:10010356",
+    "question:10010441",
+    "question:10010968",
+    "question:10010969",
+    "question:10010970",
+    "question:10010971",
+    "question:10010972",
+    "question:10010973",
+    "question:10010974",
+    "question:10010975",
+    "question:10010976",
+    "question:10010977",
+    "question:10010978",
+    "question:10010979",
+    "question:10010980",
+    "question:10010981",
+    "question:10010982",
+    "question:10010983",
+    "question:10010984",
+    "question:10010985",
+    "question:10010986",
+    "question:10010987",
+    "question:10010988",
+    "question:10010989",
+    "question:10010990",
+    "question:10010991",
+    "question:10010992",
+    "question:10010993",
+    "question:10010994"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10010233",
+      "targets": [
+        "question:10010233"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010233"
+      ]
+    },
+    {
+      "contentGroup": "question:10010234",
+      "targets": [
+        "question:10010234"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010234"
+      ]
+    },
+    {
+      "contentGroup": "question:10010253",
+      "targets": [
+        "question:10010253"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010253"
+      ]
+    },
+    {
+      "contentGroup": "question:10010274",
+      "targets": [
+        "question:10010274"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010274"
+      ]
+    },
+    {
+      "contentGroup": "question:10010317",
+      "targets": [
+        "question:10010317"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010317"
+      ]
+    },
+    {
+      "contentGroup": "question:10010358",
+      "targets": [
+        "question:10010358"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010358"
+      ]
+    },
+    {
+      "contentGroup": "question:10010377",
+      "targets": [
+        "question:10010377"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010377"
+      ]
+    },
+    {
+      "contentGroup": "question:10010381",
+      "targets": [
+        "question:10010381"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010381"
+      ]
+    },
+    {
+      "contentGroup": "question:10010385",
+      "targets": [
+        "question:10010385"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010385"
+      ]
+    },
+    {
+      "contentGroup": "question:10010407",
+      "targets": [
+        "question:10010407"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010407"
+      ]
+    },
+    {
+      "contentGroup": "question:10010448",
+      "targets": [
+        "question:10010448"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010448"
+      ]
+    },
+    {
+      "contentGroup": "question:10010453",
+      "targets": [
+        "question:10010453"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010453"
+      ]
+    },
+    {
+      "contentGroup": "question:10010458",
+      "targets": [
+        "question:10010458"
+      ],
+      "reasons": [
+        "held for human/evidence review question:10010458"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-090-segment-c445a2fb80ba.sql",
+  "migrationSha256": "31fbb0c4cf866132809f0704b8170220f68d96f6cb2f7ccff570fab41456645c"
+}

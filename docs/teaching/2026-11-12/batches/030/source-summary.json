@@ -1,0 +1,7 @@
+{
+  "batch": "030",
+  "records": 32,
+  "contentGroups": 16,
+  "database": "lexaid",
+  "baselineHashesMatched": true
+}

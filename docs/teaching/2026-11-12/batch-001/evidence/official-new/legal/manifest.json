@@ -1,0 +1,732 @@
+{
+  "accessDate": "2026-11-12",
+  "purpose": "新增教学修订及交叉复核依据留档；捕获成功不等于每份全文均被法律实质核验",
+  "sources": [
+    {
+      "law": "最高人民法院、最高人民检察院关于办理盗窃刑事案件适用法律若干问题的解释",
+      "version": "2013年解释，2013-04-04施行",
+      "url": "https://www.court.gov.cn/fabu/xiangqing/5228.html?sid_for_share=95263_4",
+      "articles": [
+        "第3条"
+      ],
+      "questionIds": [
+        10025143,
+        10025163
+      ],
+      "accessedAt": "2026-11-11T23:40:59.484761+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.court.gov.cn/fabu/xiangqing/5228.html?sid_for_share=95263_4",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "1dc6025fd61b1b4a.html.gz",
+      "sha256": "11526ffb51d8819196539df83694427e59d433a4fffd14ed7c6afa79afedcf39",
+      "bytes": 26019,
+      "textFile": "1dc6025fd61b1b4a.txt.gz",
+      "textSha256": "d8e90958cbaaef606dcd6681985dd1baba79cd88c6ce5ecfa7c0466904cb7b55",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "最高人民法院关于限制被执行人高消费及有关消费的若干规定",
+      "version": "2015年修正，2015-07-22施行",
+      "url": "https://www.court.gov.cn/fabu/xiangqing/15046.html",
+      "articles": [
+        "第1条",
+        "第4条",
+        "第5条"
+      ],
+      "questionIds": [
+        10025275
+      ],
+      "accessedAt": "2026-11-11T23:40:59.485477+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.court.gov.cn/fabu/xiangqing/15046.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "32a34ba5b2bb79b0.html.gz",
+      "sha256": "9d883e8a4fec5fcb06d2689b40d061bd17e777290a29c47645c8f33905ce82e6",
+      "bytes": 22279,
+      "textFile": "32a34ba5b2bb79b0.txt.gz",
+      "textSha256": "f75044848ee8dd594407a738c83d1dd21ea603a52d45b34df72c60aaf7c21a34",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "最高人民法院关于适用《中华人民共和国民法典》物权编的解释（一）",
+      "version": "2020年司法解释，2021-01-01施行",
+      "url": "https://www.court.gov.cn/fabu/xiangqing/282101.html",
+      "articles": [
+        "第14条"
+      ],
+      "questionIds": [
+        10025373
+      ],
+      "accessedAt": "2026-11-11T23:40:59.485551+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.court.gov.cn/fabu/xiangqing/282101.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "843eef5244e1d9cb.html.gz",
+      "sha256": "c7c22bb234ff8caa203cd9542d5efb8ea62d7356bdd04c64bb152c64efa684ac",
+      "bytes": 18676,
+      "textFile": "843eef5244e1d9cb.txt.gz",
+      "textSha256": "31968550aa19baaca9851e4521b76ee4ccf352f53fd0449ac02804615a71faa2",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "最高人民检察院公安部关于公安机关管辖的刑事案件立案追诉标准的规定（二）",
+      "version": "2022年规定，2022-05-15施行；仅立案追诉标准",
+      "url": "https://www.spp.gov.cn/xwfbh/wsfbt/202204/t20220429_555906.shtml",
+      "articles": [
+        "第45条"
+      ],
+      "questionIds": [
+        10025448,
+        10025452,
+        10025455
+      ],
+      "accessedAt": "2026-11-11T23:40:59.485600+00:00",
+      "captureStatus": "FETCH_FAILED",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "law": "最高人民检察院关于拾得他人信用卡并在自动柜员机上使用的行为如何定性问题的批复",
+      "version": "2008年批复，2008-05-07施行",
+      "url": "https://www.spp.gov.cn/flfg/201208/t20120830_47806.shtml",
+      "articles": [
+        "批复正文"
+      ],
+      "questionIds": [
+        10025452
+      ],
+      "accessedAt": "2026-11-11T23:40:59.485643+00:00",
+      "captureStatus": "FETCH_FAILED",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "law": "中华人民共和国城市房地产管理法",
+      "version": "2019-08-26修正，2020-01-01施行",
+      "url": "https://www.samr.gov.cn/zfjcj/tzgg/art/2023/art_d334f021ed52443d970cd58d934a3a6c.html",
+      "articles": [
+        "第2条",
+        "第37条",
+        "第41条"
+      ],
+      "questionIds": [
+        10025477
+      ],
+      "accessedAt": "2026-11-11T23:40:59.485684+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.samr.gov.cn/zfjcj/tzgg/art/2023/art_d334f021ed52443d970cd58d934a3a6c.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "aada1e17e378a21c.html.gz",
+      "sha256": "cca61a8936637a1af791cc62f2ca37d88f857cc32d4b5f9dcbe85e720c5d6e36",
+      "bytes": 40274,
+      "textFile": "aada1e17e378a21c.txt.gz",
+      "textSha256": "e3e18ba15b3a23f5c0a0f71da7808f77b1cf8cc1da81b6a23c174417a37039ae",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "中华人民共和国海商法",
+      "version": "2025-10-28修订，2026-05-01施行",
+      "url": "https://www.js.msa.gov.cn/art/2026/1/5/art_842_2101.html",
+      "articles": [
+        "第43条",
+        "第52条",
+        "第310条"
+      ],
+      "questionIds": [
+        10025533
+      ],
+      "accessedAt": "2026-11-11T23:40:59.485721+00:00",
+      "captureStatus": "FETCH_FAILED",
+      "error": "[SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:2713)"
+    },
+    {
+      "law": "国务院关于修改和废止部分行政法规的决定（国务院令第628号）",
+      "version": "2012-11-09公布，2013-01-01施行",
+      "url": "https://www.shanwei.gov.cn/gdsw110/zwgk/0200/0202/content/post_219244.html",
+      "articles": [
+        "第二部分第一项"
+      ],
+      "questionIds": [
+        10025537
+      ],
+      "accessedAt": "2026-11-11T23:40:59.485754+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.shanwei.gov.cn/gdsw110/zwgk/0200/0202/content/post_219244.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "80178d3fdb90b305.html.gz",
+      "sha256": "b0a7b932a6b4a20c67c2ab43834b9e9a7a2b48dfed4b01c9302ff58f603c3c2b",
+      "bytes": 25983,
+      "textFile": "80178d3fdb90b305.txt.gz",
+      "textSha256": "7e3a63164ffce13c86ecbdee17ea08cfcd96f3feba7e8997af05a2ae4acdd5c4",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "中华人民共和国消费者权益保护法",
+      "version": "2013-10-25修正，2014-03-15施行",
+      "url": "https://www.samr.gov.cn/zfjcj/tzgg/art/2023/art_615af9ed6bcd4974bf853dd2e02bc663.html",
+      "articles": [
+        "第2条",
+        "第7条",
+        "第49条"
+      ],
+      "questionIds": [
+        10025545
+      ],
+      "accessedAt": "2026-11-11T23:41:00.440555+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.samr.gov.cn/zfjcj/tzgg/art/2023/art_615af9ed6bcd4974bf853dd2e02bc663.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "92b6031946f2d189.html.gz",
+      "sha256": "71d838a54a8caea388e6ab81d853fbe8736bc1db3bfa8afe28ff0591da6b8943",
+      "bytes": 42008,
+      "textFile": "92b6031946f2d189.txt.gz",
+      "textSha256": "698b083160fba0ba85f3700222f5d72fe96e5932f42e495e6aac1b3ea67b4591",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "中华人民共和国铁路法",
+      "version": "2015-04-24修正",
+      "url": "https://source.nra.gov.cn/xxgk/gkml/ztjg/gfzd/fl/202111/t20211111_261214.shtml",
+      "articles": [
+        "第25条",
+        "第26条"
+      ],
+      "questionIds": [
+        10025554
+      ],
+      "accessedAt": "2026-11-11T23:41:00.953579+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://source.nra.gov.cn/xxgk/gkml/ztjg/gfzd/fl/202111/t20211111_261214.shtml",
+      "contentType": "text/html",
+      "rawFile": "49c5c0386466f31d.html.gz",
+      "sha256": "892f873f719cceacbc3608eb357871223c7e71e68b1200bddb91af1ab0855e42",
+      "bytes": 71429,
+      "textFile": "49c5c0386466f31d.txt.gz",
+      "textSha256": "0452d3f0b9649cfa4c98d0bc4070546b91b572767d40b4a9d653911487daa956",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "促进个体工商户发展条例",
+      "url": "https://www.mee.gov.cn/zcwj/gwywj/202210/t20221025_997763.shtml",
+      "version": "国务院令第755号，2022-11-01施行",
+      "articles": [
+        "第2条",
+        "第37条",
+        "第39条"
+      ],
+      "questionIds": [
+        10024055
+      ],
+      "accessedAt": "2026-11-11T23:41:00.955268+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mee.gov.cn/zcwj/gwywj/202210/t20221025_997763.shtml",
+      "contentType": "text/html",
+      "rawFile": "88a5de6d4f195dd2.html.gz",
+      "sha256": "1441d1c2622f0ba7a7653077d95a8ff01abfbca9199bc29b85febfce7dd247c1",
+      "bytes": 52837,
+      "textFile": "88a5de6d4f195dd2.txt.gz",
+      "textSha256": "3e8a26bbd0ee589c34a66ed89a664e668014837b473a1b03382a6e49846b6169",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "最高人民法院关于审理涉及农村土地承包纠纷案件适用法律问题的解释",
+      "url": "https://www.sdcourt.gov.cn/jningweisfy/385991/385992/6794681/index.html",
+      "version": "2020年修正，2021-01-01施行",
+      "articles": [
+        "第6条"
+      ],
+      "questionIds": [
+        10024075,
+        10024077,
+        10024095
+      ],
+      "accessedAt": "2026-11-11T23:41:01.132919+00:00",
+      "captureStatus": "FETCH_FAILED",
+      "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+    },
+    {
+      "law": "农村集体经济组织法",
+      "url": "https://www.sdcourt.gov.cn/lyjnfy/396881/613978/28074109/index.html",
+      "version": "2024-06-28通过，2025-05-01施行",
+      "articles": [
+        "第17条"
+      ],
+      "questionIds": [
+        10024089
+      ],
+      "accessedAt": "2026-11-11T23:41:01.136208+00:00",
+      "captureStatus": "FETCH_FAILED",
+      "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+    },
+    {
+      "law": "人民警察法",
+      "articles": [
+        "第21条"
+      ],
+      "version": "2012年修正",
+      "url": "https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/203770/index.html",
+      "questionIds": [
+        10024134
+      ],
+      "accessedAt": "2026-11-11T23:41:01.215728+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/203770/index.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "768d57873e4d8951.html.gz",
+      "sha256": "7c07d41150e29fcd512e86940ec2d660b6f59f1954744e3794759e5921ca8152",
+      "bytes": 58364,
+      "textFile": "768d57873e4d8951.txt.gz",
+      "textSha256": "f7813f11feb18443f535a57c21090d9d28c052b5c7d8d22ebe4f00b4b01daad0",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "国家赔偿法",
+      "articles": [
+        "第3条"
+      ],
+      "version": "2012年修正",
+      "url": "https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_qtxgfl/202110/t20211029_575987.html",
+      "questionIds": [
+        10024134
+      ],
+      "accessedAt": "2026-11-11T23:41:01.690675+00:00",
+      "captureStatus": "FETCH_FAILED",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "law": "企业名称登记管理规定",
+      "articles": [
+        "第6条"
+      ],
+      "version": "2021年修订，2021-03-01施行",
+      "url": "https://app.www.gov.cn/govdata/gov/202101/19/467140/article.html",
+      "questionIds": [
+        10024165
+      ],
+      "accessedAt": "2026-11-11T23:41:02.146865+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://app.www.gov.cn/govdata/gov/202101/19/467140/article.html",
+      "contentType": "text/html",
+      "rawFile": "29b55f709c655f6a.html.gz",
+      "sha256": "0e92e08251289993484a11f8ad6b8b766af0ed46cbfed38402632ad8d5f029e6",
+      "bytes": 16801,
+      "textFile": "29b55f709c655f6a.txt.gz",
+      "textSha256": "bd50255f5c8ef40ba81421d7993e3215a97a88fdc40b6c10898f5cbd693e9cf6",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "个人信息保护法",
+      "articles": [
+        "第34条"
+      ],
+      "version": "2021-11-01施行",
+      "url": "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm",
+      "questionIds": [
+        10024199
+      ],
+      "accessedAt": "2026-11-11T23:41:02.801960+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "ec116706ee1c8f17.html.gz",
+      "sha256": "50b62bb9868648fe0417d8757a8cff62641eba6d879403f363d771f8c6d3acff",
+      "bytes": 60221,
+      "textFile": "ec116706ee1c8f17.txt.gz",
+      "textSha256": "fd87f2c8401e909147b48af543d92192bc1fcef6d184e7935cfdc81e6fd86631",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "最高人民法院关于适用《中华人民共和国保险法》若干问题的解释（三）",
+      "url": "https://www.court.gov.cn/fabu/xiangqing/16100.html",
+      "version": "2015年发布，2020年修正；第13条事故后转让规则",
+      "articles": [
+        "第13条"
+      ],
+      "questionIds": [
+        10024382
+      ],
+      "accessedAt": "2026-11-11T23:41:02.833929+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.court.gov.cn/fabu/xiangqing/16100.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "e181bdfb07027887.html.gz",
+      "sha256": "ef9c73f65a0e350214e47c33f1f3984d2121a62033417b5ce3ba6002a6b19452",
+      "bytes": 23340,
+      "textFile": "e181bdfb07027887.txt.gz",
+      "textSha256": "fb87272168e2a7283aa2d75d1e3de15c1de8d2c3c63b20e5d2e620673038701d",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "生态环境法典",
+      "articles": [
+        "第147条",
+        "第1242条"
+      ],
+      "version": "2026-08-15施行",
+      "url": "https://www.mee.gov.cn/ywgz/fgbz/fl/202603/t20260313_1146496.shtml",
+      "questionIds": [
+        10024400,
+        10024401
+      ],
+      "accessedAt": "2026-11-11T23:41:03.730997+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mee.gov.cn/ywgz/fgbz/fl/202603/t20260313_1146496.shtml",
+      "contentType": "text/html",
+      "rawFile": "fabad01926bb25e5.html.gz",
+      "sha256": "42d1e7d5c155066933069569f7e1bb03ac9fe7aab895554f470156b1cd95f7a5",
+      "bytes": 598407,
+      "textFile": "fabad01926bb25e5.txt.gz",
+      "textSha256": "6f99e0eb995c136a14d1337ef7e9769758dcbc07604d3f310df5ef49402ea8ea",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "最高人民法院关于审理生态环境民事公益诉讼案件适用法律若干问题的解释",
+      "articles": [
+        "第1条",
+        "第2条",
+        "第3条",
+        "第4条",
+        "第5条",
+        "第8条"
+      ],
+      "version": "2026年第二次修正，2026-08-15施行",
+      "url": "https://www.court.gov.cn/fabu/xiangqing/508041.html",
+      "questionIds": [
+        10024400,
+        10024401
+      ],
+      "accessedAt": "2026-11-11T23:41:03.866498+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.court.gov.cn/fabu/xiangqing/508041.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "2e8ace6589dfa051.html.gz",
+      "sha256": "d13653be1369dbeb5e2d26f1cf304731eba91527485c49435c94406c50d3848b",
+      "bytes": 145301,
+      "textFile": "2e8ace6589dfa051.txt.gz",
+      "textSha256": "900901c33e82e01afeb47b3ce94a87d1f5f2cb18c8cba32793bd669ee27984d3",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "最高人民法院关于审理消费民事公益诉讼案件适用法律若干问题的解释",
+      "articles": [
+        "第9条",
+        "第16条"
+      ],
+      "version": "2020年修正，2021-01-01施行；民诉法交叉条号按现行法对应适用",
+      "url": "https://www.court.gov.cn/fabu/xiangqing/282651.html",
+      "questionIds": [
+        10024405
+      ],
+      "accessedAt": "2026-11-11T23:41:04.223275+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.court.gov.cn/fabu/xiangqing/282651.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "3651d3ad4e02071c.html.gz",
+      "sha256": "4b08a299fdd6d1a0e00e3ce87d5e11ce4f0e43750297db53d684272300dfbd74",
+      "bytes": 338451,
+      "textFile": "3651d3ad4e02071c.txt.gz",
+      "textSha256": "724a770dbe79102896cc62415222f78fabd6b85f1b9f61b0f4e777e845793f56",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "关于确立劳动关系有关事项的通知",
+      "articles": [
+        "第一项",
+        "第二项"
+      ],
+      "version": "劳社部发〔2005〕12号，2005-05-25发布",
+      "url": "https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/gfxwj/ldgx/201407/t20140717_136260.html",
+      "questionIds": [
+        10024436,
+        10024437,
+        10024441,
+        10024442
+      ],
+      "accessedAt": "2026-11-11T23:41:04.339383+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/gfxwj/ldgx/201407/t20140717_136260.html",
+      "contentType": "text/html",
+      "rawFile": "6b8c3cf4d671a7d9.html.gz",
+      "sha256": "3348e9bf4c8572ce8799cf4c0a4bad37bcc5397e67dd46b9a415db33933c21a1",
+      "bytes": 989,
+      "textFile": "6b8c3cf4d671a7d9.txt.gz",
+      "textSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "最高人民法院关于审理劳动争议案件适用法律问题的解释（二）",
+      "articles": [
+        "第六条",
+        "第七条",
+        "第九条"
+      ],
+      "version": "法释〔2025〕12号，2025-09-01施行",
+      "url": "https://www.court.gov.cn/fabu/xiangqing/472691.html",
+      "questionIds": [
+        10024439,
+        10024472
+      ],
+      "accessedAt": "2026-11-11T23:41:04.954864+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.court.gov.cn/fabu/xiangqing/472691.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "79fa29f8b6ebdc0f.html.gz",
+      "sha256": "d26d62a2509a5e40720b14aab779392a9b168148801bf370e815b2a5a63769f3",
+      "bytes": 25505,
+      "textFile": "79fa29f8b6ebdc0f.txt.gz",
+      "textSha256": "a203677d239b4d83a9bb224f4ba63983d4c3a5be0d882cc563a12c9fc8affb70",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "最高人民法院关于审理劳动争议案件适用法律问题的解释（一）",
+      "articles": [
+        "第二条第四项"
+      ],
+      "version": "法释〔2020〕26号；本条2026-11-12现行",
+      "url": "https://www.court.gov.cn/zixun/xiangqing/282121.html",
+      "questionIds": [
+        10024449
+      ],
+      "accessedAt": "2026-11-11T23:41:05.162692+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/282121.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "5ed237217d8a942f.html.gz",
+      "sha256": "c6fc220940b232e365a4abd5458769e5dd38a40445b5057cf54724d7e6abf420",
+      "bytes": 35588,
+      "textFile": "5ed237217d8a942f.txt.gz",
+      "textSha256": "389448922f96507ec727364ddf5775e0bcecf92d1e82129e015b2d7b1a983a88",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "劳动合同法实施条例",
+      "articles": [
+        "第十一条"
+      ],
+      "version": "国务院令第535号，2008-09-18施行",
+      "url": "https://www.cqtn.gov.cn/bm/qrlsbj/zwgk_25192/zfxxgkml_bm/zcwj_bm/qtwj_bm/202103/t20210301_8950240.html",
+      "questionIds": [
+        10024463
+      ],
+      "accessedAt": "2026-11-11T23:41:05.279791+00:00",
+      "captureStatus": "FETCH_FAILED",
+      "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+    },
+    {
+      "law": "最高人民法院关于审理非法行医刑事案件具体应用法律若干问题的解释",
+      "url": "https://www.court.gov.cn/fabu/xiangqing/33031.html",
+      "version": "2016年修正，2016-12-20施行",
+      "articles": [
+        "第一条",
+        "第二条"
+      ],
+      "questionIds": [
+        10024508
+      ],
+      "accessedAt": "2026-11-11T23:41:06.854178+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.court.gov.cn/fabu/xiangqing/33031.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "1ef2e7f65dca32a8.html.gz",
+      "sha256": "bcd599c65fa8cf5a6ecfbb233c25b865fa2d2fada29d087099cd8e79ad8db0d8",
+      "bytes": 14239,
+      "textFile": "1ef2e7f65dca32a8.txt.gz",
+      "textSha256": "cfd0f8cdde229b7b0fbd403e9353ba296f9b777586c34c2bd911cd54a871355b",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "医师法",
+      "articles": [
+        "第十四条",
+        "第五十七条"
+      ],
+      "version": "2021-08-20通过，2022-03-01施行",
+      "url": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992842.html",
+      "questionIds": [
+        10024508
+      ],
+      "accessedAt": "2026-11-11T23:41:08.248233+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992842.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "6583bfcffb8f0ea0.html.gz",
+      "sha256": "31f7d68c23e3ec8303422282c2ebb136b7d7a682ae076fc89c0581f4fcd5d479",
+      "bytes": 48990,
+      "textFile": "6583bfcffb8f0ea0.txt.gz",
+      "textSha256": "d0fd7c72ddbb6b46c0f5f77c41e0dfa24b3b41ad87ea28cb50f36586c09457c7",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "药品管理法",
+      "url": "https://yjj.sh.gov.cn/gjfl/20220228/439d5f9f106141ffa23efef6a782f322.html",
+      "version": "2019年修订，2019-12-01施行",
+      "articles": [
+        "第九十八条"
+      ],
+      "questionIds": [
+        10024510
+      ],
+      "accessedAt": "2026-11-11T23:41:08.270391+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://yjj.sh.gov.cn/gjfl/20220228/439d5f9f106141ffa23efef6a782f322.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "61c0578d130c62d5.html.gz",
+      "sha256": "b630ea06d9f3fc30b6bbb376e2712b65acc3076d40d99c6b263506c395854690",
+      "bytes": 118590,
+      "textFile": "61c0578d130c62d5.txt.gz",
+      "textSha256": "dcfab0da0847bfb2d36c5d454d5ad61e2d1348f686fe0b3607ae4c1c5785176b",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "最高人民法院关于审理医疗损害责任纠纷案件适用法律若干问题的解释",
+      "url": "https://www.court.gov.cn/zixun/xiangqing/282621.html",
+      "version": "2020年修正，2021-01-01施行",
+      "articles": [
+        "第四条",
+        "第十八条"
+      ],
+      "questionIds": [
+        10024512,
+        10024518,
+        10024521,
+        10024526,
+        10024528
+      ],
+      "accessedAt": "2026-11-11T23:41:08.943209+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.court.gov.cn/zixun/xiangqing/282621.html",
+      "contentType": "text/html; charset=utf-8",
+      "rawFile": "2019f41c65d158dc.html.gz",
+      "sha256": "5b29f0fa9f83cc17dedfe48001a669dd898939cd4295a0eb4242f0c16eabfe0f",
+      "bytes": 327256,
+      "textFile": "2019f41c65d158dc.txt.gz",
+      "textSha256": "4c98a568f2418dff5f5d73a16c9c47fe636fa76d0c868e81248215a31613a6a0",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "财政部 国家税务总局关于合伙企业合伙人所得税问题的通知",
+      "articles": [
+        "第二项",
+        "第三项",
+        "第四项"
+      ],
+      "version": "财税〔2008〕159号，自2008-01-01执行",
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203416/content.html",
+      "questionIds": [
+        10024543
+      ],
+      "accessedAt": "2026-11-11T23:41:09.689277+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5203416/content.html",
+      "contentType": "text/html",
+      "rawFile": "e4a82961fe4428a9.html.gz",
+      "sha256": "efd8a507f1aa53ab1059c95399730bc01cafc08c0b6f0a5e83fa2dd1c97dbc3f",
+      "bytes": 38417,
+      "textFile": "e4a82961fe4428a9.txt.gz",
+      "textSha256": "dae605951e2749bead612ff51196767c2a4df3ef92e7b47e7912a3a636600d6b",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "增值税法",
+      "url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/zzs/202412/t474694.html",
+      "version": "2024-12-25通过，2026-01-01施行",
+      "articles": [
+        "第三条"
+      ],
+      "questionIds": [
+        10024543
+      ],
+      "accessedAt": "2026-11-11T23:41:10.877286+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/zzs/202412/t474694.html",
+      "contentType": "text/html",
+      "rawFile": "bb8c8c9025ccfe98.html.gz",
+      "sha256": "19413a31b8de5bf55b0733adb4cd8a14b78e490845a6c6779119f810b899de1b",
+      "bytes": 44670,
+      "textFile": "bb8c8c9025ccfe98.txt.gz",
+      "textSha256": "a8b120c2d4691e42d6c94bd3ba53b79af8c49a47c228d7d858b950d8044ed0cc",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "增值税法实施条例",
+      "url": "https://shanghai.chinatax.gov.cn/zzzb/zcwj/202601/t478908.html",
+      "version": "国务院令第826号，2026-01-01施行",
+      "articles": [
+        "第三条"
+      ],
+      "questionIds": [
+        10024543
+      ],
+      "accessedAt": "2026-11-11T23:41:11.365721+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://shanghai.chinatax.gov.cn/zzzb/zcwj/202601/t478908.html",
+      "contentType": "text/html",
+      "rawFile": "d560887b85d5bbdb.html.gz",
+      "sha256": "85ddce899e42047e96b4d38090db51023be8d1de399aa14b945145621f4093b8",
+      "bytes": 50923,
+      "textFile": "d560887b85d5bbdb.txt.gz",
+      "textSha256": "620a59f4e0c2711b31ecf22aec9e4f10f13dabe040c51ed1e72fcfe58e8e2e51",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "知识产权政务服务事项办事指南及商标局申请材料答复",
+      "url": "https://www.cnipa.gov.cn/jact/front/mailpubdetail.do?sysid=13&transactId=489764",
+      "version": "2025-03-24商标局答复；2024年办事指南第二版",
+      "articles": [
+        "国内自然人申请材料答复"
+      ],
+      "questionIds": [
+        10024548
+      ],
+      "accessedAt": "2026-11-11T23:41:11.516208+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnipa.gov.cn/jact/front/mailpubdetail.do?sysid=13&transactId=489764",
+      "contentType": "text/html;charset=UTF-8",
+      "rawFile": "c6263793e4172350.html.gz",
+      "sha256": "b28a500d16e12d45f7c2397c4be07b14befcbf1f89425b115c1f22226df3a289",
+      "bytes": 14370,
+      "textFile": "c6263793e4172350.txt.gz",
+      "textSha256": "18ce86ed503c1368b1be381e9a26ce97431b1a4cca189051c12bb88911fb1e9b",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "知识产权政务服务事项办事指南（第二版）",
+      "articles": [
+        "第121页：境内自然人申请人身份证明文件"
+      ],
+      "version": "2024年发布",
+      "url": "https://www.cnipa.gov.cn/module/download/downfile.jsp?classid=0&filename=90e629cd05114970bb26ce028198002c.pdf&showname=%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%94%BF%E5%8A%A1%E6%9C%8D%E5%8A%A1%E4%BA%8B%E9%A1%B9%E5%8A%9E%E4%BA%8B%E6%8C%87%E5%8D%97%EF%BC%88%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%89.pdf",
+      "questionIds": [
+        10024548
+      ],
+      "accessedAt": "2026-11-11T23:41:12.015902+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnipa.gov.cn/module/download/downfile.jsp?classid=0&filename=90e629cd05114970bb26ce028198002c.pdf&showname=%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%94%BF%E5%8A%A1%E6%9C%8D%E5%8A%A1%E4%BA%8B%E9%A1%B9%E5%8A%9E%E4%BA%8B%E6%8C%87%E5%8D%97%EF%BC%88%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%89.pdf",
+      "contentType": "application/pdf;charset=UTF-8",
+      "rawFile": "d2cb3985022fad16.pdf.gz",
+      "sha256": "73ca749975228efcd695f00f2b4dc15051e607bfb96f6f098849a34c659f71ec",
+      "bytes": 1316945,
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    },
+    {
+      "law": "商标一般违法判断标准",
+      "articles": [
+        "第五条",
+        "第八条"
+      ],
+      "version": "国知发保字〔2021〕34号，2022-01-01施行",
+      "url": "https://www.cnipa.gov.cn/art/2021/12/16/art_527_172227.html",
+      "questionIds": [
+        10024560
+      ],
+      "accessedAt": "2026-11-11T23:41:12.532814+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnipa.gov.cn/art/2021/12/16/art_527_172227.html",
+      "contentType": "text/html; charset=UTF-8",
+      "rawFile": "cb87f668ac97971b.html.gz",
+      "sha256": "10f6b41884920190065b90b7c57351ffff6c8c5172f6115dddff21438e4f9632",
+      "bytes": 6958,
+      "textFile": "cb87f668ac97971b.txt.gz",
+      "textSha256": "8331f030158a845d94b9765ec9462ef8910c97e6874048117d08077cede8d7ef",
+      "captureStatus": "CAPTURED_NOT_AUTOMATICALLY_VERIFIED"
+    }
+  ]
+}

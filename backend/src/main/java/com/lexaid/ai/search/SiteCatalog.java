@@ -1,6 +1,8 @@
 package com.lexaid.ai.search;
 
 import com.lexaid.exam.QuestionSubjects;
+import com.lexaid.exam.QuestionQuality;
+import com.lexaid.exam.AnswerStatus;
 import com.lexaid.relation.RelatedItem;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -32,7 +34,7 @@ class SiteCatalog {
             String body = db.queryForObject("""
                     SELECT CONCAT('法条 ',(SELECT COUNT(*) FROM legal_provision),' 条，案例 ',
                       (SELECT COUNT(*) FROM case_info),' 条，学者观点及论文 ',
-                      (SELECT COUNT(*) FROM scholar_viewpoint),' 条，题库 ',(SELECT COUNT(*) FROM question),' 道。')
+                      (SELECT COUNT(*) FROM scholar_viewpoint),' 条，原始题库（含待复核） ',(SELECT COUNT(*) FROM question),' 道。')
                     """, String.class);
             return item(id, "站内资料概况", body + " 可检索公开知识库、可见的交流天地帖子和评论，以及本人笔记、收藏、考试、好友和学习记录。");
         }
@@ -44,20 +46,21 @@ class SiteCatalog {
                     COUNT(CASE WHEN summary_kind IN ('author_abstract','metadata_only') AND LENGTH(content)>0 THEN 1 END),' 篇。')
                 FROM scholar_viewpoint
                 """, String.class));
-        if (id == 5) return grouped(id, "题库与法学科目",
+        if (id == 5) return grouped(id, "可练题库与法学科目（已排除待复核题）",
                 "SELECT CONCAT_WS(' / '," + QuestionSubjects.DISCIPLINE + "," + QuestionSubjects.SUBJECT + "), COUNT(*)"
-                        + QuestionSubjects.FROM_QUESTION + " GROUP BY 1 ORDER BY 1");
+                        + QuestionSubjects.FROM_QUESTION + " WHERE " + QuestionQuality.ELIGIBLE + " GROUP BY 1 ORDER BY 1");
         if (id == 6) return item(id, "我的学习与交流概况", db.queryForObject("""
                 SELECT CONCAT('笔记 ',(SELECT COUNT(*) FROM note WHERE user_id=?),' 条，收藏 ',
                     (SELECT COUNT(*) FROM favorite WHERE user_id=?),' 条，收藏分区 ',
                     (SELECT COUNT(*) FROM favorite_folder WHERE user_id=?),' 个，已交卷 ',
                     (SELECT COUNT(*) FROM exam_session WHERE user_id=? AND end_time IS NOT NULL),' 份，尚未交卷 ',
                     (SELECT COUNT(*) FROM exam_session WHERE user_id=? AND end_time IS NULL),' 份，错题 ',
-                    (SELECT COUNT(*) FROM answer_record a WHERE a.user_id=? AND a.is_correct=0 AND NOT EXISTS
-                        (SELECT 1 FROM answer_record n WHERE n.user_id=a.user_id AND n.question_id=a.question_id AND n.id>a.id)),
+                    (SELECT COUNT(*) FROM answer_record a JOIN question q ON q.id=a.question_id WHERE a.user_id=? AND a.is_correct=0 AND %s AND NOT EXISTS
+                        (SELECT 1 FROM answer_record n WHERE n.user_id=a.user_id AND n.question_id=a.question_id AND n.id>a.id AND %s)),
                     ' 道，自己发表的帖子 ',(SELECT COUNT(*) FROM community_post WHERE author_id=?),' 条，已通过的好友 ',
                     (SELECT COUNT(*) FROM community_friend_pair WHERE (user_low=? OR user_high=?) AND state='ACCEPTED'),' 人。')
-                """, String.class, viewer, viewer, viewer, viewer, viewer, viewer, viewer, viewer, viewer));
+                """.formatted(AnswerStatus.ANSWERED.replace("ar.","a."), AnswerStatus.ANSWERED.replace("ar.","n.")),
+                String.class, viewer, viewer, viewer, viewer, viewer, viewer, viewer, viewer, viewer));
         return null;
     }
 

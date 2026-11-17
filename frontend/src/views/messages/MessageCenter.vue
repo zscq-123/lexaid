@@ -439,6 +439,7 @@ const hasMore = ref(false)
 const friend = ref(true)
 const chatError = ref('')
 const draft = ref('')
+const drafts = new Map()
 const sending = ref(false)
 const scrollArea = ref(null)
 const composerOpen = ref(false)
@@ -504,6 +505,7 @@ const IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png']
 const FILE_EXTENSIONS = ['pdf', 'docx', 'pptx', 'xlsx', 'txt', 'md']
 const FILE_ACCEPT = '.pdf,.docx,.pptx,.xlsx,.txt,.md'
 const IMAGE_MAX_BYTES = 4 * 1024 * 1024
+const FILE_MAX_BYTES = 100 * 1024 * 1024
 
 let conversationRequest = null
 let historyRequest = null
@@ -584,6 +586,10 @@ function displayName(item) {
 async function selectPeer(peer, { updateUrl = true } = {}) {
   if (!peer?.id) return
   const same = activePeer.value?.id === peer.id
+  if (!same) {
+    rememberDraft(activePeer.value?.id)
+    draft.value = drafts.get(peer.id) || ''
+  }
   activePeer.value = peer
   if (updateUrl && Number(route.query.user) !== peer.id) {
     await router.replace({ path: '/messages', query: { user: String(peer.id) } })
@@ -605,6 +611,17 @@ async function selectPeer(peer, { updateUrl = true } = {}) {
   chatError.value = ''
   await loadHistory(peer.id, true)
   void markRead(peer.id)
+}
+
+function rememberDraft(peerId) {
+  if (!peerId) return
+  if (draft.value) drafts.set(peerId, draft.value)
+  else drafts.delete(peerId)
+}
+
+function finishSentDraft(peerId, content) {
+  drafts.delete(peerId)
+  if (activePeer.value?.id === peerId && draft.value.trim() === content) draft.value = ''
 }
 
 async function loadHistory(peerId, initial = false) {
@@ -762,33 +779,42 @@ function pickAttachment(event, kind) {
       ElMessage.warning('图片不能超过 4 MB')
       return
     }
-  } else if (!FILE_EXTENSIONS.includes(extension)) {
-    ElMessage.warning('仅支持 PDF、DOCX、PPTX、XLSX、TXT 或 MD 文件')
-    return
+  } else {
+    if (!FILE_EXTENSIONS.includes(extension)) {
+      ElMessage.warning('仅支持 PDF、DOCX、PPTX、XLSX、TXT 或 MD 文件')
+      return
+    }
+    if (file.size > FILE_MAX_BYTES) {
+      ElMessage.warning('文件消息不能超过 100 MB')
+      return
+    }
   }
   const peerId = activePeer.value.id
+  const content = draft.value.trim()
   attachmentSending.value = true
   attachmentProgress.value = 0
   chatError.value = ''
   sendAttachmentMessage({
     recipientId: peerId,
-    content: draft.value.trim(),
+    content,
     kind,
     file,
     quoteId: quoting.value?.id
   }, progress => {
     if (progress.total) attachmentProgress.value = Math.min(100, Math.round(progress.loaded * 100 / progress.total))
   }).then(async message => {
-    draft.value = ''
-    quoting.value = null
+    finishSentDraft(peerId, content)
+    if (activePeer.value?.id === peerId) quoting.value = null
     updateConversation(message, false)
     if (activePeer.value?.id === peerId) {
       appendMessage(message)
       await scrollToBottom()
     }
   }).catch(error => {
-    if (error.response?.status === 403) friend.value = false
-    chatError.value = error.response?.data?.message || '附件发送失败，请稍后重试。'
+    if (activePeer.value?.id === peerId) {
+      if (error.response?.status === 403) friend.value = false
+      chatError.value = error.response?.data?.message || '附件发送失败，请稍后重试。'
+    }
   }).finally(() => {
     attachmentSending.value = false
     attachmentProgress.value = 0
@@ -933,6 +959,7 @@ async function sendVoice() {
   const clip = voiceClip.value
   if (!clip || !activePeer.value || !friend.value || attachmentSending.value) return
   const peerId = activePeer.value.id
+  const content = draft.value.trim()
   attachmentSending.value = true
   attachmentProgress.value = 0
   chatError.value = ''
@@ -940,7 +967,7 @@ async function sendVoice() {
     const file = new File([clip.blob], 'voice.' + voiceExtension(clip.mime), { type: clip.mime })
     const message = await sendAttachmentMessage({
       recipientId: peerId,
-      content: draft.value.trim(),
+      content,
       kind: 'VOICE',
       file,
       duration: clip.seconds,
@@ -948,8 +975,8 @@ async function sendVoice() {
     }, progress => {
       if (progress.total) attachmentProgress.value = Math.min(100, Math.round(progress.loaded * 100 / progress.total))
     })
-    draft.value = ''
-    quoting.value = null
+    finishSentDraft(peerId, content)
+    if (activePeer.value?.id === peerId) quoting.value = null
     clearVoice()
     updateConversation(message, false)
     if (activePeer.value?.id === peerId) {
@@ -957,8 +984,10 @@ async function sendVoice() {
       await scrollToBottom()
     }
   } catch (error) {
-    if (error.response?.status === 403) friend.value = false
-    chatError.value = error.response?.data?.message || '语音发送失败，请稍后重试。'
+    if (activePeer.value?.id === peerId) {
+      if (error.response?.status === 403) friend.value = false
+      chatError.value = error.response?.data?.message || '语音发送失败，请稍后重试。'
+    }
   } finally {
     attachmentSending.value = false
     attachmentProgress.value = 0
@@ -1018,16 +1047,18 @@ async function send() {
   chatError.value = ''
   try {
     const message = await sendDirectMessage(peerId, content, quoting.value?.id)
-    draft.value = ''
-    quoting.value = null
+    finishSentDraft(peerId, content)
+    if (activePeer.value?.id === peerId) quoting.value = null
     updateConversation(message, false)
     if (activePeer.value?.id === peerId) {
       appendMessage(message)
       await scrollToBottom()
     }
   } catch (error) {
-    if (error.response?.status === 403) friend.value = false
-    chatError.value = error.response?.data?.message || '发送失败，请稍后重试。'
+    if (activePeer.value?.id === peerId) {
+      if (error.response?.status === 403) friend.value = false
+      chatError.value = error.response?.data?.message || '发送失败，请稍后重试。'
+    }
   } finally {
     sending.value = false
   }
@@ -1055,7 +1086,9 @@ function onEvent(event) {
   if (event.type === 'CLEAR') {
     const peerId = Number(event.peerId)
     conversations.value = conversations.value.filter(item => item.peerId !== peerId)
+    drafts.delete(peerId)
     if (activePeer.value?.id === peerId) {
+      draft.value = ''
       messages.value = []
       hasMore.value = false
       chatError.value = ''
@@ -1467,6 +1500,8 @@ async function clearChatHistory() {
     hasMore.value = false
     chatError.value = ''
     conversations.value = conversations.value.filter(item => item.peerId !== peerId)
+    drafts.delete(peerId)
+    draft.value = ''
     infoOpen.value = false
     searchOpen.value = false
     selectionMode.value = false
@@ -1511,6 +1546,7 @@ function goToContacts() {
 }
 
 function closeChat(updateUrl = true) {
+  rememberDraft(activePeer.value?.id)
   infoOpen.value = false
   searchOpen.value = false
   emojiOpen.value = false
@@ -1526,6 +1562,7 @@ function closeChat(updateUrl = true) {
   messageLoading.value = false
   olderLoading.value = false
   activePeer.value = null
+  draft.value = ''
   messages.value = []
   hasMore.value = false
   chatError.value = ''

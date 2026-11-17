@@ -1,0 +1,93 @@
+{
+  "quality": [
+    {
+      "reason": "TASK_INSTRUCTION",
+      "count": 11391
+    },
+    {
+      "reason": "DATASET_REVIEW",
+      "count": 11160
+    },
+    {
+      "reason": "UNCLASSIFIED",
+      "count": 3029
+    },
+    {
+      "reason": "ELIGIBLE",
+      "count": 30
+    },
+    {
+      "reason": "MISSING_CONTENT",
+      "count": 15
+    },
+    {
+      "reason": "INVALID_CHOICES",
+      "count": 3
+    }
+  ],
+  "stats": {
+    "totalStudyMinutes": 0,
+    "totalAnswer": 4,
+    "totalCorrect": 2,
+    "accuracy": 50,
+    "streakDays": 1,
+    "distinctQuestions": 3,
+    "gradedAnswer": 4,
+    "skippedAnswer": 3,
+    "repeatedAnswer": 1,
+    "totalIncorrect": 2,
+    "ungradedAnswer": 0
+  },
+  "retrieval": [
+    {
+      "query": "查询《刑法》第20条",
+      "returned": 2,
+      "relevantInFirstFive": 2,
+      "precisionAtReturnedFive": 1
+    },
+    {
+      "query": "刑法第287条之二",
+      "returned": 1,
+      "relevantInFirstFive": 1,
+      "precisionAtReturnedFive": 1
+    },
+    {
+      "query": "查一下刑法第20条",
+      "returned": 2,
+      "relevantInFirstFive": 2,
+      "precisionAtReturnedFive": 1
+    },
+    {
+      "query": "帮我查一下现行刑法第20条",
+      "returned": 2,
+      "relevantInFirstFive": 2,
+      "precisionAtReturnedFive": 1
+    },
+    {
+      "query": "《民法典》第577条",
+      "returned": 2,
+      "relevantInFirstFive": 2,
+      "precisionAtReturnedFive": 1
+    },
+    {
+      "query": "《民法典》第1198条",
+      "returned": 2,
+      "relevantInFirstFive": 2,
+      "precisionAtReturnedFive": 1
+    },
+    {
+      "query": "《行政处罚法》第33条",
+      "returned": 2,
+      "relevantInFirstFive": 2,
+      "precisionAtReturnedFive": 1
+    },
+    {
+      "query": "《行政诉讼法》第2条",
+      "returned": 2,
+      "relevantInFirstFive": 2,
+      "precisionAtReturnedFive": 1
+    }
+  ],
+  "versions": 2,
+  "browserErrors": []
+}

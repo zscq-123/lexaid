@@ -84,7 +84,7 @@ class PersonalSiteSearchTest {
                 String topic = "合同法测试" + unique;
                 String book = "第三编 合同 " + unique;
                 long user = insert(jdbc, "INSERT INTO `user` (username,password) VALUES (?,?)", "subjects"+unique, "fixture");
-                long question = insert(jdbc, "INSERT INTO question(type,stem,answer,category) VALUES ('SINGLE','查阅试题','secret','测试任务标签')");
+                long question = insert(jdbc, "INSERT INTO question(type,stem,options,answer,analysis,category) VALUES ('SINGLE','查阅试题','[{\"key\":\"A\",\"text\":\"一\"},{\"key\":\"B\",\"text\":\"二\"}]','[\"A\"]','secret教学解析','测试任务标签')");
                 jdbc.update("INSERT INTO question_legal_subject(question_id,discipline,subject) VALUES (?,'民商法',?)", question, topic);
                 jdbc.update("INSERT INTO question_code_book(question_id,code_name,book_name) VALUES (?,'中华人民共和国民法典',?)", question, book);
                 long exam = insert(jdbc, "INSERT INTO exam_session(user_id,config,end_time,total) VALUES (?,JSON_OBJECT('codeName','中华人民共和国民法典','bookName',?),NOW(),1)", user, book);
@@ -114,6 +114,125 @@ class PersonalSiteSearchTest {
     }
 
     private record Source(String type,long id) {}
+
+    @Test
+    @EnabledIfEnvironmentVariable(named = "LEXAID_SEARCH_TEST_DB", matches = ".+")
+    void quarantineHidesTeachingMaterialFromHistoryAndSearchMatches() throws Exception {
+        try (var conn = DriverManager.getConnection(System.getenv("LEXAID_SEARCH_TEST_DB"),
+                System.getenv("LEXAID_SEARCH_TEST_USER"), System.getenv("LEXAID_SEARCH_TEST_PASSWORD"))) {
+            conn.setAutoCommit(false);
+            try {
+                var source = new SingleConnectionDataSource(conn, true);
+                var jdbc = new JdbcTemplate(source);
+                var search = new PersonalSiteSearch(new NamedParameterJdbcTemplate(source), mock(StatsService.class), new FriendService(jdbc));
+                String unique = UUID.randomUUID().toString().substring(0, 8);
+                String reference = "待隐藏参考" + unique;
+                String analysis = "待隐藏解析" + unique;
+                String feedback = "待隐藏反馈" + unique;
+                String ownAnswer = "我的历史作答" + unique;
+                long user = insert(jdbc, "INSERT INTO `user`(username,password) VALUES (?,?)", "review" + unique, "fixture");
+                long question = insert(jdbc, "INSERT INTO question(type,stem,answer,analysis,category) VALUES ('SHORT',?,?,?,'民法')",
+                        "审查测试题" + unique, reference, analysis);
+                long exam = insert(jdbc, "INSERT INTO exam_session(user_id,config,end_time,total,score) VALUES (?,JSON_OBJECT(),NOW(),1,3)", user);
+                insert(jdbc, "INSERT INTO answer_record(user_id,session_id,question_id,user_answer,is_correct,grade_points,grading_feedback) VALUES (?,?,?,?,0,3,?)",
+                        user, exam, question, ownAnswer, feedback);
+                for (var ref : List.of(new Source("WRONG", question), new Source("EXAM", exam))) {
+                    assertThat(search.find(user, ref.type, ref.id, List.of()).summary()).contains(reference, analysis, feedback, ownAnswer);
+                    for (String hidden : List.of(reference, analysis, feedback)) {
+                        assertThat(search.search(user, List.of(hidden), ref.type, 10)).extracting("id").contains(ref.id);
+                    }
+                }
+                jdbc.update("UPDATE question SET analysis=? WHERE id=?", "请只输出任务结果 " + analysis, question);
+                for (var ref : List.of(new Source("WRONG", question), new Source("EXAM", exam))) {
+                    assertThat(search.find(user, ref.type, ref.id, List.of()).summary())
+                            .contains(ownAnswer, "题目已更新或正在复核", "不能作为当前答案依据", "历史得分", "3")
+                            .doesNotContain(reference, analysis, feedback, "请只输出");
+                    for (String hidden : List.of(reference, analysis, feedback)) {
+                        assertThat(search.search(user, List.of(hidden), ref.type, 10)).isEmpty();
+                    }
+                    assertThat(search.search(user, List.of(ownAnswer), ref.type, 10)).extracting("id").contains(ref.id);
+                }
+            } finally {
+                conn.rollback();
+            }
+        }
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named = "LEXAID_SEARCH_TEST_DB", matches = ".+")
+    void referenceVisibilityDependsOnEachAttemptRelativeToTheQuestionRevision() throws Exception {
+        try (var conn = DriverManager.getConnection(System.getenv("LEXAID_SEARCH_TEST_DB"),
+                System.getenv("LEXAID_SEARCH_TEST_USER"), System.getenv("LEXAID_SEARCH_TEST_PASSWORD"))) {
+            conn.setAutoCommit(false);
+            try {
+                var source = new SingleConnectionDataSource(conn, true);
+                var jdbc = new JdbcTemplate(source);
+                var search = new PersonalSiteSearch(new NamedParameterJdbcTemplate(source), mock(StatsService.class), new FriendService(jdbc));
+                String unique = UUID.randomUUID().toString().substring(0, 8);
+                String revisedAnswer = "修订后参考" + unique;
+                String revisedAnalysis = "修订后解析" + unique;
+                String oldFeedback = "旧评分反馈" + unique;
+                String newFeedback = "新评分反馈" + unique;
+                long user = insert(jdbc, "INSERT INTO `user`(username,password) VALUES (?,?)", "revision" + unique, "fixture");
+                long question = insert(jdbc, "INSERT INTO question(type,stem,answer,analysis,category,updated_at) VALUES ('SHORT',?,'原答案','原解析','民法','2026-01-01 00:00:00')", "修订测试" + unique);
+                long oldExam = insert(jdbc, "INSERT INTO exam_session(user_id,config,end_time,total) VALUES (?,JSON_OBJECT(),NOW(),1)", user);
+                insert(jdbc, "INSERT INTO answer_record(user_id,session_id,question_id,user_answer,is_correct,grade_points,grading_feedback,answered_at) VALUES (?,?,?,'修订前的个人答案',0,3,?,'2026-01-01 01:00:00')",
+                        user, oldExam, question, oldFeedback);
+                assertThat(search.find(user, "EXAM", oldExam, List.of()).summary()).contains("原答案", "原解析", oldFeedback);
+
+                jdbc.update("UPDATE question SET answer=?,analysis=?,updated_at='2026-01-02 00:00:00' WHERE id=?", revisedAnswer, revisedAnalysis, question);
+                for (var ref : List.of(new Source("WRONG", question), new Source("EXAM", oldExam))) {
+                    assertThat(search.find(user, ref.type, ref.id, List.of()).summary())
+                            .contains("修订前的个人答案", "题目已更新或正在复核", "不能作为当前答案依据", "历史得分", "3")
+                            .doesNotContain(revisedAnswer, revisedAnalysis, oldFeedback);
+                }
+
+                long newExam = insert(jdbc, "INSERT INTO exam_session(user_id,config,end_time,total) VALUES (?,JSON_OBJECT(),NOW(),1)", user);
+                insert(jdbc, "INSERT INTO answer_record(user_id,session_id,question_id,user_answer,is_correct,grade_points,grading_feedback,answered_at) VALUES (?,?,?,'修订后的个人答案',0,4,?,'2026-01-03 00:00:00')",
+                        user, newExam, question, newFeedback);
+                assertThat(search.find(user, "EXAM", oldExam, List.of()).summary())
+                        .doesNotContain(revisedAnswer, revisedAnalysis, oldFeedback);
+                for (var ref : List.of(new Source("WRONG", question), new Source("EXAM", newExam))) {
+                    assertThat(search.find(user, ref.type, ref.id, List.of()).summary())
+                            .contains(revisedAnswer, revisedAnalysis, newFeedback, "修订后的个人答案")
+                            .doesNotContain("题目已更新或正在复核", oldFeedback);
+                }
+                for (String term : List.of(revisedAnswer, revisedAnalysis, newFeedback)) {
+                    assertThat(search.search(user, List.of(term), "EXAM", 10)).extracting("id").containsExactly(newExam);
+                }
+                assertThat(search.search(user, List.of(oldFeedback), "EXAM", 10)).isEmpty();
+            } finally {
+                conn.rollback();
+            }
+        }
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named = "LEXAID_SEARCH_TEST_DB", matches = ".+")
+    void examSummaryRecomputesScoresWithoutHistoricalSkippedAnswers() throws Exception {
+        try (var conn = DriverManager.getConnection(System.getenv("LEXAID_SEARCH_TEST_DB"),
+                System.getenv("LEXAID_SEARCH_TEST_USER"), System.getenv("LEXAID_SEARCH_TEST_PASSWORD"))) {
+            conn.setAutoCommit(false);
+            try {
+                var source = new SingleConnectionDataSource(conn, true);
+                var jdbc = new JdbcTemplate(source);
+                var search = new PersonalSiteSearch(new NamedParameterJdbcTemplate(source), mock(StatsService.class), new FriendService(jdbc));
+                String unique = UUID.randomUUID().toString().substring(0, 8);
+                long user = insert(jdbc, "INSERT INTO `user`(username,password) VALUES (?,?)", "skipped" + unique, "fixture");
+                long question = insert(jdbc, "INSERT INTO question(type,stem,options,answer,analysis,category) VALUES ('MULTIPLE',?,'[{\"key\":\"A\",\"text\":\"一\"},{\"key\":\"B\",\"text\":\"二\"}]','[\"A\"]','教学解析','民法')", "统计测试" + unique);
+                long exam = insert(jdbc, "INSERT INTO exam_session(user_id,config,end_time,total,score,correct) VALUES (?,JSON_OBJECT(),NOW(),3,999,999)", user);
+                insert(jdbc, "INSERT INTO answer_record(user_id,session_id,question_id,user_answer,is_correct,grade_points) VALUES (?,?,?,'[\"A\"]',1,1)", user, exam, question);
+                insert(jdbc, "INSERT INTO answer_record(user_id,session_id,question_id,user_answer,is_correct,grade_points) VALUES (?,?,?,'[\"B\"]',0,0)", user, exam, question);
+                insert(jdbc, "INSERT INTO answer_record(user_id,session_id,question_id,user_answer,is_correct,grade_points) VALUES (?,?,?,'[]',1,1)", user, exam, question);
+                assertThat(search.find(user, "EXAM", exam, List.of()).summary())
+                        .contains("已得 1 分，当前已评分满分 2 分，答对 1 道", "未作答 / 跳过")
+                        .doesNotContain("999");
+            } finally {
+                conn.rollback();
+            }
+        }
+    }
+
     private static long insert(JdbcTemplate jdbc,String query,Object... args) {
         jdbc.update(query,args);
         return jdbc.queryForObject("SELECT LAST_INSERT_ID()",Long.class);

@@ -1,0 +1,159 @@
+{
+  "dataset": "LawBench",
+  "source_rows": 10000,
+  "unique_questions": 9968,
+  "official_commit": "e30981bb3ff54c41571f222e0b23e92d27375388",
+  "official_source_comparisons": 10000,
+  "official_mismatches": {
+    "source_instruction_match": 0,
+    "source_answer_match": 0,
+    "conversion_type_match": 0,
+    "conversion_stem_match": 0,
+    "conversion_options_match": 0,
+    "conversion_answer_match": 0
+  },
+  "decisions": {
+    "TEACHING_CANDIDATE_REQUIRES_REWRITE": 2975,
+    "REJECT_CURRENT_PRACTICE_USE": 6993
+  },
+  "issue_counts": {
+    "INSTRUCTION_STORED_AS_EXPLANATION": 9968,
+    "LEGAL_AND_PEDAGOGICAL_REVIEW_NOT_COMPLETED": 2975,
+    "LEGAL_SUBJECT_UNCLASSIFIED": 2756,
+    "BENCHMARK_OBJECTIVE_NOT_CURRENT_PRACTICE": 6993,
+    "TASK_CONTRACT_OMITTED_FROM_DISPLAYED_PROMPT": 6992,
+    "EMPTY_NER_RESULT_NOT_TEACHING_ANSWER": 11,
+    "MULTIPLE_REFERENCE_SUMMARIES": 2,
+    "REFERENCE_TOTAL_ALREADY_STATED": 112
+  },
+  "manual_read_count": 35,
+  "manual_read_ids": [
+    10000000,
+    10000498,
+    10000998,
+    10001498,
+    10001998,
+    10002494,
+    10002994,
+    10003494,
+    10003994,
+    10004057,
+    10004073,
+    10004269,
+    10004283,
+    10004377,
+    10004379,
+    10004399,
+    10004404,
+    10004419,
+    10004429,
+    10004456,
+    10004491,
+    10004526,
+    10004984,
+    10004991,
+    10005491,
+    10005991,
+    10006491,
+    10006969,
+    10007469,
+    10007969,
+    10008469,
+    10008969,
+    10008973,
+    10008975,
+    10009468
+  ],
+  "legal_correctness_verified_count": 0,
+  "choice_question_count": 1500,
+  "choice_structure_failures": 0,
+  "task_counts": {
+    "1-1": {
+      "unique_questions": 498,
+      "TEACHING_CANDIDATE_REQUIRES_REWRITE": 498
+    },
+    "1-2": {
+      "unique_questions": 500,
+      "TEACHING_CANDIDATE_REQUIRES_REWRITE": 500
+    },
+    "2-1": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "2-10": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "2-2": {
+      "unique_questions": 496,
+      "REJECT_CURRENT_PRACTICE_USE": 496
+    },
+    "2-3": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "2-4": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "2-5": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "2-6": {
+      "unique_questions": 497,
+      "REJECT_CURRENT_PRACTICE_USE": 497
+    },
+    "2-7": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "2-8": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "2-9": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "3-1": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "3-2": {
+      "unique_questions": 478,
+      "TEACHING_CANDIDATE_REQUIRES_REWRITE": 478
+    },
+    "3-3": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "3-4": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "3-5": {
+      "unique_questions": 500,
+      "REJECT_CURRENT_PRACTICE_USE": 500
+    },
+    "3-6": {
+      "unique_questions": 500,
+      "TEACHING_CANDIDATE_REQUIRES_REWRITE": 500
+    },
+    "3-7": {
+      "unique_questions": 499,
+      "TEACHING_CANDIDATE_REQUIRES_REWRITE": 499
+    },
+    "3-8": {
+      "unique_questions": 500,
+      "TEACHING_CANDIDATE_REQUIRES_REWRITE": 500
+    }
+  },
+  "scope_limit": "全量逐行内容/结构/来源审计完成；仅列出的样本进行了完整语义阅读。未对全库法律正确性逐条检索验证，没有教学准入通过结论。",
+  "files": {
+    "ledger": "/tmp/lexaid-full-review/lawbench.jsonl",
+    "full_database_export": "/tmp/lexaid-full-review/lawbench-export.jsonl",
+    "official_source_files": "/tmp/lexaid-full-review/lawbench-source",
+    "source_comparison": "/tmp/lexaid-full-review/lawbench-source-check.jsonl"
+  }
+}

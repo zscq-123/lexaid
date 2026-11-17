@@ -1,0 +1,45 @@
+{
+  "count": 515,
+  "range": [
+    515,
+    1030
+  ],
+  "firstId": 10024570,
+  "lastId": 10025084,
+  "decisions": {
+    "REQUIRES_MORE_VERIFICATION": 223,
+    "NO_SPECIFIC_DEFECT_IDENTIFIED": 261,
+    "CONFIRMED_DEFECT": 31
+  },
+  "allFieldsReadInFull": true,
+  "allContentHashesMatch": true,
+  "legalReasoningFullyVerifiedCount": 0,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "bytes": 285007,
+  "sha256": "040067aa2e158325e28c0f5aef2bb64d307bae2de4760c2b161f9033d23b2515",
+  "method": "AI逐题全文阅读题干、答案、解析，每批10至25题；截断部分另行重读；由AI逐题撰写具体判断，仅用脚本序列化与校验，不以关键词扫描代替语义阅读。",
+  "limitations": "NO_SPECIFIC_DEFECT_IDENTIFIED表示本次全文阅读未识别特定缺陷，不等于整题法律推理已全面核验。REQUIRES_MORE_VERIFICATION是具体疑点，不能计作已确认错误。确认事项仅限confirmedIssues列明的窄点；无题库修改或人工批准。",
+  "validationFile": "/tmp/lexaid-full-review/lecoqa-semantic-frontend-validation.json",
+  "referenceFiles": [
+    "/tmp/lexaid-full-review/lecoqa-source.jsonl",
+    "/tmp/lexaid-full-review/manual-findings.json",
+    "/tmp/lexaid-full-review/official/民法典.json",
+    "/tmp/lexaid-full-review/official/刑法.json",
+    "/tmp/lexaid-full-review/official/商标法.json",
+    "/tmp/lexaid-full-review/official/最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（一）.json",
+    "/tmp/lexaid-full-review/official/最高人民法院关于审理民间借贷案件适用法律若干问题的规定.json"
+  ],
+  "officialURLs": [
+    "https://cicc.court.gov.cn/html/1/380/385/12844.html",
+    "https://ecro.mee.gov.cn/fgbz/fl/202604/t20260416_1148993.html",
+    "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html",
+    "https://www.cnipa.gov.cn/art/2019/7/30/art_95_28179.html",
+    "https://www.court.gov.cn/zixun/xiangqing/282111.html",
+    "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk03/202202/t20220222_969609.html",
+    "https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202404/t20240426_1127804.html",
+    "https://www.spp.gov.cn/spp/xwfbh/wsfbh/201910/t20191025_436138.shtml",
+    "https://www.spp.gov.cn/spp/xwfbh/wsfbt/202504/t20250424_693977.shtml",
+    "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html"
+  ]
+}

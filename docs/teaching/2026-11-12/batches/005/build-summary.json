@@ -1,0 +1,12 @@
+{
+  "batch": "005",
+  "records": 4,
+  "subjects": {
+    "侵权责任法": 4
+  },
+  "independentReviewPass": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migrationSha256": "40faa263d3c0d490d4cb699b237efe4cc57867c7cf4a5f35960fd7fd407c3c3b"
+}

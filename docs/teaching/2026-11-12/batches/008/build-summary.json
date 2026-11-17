@@ -1,0 +1,12 @@
+{
+  "batch": "008",
+  "records": 2,
+  "subjects": {
+    "行政诉讼法学": 2
+  },
+  "independentReviewPass": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migrationSha256": "8e2071c94eceb4873b73644c867d54aa26ee1ce177e956f2ab44405077c0806b"
+}

@@ -1,0 +1,39 @@
+{
+  "verifiedAt": "2026-11-11T16:09:16.260041+00:00",
+  "backend": {
+    "tests": 124,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nodeTests": {
+    "passed": 8
+  },
+  "frontendBuild": "passed",
+  "browserReport": "browser-report.json",
+  "routeFailureReport": "provision-route-report.json",
+  "migration": {
+    "correctedIds": [
+      15,
+      17,
+      27
+    ],
+    "archivesPerDatabase": 3,
+    "databases": [
+      "lexaid",
+      "lexaid_upgrade_20261111_check"
+    ],
+    "answerRecordChecksumsUnchanged": true,
+    "temporaryTableChecks": [
+      "source seed equivalence",
+      "idempotence",
+      "changed content preservation"
+    ]
+  },
+  "contentAudit": {
+    "fullRuleScan": 25628,
+    "officialSourceTargetedSamples": 17,
+    "humanDualApproval": false
+  },
+  "productionDeployment": false
+}

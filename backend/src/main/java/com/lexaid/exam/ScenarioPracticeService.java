@@ -40,10 +40,11 @@ public class ScenarioPracticeService {
 
     // Do not keep a database transaction open while waiting for the model.
     public View open(long user, long question, Long after) {
-        Long record = db.query("""
-                SELECT IF(is_correct=0,id,NULL) FROM answer_record
-                WHERE user_id=? AND question_id=? ORDER BY id DESC LIMIT 1
-                """, rs -> rs.next() ? rs.getObject(1, Long.class) : null, user, question);
+        requireEligible(question);
+        Long record = db.query("SELECT IF(ar.is_correct=0,ar.id,NULL) FROM answer_record ar JOIN question q ON q.id=ar.question_id "
+                + "WHERE ar.user_id=? AND ar.question_id=? AND q.updated_at<=ar.answered_at AND "
+                + AnswerStatus.ANSWERED + " ORDER BY ar.id DESC LIMIT 1",
+                rs -> rs.next() ? rs.getObject(1, Long.class) : null, user, question);
         if (record == null) throw new BizException(404, "仅可从自己当前答错的题目开始情景迁移。");
 
         Saved prior = null;
@@ -56,19 +57,29 @@ public class ScenarioPracticeService {
             round = prior.round() + 1;
         }
         Saved existing = after == null ? latest(user, record) : findRound(user, record, round);
-        if (existing != null) return existing.view();
+        if (existing != null) {
+            requireCurrentSource(user, question, record);
+            return existing.view();
+        }
 
         var key = new ScenarioGenerationGate.Round(user, record, round);
         String previous = prior == null ? "" : prior.exercise().stem();
-        return generations.generate(key, () -> generate(question, key, previous));
+        View generated = generations.generate(key, () -> generate(question, key, previous));
+        requireCurrentSource(user, question, record);
+        return generated;
     }
 
     private View generate(long question, ScenarioGenerationGate.Round key, String previous) {
+        requireEligible(question);
         long user = key.user(), record = key.record();
+        requireCurrentSource(user, question, record);
         int round = key.number();
         // Another request may have finished after open() queried the exercise but before this one acquired its slot.
         Saved existing = findRound(user, record, round);
-        if (existing != null) return existing.view();
+        if (existing != null) {
+            requireCurrentSource(user, question, record);
+            return existing.view();
+        }
         Question original = questions.classifiedQuestions(List.of(question)).stream().findFirst()
                 .orElseThrow(() -> new BizException(404, "原题已删除。"));
         List<String> provisions = db.queryForList("""
@@ -80,6 +91,8 @@ public class ScenarioPracticeService {
         Source source = new Source(safe(original.getStem()), safe(original.getOptions()), safe(original.getAnswer()),
                 safe(original.getAnalysis()), String.join("\n", provisions), safe(original.getSubject()));
         Exercise draft = generator.generate(source, previous, round);
+        requireEligible(question);
+        requireCurrentSource(user, question, record);
         String material;
         try {
             material = json.writeValueAsString(draft);
@@ -90,27 +103,52 @@ public class ScenarioPracticeService {
         // Retries and concurrent opens for the same wrong answer converge on one stored exercise.
         db.update("""
                 INSERT INTO wrong_question_practice (user_id,source_question_id,source_record_id,round_no,exercise)
-                SELECT ?,?,?,?,? FROM answer_record ar WHERE ar.id=? AND ar.is_correct=0
-                    AND NOT EXISTS (SELECT 1 FROM answer_record newer WHERE newer.user_id=ar.user_id
-                        AND newer.question_id=ar.question_id AND newer.id>ar.id)
+                SELECT ?,?,?,?,? FROM answer_record ar JOIN question q ON q.id=ar.question_id
+                """ + QuestionSubjects.JOIN_SUBJECTS + " WHERE ar.id=? AND ar.is_correct=0 AND q.updated_at<=ar.answered_at AND " + QuestionQuality.ELIGIBLE + """
+                    AND NOT EXISTS (SELECT 1 FROM answer_record ar2 WHERE ar2.user_id=ar.user_id
+                        AND ar2.question_id=ar.question_id AND ar2.id>ar.id AND
+                """ + AnswerStatus.NEWER_ANSWERED + ") " + """
                 ON DUPLICATE KEY UPDATE id=wrong_question_practice.id
                 """, user, question, record, round, material, record);
         Saved saved = findRound(user, record, round);
         if (saved == null) throw new BizException(409, "原题作答状态发生变化，请刷新错题本。");
+        requireCurrentSource(user, question, record);
         return saved.view();
     }
 
     @Transactional
     public View submit(long user, long id, String choice) {
-        int changed = db.update("""
-                UPDATE wrong_question_practice SET selected=?, answered_at=NOW()
-                WHERE id=? AND user_id=? AND selected IS NULL
-                """, choice, id, user);
+        Saved prior = owned(user, id);
+        requireEligible(prior.sourceQuestion());
+        requireCurrentSource(user, prior.sourceQuestion(), prior.sourceRecord());
+        int changed = db.update("UPDATE wrong_question_practice p JOIN question q ON q.id=p.source_question_id "
+                + " JOIN answer_record ar ON ar.id=p.source_record_id AND ar.user_id=p.user_id AND ar.question_id=p.source_question_id "
+                + QuestionSubjects.JOIN_SUBJECTS + " SET p.selected=?,p.answered_at=NOW() "
+                + "WHERE p.id=? AND p.user_id=? AND p.selected IS NULL AND q.updated_at<=ar.answered_at AND "
+                + QuestionQuality.ELIGIBLE, choice, id, user);
+        requireEligible(prior.sourceQuestion());
+        requireCurrentSource(user, prior.sourceQuestion(), prior.sourceRecord());
         Saved saved = owned(user, id);
+        if (saved.selected() == null) throw new BizException(409, "原题状态发生变化，请刷新错题本。");
         if (changed == 1) {
             studies.record(user, "ANSWER", "QUESTION", saved.sourceQuestion(), "情景迁移：" + saved.exercise().topic());
         }
         return saved.view();
+    }
+
+    private void requireEligible(long question) {
+        if (questions.eligibleIds(List.of(question)).isEmpty()) {
+            throw new BizException(409, "原题正在复核，暂不开放迁移练习。");
+        }
+    }
+
+    private void requireCurrentSource(long user, long question, long record) {
+        Boolean current = db.queryForObject("SELECT EXISTS(SELECT 1 FROM answer_record ar JOIN question q ON q.id=ar.question_id "
+                + "WHERE ar.id=? AND ar.user_id=? AND ar.question_id=? AND q.updated_at<=ar.answered_at)",
+                Boolean.class, record, user, question);
+        if (!Boolean.TRUE.equals(current)) {
+            throw new BizException(409, "原题已更新，请重新作答后再开始迁移练习。");
+        }
     }
 
     private Saved findRound(long user, long record, int round) {

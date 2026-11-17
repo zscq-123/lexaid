@@ -1,0 +1,29 @@
+{
+  "batch": "001",
+  "records": 216,
+  "classificationCorrections": 9,
+  "scopeAsOf": "2026-11-12",
+  "reviewKind": "AI_AUTHOR_AND_INDEPENDENT_AI_REVIEW",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "subjects": {
+    "民法学": 9,
+    "合同法": 61,
+    "物权法": 27,
+    "婚姻家庭与继承法": 12,
+    "侵权责任法": 19,
+    "人格权法": 11,
+    "商法学": 6,
+    "刑法学": 27,
+    "民事诉讼法学": 8,
+    "跨学科综合": 5,
+    "劳动与社会保障法学": 4,
+    "知识产权法学": 10,
+    "行政诉讼法学": 2,
+    "行政法学": 10,
+    "刑事诉讼法学": 1,
+    "环境与资源保护法学": 3,
+    "经济法学": 1
+  },
+  "migrationSha256": "13a876468433aafb258bd9517a9cc29a5006615bc44f8014156f5dd4404c6ba3"
+}

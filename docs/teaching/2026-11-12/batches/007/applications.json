@@ -1,0 +1,57 @@
+{
+  "batch": "007",
+  "database": "lexaid",
+  "verifiedAt": "2026-11-12T00:28:34.970765+00:00",
+  "migrationSha256": "b7cd458b0340df67fd4575223986e4d1cc992972fb57d528d1e2cb460c4a0c9a",
+  "records": [
+    {
+      "target": "question:6",
+      "id": 6,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "0f7c7489480100d73d210bc4e1a6e76408188f43f67e5b01d9ab07caf21e0110",
+      "afterHash": "7f749b30ded8e86be86f39c1d8dec8621b07cd82234ff77ede6acc6e9773d554"
+    },
+    {
+      "target": "question:23",
+      "id": 23,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "63fbc9b3c1ceec128fb6e27624ab37590816409bf10e01d754a2abec3a1fbe34",
+      "afterHash": "e152d32f909195367627b92b493e7d33170acbc0fe5adb1b9d1ce8aaee7a37b4"
+    }
+  ],
+  "exactAfterMatches": 2,
+  "archive": {
+    "total": 2,
+    "applied": 2
+  },
+  "historyBefore": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "mock_exam_bank": "219410861",
+    "question_source": "56665642"
+  },
+  "historyAfter": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "mock_exam_bank": "219410861",
+    "question_source": "56665642"
+  },
+  "historyPreserved": true,
+  "repeatChecksums": {
+    "question": "1182850192",
+    "question_legal_subject": "4169332068",
+    "question_content_revision": "1627256300"
+  },
+  "idempotent": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false
+}

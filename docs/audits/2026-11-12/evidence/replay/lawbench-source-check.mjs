@@ -1,0 +1,21 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+const repo=process.env.LEXAID_REPO??'/Users/yangyongze/Desktop/lexaid/lexaid';
+const {toQuestion}=await import(pathToFileURL(repo+'/scripts/build-public-question-dataset.mjs'));
+const base=process.env.LEXAID_AUDIT_DIR??'/tmp/lexaid-full-review';
+const rows=readFileSync(base+'/lawbench-export.jsonl','utf8').trim().split('\n').map(JSON.parse);
+const tasks={};
+const clean=(s)=>String(s??'').replace(/\r\n?/g,'\n').replace(/[ \t]+\n/g,'\n').trim();
+const canon=(s)=>clean(s).replace(/\s+/g,' ');
+const result=rows.map(r=>{
+ const task=r.metadata.taskCode;
+ tasks[task]??=JSON.parse(readFileSync(`${base}/lawbench-source/${task}.json`,'utf8'));
+ const i=Number(r.source_item_id.split(':')[1]);
+ const source=tasks[task][i];
+ const converted=toQuestion({question:source.question,answer:source.answer,category:r.category,difficulty:1});
+ return {source_item_id:r.source_item_id,question_id:r.id,source_hash:createHash('sha256').update(JSON.stringify(source)).digest('hex'),source_instruction_match:clean(source.instruction)===r.metadata.instruction,source_answer_match:clean(source.answer)===r.metadata.originalAnswer,conversion_type_match:converted.type===r.type,conversion_stem_match:canon(converted.stem)===canon(r.stem),conversion_options_match:JSON.stringify(converted.options)===JSON.stringify(r.options?JSON.parse(r.options):null),conversion_answer_match:JSON.stringify(converted.answer)===JSON.stringify(r.type==='SINGLE'||r.type==='MULTIPLE'?JSON.parse(r.answer):r.answer)};
+});
+writeFileSync(base+'/lawbench-source-check.jsonl',result.map(x=>JSON.stringify(x)).join('\n')+'\n');
+const keys=Object.keys(result[0]).filter(x=>x.endsWith('_match'));
+console.log(JSON.stringify(Object.fromEntries(keys.map(k=>[k,result.filter(x=>!x[k]).length])),null,2));

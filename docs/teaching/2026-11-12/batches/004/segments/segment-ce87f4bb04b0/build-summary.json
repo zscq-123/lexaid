@@ -1,0 +1,136 @@
+{
+  "batch": "004",
+  "segment": "segment-ce87f4bb04b0",
+  "records": 19,
+  "groups": 19,
+  "tables": {
+    "mock_exam_bank": 19
+  },
+  "eligibleTargets": [
+    "mock_exam_bank:8000001",
+    "mock_exam_bank:8000002",
+    "mock_exam_bank:8000003",
+    "mock_exam_bank:8000004",
+    "mock_exam_bank:8000005",
+    "mock_exam_bank:8000006",
+    "mock_exam_bank:8000007",
+    "mock_exam_bank:8000008",
+    "mock_exam_bank:8000009",
+    "mock_exam_bank:8000010",
+    "mock_exam_bank:8000011",
+    "mock_exam_bank:8000012",
+    "mock_exam_bank:8100001",
+    "mock_exam_bank:8100002",
+    "mock_exam_bank:8100003",
+    "mock_exam_bank:8100004",
+    "mock_exam_bank:8100005",
+    "mock_exam_bank:8100006",
+    "mock_exam_bank:8100008"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "mock_exam_bank:8100007",
+      "targets": [
+        "mock_exam_bank:8100007"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100007"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100009",
+      "targets": [
+        "mock_exam_bank:8100009"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100009"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100010",
+      "targets": [
+        "mock_exam_bank:8100010"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100010"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100011",
+      "targets": [
+        "mock_exam_bank:8100011"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100011"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100012",
+      "targets": [
+        "mock_exam_bank:8100012"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100012"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100013",
+      "targets": [
+        "mock_exam_bank:8100013"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100013"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100014",
+      "targets": [
+        "mock_exam_bank:8100014"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100014"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100015",
+      "targets": [
+        "mock_exam_bank:8100015"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100015"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100016",
+      "targets": [
+        "mock_exam_bank:8100016"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100016"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100017",
+      "targets": [
+        "mock_exam_bank:8100017"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100017"
+      ]
+    },
+    {
+      "contentGroup": "mock_exam_bank:8100018",
+      "targets": [
+        "mock_exam_bank:8100018"
+      ],
+      "reasons": [
+        "missing cross-review mock_exam_bank:8100018"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-004-segment-ce87f4bb04b0.sql",
+  "migrationSha256": "93bce6db4f0457657ba674084d01e79d2cb0b238dd17fbef1ea8e227c310c9b9"
+}

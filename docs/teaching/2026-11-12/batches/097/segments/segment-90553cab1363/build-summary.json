@@ -1,0 +1,388 @@
+{
+  "batch": "097",
+  "segment": "segment-90553cab1363",
+  "records": 10,
+  "groups": 10,
+  "tables": {
+    "question": 10
+  },
+  "eligibleTargets": [
+    "question:10011335",
+    "question:10011336",
+    "question:10011337",
+    "question:10011338",
+    "question:10011339",
+    "question:10011340",
+    "question:10011341",
+    "question:10011342",
+    "question:10011343",
+    "question:10011344"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10011295",
+      "targets": [
+        "question:10011295"
+      ],
+      "reasons": [
+        "already applied question:10011295"
+      ]
+    },
+    {
+      "contentGroup": "question:10011296",
+      "targets": [
+        "question:10011296"
+      ],
+      "reasons": [
+        "already applied question:10011296"
+      ]
+    },
+    {
+      "contentGroup": "question:10011297",
+      "targets": [
+        "question:10011297"
+      ],
+      "reasons": [
+        "already applied question:10011297"
+      ]
+    },
+    {
+      "contentGroup": "question:10011298",
+      "targets": [
+        "question:10011298"
+      ],
+      "reasons": [
+        "already applied question:10011298"
+      ]
+    },
+    {
+      "contentGroup": "question:10011299",
+      "targets": [
+        "question:10011299"
+      ],
+      "reasons": [
+        "already applied question:10011299"
+      ]
+    },
+    {
+      "contentGroup": "question:10011300",
+      "targets": [
+        "question:10011300"
+      ],
+      "reasons": [
+        "already applied question:10011300"
+      ]
+    },
+    {
+      "contentGroup": "question:10011301",
+      "targets": [
+        "question:10011301"
+      ],
+      "reasons": [
+        "already applied question:10011301"
+      ]
+    },
+    {
+      "contentGroup": "question:10011302",
+      "targets": [
+        "question:10011302"
+      ],
+      "reasons": [
+        "already applied question:10011302"
+      ]
+    },
+    {
+      "contentGroup": "question:10011303",
+      "targets": [
+        "question:10011303"
+      ],
+      "reasons": [
+        "already applied question:10011303"
+      ]
+    },
+    {
+      "contentGroup": "question:10011304",
+      "targets": [
+        "question:10011304"
+      ],
+      "reasons": [
+        "already applied question:10011304"
+      ]
+    },
+    {
+      "contentGroup": "question:10011305",
+      "targets": [
+        "question:10011305"
+      ],
+      "reasons": [
+        "already applied question:10011305"
+      ]
+    },
+    {
+      "contentGroup": "question:10011306",
+      "targets": [
+        "question:10011306"
+      ],
+      "reasons": [
+        "already applied question:10011306"
+      ]
+    },
+    {
+      "contentGroup": "question:10011307",
+      "targets": [
+        "question:10011307"
+      ],
+      "reasons": [
+        "already applied question:10011307"
+      ]
+    },
+    {
+      "contentGroup": "question:10011308",
+      "targets": [
+        "question:10011308"
+      ],
+      "reasons": [
+        "already applied question:10011308"
+      ]
+    },
+    {
+      "contentGroup": "question:10011309",
+      "targets": [
+        "question:10011309"
+      ],
+      "reasons": [
+        "already applied question:10011309"
+      ]
+    },
+    {
+      "contentGroup": "question:10011310",
+      "targets": [
+        "question:10011310"
+      ],
+      "reasons": [
+        "already applied question:10011310"
+      ]
+    },
+    {
+      "contentGroup": "question:10011311",
+      "targets": [
+        "question:10011311"
+      ],
+      "reasons": [
+        "already applied question:10011311"
+      ]
+    },
+    {
+      "contentGroup": "question:10011312",
+      "targets": [
+        "question:10011312"
+      ],
+      "reasons": [
+        "already applied question:10011312"
+      ]
+    },
+    {
+      "contentGroup": "question:10011313",
+      "targets": [
+        "question:10011313"
+      ],
+      "reasons": [
+        "already applied question:10011313"
+      ]
+    },
+    {
+      "contentGroup": "question:10011314",
+      "targets": [
+        "question:10011314"
+      ],
+      "reasons": [
+        "already applied question:10011314"
+      ]
+    },
+    {
+      "contentGroup": "question:10011315",
+      "targets": [
+        "question:10011315"
+      ],
+      "reasons": [
+        "already applied question:10011315"
+      ]
+    },
+    {
+      "contentGroup": "question:10011316",
+      "targets": [
+        "question:10011316"
+      ],
+      "reasons": [
+        "already applied question:10011316"
+      ]
+    },
+    {
+      "contentGroup": "question:10011317",
+      "targets": [
+        "question:10011317"
+      ],
+      "reasons": [
+        "already applied question:10011317"
+      ]
+    },
+    {
+      "contentGroup": "question:10011318",
+      "targets": [
+        "question:10011318"
+      ],
+      "reasons": [
+        "already applied question:10011318"
+      ]
+    },
+    {
+      "contentGroup": "question:10011319",
+      "targets": [
+        "question:10011319"
+      ],
+      "reasons": [
+        "already applied question:10011319"
+      ]
+    },
+    {
+      "contentGroup": "question:10011320",
+      "targets": [
+        "question:10011320"
+      ],
+      "reasons": [
+        "already applied question:10011320"
+      ]
+    },
+    {
+      "contentGroup": "question:10011321",
+      "targets": [
+        "question:10011321"
+      ],
+      "reasons": [
+        "already applied question:10011321"
+      ]
+    },
+    {
+      "contentGroup": "question:10011322",
+      "targets": [
+        "question:10011322"
+      ],
+      "reasons": [
+        "already applied question:10011322"
+      ]
+    },
+    {
+      "contentGroup": "question:10011323",
+      "targets": [
+        "question:10011323"
+      ],
+      "reasons": [
+        "already applied question:10011323"
+      ]
+    },
+    {
+      "contentGroup": "question:10011324",
+      "targets": [
+        "question:10011324"
+      ],
+      "reasons": [
+        "already applied question:10011324"
+      ]
+    },
+    {
+      "contentGroup": "question:10011325",
+      "targets": [
+        "question:10011325"
+      ],
+      "reasons": [
+        "already applied question:10011325"
+      ]
+    },
+    {
+      "contentGroup": "question:10011326",
+      "targets": [
+        "question:10011326"
+      ],
+      "reasons": [
+        "already applied question:10011326"
+      ]
+    },
+    {
+      "contentGroup": "question:10011327",
+      "targets": [
+        "question:10011327"
+      ],
+      "reasons": [
+        "already applied question:10011327"
+      ]
+    },
+    {
+      "contentGroup": "question:10011328",
+      "targets": [
+        "question:10011328"
+      ],
+      "reasons": [
+        "already applied question:10011328"
+      ]
+    },
+    {
+      "contentGroup": "question:10011329",
+      "targets": [
+        "question:10011329"
+      ],
+      "reasons": [
+        "already applied question:10011329"
+      ]
+    },
+    {
+      "contentGroup": "question:10011330",
+      "targets": [
+        "question:10011330"
+      ],
+      "reasons": [
+        "already applied question:10011330"
+      ]
+    },
+    {
+      "contentGroup": "question:10011331",
+      "targets": [
+        "question:10011331"
+      ],
+      "reasons": [
+        "already applied question:10011331"
+      ]
+    },
+    {
+      "contentGroup": "question:10011332",
+      "targets": [
+        "question:10011332"
+      ],
+      "reasons": [
+        "already applied question:10011332"
+      ]
+    },
+    {
+      "contentGroup": "question:10011333",
+      "targets": [
+        "question:10011333"
+      ],
+      "reasons": [
+        "already applied question:10011333"
+      ]
+    },
+    {
+      "contentGroup": "question:10011334",
+      "targets": [
+        "question:10011334"
+      ],
+      "reasons": [
+        "already applied question:10011334"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-097-segment-90553cab1363.sql",
+  "migrationSha256": "d9fd2061b70bd48043f297ca76f5ee2227e48d3e14ca4c9326b22ada2c056a9b"
+}

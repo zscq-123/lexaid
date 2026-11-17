@@ -88,7 +88,7 @@ const readingError = ref(false)
 
 const cards = computed(() => [
   { label: '累计学习', value: overview.value?.totalStudyMinutes ?? '—', unit: '分钟', icon: Clock },
-  { label: '答题总数', value: overview.value?.totalAnswer ?? '—', unit: '题', icon: Finished },
+  { label: '实际作答（含重复）', value: overview.value?.totalAnswer ?? '—', unit: '次', icon: Finished },
   { label: '答题正确率', value: overview.value?.accuracy ?? '—', unit: '%', icon: CircleCheck },
   { label: '连续学习', value: overview.value?.streakDays ?? '—', unit: '天', icon: Calendar }
 ])

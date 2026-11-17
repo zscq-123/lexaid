@@ -1,6 +1,7 @@
 package com.lexaid.admin;
 
 import com.lexaid.exam.QuestionSubjects;
+import com.lexaid.exam.AnswerStatus;
 import com.lexaid.common.BizException;
 import com.lexaid.common.PageResult;
 import lombok.RequiredArgsConstructor;
@@ -74,11 +75,11 @@ public class AdminService {
                 FROM study_record GROUP BY user_id
             ) sr ON sr.user_id = u.id
             LEFT JOIN (
-                SELECT user_id, COUNT(*) AS answer_count,
+                SELECT ar.user_id, COUNT(*) AS answer_count,
                        SUM(CASE WHEN is_correct IS NOT NULL THEN 1 ELSE 0 END) AS graded_count,
                        SUM(CASE WHEN is_correct = 1 THEN 1 ELSE 0 END) AS correct_count,
                        MAX(answered_at) AS last_active_at
-                FROM answer_record GROUP BY user_id
+                FROM answer_record ar JOIN question q ON q.id=ar.question_id WHERE %s GROUP BY ar.user_id
             ) ar ON ar.user_id = u.id
             LEFT JOIN (SELECT user_id, COUNT(*) AS note_count FROM note GROUP BY user_id) n ON n.user_id = u.id
             LEFT JOIN (SELECT user_id, COUNT(*) AS favorite_count FROM favorite GROUP BY user_id) f ON f.user_id = u.id
@@ -88,7 +89,7 @@ public class AdminService {
                 SELECT author_id AS user_id, COUNT(*) AS post_count, MAX(created_at) AS last_active_at
                 FROM community_post GROUP BY author_id
             ) cp ON cp.user_id = u.id
-            """;
+            """.formatted(AnswerStatus.ANSWERED);
 
     private static final RowMapper<UserSummary> USER_MAPPER = (rs, rowNum) -> new UserSummary(
             rs.getLong("id"), rs.getString("username"), rs.getString("nickname"), rs.getString("role"),
@@ -114,10 +115,10 @@ public class AdminService {
                            UNION SELECT author_id AS user_id FROM community_post WHERE created_at >= CURRENT_DATE - INTERVAL 6 DAY
                        ) recent_users) AS active_users_7_days,
                        (SELECT FLOOR(COALESCE(SUM(duration_sec), 0) / 60) FROM study_record) AS total_study_minutes,
-                       (SELECT COUNT(*) FROM answer_record) AS total_answers,
+                       (SELECT COUNT(*) FROM answer_record ar JOIN question q ON q.id=ar.question_id WHERE %s) AS total_answers,
                        (SELECT COUNT(*) FROM note) AS total_notes,
                        (SELECT COUNT(*) FROM community_post) AS total_posts
-                """, Map.of());
+                """.formatted(AnswerStatus.ANSWERED), Map.of());
 
         Map<LocalDate, long[]> trend = new LinkedHashMap<>();
         for (int i = 0; i < days; i++) trend.put(from.plusDays(i), new long[2]);

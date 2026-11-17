@@ -1,0 +1,326 @@
+{
+  "auditDate": "2026-11-11",
+  "selection": "Purposive risk sample: 6 seed questions, 10 previously eligible LeCoQA questions, 1 held LeCoQA subject-rule control. No prevalence estimate.",
+  "sampleCount": 17,
+  "previouslyEligibleSampleCount": 16,
+  "reviewed": [
+    {
+      "id": 1,
+      "reason": "ELIGIBLE",
+      "source": null,
+      "contentHash": "c8997ee9bf1d9b264c126093747d20028d3c37939d69f8c95972b5fa11fc843f",
+      "stem": "关于正当防卫，下列说法正确的是？",
+      "verdict": "NO_ISSUE_FOUND_IN_CHECKED_POINT",
+      "summary": "选项A与刑法20条第2款对应；本次核对防卫过当的法律后果。",
+      "checkedScope": "刑法20条",
+      "officialSources": [
+        {
+          "title": "国家税务总局：中华人民共和国刑法（2023年修正）",
+          "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 6,
+      "reason": "ELIGIBLE",
+      "source": null,
+      "contentHash": "3a5ed94f96598d7dcec4e2ecce5078b362bd0ada855ca8f52b5eac2427f7342e",
+      "stem": "根据民法典，十八周岁以上的自然人为？",
+      "verdict": "NO_ISSUE_FOUND_IN_CHECKED_POINT",
+      "summary": "十八周岁以上为成年人，与民法典17条对应。",
+      "checkedScope": "民法典17条",
+      "officialSources": [
+        {
+          "title": "国家统计局：中华人民共和国民法典",
+          "url": "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 11,
+      "reason": "ELIGIBLE",
+      "source": null,
+      "contentHash": "2149a971583e7c1d5834fe9523606b87bfd29088a35392c455d07465e08bf265",
+      "stem": "违法行为轻微并及时改正，没有造成危害后果的，应当如何处理？",
+      "verdict": "NO_ISSUE_FOUND_IN_CHECKED_POINT",
+      "summary": "题干三个条件齐备时不予行政处罚，与行政处罚法33条第1款对应。",
+      "checkedScope": "行政处罚法33条",
+      "officialSources": [
+        {
+          "title": "市场监管总局：中华人民共和国行政处罚法（2021年修订）",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_3712fbfaaed942b3b6b66f14d5288723.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 15,
+      "reason": "ELIGIBLE",
+      "source": null,
+      "contentHash": "427c3ffbda8b3dbafc8f4e254108837c40094eed2b81e8bc11cb59da5a44b7d4",
+      "stem": "正当防卫的成立条件包括？",
+      "verdict": "EXPLANATION_OVERSTRICT",
+      "summary": "参考答案D保留了法定条件，但解析仅说不超过必要限度，遗漏防卫过当须明显超过并造成重大损害的组合条件。",
+      "checkedScope": "刑法20条第2、3款",
+      "officialSources": [
+        {
+          "title": "国家税务总局：中华人民共和国刑法（2023年修正）",
+          "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 17,
+      "reason": "ELIGIBLE",
+      "source": null,
+      "contentHash": "1f510e76bf4e319926de3d11a584bdfcb3a809ac3dea2def9813abab28644a16",
+      "stem": "侵权责任的归责原则包括？",
+      "verdict": "ANSWER_SCOPE_ERROR",
+      "summary": "题干问归责原则却将公平分担损失D也判对；应区分1165、1166归责与1186依法分担损失规则。建议限定题干并改为ABC。",
+      "checkedScope": "民法典1165、1166、1186条；上海一中院解读",
+      "officialSources": [
+        {
+          "title": "国家统计局：中华人民共和国民法典",
+          "url": "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html"
+        },
+        {
+          "title": "上海一中院：侵权责任纠纷开庭，法官这样建议（2024-01-09）",
+          "url": "https://www.a-court.gov.cn/xxfb/no1court_412/docs/202401/d_4001042.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 27,
+      "reason": "ELIGIBLE",
+      "source": null,
+      "contentHash": "456b73513bb2630b612be63dbde8304fa0154b8333ce3e1796edc906be3c82e8",
+      "stem": "简述正当防卫与紧急避险的主要区别。",
+      "verdict": "ANSWER_OVERGENERALIZATION",
+      "summary": "参考答案将特定职责人员限制扩大到一切紧急避险，漏掉避免本人危险这一限定。",
+      "checkedScope": "刑法21条第3款",
+      "officialSources": [
+        {
+          "title": "国家税务总局：中华人民共和国刑法（2023年修正）",
+          "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10024199,
+      "reason": "ELIGIBLE",
+      "source": "LeCoQA",
+      "contentHash": "099c51235174a911ce0d36bed41a35ea87901738198fa1644043a16eb666e77c",
+      "stem": "警察是否可以随意查看公民的手机信息？",
+      "verdict": "OUTDATED_OR_UNVERSIONED_BASIS",
+      "summary": "解析仍以旧治安管理处罚法87条说明检查；2026年生效文本相关规则在103条，内容亦有变化。",
+      "checkedScope": "治安管理处罚法103、144条",
+      "officialSources": [
+        {
+          "title": "市场监管总局：中华人民共和国治安管理处罚法（2025年修订）",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10024436,
+      "reason": "ELIGIBLE",
+      "source": "LeCoQA",
+      "contentHash": "de17aa9beb41a76b5ad21dc413b3dd281896f5566037c85592419293e7de2343",
+      "stem": "董事与其所持股公司之间存在劳动关系吗？",
+      "verdict": "OUTDATED_OR_UNVERSIONED_BASIS",
+      "summary": "解析以旧公司法44条三至十三人董事会为无版本法律依据；新法68条已调整。",
+      "checkedScope": "公司法44、68、266条",
+      "officialSources": [
+        {
+          "title": "市场监管总局：中华人民共和国公司法（2023年修订）",
+          "url": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10024437,
+      "reason": "ELIGIBLE",
+      "source": "LeCoQA",
+      "contentHash": "aa3f22d9946a73f36afc163d26ff96a53e1ecf6ba211638be8a5fa6aa3cfdf1b",
+      "stem": "公司高管、股东与公司是否成立劳动关系？",
+      "verdict": "OUTDATED_OR_UNVERSIONED_BASIS",
+      "summary": "解析沿用旧公司法216条术语；新法265条的实际控制人等表述已调整。",
+      "checkedScope": "公司法265、266条",
+      "officialSources": [
+        {
+          "title": "市场监管总局：中华人民共和国公司法（2023年修订）",
+          "url": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10024438,
+      "reason": "ELIGIBLE",
+      "source": "LeCoQA",
+      "contentHash": "e3dcaac9b0f23eee3006b8606f0502c55556049c6953b236970519748528dfc4",
+      "stem": "公司高管转任监事后是否存在劳动关系",
+      "verdict": "OUTDATED_OR_UNVERSIONED_BASIS",
+      "summary": "监事劳动关系题的法律依据列旧公司法44条董事会组成；同时有过时与依据针对性问题。",
+      "checkedScope": "公司法44、68、266条",
+      "officialSources": [
+        {
+          "title": "市场监管总局：中华人民共和国公司法（2023年修订）",
+          "url": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10024439,
+      "reason": "ELIGIBLE",
+      "source": "LeCoQA",
+      "contentHash": "e714196aa43b797be683976d66958c7073061b56e36afa1941329f3191bfd46e",
+      "stem": "股东是否能够基于劳动关系要求未签订劳动合同的二倍工资差额？",
+      "verdict": "OUTDATED_OR_UNVERSIONED_BASIS",
+      "summary": "劳动关系题解析附旧公司法44条，未明确历史版本或与现行制度区别。",
+      "checkedScope": "公司法44、68、266条",
+      "officialSources": [
+        {
+          "title": "市场监管总局：中华人民共和国公司法（2023年修订）",
+          "url": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10024497,
+      "reason": "ELIGIBLE",
+      "source": "LeCoQA",
+      "contentHash": "0732a35027064cef761d11e532ed45352e03b97112e8d99efecf4d22e37a156a",
+      "stem": "公司高管职务的解除是否等同于劳动关系的解除？",
+      "verdict": "ANSWER_ANALYSIS_MISMATCH",
+      "summary": "同一题答案以公司法47条讲经理解聘，解析以47条讲董事会会议召集；现行47条是注册资本，需重写版本和论证。",
+      "checkedScope": "公司法47、67、72条",
+      "officialSources": [
+        {
+          "title": "市场监管总局：中华人民共和国公司法（2023年修订）",
+          "url": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10024706,
+      "reason": "ELIGIBLE",
+      "source": "LeCoQA",
+      "contentHash": "68ef588a000d8de76f13d83508fae86f704dbcb0f1e87b9f95bd7c26fe94a787",
+      "stem": "建设工程施工合同纠纷中有哪些需承担连带责任的情形？",
+      "verdict": "OUTDATED_OR_UNVERSIONED_BASIS",
+      "summary": "公司人格否认/一人公司财产独立仍引用旧20、63条；现行公司法相关责任在23条，未标历史适用。",
+      "checkedScope": "公司法21、23条",
+      "officialSources": [
+        {
+          "title": "市场监管总局：中华人民共和国公司法（2023年修订）",
+          "url": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10025574,
+      "reason": "ELIGIBLE",
+      "source": "LeCoQA",
+      "contentHash": "7b42b486596019edf80306851e1d5337ee9a8db4b5c6b0d18c54397668c6b200",
+      "stem": "公司未经股东会决议为股东提供担保的法律效力如何认定？",
+      "verdict": "ANSWER_EXCEPTIONS_OVERBROAD",
+      "summary": "担保回答把控制公司及互保关系笼统当作免决议例外，遗漏全资/上市公司等条件；效力应区分是否对公司发生效力。",
+      "checkedScope": "担保制度解释7—9条；公司法15条",
+      "officialSources": [
+        {
+          "title": "最高人民法院：民法典有关担保制度的解释",
+          "url": "https://www.court.gov.cn/fabu/xiangqing/282721.html"
+        },
+        {
+          "title": "市场监管总局：中华人民共和国公司法（2023年修订）",
+          "url": "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10025062,
+      "reason": "ELIGIBLE",
+      "source": "LeCoQA",
+      "contentHash": "779bf2ddf330a9419c3c154434cfbd46434d4fb05d22dbbc44ca43850d5b875f",
+      "stem": "物业发的《用户手册》约定“业主违反手册规定，物业公司有权罚款”，合法吗？‍",
+      "verdict": "IRRELEVANT_AND_OUTDATED_BASIS",
+      "summary": "题问物业是否有罚款权，解析列共同治安违法和从重从轻处罚条文，不能支撑权限结论且条号旧；应对应行政处罚实施主体。",
+      "checkedScope": "行政处罚法17—20条；治安管理处罚法2025年文本",
+      "officialSources": [
+        {
+          "title": "市场监管总局：中华人民共和国行政处罚法（2021年修订）",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_3712fbfaaed942b3b6b66f14d5288723.html"
+        },
+        {
+          "title": "市场监管总局：中华人民共和国治安管理处罚法（2025年修订）",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10025395,
+      "reason": "ELIGIBLE",
+      "source": "LeCoQA",
+      "contentHash": "e7675c7331726f98f21b85773ce340d9eb3de86ebc26dcdad55cdaf564c3ee6c",
+      "stem": "什么是公安行政许可？公安机关能做出哪些行政许可？公安机关能否做出行政许可？",
+      "verdict": "IRRELEVANT_AND_OUTDATED_BASIS",
+      "summary": "题问公安行政许可，解析用旧治安处罚种类条文支撑，混淆许可与处罚；应另核对具体许可设定依据。",
+      "checkedScope": "治安管理处罚法2025年文本；仅判依据不支持，不据此给出许可事项全表",
+      "officialSources": [
+        {
+          "title": "市场监管总局：中华人民共和国治安管理处罚法（2025年修订）",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    },
+    {
+      "id": 10025463,
+      "reason": "SUBJECT_CONFLICT",
+      "source": "LeCoQA",
+      "contentHash": "09d37ad90c75e6101232a5b404cc8a0bd4db653ebf5a4c7a6c4a0e04cecd5875",
+      "stem": "国有企业领导人员严重不负责任，对签约对方情况不咨询、不调查，指令下属公司负责人与他人签订购销合同，导致国家财产被骗，应由国有企业领导人员还是下属公司负责人承担被骗责任？",
+      "verdict": "FALSE_POSITIVE_SUBJECT_RULE",
+      "summary": "题干有购销合同但答案与解析均讨论刑法167条；不能因题干缺少刑/罪等字而认定科目冲突。答案本身仍需教学复核。",
+      "checkedScope": "刑法167条",
+      "officialSources": [
+        {
+          "title": "国家税务总局：中华人民共和国刑法（2023年修正）",
+          "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html"
+        }
+      ],
+      "reviewKind": "AI-assisted source check; not expert approval",
+      "humanDualApproval": false
+    }
+  ]
+}

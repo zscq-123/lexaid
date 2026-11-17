@@ -1,0 +1,148 @@
+{
+  "batch": "029",
+  "segment": "segment-581def26e2ad",
+  "records": 8,
+  "groups": 4,
+  "tables": {
+    "question": 4,
+    "mock_exam_bank": 4
+  },
+  "eligibleTargets": [
+    "question:10017089",
+    "mock_exam_bank:1340422",
+    "question:10017091",
+    "mock_exam_bank:1340424",
+    "question:10017115",
+    "mock_exam_bank:1340448",
+    "question:10017141",
+    "mock_exam_bank:1340474"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10017071",
+      "targets": [
+        "question:10017071",
+        "mock_exam_bank:1340404"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340404",
+        "held for human/evidence review question:10017071"
+      ]
+    },
+    {
+      "contentGroup": "question:10017073",
+      "targets": [
+        "question:10017073",
+        "mock_exam_bank:1340406"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340406",
+        "held for human/evidence review question:10017073"
+      ]
+    },
+    {
+      "contentGroup": "question:10017132",
+      "targets": [
+        "question:10017132",
+        "mock_exam_bank:1340465"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340465",
+        "held for human/evidence review question:10017132"
+      ]
+    },
+    {
+      "contentGroup": "question:10017138",
+      "targets": [
+        "question:10017138",
+        "mock_exam_bank:1340471"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340471",
+        "held for human/evidence review question:10017138"
+      ]
+    },
+    {
+      "contentGroup": "question:10017139",
+      "targets": [
+        "question:10017139",
+        "mock_exam_bank:1340472"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340472",
+        "held for human/evidence review question:10017139"
+      ]
+    },
+    {
+      "contentGroup": "question:10017140",
+      "targets": [
+        "question:10017140",
+        "mock_exam_bank:1340473"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340473",
+        "held for human/evidence review question:10017140"
+      ]
+    },
+    {
+      "contentGroup": "question:10017142",
+      "targets": [
+        "question:10017142",
+        "mock_exam_bank:1340475"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340475",
+        "held for human/evidence review question:10017142"
+      ]
+    },
+    {
+      "contentGroup": "question:10017146",
+      "targets": [
+        "question:10017146",
+        "mock_exam_bank:1340479"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340479",
+        "held for human/evidence review question:10017146"
+      ]
+    },
+    {
+      "contentGroup": "question:10017155",
+      "targets": [
+        "question:10017155",
+        "mock_exam_bank:1340488"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340488",
+        "held for human/evidence review question:10017155"
+      ]
+    },
+    {
+      "contentGroup": "question:10017158",
+      "targets": [
+        "question:10017158",
+        "mock_exam_bank:1340491"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340491",
+        "held for human/evidence review question:10017158"
+      ]
+    },
+    {
+      "contentGroup": "question:10017163",
+      "targets": [
+        "question:10017163",
+        "mock_exam_bank:1340496"
+      ],
+      "reasons": [
+        "held for human/evidence review mock_exam_bank:1340496",
+        "held for human/evidence review question:10017163"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-029-segment-581def26e2ad.sql",
+  "migrationSha256": "bb242806f89a370d3be1c8a75e3026c937c669d6a953d0d53ea3450c77715041"
+}

@@ -1,0 +1,154 @@
+{
+  "repository": "https://github.com/open-compass/LawBench",
+  "commit": "e30981bb3ff54c41571f222e0b23e92d27375388",
+  "task_counts": {
+    "1-1": 500,
+    "1-2": 500,
+    "2-1": 500,
+    "2-10": 500,
+    "2-2": 500,
+    "2-3": 500,
+    "2-4": 500,
+    "2-5": 500,
+    "2-6": 500,
+    "2-7": 500,
+    "2-8": 500,
+    "2-9": 500,
+    "3-1": 500,
+    "3-2": 500,
+    "3-3": 500,
+    "3-4": 500,
+    "3-5": 500,
+    "3-6": 500,
+    "3-7": 500,
+    "3-8": 500
+  },
+  "files": [
+    {
+      "path": "1-1.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/1-1.json",
+      "sha256": "2e4fbcb42a7e7cce6f1a3f771a01cf7896384aecdc5b2900c74550497426c40e",
+      "bytes": 246530
+    },
+    {
+      "path": "1-2.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/1-2.json",
+      "sha256": "860d9f9e64706d5396d014027e571e1191b25c753fbea35a31710fc741fa8aa3",
+      "bytes": 336198
+    },
+    {
+      "path": "2-1.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/2-1.json",
+      "sha256": "dc799c07cc1b49543b748febb379d82c06cb72fa9e0737b90a87600ee914be8a",
+      "bytes": 367097
+    },
+    {
+      "path": "2-10.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/2-10.json",
+      "sha256": "968a7f84211f9b5c4a621c22b1795f5d92322244a2898903a0c17996391a2c98",
+      "bytes": 265447
+    },
+    {
+      "path": "2-2.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/2-2.json",
+      "sha256": "293d1876af2cf3f15061817aaf25e817eb977b0134ac3cec2189adf4a003389e",
+      "bytes": 1176723
+    },
+    {
+      "path": "2-3.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/2-3.json",
+      "sha256": "48a389305914b03010c7a612a36362ee723b9c3e7f42c5695122e89ad49f2e9c",
+      "bytes": 449800
+    },
+    {
+      "path": "2-4.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/2-4.json",
+      "sha256": "7f9a55fa37d8bc4d1fb1306e728cc98caa0e596747d6200c77b693703d2dc260",
+      "bytes": 342387
+    },
+    {
+      "path": "2-5.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/2-5.json",
+      "sha256": "68782e85bef4f0459878c89b5fb5897f92ad79bf0603c48e75769b0bd6dff1d1",
+      "bytes": 1048308
+    },
+    {
+      "path": "2-6.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/2-6.json",
+      "sha256": "7f6780eff758196790ed17c4cdd8136d85719eca7a89bd94eee6df10659e8359",
+      "bytes": 317182
+    },
+    {
+      "path": "2-7.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/2-7.json",
+      "sha256": "db4b7c6a8f673131383b9840413626e18f84d221955d870766bd8a68ca8ee164",
+      "bytes": 738486
+    },
+    {
+      "path": "2-8.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/2-8.json",
+      "sha256": "e9edc46b0bb95514720fbbf9e32042303cdbbce87358811b3ad1dc0dc8aee3e6",
+      "bytes": 722963
+    },
+    {
+      "path": "2-9.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/2-9.json",
+      "sha256": "2b47a232d0f142819ccc268be8ecb8978396f29707261ebd0ae7c7f1e42d8963",
+      "bytes": 346793
+    },
+    {
+      "path": "3-1.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/3-1.json",
+      "sha256": "6ca91fff5ab6cd4fd6f46316edf0e4c6fd5bddd3ebf73ad3e7dc505e29591c1a",
+      "bytes": 974748
+    },
+    {
+      "path": "3-2.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/3-2.json",
+      "sha256": "2e209fb2343db7dea424131ac8f7cb41d1bd291e6fe09be761e474eb1fdaa87d",
+      "bytes": 392440
+    },
+    {
+      "path": "3-3.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/3-3.json",
+      "sha256": "64378a7d7c3548cbe336d989f50a1301ba531ef53fc97b4dd879fda7e6fec755",
+      "bytes": 856494
+    },
+    {
+      "path": "3-4.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/3-4.json",
+      "sha256": "7aa28afdfbdddb49adf09e2d3295bdf0c03a3309edbb0fad238129390d79fa49",
+      "bytes": 975633
+    },
+    {
+      "path": "3-5.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/3-5.json",
+      "sha256": "0289bde514d8d188c2d8c9fda762e39e4b36523de2801584792496e2f8191c3a",
+      "bytes": 1454139
+    },
+    {
+      "path": "3-6.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/3-6.json",
+      "sha256": "17f8f78c9c279417455cd543577468acb16e88a3193b73c1f3d67240b8fe7fdf",
+      "bytes": 441768
+    },
+    {
+      "path": "3-7.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/3-7.json",
+      "sha256": "21502f2cf10dc00a657bd64e9fd9173ae483973dba81126f928e783aec53337c",
+      "bytes": 771014
+    },
+    {
+      "path": "3-8.json",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/data/zero_shot/3-8.json",
+      "sha256": "3eb1989dd55e03e1414d8a68854e551e044d8d32544971e63c9d24d271374382",
+      "bytes": 745333
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/open-compass/LawBench/e30981bb3ff54c41571f222e0b23e92d27375388/README.md",
+      "sha256": "7febfea078bd3d5823f0ccb6c96feb625ca3e5fe9bb3fd9dfb50129608b351a4",
+      "bytes": 29240
+    }
+  ]
+}

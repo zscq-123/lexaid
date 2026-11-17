@@ -1,0 +1,19 @@
+{
+  "uniqueQuestions": 26286,
+  "datasetReviewRecords": 26341,
+  "dailyPracticeQuestions": 25628,
+  "separateFormalExamQuestions": 658,
+  "multiSourceQuestions": 55,
+  "countsByDataset": {
+    "seed": 30,
+    "lawbench": 9968,
+    "lexeval": 14142,
+    "lecoqa": 1543,
+    "formal": 658
+  },
+  "dailyChangedAfterAuditSnapshot": 89,
+  "formalChangedAfterAuditSnapshot": 3,
+  "indexSha256": "322fca3c95436ac6a6a988eba013e9a168ad694d4bdd9eb29d30ec49d42c170f",
+  "humanDualApproval": false,
+  "scope": "All rows have content/source audit records. This does not mean every legal answer was substantively verified."
+}

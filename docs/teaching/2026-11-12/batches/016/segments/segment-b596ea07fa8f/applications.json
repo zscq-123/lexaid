@@ -1,0 +1,67 @@
+{
+  "batch": "016",
+  "segment": "segment-b596ea07fa8f",
+  "database": "lexaid",
+  "verifiedAt": "2026-11-12T01:26:21.880702+00:00",
+  "migration": "backend/src/main/resources/teaching-batch-016-segment-b596ea07fa8f.sql",
+  "migrationSha256": "710acf66401931a4b5598252162a1cc9cb43a120d35427b8d6e766d99016713a",
+  "records": [
+    {
+      "target": "question:10017093",
+      "id": 10017093,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "b8f69151f3bc41faf1a8a9fe31ea2706cc5983397e3f1ef5aae4f47d8c1448ab",
+      "afterHash": "b8f69151f3bc41faf1a8a9fe31ea2706cc5983397e3f1ef5aae4f47d8c1448ab",
+      "revisionKey": "2026-11-12-teaching-016-10017093"
+    },
+    {
+      "target": "mock_exam_bank:1340426",
+      "id": 1340426,
+      "table": "mock_exam_bank",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9f415cdf1876c03eded3f7a98a9ebac621d452679c59ca33376b6c1b450ab088",
+      "afterHash": "9f415cdf1876c03eded3f7a98a9ebac621d452679c59ca33376b6c1b450ab088",
+      "revisionKey": "2026-11-12-teaching-016-mock-1340426"
+    }
+  ],
+  "exactAfterMatches": 2,
+  "archives": {
+    "question_content_revision": {
+      "total": 1,
+      "applied": 1
+    },
+    "mock_exam_content_revision": {
+      "total": 1,
+      "applied": 1
+    }
+  },
+  "historyBefore": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyAfter": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyPreserved": true,
+  "repeatChecksums": {
+    "question": "2460706112",
+    "question_legal_subject": "4169332068",
+    "mock_exam_bank": "11761734",
+    "question_content_revision": "1640459454",
+    "mock_exam_content_revision": "87107339"
+  },
+  "idempotent": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false
+}

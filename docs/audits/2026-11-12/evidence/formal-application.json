@@ -1,0 +1,9 @@
+{
+  "database": "lexaid",
+  "changed": 3,
+  "allCandidatesApplied": true,
+  "historicalExamSnapshotsUnchanged": true,
+  "answerHistoryUnchanged": true,
+  "repeatChanges": 0,
+  "isolatedDurableDatabase": "No source mock bank rows; safely skipped all 3. Temporary shadow-table migration tests passed."
+}

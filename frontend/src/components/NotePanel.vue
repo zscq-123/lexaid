@@ -7,6 +7,7 @@
     <el-empty v-if="notes.length === 0" :image-size="60" description="还没有笔记，点击右上角添加" />
     <div v-for="n in notes" :key="n.id" class="note">
       <div class="note-content">{{ n.content }}</div>
+      <el-tag v-for="tag in noteTags(n.content)" :key="tag" size="small" effect="plain">#{{ tag }}</el-tag>
       <div class="note-meta">
         <span>{{ formatTime(n.createdAt) }}</span>
         <span>
@@ -23,7 +24,7 @@
         :rows="6"
         maxlength="2000"
         show-word-limit
-        placeholder="记录你的思考…"
+        placeholder="记录事实、依据、推理与错因；可用 #合同法 #易错点 添加标签。笔记会关联当前内容。"
       />
       <template #footer>
         <el-button @click="dialog = false">取消</el-button>
@@ -34,8 +35,9 @@
 </template>
 
 <script setup>
-import { onMounted, reactive, ref } from 'vue'
+import { reactive, ref, watch } from 'vue'
 import { createNote, deleteNote, listNotes, updateNote } from '../api/note'
+import { noteTags } from '../utils/note-tags'
 
 const props = defineProps({
   targetType: { type: String, required: true },
@@ -47,9 +49,12 @@ const dialog = ref(false)
 const editing = ref(null)
 const saving = ref(false)
 const form = reactive({ content: '' })
+let requestVersion = 0
 
 async function load() {
-  notes.value = await listNotes({ targetType: props.targetType, targetId: props.targetId })
+  const version = ++requestVersion
+  const data = await listNotes({ targetType: props.targetType, targetId: props.targetId })
+  if (version === requestVersion) notes.value = data
 }
 
 function openAdd() {
@@ -100,7 +105,7 @@ function formatTime(t) {
   return t ? t.replace('T', ' ').slice(0, 16) : ''
 }
 
-onMounted(load)
+watch(() => [props.targetType, props.targetId], () => { notes.value = []; dialog.value = false; load() }, { immediate: true })
 </script>
 
 <style scoped>

@@ -27,7 +27,7 @@
 
     <div class="insight-strip" aria-label="内容参与概览">
       <div><span>累计学习</span><strong>{{ formatDuration(overview?.totalStudyMinutes) }}</strong></div>
-      <div><span>答题总量</span><strong>{{ number(overview?.totalAnswers) }}</strong></div>
+      <div><span>实际作答次数（含重复）</span><strong>{{ number(overview?.totalAnswers) }}</strong></div>
       <div><span>学习笔记</span><strong>{{ number(overview?.totalNotes) }}</strong></div>
       <div><span>社区动态</span><strong>{{ number(overview?.totalPosts) }}</strong></div>
     </div>
@@ -73,7 +73,7 @@
               <el-option label="最近活跃" value="lastActive" />
               <el-option label="注册时间" value="created" />
               <el-option label="学习时长" value="studyTime" />
-              <el-option label="答题数量" value="answers" />
+              <el-option label="作答次数" value="answers" />
             </el-select>
             <el-button class="search-button" type="primary" @click="applyFilters">查询</el-button>
           </div>
@@ -99,7 +99,7 @@
           <template #default="{ row }"><strong>{{ formatDuration(row.studyMinutes) }}</strong><span class="cell-sub">累计时长</span></template>
         </el-table-column>
         <el-table-column label="答题表现" min-width="140">
-          <template #default="{ row }"><strong>{{ number(row.answerCount) }} 题</strong><span class="cell-sub">正确率 {{ row.accuracy }}%</span></template>
+          <template #default="{ row }"><strong>{{ number(row.answerCount) }} 次</strong><span class="cell-sub">正确率 {{ row.accuracy }}%</span></template>
         </el-table-column>
         <el-table-column label="内容沉淀" min-width="180">
           <template #default="{ row }"><span>{{ row.noteCount }} 笔记 · {{ row.favoriteCount }} 收藏</span><span class="cell-sub">{{ row.postCount }} 条社区动态</span></template>
@@ -134,7 +134,7 @@
           </div>
           <div class="detail-metrics">
             <div><strong>{{ formatDuration(detail.profile.studyMinutes) }}</strong><span>学习时长</span></div>
-            <div><strong>{{ number(detail.profile.answerCount) }}</strong><span>答题数量</span></div>
+            <div><strong>{{ number(detail.profile.answerCount) }}</strong><span>作答次数（含重复）</span></div>
             <div><strong>{{ detail.profile.accuracy }}%</strong><span>答题正确率</span></div>
           </div>
           <section class="drawer-section">

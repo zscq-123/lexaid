@@ -39,7 +39,7 @@ class PublicSiteSearchTest {
         var params = ArgumentCaptor.forClass(SqlParameterSource.class);
         verify(db).query(sql.capture(), params.capture(), any(RowMapper.class));
         assertThat(sql.getValue()).contains("FROM question", "LOCATE(", "options", "tag_names")
-                .doesNotContain(input, "answer", "analysis", " LIKE ");
+                .doesNotContain(input, " AS answer", " AS analysis", " LIKE ");
         assertThat(params.getValue().getValue("t0")).isEqualTo("a%'_x");
         assertThat(params.getValue().hasValue("t1")).isFalse();
     }

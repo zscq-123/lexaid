@@ -2,6 +2,7 @@ package com.lexaid.resource;
 
 import com.lexaid.common.BizException;
 import org.junit.jupiter.api.Test;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.mock.web.MockMultipartFile;
 
 import java.io.ByteArrayOutputStream;
@@ -11,6 +12,10 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 class ResourceFileTest {
 
@@ -91,11 +96,14 @@ class ResourceFileTest {
     }
 
     @Test
-    void acceptsFilesOfAnySizeBecauseTheLibrarySetsNoUploadCeiling() {
-        // A 21 MB text file used to exceed the former 20 MB application limit.
-        byte[] large = new byte[21 * 1024 * 1024];
-        java.util.Arrays.fill(large, (byte) 'a');
-        var file = ResourceFile.read(upload("大文件.txt", large));
-        assertEquals(large.length, file.bytes().length);
+    void rejectsOversizedFilesBeforeMaterialisingTheirBytes() throws Exception {
+        MultipartFile large = mock(MultipartFile.class);
+        when(large.isEmpty()).thenReturn(false);
+        when(large.getSize()).thenReturn(ResourceFile.MAX_BYTES + 1);
+
+        BizException error = assertThrows(BizException.class, () -> ResourceFile.read(large));
+
+        assertEquals(413, error.getCode());
+        verify(large, never()).getBytes();
     }
 }

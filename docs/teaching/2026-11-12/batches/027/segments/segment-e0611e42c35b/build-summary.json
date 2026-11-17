@@ -1,0 +1,22 @@
+{
+  "batch": "027",
+  "segment": "segment-e0611e42c35b",
+  "records": 4,
+  "groups": 2,
+  "tables": {
+    "question": 2,
+    "mock_exam_bank": 2
+  },
+  "eligibleTargets": [
+    "question:10016689",
+    "mock_exam_bank:1340022",
+    "question:10016899",
+    "mock_exam_bank:1340232"
+  ],
+  "skippedGroups": [],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-027-segment-e0611e42c35b.sql",
+  "migrationSha256": "cecac3a42558498658ea9b133f566f49454e73348129e65339b6e70252f2ffb7"
+}

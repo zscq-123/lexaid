@@ -1,0 +1,19 @@
+{
+  "dailyCandidates": 10945,
+  "independentExamRecords": 658,
+  "targetRecords": 11603,
+  "contentGroups": 11278,
+  "sharedSourceExamRecords": 325,
+  "batches": 277,
+  "firstBatch": 216,
+  "statuses": {
+    "APPLIED_AWAITING_RELEASE_REVIEW": 2138,
+    "AWAITING_HUMAN_REVIEW": 3161,
+    "PENDING_AUTHORING": 6267,
+    "CROSS_REVIEWED_AWAITING_APPLICATION": 22,
+    "DRAFT_AWAITING_CROSS_REVIEW": 5,
+    "AUTHORING_REQUIRES_EVIDENCE": 10
+  },
+  "excludedBenchmarkRecords": 14683,
+  "scope": "All audited teaching candidates plus independent exam records. NLP/exact-prediction benchmark tasks remain excluded, not relabeled as teaching explanations."
+}

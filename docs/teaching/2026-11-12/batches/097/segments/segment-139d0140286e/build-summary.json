@@ -1,0 +1,148 @@
+{
+  "batch": "097",
+  "segment": "segment-139d0140286e",
+  "records": 40,
+  "groups": 40,
+  "tables": {
+    "question": 40
+  },
+  "eligibleTargets": [
+    "question:10011295",
+    "question:10011296",
+    "question:10011297",
+    "question:10011298",
+    "question:10011299",
+    "question:10011300",
+    "question:10011301",
+    "question:10011302",
+    "question:10011303",
+    "question:10011304",
+    "question:10011305",
+    "question:10011306",
+    "question:10011307",
+    "question:10011308",
+    "question:10011309",
+    "question:10011310",
+    "question:10011311",
+    "question:10011312",
+    "question:10011313",
+    "question:10011314",
+    "question:10011315",
+    "question:10011316",
+    "question:10011317",
+    "question:10011318",
+    "question:10011319",
+    "question:10011320",
+    "question:10011321",
+    "question:10011322",
+    "question:10011323",
+    "question:10011324",
+    "question:10011325",
+    "question:10011326",
+    "question:10011327",
+    "question:10011328",
+    "question:10011329",
+    "question:10011330",
+    "question:10011331",
+    "question:10011332",
+    "question:10011333",
+    "question:10011334"
+  ],
+  "skippedGroups": [
+    {
+      "contentGroup": "question:10011335",
+      "targets": [
+        "question:10011335"
+      ],
+      "reasons": [
+        "missing cross-review question:10011335"
+      ]
+    },
+    {
+      "contentGroup": "question:10011336",
+      "targets": [
+        "question:10011336"
+      ],
+      "reasons": [
+        "missing cross-review question:10011336"
+      ]
+    },
+    {
+      "contentGroup": "question:10011337",
+      "targets": [
+        "question:10011337"
+      ],
+      "reasons": [
+        "missing cross-review question:10011337"
+      ]
+    },
+    {
+      "contentGroup": "question:10011338",
+      "targets": [
+        "question:10011338"
+      ],
+      "reasons": [
+        "missing cross-review question:10011338"
+      ]
+    },
+    {
+      "contentGroup": "question:10011339",
+      "targets": [
+        "question:10011339"
+      ],
+      "reasons": [
+        "missing cross-review question:10011339"
+      ]
+    },
+    {
+      "contentGroup": "question:10011340",
+      "targets": [
+        "question:10011340"
+      ],
+      "reasons": [
+        "missing cross-review question:10011340"
+      ]
+    },
+    {
+      "contentGroup": "question:10011341",
+      "targets": [
+        "question:10011341"
+      ],
+      "reasons": [
+        "missing cross-review question:10011341"
+      ]
+    },
+    {
+      "contentGroup": "question:10011342",
+      "targets": [
+        "question:10011342"
+      ],
+      "reasons": [
+        "missing cross-review question:10011342"
+      ]
+    },
+    {
+      "contentGroup": "question:10011343",
+      "targets": [
+        "question:10011343"
+      ],
+      "reasons": [
+        "missing cross-review question:10011343"
+      ]
+    },
+    {
+      "contentGroup": "question:10011344",
+      "targets": [
+        "question:10011344"
+      ],
+      "reasons": [
+        "missing cross-review question:10011344"
+      ]
+    }
+  ],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-097-segment-139d0140286e.sql",
+  "migrationSha256": "c5ad74bfe028f26f6b89c4ee275578cf740aba4df5d226d434df674dca2a9146"
+}

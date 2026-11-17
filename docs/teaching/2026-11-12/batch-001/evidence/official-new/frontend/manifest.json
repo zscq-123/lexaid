@@ -1,0 +1,183 @@
+[
+  {
+    "law": "最高人民法院、最高人民检察院关于办理侵犯知识产权刑事案件适用法律若干问题的解释",
+    "articles": [
+      "第三条",
+      "第四条",
+      "第五条",
+      "第六条",
+      "第七条",
+      "第三十一条"
+    ],
+    "version": "法释〔2025〕5号，2025-04-26施行",
+    "url": "https://ipc.court.gov.cn/zh-cn/news/view-4225.html",
+    "retrievedAt": "2026-11-11T23:42:04.197591+00:00",
+    "resolvedURL": "https://ipc.court.gov.cn/zh-cn/news/view-4225.html",
+    "httpStatus": 200,
+    "htmlPath": "1c6f02edfb1f.html.gz",
+    "textPath": "1c6f02edfb1f.txt.gz",
+    "htmlSHA256": "3747ced42fc0b7b9a090071b0f5ef62726acb00fe97e764fd29a7d42203fc361",
+    "textSHA256": "27c4a778a7a044d4ae1456edb114b6eec23a0814da21e035a6bebadc639956b7",
+    "textChars": 11126
+  },
+  {
+    "law": "中华人民共和国行政复议法",
+    "articles": [
+      "第二十三条"
+    ],
+    "version": "2023-09-01修订，2024-01-01施行",
+    "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5220333/content.html",
+    "retrievedAt": "2026-11-11T23:42:04.197886+00:00",
+    "resolvedURL": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5220333/content.html",
+    "httpStatus": 200,
+    "htmlPath": "799b8c4cfa8d.html.gz",
+    "textPath": "799b8c4cfa8d.txt.gz",
+    "htmlSHA256": "c1e67b8b5134bf156c2933e584eb4806d325a2c748421abdae04149f4b60fd87",
+    "textSHA256": "002ddf362f929272ff4c145392213459f58c219b820052e3e79853b45b55d22c",
+    "textChars": 13985
+  },
+  {
+    "law": "最高人民法院、最高人民检察院关于办理非法利用信息网络、帮助信息网络犯罪活动等刑事案件适用法律若干问题的解释",
+    "articles": [
+      "第十二条"
+    ],
+    "version": "法释〔2019〕15号，2019-11-01施行",
+    "url": "https://www.spp.gov.cn/spp/xwfbh/wsfbh/201910/t20191025_436138.shtml",
+    "retrievedAt": "2026-11-11T23:42:04.197956+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "fallbackURL": "https://www.court.gov.cn/fabu/xiangqing/193711.html",
+    "fallbackReason": "最高检原页面HTTP403；改抓同一司法解释最高法官方全文",
+    "fallbackRetrievedAt": "2026-11-11T23:42:41.917353+00:00",
+    "resolvedURL": "https://www.court.gov.cn/fabu/xiangqing/193711.html",
+    "httpStatus": 200,
+    "htmlPath": "c35dda574032.html.gz",
+    "textPath": "c35dda574032.txt.gz",
+    "htmlSHA256": "2f5cf6be95a6a9fdd1a75957e2970bf2b5ba3957be6f17850ff07d9e88f7a3ed",
+    "textSHA256": "cff5be6eadb7fb23930c912e4f90296fac2ce0f8edd94295a3c6c75286e8bc55",
+    "textChars": 4201
+  },
+  {
+    "law": "最高人民法院、最高人民检察院、公安部关于办理帮助信息网络犯罪活动等刑事案件有关问题的意见",
+    "articles": [
+      "第四项",
+      "第五项",
+      "第六项"
+    ],
+    "version": "法发〔2025〕12号，2025-07-22",
+    "url": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=103418",
+    "retrievedAt": "2026-11-11T23:42:04.198000+00:00",
+    "resolvedURL": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=103418",
+    "httpStatus": 200,
+    "htmlPath": "b829a64b466c.html.gz",
+    "textPath": "b829a64b466c.txt.gz",
+    "htmlSHA256": "f0cb1084557f66178c2fe876b98c7a4eaef90a967b84ec73ae0548b3dbd986c7",
+    "textSHA256": "178458c55e124c8a9864a024a11ad12549b96712c73382a98e4ad5c76c44e683",
+    "textChars": 4300
+  },
+  {
+    "law": "最高人民法院关于审理建设工程施工合同纠纷案件适用法律问题的解释（二）",
+    "version": "法释〔2026〕12号，2026-06-30施行，适用于施行后新受理的一审案件",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/504221.html",
+    "articles": [
+      "第十七条",
+      "第十八条",
+      "第二十一条",
+      "第二十三条"
+    ],
+    "retrievedAt": "2026-11-11T23:42:07.741383+00:00",
+    "resolvedURL": "https://www.court.gov.cn/zixun/xiangqing/504221.html",
+    "httpStatus": 200,
+    "htmlPath": "ae288cba8708.html.gz",
+    "textPath": "ae288cba8708.txt.gz",
+    "htmlSHA256": "3f0a04189d38050a7ea96e372ec2796868b14c00ea1adfba9b857a8b7d1c1c9f",
+    "textSHA256": "b81d27db348c11afa6c3b45c2933b8060def286b4fc02eb19ba8d0395e79e705",
+    "textChars": 4150
+  },
+  {
+    "law": "中华人民共和国未成年人保护法",
+    "articles": [
+      "第三十九条"
+    ],
+    "version": "2024-04-26修正文本",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_54358c05e57642ab895176413f7cd4d7.html",
+    "retrievedAt": "2026-11-11T23:42:07.742901+00:00",
+    "resolvedURL": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_54358c05e57642ab895176413f7cd4d7.html",
+    "httpStatus": 200,
+    "htmlPath": "714d44f00386.html.gz",
+    "textPath": "714d44f00386.txt.gz",
+    "htmlSHA256": "55ff97498ef813bbdb82f5273cc0842925c3623a3f8f696b020f8e9656e93b75",
+    "textSHA256": "f9cd39be6793ca9ca2047a45eb9fbf59adc0a8232e8c8e27c6116abfecf266b8",
+    "textChars": 17316
+  },
+  {
+    "law": "中华人民共和国学位法",
+    "articles": [
+      "第二十二条",
+      "第二十四条",
+      "第三十七条",
+      "第三十九条",
+      "第四十一条",
+      "第四十五条"
+    ],
+    "version": "2024-04-26通过，2025-01-01施行",
+    "url": "https://qspfw.moe.gov.cn/html/sublaws/20240428/21723.html",
+    "retrievedAt": "2026-11-11T23:42:08.173478+00:00",
+    "resolvedURL": "https://qspfw.moe.gov.cn/html/sublaws/20240428/21723.html",
+    "httpStatus": 200,
+    "htmlPath": "825f202a14d7.html.gz",
+    "textPath": "825f202a14d7.txt.gz",
+    "htmlSHA256": "3360cee1e2b4df3ca5164beb15d0fcb32189a43ce01758ad43ca3fe0a891191b",
+    "textSHA256": "61a064c5529074a2d18fe222110a86a07987449e9c04c6f88cddd986e1f0081d",
+    "textChars": 6016
+  },
+  {
+    "law": "最高人民法院指导案例39号：何小强诉华中科技大学拒绝授予学位案",
+    "articles": [
+      "裁判要点1"
+    ],
+    "version": "2014-12-25发布；仅用于说明不授位行政行为可诉，实体依据以现行学位法为准",
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/13223.html",
+    "retrievedAt": "2026-11-11T23:42:09.344267+00:00",
+    "resolvedURL": "https://www.court.gov.cn/shenpan/xiangqing/13223.html",
+    "httpStatus": 200,
+    "htmlPath": "d6e2b1e9b103.html.gz",
+    "textPath": "d6e2b1e9b103.txt.gz",
+    "htmlSHA256": "78bc58e9dca66af0fb73e055049f0c09f078926c8a310cc56718b635534fdf3f",
+    "textSHA256": "9594032fe4b41f3453685f6f7a7bd24942716a8868b4dd1eed068ea7241c7014",
+    "textChars": 3010
+  },
+  {
+    "law": "最高人民法院关于执行程序中计算迟延履行期间的债务利息适用法律若干问题的解释",
+    "articles": [
+      "第一条",
+      "第二条"
+    ],
+    "version": "法释〔2014〕8号，2014-08-01施行；原解释援引旧民诉法条号，现对应第二百六十四条",
+    "url": "https://www.court.gov.cn/fabu/xiangqing/6628.html",
+    "retrievedAt": "2026-11-11T23:42:09.811407+00:00",
+    "resolvedURL": "https://www.court.gov.cn/fabu/xiangqing/6628.html",
+    "httpStatus": 200,
+    "htmlPath": "ba9bf2330c26.html.gz",
+    "textPath": "ba9bf2330c26.txt.gz",
+    "htmlSHA256": "8a18635b965d402eef90cf13ecf5a7f7438975a4f6e872a2e0f38815d4a4a30a",
+    "textSHA256": "68a7f710053e8684e63bd5cf57dde3f747b7959770ad84b423686f472683aa7e",
+    "textChars": 1786
+  },
+  {
+    "law": "中华人民共和国生态环境法典",
+    "articles": [
+      "第一千零五十四条第二款",
+      "第一千二百四十二条"
+    ],
+    "version": "2026-03-12通过，2026-08-15施行",
+    "url": "https://ecro.mee.gov.cn/fgbz/fl/202604/t20260416_1148993.html",
+    "retrievedAt": "2026-11-11T23:42:09.843340+00:00",
+    "resolvedURL": "https://ecro.mee.gov.cn/fgbz/fl/202604/t20260416_1148993.html",
+    "httpStatus": 200,
+    "htmlPath": "265ef840940b.html.gz",
+    "textPath": "265ef840940b.txt.gz",
+    "htmlSHA256": "90a9e90a61dd46bac892b7848d3d90ca78483a3bf156ad0d612ad4d4684983b8",
+    "textSHA256": "89624a1f3402da3524dc183dc528617f915896eb4fac9ec08a6441b4d825cd9e",
+    "textChars": 171085
+  }
+]

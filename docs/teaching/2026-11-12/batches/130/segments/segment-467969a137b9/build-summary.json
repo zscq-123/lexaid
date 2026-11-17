@@ -1,0 +1,36 @@
+{
+  "batch": "130",
+  "segment": "segment-467969a137b9",
+  "records": 19,
+  "groups": 19,
+  "tables": {
+    "question": 19
+  },
+  "eligibleTargets": [
+    "question:10000712",
+    "question:10008739",
+    "question:10010487",
+    "question:10010493",
+    "question:10010500",
+    "question:10010550",
+    "question:10010594",
+    "question:10010614",
+    "question:10010641",
+    "question:10010713",
+    "question:10010721",
+    "question:10010730",
+    "question:10010804",
+    "question:10010805",
+    "question:10010816",
+    "question:10010851",
+    "question:10011732",
+    "question:10012340",
+    "question:10012369"
+  ],
+  "skippedGroups": [],
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false,
+  "migration": "backend/src/main/resources/teaching-batch-130-segment-467969a137b9.sql",
+  "migrationSha256": "dc3d3f80fa306d020d349dd2882c274943307064169cc4bf5e8b5444d6cd23fc"
+}

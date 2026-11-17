@@ -23,6 +23,7 @@ public record AnswerDetailVO(
         String feedback,
         String discipline,
         String subject,
-        List<QuestionBook> codeBooks
+        List<QuestionBook> codeBooks,
+        boolean practiceEligible
 ) {
 }

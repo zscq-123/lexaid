@@ -1,0 +1,920 @@
+[
+  {
+    "id": 10024199,
+    "contentHash": "099c51235174a911ce0d36bed41a35ea87901738198fa1644043a16eb666e77c",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_治安管理处罚法_第八十七条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "治安管理处罚法第八十七条：公安机关对与违反治安管理行为有关的场所、物品、人身可以进行检查。检查时，人民警察不得少于二人，并应当出示工作证件和县级以上人民政府公安机关开具的检查证明文件。对确有必要立即进行检查的，人民警察经出示工作证件，可以当场检查，但检查公民住所应当出示县级以上人民政府公安机关开具的检查证明文件。\n\n检查妇女的身体，应当由女性工作人员进行。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024436,
+    "contentHash": "de17aa9beb41a76b5ad21dc413b3dd281896f5566037c85592419293e7de2343",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_公司法_第四十四条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "公司法第四十四条：有限责任公司设董事会，其成员为三人至十三人；但是，本法第五十条另有规定的除外。\n\n两个以上的国有企业或者两个以上的其他国有投资主体投资设立的有限责任公司，其董事会成员中应当有公司职工代表；其他有限责任公司董事会成员中可以有公司职工代表。董事会中的职工代表由公司职工通过职工代表大会、职工大会或者其他形式民主选举产生。\n\n董事会设董事长一人，可以设副董事长。董事",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024437,
+    "contentHash": "aa3f22d9946a73f36afc163d26ff96a53e1ecf6ba211638be8a5fa6aa3cfdf1b",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_公司法_第二百一十六条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "公司法第二百一十六条：本法下列用语的含义：\n\n（一）高级管理人员，是指公司的经理、副经理、财务负责人，上市公司董事会秘书和公司章程规定的其他人员。\n\n（二）控股股东，是指其出资额占有限责任公司资本总额百分之五十以上或者其持有的股份占股份有限公司股本总额百分之五十以上的股东；出资额或者持有股份的比例虽然不足百分之五十，但依其出资额或者持有的股份所享有的表决权已足以对股东会、股东大会",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024438,
+    "contentHash": "e3dcaac9b0f23eee3006b8606f0502c55556049c6953b236970519748528dfc4",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_公司法_第四十四条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "公司法第四十四条：有限责任公司设董事会，其成员为三人至十三人；但是，本法第五十条另有规定的除外。\n\n两个以上的国有企业或者两个以上的其他国有投资主体投资设立的有限责任公司，其董事会成员中应当有公司职工代表；其他有限责任公司董事会成员中可以有公司职工代表。董事会中的职工代表由公司职工通过职工代表大会、职工大会或者其他形式民主选举产生。\n\n董事会设董事长一人，可以设副董事长。董事",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024439,
+    "contentHash": "e714196aa43b797be683976d66958c7073061b56e36afa1941329f3191bfd46e",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_公司法_第四十四条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "公司法第四十四条：有限责任公司设董事会，其成员为三人至十三人；但是，本法第五十条另有规定的除外。\n\n两个以上的国有企业或者两个以上的其他国有投资主体投资设立的有限责任公司，其董事会成员中应当有公司职工代表；其他有限责任公司董事会成员中可以有公司职工代表。董事会中的职工代表由公司职工通过职工代表大会、职工大会或者其他形式民主选举产生。\n\n董事会设董事长一人，可以设副董事长。董事",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024497,
+    "contentHash": "0732a35027064cef761d11e532ed45352e03b97112e8d99efecf4d22e37a156a",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_公司法_第四十七条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "公司法第四十七条：董事会会议由董事长召集和主持；董事长不能履行职务或者不履行职务的，由副董事长召集和主持；副董事长不能履行职务或者不履行职务的，由半数以上董事共同推举一名董事召集和主持。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024700,
+    "contentHash": "a79a418ea801cf479694646ab4fea1feb4b9d36448d2dc12f4f81fa364386e4d",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_民事诉讼法_第二百零三条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "民事诉讼法第二百零三条：申请实现担保物权，由担保物权人以及其他有权请求实现担保物权的人依照民法典等法律，向担保财产所在地或者担保物权登记地基层人民法院提出。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5220330/content.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024700,
+    "contentHash": "a79a418ea801cf479694646ab4fea1feb4b9d36448d2dc12f4f81fa364386e4d",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_民事诉讼法_第二百零四条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "民事诉讼法第二百零四条：人民法院受理申请后，经审查，符合法律规定的，裁定拍卖、变卖担保财产，当事人依据该裁定可以向人民法院申请执行；不符合法律规定的，裁定驳回申请，当事人可以向人民法院提起诉讼。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5220330/content.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024706,
+    "contentHash": "68ef588a000d8de76f13d83508fae86f704dbcb0f1e87b9f95bd7c26fe94a787",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_公司法_第二十条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "公司法第二十条：公司股东应当遵守法律、行政法规和公司章程，依法行使股东权利，不得滥用股东权利损害公司或者其他股东的利益；不得滥用公司法人独立地位和股东有限责任损害公司债权人的利益。\n\n公司股东滥用股东权利给公司或者其他股东造成损失的，应当依法承担赔偿责任。\n\n公司股东滥用公司法人独立地位和股东有限责任，逃避债务，严重损害公司债权人利益的，应当对公司债务承担连带责任。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024706,
+    "contentHash": "68ef588a000d8de76f13d83508fae86f704dbcb0f1e87b9f95bd7c26fe94a787",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_公司法_第六十三条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "公司法第六十三条：一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025007,
+    "contentHash": "3f49687423b0e6c4eb6124e78d40db2dfcac3eaa5133370c00d0acd3cf6420a0",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_民事诉讼法_第二百六十条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "民事诉讼法第二百六十条：被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5220330/content.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025022,
+    "contentHash": "93e637b3751b31d91cf6d3fecacdf06b8e3bf690b24e0a808b29e62ae8eb613b",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_民事诉讼法_第一百一十五条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "民事诉讼法第一百一十五条：当事人之间恶意串通，企图通过诉讼、调解等方式侵害他人合法权益的，人民法院应当驳回其请求，并根据情节轻重予以罚款、拘留；构成犯罪的，依法追究刑事责任。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5220330/content.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025062,
+    "contentHash": "779bf2ddf330a9419c3c154434cfbd46434d4fb05d22dbbc44ca43850d5b875f",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_治安管理处罚法_第十七条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "治安管理处罚法第十七条：共同违反治安管理的，根据违反治安管理行为人在违反治安管理行为中所起的作用，分别处罚。\n\n教唆、胁迫、诱骗他人违反治安管理的，按照其教唆、胁迫、诱骗的行为处罚。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025062,
+    "contentHash": "779bf2ddf330a9419c3c154434cfbd46434d4fb05d22dbbc44ca43850d5b875f",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_治安管理处罚法_第十九条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "治安管理处罚法第十九条：违反治安管理有下列情形之一的，减轻处罚或者不予处罚:\n\n（一）情节特别轻微的；\n\n（二）主动消除或者减轻违法后果，并取得被侵害人谅解的；\n\n（三）出于他人胁迫或者诱骗的；\n\n（四）主动投案，向公安机关如实陈述自己的违法行为的；\n\n（五）有立功表现的。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025062,
+    "contentHash": "779bf2ddf330a9419c3c154434cfbd46434d4fb05d22dbbc44ca43850d5b875f",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_治安管理处罚法_第二十条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "治安管理处罚法第二十条：违反治安管理有下列情形之一的，从重处罚:\n\n（一）有较严重后果的；\n\n（二）教唆、胁迫、诱骗他人违反治安管理的；\n\n（三）对报案人、控告人、举报人、证人打击报复的；\n\n（四）六个月内曾受过治安管理处罚的。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025199,
+    "contentHash": "4d3507af69edef0396aeeeb518e45d75baef3aa6e07ad366ce989b258d727813",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_民事诉讼法_第二百七十八条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "民事诉讼法第二百七十八条：涉外经济贸易、运输和海事中发生的纠纷，当事人在合同中订有仲裁条款或者事后达成书面仲裁协议，提交中华人民共和国涉外仲裁机构或者其他仲裁机构仲裁的，当事人不得向人民法院起诉。\n\n当事人在合同中没有订有仲裁条款或者事后没有达成书面仲裁协议的，可以向人民法院起诉。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5220330/content.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025395,
+    "contentHash": "e7675c7331726f98f21b85773ce340d9eb3de86ebc26dcdad55cdaf564c3ee6c",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_治安管理处罚法_第十条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "治安管理处罚法第十条：治安管理处罚的种类分为:\n\n（一）警告；\n\n（二）罚款；\n\n（三）行政拘留；\n\n（四）吊销公安机关发放的许可证。\n\n对违反治安管理的外国人，可以附加适用限期出境或者驱逐出境。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2025/art_8a1c722747214869b28c0ad7a0f8bb7a.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025574,
+    "contentHash": "7b42b486596019edf80306851e1d5337ee9a8db4b5c6b0d18c54397668c6b200",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_公司法_第十六条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "公司法第十六条：公司向其他企业投资或者为他人提供担保，依照公司章程的规定，由董事会或者股东会、股东大会决议；公司章程对投资或者担保的总额及单项投资或者担保的数额有限额规定的，不得超过规定的限额。\n\n公司为公司股东或者实际控制人提供担保的，必须经股东会或者股东大会决议。\n\n前款规定的股东或者受前款规定的实际控制人支配的股东，不得参加前款规定事项的表决。该项表决由出席会议的其他",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025578,
+    "contentHash": "2fe81909d911f4f3992450e43b43a78b568fc9b0a10651914aaeaa74ca607e10",
+    "code": "OUTDATED_OR_DIFFERENT_REFERENCE_民事诉讼法_第二百三十四条",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "民事诉讼法第二百三十四条：执行过程中，案外人对执行标的提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定中止对该标的的执行；理由不成立的，裁定驳回。案外人、当事人对裁定不服，认为原判决、裁定错误的，依照审判监督程序办理；与原判决、裁定无关的，可以自裁定送达之日起十五日内向人民法院提起诉讼。",
+    "conclusion": "引文与截至2026-11-12所取现行版本的同名同条原文不同；参见citation-differences.json完整前后文本。旧咨询发生时间未知，不能反推历史答案当时违法。",
+    "minimumCorrection": "先标明适用日期并核对新旧对应条号；涉及规则变更时重写论证，禁止仅批量替换条号。",
+    "officialUrls": [
+      "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5220330/content.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024085,
+    "contentHash": "e5ac66bf19678c7cacded2b5e0196d65a65275fcf63d562710a950bd8b8f4c3b",
+    "code": "URBAN_RESIDENCE_NOT_FORFEITURE",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "农村居民户口转为非农业户口的，其已丧失了农村土地承包经营权",
+    "conclusion": "答案与现行农村土地承包法27条及本题解析直接相反。",
+    "minimumCorrection": "承包期内不得因农户进城落户而收回承包地；转让或交回应遵循依法自愿有偿原则。",
+    "officialUrls": [
+      "https://www.forestry.gov.cn/c/www/gklcfl/300020.jhtml"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024089,
+    "contentHash": "569f0098379387e61faa405b5a22cc9e4beb0ab8cf41d637f59e7982e24621ab",
+    "code": "URBAN_RESIDENCE_EXCEPTION_WRONG",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "发包方收回承包地情形只有一种，即承包期内，承包方全家迁入城镇，转为非农业户口",
+    "conclusion": "考入公务员不当然收回的主结论不因此推翻，但这一例外与现行27条相反。",
+    "minimumCorrection": "删除该例外；保留不因家庭成员考入公务员而当然收回的结论，并按现行27条说明进城落户保护。",
+    "officialUrls": [
+      "https://www.forestry.gov.cn/c/www/gklcfl/300020.jhtml"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024165,
+    "contentHash": "41703a452119f0448b69d644a4cb4daf2e3c772a7226cef6e0626f8b85830fc1",
+    "code": "ENTITY_NAME_CAN_BE_TRANSFERRED",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "企业名称为人格权，不得转让",
+    "conclusion": "与民法典1013、1016条允许依法转让名称的规定直接相反。",
+    "minimumCorrection": "法人、非法人组织可以依法转让或者许可他人使用自己的名称，并依法办理登记手续。其余商号比较仍需单独复核。",
+    "officialUrls": [
+      "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024323,
+    "contentHash": "8f1b5ee9a690e7d1d1b892e5281efea427d95d6da1854e0d84ca181cf7c0704b",
+    "code": "FAULT_NOT_AUTOMATIC_HALF_SHARE",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "双方均有过错，应平均负担该部分损失",
+    "conclusion": "民法典592条规定各自承担相应责任，不能从双方有过错推出必然平均分担；所引898条是贵重物未声明，与本题自然灾害减损问题不相称。",
+    "minimumCorrection": "按不可抗力实际影响、减损义务、过错和因果关系确定相应责任，删除当然平均分担；核对180、590、591、592、897条。",
+    "officialUrls": [
+      "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024548,
+    "contentHash": "1bf70a13b22e341d5522d40290008081cbb7554fef5215d5911ea236df83f27e",
+    "code": "TRADEMARK_APPLICANT_OVERGENERALIZED",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "任何自然人都可以在我国申请商标，没有生产经营资格的限制",
+    "conclusion": "现行商标法4条和国家知识产权局对国内自然人申请的主体资格材料要求不支持无条件概括；不能混同国内与境外自然人。",
+    "minimumCorrection": "改为自然人在生产经营活动中确有使用需要时可以依法申请；国内自然人应按办理指南提交相应经营主体资格证明，具体身份分别说明。",
+    "officialUrls": [
+      "https://www.cnipa.gov.cn/jact/front/mailpubdetail.do?sysid=13&transactId=483024",
+      "https://www.cnipa.gov.cn/art/2019/7/30/art_95_28179.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024627,
+    "contentHash": "36a16faba16787e07cd8a1b8261d5b66d9196c644133d363fcb780f7192e8167",
+    "code": "LAND_DISPUTE_ADMINISTRATIVE_LITIGATION_OMITTED",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "不能找法院。只有您的合法权利被侵犯时，法院才有权做出裁决",
+    "conclusion": "不能直接提起一般权属民事诉讼与不能诉讼不同；土地管理法14明确政府处理决定后30日内可以起诉。",
+    "minimumCorrection": "权属争议应先协商或由有权政府处理；不服处理决定的，可自接到通知之日起30日内向人民法院起诉。",
+    "officialUrls": [
+      "https://fgs.moa.gov.cn/flfg/202007/t20200716_6348746.htm"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024758,
+    "contentHash": "40b616fd9f4e143240885b31eb7ff6fa2631e8409a8d9b2e9f6ab5d5ddb3d28f",
+    "code": "PRINCIPLES_NOT_AUTOMATIC_INVALIDITY",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "违反自愿、公平、诚实信用原则的技术合同应属当然无效、自始无效",
+    "conclusion": "民法典147至151条规定重大误解、欺诈、胁迫、显失公平等撤销机制；不能把违反原则一概等同当然无效。850条特定无效事由应单独适用。",
+    "minimumCorrection": "删除这一概括，按具体事实区分无效、可撤销及违约责任，再说明技术合同850条的特定情形。",
+    "officialUrls": [
+      "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025006,
+    "contentHash": "2c92dc07870ba56128a69449e8bf36623fd04eb38eb00556cdf0cf2f4695d400",
+    "code": "PRE_20200820_LOAN_TRANSITION_RATE",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "将2020年8月20日前成立借款的后段利息保护上限写为合同成立时4倍LPR",
+    "conclusion": "2020年底修正的民间借贷解释31条规定，在其列明的过渡情形下，后段适用起诉时的利率保护标准；本题混用2020年8月版本和2020年底版本。",
+    "minimumCorrection": "对2020年8月20日之后新受理的一审案件、合同成立于该日之前的，依法分段：前段按当事人请求适用当时司法解释，后段按起诉时规定的保护标准。须标明案件受理时间。",
+    "officialUrls": [
+      "https://cicc.court.gov.cn/html/1/380/385/12844.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025274,
+    "contentHash": "74578c0f0e2fe7ce6920b2890cd3644024a6d9713801f6b8fdb9a4e01f6c8ee5",
+    "code": "PRE_20200820_LOAN_TRANSITION_RATE",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "将2020年8月20日前成立借款的后段利息保护上限写为合同成立时4倍LPR",
+    "conclusion": "2020年底修正的民间借贷解释31条规定，在其列明的过渡情形下，后段适用起诉时的利率保护标准；本题混用2020年8月版本和2020年底版本。",
+    "minimumCorrection": "对2020年8月20日之后新受理的一审案件、合同成立于该日之前的，依法分段：前段按当事人请求适用当时司法解释，后段按起诉时规定的保护标准。须标明案件受理时间。",
+    "officialUrls": [
+      "https://cicc.court.gov.cn/html/1/380/385/12844.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025143,
+    "contentHash": "03474344f0a3d87bc3f791b05b574a9a3df3ef17a9dfcf7361623abed5c1bf7d",
+    "code": "PICKPOCKET_LOCATION_ELEMENT_OMITTED",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "扒窃…是指偷盗他人随身携带的财物，无论…价值几何，均构成盗窃罪",
+    "conclusion": "盗窃刑事解释3条的扒窃定义包括公共场所或者公共交通工具这一场所要件；答案缺漏。取消数额门槛也不等于无需其他犯罪成立条件。",
+    "minimumCorrection": "补充在公共场所或者公共交通工具上盗窃他人随身携带财物；说明不以数额较大为必要，但仍需符合犯罪成立及责任条件。",
+    "officialUrls": [
+      "https://www.court.gov.cn/fabu/xiangqing/5228.html?sid_for_share=95263_4",
+      "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024973,
+    "contentHash": "49a8e90c543da90bf1d9333bb88b0b0ae37fd89556cf9021246ed8a55f0c9464",
+    "code": "DEGREE_PROCEDURE_NOW_EXPRESSLY_REGULATED",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "目前关于授予学士学位的具体程序并无明确的法律规定",
+    "conclusion": "2025年施行学位法39、41条已明确拟不授予/撤销前的告知陈述申辩及复核救济；不能用该概括免除程序审查。",
+    "minimumCorrection": "按学位法的条件、程序和救济分别作答；考试作弊是否足以不授予及程序是否合法须结合事实，不能预设程序瑕疵一概不违法。",
+    "officialUrls": [
+      "https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202404/t20240426_1127804.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024973,
+    "contentHash": "49a8e90c543da90bf1d9333bb88b0b0ae37fd89556cf9021246ed8a55f0c9464",
+    "code": "DEGREE_REGULATIONS_REPEALED",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "学位条例第二条",
+    "conclusion": "学位法45条规定2025-01-01施行并同时废止学位条例；题目无历史适用日期。",
+    "minimumCorrection": "将适用版本改为学位法并重写相关程序论证；原始导入内容保留。",
+    "officialUrls": [
+      "https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202404/t20240426_1127804.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025073,
+    "contentHash": "63ab5789c16a973205e6e69a13d942736a478f6866591d8fd3c9f9d6d7359f90",
+    "code": "NOISE_LAW_REPEALED",
+    "domain": "REFERENCE_VERSION",
+    "level": "confirmed",
+    "evidence": "环境噪声污染防治法第六十一条",
+    "conclusion": "旧环境噪声污染防治法已被2022年噪声法替代；截至本次日期还须考虑2026-08-15施行的生态环境法典，不能直接把2022文本当最终现行法。",
+    "minimumCorrection": "标为过时依据并整体重审；开发商必然回购也不能由该引文直接推出，应补足合同解除/修复/赔偿等适用条件。",
+    "officialUrls": [
+      "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk03/202202/t20220222_969609.html",
+      "https://ecro.mee.gov.cn/fgbz/fl/202604/t20260416_1148993.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025442,
+    "contentHash": "9ce00184cc3516455ed5fc78c7c1c8c91a4a466ed98beb0300e50e3fe16df98f",
+    "code": "ILLEGAL_FUNDRAISING_OLD_ARTICLE",
+    "domain": "REFERENCE_VERSION",
+    "level": "risk",
+    "evidence": "非法集资刑事解释第四条",
+    "conclusion": "2022修正已重排非法占有目的条款至7条；已检索最高法修正公告，逐条官方全文尚未纳入本次自动语料。",
+    "minimumCorrection": "补录2022官方全文并确认4→7映射及内容，补明行为时间。",
+    "officialUrls": [
+      "https://www.court.gov.cn/zixun/xiangqing/346881.html",
+      "https://www.court.gov.cn/zixun/xiangqing/346891.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025448,
+    "contentHash": "1c8c0eae26240d2bec3f4a063b8fd0c6b479aec6b5bc7610053d2ca8a3e13b70",
+    "code": "LOAN_FRAUD_THRESHOLD_AND_ELEMENTS",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "risk",
+    "evidence": "骗取贷款数额在二万以上的，构成贷款诈骗罪",
+    "conclusion": "2022最高检、公安部立案追诉标准45条为5万元且明确非法占有目的。原题2万元及必然构成犯罪的概括未标年代，也未区分立案追诉和定罪量刑；此处不把5万元擅自改成所有历史案件的定罪标准。",
+    "minimumCorrection": "补明行为/适法时间、非法占有目的、立案追诉与定罪量刑的区别；由刑事专业复核后重写，禁止简单把2改5即放行。",
+    "officialUrls": [
+      "https://www.spp.gov.cn/xwfbh/wsfbt/202204/t20220429_555906.shtml",
+      "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025574,
+    "contentHash": "7b42b486596019edf80306851e1d5337ee9a8db4b5c6b0d18c54397668c6b200",
+    "code": "GUARANTEE_EXCEPTION_OVERBROAD",
+    "domain": "LEGAL_SUBSTANCE",
+    "level": "confirmed",
+    "evidence": "公司为其直接或者间接控制的公司…相互担保等商业合作关系…合同有效",
+    "conclusion": "现行民法典担保制度解释8条所列免决议事由不支持将所有控制关系、相互担保都概括为当然有效；公司法引用还为旧16条。",
+    "minimumCorrection": "按现行公司法15条及担保制度解释7、8、9条分别审查担保类型、决议、善意及法定例外；删除相互担保即当然有效的概括。",
+    "officialUrls": [
+      "https://www.court.gov.cn/fabu/xiangqing/282721.html",
+      "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025062,
+    "contentHash": "779bf2ddf330a9419c3c154434cfbd46434d4fb05d22dbbc44ca43850d5b875f",
+    "code": "PENALTY_NOT_PRIVATE_FINE",
+    "domain": "LEGAL_BASIS",
+    "level": "confirmed",
+    "evidence": "治安管理处罚法17、19、20条",
+    "conclusion": "引用共同违法及从轻从重处罚条文，不能直接证明物业公司是否有权罚款；现行条文还已变。",
+    "minimumCorrection": "核对行政处罚实施主体及物业合同规则，用有对应关系的依据重写解析。",
+    "officialUrls": [
+      "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_3712fbfaaed942b3b6b66f14d5288723.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025395,
+    "contentHash": "e7675c7331726f98f21b85773ce340d9eb3de86ebc26dcdad55cdaf564c3ee6c",
+    "code": "PENALTY_NOT_LICENSING_BASIS",
+    "domain": "LEGAL_BASIS",
+    "level": "confirmed",
+    "evidence": "治安管理处罚法第十条",
+    "conclusion": "治安处罚种类不能充当公安行政许可的设定/实施依据；行政许可法24为委托实施，也不枚举具体许可事项。",
+    "minimumCorrection": "补具体许可法律依据和主管机关权限；删除以处罚种类证明许可权限的关联。",
+    "officialUrls": [
+      "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5211784/content.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024586,
+    "contentHash": "6cc68b794bd64b7ee88161a980197407ac3e4f3a19985ed843b6f62fe46aa607",
+    "code": "LICENSE_TRANSFER_WORD_MIXUP",
+    "domain": "EDITORIAL",
+    "level": "confirmed",
+    "evidence": "不影响转让合同的效力",
+    "conclusion": "原文存在可复现的用词/乱码问题。",
+    "minimumCorrection": "将许可语境中的转让合同改为许可合同；区分商标转让核准与许可备案。",
+    "officialUrls": [
+      "https://www.cnipa.gov.cn/art/2019/7/30/art_95_28179.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024801,
+    "contentHash": "0d4ba105e80f475c4c24b537ca2135c2c8269162224dcc455bf792ce8f4b11f4",
+    "code": "MORTGAGOR_MORTGAGEE_WORD_MIXUP",
+    "domain": "EDITORIAL",
+    "level": "confirmed",
+    "evidence": "抵押人不得就抵押财产行使抵押权",
+    "conclusion": "原文存在可复现的用词/乱码问题。",
+    "minimumCorrection": "此处主体应为抵押权人；按相邻句及担保解释54核对。",
+    "officialUrls": [
+      "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025108,
+    "contentHash": "416f7212ef0edf7eb0cfce5e7c7330a8f6e71e46bef7e59286588f7675483da6",
+    "code": "WRONG_GUARANTEE_INTERPRETATION_TITLE",
+    "domain": "EDITORIAL",
+    "level": "confirmed",
+    "evidence": "现《担保法司法解释》第62",
+    "conclusion": "原文存在可复现的用词/乱码问题。",
+    "minimumCorrection": "改为民法典有关担保制度解释第62条；旧108条只能明确标作历史比较。",
+    "officialUrls": [
+      "https://www.court.gov.cn/fabu/xiangqing/282721.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024930,
+    "contentHash": "a49987a7b2599ea2465fd491e7fd3b208f202cbabf2ed01ef3b0429a93a36969",
+    "code": "GARBLED_SCHOOL_TEXT",
+    "domain": "EDITORIAL",
+    "level": "confirmed",
+    "evidence": "许欸笑傲如果没有尽到职责",
+    "conclusion": "原文存在可复现的用词/乱码问题。",
+    "minimumCorrection": "修复乱码为学校，并补欺凌防控、报告及教育管理责任依据。",
+    "officialUrls": [
+      "https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250312_1958939.html"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024637,
+    "contentHash": "002c7444c9488b275ab5d5cd26eb8ffefa5ba00cebad6cbadd4172b6ba76e45e",
+    "code": "GARBLED_COMPENSATION_TEXT",
+    "domain": "EDITORIAL",
+    "level": "confirmed",
+    "evidence": "政府应当向您政府土地补偿费…种植了你作为",
+    "conclusion": "原文存在可复现的用词/乱码问题。",
+    "minimumCorrection": "修正支付、农作物等文字，区分土地补偿费、安置补助费及费用分配。",
+    "officialUrls": [
+      "https://fgs.moa.gov.cn/flfg/202007/t20200716_6348746.htm"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024638,
+    "contentHash": "304102d798e6b8aac3b37e1982e004478f883d1c853627347f6e38444aa731da",
+    "code": "GARBLED_EXPROPRIATION_TEXT",
+    "domain": "EDITORIAL",
+    "level": "confirmed",
+    "evidence": "及时政府被没有处置",
+    "conclusion": "原文存在可复现的用词/乱码问题。",
+    "minimumCorrection": "修正即使政府并没有处置；另补征收效力与闲置处置的直接依据。",
+    "officialUrls": [
+      "https://fgs.moa.gov.cn/flfg/202007/t20200716_6348746.htm"
+    ],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024161,
+    "contentHash": "eab3379b94820a4455389183601dbd5d8663c6ff1d8768cabcd0bb11b5c9cbeb",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "把知名公司的名称设置为搜索关键词进行广告推广，属于侵权行为？",
+    "conclusion": "商号侵权和损害存在过度概括及致命/知名疑似错字，需结合混淆可能性逐项重写。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024169,
+    "contentHash": "cc2057fdc659ca86a0e3f4088aeb122a83190e1f74d872d7532104f44786172d",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "新闻直播上，公开某犯罪份子的肖像，是否属于侵权行为？",
+    "conclusion": "答案含重复和拼接式案例叙述；未核实引述案例原文，不能据此认定案例为伪造。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024432,
+    "contentHash": "69a74ecfa439ba7e41b3fc5342e7ae0f2a7a24e4ff69ffc12192eeb28e5c9ce4",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "超过法定退休年龄的人员，与现用人单位是否成立劳动关系？",
+    "conclusion": "超龄劳动关系应核对渐进式延迟退休及最新劳动争议规则，不能按年龄统一否认主体资格。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024868,
+    "contentHash": "3ce5ccfc5e9842ad295a4e5a34ed1e5cd01795aeb9ee6e77481c0578542c59e7",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "旅游经营者应具备哪些条件？",
+    "conclusion": "题干问所有旅游经营者，答案只列旅行社设立条件；需缩窄题干或扩大区分类别。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024869,
+    "contentHash": "ae30b806de5c21825ef13ef08216c98c9348126d41f0b45afadab7e0660d511d",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "旅行社可以经营哪些业务？",
+    "conclusion": "出境和边境旅游还须相应经营许可，教学答案宜明确例外。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024887,
+    "contentHash": "7c9f74e8e4aa10c2322847aa1f9f7b0ea503f4623226c7b3ae43fb46c39b2765",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "旅游经营者已投保责任险，旅游者因保险责任事故仅起诉旅游经营者的，保险公司承担什么责任？",
+    "conclusion": "问题问保险公司责任，答案只给第三人诉讼地位，未解释责任范围。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024405,
+    "contentHash": "df63da6921cca0a27d892186332f0c17327a5087c4fc20ea9c2b5c7fa95c2289",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "消费者协会提起公益诉讼后，消费者个人能否提起诉讼？",
+    "conclusion": "个人另行提诉与直接参加公益诉讼混在一起；须按公益诉讼解释9、16条区分。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024930,
+    "contentHash": "a49987a7b2599ea2465fd491e7fd3b208f202cbabf2ed01ef3b0429a93a36969",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "学校对于校园内的未成年人侵权或者霸凌负有什么责任？",
+    "conclusion": "只有未成年人保护法30条不能充分支撑校园欺凌责任分析，应补39条及民法典1199至1201条。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024978,
+    "contentHash": "48d877deb549b2b76caac348ede5cd79c958d299a4193338070858b224c16b49",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "学校负责招生的教师能否被认定是国家机关工作人员？在招生工作中徇私舞弊的，能否追究法律责任？",
+    "conclusion": "不能仅凭招生教师身份就一概认定刑法国家机关工作人员，需具体查明授权/委托和职务。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025069,
+    "contentHash": "b1b7788a9972c530d30e6960f17ed38a5d5f668cb097250b6bb3fb6d70025790",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "物业管理公司都会承担哪些责任？",
+    "conclusion": "题干询问全部责任而答案只给行政责任，未覆盖相应民事赔偿等。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025073,
+    "contentHash": "63ab5789c16a973205e6e69a13d942736a478f6866591d8fd3c9f9d6d7359f90",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "住宅楼内水泵运转声音构成噪声污染，应该怎么办？",
+    "conclusion": "整改无效即开发商必然回购缺乏合同解除等条件论证。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025342,
+    "contentHash": "4638f53b7be4427cbe6350999da3046aec1b83809cd75fed7516eda9808fce2e",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "虚构租赁物方式订立的合同效力如何？",
+    "conclusion": "虚构租赁物无效与单方欺诈可撤销关系需专业解释，现有737条不足以支撑全部例外结论。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025353,
+    "contentHash": "aa5d8f922255df62403c8e046c74f6d2f280edfe1e4ae9425dfa3b5213871f65",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "融资租赁合同租金如何确定？",
+    "conclusion": "融资租赁24%上限未列日期与业务性质，不能直接机械替换成民间借贷4倍LPR。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025125,
+    "contentHash": "a093642812031c1538a1c926325ddb9e035e0ce283f26d8125813a928c50f9f8",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "留置权人能否将留置物交给第三人保管？",
+    "conclusion": "旧担保法司法解释112被用作直接依据，需核对新法对应；基本结论不能仅因旧标题判错。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10025127,
+    "contentHash": "39c1e2be56a61be3fb9ce1380570141a1755ea560b97bab58858d7f5f71a6566",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "债权人的债权未届清偿期，但其交付占有标的物的义务已届履行期，是否可以直接行使留置权？",
+    "conclusion": "旧担保法司法解释112被用作直接依据，需核对新法对应；基本结论不能仅因旧标题判错。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  },
+  {
+    "id": 10024931,
+    "contentHash": "a5c208a3861b9c9a50ee50a7cbd26562a6e6d3af4fedcca7e58a5a7be43247f9",
+    "code": "MANUAL_REVIEW_RISK",
+    "domain": "TEACHING_OR_APPLICATION",
+    "level": "risk",
+    "evidence": "未成年人犯罪要坐牢吗？",
+    "conclusion": "低龄刑事责任分组需细化12至14周岁的严格条件与核准追诉，原概括不足作评分标准。",
+    "minimumCorrection": "保持待复核；补条件、适法时间和对应依据后重新审核。",
+    "officialUrls": [],
+    "verifiedScope": "仅核验此条列明的问题；不代表整题全部论证通过",
+    "verifiedBy": "AI-assisted official-source review",
+    "humanDualApproval": false
+  }
+]

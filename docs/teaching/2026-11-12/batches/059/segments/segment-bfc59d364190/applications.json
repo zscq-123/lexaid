@@ -1,0 +1,63 @@
+{
+  "batch": "059",
+  "segment": "segment-bfc59d364190",
+  "database": "lexaid",
+  "verifiedAt": "2026-11-12T06:34:19.969023+00:00",
+  "migration": "backend/src/main/resources/teaching-batch-059-segment-bfc59d364190.sql",
+  "migrationSha256": "6d3ce7ec77dd7c8042b79971be263ba15650e46c1068af6aa41ef4b4a22f4d72",
+  "records": [
+    {
+      "target": "question:10025088",
+      "id": 10025088,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "7db159b648399674066a1b6efeb67621d4401cfc614c97d821043007e0045632",
+      "afterHash": "7db159b648399674066a1b6efeb67621d4401cfc614c97d821043007e0045632",
+      "revisionKey": "2026-11-12-teaching-059-10025088"
+    },
+    {
+      "target": "question:10025090",
+      "id": 10025090,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "a7cd57d21195cb8b3e8dbec3b80aaa5a7c63979f88fd73091e3225b4e449eded",
+      "afterHash": "a7cd57d21195cb8b3e8dbec3b80aaa5a7c63979f88fd73091e3225b4e449eded",
+      "revisionKey": "2026-11-12-teaching-059-10025090"
+    }
+  ],
+  "exactAfterMatches": 2,
+  "archives": {
+    "question_content_revision": {
+      "total": 2,
+      "applied": 2
+    }
+  },
+  "historyBefore": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyAfter": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "question_source": "56665642"
+  },
+  "historyPreserved": true,
+  "repeatChecksums": {
+    "question": "2098685290",
+    "question_legal_subject": "4169332068",
+    "mock_exam_bank": "1432156791",
+    "question_content_revision": "1420732162",
+    "mock_exam_content_revision": "802010516"
+  },
+  "idempotent": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false
+}

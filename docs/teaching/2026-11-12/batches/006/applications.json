@@ -1,0 +1,65 @@
+{
+  "batch": "006",
+  "database": "lexaid",
+  "verifiedAt": "2026-11-12T00:28:34.418624+00:00",
+  "migrationSha256": "32eabc5fdbc7a3adb24b9f7395e9914f01f2bba7a5b8f54bc9ed9fe74f3771d7",
+  "records": [
+    {
+      "target": "question:8",
+      "id": 8,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "9e2a0c73aa9f9e97c39947d49da95afe846b6b687b70989628aa3044802f4815",
+      "afterHash": "3cac4a8d36b3ed0e456a0d91ee07ea0c7f2d06095d5c114650c6cc21f7977445"
+    },
+    {
+      "target": "question:16",
+      "id": 16,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "14e817d34c0f2e408168b473dbaabe0831dd91f1a6485b3fb98491457ce028ae",
+      "afterHash": "beac2fc51d5f3c54d3d9c0728e0cfa01690b16c70d2d71270f53db9ec86a2e90"
+    },
+    {
+      "target": "question:29",
+      "id": 29,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "5ce7508c089ec95a5f87368d1555abc1d201101f18c30e3e7721bba23245f7d3",
+      "afterHash": "461a63bf2888e6ec62ee44d04a626d325ac9a87812c151a9bb227403ae821b1d"
+    }
+  ],
+  "exactAfterMatches": 3,
+  "archive": {
+    "total": 3,
+    "applied": 3
+  },
+  "historyBefore": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "mock_exam_bank": "219410861",
+    "question_source": "56665642"
+  },
+  "historyAfter": {
+    "answer_record": "0",
+    "exam_session": "3544868648",
+    "mock_exam_item": "0",
+    "mock_exam_session": "0",
+    "question_quality_review": "0",
+    "mock_exam_bank": "219410861",
+    "question_source": "56665642"
+  },
+  "historyPreserved": true,
+  "repeatChecksums": {
+    "question": "3808126226",
+    "question_legal_subject": "4169332068",
+    "question_content_revision": "552919719"
+  },
+  "idempotent": true,
+  "reviewerKind": "AI",
+  "humanApproval": false,
+  "releaseApproval": false
+}

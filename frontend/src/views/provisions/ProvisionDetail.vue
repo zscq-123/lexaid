@@ -1,6 +1,9 @@
 <template>
   <div v-loading="loading">
     <el-page-header @back="$router.back()" content="法条详情" />
+    <el-alert v-if="loadFailed" class="detail-card" type="error" :closable="false" title="法条加载失败，请重试。">
+      <el-button link type="primary" @click="load">重新加载</el-button>
+    </el-alert>
     <el-card v-if="detail" shadow="never" class="detail-card">
       <div class="head">
         <div>
@@ -9,7 +12,7 @@
           <span class="title">{{ detail.lawName }} {{ detail.articleNo }}</span>
         </div>
         <div class="actions">
-          <el-button :type="detail.favorite ? 'warning' : 'default'" @click="toggleFavorite">
+          <el-button :type="detail.favorite ? 'warning' : 'default'" :loading="favoriteSaving" @click="toggleFavorite">
             <el-icon><StarFilled v-if="detail.favorite" /><Star v-else /></el-icon>&nbsp;
             {{ detail.favorite ? '已收藏' : '收藏' }}
           </el-button>
@@ -24,10 +27,12 @@
         <span v-if="detail.effectiveDate">生效日期：{{ detail.effectiveDate }}</span>
         <span v-if="detail.issuingAuthority">制定机关：{{ detail.issuingAuthority }}</span>
       </div>
-      <div v-if="detail.sourceDataset || detail.licenseName" class="source">
-        来源：{{ detail.sourceDataset || '未标注' }}
-        <span v-if="detail.licenseName"> · 许可：{{ detail.licenseName }}</span>
-        <a v-if="detail.sourceUrl" :href="detail.sourceUrl" target="_blank" rel="noopener noreferrer">查看原文</a>
+      <SourceProvenance :source="detail" kind="PROVISION" />
+      <div v-if="versions.length > 1" class="source">
+        <p>此条款有 {{ versions.length }} 条版本或来源记录，请对照日期与正文核验。</p>
+        <router-link v-for="version in versions" :key="version.id" class="version-link" :to="'/provisions/' + version.id">
+          {{ version.id === detail.id ? '当前查看 · ' : '' }}生效 {{ version.effectiveDate || '未注明' }} · 公布 {{ version.promulgationDate || '未注明' }} · {{ version.sourceDataset || '教学整理' }}
+        </router-link>
       </div>
       <div class="tags">
         <el-tag v-for="t in detail.tags" :key="t" size="small" type="info" effect="plain">{{ t }}</el-tag>
@@ -35,7 +40,7 @@
       <div class="content">{{ detail.content }}</div>
     </el-card>
     <el-card v-if="detail" shadow="never" class="detail-card">
-      <NotePanel target-type="PROVISION" :target-id="route.params.id" />
+      <NotePanel :key="detail.id" target-type="PROVISION" :target-id="detail.id" />
     </el-card>
     <el-card v-if="related" shadow="never" class="detail-card">
       <RelatedGroups :groups="related" />
@@ -44,45 +49,67 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Star, StarFilled } from '@element-plus/icons-vue'
-import { getProvision, getProvisionRelated } from '../../api/content'
+import { getProvision, getProvisionRelated, getProvisionVersions } from '../../api/content'
 import { addFavorite, removeFavorite } from '../../api/favorite'
 import NotePanel from '../../components/NotePanel.vue'
 import RelatedGroups from '../../components/RelatedGroups.vue'
+import SourceProvenance from '../../components/SourceProvenance.vue'
 
 const route = useRoute()
 const router = useRouter()
 const detail = ref(null)
 const related = ref(null)
+const versions = ref([])
 const loading = ref(true)
+const loadFailed = ref(false)
+const favoriteSaving = ref(false)
+let requestVersion = 0
 
 async function load() {
+  const request = ++requestVersion
   loading.value = true
+  loadFailed.value = false
+  favoriteSaving.value = false
+  detail.value = null
+  related.value = null
+  versions.value = []
   try {
     const id = route.params.id
-    const [d, r] = await Promise.all([getProvision(id), getProvisionRelated(id)])
+    const [d, r, v] = await Promise.all([getProvision(id), getProvisionRelated(id), getProvisionVersions(id)])
+    if (request !== requestVersion) return
     detail.value = d
     related.value = r
+    versions.value = v
+  } catch {
+    if (request === requestVersion) loadFailed.value = true
   } finally {
-    loading.value = false
+    if (request === requestVersion) loading.value = false
   }
 }
 
 async function toggleFavorite() {
-  if (detail.value.favorite) {
-    const list = await (await import('../../api/favorite')).listFavorites({ type: 'PROVISION' })
-    const fav = list.find((f) => f.targetId === detail.value.id)
-    if (fav) {
-      await removeFavorite(fav.id)
-      detail.value.favorite = false
-      ElMessage.success('已取消收藏')
+  const target = detail.value
+  if (!target || favoriteSaving.value) return
+  favoriteSaving.value = true
+  try {
+    if (target.favorite) {
+      const list = await (await import('../../api/favorite')).listFavorites({ type: 'PROVISION' })
+      const fav = list.find((f) => f.targetId === target.id)
+      if (fav) {
+        await removeFavorite(fav.id)
+        if (detail.value === target) target.favorite = false
+        ElMessage.success('已取消收藏')
+      }
+    } else {
+      await addFavorite({ targetType: 'PROVISION', targetId: target.id })
+      if (detail.value === target) target.favorite = true
+      ElMessage.success('收藏成功')
     }
-  } else {
-    await addFavorite({ targetType: 'PROVISION', targetId: detail.value.id })
-    detail.value.favorite = true
-    ElMessage.success('收藏成功')
+  } finally {
+    if (detail.value === target) favoriteSaving.value = false
   }
 }
 
@@ -94,7 +121,7 @@ function jurisdictionLabel(value) {
   return { CN: '中国', US: '美国', EU: '欧盟', GB: '英国' }[value] || value || '未标注'
 }
 
-onMounted(load)
+watch(() => route.params.id, load, { immediate: true })
 </script>
 
 <style scoped>
@@ -102,6 +129,7 @@ onMounted(load)
   margin-top: 12px;
   border-radius: 8px;
 }
+.version-link { display: block; margin: 6px 0; color: var(--lex-accent); }
 .head {
   display: flex;
   justify-content: space-between;

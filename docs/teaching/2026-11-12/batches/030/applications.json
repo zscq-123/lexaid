@@ -1,0 +1,102 @@
+{
+  "batch": "030",
+  "database": "lexaid",
+  "segments": [
+    {
+      "segment": "segment-12cbf2095634",
+      "migration": "backend/src/main/resources/teaching-batch-030-segment-12cbf2095634.sql",
+      "migrationSha256": "69d06510b09546d6d4c83f47775e97793253aaf5ef74ccea6192a32718344cd0",
+      "exactAfterMatches": 2,
+      "historyPreserved": true,
+      "idempotent": true,
+      "releaseApproval": false
+    },
+    {
+      "segment": "segment-444fcbe26e6e",
+      "migration": "backend/src/main/resources/teaching-batch-030-segment-444fcbe26e6e.sql",
+      "migrationSha256": "dc3b8e266e8c1134d1d95c974290da0f53d836987c7039c01211f5244478ffaf",
+      "exactAfterMatches": 6,
+      "historyPreserved": true,
+      "idempotent": true,
+      "releaseApproval": false
+    }
+  ],
+  "records": [
+    {
+      "target": "question:10016897",
+      "id": 10016897,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "1347582218adfe49e7c2e1d4713507a9e645942e97b67eeb9c81f67bc419f225",
+      "afterHash": "1347582218adfe49e7c2e1d4713507a9e645942e97b67eeb9c81f67bc419f225",
+      "revisionKey": "2026-11-12-teaching-030-10016897"
+    },
+    {
+      "target": "mock_exam_bank:1340230",
+      "id": 1340230,
+      "table": "mock_exam_bank",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "bf3ef59402575ca4117c60b6ab85b22a7c8cfacf5887bcf3ec4d3bcfa6bb4694",
+      "afterHash": "bf3ef59402575ca4117c60b6ab85b22a7c8cfacf5887bcf3ec4d3bcfa6bb4694",
+      "revisionKey": "2026-11-12-teaching-030-mock-1340230"
+    },
+    {
+      "target": "question:10017063",
+      "id": 10017063,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "be5127572dbfc749d7fbf506f20dca53beff670044c740ea9c854db81c9f10e5",
+      "afterHash": "be5127572dbfc749d7fbf506f20dca53beff670044c740ea9c854db81c9f10e5",
+      "revisionKey": "2026-11-12-teaching-030-10017063"
+    },
+    {
+      "target": "mock_exam_bank:1340396",
+      "id": 1340396,
+      "table": "mock_exam_bank",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "c2526e464dada9fbaa58210a768ed4f2b8347b771770d4af9335702bb21ced03",
+      "afterHash": "c2526e464dada9fbaa58210a768ed4f2b8347b771770d4af9335702bb21ced03",
+      "revisionKey": "2026-11-12-teaching-030-mock-1340396"
+    },
+    {
+      "target": "question:10017085",
+      "id": 10017085,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "6375f013d9ac0767b3b4dca39be3ed0e303bb769d3eb0e34ee4d247c70c7179c",
+      "afterHash": "6375f013d9ac0767b3b4dca39be3ed0e303bb769d3eb0e34ee4d247c70c7179c",
+      "revisionKey": "2026-11-12-teaching-030-10017085"
+    },
+    {
+      "target": "mock_exam_bank:1340418",
+      "id": 1340418,
+      "table": "mock_exam_bank",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "db519012289bda3fd5d5c25f3f4242e28bea22d618c06cb369e2f8ec74fedd61",
+      "afterHash": "db519012289bda3fd5d5c25f3f4242e28bea22d618c06cb369e2f8ec74fedd61",
+      "revisionKey": "2026-11-12-teaching-030-mock-1340418"
+    },
+    {
+      "target": "question:10017120",
+      "id": 10017120,
+      "table": "question",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "d7286b5af8b8e6e2c0ef668945178a0078c91a6b2f2d84c6253c3c0a1a7636e5",
+      "afterHash": "d7286b5af8b8e6e2c0ef668945178a0078c91a6b2f2d84c6253c3c0a1a7636e5",
+      "revisionKey": "2026-11-12-teaching-030-10017120"
+    },
+    {
+      "target": "mock_exam_bank:1340453",
+      "id": 1340453,
+      "table": "mock_exam_bank",
+      "status": "APPLIED_OR_ALREADY_APPLIED",
+      "contentHash": "81fa07c86930a8abe0cc0447677c9ace5ba32750d0893b61c030d943ff443b16",
+      "afterHash": "81fa07c86930a8abe0cc0447677c9ace5ba32750d0893b61c030d943ff443b16",
+      "revisionKey": "2026-11-12-teaching-030-mock-1340453"
+    }
+  ],
+  "exactAfterMatches": 8,
+  "historyPreserved": true,
+  "idempotent": true,
+  "releaseApproval": false
+}

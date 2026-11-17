@@ -44,7 +44,7 @@ const LEX_EVAL_TASKS = {
   '3_2': '法条预测',
   '3_3': '刑期预测',
   '3_4': '法律推理',
-  '3_5': '法律推理',
+  '3_5': '法律计算',
   '3_6': '论点匹配',
   '4_1': '类案检索',
   '4_2': '文书审查',
@@ -85,22 +85,17 @@ function canonicalText(value) {
 
 function answerLetters(rawAnswer, optionKeys) {
   const raw = cleanText(rawAnswer).toUpperCase()
-  const patterns = [
-    /(?:正确答案|答案)[^A-H]*([A-H]+)/,
-    /^([A-H]+)[。.!！]?$/
-  ]
-  for (const pattern of patterns) {
-    const match = raw.match(pattern)
-    if (!match) continue
-    const letters = [...new Set([...match[1]])]
-    if (letters.length > 0 && letters.every((letter) => optionKeys.includes(letter))) {
-      return letters
-    }
-  }
-  return []
+  // LawBench uses this paired marker in its native choice answers. Do not accept partial markers.
+  const wrapped = raw.match(/^\[正确答案\]\s*([A-H](?:\s*[,，、;；]?\s*[A-H])*)\s*<EOA>$/)
+  const label = wrapped ? wrapped[1] : raw
+  // Require the whole field to be an answer label, not the beginning of prose (e.g. "Because").
+  const match = label.match(/^(?:(?:正确答案|参考答案|答案)\s*(?:是|为)?\s*[:：]?\s*)?(?:选项\s*)?([A-H](?:\s*[,，、;；]?\s*[A-H])*)[。.!！]?$/)
+  if (!match) return []
+  const letters = match[1].match(/[A-H]/g)
+  return new Set(letters).size === letters.length && letters.every(letter => optionKeys.includes(letter)) ? letters : []
 }
 
-export function parseChoice(question, rawAnswer) {
+export function parseChoice(question, rawAnswer, instruction = '') {
   const text = cleanText(question)
   const markers = [...text.matchAll(/([A-H])[:：]/g)]
   let best = []
@@ -129,20 +124,26 @@ export function parseChoice(question, rawAnswer) {
 
   const letters = answerLetters(rawAnswer, options.map((option) => option.key))
   if (letters.length === 0) return null
+  const stem = cleanText(text.slice(0, best[0].index)).replace(/[：:]$/, '').trim()
+  if (!stem) return null
+  const typeHint = `${cleanText(instruction)}\n${stem}`
+  const multiple = /多项选择题?|多选题?|不定项选择题?/.test(typeHint)
+  const single = /单项选择题?|单选题?/.test(typeHint)
+  if ((multiple && single) || (single && letters.length !== 1)) return null
   return {
-    type: letters.length === 1 ? 'SINGLE' : 'MULTIPLE',
-    stem: cleanText(text.slice(0, best[0].index)).replace(/[：:]$/, '').trim(),
+    type: multiple || letters.length > 1 ? 'MULTIPLE' : 'SINGLE',
+    stem,
     options,
     answer: letters
   }
 }
 
-function toQuestion({ question, answer, instruction, category, difficulty }) {
-  const choice = parseChoice(question, answer)
+export function toQuestion({ question, answer, instruction, category, difficulty }) {
+  const choice = parseChoice(question, answer, instruction)
   if (choice) {
     return {
       ...choice,
-      analysis: cleanText(instruction),
+      analysis: null, // Benchmark instructions remain in provenance metadata, never a teaching explanation.
       difficulty,
       category
     }
@@ -152,7 +153,7 @@ function toQuestion({ question, answer, instruction, category, difficulty }) {
     stem: cleanText(question),
     options: null,
     answer: cleanText(answer),
-    analysis: cleanText(instruction),
+    analysis: null,
     difficulty,
     category
   }
