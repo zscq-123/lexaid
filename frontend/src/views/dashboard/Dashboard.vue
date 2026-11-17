@@ -34,6 +34,8 @@
       </button>
     </div>
 
+    <ExamCountdownBoard :track="activeTrackKey" />
+
     <section
       :id="'track-panel-' + activeTrack.key"
       class="track-panel"
@@ -199,6 +201,7 @@ import {
 } from '@element-plus/icons-vue'
 import { listProvisions, listViewpoints } from '../../api/content'
 import { statsCategory, statsOverview } from '../../api/stats'
+import ExamCountdownBoard from './ExamCountdownBoard.vue'
 import TopicStudy from './TopicStudy.vue'
 
 const tracks = [
