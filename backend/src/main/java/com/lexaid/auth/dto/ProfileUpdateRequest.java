@@ -7,6 +7,8 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import java.time.LocalDate;
+
 @Data
 public class ProfileUpdateRequest {
     @NotBlank(message = "昵称不能为空")
@@ -39,6 +41,10 @@ public class ProfileUpdateRequest {
     @Min(value = 2000, message = "参考年份不能早于2000年")
     @Max(value = 2100, message = "参考年份不能晚于2100年")
     private Integer masterExamYear;
+
+    private LocalDate legalExamDate;
+
+    private LocalDate masterExamDate;
 
     @Pattern(regexp = "^$|FOUNDATION|INTENSIVE|SPRINT|EXAM_READY|FINISHED", message = "法考备考阶段选项无效")
     private String legalExamStage;

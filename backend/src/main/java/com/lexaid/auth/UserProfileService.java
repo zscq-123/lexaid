@@ -5,6 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+
 @Service
 @RequiredArgsConstructor
 public class UserProfileService {
@@ -13,23 +15,26 @@ public class UserProfileService {
     public record Data(String gender, String phone, String examGoal,
                        Integer legalExamAttempts, Integer masterExamAttempts,
                        Integer legalExamYear, Integer masterExamYear,
+                       LocalDate legalExamDate, LocalDate masterExamDate,
                        String legalExamStage, String masterExamStage,
                        String preparationStatus) {
         static Data empty() {
             return new Data("UNSPECIFIED", null, "UNDECIDED", null, null,
-                    null, null, null, null, null);
+                    null, null, null, null, null, null, null);
         }
     }
 
     public Data get(long userId) {
         return db.query("""
                 SELECT gender,phone,exam_goal,legal_exam_attempts,master_exam_attempts,
-                       legal_exam_year,master_exam_year,legal_exam_stage,master_exam_stage,preparation_status
+                       legal_exam_year,master_exam_year,legal_exam_date,master_exam_date,
+                       legal_exam_stage,master_exam_stage,preparation_status
                 FROM user_profile WHERE user_id=?
                 """, (rs, row) -> new Data(
                 rs.getString("gender"), rs.getString("phone"), rs.getString("exam_goal"),
                 nullableInt(rs.getObject("legal_exam_attempts")), nullableInt(rs.getObject("master_exam_attempts")),
                 nullableInt(rs.getObject("legal_exam_year")), nullableInt(rs.getObject("master_exam_year")),
+                rs.getObject("legal_exam_date", LocalDate.class), rs.getObject("master_exam_date", LocalDate.class),
                 rs.getString("legal_exam_stage"), rs.getString("master_exam_stage"),
                 rs.getString("preparation_status")), userId).stream().findFirst().orElseGet(Data::empty);
     }
@@ -37,16 +42,19 @@ public class UserProfileService {
     public void save(long userId, ProfileUpdateRequest request) {
         db.update("""
                 INSERT INTO user_profile(user_id,gender,phone,exam_goal,legal_exam_attempts,master_exam_attempts,
-                  legal_exam_year,master_exam_year,legal_exam_stage,master_exam_stage,preparation_status)
-                VALUES(?,?,?,?,?,?,?,?,?,?,?)
+                  legal_exam_year,master_exam_year,legal_exam_date,master_exam_date,
+                  legal_exam_stage,master_exam_stage,preparation_status)
+                VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)
                 ON DUPLICATE KEY UPDATE gender=VALUES(gender),phone=VALUES(phone),exam_goal=VALUES(exam_goal),
                   legal_exam_attempts=VALUES(legal_exam_attempts),master_exam_attempts=VALUES(master_exam_attempts),
                   legal_exam_year=VALUES(legal_exam_year),master_exam_year=VALUES(master_exam_year),
+                  legal_exam_date=VALUES(legal_exam_date),master_exam_date=VALUES(master_exam_date),
                   legal_exam_stage=VALUES(legal_exam_stage),master_exam_stage=VALUES(master_exam_stage),
                   preparation_status=VALUES(preparation_status)
                 """, userId, request.getGender(), blankToNull(request.getPhone()), request.getExamGoal(),
                 request.getLegalExamAttempts(), request.getMasterExamAttempts(), request.getLegalExamYear(),
-                request.getMasterExamYear(), blankToNull(request.getLegalExamStage()),
+                request.getMasterExamYear(), request.getLegalExamDate(), request.getMasterExamDate(),
+                blankToNull(request.getLegalExamStage()),
                 blankToNull(request.getMasterExamStage()), blankToNull(request.getPreparationStatus()));
     }
 

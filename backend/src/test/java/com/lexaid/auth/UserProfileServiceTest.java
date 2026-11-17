@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -32,6 +33,7 @@ class UserProfileServiceTest {
         assertEquals("UNDECIDED", profile.examGoal());
         assertNull(profile.phone());
         assertNull(profile.legalExamYear());
+        assertNull(profile.legalExamDate());
     }
 
     @Test
@@ -45,6 +47,8 @@ class UserProfileServiceTest {
         request.setMasterExamAttempts(2);
         request.setLegalExamYear(2027);
         request.setMasterExamYear(2028);
+        request.setLegalExamDate(LocalDate.of(2027, 9, 18));
+        request.setMasterExamDate(LocalDate.of(2027, 12, 20));
         request.setLegalExamStage(" ");
         request.setMasterExamStage("SPRINT");
         request.setPreparationStatus(null);
@@ -52,6 +56,7 @@ class UserProfileServiceTest {
         profiles.save(42L, request);
 
         verify(jdbc).update(startsWith("INSERT INTO user_profile"), eq(42L), eq("FEMALE"), eq("13800138000"),
-                eq("BOTH"), eq(1), eq(2), eq(2027), eq(2028), isNull(), eq("SPRINT"), isNull());
+                eq("BOTH"), eq(1), eq(2), eq(2027), eq(2028), eq(LocalDate.of(2027, 9, 18)),
+                eq(LocalDate.of(2027, 12, 20)), isNull(), eq("SPRINT"), isNull());
     }
 }

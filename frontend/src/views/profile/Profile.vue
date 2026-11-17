@@ -11,6 +11,22 @@
 
     <el-tabs v-model="activeTab" class="profile-tabs">
       <el-tab-pane label="个人资料" name="account">
+        <section v-if="countdownItems.length" class="countdown-grid" aria-label="考试倒计时">
+          <article v-for="item in countdownItems" :key="item.key" class="countdown-card" :class="item.key">
+            <div class="countdown-topline">
+              <span>{{ item.label }}</span>
+              <span class="countdown-chip">{{ item.estimated ? '预计日期' : '已设置' }}</span>
+            </div>
+            <strong>{{ item.remaining }}</strong>
+            <p v-if="item.date">{{ item.dateLabel }} · 09:00</p>
+            <button v-else type="button" @click="openEditor(item.dateField)">设置考试日期</button>
+          </article>
+        </section>
+        <button v-else class="countdown-empty" type="button" @click="openEditor(studyFields[0])">
+          <span><b>考试倒计时</b><small>选择备考目标后显示对应考试时间</small></span>
+          <el-icon class="row-arrow"><ArrowRight /></el-icon>
+        </button>
+
         <section class="profile-group" aria-label="基本资料">
           <button class="profile-row avatar-row" type="button" :disabled="busy" @click="openPicker">
             <span class="row-label">头像</span>
@@ -86,6 +102,8 @@
           clearable placeholder="请输入手机号" @keyup.enter="saveField" />
         <el-input-number v-else-if="editorField.type === 'number'" v-model="editingValue" :min="editorField.min"
           :max="editorField.max" controls-position="right" />
+        <el-date-picker v-else-if="editorField.type === 'date'" v-model="editingValue" type="date"
+          value-format="YYYY-MM-DD" format="YYYY年M月D日" :placeholder="editorField.placeholder" class="editor-select" />
         <el-select v-else v-model="editingValue" class="editor-select" placeholder="请选择">
           <el-option v-for="option in editorField.options" :key="String(option.value)" :label="option.label" :value="option.value" />
         </el-select>
@@ -146,6 +164,8 @@ const studyFields = [
   { key: 'masterExamAttempts', label: '法硕参与次数', type: 'number', min: 0, max: 99, placeholder: '请完善资料', suffix: '次' },
   { key: 'legalExamYear', label: '法考参考年份', type: 'number', min: Math.max(2000, thisYear - 10), max: thisYear + 10, placeholder: '请完善资料', suffix: '年' },
   { key: 'masterExamYear', label: '法硕参考年份', type: 'number', min: Math.max(2000, thisYear - 10), max: thisYear + 10, placeholder: '请完善资料', suffix: '年' },
+  { key: 'legalExamDate', label: '法考日期', type: 'date', placeholder: '请选择考试日期', hint: '未设置时，将按参考年份显示预计日期。' },
+  { key: 'masterExamDate', label: '法硕联考日期', type: 'date', placeholder: '请选择考试日期', hint: '未设置时，将按参考年份显示预计日期。' },
   { key: 'legalExamStage', label: '法考备考阶段', type: 'select', options: stageOptions, placeholder: '请完善资料' },
   { key: 'masterExamStage', label: '法硕备考阶段', type: 'select', options: stageOptions, placeholder: '请完善资料' },
   { key: 'preparationStatus', label: '备考状态', type: 'select', options: statusOptions, placeholder: '请完善资料' }
@@ -153,6 +173,7 @@ const studyFields = [
 const profileDefaults = {
   nickname: '', gender: 'UNSPECIFIED', phone: '', examGoal: 'UNDECIDED',
   legalExamAttempts: null, masterExamAttempts: null, legalExamYear: null, masterExamYear: null,
+  legalExamDate: '', masterExamDate: '',
   legalExamStage: '', masterExamStage: '', preparationStatus: ''
 }
 
@@ -177,8 +198,58 @@ const refreshing = ref(false)
 const editorOpen = ref(false)
 const editorField = ref(null)
 const editingValue = ref(null)
+const now = ref(Date.now())
 const busy = computed(() => refreshing.value || userStore.avatarSaving || userStore.profileSaving)
 let active = true
+let countdownTimer = null
+
+function estimatedDate(kind) {
+  const year = Number(draft.value[kind === 'legal' ? 'legalExamYear' : 'masterExamYear'])
+  if (!year) return ''
+  if (kind === 'legal') return `${year}-09-20`
+  return `${year - 1}-12-20`
+}
+function countdownText(date) {
+  if (!date) return '等待设置日期'
+  const target = new Date(`${date}T09:00:00`).getTime()
+  if (!Number.isFinite(target)) return '日期无效'
+  const delta = target - now.value
+  const today = new Date().toLocaleDateString('zh-CN')
+  if (new Date(`${date}T12:00:00`).toLocaleDateString('zh-CN') === today) return '今天考试'
+  if (delta <= 0) return `已过 ${Math.max(1, Math.floor(Math.abs(delta) / 86400000))} 天`
+  const totalSeconds = Math.floor(delta / 1000)
+  const days = Math.floor(totalSeconds / 86400)
+  const hours = String(Math.floor(totalSeconds % 86400 / 3600)).padStart(2, '0')
+  const minutes = String(Math.floor(totalSeconds % 3600 / 60)).padStart(2, '0')
+  const seconds = String(totalSeconds % 60).padStart(2, '0')
+  return `${days}天 ${hours}:${minutes}:${seconds}`
+}
+function formatDate(date) {
+  if (!date) return ''
+  const [year, month, day] = date.split('-').map(Number)
+  return year && month && day ? `${year}年${month}月${day}日` : date
+}
+function makeCountdown(kind) {
+  const legal = kind === 'legal'
+  const customDate = draft.value[legal ? 'legalExamDate' : 'masterExamDate']
+  const date = customDate || estimatedDate(kind)
+  return {
+    key: kind,
+    label: legal ? '法考倒计时' : '法硕联考倒计时',
+    date,
+    dateLabel: formatDate(date),
+    estimated: !customDate,
+    remaining: countdownText(date),
+    dateField: studyFields.find(field => field.key === (legal ? 'legalExamDate' : 'masterExamDate'))
+  }
+}
+const countdownItems = computed(() => {
+  const goal = draft.value.examGoal
+  if (goal === 'LEGAL_EXAM') return [makeCountdown('legal')]
+  if (goal === 'LAW_MASTER') return [makeCountdown('master')]
+  if (goal === 'BOTH') return [makeCountdown('legal'), makeCountdown('master')]
+  return []
+})
 
 function syncDraft(user) {
   if (!user) return
@@ -191,6 +262,7 @@ function displayValue(field) {
   const value = field.key === 'username' ? userStore.user?.username : draft.value[field.key]
   if (value === null || value === undefined || value === '') return ''
   if (field.options) return optionLabel(field, value)
+  if (field.type === 'date') return formatDate(value)
   return `${value}${field.suffix || ''}`
 }
 function openEditor(field) {
@@ -298,8 +370,15 @@ function logout() {
 
 watch(() => userStore.user, syncDraft, { immediate: true, deep: true })
 watch(() => userStore.token, cancelAvatar)
-onMounted(() => refresh())
-onBeforeUnmount(() => { active = false; cancelAvatar() })
+onMounted(() => {
+  refresh()
+  countdownTimer = window.setInterval(() => { now.value = Date.now() }, 1000)
+})
+onBeforeUnmount(() => {
+  active = false
+  cancelAvatar()
+  window.clearInterval(countdownTimer)
+})
 </script>
 
 <style scoped>
@@ -311,6 +390,22 @@ onBeforeUnmount(() => { active = false; cancelAvatar() })
 .profile-tabs { --el-tabs-header-height: 43px; }
 .profile-tabs :deep(.el-tabs__header) { margin-bottom: 18px; }
 .profile-tabs :deep(.el-tabs__item) { font-size: .94rem; font-weight: 620; }
+.countdown-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 14px; }
+.countdown-card { position: relative; overflow: hidden; min-height: 138px; padding: 20px 22px; border: 1px solid #dce6f0; border-radius: 17px; background: linear-gradient(135deg, #fff 25%, #f2f7fc); box-shadow: 0 5px 20px #23364d0a; }
+.countdown-card::after { content: ''; position: absolute; right: -26px; bottom: -50px; width: 150px; height: 150px; border-radius: 50%; background: #dceafb; opacity: .55; }
+.countdown-card.master { border-color: #e9e2d6; background: linear-gradient(135deg, #fff 25%, #fbf7ef); }
+.countdown-card.master::after { background: #f5e5c6; }
+.countdown-topline { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #3b5878; font-size: .82rem; font-weight: 650; }
+.countdown-card.master .countdown-topline { color: #7d5b27; }
+.countdown-chip { padding: 2px 7px; border-radius: 9px; background: #e5effa; font-size: .68rem; font-weight: 600; }
+.countdown-card.master .countdown-chip { background: #f5ead6; }
+.countdown-card strong { position: relative; z-index: 1; display: block; margin-top: 13px; color: #1e4f83; font-size: clamp(1.32rem, 3vw, 1.8rem); font-variant-numeric: tabular-nums; letter-spacing: -.035em; }
+.countdown-card.master strong { color: #895f20; }
+.countdown-card p, .countdown-card button { position: relative; z-index: 1; margin-top: 5px; color: var(--lex-muted); font-size: .78rem; }
+.countdown-card button { padding: 0; border: 0; background: transparent; color: var(--lex-accent); cursor: pointer; }
+.countdown-empty { display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 14px; padding: 17px 20px; border: 1px dashed #cbd6e2; border-radius: 15px; background: #fff; color: var(--lex-ink); text-align: left; cursor: pointer; }
+.countdown-empty span { display: grid; gap: 2px; }
+.countdown-empty small { color: var(--lex-muted); font-size: .78rem; font-weight: 400; }
 .profile-group { overflow: hidden; margin-bottom: 14px; border: 1px solid #e0e6ed; border-radius: 17px; background: #fff; box-shadow: 0 5px 20px #23364d0a; }
 .profile-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; min-height: 68px; padding: 12px 22px; border: 0; border-bottom: 1px solid #edf0f4; background: transparent; color: var(--lex-ink); text-align: left; cursor: pointer; }
 .profile-row:last-child { border-bottom: 0; }
@@ -343,6 +438,12 @@ onBeforeUnmount(() => { active = false; cancelAvatar() })
   .profile-tabs :deep(.el-tabs__header) { margin: 0; padding: 0 20px; background: #fff; }
   .profile-tabs :deep(.el-tabs__nav-wrap::after) { height: 1px; background: #edf0f4; }
   .profile-tabs :deep(.el-tabs__content) { padding-top: 12px; }
+  .countdown-grid { gap: 10px; margin: 0 12px 12px; }
+  .countdown-card { min-height: 126px; padding: 16px; border: 0; border-radius: 15px; }
+  .countdown-card strong { margin-top: 11px; font-size: 1.2rem; white-space: nowrap; }
+  .countdown-topline { align-items: flex-start; }
+  .countdown-chip { white-space: nowrap; }
+  .countdown-empty { width: calc(100% - 24px); margin: 0 12px 12px; }
   .profile-group { margin: 0 12px 12px; border: 0; border-radius: 15px; box-shadow: 0 2px 13px #273c5510; }
   .profile-row { min-height: 65px; padding: 11px 18px; gap: 14px; }
   .avatar-row { min-height: 94px; }
@@ -353,5 +454,8 @@ onBeforeUnmount(() => { active = false; cancelAvatar() })
   .profile-actions { padding: 0 12px; }
   .form-error { padding: 0 12px; }
   .profile-tabs :deep(.el-tab-pane:has(.favorites-card)) { padding: 0 12px; }
+}
+@media (max-width: 430px) {
+  .countdown-grid { grid-template-columns: 1fr; }
 }
 </style>

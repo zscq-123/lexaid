@@ -35,7 +35,7 @@ systemctl start lexaid-study-certificate.service
 
 学习质量升级还需先执行 `backend/src/main/resources/question-quality.sql`。该幂等脚本仅建立复核记录表，不删除题目或改写历史作答；新后端会动态隔离未达到质量门槛的题目。首次导入已通过 `30-question-quality.sql` 纳入初始化清单。详见 `docs/learning-quality-upgrade-2026-11-11.md`。
 
-个人资料扩展需执行 `backend/src/main/resources/user-profile.sql`。该幂等脚本新增独立的 `user_profile` 表，用于保存性别、手机号及法考/法硕备考信息，不改写现有账号、题库或作答数据；新数据卷通过 `36-user-profile.sql` 初始化。
+个人资料扩展需依次执行 `backend/src/main/resources/user-profile.sql` 与 `backend/src/main/resources/user-profile-countdown.sql`。前者新增独立的 `user_profile` 表，后者增加两项考试日期，用于倒计时；均不改写现有账号、题库或作答数据。新数据卷通过 `36-user-profile.sql` 和 `37-user-profile-countdown.sql` 初始化。
 
 复审版本另需执行 `backend/src/main/resources/question-seed-corrections.sql`：只修正原内容仍匹配的种子题 15、17、27，将原文与修订内容存入 `question_content_revision`，不重写历史作答。新数据卷通过 `31-question-seed-corrections.sql` 初始化。升级后所有外部导入题统一等待教学复核；旧答卷中的参考答案须满足当前资格与作答时点检查。部署前先备份并在目标库检查迁移匹配数量，详见 `docs/question-audit-2026-11-11.md`。
 
