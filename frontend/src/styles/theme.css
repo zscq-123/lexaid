@@ -35,7 +35,10 @@
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
 html, body, #app { height: 100%; }
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
 body {
   font: 0.875rem/1.55 var(--el-font-family);
   font-optical-sizing: auto;
