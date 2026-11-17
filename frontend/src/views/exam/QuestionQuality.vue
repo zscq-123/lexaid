@@ -8,7 +8,7 @@
   </details>
 </template>
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import request from '../../api/request'
 const counts = ref(null)
 const failed = ref(false)
@@ -16,10 +16,9 @@ const available = computed(() => counts.value?.find(r => r.reason === 'ELIGIBLE'
 const held = computed(() => counts.value?.reduce((n, r) => n + (r.reason === 'ELIGIBLE' ? 0 : r.count), 0) || 0)
 const labels = { MISSING_CONTENT: '缺少题干或答案', INVALID_TYPE: '题型待修订', INVALID_ANSWER: '答案格式异常', INVALID_CHOICES: '选项与答案不匹配', MISSING_EXPLANATION: '缺少教学解析', TASK_INSTRUCTION: '解析含任务指令', UNCLASSIFIED: '法学科目待判定', BENCHMARK_REVIEW: '基准题待教学复核', DATASET_REVIEW: '导入题待教学复核' }
 async function load() {
-  try { counts.value = (await request.get('/exam/quality')).data; failed.value = false }
+  try { counts.value = (await request.get('/exam/quality', { silent: true })).data; failed.value = false }
   catch { failed.value = true }
 }
-onMounted(load)
 </script>
 <style scoped>
 .quality { margin-bottom: 20px; font-size: .85rem; line-height: 1.8; color: var(--lex-muted); }
