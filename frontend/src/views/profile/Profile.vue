@@ -11,25 +11,28 @@
 
     <el-tabs v-model="activeTab" class="profile-tabs">
       <el-tab-pane label="个人资料" name="account">
-        <section class="exam-blackboard" aria-label="考试倒计时">
-          <div class="board-heading">
-            <span><i></i> 考试日历</span>
-            <small>官方安排 · 北京时间</small>
-          </div>
-          <div class="board-list">
-            <article v-for="item in countdownItems" :key="item.key" class="board-row">
+        <div v-if="countdownItems.length" class="exam-board-grid" aria-label="考试倒计时">
+          <section v-for="item in countdownItems" :key="item.key" class="exam-blackboard">
+            <div class="board-heading">
+              <span><i></i> {{ item.boardTitle }}</span>
+              <small>{{ item.year }} 年度</small>
+            </div>
+            <article class="board-row">
               <div class="board-subject">
                 <b>{{ item.label }}</b>
-                <small>{{ item.year }} 年度</small>
+                <small>官方安排 · 北京时间</small>
               </div>
               <div class="board-countdown" :class="{ pending: item.pending }">
                 <strong>{{ item.remaining }}</strong>
                 <small>{{ item.detail }}</small>
               </div>
             </article>
-          </div>
-          <p class="board-note">按司法部、教育部已公布安排显示；官方未公布时不使用估算日期。</p>
-        </section>
+            <p class="board-note">官方未公布时不使用估算日期</p>
+          </section>
+        </div>
+        <button v-else class="board-empty" type="button" @click="openEditor(studyFields[0])">
+          <b>选择备考目标</b><span>选择法考或法硕后，显示对应的考试小黑板</span>
+        </button>
 
         <section class="profile-group" aria-label="基本资料">
           <button class="profile-row avatar-row" type="button" :disabled="busy" @click="openPicker">
@@ -245,6 +248,7 @@ function makeCountdown(kind) {
   if (!schedule) {
     return {
       key: kind,
+      boardTitle: legal ? '法考日历' : '法硕日历',
       label: legal ? '法律职业资格考试' : '法律硕士联考',
       year,
       pending: true,
@@ -256,6 +260,7 @@ function makeCountdown(kind) {
   if (!next) {
     return {
       key: kind,
+      boardTitle: legal ? '法考日历' : '法硕日历',
       label: legal ? '法律职业资格考试' : '法律硕士联考',
       year,
       pending: false,
@@ -266,6 +271,7 @@ function makeCountdown(kind) {
   const start = new Date(next.start).getTime()
   return {
     key: kind,
+    boardTitle: legal ? '法考日历' : '法硕日历',
     label: legal ? '法律职业资格考试' : '法律硕士联考',
     year,
     pending: false,
@@ -277,7 +283,8 @@ const countdownItems = computed(() => {
   const goal = draft.value.examGoal
   if (goal === 'LEGAL_EXAM') return [makeCountdown('legal')]
   if (goal === 'LAW_MASTER') return [makeCountdown('master')]
-  return [makeCountdown('legal'), makeCountdown('master')]
+  if (goal === 'BOTH') return [makeCountdown('legal'), makeCountdown('master')]
+  return []
 })
 
 function syncDraft(user) {
@@ -418,22 +425,26 @@ onBeforeUnmount(() => {
 .profile-tabs { --el-tabs-header-height: 43px; }
 .profile-tabs :deep(.el-tabs__header) { margin-bottom: 18px; }
 .profile-tabs :deep(.el-tabs__item) { font-size: .94rem; font-weight: 620; }
-.exam-blackboard { position: relative; overflow: hidden; margin-bottom: 16px; padding: 18px 22px 16px; border: 8px solid #9a6e43; border-radius: 12px; color: #f8f5dc; background: #173d35; box-shadow: inset 0 0 0 2px #0b2b25, inset 0 0 28px #071d1880, 0 6px 18px #1b2b3420; }
+.exam-board-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin-bottom: 16px; }
+.exam-blackboard { position: relative; overflow: hidden; min-width: 0; padding: 18px 22px 16px; border: 8px solid #9a6e43; border-radius: 12px; color: #f8f5dc; background: #173d35; box-shadow: inset 0 0 0 2px #0b2b25, inset 0 0 28px #071d1880, 0 6px 18px #1b2b3420; }
 .exam-blackboard::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .16; background-image: radial-gradient(#fff 0.6px, transparent .7px), linear-gradient(98deg, transparent 46%, #ffffff14 50%, transparent 54%); background-size: 9px 9px, 230px 100%; }
 .board-heading, .board-list, .board-note { position: relative; z-index: 1; }
-.board-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid #ffffff35; font-size: .86rem; font-weight: 680; letter-spacing: .06em; }
+.board-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid #ffffff35; font-size: .98rem; letter-spacing: .1em; }
 .board-heading span { display: inline-flex; align-items: center; gap: 8px; }
 .board-heading i { width: 7px; height: 7px; border-radius: 50%; background: #efd78e; box-shadow: 0 0 0 3px #efd78e28; }
 .board-heading small { color: #d4dfd5; font-size: .7rem; font-weight: 450; letter-spacing: .02em; }
-.board-row { display: grid; grid-template-columns: minmax(145px, .85fr) minmax(0, 2fr); align-items: center; gap: 22px; min-height: 86px; padding: 14px 2px; border-bottom: 1px dashed #ffffff30; }
+.board-row { display: grid; gap: 13px; min-height: 116px; padding: 16px 2px 12px; border-bottom: 1px dashed #ffffff30; }
 .board-row:last-child { border-bottom: 0; }
 .board-subject { display: grid; gap: 3px; }
-.board-subject b { color: #fff9dd; font-size: .9rem; }
+.board-heading span, .board-subject b, .board-countdown strong { font-family: 'Kaiti SC', 'STKaiti', 'KaiTi', 'SimKai', cursive; font-weight: 400; text-shadow: .4px .3px 0 #fff9, -.35px -.25px 0 #fff5, 0 0 2px #ffffff4d; }
+.board-subject b { color: #fff9dd; font-size: 1.08rem; letter-spacing: .075em; }
 .board-subject small, .board-countdown small { color: #c8d8ce; font-size: .72rem; }
-.board-countdown { display: grid; justify-items: end; gap: 3px; min-width: 0; text-align: right; }
-.board-countdown strong { color: #fff5ba; font: 700 clamp(1.28rem, 2.6vw, 1.75rem)/1.2 'Kaiti SC', 'STKaiti', var(--el-font-family); font-variant-numeric: tabular-nums; letter-spacing: .025em; }
+.board-countdown { display: grid; justify-items: start; gap: 5px; min-width: 0; text-align: left; }
+.board-countdown strong { color: #fff5ba; font-size: clamp(1.42rem, 2.8vw, 1.9rem); line-height: 1.2; font-variant-numeric: tabular-nums; letter-spacing: .065em; }
 .board-countdown.pending strong { color: #e9d59d; font-size: clamp(1.08rem, 2vw, 1.35rem); }
 .board-note { margin-top: 8px; color: #aec4b6; font-size: .68rem; text-align: right; }
+.board-empty { display: grid; width: 100%; margin-bottom: 14px; padding: 18px 20px; border: 1px dashed #c7d2df; border-radius: 15px; background: #fff; color: var(--lex-ink); text-align: left; cursor: pointer; }
+.board-empty span { margin-top: 2px; color: var(--lex-muted); font-size: .78rem; }
 .profile-group { overflow: hidden; margin-bottom: 14px; border: 1px solid #e0e6ed; border-radius: 17px; background: #fff; box-shadow: 0 5px 20px #23364d0a; }
 .profile-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; min-height: 68px; padding: 12px 22px; border: 0; border-bottom: 1px solid #edf0f4; background: transparent; color: var(--lex-ink); text-align: left; cursor: pointer; }
 .profile-row:last-child { border-bottom: 0; }
@@ -466,11 +477,12 @@ onBeforeUnmount(() => {
   .profile-tabs :deep(.el-tabs__header) { margin: 0; padding: 0 20px; background: #fff; }
   .profile-tabs :deep(.el-tabs__nav-wrap::after) { height: 1px; background: #edf0f4; }
   .profile-tabs :deep(.el-tabs__content) { padding-top: 12px; }
-  .exam-blackboard { margin: 0 12px 13px; padding: 14px 15px 12px; border-width: 6px; }
-  .board-row { grid-template-columns: 1fr; gap: 7px; min-height: 0; padding: 13px 1px; }
-  .board-countdown { justify-items: start; text-align: left; }
+  .exam-board-grid { grid-template-columns: 1fr; gap: 11px; margin: 0 12px 13px; }
+  .exam-blackboard { padding: 14px 15px 12px; border-width: 6px; }
+  .board-row { gap: 9px; min-height: 0; padding: 13px 1px; }
   .board-countdown strong { font-size: 1.25rem; white-space: nowrap; }
   .board-note { text-align: left; line-height: 1.45; }
+  .board-empty { width: calc(100% - 24px); margin: 0 12px 12px; }
   .profile-group { margin: 0 12px 12px; border: 0; border-radius: 15px; box-shadow: 0 2px 13px #273c5510; }
   .profile-row { min-height: 65px; padding: 11px 18px; gap: 14px; }
   .avatar-row { min-height: 94px; }
